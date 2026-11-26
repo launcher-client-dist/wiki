@@ -71,3 +71,21 @@ in `tests/fixtures/`.
 2. Add the routes, `src/pages/[lang]/[items]/...`, using `SECTIONS.item.slug` for the URL segment.
 3. Add `"item"` to `SHIPPED_KINDS`. The nav, home card, search shortcuts, sitemap and every existing link light up.
 4. Mark the pages `searchable={{ kind: "item" }}` so search groups them.
+
+## Where an item appears: any kind of page, by itself
+
+Item pages (and every entity page after them) end with "Onde aparece": every entity that points at this one, grouped
+by the referrer's kind ("Em guias", "Usado em builds", "Nas classes", "Em lugares"...), each group shown only when it
+isn't empty (`appearsIn()`, `src/lib/entities/appears.ts`). It reads the reverse index only, so:
+
+- the game data writes its relations on the owning side (a monster `drops`, an NPC `sells` and `buys`, a quest
+  `rewards` and `requires`, a recipe's result `madeFrom` its ingredients, a spell `conjures`, a spellbook `teaches`:
+  `entitiesFromData()` in `src/lib/items/data.ts`); the item page draws these richly in its own sections;
+- every content collection named in `CONTENT_KINDS` (`src/lib/site-registry.ts`: guides, builds, classes, places,
+  spells) registers its entries as entities of that kind, with a `mentions` relation to every entity its MDX links to
+  (`<EntityLink to="...">`, found by `refsInMdx()`) or lists in `related`.
+
+So a new `builds` collection (same convention: `key`, `title`, `description`, `related`, `<lang>/<slug>.mdx`) that
+links to items makes a "Usado em builds" section on each of those items' pages with no item-page change. Tested twice:
+`tests/items.test.ts` (a made-up build entity) and, with `WIKI_KIT=1`, a made-up `builds` collection in
+`tests/fixtures/content/builds/` that links to the Iron Ingot, whose page `check-site` requires to show the section.

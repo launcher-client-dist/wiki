@@ -1,0 +1,44 @@
+<!doctype html>
+<!--
+  The base of the items' social cards (public/og/item-base.png, 1200x630): the default card with its right half free
+  for the item's icon slot (src/pages/og/items/[slug].png.ts draws it there). Rendered like design/og-image.html. To change it: edit this file, open it in
+  a browser at exactly 1200x630 (from the repo root, so ../public/fonts resolves) and save a screenshot over
+  public/og/item-base.png. Any headless browser works, e.g. Chrome:
+    chrome --headless --screenshot=public/og/item-base.png --window-size=1200,630 design/og-item-base.html
+-->
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<style>
+  @font-face { font-family: "Pixelify Sans"; src: url("../public/fonts/pixelify-sans-latin.woff2") format("woff2"); font-weight: 400 700; }
+  @font-face { font-family: "Rubik"; src: url("../public/fonts/rubik-latin.woff2") format("woff2"); font-weight: 400 800; }
+  html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; }
+  body { position: relative; background: linear-gradient(180deg, #3b5bb5 0%, #2a3f86 58%, #1b2340 100%); font-family: Rubik, sans-serif; color: #fff; }
+  .cloud { position: absolute; width: 64px; height: 32px; background: rgba(255,255,255,.16); box-shadow: 32px -20px 0 rgba(255,255,255,.16), 64px 0 0 rgba(255,255,255,.16), 32px 0 0 rgba(255,255,255,.16); }
+  .hill { position: absolute; bottom: 70px; background: #3f6a3a; border: 4px solid #0b0f1c; border-bottom: 0; }
+  .ground { position: absolute; left: 0; right: 0; bottom: 0; height: 70px; background: repeating-linear-gradient(90deg, #4fa52a 0 70px, #5cb733 70px 140px); border-top: 4px solid #0b0f1c; }
+  .ground::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 26px; background: repeating-linear-gradient(90deg, #8a5a2b 0 70px, #7a4e24 70px 140px); border-top: 4px solid #0b0f1c; }
+  .content { position: absolute; left: 80px; top: 110px; width: 640px; }
+  .logo { width: 120px; height: 120px; image-rendering: pixelated; filter: drop-shadow(0 8px 0 #0b0f1c); }
+  .kicker { margin: 34px 0 6px; font: 800 26px/1 Rubik; letter-spacing: .2em; text-transform: uppercase; color: #ffd34e; text-shadow: 0 3px 0 #0b0f1c; }
+  h1 { margin: 0; font: 700 92px/1.05 "Pixelify Sans"; text-shadow: 0 9px 0 #0b0f1c; letter-spacing: .01em; }
+  h1 span { color: #9be86d; }
+  .lang { position: absolute; right: 90px; top: 120px; display: flex; gap: 12px; }
+  .lang b { display: grid; place-items: center; width: 84px; height: 56px; font: 800 26px/1 Rubik; background: #1b2340; border: 4px solid #0b0f1c; border-radius: 8px; box-shadow: 0 6px 0 #0b0f1c; }
+  .lang b:first-child { background: #86d957; color: #0e1a06; }
+</style>
+</head>
+<body>
+  <span class="cloud" style="left:700px;top:70px"></span>
+  <span class="cloud" style="left:1060px;top:60px"></span>
+  <span class="cloud" style="left:520px;top:300px;transform:scale(.8)"></span>
+  <span class="hill" style="left:-40px;width:420px;height:110px"></span>
+  <span class="hill" style="right:-30px;width:520px;height:160px"></span>
+  <div class="content">
+    <img class="logo" src="../public/favicon.svg" alt="">
+    <p class="kicker">Itens · Items</p>
+    <h1>Opengea<br><span>Wiki</span></h1>
+  </div>
+  <div class="ground"></div>
+</body>
+</html>

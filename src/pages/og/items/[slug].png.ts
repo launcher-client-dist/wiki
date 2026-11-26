@@ -1,5 +1,5 @@
 /**
- * Each item's social card (1200x630): the default card in design C with the item's icon in a framed slot,
+ * Each item's social card (1200x630): the item base card (design/og-item-base.html) with the icon in a framed slot,
  * scaled pixel-perfect. Built with sharp (Astro's own image dependency); without it, the default card is copied.
  */
 import { readFile } from "node:fs/promises";
@@ -16,7 +16,7 @@ export const getStaticPaths: GetStaticPaths = () =>
   ITEMS.items.map((item) => ({ params: { slug: item.slug.en }, props: { icon: primaryVersion(item).icon, size: primaryVersion(item).iconSize } }));
 
 export const GET: APIRoute = async ({ props }) => {
-  const base = await readFile(new URL("og/default.png", PUBLIC));
+  const base = await readFile(new URL("og/item-base.png", PUBLIC));
   const { icon, size } = props as { icon?: string; size?: [number, number] };
   let png: Buffer = base;
   try {
