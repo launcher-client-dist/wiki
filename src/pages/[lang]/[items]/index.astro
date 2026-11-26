@@ -159,6 +159,10 @@ const CLASSED: StatKey[] = ["armor", "defense", "attackSpeed", "health", "mana",
   /* narrower desktops: the type column goes below 1360, gold per oz below 1200 (their filters and sort stay, the grid
      view and the item pages keep them), so the names stay readable and every header stays on one line */
   @media (min-width: 1024px) and (max-width: 1359px) { .items-page th[data-col="type"], .items-page tbody td:nth-child(2) { display: none; } }
-  @media (min-width: 1024px) and (max-width: 1199px) { .items-page th[data-col="goldoz"], .items-page tbody td:nth-child(9) { display: none; } }
+  /* and magic (most items have none): a book's spell is the end of its name, and the part that tells 44 rows apart */
+  @media (min-width: 1024px) and (max-width: 1199px) {
+    .items-page th[data-col="goldoz"], .items-page tbody td:nth-child(9),
+    .items-page th[data-col="magic"], .items-page tbody td:nth-child(6) { display: none; }
+  }
   @media (max-width: 520px) { .items-page .page-head { flex-direction: column; align-items: flex-start; gap: var(--s-3); } }
 </style>
