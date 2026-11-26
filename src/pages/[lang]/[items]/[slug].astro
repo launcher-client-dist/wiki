@@ -539,6 +539,22 @@ const jsonLd = [{
   .qtable thead th { background: var(--surface-2); font-weight: 700; color: var(--text-muted); border-bottom: 1px solid var(--row-border); }
   .qtable tbody tr + tr > * { border-top: 1px solid var(--row-border); }
   .qtable .r { text-align: right; }
+  /* a phone: each row a two-by-two grid (the step and the ingot, then the two odds), the header in the same grid above,
+     so every column stays in view and keeps its label; no side-scroll */
+  @media (max-width: 600px) {
+    .table-wrap { overflow: visible; }
+    .qtable, .qtable thead, .qtable tbody { display: block; }
+    .qtable tr { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: 4px; }
+    .qtable th, .qtable td { white-space: normal; }
+    .qtable .r { text-align: left; }
+    .qtable thead th { border-bottom: 0; padding-top: 7px; padding-bottom: 7px; }
+    .qtable thead tr { background: var(--surface-2); border-bottom: 1px solid var(--row-border); }
+    .qtable tbody tr + tr > * { border-top: 0; }
+    .qtable tbody tr + tr { border-top: 1px solid var(--row-border); }
+    .qtable tbody td.r { padding-top: 0; }
+    .qtable tbody td:not(.r) { display: flex; align-items: center; gap: 6px; }
+    .qtable tbody td:not(.r) .num { white-space: nowrap; flex-shrink: 0; }
+  }
   .qname { font-weight: 800; }
   .q0 { color: var(--quality-0); }
   .q1 { color: var(--quality-1); }
