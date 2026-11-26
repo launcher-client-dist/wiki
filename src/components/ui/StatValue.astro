@@ -1,15 +1,17 @@
 ---
 /**
  * A stat number with its sign: negative ones in the danger colour AND with a "−" (never colour alone). With
- * `variants` ({ base: 5, knight: 8 ... }) a VariantSwitch or a DataTable switch swaps it in place.
+ * `variants` ({ base: 5, knight: 8 ... }) a VariantSwitch or a DataTable switch swaps it in place; a swapped value
+ * gets an arrow (up or down) and a short flash. `size="big"` for the stats box.
  */
 import { signed } from "../../lib/items/data.ts";
 interface Props {
   value: number;
   variants?: Record<string, number | undefined>;
   plain?: boolean;
+  size?: "normal" | "big";
 }
-const { value, variants, plain = false } = Astro.props;
+const { value, variants, plain = false, size = "normal" } = Astro.props;
 const fmt = (n: number) => (plain ? String(n) : signed(n));
 const attrs: Record<string, string> = {};
 if (variants) {
@@ -17,9 +19,17 @@ if (variants) {
   for (const [k, v] of Object.entries(variants)) if (v !== undefined) attrs[`data-v-${k}`] = fmt(v);
 }
 ---
-<span class:list={["sv", "num", { neg: value < 0 }]} {...attrs}>{fmt(value)}</span>
+<span class:list={["sv", "num", { neg: value < 0, big: size === "big" }]} {...attrs}>{fmt(value)}</span>
 <style>
   .sv { font-weight: 700; white-space: nowrap; }
+  .big { font: 700 1.375rem / 1 var(--font-num); letter-spacing: -0.01em; }
   .neg { color: var(--danger); }
-  :global(.sv.changed) { text-decoration: underline dotted var(--sun); text-underline-offset: 4px; }
+  :global(.sv.changed) { position: relative; padding-right: 0.9em; border-radius: 4px; }
+  :global(.sv.changed)::after { position: absolute; right: 0; top: 50%; transform: translateY(-50%); font: 700 0.7em / 1 var(--font-body); }
+  :global(.sv.up)::after { content: "▲"; color: var(--accent-text); }
+  :global(.sv.down)::after { content: "▼"; color: var(--danger); }
+  @media (prefers-reduced-motion: no-preference) {
+    :global(.sv.flash) { animation: sv-flash 0.7s ease-out; }
+  }
+  @keyframes sv-flash { from { background: color-mix(in srgb, var(--sun) 55%, transparent); } to { background: transparent; } }
 </style>

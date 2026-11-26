@@ -188,6 +188,18 @@ if (!pages.get("/en/404/")?.noindex) fail("/en/404/", "missing or not noindex");
       if (/href="\/(pt\/itens|en\/items)\/(poco|well)\/"/.test(html)) fail(url, "links to a well item page: the well is a map object");
     }
   }
+  // the stats box shows every stat with its game icon; every UI icon a page uses exists
+  const uiMissing = new Set();
+  for (const p of itemPages) {
+    for (const m of p.html.matchAll(/src="\/ui\/([\w-]+\.png)"/g)) if (!existsSync(join(DIST, "ui", m[1]))) uiMissing.add(m[1]);
+  }
+  if (uiMissing.size) fail("ui icons", `missing in the build: ${[...uiMissing].join(", ")}`);
+  for (const i of itemsFile.items) {
+    const v = i.versions.find((x) => x.type === i.primary) ?? i.versions[0];
+    if (!Object.values(v.stats).some(Boolean)) continue;
+    const html = pages.get(`/pt/itens/${i.slug.pt}/`)?.html ?? "";
+    if (!html.includes('data-section="statlist"') || !html.includes('src="/ui/stat-')) fail(`/pt/itens/${i.slug.pt}/`, "has stats but no stat list with the game's icons");
+  }
   // the list's class filter carries the traits line too
   for (const url of ["/pt/itens/", "/en/items/"]) {
     if (!/class="vnote"[^>]*>(Não inclui efeitos de traits|Trait effects not included)/.test(pages.get(url)?.html ?? "")) fail(url, "the class filter without the traits line");

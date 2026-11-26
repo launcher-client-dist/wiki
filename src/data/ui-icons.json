@@ -1,0 +1,282 @@
+{
+ "anvil": [
+  11,
+  12
+ ],
+ "cat-ammo": [
+  9,
+  9
+ ],
+ "cat-armour": [
+  9,
+  9
+ ],
+ "cat-book": [
+  9,
+  9
+ ],
+ "cat-container": [
+  9,
+  9
+ ],
+ "cat-drink": [
+  9,
+  9
+ ],
+ "cat-food": [
+  9,
+  9
+ ],
+ "cat-gem": [
+  9,
+  9
+ ],
+ "cat-house": [
+  9,
+  9
+ ],
+ "cat-jewellery": [
+  9,
+  9
+ ],
+ "cat-light": [
+  9,
+  9
+ ],
+ "cat-material": [
+  11,
+  12
+ ],
+ "cat-other": [
+  9,
+  9
+ ],
+ "cat-potion": [
+  9,
+  9
+ ],
+ "cat-quest": [
+  9,
+  9
+ ],
+ "cat-rune": [
+  9,
+  9
+ ],
+ "cat-shield": [
+  9,
+  9
+ ],
+ "cat-spellbook": [
+  9,
+  9
+ ],
+ "cat-tool": [
+  9,
+  9
+ ],
+ "cat-weapon": [
+  9,
+  9
+ ],
+ "class": [
+  9,
+  9
+ ],
+ "class-knight": [
+  9,
+  10
+ ],
+ "class-mage": [
+  9,
+  10
+ ],
+ "class-rogue": [
+  9,
+  10
+ ],
+ "class-squire": [
+  9,
+  10
+ ],
+ "food": [
+  9,
+  9
+ ],
+ "forge": [
+  9,
+  9
+ ],
+ "gem": [
+  9,
+  9
+ ],
+ "gold": [
+  16,
+  16
+ ],
+ "house": [
+  9,
+  9
+ ],
+ "minus": [
+  9,
+  9
+ ],
+ "plus": [
+  9,
+  9
+ ],
+ "quality-0": [
+  6,
+  11
+ ],
+ "quality-1": [
+  6,
+  11
+ ],
+ "quality-2": [
+  6,
+  11
+ ],
+ "quality-3": [
+  6,
+  11
+ ],
+ "quality-4": [
+  6,
+  11
+ ],
+ "rune": [
+  9,
+  9
+ ],
+ "slot-ammo": [
+  24,
+  24
+ ],
+ "slot-back": [
+  24,
+  24
+ ],
+ "slot-body": [
+  24,
+  24
+ ],
+ "slot-feet": [
+  24,
+  24
+ ],
+ "slot-hands": [
+  24,
+  24
+ ],
+ "slot-head": [
+  24,
+  24
+ ],
+ "slot-legs": [
+  24,
+  24
+ ],
+ "slot-neck": [
+  24,
+  24
+ ],
+ "slot-ring": [
+  24,
+  24
+ ],
+ "src-conjure": [
+  9,
+  9
+ ],
+ "src-cook": [
+  9,
+  9
+ ],
+ "src-craft": [
+  9,
+  9
+ ],
+ "src-drop": [
+  9,
+  9
+ ],
+ "src-leftover": [
+  9,
+  9
+ ],
+ "src-map": [
+  9,
+  9
+ ],
+ "src-quest": [
+  9,
+  9
+ ],
+ "src-shop": [
+  11,
+  12
+ ],
+ "stat-armor": [
+  9,
+  9
+ ],
+ "stat-attackSpeed": [
+  9,
+  9
+ ],
+ "stat-damage": [
+  9,
+  9
+ ],
+ "stat-defense": [
+  9,
+  9
+ ],
+ "stat-health": [
+  9,
+  9
+ ],
+ "stat-hpRegen": [
+  9,
+  9
+ ],
+ "stat-magic": [
+  9,
+  9
+ ],
+ "stat-mana": [
+  9,
+  9
+ ],
+ "stat-moveSpeed": [
+  9,
+  9
+ ],
+ "stat-mpRegen": [
+  9,
+  9
+ ],
+ "stat-range": [
+  9,
+  9
+ ],
+ "stat-skill": [
+  9,
+  9
+ ],
+ "stat-weight": [
+  9,
+  9
+ ],
+ "time": [
+  9,
+  10
+ ],
+ "xp": [
+  9,
+  9
+ ]
+}

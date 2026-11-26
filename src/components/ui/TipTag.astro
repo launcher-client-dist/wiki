@@ -1,0 +1,42 @@
+---
+/**
+ * A tag that explains itself: an icon (a GameIcon name) and its words, plus a tooltip that opens on hover, keyboard
+ * focus and tap (the tag is a button described by the tip), so it never relies on `title` alone.
+ *   <TipTag icon="slot-hands" iconScale={1} tip="Onde se equipa...">Espaço: Mãos</TipTag>
+ */
+import GameIcon from "./GameIcon.astro";
+interface Props {
+  tip: string;
+  icon?: string;
+  iconScale?: number;
+  tone?: "default" | "sun";
+}
+const { tip, icon, iconScale = 2, tone = "default" } = Astro.props;
+const id = `tip-${Math.random().toString(36).slice(2, 9)}`;
+---
+<span class:list={["tiptag", `tone-${tone}`]}>
+  <button type="button" class="tt" aria-describedby={id}>
+    {icon && <span class="ti"><GameIcon name={icon} scale={iconScale} /></span>}
+    <span class="tw"><slot /></span>
+    <span class="q" aria-hidden="true">?</span>
+  </button>
+  <span role="tooltip" id={id} class="tip">{tip}</span>
+</span>
+<style>
+  .tiptag { position: relative; display: inline-flex; }
+  .tt { display: inline-flex; align-items: center; gap: 8px; min-height: 36px; padding: 3px 10px 3px 4px; border-radius: var(--r-m);
+    border: var(--bw) solid var(--hard); background: var(--surface); color: var(--text); font: 700 var(--fs-sm) / 1.1 var(--font-body);
+    box-shadow: 0 2px 0 var(--hard); cursor: help; text-align: left; }
+  .tone-sun .tt { background: var(--sun); color: var(--on-sun); }
+  .ti :global(img[src*="/ui/slot-"]) { filter: brightness(1.6) contrast(1.1); }
+  .ti { display: inline-grid; place-items: center; min-width: 28px; min-height: 28px; border-radius: 6px; background: var(--hard); }
+  .q { display: inline-grid; place-items: center; width: 16px; height: 16px; border-radius: 50%; font-size: 11px; color: var(--text-muted);
+    border: 1px solid currentColor; opacity: 0.8; }
+  .tone-sun .q { color: var(--on-sun); }
+  .tt:hover, .tt:focus-visible { border-color: var(--focus); }
+  .tip { position: absolute; z-index: 30; left: 0; top: calc(100% + 8px); width: max-content; max-width: min(280px, 80vw); padding: 10px 12px;
+    border-radius: var(--r-m); border: var(--bw) solid var(--hard); background: var(--popover-bg); color: var(--text);
+    font: 500 var(--fs-sm) / 1.4 var(--font-body); box-shadow: var(--shadow-2); visibility: hidden; opacity: 0; transition: opacity 0.12s; pointer-events: none; }
+  .tiptag:hover .tip, .tt:focus + .tip, .tt:focus-visible + .tip { visibility: visible; opacity: 1; }
+  @media (prefers-reduced-motion: reduce) { .tip { transition: none; } }
+</style>

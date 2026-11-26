@@ -16,13 +16,16 @@ import Callout from "../../../components/ui/Callout.astro";
 import MapLink from "../../../components/ui/MapLink.astro";
 import Card from "../../../components/ui/Card.astro";
 import EntityLink from "../../../components/entity/EntityLink.astro";
+import GameIcon from "../../../components/ui/GameIcon.astro";
+import TipTag from "../../../components/ui/TipTag.astro";
+import { statRank } from "../../../lib/items/rank.ts";
 import Ingredient from "../../../components/entity/Ingredient.astro";
 import { ui, fill } from "../../../i18n/index.ts";
 import { HREFLANG, LANGS, otherLang, type Lang } from "../../../lib/i18n.ts";
 import { absoluteUrl, homePath, SECTIONS, sectionPath } from "../../../lib/routes.ts";
 import { ITEMS, siteData } from "../../../lib/site-registry.ts";
 import { appearsIn } from "../../../lib/entities/appears.ts";
-import { CLASS_KEYS, STAT_KEYS, goldPerOz, primaryVersion, statLabel, type Place, type Recipe, type StatKey } from "../../../lib/items/data.ts";
+import { CLASS_KEYS, STAT_KEYS, goldPerOz, primaryVersion, signed, statLabel, type Place, type Recipe, type StatKey } from "../../../lib/items/data.ts";
 import { metaDescription, num, oneInText, oz, similarItems, topStats } from "../../../lib/items/view.ts";
 
 export async function getStaticPaths() {
@@ -82,11 +85,14 @@ const jsonLd = [{
       {item.name[other] !== item.name[lang] && <p class="alt" lang={HREFLANG[other]}>{item.name[other]}</p>}
       {v.text[lang] && <blockquote class="game-text">{v.text[lang]}</blockquote>}
       <div class="tags" data-pagefind-ignore>
-        <Tag>{item.subtype[lang]}</Tag>
-        {item.slots.map((s) => <Tag icon="layers">{ti.slot[s as keyof typeof ti.slot]}</Tag>)}
-        {item.armourClass && <Tag>{item.armourClass === "heavy" ? ti.heavy : ti.light}</Tag>}
-        {item.twoHanded && <Tag>{ti.twoHanded}</Tag>}
-        {item.versions.length > 1 && <Tag tone="sun">{fill(ti.versionsTag, { n: item.versions.length })}</Tag>}
+        <TipTag icon={`cat-${item.category}`} tip={ti.tipType}>{fill(ti.tagType, { v: item.subtype[lang] })}</TipTag>
+        {item.slots.map((s) => {
+          const word = ti.slot[s as keyof typeof ti.slot];
+          return <TipTag icon={`slot-${s}`} iconScale={1} tip={fill(ti.tipSlot, { v: word })}>{fill(ti.tagSlot, { v: word })}</TipTag>;
+        })}
+        {item.armourClass && <TipTag icon="stat-armor" tip={item.armourClass === "heavy" ? ti.tipHeavy : ti.tipLight}>{item.armourClass === "heavy" ? ti.heavy : ti.light}</TipTag>}
+        {item.twoHanded && <TipTag icon="stat-damage" tip={ti.tipLarge}>{ti.twoHanded}</TipTag>}
+        {item.versions.length > 1 && <TipTag tone="sun" tip={fill(ti.tipVersions, { n: item.versions.length })}>{fill(ti.versionsTag, { n: item.versions.length })}</TipTag>}
       </div>
     </Banner>
 
@@ -135,21 +141,37 @@ const jsonLd = [{
           <section class="block" aria-labelledby="h-qualities">
             <h2 id="h-qualities">{ti.qualities}</h2>
             <p class="muted">{ti.qualitiesIntro}</p>
-            <div class="table-wrap">
-              <table class="qtable">
-                <thead><tr><th scope="col">{ti.qualityCol}</th>{qualityKeys.map((k) => <th scope="col" class="r">{statLabel(k)[lang]}</th>)}<th scope="col" class="r">{ti.weight}</th>{v.lifetime && <th scope="col" class="r">{ti.secondsCol}</th>}</tr></thead>
-                <tbody>
-                  {qualities.map((q) => (
-                    <tr class={`q${q.rarity}`}>
-                      <th scope="row"><span class="qname">{ti.quality[`q${q.rarity}` as keyof typeof ti.quality]}</span></th>
-                      {qualityKeys.map((k) => <td class="r">{q.stats[k] ? <StatValue value={q.stats[k]!} variants={classVariants(k, q)} /> : "—"}</td>)}
-                      <td class="r num">{oz(q.weight, lang)}</td>
-                      {v.lifetime && <td class="r num">{q.lifetime ?? "—"}</td>}
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
+            <ol class="qcards" data-section="quality-cards">
+              {qualities.map((q) => {
+                const q0 = qualities[0]!;
+                const qname = ti.quality[`q${q.rarity}` as keyof typeof ti.quality];
+                return (
+                  <li class:list={["qcard", `q${q.rarity}`]}>
+                    <div class="qhead"><GameIcon name={`quality-${q.rarity}`} /><span class="qname">{qname}</span></div>
+                    <div class="qart">{icon ? <img src={icon.src} width={icon.width * 2} height={icon.height * 2} alt="" class="qimg" loading="lazy" decoding="async" /> : <GameIcon name={`cat-${item.category}`} scale={4} />}</div>
+                    <ul class="qstats">
+                      {qualityKeys.map((k) => {
+                        const n = q.stats[k];
+                        if (!n) return <li class="none"><GameIcon name={`stat-${k}`} /><span class="sr-only">{statLabel(k)[lang]}</span><span>—</span></li>;
+                        const gains = Object.fromEntries(CLASS_KEYS.map((c) => [c, (q.classes?.[c]?.[k] ?? n) - (q0.classes?.[c]?.[k] ?? q0.stats[k] ?? 0)]));
+                        const base = n - (q0.stats[k] ?? 0);
+                        const gainAttrs: Record<string, string> = { "data-v-base": base ? signed(base) : "" };
+                        for (const [c, g] of Object.entries(gains)) gainAttrs[`data-v-${c}`] = g ? signed(g) : "";
+                        return (
+                          <li>
+                            <GameIcon name={`stat-${k}`} /><span class="sr-only">{statLabel(k)[lang]}</span>
+                            <StatValue value={n} variants={classVariants(k, q)} />
+                            {q.rarity > 0 && (base || Object.values(gains).some(Boolean)) && <span class="gainwrap"><span class="gain" {...gainAttrs}>{base ? signed(base) : ""}</span><span class="sr-only"> {ti.gainOver}</span></span>}
+                          </li>
+                        );
+                      })}
+                      <li class="meta"><GameIcon name="stat-weight" /><span class="sr-only">{ti.weight}</span><span class="num">{oz(q.weight, lang)}</span></li>
+                      {v.lifetime && <li class="meta"><GameIcon name="time" /><span class="sr-only">{ti.secondsCol}</span><span class="num">{q.lifetime ?? "—"} s</span></li>}
+                    </ul>
+                  </li>
+                );
+              })}
+            </ol>
           </section>
         )}
 
@@ -232,9 +254,19 @@ const jsonLd = [{
               <div class="dq">
                 <h3>{ti.dropQualityTitle}</h3>
                 <p class="muted">{ti.dropQualityIntro}</p>
-                <ul class="odds">
-                  {ITEMS.dropQuality.map((q) => <li><span class={`qname q${q.rarity}`}>{ti.quality[`q${q.rarity}` as keyof typeof ti.quality]}</span> <span class="num">{oneInText(q, ti, lang)}</span></li>)}
+                <ul class="odds" data-section="drop-quality">
+                  {ITEMS.dropQuality.map((q) => (
+                    <li class={`odd q${q.rarity}`}>
+                      <GameIcon name={`quality-${q.rarity}`} scale={3} />
+                      <span class="otext">
+                        <span class="qname">{ti.quality[`q${q.rarity}` as keyof typeof ti.quality]}</span>
+                        <span class="num">{oneInText(q, ti, lang)}</span>
+                        <span class="rare" aria-hidden="true"><span style={`width:${Math.round(Math.min(1, Math.log10(Math.max(2, q.oneIn)) / 3) * 100)}%`}></span></span>
+                      </span>
+                    </li>
+                  ))}
                 </ul>
+                <p class="muted small">{ti.rarerNote}</p>
               </div>
             )}
           </section>
@@ -366,23 +398,43 @@ const jsonLd = [{
         <InfoBox title={ti.stats}>
           {hasClasses && (
             <div class="switch">
-              <span class="label">{ti.classSwitch}</span>
-              <VariantSwitch scope="item-page" label={ti.classSwitch} variants={[{ key: "base", label: ti.classBase }, ...CLASS_KEYS.map((k) => ({ key: k, label: ti.classes[k] }))]} />
+              <span class="label"><GameIcon name="class" />{ti.classSwitch}</span>
+              <VariantSwitch scope="item-page" label={ti.classSwitch} variants={[{ key: "base", label: ti.classBase }, ...CLASS_KEYS.map((k) => ({ key: k, label: ti.classes[k], icon: `class-${k}` }))]} />
               <p class="traits-note" data-section="traits-note">{ti.traitsNote}</p>
             </div>
           )}
           {statKeys.length > 0 ? (
-            <dl class="stats">
-              {statKeys.map((k) => <div><dt>{statLabel(k)[lang]}</dt><dd><StatValue value={v.stats[k]!} variants={v.classes ? classVariants(k, v) : undefined} /></dd></div>)}
-            </dl>
+            <ul class="statlist" data-section="statlist">
+              {statKeys.map((k) => {
+                const n = v.stats[k]!;
+                const r = statRank(items, item, k);
+                return (
+                  <li class:list={["stat", { negative: n < 0 }]}>
+                    <span class="sicon"><GameIcon name={`stat-${k}`} scale={3} /></span>
+                    <span class="sname">
+                      {statLabel(k)[lang]}
+                      {n < 0 && <span class="takes"><GameIcon name="minus" scale={1} />{ti.takesAway}</span>}
+                    </span>
+                    <StatValue value={n} variants={v.classes ? classVariants(k, v) : undefined} size="big" />
+                    {r && (
+                      <span class="rank">
+                        <span class="rbar" aria-hidden="true"><span class:list={["rfill", { best: r.rank === 1 }]} style={`width:${Math.max(6, Math.round(r.share * 100))}%`}></span></span>
+                        <span class="rtext">{fill(r.rank === 1 ? ti.rankBest : ti.rankOf, { n: r.rank, of: r.of, group: item.subtype[lang] })}</span>
+                      </span>
+                    )}
+                  </li>
+                );
+              })}
+            </ul>
           ) : <p class="nostats">{ti.noStats}</p>}
-          <dl class="facts">
-            <div><dt>{ti.weight}</dt><dd class="num">{oz(v.weight, lang)}</dd></div>
-            {v.stack > 1 && <div><dt>{ti.stack}</dt><dd class="num">{v.stack}</dd></div>}
-            {v.slots && <div><dt>{ti.slots}</dt><dd class="num">{v.slots}</dd></div>}
-            <div><dt>{ti.sellValue}</dt><dd class="num">{item.value.npcPays ? `${num(item.value.npcPays, lang)} ${ti.gold}` : "—"}</dd></div>
-            {goldPerOz(item) && <div><dt>{ti.goldPerOz}</dt><dd class="num">{num(goldPerOz(item)!, lang)}</dd></div>}
-          </dl>
+          <ul class="facts">
+            <li><GameIcon name="stat-weight" /><span>{ti.weight}</span><b class="num">{oz(v.weight, lang)}</b></li>
+            {v.stack > 1 && <li><GameIcon name="cat-container" /><span>{ti.stack}</span><b class="num">{v.stack}</b></li>}
+            {v.slots && <li><GameIcon name="slot-back" scale={1} /><span>{ti.slots}</span><b class="num">{v.slots}</b></li>}
+            <li><GameIcon name="gold" scale={1} /><span>{ti.sellValue}</span><b class="num">{item.value.npcPays ? `${num(item.value.npcPays, lang)} ${ti.gold}` : "—"}</b></li>
+            {goldPerOz(item) && <li><span class="pair"><GameIcon name="gold" scale={1} /><GameIcon name="stat-weight" /></span><span>{ti.goldPerOz}</span><b class="num">{num(goldPerOz(item)!, lang)}</b></li>}
+          </ul>
+          {statKeys.some((k) => statRank(items, item, k)) && <p slot="footer">{ti.rankNote}</p>}
           {statKeys.some((k) => (v.stats[k] ?? 0) < 0) && <p slot="footer">{ti.negativeNote}</p>}
           {hasClasses && <p slot="footer">{ti.classNote}</p>}
         </InfoBox>
@@ -440,8 +492,38 @@ const jsonLd = [{
 
   .dq, .forge { margin-top: var(--s-5); }
   .dq h3, .forge h3 { margin-bottom: 6px; font: 700 var(--fs-lg) / 1.3 var(--font-body); }
-  .odds { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
-  .odds li { padding: 6px 12px; background: var(--card-bg); border: var(--bw) solid var(--border); border-radius: var(--r-m); font-size: var(--fs-sm); }
+  .odds { list-style: none; margin: 0 0 6px; padding: 0; display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 190px), 1fr)); }
+  .odd { display: flex; align-items: center; gap: 12px; padding: 10px 14px; background: var(--card-bg); border: var(--bw) solid var(--hard);
+    border-left: 6px solid currentColor; border-radius: var(--r-m); box-shadow: var(--shadow-1); }
+  .otext { display: grid; gap: 3px; min-width: 0; flex: 1; }
+  .odd .num { color: var(--text); font-weight: 700; }
+  .rare { display: block; height: 6px; border-radius: 3px; background: var(--surface-3); overflow: hidden; }
+  .rare span { display: block; height: 100%; background: currentColor; border-radius: 3px; }
+
+  /* the qualities: one card each, framed in the quality's colour, the item outlined as the game highlights it */
+  .qcards { list-style: none; margin: 0; padding: 4px 2px 10px; display: grid; gap: 12px; grid-template-columns: repeat(5, minmax(150px, 1fr));
+    overflow-x: auto; scroll-snap-type: x mandatory; }
+  .qcard { --qc: var(--quality-0); color: var(--text); position: relative; display: grid; align-content: start; gap: 10px; padding: 12px; scroll-snap-align: start;
+    background: linear-gradient(180deg, color-mix(in srgb, var(--qc) 16%, var(--card-bg)), var(--card-bg) 55%);
+    border: var(--bw) solid var(--hard); border-top: 4px solid var(--qc); border-radius: var(--r-l); box-shadow: var(--shadow-1); }
+  .qcard.q1 { --qc: var(--quality-1); } .qcard.q2 { --qc: var(--quality-2); } .qcard.q3 { --qc: var(--quality-3); } .qcard.q4 { --qc: var(--quality-4); }
+  .qcard.q3, .qcard.q4 { box-shadow: var(--shadow-1), 0 0 18px -4px color-mix(in srgb, var(--qc) 70%, transparent); }
+  .qhead { display: flex; align-items: center; gap: 8px; }
+  .qhead .qname { color: var(--qc); }
+  .qart { display: grid; place-items: center; height: 84px; border-radius: var(--r-m); background: var(--render-bg);
+    box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--qc) 40%, transparent), inset 0 -18px 30px -18px color-mix(in srgb, var(--qc) 55%, transparent); }
+  .qimg { image-rendering: pixelated; }
+  .qcard:not(.q0) .qimg { filter: drop-shadow(2px 0 0 var(--qc)) drop-shadow(-2px 0 0 var(--qc)) drop-shadow(0 2px 0 var(--qc)) drop-shadow(0 -2px 0 var(--qc)); }
+  .qstats { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+  .qstats li { display: flex; align-items: center; gap: 8px; min-height: 22px; font-size: var(--fs-sm); }
+  .qstats li.none { opacity: 0.5; }
+  .qstats li.meta { color: var(--text-muted); }
+  .qstats li.meta:first-of-type, .qstats li:not(.meta) + li.meta { margin-top: 4px; padding-top: 8px; border-top: 1px solid var(--row-border); }
+  .gainwrap { margin-left: auto; }
+  .gain { display: inline-block; padding: 1px 6px; border-radius: 999px; font: 700 var(--fs-xs) / 1.4 var(--font-num); color: var(--qc);
+    background: color-mix(in srgb, var(--qc) 16%, transparent); }
+  .gain:empty { display: none; }
+  @media (max-width: 720px) { .qcards { grid-template-columns: repeat(5, 70%); } }
 
   .plain { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
   .plus { color: var(--text-faint); font-weight: 700; }
@@ -450,15 +532,35 @@ const jsonLd = [{
   .similar { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); }
 
   .switch { padding: 12px 14px; border-bottom: var(--bw) solid var(--hard); display: grid; gap: 8px; }
-  .switch .label { font-size: var(--fs-xs); font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; }
+  .switch .label { display: flex; align-items: center; gap: 6px; font-size: var(--fs-xs); font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; }
   .switch .traits-note { margin: 0; font-size: var(--fs-xs); color: var(--text-muted); }
   .gated li { padding: 4px 0; }
   .gated .q { display: block; font-size: var(--fs-sm); color: var(--text-muted); }
-  .stats, .facts { margin: 0; display: grid; }
-  .stats div, .facts div { display: flex; justify-content: space-between; gap: 12px; padding: 9px 16px; }
-  .stats div + div, .facts div + div { border-top: 1px solid var(--row-border); }
-  .stats dt, .facts dt { color: var(--text-muted); font-size: var(--fs-sm); }
-  .stats dd, .facts dd { margin: 0; font-size: 1.0625rem; color: var(--heading); font-weight: 700; }
-  .facts { border-top: var(--bw) solid var(--hard); background: var(--surface-2); }
+
+  /* the stats box: the game's icon in a slot, the number big, where it stands among its type */
+  .statlist { list-style: none; margin: 0; padding: 6px 0; display: grid; }
+  .stat { display: grid; grid-template-columns: 40px minmax(0, 1fr) auto; grid-template-areas: "icon name value" "icon rank rank"; column-gap: 12px; row-gap: 4px;
+    align-items: center; padding: 8px 16px; }
+  .stat + .stat { border-top: 1px solid var(--row-border); }
+  .sicon { grid-area: icon; display: grid; place-items: center; width: 40px; height: 40px; border-radius: 8px; background: var(--hard);
+    box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.35), inset 0 0 0 1px rgba(255, 255, 255, 0.08); }
+  .sname { grid-area: name; display: flex; flex-wrap: wrap; align-items: center; gap: 6px; color: var(--text); font-weight: 700; font-size: var(--fs-sm); }
+  .stat :global(.sv) { grid-area: value; justify-self: end; color: var(--heading); }
+  .stat.negative :global(.sv) { color: var(--danger); }
+  .takes { display: inline-flex; align-items: center; gap: 4px; padding: 1px 6px 1px 3px; border-radius: 999px; font-size: var(--fs-xs); font-weight: 700;
+    color: var(--danger); background: color-mix(in srgb, var(--danger) 14%, transparent); }
+  .stat.negative .sicon { box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.35), inset 0 0 0 2px var(--danger); }
+  .rank { grid-area: rank; display: grid; grid-template-columns: minmax(40px, 90px) minmax(0, 1fr); align-items: center; gap: 8px; }
+  .rbar { height: 6px; border-radius: 3px; background: var(--surface-3); overflow: hidden; box-shadow: inset 0 0 0 1px var(--row-border); }
+  .rfill { display: block; height: 100%; border-radius: 3px; background: var(--sky); }
+  .rfill.best { background: var(--sun); }
+  .rtext { font-size: var(--fs-xs); color: var(--text-muted); overflow-wrap: anywhere; }
+  .facts { list-style: none; margin: 0; padding: 4px 0; display: grid; border-top: var(--bw) solid var(--hard); background: var(--surface-2); }
+  .facts li { display: grid; grid-template-columns: 40px minmax(0, 1fr) auto; align-items: center; gap: 12px; padding: 7px 16px; }
+  .facts li + li { border-top: 1px solid var(--row-border); }
+  .facts li > :global(.gicon), .facts .pair { justify-self: center; }
+  .facts .pair { display: inline-flex; align-items: center; gap: 1px; }
+  .facts span { color: var(--text-muted); font-size: var(--fs-sm); }
+  .facts b { color: var(--heading); font-size: 1.0625rem; }
   .nostats { margin: 0; padding: 12px 16px; color: var(--text-muted); }
 </style>

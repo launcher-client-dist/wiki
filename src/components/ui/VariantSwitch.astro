@@ -2,22 +2,28 @@
 /**
  * A segmented switch that swaps values in place inside a scope (a class switcher, say): every element in the scope
  * with data-v-<variant> shows that text when the variant is picked (data-v-base by default); one whose text starts
- * with "−" gets the negative style. Without JavaScript the base values stay.
- *   <VariantSwitch scope="item-stats" label="Classe" variants={[{ key: "base", label: "Base" }, ...]} />
+ * with "−" gets the negative style. A value the variant changes is marked "changed" plus "up" or "down" (an arrow and
+ * a short flash, none with reduced motion). Each variant can carry an icon (a GameIcon name), always beside its word.
+ * Without JavaScript the base values stay.
+ *   <VariantSwitch scope="item-stats" label="Classe" variants={[{ key: "base", label: "Base" }, { key: "knight", label: "Cavaleiro", icon: "class-knight" }]} />
  */
+import GameIcon from "./GameIcon.astro";
 interface Props {
   scope: string;
   label: string;
-  variants: { key: string; label: string }[];
+  variants: { key: string; label: string; icon?: string }[];
 }
 const { scope, label, variants } = Astro.props;
 ---
 <div class="vswitch" role="radiogroup" aria-label={label} data-vswitch={scope}>
   {variants.map((v, i) => (
-    <button type="button" role="radio" aria-checked={i === 0 ? "true" : "false"} tabindex={i === 0 ? 0 : -1} data-v={v.key}>{v.label}</button>
+    <button type="button" role="radio" aria-checked={i === 0 ? "true" : "false"} tabindex={i === 0 ? 0 : -1} data-v={v.key}>
+      {v.icon && <span class="vicon"><GameIcon name={v.icon} scale={2} /></span>}<span>{v.label}</span>
+    </button>
   ))}
 </div>
 <script>
+  const numberOf = (s: string) => parseFloat(s.replace("−", "-").replace(/[^\d.,-]/g, "").replace(/\./g, "").replace(",", "."));
   for (const sw of document.querySelectorAll<HTMLElement>("[data-vswitch]")) {
     const scope = document.getElementById(sw.dataset.vswitch!);
     const buttons = [...sw.querySelectorAll<HTMLButtonElement>("[data-v]")];
@@ -25,10 +31,16 @@ const { scope, label, variants } = Astro.props;
       const v = b.dataset.v!;
       for (const x of buttons) { const on = x === b; x.setAttribute("aria-checked", String(on)); x.tabIndex = on ? 0 : -1; }
       for (const el of scope?.querySelectorAll<HTMLElement>("[data-v-base]") ?? []) {
-        const text = el.getAttribute(`data-v-${v}`) ?? el.getAttribute("data-v-base") ?? "";
+        const base = el.getAttribute("data-v-base") ?? "";
+        const text = el.getAttribute(`data-v-${v}`) ?? base;
         el.textContent = text;
+        const changed = text !== base;
+        const delta = changed ? numberOf(text) - numberOf(base) : 0;
         el.classList.toggle("neg", text.startsWith("−"));
-        el.classList.toggle("changed", text !== el.getAttribute("data-v-base"));
+        el.classList.toggle("changed", changed);
+        el.classList.toggle("up", changed && delta > 0);
+        el.classList.toggle("down", changed && delta < 0);
+        if (changed) { el.classList.remove("flash"); void el.offsetWidth; el.classList.add("flash"); }
       }
       if (focus) b.focus();
     };
@@ -45,8 +57,10 @@ const { scope, label, variants } = Astro.props;
 </script>
 <style>
   .vswitch { display: flex; flex-wrap: wrap; gap: 4px; padding: 4px; border: var(--bw) solid var(--hard); border-radius: var(--r-m); background: var(--surface-2); }
-  button { flex: 1 1 auto; height: 32px; padding: 0 10px; border: 0; border-radius: var(--r-s); background: none; color: var(--text-muted);
-    font: 700 var(--fs-sm) / 1 var(--font-body); cursor: pointer; white-space: nowrap; }
+  button { flex: 1 1 auto; display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-height: 36px; padding: 4px 10px;
+    border: 0; border-radius: var(--r-s); background: none; color: var(--text-muted); font: 700 var(--fs-sm) / 1 var(--font-body); cursor: pointer; white-space: nowrap; }
   button:hover { color: var(--text); background: var(--hover-strong); }
   button[aria-checked="true"] { background: var(--sun); color: var(--on-sun); box-shadow: 0 2px 0 var(--hard); }
+  .vicon { display: inline-grid; place-items: center; width: 24px; height: 24px; border-radius: 6px; background: var(--hard); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12); }
+  button[aria-checked="true"] .vicon { box-shadow: inset 0 0 0 2px var(--hard), 0 0 0 2px rgba(11, 15, 28, 0.35); }
 </style>

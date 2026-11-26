@@ -1,0 +1,24 @@
+---
+/**
+ * One of the game's own UI icons (public/ui/<name>.png: the stats, slots, classes, qualities, gold, time...), drawn at
+ * an integer scale so its pixels stay sharp. Decorative by default (`alt=""`, next to a visible word); pass `alt` when
+ * the icon stands alone.
+ *   <GameIcon name="stat-damage" />            2x
+ *   <GameIcon name="slot-hands" scale={1} />   the 24 px paper-doll slot
+ */
+import sizes from "../../data/ui-icons.json";
+
+interface Props {
+  name: string;
+  scale?: number;
+  alt?: string;
+  class?: string;
+}
+const { name, scale = 2, alt = "", class: cls } = Astro.props;
+const size = (sizes as Record<string, number[]>)[name] as [number, number] | undefined;
+if (!size) throw new Error(`GameIcon: no icon named "${name}" (src/data/ui-icons.json)`);
+---
+<img class:list={["gicon", cls]} src={`/ui/${name}.png`} width={size[0] * scale} height={size[1] * scale} alt={alt} loading="lazy" decoding="async" />
+<style>
+  .gicon { image-rendering: pixelated; flex: none; vertical-align: middle; }
+</style>

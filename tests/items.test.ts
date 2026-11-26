@@ -5,6 +5,7 @@ import { createRegistry } from "../src/lib/entities/registry.ts";
 import { appearsIn, refsInMdx } from "../src/lib/entities/appears.ts";
 import { groupReverse } from "../src/lib/entities/reverse.ts";
 import type { Entity } from "../src/lib/entities/types.ts";
+import { statRank } from "../src/lib/items/rank.ts";
 import { entitiesFromData, goldPerOz, signed, sourceKinds, type ItemData, type ItemsFile, type StubEntity } from "../src/lib/items/data.ts";
 
 /** A made-up item file: two items, one recipe, a dropping monster, a selling NPC, a rewarding quest. */
@@ -129,5 +130,32 @@ describe("NPCs that appear after a quest", () => {
       if (s.spoiler) gated++;
     }
     assert.ok(gated > 0, "no quest-opened NPC at all: the export lost them");
+  });
+});
+
+describe("a stat's rank among items of the same type", () => {
+  const item = (id: string, sub: string, damage: number): ItemData => ({
+    id, types: [1], primary: 1, name: { pt: id, en: id }, slug: { pt: id, en: id }, category: "weapon",
+    subtype: { key: sub, pt: sub, en: sub }, slots: ["hands"], value: { npcPays: null, npcSells: null },
+    versions: [{ type: 1, text: { pt: "", en: "" }, stats: damage ? { damage } : {}, weight: 3, stack: 1 }],
+    sources: { drops: [], shops: [], buyers: [], quests: [], map: [], recipes: [], conjured: [], leftover: [] },
+    uses: { recipes: [], questsRequire: [], leavesEmpty: [] },
+  });
+  const wands = [item("a", "MagicWeapon", 10), item("b", "MagicWeapon", 30), item("c", "MagicWeapon", 30), item("d", "MagicWeapon", 5), item("e", "MagicWeapon", 0)];
+  const swords = [item("s1", "OneHandMelee", 99), item("s2", "OneHandMelee", 98)];
+  const all = [...wands, ...swords];
+  test("ranks against the same subtype only, best first, ties share the better rank, items without the stat left out", () => {
+    assert.deepEqual(statRank(all, wands[1]!, "damage"), { rank: 1, of: 4, share: 1 });
+    assert.deepEqual(statRank(all, wands[2]!, "damage"), { rank: 1, of: 4, share: 1 });
+    assert.deepEqual(statRank(all, wands[0]!, "damage"), { rank: 3, of: 4, share: 1 / 3 });
+    assert.equal(statRank(all, wands[4]!, "damage"), null, "no stat, no rank");
+  });
+  test("too few peers: no rank at all", () => {
+    assert.equal(statRank(all, swords[0]!, "damage"), null);
+  });
+  test("a stat that takes away: the one that takes least ranks first", () => {
+    const neg = [item("n1", "X", -5), item("n2", "X", -50), item("n3", "X", -10), item("n4", "X", -2)];
+    assert.equal(statRank(neg, neg[3]!, "damage")!.rank, 1);
+    assert.equal(statRank(neg, neg[1]!, "damage")!.rank, 4);
   });
 });
