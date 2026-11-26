@@ -58,6 +58,7 @@ for (const lang of LANGS) {
   if (g) PAGES.push({ id: "guide", lang, url: `/${lang}/${SECTIONS.guide.slug[lang]}/${g}/`, type: "guide" });
   else PAGES.push({ id: "guide", lang, url: null, type: "guide" });
   PAGES.push({ id: "404", lang, url: `/${lang}/no-such-page-xyz/`, type: "404", status: 404 });
+  PAGES.push({ id: "map", lang, url: `/${lang}/${{ pt: "mapa", en: "map", es: "mapa" }[lang]}/`, type: "map" });
   for (const [kind, fn] of Object.entries(KINDS)) {
     const it = pick(fn);
     PAGES.push({ id: `item-${kind}`, lang, url: it ? `/${lang}/${SECTIONS.item.slug[lang]}/${it.slug[lang]}/` : null, type: "item" });
@@ -117,7 +118,17 @@ function measure() {
   const lines = (rects) => { const tops = []; for (const r of rects) if (!tops.some((t) => Math.abs(t - r.top) < 4)) tops.push(r.top); return tops.length; };
   const contentBox = (el) => { const r = document.createRange(); r.selectNodeContents(el); return r.getBoundingClientRect(); };
   const median = (xs) => { const s = [...xs].sort((a, b) => a - b); return s[Math.floor(s.length / 2)]; };
-  const seen = { tables: 0, iconBoxes: 0 };
+  const seen = { tables: 0, iconBoxes: 0, map: null };
+  // the map's canvas is Leaflet's (tiles and panes past its edges by design): left out of the rules, listed
+  const inMap = (el) => !!el.closest("[data-map-canvas]");
+  const mapEl = document.querySelector("[data-map-canvas]");
+  if (mapEl) {
+    const r = mapEl.getBoundingClientRect();
+    const rows = [...document.querySelectorAll(".panel .lrow")].filter(vis);
+    seen.map = { h: Math.round(r.height), rows: rows.length, iconless: rows.filter((l) => !l.querySelector(".licon img")).length,
+      drawer: vis(document.querySelector("[data-drawer]") ?? document.body) && !!document.querySelector("[data-drawer]") && getComputedStyle(document.querySelector("[data-drawer]")).display !== "none",
+      ready: !!document.querySelector(".mapapp.ready") };
+  }
 
   // header + row-height: the item list and the item page's tables
   for (const table of document.querySelectorAll(".dt table, table.qtable")) {
@@ -158,6 +169,11 @@ function measure() {
 
   // icon-column: the stats box (every row: one leading icon box, one x, one size); list panels; quality cards
   const iconGroups = [];
+  // the map's layer rows: one icon well each, at one x
+  {
+    const rows = [...document.querySelectorAll(".panel .lrow")].filter(vis);
+    if (rows.length) iconGroups.push({ where: "map layers", rows, lead: (li) => li.querySelector(".licon") });
+  }
   for (const box of document.querySelectorAll(".infobox")) {
     const rows = [...box.querySelectorAll(".statlist > li, .facts > li, .nostats")].filter(vis);
     if (rows.length) iconGroups.push({ where: "stats box", rows, lead: (li) => li.firstElementChild });
@@ -190,6 +206,7 @@ function measure() {
       && ![...el.childNodes].some((n) => n.nodeType === 3 && n.nodeValue.trim());
     if (!flexWrap && !grid && !inlineBlock) continue;
     if (!vis(el) || el.closest(".sr-only, [hidden]")) continue;
+    if (inMap(el)) continue;
     if (el.closest("[data-flow]")) { flows.push(name(el)); continue; }
     const kids = [...el.children].filter((c) => vis(c) && getComputedStyle(c).position !== "absolute" && getComputedStyle(c).position !== "fixed");
     if (kids.length < 3) continue;
@@ -210,6 +227,7 @@ function measure() {
   const scrollers = [];
   for (const el of document.querySelectorAll("body *")) {
     if (!vis(el) || el.closest(".sr-only")) continue;
+    if (inMap(el) || el.matches(".mapstage")) { if (el.matches("[data-map-canvas]")) flows.push("[data-map-canvas] (Leaflet)"); continue; }
     const s = getComputedStyle(el);
     if (!["hidden", "clip", "auto", "scroll"].includes(s.overflowX)) continue;
     if (el.scrollWidth <= el.clientWidth + 1) continue;
@@ -250,6 +268,7 @@ for (const vp of viewports) {
     const want = p.status ?? 200;
     if (resp.status() !== want) { failures.push({ rule: "expect", where, detail: `${p.url} answered ${resp.status()}, expected ${want}` }); continue; }
     await page.evaluate(() => document.fonts.ready);
+    if (p.type === "map") await page.waitForSelector(".mapapp.ready", { timeout: 8000 }).catch(() => {});
     const { out, seen, scrollers, flows } = await page.evaluate(measure);
     // the monster list opens as a grid of cards: measured so, then switched to its table and measured again
     if (p.type === "mlist") {
@@ -267,6 +286,17 @@ for (const vp of viewports) {
     for (const s of scrollers) scrollRows.set(s, (scrollRows.get(s) ?? 0) + 1);
     if (!SWEEP) {
       if ((p.type === "list" || p.type === "mlist") && vp.name !== "390" && !seen.tables) failures.push({ rule: "expect", where, detail: "the table's header was not found" });
+      if (p.type === "map") {
+        const m = seen.map;
+        if (!m) failures.push({ rule: "expect", where, detail: "the map canvas was not found" });
+        else {
+          if (!m.ready) failures.push({ rule: "expect", where, detail: "the map did not start (no .mapapp.ready)" });
+          if (m.h < 400) failures.push({ rule: "expect", where, detail: `the map is ${m.h} px tall (400 at least)` });
+          if (vp.name !== "390" && m.rows < 6) failures.push({ rule: "expect", where, detail: `${m.rows} layer rows in view (6 expected)` });
+          if (m.iconless) failures.push({ rule: "expect", where, detail: `${m.iconless} layer row(s) without their game icon` });
+          if (vp.name === "390" && !m.drawer) failures.push({ rule: "expect", where, detail: "no layers drawer button on a phone" });
+        }
+      }
       if ((p.type === "item" || p.type === "monster") && !seen.iconBoxes) failures.push({ rule: "expect", where, detail: "the stats box was not found" });
     }
   }

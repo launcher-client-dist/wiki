@@ -4,13 +4,15 @@
  */
 import type { APIRoute } from "astro";
 import { DEFAULT_LANG, HREFLANG, LANGS, type Lang } from "../lib/i18n.ts";
-import { absoluteUrl, homeAlternates, sectionAlternates, SHIPPED_KINDS, type Alternates } from "../lib/routes.ts";
+import { absoluteUrl, alternatesBy, homeAlternates, sectionAlternates, SHIPPED_KINDS, type Alternates } from "../lib/routes.ts";
+import { mapPath } from "../lib/map/links.ts";
 import { ITEMS, siteData } from "../lib/site-registry.ts";
 
 export const GET: APIRoute = async () => {
   const { registry, guides, items, monsters } = await siteData();
   const pages: { alternates: Alternates; lastmod?: string }[] = [{ alternates: homeAlternates() }];
   for (const kind of SHIPPED_KINDS) pages.push({ alternates: sectionAlternates(kind) });
+  pages.push({ alternates: alternatesBy(mapPath) });
   const seen = new Set<string>();
   for (const g of guides) {
     if (seen.has(g.ref)) continue;

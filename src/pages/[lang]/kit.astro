@@ -110,7 +110,7 @@ const scene = `data:image/svg+xml,${encodeURIComponent('<svg xmlns="http://www.w
         <InfoBox title={L("Ficha", "Sheet")}>
           <RenderSlot slot="media" alt={registry.link("monster:test-slime", lang).name} size={220} />
           <StatGrid stats={[{ label: L("Vida", "Health"), value: "300", icon: "heart" }, { label: "Exp", value: "120", icon: "star" }, { label: L("Dano", "Damage"), value: "18", icon: "sword" }, { label: L("Defesa", "Defense"), value: "9", icon: "shield" }]} />
-          <MapLink slot="actions" href="https://map.opengea.tech/" />
+          <MapLink slot="actions" />
           <span slot="footer">{L("Dados inventados", "Made-up data")}</span>
         </InfoBox>
         <div class="stack">
@@ -118,7 +118,7 @@ const scene = `data:image/svg+xml,${encodeURIComponent('<svg xmlns="http://www.w
           <Card title={L("Em breve", "Soon")} soon={t.soon} layout="row"><PixelArt slot="emblem" kind="quest" size={34} />{L("Uma seção que ainda não abriu.", "A section not open yet.")}</Card>
           <div class="row">{[24, 32, 44, 64].map((s) => <IconSlot icon={registry.link("item:sample-potion", lang).icon} kind="item" size={s} />)}<IconSlot kind="monster" size={44} /></div>
           <Figure src={scene} alt={L("Uma paisagem de exemplo em pixels", "A sample pixel landscape")} width={640} height={240} pixel caption={L("Figura com legenda", "A figure with a caption")} />
-          <MapLink variant="inline" href="https://map.opengea.tech/" />
+          <MapLink variant="inline" />
         </div>
       </div>
     </section>

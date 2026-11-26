@@ -3,6 +3,7 @@ import { ui } from "../../i18n/index.ts";
 import { LANGS, HREFLANG, type Lang } from "../../lib/i18n.ts";
 import { homePath, NAV_KINDS, sectionPath, SHIPPED_KINDS, type Alternates } from "../../lib/routes.ts";
 import PixelArt from "../ui/PixelArt.astro";
+import { mapPath } from "../../lib/map/links.ts";
 interface Props {
   lang: Lang;
   alternates: Alternates;
@@ -28,7 +29,7 @@ const year = 2026;
     <nav aria-label={t.footerTools}>
       <h2>{t.footerTools}</h2>
       <ul>
-        <li><a href="https://map.opengea.tech/" rel="noopener">{t.footerMap}</a></li>
+        <li><a href={mapPath(lang)}>{t.footerMap}</a></li>
         <li><button type="button" class="linkish" data-open-search>{t.footerSearch} <kbd>Ctrl K</kbd></button></li>
       </ul>
     </nav>

@@ -297,6 +297,20 @@ for (const l of LANG_CODES.filter((c) => c !== LANG_TABLE.default)) if (!pages.g
   console.log(`checked ${monPages.length} monster pages: percentages, stats, drops linked both ways`);
 }
 
+// --------------------------------------------------------------------------------------------------- the map
+// The wiki has its own map: no page links to the editor (map.opengea.tech) any more, every "ver no mapa" opens the
+// wiki's map, and the map pages answer in every language.
+{
+  let maplinks = 0;
+  for (const p of pages.values()) {
+    if (/map\.opengea\.tech/i.test(p.html)) fail(p.url, "links to map.opengea.tech (the editor): use the wiki's own map");
+    maplinks += (p.html.match(/data-maplink/g) ?? []).length;
+  }
+  const MAP = { pt: "/pt/mapa/", en: "/en/map/", es: "/es/mapa/" };
+  for (const [l, u] of Object.entries(MAP)) if (LANG_CODES.includes(l) && !pages.get(u)?.html.includes("data-mapapp")) fail(u, "the map page is missing");
+  console.log(`checked ${maplinks} "ver no mapa" links: none to the editor`);
+}
+
 console.log(`checked ${pages.size} pages (${indexable.length} indexable), sitemap, robots.txt, CNAME`);
 if (problems.length) {
   console.error(`\n${problems.length} problem(s):\n  ${problems.join("\n  ")}`);

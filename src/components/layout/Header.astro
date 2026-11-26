@@ -7,10 +7,12 @@ import type { EntityKind } from "../../lib/entities/types.ts";
 import Icon from "../ui/Icon.astro";
 import PixelArt from "../ui/PixelArt.astro";
 import Badge from "../ui/Badge.astro";
+import { mapPath } from "../../lib/map/links.ts";
 interface Props {
   lang: Lang;
   alternates: Alternates;
-  current?: EntityKind;
+  /** The section the page belongs to; "map" for the map. */
+  current?: EntityKind | "map";
 }
 const { lang, alternates, current } = Astro.props;
 const t = ui(lang);
@@ -28,6 +30,7 @@ const shipped = (k: EntityKind) => SHIPPED_KINDS.includes(k);
       ) : (
         <span class="soon" title={t.soon} aria-disabled="true">{t.kindPlural[k]}</span>
       ))}
+      <a href={mapPath(lang)} aria-current={current === "map" ? "page" : undefined}>{t.mapNav}</a>
     </nav>
     <div class="tools">
       <button class="search-trigger" type="button" data-open-search aria-keyshortcuts="Control+K /">
@@ -66,6 +69,7 @@ const shipped = (k: EntityKind) => SHIPPED_KINDS.includes(k);
           )}
         </li>
       ))}
+      <li><a href={mapPath(lang)} aria-current={current === "map" ? "page" : undefined}><span class="nav-map-i" aria-hidden="true"><Icon name="map" size={22} /></span>{t.mapNav}</a></li>
     </ul>
   </nav>
 </header>
@@ -158,6 +162,7 @@ const shipped = (k: EntityKind) => SHIPPED_KINDS.includes(k);
   .mobile-nav ul { list-style: none; margin: 0; padding-top: 10px; padding-bottom: 14px; display: grid; gap: 6px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr)); }
   .mobile-nav a, .soon-row { display: flex; align-items: center; gap: 12px; padding: 10px 12px; border-radius: var(--r-m); font-weight: 700; text-decoration: none; border: var(--bw) solid var(--border); background: var(--surface); }
   .mobile-nav a { color: var(--heading); }
+  .nav-map-i { display: inline-grid; place-items: center; width: 28px; height: 28px; flex: none; color: var(--accent-text); }
   .mobile-nav a[aria-current="page"] { border-color: var(--accent); }
   .soon-row { color: var(--text-faint); border-style: dashed; }
   .soon-row :global(.badge) { margin-left: auto; }

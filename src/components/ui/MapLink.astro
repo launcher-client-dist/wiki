@@ -1,20 +1,28 @@
 ---
-/** A link to the interactive map (map.opengea.tech), opening in a new tab. Other hosts fail the build. */
+/**
+ * "Ver no mapa": a link to the wiki's own map, in the same tab, on the spot's floor with a marker. `href` is a map link
+ * from the data (turned into its spot through src/data/map/links.json; an unknown one fails the build), `entity` the
+ * ref whose spots light up with it (the NPC of a shop row, the item of a map spot, the monster of its places).
+ * Without either, the map's home.
+ *   <MapLink variant="inline" href={s.where.link} entity={s.npc} label="ver no mapa" />
+ */
 import { ui } from "../../i18n/index.ts";
-import { isLang, DEFAULT_LANG } from "../../lib/i18n.ts";
+import { isLang, DEFAULT_LANG, type Lang } from "../../lib/i18n.ts";
+import { mapHref, spotOf } from "../../lib/map/links.ts";
 import Icon from "./Icon.astro";
 interface Props {
-  href: string;
+  href?: string;
+  entity?: string;
   variant?: "button" | "inline";
   label?: string;
 }
-const t = ui(isLang(Astro.params.lang) ? Astro.params.lang : DEFAULT_LANG);
-const { href, variant = "button", label = t.mapOpen } = Astro.props;
-const url = new URL(href);
-if (url.hostname !== "map.opengea.tech" || url.protocol !== "https:") throw new Error(`MapLink only links to https://map.opengea.tech (got ${href})`);
+const lang: Lang = isLang(Astro.params.lang) ? Astro.params.lang : DEFAULT_LANG;
+const t = ui(lang);
+const { href, entity, variant = "button", label = t.mapOpen } = Astro.props;
+const url = mapHref(lang, href ? spotOf(href) : null, entity ?? null);
 ---
-<a class:list={["maplink", `maplink--${variant}`]} href={url.href} target="_blank" rel="noopener" aria-label={`${label} (${t.mapOpenNew})`}>
-  <Icon name="map" size={variant === "button" ? 18 : 16} /><span>{label}</span><Icon name="external" size={14} class="ext" />
+<a class:list={["maplink", `maplink--${variant}`]} href={url} data-maplink>
+  <Icon name="map" size={variant === "button" ? 18 : 16} /><span>{label}</span>
 </a>
 <style>
   .maplink { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; font-weight: 700; }
@@ -26,5 +34,4 @@ if (url.hostname !== "map.opengea.tech" || url.protocol !== "https:") throw new 
   .maplink--button:active { transform: translateY(2px); box-shadow: var(--shadow-1); }
   .maplink--inline { color: var(--link); font-size: var(--fs-sm); }
   .maplink--inline:hover { color: var(--link-hover); text-decoration: underline; }
-  .ext { opacity: 0.8; }
 </style>

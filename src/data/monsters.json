@@ -2715,7 +2715,7 @@
    ],
    "render": {
     "size": [
-     430,
+     422,
      512
     ],
     "src": "/renders/monsters/black-sheep.webp"
@@ -5197,7 +5197,7 @@
    ],
    "render": {
     "size": [
-     170,
+     314,
      512
     ],
     "src": "/renders/monsters/conquest-champion.webp"
@@ -7702,7 +7702,7 @@
    ],
    "render": {
     "size": [
-     322,
+     336,
      512
     ],
     "src": "/renders/monsters/deer.webp"
@@ -13068,8 +13068,8 @@
    ],
    "render": {
     "size": [
-     399,
-     512
+     512,
+     460
     ],
     "src": "/renders/monsters/huntsman.webp"
    },
@@ -17540,7 +17540,7 @@
    ],
    "render": {
     "size": [
-     290,
+     306,
      512
     ],
     "src": "/renders/monsters/occultist-acolyte.webp"
@@ -27340,7 +27340,7 @@
    ],
    "render": {
     "size": [
-     430,
+     422,
      512
     ],
     "src": "/renders/monsters/sheep.webp"
@@ -32611,8 +32611,8 @@
    ],
    "render": {
     "size": [
-     512,
-     395
+     461,
+     512
     ],
     "src": "/renders/monsters/thug.webp"
    },
@@ -34970,8 +34970,8 @@
    ],
    "render": {
     "size": [
-     457,
-     512
+     512,
+     465
     ],
     "src": "/renders/monsters/viscid-goblin.webp"
    },

@@ -1,0 +1,95 @@
+import { describe, test } from "node:test";
+import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
+import { parsePlace, placeFloors, search } from "../src/lib/map/goto.ts";
+import { mapHref, readDeepLink } from "../src/lib/map/links.ts";
+import { nextWindow, windowSeconds } from "../src/lib/monsters/window.ts";
+
+const read = <T,>(f: string): T => JSON.parse(readFileSync(new URL(`../src/data/${f}`, import.meta.url), "utf8")) as T;
+const LINKS = read<Record<string, [number, number, string]>>("map/links.json");
+const POINTS = read<{ floors: string[]; layers: Record<string, { x: number; z: number; f: string; ref?: string; n?: number; spoiler?: boolean }[]> }>("map/points.json");
+
+/** Every map link the data files hold (the same walk as the private map tool). */
+function dataLinks(): Set<string> {
+  const out = new Set<string>();
+  const items = read<{ items: any[] }>("items.json").items;
+  for (const i of items) {
+    for (const k of ["shops", "buyers"]) for (const s of i.sources[k]) if (s.where) out.add(s.where.link);
+    for (const m of i.sources.map) out.add(m.link);
+    for (const r of [...i.sources.recipes, ...i.uses.recipes]) for (const g of r.ingredients) for (const w of g.where ?? []) out.add(w.link);
+  }
+  for (const m of read<{ monsters: any[] }>("monsters.json").monsters) for (const p of [...m.places, ...m.windows]) out.add(p.link);
+  for (const e of read<{ entities: any[] }>("entities.json").entities) if (e.appears?.where) out.add(e.appears.where.link);
+  return out;
+}
+
+describe("the map's data", () => {
+  test("the link index knows every map link of the data, and nothing else (stale: run the map tool after the export)", () => {
+    const want = dataLinks();
+    assert.deepEqual([...want].filter((l) => !LINKS[l]).length, 0);
+    assert.deepEqual(Object.keys(LINKS).filter((l) => !want.has(l)).length, 0);
+  });
+
+  test("every point names a floor the map has, and a monster's spots add up to its pages' spawn points", () => {
+    const meta = JSON.parse(readFileSync(new URL("../public/map/tiles/meta.json", import.meta.url), "utf8")) as { floors: string[] };
+    for (const rows of Object.values(POINTS.layers)) for (const r of rows) assert.ok(meta.floors.includes(r.f), `floor ${r.f}`);
+    const monsters = read<{ monsters: { id: string; places: { count: number }[] }[] }>("monsters.json").monsters;
+    const spots = new Map<string, number>();
+    for (const r of POINTS.layers.monsters!) spots.set(r.ref!, (spots.get(r.ref!) ?? 0) + (r.n ?? 1));
+    for (const m of monsters) assert.equal(spots.get(`monster:${m.id}`) ?? 0, m.places.reduce((n, p) => n + p.count, 0), m.id);
+  });
+
+  test("no map link and no point leaves the wiki for the editor", () => {
+    const text = readFileSync(new URL("../src/data/map/points.json", import.meta.url), "utf8");
+    assert.ok(!/opengea\.tech/.test(text));
+  });
+});
+
+describe("deep links", () => {
+  test("a spot and an entity, short and readable", () => {
+    assert.equal(mapHref("pt", { x: -196, z: 154, f: "-4" }, "monster:swamp-troll"), "/pt/mapa/?f=-4&x=-196&z=154&e=monster:swamp-troll");
+    assert.equal(mapHref("en"), "/en/map/");
+    assert.equal(mapHref("es", null, "npc:a72"), "/es/mapa/?e=npc:a72");
+  });
+
+  test("read leniently: anything malformed is dropped, the map still opens", () => {
+    const floors = ["s", "1", "-4"];
+    assert.deepEqual(readDeepLink("?f=-4&x=-196&z=154&e=monster:swamp-troll", floors), { spot: { x: -196, z: 154, f: "-4" }, floor: "-4", entity: "monster:swamp-troll" });
+    assert.deepEqual(readDeepLink("?f=99&x=abc&e=<script>", floors), { spot: null, floor: null, entity: null });
+    assert.deepEqual(readDeepLink("?x=10&z=20", floors).spot, { x: 10, z: 20, f: "s" });
+  });
+});
+
+describe("Ir para (the editor's own parsing)", () => {
+  test("the game's /pos line, x z, x y z; words are a search", () => {
+    assert.deepEqual(parsePlace("[pos] x -271.0, y -1.2, z 283.0 (floor -2)"), { x: -271, z: 283, y: -1.2, tag: "-2" });
+    assert.deepEqual(parsePlace("[pos] x 12.0, z -40.0 (surface)"), { x: 12, z: -40, y: null, tag: "s" });
+    assert.deepEqual(parsePlace("-196, 154"), { x: -196, z: 154, y: null, tag: null });
+    assert.deepEqual(parsePlace("10, -3, 20"), { x: 10, z: 20, y: -3, tag: null });
+    assert.equal(parsePlace("swamp troll"), null);
+  });
+
+  test("a floor tag is tried first where the map has that floor at the spot, else the surface", () => {
+    const place = parsePlace("[pos] x 1, y 2, z 3 (floor -2)")!;
+    assert.deepEqual(placeFloors(place, ["s", "-2"], () => true), ["-2", "s"]);
+    assert.deepEqual(placeFloors(place, ["s", "-2"], () => false), ["s", "-2"]);
+    assert.deepEqual(placeFloors(place, ["s"]), ["s"]);
+  });
+
+  test("search: every word, accents folded, the start of a name first", () => {
+    const names = ["Swamp Troll", "Cave Troll", "Poço · Basile", "Trolley"];
+    assert.deepEqual(search(names, "troll", (s) => s), ["Trolley", "Cave Troll", "Swamp Troll"]);
+    assert.deepEqual(search(names, "poco", (s) => s), ["Poço · Basile"]);
+  });
+});
+
+describe("a boss's window in the reader's clock", () => {
+  test("game hour H starts at real second H x 150 of every hour; a window past midnight runs into the next hour", () => {
+    assert.deepEqual(windowSeconds([1, 4]), { start: 150, end: 600 });
+    assert.deepEqual(windowSeconds([22, 2]), { start: 3300, end: 3900 });
+    const hour = 1_800_000_000 - (1_800_000_000 % 3600);
+    assert.deepEqual(nextWindow({ start: 150, end: 600 }, hour + 100), { open: false, at: hour + 150 });
+    assert.deepEqual(nextWindow({ start: 150, end: 600 }, hour + 300), { open: true, until: hour + 600 });
+    assert.deepEqual(nextWindow({ start: 150, end: 600 }, hour + 700), { open: false, at: hour + 3600 + 150 });
+  });
+});

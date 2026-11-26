@@ -23,6 +23,7 @@ import { statLabel } from "../../../lib/items/data.ts";
 import { oneInText } from "../../../lib/items/view.ts";
 import { MONSTER_STAT_KEYS, expPerHealth, gameHour, monsterRank, monsterRef, placeLine, realOffset, respawnText, similarMonsters, type MonsterData, type MonsterStatKey, type MonsterVersion } from "../../../lib/monsters/data.ts";
 import { spellWords } from "../../../lib/monsters/spells.ts";
+import { windowSeconds } from "../../../lib/monsters/window.ts";
 import { monsterMeta } from "../../../lib/monsters/view.ts";
 import { allNames, displayName, nameWithAid } from "../../../lib/names.ts";
 
@@ -81,7 +82,7 @@ const jsonLd = [{
   additionalProperty: statKeys.map((k) => ({ "@type": "PropertyValue", name: label(k), value: m.stats[k] })),
 }];
 /** The window's script needs only numbers and the page's words: the start and end real second of the hour. */
-const winAttrs = (h: [number, number]) => ({ "data-win-start": String((h[0] % 24) * 150), "data-win-end": String((h[1] % 24) * 150 + (h[1] <= h[0] ? 3600 : 0)) });
+const winAttrs = (h: [number, number]) => { const w = windowSeconds(h); return { "data-win-start": String(w.start), "data-win-end": String(w.end) }; };
 const spellRows = (spells: MonsterData["spells"]) => spells;
 ---
 <PageShell lang={lang} title={nameWithAid(dn)} description={description} alternates={alternates} current="monster"
@@ -128,7 +129,7 @@ const spellRows = (spells: MonsterData["spells"]) => spells;
                   <p class="wwhere">
                     {w.invasion && <span class="inv"><GameIcon name="summon" scale={1} />{tm.windowInvasion}{w.oneNightIn && <> · {fill(tm.windowNights, { n: w.oneNightIn })}</>}</span>}
                     <span>{placeLine(w.place, lang, ti.near, ti.underground)}</span>
-                    <MapLink variant="inline" href={w.link} label={ti.mapLink} />
+                    <MapLink variant="inline" href={w.link} entity={ref} label={ti.mapLink} />
                   </p>
                 </li>
               ))}
@@ -220,7 +221,7 @@ const spellRows = (spells: MonsterData["spells"]) => spells;
                     <span class="pline">{placeLine(p.place, lang, ti.near, ti.underground)}</span>
                     <Fragment slot="end">
                       <span class="spawns" title={tm.spawnTip}><GameIcon name="stack" scale={1} /><b class="num">{p.count === 1 ? tm.spawnPoint : fill(tm.spawnPoints, { n: p.count })}</b></span>
-                      <MapLink variant="inline" href={p.link} label={ti.mapLink} />
+                      <MapLink variant="inline" href={p.link} entity={ref} label={ti.mapLink} />
                     </Fragment>
                   </ListRow>
                 ))}
@@ -228,8 +229,8 @@ const spellRows = (spells: MonsterData["spells"]) => spells;
             )}
             {ap && ap.how !== "timed" && (
               <p class="how" data-section="how">
-                {ap.how === "placed" && <><span class="bicon"><GameIcon name="src-map" fit={28} /></span><span>{tm.howPlaced}: {placeLine(ap.where.place, lang, ti.near, ti.underground)}</span><MapLink variant="inline" href={ap.where.link} label={ti.mapLink} /></>}
-                {ap.how === "lever" && <><span class="bicon"><GameIcon name="src-map" fit={28} /></span><span>{tm.howLever}:</span><EntityLink to={ap.place} icon={false} /><MapLink variant="inline" href={ap.where.link} label={ti.mapLink} /></>}
+                {ap.how === "placed" && <><span class="bicon"><GameIcon name="src-map" fit={28} /></span><span>{tm.howPlaced}: {placeLine(ap.where.place, lang, ti.near, ti.underground)}</span><MapLink variant="inline" href={ap.where.link} entity={ref} label={ti.mapLink} /></>}
+                {ap.how === "lever" && <><span class="bicon"><GameIcon name="src-map" fit={28} /></span><span>{tm.howLever}:</span><EntityLink to={ap.place} icon={false} /><MapLink variant="inline" href={ap.where.link} entity={ref} label={ti.mapLink} /></>}
                 {ap.how === "travel" && <><span class="bicon"><GameIcon name="src-map" fit={28} /></span><span>{tm.howTravel}:</span><EntityLink to={ap.via} iconSize={28} /></>}
               </p>
             )}
@@ -342,25 +343,16 @@ const spellRows = (spells: MonsterData["spells"]) => spells;
   </div>
 </PageShell>
 <script>
-  // the next window in the reader's own clock: game hour H starts at real second H x 150 of every hour, the same in
-  // every time zone of whole hours (the page holds the seconds; nothing is fetched)
+  // the next window in the reader's own clock (src/lib/monsters/window.ts: shared with the map)
+  import { nextWindow } from "../../../lib/monsters/window.ts";
   function paint() {
     const fmt = new Intl.DateTimeFormat(document.documentElement.lang || undefined, { hour: "2-digit", minute: "2-digit" });
     for (const li of document.querySelectorAll<HTMLElement>("[data-win-start]")) {
       const out = li.querySelector<HTMLElement>("[data-win-next]");
       if (!out) continue;
-      const start = Number(li.dataset.winStart), end = Number(li.dataset.winEnd);
-      const now = Date.now() / 1000;
-      const hour0 = now - (now % 3600);
-      let text = "";
-      for (const base of [hour0 - 3600, hour0, hour0 + 3600]) {
-        const s = base + start, e = base + end;
-        if (now < e) {
-          text = now >= s ? (out.dataset.tNow ?? "").replace("{t}", fmt.format(e * 1000)) : (out.dataset.tNext ?? "").replace("{t}", fmt.format(s * 1000));
-          break;
-        }
-      }
-      out.textContent = text ? `${text} (${out.dataset.tClock})` : "";
+      const w = nextWindow({ start: Number(li.dataset.winStart), end: Number(li.dataset.winEnd) }, Date.now() / 1000);
+      const text = w.open ? (out.dataset.tNow ?? "").replace("{t}", fmt.format(w.until * 1000)) : (out.dataset.tNext ?? "").replace("{t}", fmt.format(w.at * 1000));
+      out.textContent = `${text} (${out.dataset.tClock})`;
     }
   }
   paint();

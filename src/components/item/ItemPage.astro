@@ -240,8 +240,8 @@ const jsonLd = [{
                           <Fragment slot="sub">
                             <span class="appears" data-appears={ap.how}>
                               {ap.how === "timed" && <><GameIcon name="time" scale={1} />{ti.appearsTimed}</>}
-                              {ap.how === "placed" && <><GameIcon name="src-map" scale={1} />{ti.appearsPlaced} {placeText(ap.where.place)} <MapLink variant="inline" href={ap.where.link} label={ti.mapLink} /></>}
-                              {ap.how === "lever" && <>{ti.appearsLever} <EntityLink to={ap.place} icon={false} /> <MapLink variant="inline" href={ap.where.link} label={ti.mapLink} /></>}
+                              {ap.how === "placed" && <><GameIcon name="src-map" scale={1} />{ti.appearsPlaced} {placeText(ap.where.place)} <MapLink variant="inline" href={ap.where.link} entity={d.monster} label={ti.mapLink} /></>}
+                              {ap.how === "lever" && <>{ti.appearsLever} <EntityLink to={ap.place} icon={false} /> <MapLink variant="inline" href={ap.where.link} entity={d.monster} label={ti.mapLink} /></>}
                               {ap.how === "travel" && <>{ti.appearsTravel} <EntityLink to={ap.via} iconSize={22} /></>}
                             </span>
                           </Fragment>
@@ -261,7 +261,7 @@ const jsonLd = [{
                   {shopsOpen.map((s) => (
                     <ListRow>
                       <EntityLink to={s.npc} iconSize={40} />
-                      {s.where && <Fragment slot="sub"><span>{placeText(s.where.place)}</span><MapLink variant="inline" href={s.where.link} label={ti.mapLink} /></Fragment>}
+                      {s.where && <Fragment slot="sub"><span>{placeText(s.where.place)}</span><MapLink variant="inline" href={s.where.link} entity={s.npc} label={ti.mapLink} /></Fragment>}
                       <Fragment slot="end">
                         <Value kind="gold" n={s.price} lang={lang} best={s.price === Math.min(...shopsOpen.map((x) => x.price)) && shopsOpen.some((x) => x.price !== s.price)} />
                         {s.stock.kind === "unlimited" ? <Value kind="stockUnlimited" lang={lang} /> : s.stock.kind === "limited" ? <Value kind="stock" n={s.stock.n ?? 0} lang={lang} /> : <Value kind="blackMarket" n={s.stock.n ?? 0} lang={lang} />}
@@ -273,7 +273,7 @@ const jsonLd = [{
               {shopsGated.length > 0 && (
                 <Spoiler title={shopsOpen.length ? ti.spoilerShop : ti.spoilerShopOnly}>
                   <ul class="plain gated" data-section="shops-after-quest">
-                    {shopsGated.map((s) => <li><EntityLink to={s.npc} /> · <Value kind="gold" n={s.price} lang={lang} />{s.where && <> · <MapLink variant="inline" href={s.where.link} label={ti.mapLink} /></>}{s.afterQuests.length > 0 && <span class="q">{ti.afterQuest}: {s.afterQuests.map((q, i) => <>{i > 0 && ` ${ti.or} `}<EntityLink to={q} /></>)}</span>}</li>)}
+                    {shopsGated.map((s) => <li><EntityLink to={s.npc} /> · <Value kind="gold" n={s.price} lang={lang} />{s.where && <> · <MapLink variant="inline" href={s.where.link} entity={s.npc} label={ti.mapLink} /></>}{s.afterQuests.length > 0 && <span class="q">{ti.afterQuest}: {s.afterQuests.map((q, i) => <>{i > 0 && ` ${ti.or} `}<EntityLink to={q} /></>)}</span>}</li>)}
                   </ul>
                 </Spoiler>
               )}
@@ -302,7 +302,7 @@ const jsonLd = [{
                   {src.map.slice(0, MAP_SHOWN).map((m) => (
                     <ListRow>
                       <span>{placeText(m.place)}</span>
-                      <Fragment slot="end"><MapLink variant="inline" href={m.link} label={ti.mapLink} /></Fragment>
+                      <Fragment slot="end"><MapLink variant="inline" href={m.link} entity={`item:${item.id}`} label={ti.mapLink} /></Fragment>
                     </ListRow>
                   ))}
                   {src.map.length > MAP_SHOWN && (
@@ -313,7 +313,7 @@ const jsonLd = [{
                           {src.map.slice(MAP_SHOWN).map((m) => (
                             <ListRow>
                               <span>{placeText(m.place)}</span>
-                              <Fragment slot="end"><MapLink variant="inline" href={m.link} label={ti.mapLink} /></Fragment>
+                              <Fragment slot="end"><MapLink variant="inline" href={m.link} entity={`item:${item.id}`} label={ti.mapLink} /></Fragment>
                             </ListRow>
                           ))}
                         </ul>
@@ -391,7 +391,7 @@ const jsonLd = [{
                   {buyersOpen.map((b) => (
                     <ListRow>
                       <EntityLink to={b.npc} iconSize={40} />
-                      {b.where && <Fragment slot="sub"><span>{placeText(b.where.place)}</span><MapLink variant="inline" href={b.where.link} label={ti.mapLink} /></Fragment>}
+                      {b.where && <Fragment slot="sub"><span>{placeText(b.where.place)}</span><MapLink variant="inline" href={b.where.link} entity={b.npc} label={ti.mapLink} /></Fragment>}
                       <Fragment slot="end"><Value kind="gold" n={b.price} lang={lang} best={b.price === Math.max(...buyersOpen.map((x) => x.price)) && buyersOpen.some((x) => x.price !== b.price)} /></Fragment>
                     </ListRow>
                   ))}
@@ -400,7 +400,7 @@ const jsonLd = [{
               {buyersGated.length > 0 && (
                 <Spoiler title={buyersOpen.length ? ti.spoilerBuyer : ti.spoilerBuyerOnly}>
                   <ul class="plain gated" data-section="buyers-after-quest">
-                    {buyersGated.map((b) => <li><EntityLink to={b.npc} /> · <Value kind="gold" n={b.price} lang={lang} />{b.where && <> · <MapLink variant="inline" href={b.where.link} label={ti.mapLink} /></>}{b.afterQuests.length > 0 && <span class="q">{ti.afterQuest}: {b.afterQuests.map((q, i) => <>{i > 0 && ` ${ti.or} `}<EntityLink to={q} /></>)}</span>}</li>)}
+                    {buyersGated.map((b) => <li><EntityLink to={b.npc} /> · <Value kind="gold" n={b.price} lang={lang} />{b.where && <> · <MapLink variant="inline" href={b.where.link} entity={b.npc} label={ti.mapLink} /></>}{b.afterQuests.length > 0 && <span class="q">{ti.afterQuest}: {b.afterQuests.map((q, i) => <>{i > 0 && ` ${ti.or} `}<EntityLink to={q} /></>)}</span>}</li>)}
                   </ul>
                 </Spoiler>
               )}

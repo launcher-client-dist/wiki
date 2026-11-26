@@ -30,7 +30,7 @@ interface Props {
   searchable?: { kind: EntityKind; image?: string } | false;
   ogType?: "website" | "article";
   jsonLd?: object[];
-  current?: EntityKind;
+  current?: EntityKind | "map";
   mainClass?: string;
   /** The social card (an absolute path on the site); the default card otherwise. */
   ogImage?: string;
