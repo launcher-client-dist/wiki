@@ -91,7 +91,7 @@ async function build() {
     entities.push(...es);
     if (name === "guides") guides = pages as unknown as GuidePage[];
   }
-  if (KIT_ENABLED) entities.push(...FIXTURE_ENTITIES);
+  if (KIT_ENABLED) entities.push(...FIXTURE_ENTITIES.map((e) => ({ ...e, noPage: true })));
   const registry = createRegistry(entities, { shippedKinds: SHIPPED_KINDS });
   guides.sort((a, b) => a.entry.data.order - b.entry.data.order || a.slug.localeCompare(b.slug));
   return { registry, guides, items: ITEMS.items };

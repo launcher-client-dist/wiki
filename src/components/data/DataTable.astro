@@ -152,15 +152,22 @@ const strings = { count: t.tableCount, countAll: t.tableCountAll };
     const chips = () => [...root.querySelectorAll<HTMLButtonElement>(".chip[data-filter]")];
     void variant;
 
+    /** A column is numeric when every row that has a value holds a number (rows may leave a value out). */
+    function isNumeric(k: string) {
+      const vals = rows.map((r) => value(r, k)).filter((x) => x !== "");
+      return vals.length > 0 && vals.every((x) => !Number.isNaN(Number(x)));
+    }
+
     function apply() {
       const text = fold(q.value.trim());
       const active = new Map<string, string[]>();
       for (const c of chips()) if (c.getAttribute("aria-pressed") === "true") active.set(c.dataset.filter!, [...(active.get(c.dataset.filter!) ?? []), c.dataset.value!]);
       if (sortKey) {
+        const numeric = isNumeric(sortKey);
         rows.sort((a, b) => {
           const x = value(a, sortKey), y = value(b, sortKey);
-          const nx = Number(x), ny = Number(y);
-          const cmp = x !== "" && y !== "" && !Number.isNaN(nx) && !Number.isNaN(ny) ? nx - ny : x.localeCompare(y, document.documentElement.lang);
+          // a numeric column: a row without the value counts as 0 (rows carry only the stats they have)
+          const cmp = numeric ? Number(x || 0) - Number(y || 0) : x.localeCompare(y, document.documentElement.lang);
           return dir * cmp;
         });
         tbody.append(...rows);
@@ -218,8 +225,7 @@ const strings = { count: t.tableCount, countAll: t.tableCountAll };
       b.addEventListener("click", () => {
         const k = b.dataset.sort!;
         // a new column starts A→Z for text, largest first for numbers
-        const numeric = rows.every((r) => value(r, k) !== "" && !Number.isNaN(Number(value(r, k))));
-        if (k === sortKey) dir = -dir; else { sortKey = k; dir = numeric ? -1 : 1; }
+        if (k === sortKey) dir = -dir; else { sortKey = k; dir = isNumeric(k) ? -1 : 1; }
         apply();
       });
     }

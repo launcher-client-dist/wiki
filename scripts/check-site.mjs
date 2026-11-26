@@ -144,6 +144,33 @@ else if (!pages.get("/404.html").noindex) fail("404.html", "should be noindex");
 else if (!pages.get("/404.html").html.includes('fetch("/en/404/")')) fail("404.html", "lost its swap to the English 404");
 if (!pages.get("/en/404/")?.noindex) fail("/en/404/", "missing or not noindex");
 
+// ---------------------------------------------------------------------------------------------- item pages
+// No drop rate on any item page: no "<digits>%" anywhere in an item page (body, meta, JSON-LD) outside the game's own
+// item texts (a rune's text says "+3% physical"). And with the component gallery built (WIKI_KIT=1), the made-up
+// "builds" collection that links to the Iron Ingot must show on that item's page by itself (the generic reverse index).
+{
+  const itemsFile = JSON.parse(readFileSync(new URL("../src/data/items.json", import.meta.url), "utf8"));
+  const esc = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  const gameTexts = [...new Set(itemsFile.items.flatMap((i) => i.versions.flatMap((v) => [v.text.pt, v.text.en])).filter((t) => t && t.includes("%")))]
+    .flatMap((t) => [t, esc(t), JSON.stringify(t).slice(1, -1)]);
+  const itemPages = [...pages.values()].filter((p) => /^\/(pt\/itens|en\/items)\/[^/]+\/$/.test(p.url));
+  if (itemPages.length !== itemsFile.items.length * 2) fail("items", `${itemPages.length} item pages for ${itemsFile.items.length} items (want 2 each)`);
+  for (const p of itemPages) {
+    // the page's text, meta and JSON-LD: CSS (style blocks and attributes) left out
+    let html = p.html.replace(/<style[\s\S]*?<\/style>/gi, "").replace(/\sstyle="[^"]*"/gi, "");
+    for (const t of gameTexts) html = html.split(t).join("");
+    const hit = html.match(/.{0,40}\d\s?%.{0,20}/);
+    if (hit) fail(p.url, `a percentage outside the game's own text: "${hit[0]}"`);
+  }
+  if (pages.has("/pt/kit/")) {
+    const ingot = itemsFile.items.find((i) => i.id === "iron-ingot");
+    const page = ingot && pages.get(`/pt/itens/${ingot.slug.pt}/`);
+    if (!page) fail("kit", "the Iron Ingot page is missing");
+    else if (!page.html.includes('data-section="appears-build"')) fail(page.url, "the made-up builds collection links here but no \"Usado em builds\" section shows");
+  }
+  console.log(`checked ${itemPages.length} item pages for percentages${pages.has("/pt/kit/") ? " and the builds wiring" : ""}`);
+}
+
 console.log(`checked ${pages.size} pages (${indexable.length} indexable), sitemap, robots.txt, CNAME`);
 if (problems.length) {
   console.error(`\n${problems.length} problem(s):\n  ${problems.join("\n  ")}`);

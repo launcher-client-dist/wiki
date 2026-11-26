@@ -1,35 +1,36 @@
 {
  "entities": [
   {
+   "boss": true,
    "facts": [
     {
      "label": {
       "en": "Health",
       "pt": "Vida"
      },
-     "value": "275"
+     "value": "5.500"
     },
     {
      "label": {
       "en": "Exp",
       "pt": "Exp"
      },
-     "value": "140"
+     "value": "5.500"
     }
    ],
-   "icon": "/icons/monsters/monk.png",
+   "icon": "/icons/monsters/alpha-wolf.png",
    "iconSize": [
     64,
     64
    ],
    "name": {
-    "en": "Monk",
-    "pt": "Monge"
+    "en": "Alpha Wolf",
+    "pt": "Lobo Alfa"
    },
-   "ref": "monster:a113",
+   "ref": "monster:alpha-wolf",
    "slug": {
-    "en": "monk",
-    "pt": "monge"
+    "en": "alpha-wolf",
+    "pt": "lobo-alfa"
    }
   },
   {
@@ -39,29 +40,29 @@
       "en": "Health",
       "pt": "Vida"
      },
-     "value": "355"
+     "value": "7.500"
     },
     {
      "label": {
       "en": "Exp",
       "pt": "Exp"
      },
-     "value": "15"
+     "value": "10.000"
     }
    ],
-   "icon": "/icons/monsters/rat-shipper.png",
+   "icon": "/icons/monsters/amphitere.png",
    "iconSize": [
     64,
     64
    ],
    "name": {
-    "en": "Rat Shipper",
-    "pt": "Rato Transportador"
+    "en": "Amphitere",
+    "pt": "Amphitere"
    },
-   "ref": "monster:a123",
+   "ref": "monster:amphitere",
    "slug": {
-    "en": "rat-shipper",
-    "pt": "rato-transportador"
+    "en": "amphitere",
+    "pt": "amphitere"
    }
   },
   {
@@ -71,29 +72,29 @@
       "en": "Health",
       "pt": "Vida"
      },
-     "value": "1.500"
+     "value": "450"
     },
     {
      "label": {
       "en": "Exp",
       "pt": "Exp"
      },
-     "value": "1.480"
+     "value": "400"
     }
    ],
-   "icon": "/icons/monsters/pestilence-plague.png",
+   "icon": "/icons/monsters/ancient-snake.png",
    "iconSize": [
     64,
     64
    ],
    "name": {
-    "en": "Pestilence Plague",
-    "pt": "Praga de Pestilence"
+    "en": "Ancient Snake",
+    "pt": "Serpente Antiga"
    },
-   "ref": "monster:a124",
+   "ref": "monster:ancient-snake",
    "slug": {
-    "en": "pestilence-plague",
-    "pt": "praga-de-pestilence"
+    "en": "ancient-snake",
+    "pt": "serpente-antiga"
    }
   },
   {
@@ -103,29 +104,29 @@
       "en": "Health",
       "pt": "Vida"
      },
-     "value": "205"
+     "value": "85"
     },
     {
      "label": {
       "en": "Exp",
       "pt": "Exp"
      },
-     "value": "145"
+     "value": "30"
     }
    ],
-   "icon": "/icons/monsters/rubellus.png",
+   "icon": "/icons/monsters/bandit.png",
    "iconSize": [
     64,
     64
    ],
    "name": {
-    "en": "Rubellus",
-    "pt": "Rubellus"
+    "en": "Bandit",
+    "pt": "Bandido"
    },
-   "ref": "monster:a125",
+   "ref": "monster:bandit",
    "slug": {
-    "en": "rubellus",
-    "pt": "rubellus"
+    "en": "bandit",
+    "pt": "bandido-bandit"
    }
   },
   {
@@ -135,29 +136,29 @@
       "en": "Health",
       "pt": "Vida"
      },
-     "value": "375"
+     "value": "950"
     },
     {
      "label": {
       "en": "Exp",
       "pt": "Exp"
      },
-     "value": "185"
+     "value": "1.850"
     }
    ],
-   "icon": "/icons/monsters/sunskin.png",
+   "icon": "/icons/monsters/banshee.png",
    "iconSize": [
     64,
     64
    ],
    "name": {
-    "en": "Sunskin",
-    "pt": "Pele Solar"
+    "en": "Banshee",
+    "pt": "Banshee"
    },
-   "ref": "monster:a138",
+   "ref": "monster:banshee",
    "slug": {
-    "en": "sunskin",
-    "pt": "pele-solar"
+    "en": "banshee",
+    "pt": "banshee"
    }
   },
   {
@@ -167,29 +168,29 @@
       "en": "Health",
       "pt": "Vida"
      },
-     "value": "500"
+     "value": "300"
     },
     {
      "label": {
       "en": "Exp",
       "pt": "Exp"
      },
-     "value": "575"
+     "value": "130"
     }
    ],
-   "icon": "/icons/monsters/sunskin-enchanter.png",
+   "icon": "/icons/monsters/bear.png",
    "iconSize": [
     64,
     64
    ],
    "name": {
-    "en": "Sunskin Enchanter",
-    "pt": "Encantador Pele Solar"
+    "en": "Bear",
+    "pt": "Urso"
    },
-   "ref": "monster:a139",
+   "ref": "monster:bear",
    "slug": {
-    "en": "sunskin-enchanter",
-    "pt": "encantador-pele-solar"
+    "en": "bear",
+    "pt": "urso"
    }
   },
   {
@@ -199,29 +200,29 @@
       "en": "Health",
       "pt": "Vida"
      },
-     "value": "1.000"
+     "value": "25"
     },
     {
      "label": {
       "en": "Exp",
       "pt": "Exp"
      },
-     "value": "590"
+     "value": "3"
     }
    ],
-   "icon": "/icons/monsters/profaner.png",
+   "icon": "/icons/monsters/black-lamb.png",
    "iconSize": [
     64,
     64
    ],
    "name": {
-    "en": "Profaner",
-    "pt": "Profanador"
+    "en": "Black Lamb",
+    "pt": "Cordeiro Negro"
    },
-   "ref": "monster:a140",
+   "ref": "monster:black-lamb",
    "slug": {
-    "en": "profaner",
-    "pt": "profanador"
+    "en": "black-lamb",
+    "pt": "cordeiro-negro"
    }
   },
   {
@@ -231,29 +232,29 @@
       "en": "Health",
       "pt": "Vida"
      },
-     "value": "100"
+     "value": "35"
     },
     {
      "label": {
       "en": "Exp",
       "pt": "Exp"
      },
-     "value": "50"
+     "value": "6"
     }
    ],
-   "icon": "/icons/monsters/cave-spider.png",
+   "icon": "/icons/monsters/black-sheep.png",
    "iconSize": [
     64,
     64
    ],
    "name": {
-    "en": "Cave Spider",
-    "pt": "Aranha da Caverna"
+    "en": "Black Sheep",
+    "pt": "Ovelha Negra"
    },
-   "ref": "monster:a141",
+   "ref": "monster:black-sheep",
    "slug": {
-    "en": "cave-spider",
-    "pt": "aranha-da-caverna"
+    "en": "black-sheep",
+    "pt": "ovelha-negra"
    }
   },
   {
@@ -263,39 +264,40 @@
       "en": "Health",
       "pt": "Vida"
      },
-     "value": "575"
+     "value": "400"
     },
     {
      "label": {
       "en": "Exp",
       "pt": "Exp"
      },
-     "value": "655"
+     "value": "220"
     }
    ],
-   "icon": "/icons/monsters/devil-spider.png",
+   "icon": "/icons/monsters/bone-eater.png",
    "iconSize": [
     64,
     64
    ],
    "name": {
-    "en": "Devil Spider",
-    "pt": "Aranha Demoníaca"
+    "en": "Bone Eater",
+    "pt": "Devorador de Ossos"
    },
-   "ref": "monster:a142",
+   "ref": "monster:bone-eater",
    "slug": {
-    "en": "devil-spider",
-    "pt": "aranha-demoniaca"
+    "en": "bone-eater",
+    "pt": "devorador-de-ossos"
    }
   },
   {
+   "boss": true,
    "facts": [
     {
      "label": {
       "en": "Health",
       "pt": "Vida"
      },
-     "value": "3.000"
+     "value": "6.000"
     },
     {
      "label": {
@@ -305,150 +307,19 @@
      "value": "6.000"
     }
    ],
-   "icon": "/icons/monsters/terror-spider.png",
+   "icon": "/icons/monsters/brother-rossi.png",
    "iconSize": [
     64,
     64
    ],
    "name": {
-    "en": "Terror Spider",
-    "pt": "Aranha do Terror"
+    "en": "Brother Rossi",
+    "pt": "Irmão Rossi"
    },
-   "ref": "monster:a143",
+   "ref": "monster:brother-rossi",
    "slug": {
-    "en": "terror-spider",
-    "pt": "aranha-do-terror"
-   }
-  },
-  {
-   "boss": true,
-   "facts": [
-    {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
-     "value": "7.500"
-    },
-    {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
-     "value": "7.500"
-    }
-   ],
-   "icon": "/icons/monsters/the-blackhat.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "The Blackhat",
-    "pt": "O Chapéu Negro"
-   },
-   "ref": "monster:a146",
-   "slug": {
-    "en": "the-blackhat",
-    "pt": "o-chapeu-negro"
-   }
-  },
-  {
-   "boss": true,
-   "facts": [
-    {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
-     "value": "5.000"
-    },
-    {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
-     "value": "5.000"
-    }
-   ],
-   "icon": "/icons/monsters/the-gardener.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "The Gardener",
-    "pt": "O Jardineiro"
-   },
-   "ref": "monster:a147",
-   "slug": {
-    "en": "the-gardener",
-    "pt": "o-jardineiro"
-   }
-  },
-  {
-   "facts": [
-    {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
-     "value": "155"
-    },
-    {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
-     "value": "90"
-    }
-   ],
-   "icon": "/icons/monsters/plea.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Plea",
-    "pt": "Plea"
-   },
-   "ref": "monster:a15",
-   "slug": {
-    "en": "plea",
-    "pt": "plea"
-   }
-  },
-  {
-   "boss": true,
-   "facts": [
-    {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
-     "value": "3.500"
-    },
-    {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
-     "value": "3.500"
-    }
-   ],
-   "icon": "/icons/monsters/mateo-the-bandit.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Mateo The Bandit",
-    "pt": "Mateo, o Bandido"
-   },
-   "ref": "monster:a155",
-   "slug": {
-    "en": "mateo-the-bandit",
-    "pt": "mateo-o-bandido"
+    "en": "brother-rossi",
+    "pt": "irmao-rossi"
    }
   },
   {
@@ -478,10 +349,74 @@
     "en": "Capozzi The Bandit",
     "pt": "Capozzi, o Bandido"
    },
-   "ref": "monster:a156",
+   "ref": "monster:capozzi-the-bandit",
    "slug": {
     "en": "capozzi-the-bandit",
     "pt": "capozzi-o-bandido"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "100"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "50"
+    }
+   ],
+   "icon": "/icons/monsters/cave-spider.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Cave Spider",
+    "pt": "Aranha da Caverna"
+   },
+   "ref": "monster:cave-spider",
+   "slug": {
+    "en": "cave-spider",
+    "pt": "aranha-da-caverna"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "1.000"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "660"
+    }
+   ],
+   "icon": "/icons/monsters/cave-troll.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Cave Troll",
+    "pt": "Troll da Caverna"
+   },
+   "ref": "monster:cave-troll",
+   "slug": {
+    "en": "cave-troll",
+    "pt": "troll-da-caverna"
    }
   },
   {
@@ -492,29 +427,29 @@
       "en": "Health",
       "pt": "Vida"
      },
-     "value": "4.500"
+     "value": "20.000"
     },
     {
      "label": {
       "en": "Exp",
       "pt": "Exp"
      },
-     "value": "3.500"
+     "value": "50.000"
     }
    ],
-   "icon": "/icons/monsters/gaglio-the-bandit.png",
+   "icon": "/icons/monsters/conquest-champion.png",
    "iconSize": [
     64,
     64
    ],
    "name": {
-    "en": "Gaglio The Bandit",
-    "pt": "Gaglio, o Bandido"
+    "en": "Conquest Champion",
+    "pt": "Campeão de Conquest"
    },
-   "ref": "monster:a157",
+   "ref": "monster:conquest-champion",
    "slug": {
-    "en": "gaglio-the-bandit",
-    "pt": "gaglio-o-bandido"
+    "en": "conquest-champion",
+    "pt": "campeao-de-conquest"
    }
   },
   {
@@ -524,61 +459,29 @@
       "en": "Health",
       "pt": "Vida"
      },
-     "value": "285"
+     "value": "650"
     },
     {
      "label": {
       "en": "Exp",
       "pt": "Exp"
      },
-     "value": "175"
+     "value": "500"
     }
    ],
-   "icon": "/icons/monsters/pestilence-spawn.png",
+   "icon": "/icons/monsters/conquest-crow.png",
    "iconSize": [
     64,
     64
    ],
    "name": {
-    "en": "Pestilence Spawn",
-    "pt": "Cria de Pestilence"
+    "en": "Conquest Crow",
+    "pt": "Corvo de Conquest"
    },
-   "ref": "monster:a16",
+   "ref": "monster:conquest-crow",
    "slug": {
-    "en": "pestilence-spawn",
-    "pt": "cria-de-pestilence"
-   }
-  },
-  {
-   "facts": [
-    {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
-     "value": "450"
-    },
-    {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
-     "value": "400"
-    }
-   ],
-   "icon": "/icons/monsters/ancient-snake.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Ancient Snake",
-    "pt": "Serpente Antiga"
-   },
-   "ref": "monster:a17",
-   "slug": {
-    "en": "ancient-snake",
-    "pt": "serpente-antiga"
+    "en": "conquest-crow",
+    "pt": "corvo-de-conquest"
    }
   },
   {
@@ -607,42 +510,10 @@
     "en": "Conquest Fowler",
     "pt": "Caçador de Conquest"
    },
-   "ref": "monster:a172",
+   "ref": "monster:conquest-fowler",
    "slug": {
     "en": "conquest-fowler",
     "pt": "cacador-de-conquest"
-   }
-  },
-  {
-   "facts": [
-    {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
-     "value": "195"
-    },
-    {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
-     "value": "150"
-    }
-   ],
-   "icon": "/icons/monsters/plea-occultist.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Plea Occultist",
-    "pt": "Ocultista Plea"
-   },
-   "ref": "monster:a173",
-   "slug": {
-    "en": "plea-occultist",
-    "pt": "ocultista-plea"
    }
   },
   {
@@ -671,7 +542,7 @@
     "en": "Conquest Priestess",
     "pt": "Sacerdotisa de Conquest"
    },
-   "ref": "monster:a174",
+   "ref": "monster:conquest-priestess",
    "slug": {
     "en": "conquest-priestess",
     "pt": "sacerdotisa-de-conquest"
@@ -703,7 +574,7 @@
     "en": "Crazed Occultist",
     "pt": "Ocultista Enlouquecido"
    },
-   "ref": "monster:a175",
+   "ref": "monster:crazed-occultist",
    "slug": {
     "en": "crazed-occultist",
     "pt": "ocultista-enlouquecido"
@@ -716,189 +587,29 @@
       "en": "Health",
       "pt": "Vida"
      },
-     "value": "45"
+     "value": "375"
     },
     {
      "label": {
       "en": "Exp",
       "pt": "Exp"
      },
-     "value": "20"
+     "value": "180"
     }
    ],
-   "icon": "/icons/monsters/skeleton.png",
+   "icon": "/icons/monsters/cube-of-doom.png",
    "iconSize": [
     64,
     64
    ],
    "name": {
-    "en": "Skeleton",
-    "pt": "Esqueleto"
+    "en": "Cube Of Doom",
+    "pt": "Cubo da Perdição"
    },
-   "ref": "monster:a19",
+   "ref": "monster:cube-of-doom",
    "slug": {
-    "en": "skeleton",
-    "pt": "esqueleto"
-   }
-  },
-  {
-   "facts": [
-    {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
-     "value": "800"
-    },
-    {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
-     "value": "725"
-    }
-   ],
-   "icon": "/icons/monsters/tomb-guardian.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Tomb Guardian",
-    "pt": "Guardião da Tumba"
-   },
-   "ref": "monster:a190",
-   "slug": {
-    "en": "tomb-guardian",
-    "pt": "guardiao-da-tumba"
-   }
-  },
-  {
-   "facts": [
-    {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
-     "value": "750"
-    },
-    {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
-     "value": "1.260"
-    }
-   ],
-   "icon": "/icons/monsters/tomb-diviner.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Tomb Diviner",
-    "pt": "Adivinho da Tumba"
-   },
-   "ref": "monster:a191",
-   "slug": {
-    "en": "tomb-diviner",
-    "pt": "adivinho-da-tumba"
-   }
-  },
-  {
-   "facts": [
-    {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
-     "value": "850"
-    },
-    {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
-     "value": "225"
-    }
-   ],
-   "icon": "/icons/monsters/tomb-worker.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Tomb Worker",
-    "pt": "Trabalhador da Tumba"
-   },
-   "ref": "monster:a192",
-   "slug": {
-    "en": "tomb-worker",
-    "pt": "trabalhador-da-tumba"
-   }
-  },
-  {
-   "facts": [
-    {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
-     "value": "650"
-    },
-    {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
-     "value": "500"
-    }
-   ],
-   "icon": "/icons/monsters/conquest-crow.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Conquest Crow",
-    "pt": "Corvo de Conquest"
-   },
-   "ref": "monster:a194",
-   "slug": {
-    "en": "conquest-crow",
-    "pt": "corvo-de-conquest"
-   }
-  },
-  {
-   "facts": [
-    {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
-     "value": "400"
-    },
-    {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
-     "value": "220"
-    }
-   ],
-   "icon": "/icons/monsters/bone-eater.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Bone Eater",
-    "pt": "Devorador de Ossos"
-   },
-   "ref": "monster:a195",
-   "slug": {
-    "en": "bone-eater",
-    "pt": "devorador-de-ossos"
+    "en": "cube-of-doom",
+    "pt": "cubo-da-perdicao"
    }
   },
   {
@@ -927,7 +638,7 @@
     "en": "Deadly Webcap",
     "pt": "Webcap Mortal"
    },
-   "ref": "monster:a2",
+   "ref": "monster:deadly-webcap",
    "slug": {
     "en": "deadly-webcap",
     "pt": "webcap-mortal"
@@ -940,7 +651,7 @@
       "en": "Health",
       "pt": "Vida"
      },
-     "value": "35"
+     "value": "50"
     },
     {
      "label": {
@@ -950,19 +661,19 @@
      "value": "10"
     }
    ],
-   "icon": "/icons/monsters/rat.png",
+   "icon": "/icons/monsters/deer.png",
    "iconSize": [
     64,
     64
    ],
    "name": {
-    "en": "Rat",
-    "pt": "Rato"
+    "en": "Deer",
+    "pt": "Veado"
    },
-   "ref": "monster:a20",
+   "ref": "monster:deer",
    "slug": {
-    "en": "rat",
-    "pt": "rato"
+    "en": "deer",
+    "pt": "veado"
    }
   },
   {
@@ -972,29 +683,415 @@
       "en": "Health",
       "pt": "Vida"
      },
-     "value": "2.550"
+     "value": "575"
     },
     {
      "label": {
       "en": "Exp",
       "pt": "Exp"
      },
-     "value": "5.970"
+     "value": "655"
     }
    ],
-   "icon": "/icons/monsters/swamp-troll.png",
+   "icon": "/icons/monsters/devil-spider.png",
    "iconSize": [
     64,
     64
    ],
    "name": {
-    "en": "Swamp Troll",
-    "pt": "Troll do Pântano"
+    "en": "Devil Spider",
+    "pt": "Aranha Demoníaca"
    },
-   "ref": "monster:a21",
+   "ref": "monster:devil-spider",
    "slug": {
-    "en": "swamp-troll",
-    "pt": "troll-do-pantano"
+    "en": "devil-spider",
+    "pt": "aranha-demoniaca"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "255"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "155"
+    }
+   ],
+   "icon": "/icons/monsters/digger.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Digger",
+    "pt": "Escavador"
+   },
+   "ref": "monster:digger",
+   "slug": {
+    "en": "digger",
+    "pt": "escavador"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "1.800"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "4.000"
+    }
+   ],
+   "icon": "/icons/monsters/eye-of-pestilence.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Eye Of Pestilence",
+    "pt": "Olho de Pestilence"
+   },
+   "ref": "monster:eye-of-pestilence",
+   "slug": {
+    "en": "eye-of-pestilence",
+    "pt": "olho-de-pestilence"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "200"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "175"
+    }
+   ],
+   "icon": "/icons/monsters/faun.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Faun",
+    "pt": "Fauno"
+   },
+   "ref": "monster:faun",
+   "slug": {
+    "en": "faun",
+    "pt": "fauno"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "4.000"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "200"
+    }
+   ],
+   "icon": "/icons/monsters/frozen-chest.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Frozen Chest",
+    "pt": "Baú Congelado"
+   },
+   "ref": "monster:frozen-chest",
+   "slug": {
+    "en": "frozen-chest",
+    "pt": "bau-congelado"
+   }
+  },
+  {
+   "boss": true,
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "4.500"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "3.500"
+    }
+   ],
+   "icon": "/icons/monsters/gaglio-the-bandit.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Gaglio The Bandit",
+    "pt": "Gaglio, o Bandido"
+   },
+   "ref": "monster:gaglio-the-bandit",
+   "slug": {
+    "en": "gaglio-the-bandit",
+    "pt": "gaglio-o-bandido"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "150"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "120"
+    }
+   ],
+   "icon": "/icons/monsters/ghost.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Ghost",
+    "pt": "Fantasma"
+   },
+   "ref": "monster:ghost",
+   "slug": {
+    "en": "ghost",
+    "pt": "fantasma"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "220"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "60"
+    }
+   ],
+   "icon": "/icons/monsters/ghoul.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Ghoul",
+    "pt": "Carniçal"
+   },
+   "ref": "monster:ghoul",
+   "slug": {
+    "en": "ghoul",
+    "pt": "carnical"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "195"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "100"
+    }
+   ],
+   "icon": "/icons/monsters/giant-rat.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Giant Rat",
+    "pt": "Rato Gigante"
+   },
+   "ref": "monster:giant-rat",
+   "slug": {
+    "en": "giant-rat",
+    "pt": "rato-gigante"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "90"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "40"
+    }
+   ],
+   "icon": "/icons/monsters/goblin.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Goblin",
+    "pt": "Goblin"
+   },
+   "ref": "monster:goblin",
+   "slug": {
+    "en": "goblin",
+    "pt": "goblin"
+   }
+  },
+  {
+   "boss": true,
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "15.000"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "15.000"
+    }
+   ],
+   "icon": "/icons/monsters/great-lintwurm.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Great Lintwurm",
+    "pt": "Grande Lintwurm"
+   },
+   "ref": "monster:great-lintwurm",
+   "slug": {
+    "en": "great-lintwurm",
+    "pt": "grande-lintwurm"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "750"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "315"
+    }
+   ],
+   "icon": "/icons/monsters/grizzly-bear.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Grizzly Bear",
+    "pt": "Urso Pardo"
+   },
+   "ref": "monster:grizzly-bear",
+   "slug": {
+    "en": "grizzly-bear",
+    "pt": "urso-pardo"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "175"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "135"
+    }
+   ],
+   "icon": "/icons/monsters/huntsman.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Huntsman",
+    "pt": "Caçador"
+   },
+   "ref": "monster:huntsman",
+   "slug": {
+    "en": "huntsman",
+    "pt": "cacador"
    }
   },
   {
@@ -1023,10 +1120,139 @@
     "en": "Imp",
     "pt": "Diabrete"
    },
-   "ref": "monster:a217",
+   "ref": "monster:imp",
    "slug": {
     "en": "imp",
     "pt": "diabrete"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "20"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "2"
+    }
+   ],
+   "icon": "/icons/monsters/lamb.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Lamb",
+    "pt": "Cordeiro"
+   },
+   "ref": "monster:lamb",
+   "slug": {
+    "en": "lamb",
+    "pt": "cordeiro"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "200"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "80"
+    }
+   ],
+   "icon": "/icons/monsters/lintwurm.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Lintwurm",
+    "pt": "Lintwurm"
+   },
+   "ref": "monster:lintwurm",
+   "slug": {
+    "en": "lintwurm",
+    "pt": "lintwurm"
+   }
+  },
+  {
+   "boss": true,
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "3.500"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "3.500"
+    }
+   ],
+   "icon": "/icons/monsters/mateo-the-bandit.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Mateo The Bandit",
+    "pt": "Mateo, o Bandido"
+   },
+   "ref": "monster:mateo-the-bandit",
+   "slug": {
+    "en": "mateo-the-bandit",
+    "pt": "mateo-o-bandido"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "870"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "1.135"
+    }
+   ],
+   "icon": "/icons/monsters/minotaur.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Minotaur",
+    "pt": "Minotauro"
+   },
+   "ref": "monster:minotaur",
+   "slug": {
+    "en": "minotaur",
+    "pt": "minotauro"
    }
   },
   {
@@ -1055,7 +1281,7 @@
     "en": "Mireling",
     "pt": "Mireling"
    },
-   "ref": "monster:a218",
+   "ref": "monster:mireling",
    "slug": {
     "en": "mireling",
     "pt": "mireling"
@@ -1087,7 +1313,7 @@
     "en": "Mireling Noble",
     "pt": "Mireling Nobre"
    },
-   "ref": "monster:a219",
+   "ref": "monster:mireling-noble",
    "slug": {
     "en": "mireling-noble",
     "pt": "mireling-nobre"
@@ -1100,1413 +1326,29 @@
       "en": "Health",
       "pt": "Vida"
      },
-     "value": "1.000"
+     "value": "275"
     },
     {
      "label": {
       "en": "Exp",
       "pt": "Exp"
      },
-     "value": "660"
+     "value": "140"
     }
    ],
-   "icon": "/icons/monsters/cave-troll.png",
+   "icon": "/icons/monsters/monk.png",
    "iconSize": [
     64,
     64
    ],
    "name": {
-    "en": "Cave Troll",
-    "pt": "Troll da Caverna"
+    "en": "Monk",
+    "pt": "Monge"
    },
-   "ref": "monster:a22",
+   "ref": "monster:monk",
    "slug": {
-    "en": "cave-troll",
-    "pt": "troll-da-caverna"
-   }
-  },
-  {
-   "facts": [
-    {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
-     "value": "950"
-    },
-    {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
-     "value": "1.850"
-    }
-   ],
-   "icon": "/icons/monsters/banshee.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Banshee",
-    "pt": "Banshee"
-   },
-   "ref": "monster:a220",
-   "slug": {
-    "en": "banshee",
-    "pt": "banshee"
-   }
-  },
-  {
-   "facts": [
-    {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
-     "value": "50"
-    },
-    {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
-     "value": "10"
-    }
-   ],
-   "icon": "/icons/monsters/deer.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Deer",
-    "pt": "Veado"
-   },
-   "ref": "monster:a221",
-   "slug": {
-    "en": "deer",
-    "pt": "veado"
-   }
-  },
-  {
-   "facts": [
-    {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
-     "value": "300"
-    },
-    {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
-     "value": "130"
-    }
-   ],
-   "icon": "/icons/monsters/bear.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Bear",
-    "pt": "Urso"
-   },
-   "ref": "monster:a222",
-   "slug": {
-    "en": "bear",
-    "pt": "urso"
-   }
-  },
-  {
-   "facts": [
-    {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
-     "value": "65"
-    },
-    {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
-     "value": "35"
-    }
-   ],
-   "icon": "/icons/monsters/wolf.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Wolf",
-    "pt": "Lobo"
-   },
-   "ref": "monster:a223",
-   "slug": {
-    "en": "wolf",
-    "pt": "lobo"
-   }
-  },
-  {
-   "boss": true,
-   "facts": [
-    {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
-     "value": "5.500"
-    },
-    {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
-     "value": "5.500"
-    }
-   ],
-   "icon": "/icons/monsters/alpha-wolf.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Alpha Wolf",
-    "pt": "Lobo Alfa"
-   },
-   "ref": "monster:a224",
-   "slug": {
-    "en": "alpha-wolf",
-    "pt": "lobo-alfa"
-   }
-  },
-  {
-   "facts": [
-    {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
-     "value": "200"
-    },
-    {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
-     "value": "80"
-    }
-   ],
-   "icon": "/icons/monsters/lintwurm.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Lintwurm",
-    "pt": "Lintwurm"
-   },
-   "ref": "monster:a225",
-   "slug": {
-    "en": "lintwurm",
-    "pt": "lintwurm"
-   }
-  },
-  {
-   "boss": true,
-   "facts": [
-    {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
-     "value": "15.000"
-    },
-    {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
-     "value": "15.000"
-    }
-   ],
-   "icon": "/icons/monsters/great-lintwurm.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Great Lintwurm",
-    "pt": "Grande Lintwurm"
-   },
-   "ref": "monster:a226",
-   "slug": {
-    "en": "great-lintwurm",
-    "pt": "grande-lintwurm"
-   }
-  },
-  {
-   "facts": [
-    {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
-     "value": "195"
-    },
-    {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
-     "value": "100"
-    }
-   ],
-   "icon": "/icons/monsters/giant-rat.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Giant Rat",
-    "pt": "Rato Gigante"
-   },
-   "ref": "monster:a23",
-   "slug": {
-    "en": "giant-rat",
-    "pt": "rato-gigante"
-   }
-  },
-  {
-   "boss": true,
-   "facts": [
-    {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
-     "value": "7.500"
-    },
-    {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
-     "value": "7.500"
-    }
-   ],
-   "icon": "/icons/monsters/the-augur.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "The Augur",
-    "pt": "O Augúrio"
-   },
-   "ref": "monster:a231",
-   "slug": {
-    "en": "the-augur",
-    "pt": "o-augurio"
-   }
-  },
-  {
-   "boss": true,
-   "facts": [
-    {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
-     "value": "20.000"
-    },
-    {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
-     "value": "15.000"
-    }
-   ],
-   "icon": "/icons/monsters/great-lintwurm-a235.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Great Lintwurm",
-    "pt": "Grande Lintwurm"
-   },
-   "ref": "monster:a235",
-   "slug": {
-    "en": "great-lintwurm-a235",
-    "pt": "grande-lintwurm-a235"
-   }
-  },
-  {
-   "facts": [
-    {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
-     "value": "750"
-    },
-    {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
-     "value": "315"
-    }
-   ],
-   "icon": "/icons/monsters/grizzly-bear.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Grizzly Bear",
-    "pt": "Urso Pardo"
-   },
-   "ref": "monster:a236",
-   "slug": {
-    "en": "grizzly-bear",
-    "pt": "urso-pardo"
-   }
-  },
-  {
-   "facts": [
-    {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
-     "value": "375"
-    },
-    {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
-     "value": "295"
-    }
-   ],
-   "icon": "/icons/monsters/tundra-rat.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Tundra Rat",
-    "pt": "Rato da Tundra"
-   },
-   "ref": "monster:a24",
-   "slug": {
-    "en": "tundra-rat",
-    "pt": "rato-da-tundra"
-   }
-  },
-  {
-   "facts": [
-    {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
-     "value": "90"
-    },
-    {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
-     "value": "40"
-    }
-   ],
-   "icon": "/icons/monsters/goblin.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Goblin",
-    "pt": "Goblin"
-   },
-   "ref": "monster:a25",
-   "slug": {
-    "en": "goblin",
-    "pt": "goblin"
-   }
-  },
-  {
-   "facts": [
-    {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
-     "value": "200"
-    },
-    {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
-     "value": "35"
-    }
-   ],
-   "icon": "/icons/monsters/swamp-tentacle.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Swamp Tentacle",
-    "pt": "Tentáculo do Pântano"
-   },
-   "ref": "monster:a254",
-   "slug": {
-    "en": "swamp-tentacle",
-    "pt": "tentaculo-do-pantano"
-   }
-  },
-  {
-   "boss": true,
-   "facts": [
-    {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
-     "value": "6.000"
-    },
-    {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
-     "value": "6.000"
-    }
-   ],
-   "icon": "/icons/monsters/the-broodmother.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "The Broodmother",
-    "pt": "A Mãe da Ninhada"
-   },
-   "ref": "monster:a255",
-   "slug": {
-    "en": "the-broodmother",
-    "pt": "a-mae-da-ninhada"
-   }
-  },
-  {
-   "facts": [
-    {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
-     "value": "4.000"
-    },
-    {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
-     "value": "200"
-    }
-   ],
-   "icon": "/icons/monsters/frozen-chest.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Frozen Chest",
-    "pt": "Baú Congelado"
-   },
-   "ref": "monster:a259",
-   "slug": {
-    "en": "frozen-chest",
-    "pt": "bau-congelado"
-   }
-  },
-  {
-   "facts": [
-    {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
-     "value": "195"
-    },
-    {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
-     "value": "125"
-    }
-   ],
-   "icon": "/icons/monsters/viscid-goblin.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Viscid Goblin",
-    "pt": "Goblin Viscoso"
-   },
-   "ref": "monster:a26",
-   "slug": {
-    "en": "viscid-goblin",
-    "pt": "goblin-viscoso"
-   }
-  },
-  {
-   "facts": [
-    {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
-     "value": "1.000"
-    },
-    {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
-     "value": "50"
-    }
-   ],
-   "icon": "/icons/monsters/frozen-chest-a260.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Frozen Chest",
-    "pt": "Baú Congelado"
-   },
-   "ref": "monster:a260",
-   "slug": {
-    "en": "frozen-chest-a260",
-    "pt": "bau-congelado-a260"
-   }
-  },
-  {
-   "facts": [
-    {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
-     "value": "800"
-    },
-    {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
-     "value": "900"
-    }
-   ],
-   "icon": "/icons/monsters/omen.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Omen",
-    "pt": "Presságio"
-   },
-   "ref": "monster:a261",
-   "slug": {
-    "en": "omen",
-    "pt": "pressagio"
-   }
-  },
-  {
-   "boss": true,
-   "facts": [
-    {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
-     "value": "20.000"
-    },
-    {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
-     "value": "50.000"
-    }
-   ],
-   "icon": "/icons/monsters/conquest-champion.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Conquest Champion",
-    "pt": "Campeão de Conquest"
-   },
-   "ref": "monster:a262",
-   "slug": {
-    "en": "conquest-champion",
-    "pt": "campeao-de-conquest"
-   }
-  },
-  {
-   "facts": [
-    {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
-     "value": "800"
-    },
-    {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
-     "value": "490"
-    }
-   ],
-   "icon": "/icons/monsters/rotwurm.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Rotwurm",
-    "pt": "Rotwurm"
-   },
-   "ref": "monster:a264",
-   "slug": {
-    "en": "rotwurm",
-    "pt": "rotwurm"
-   }
-  },
-  {
-   "facts": [
-    {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
-     "value": "200"
-    },
-    {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
-     "value": "175"
-    }
-   ],
-   "icon": "/icons/monsters/faun.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Faun",
-    "pt": "Fauno"
-   },
-   "ref": "monster:a265",
-   "slug": {
-    "en": "faun",
-    "pt": "fauno"
-   }
-  },
-  {
-   "facts": [
-    {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
-     "value": "10.000"
-    },
-    {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
-     "value": "15.000"
-    }
-   ],
-   "icon": "/icons/monsters/titan.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Titan",
-    "pt": "Titã"
-   },
-   "ref": "monster:a266",
-   "slug": {
-    "en": "titan",
-    "pt": "tita"
-   }
-  },
-  {
-   "facts": [
-    {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
-     "value": "255"
-    },
-    {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
-     "value": "90"
-    }
-   ],
-   "icon": "/icons/monsters/thug.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Thug",
-    "pt": "Bandido"
-   },
-   "ref": "monster:a267",
-   "slug": {
-    "en": "thug",
-    "pt": "bandido"
-   }
-  },
-  {
-   "facts": [
-    {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
-     "value": "200"
-    },
-    {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
-     "value": "180"
-    }
-   ],
-   "icon": "/icons/monsters/smelt-ooze.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Smelt Ooze",
-    "pt": "Lodo Fundido"
-   },
-   "ref": "monster:a268",
-   "slug": {
-    "en": "smelt-ooze",
-    "pt": "lodo-fundido"
-   }
-  },
-  {
-   "facts": [
-    {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
-     "value": "85"
-    },
-    {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
-     "value": "30"
-    }
-   ],
-   "icon": "/icons/monsters/bandit.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Bandit",
-    "pt": "Bandido"
-   },
-   "ref": "monster:a27",
-   "slug": {
-    "en": "bandit",
-    "pt": "bandido-a27"
-   }
-  },
-  {
-   "facts": [
-    {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
-     "value": "1.350"
-    },
-    {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
-     "value": "1.790"
-    }
-   ],
-   "icon": "/icons/monsters/young-amphitere.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Young Amphitere",
-    "pt": "Amphitere Jovem"
-   },
-   "ref": "monster:a28",
-   "slug": {
-    "en": "young-amphitere",
-    "pt": "amphitere-jovem"
-   }
-  },
-  {
-   "facts": [
-    {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
-     "value": "150"
-    },
-    {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
-     "value": "120"
-    }
-   ],
-   "icon": "/icons/monsters/ghost.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Ghost",
-    "pt": "Fantasma"
-   },
-   "ref": "monster:a283",
-   "slug": {
-    "en": "ghost",
-    "pt": "fantasma"
-   }
-  },
-  {
-   "facts": [
-    {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
-     "value": "7.500"
-    },
-    {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
-     "value": "10.000"
-    }
-   ],
-   "icon": "/icons/monsters/amphitere.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Amphitere",
-    "pt": "Amphitere"
-   },
-   "ref": "monster:a29",
-   "slug": {
-    "en": "amphitere",
-    "pt": "amphitere"
-   }
-  },
-  {
-   "facts": [
-    {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
-     "value": "165"
-    },
-    {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
-     "value": "75"
-    }
-   ],
-   "icon": "/icons/monsters/walking-boletus.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Walking Boletus",
-    "pt": "Boleto Ambulante"
-   },
-   "ref": "monster:a3",
-   "slug": {
-    "en": "walking-boletus",
-    "pt": "boleto-ambulante"
-   }
-  },
-  {
-   "facts": [
-    {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
-     "value": "220"
-    },
-    {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
-     "value": "60"
-    }
-   ],
-   "icon": "/icons/monsters/ghoul.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Ghoul",
-    "pt": "Carniçal"
-   },
-   "ref": "monster:a307",
-   "slug": {
-    "en": "ghoul",
-    "pt": "carnical"
-   }
-  },
-  {
-   "boss": true,
-   "facts": [
-    {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
-     "value": "10.000"
-    },
-    {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
-     "value": "10.000"
-    }
-   ],
-   "icon": "/icons/monsters/the-black-knight.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "The Black Knight",
-    "pt": "O Cavaleiro Negro"
-   },
-   "ref": "monster:a309",
-   "slug": {
-    "en": "the-black-knight",
-    "pt": "o-cavaleiro-negro"
-   }
-  },
-  {
-   "facts": [
-    {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
-     "value": "500"
-    },
-    {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
-     "value": "150"
-    }
-   ],
-   "icon": "/icons/monsters/unstable-quartz.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Unstable Quartz",
-    "pt": "Quartzo Instável"
-   },
-   "ref": "monster:a313",
-   "slug": {
-    "en": "unstable-quartz",
-    "pt": "quartzo-instavel"
-   }
-  },
-  {
-   "facts": [
-    {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
-     "value": "1.450"
-    },
-    {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
-     "value": "730"
-    }
-   ],
-   "icon": "/icons/monsters/skal-traitor.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Skal Traitor",
-    "pt": "Skal Traidor"
-   },
-   "ref": "monster:a314",
-   "slug": {
-    "en": "skal-traitor",
-    "pt": "skal-traidor"
-   }
-  },
-  {
-   "facts": [
-    {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
-     "value": "175"
-    },
-    {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
-     "value": "135"
-    }
-   ],
-   "icon": "/icons/monsters/huntsman.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Huntsman",
-    "pt": "Caçador"
-   },
-   "ref": "monster:a316",
-   "slug": {
-    "en": "huntsman",
-    "pt": "cacador"
-   }
-  },
-  {
-   "facts": [
-    {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
-     "value": "870"
-    },
-    {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
-     "value": "1.135"
-    }
-   ],
-   "icon": "/icons/monsters/minotaur.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Minotaur",
-    "pt": "Minotauro"
-   },
-   "ref": "monster:a32",
-   "slug": {
-    "en": "minotaur",
-    "pt": "minotauro"
-   }
-  },
-  {
-   "boss": true,
-   "facts": [
-    {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
-     "value": "6.000"
-    },
-    {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
-     "value": "6.000"
-    }
-   ],
-   "icon": "/icons/monsters/brother-rossi.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Brother Rossi",
-    "pt": "Irmão Rossi"
-   },
-   "ref": "monster:a321",
-   "slug": {
-    "en": "brother-rossi",
-    "pt": "irmao-rossi"
-   }
-  },
-  {
-   "facts": [
-    {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
-     "value": "255"
-    },
-    {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
-     "value": "155"
-    }
-   ],
-   "icon": "/icons/monsters/digger.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Digger",
-    "pt": "Escavador"
-   },
-   "ref": "monster:a33",
-   "slug": {
-    "en": "digger",
-    "pt": "escavador"
-   }
-  },
-  {
-   "facts": [
-    {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
-     "value": "150"
-    },
-    {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
-     "value": "300"
-    }
-   ],
-   "icon": "/icons/monsters/wisp.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Wisp",
-    "pt": "Wisp"
-   },
-   "ref": "monster:a333",
-   "slug": {
-    "en": "wisp",
-    "pt": "wisp"
-   }
-  },
-  {
-   "facts": [
-    {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
-     "value": "30"
-    },
-    {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
-     "value": "4"
-    }
-   ],
-   "icon": "/icons/monsters/sheep.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Sheep",
-    "pt": "Ovelha"
-   },
-   "ref": "monster:a34",
-   "slug": {
-    "en": "sheep",
-    "pt": "ovelha"
-   }
-  },
-  {
-   "facts": [
-    {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
-     "value": "35"
-    },
-    {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
-     "value": "6"
-    }
-   ],
-   "icon": "/icons/monsters/black-sheep.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Black Sheep",
-    "pt": "Ovelha Negra"
-   },
-   "ref": "monster:a35",
-   "slug": {
-    "en": "black-sheep",
-    "pt": "ovelha-negra"
-   }
-  },
-  {
-   "facts": [
-    {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
-     "value": "20"
-    },
-    {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
-     "value": "2"
-    }
-   ],
-   "icon": "/icons/monsters/lamb.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Lamb",
-    "pt": "Cordeiro"
-   },
-   "ref": "monster:a36",
-   "slug": {
-    "en": "lamb",
-    "pt": "cordeiro"
-   }
-  },
-  {
-   "facts": [
-    {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
-     "value": "25"
-    },
-    {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
-     "value": "3"
-    }
-   ],
-   "icon": "/icons/monsters/black-lamb.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Black Lamb",
-    "pt": "Cordeiro Negro"
-   },
-   "ref": "monster:a37",
-   "slug": {
-    "en": "black-lamb",
-    "pt": "cordeiro-negro"
+    "en": "monk",
+    "pt": "monge"
    }
   },
   {
@@ -2535,7 +1377,7 @@
     "en": "Necromancer",
     "pt": "Necromante"
    },
-   "ref": "monster:a38",
+   "ref": "monster:necromancer",
    "slug": {
     "en": "necromancer",
     "pt": "necromante"
@@ -2567,106 +1409,10 @@
     "en": "Occultist Acolyte",
     "pt": "Acólito Ocultista"
    },
-   "ref": "monster:a39",
+   "ref": "monster:occultist-acolyte",
    "slug": {
     "en": "occultist-acolyte",
     "pt": "acolito-ocultista"
-   }
-  },
-  {
-   "facts": [
-    {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
-     "value": "375"
-    },
-    {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
-     "value": "180"
-    }
-   ],
-   "icon": "/icons/monsters/cube-of-doom.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Cube Of Doom",
-    "pt": "Cubo da Perdição"
-   },
-   "ref": "monster:a4",
-   "slug": {
-    "en": "cube-of-doom",
-    "pt": "cubo-da-perdicao"
-   }
-  },
-  {
-   "facts": [
-    {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
-     "value": "425"
-    },
-    {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
-     "value": "545"
-    }
-   ],
-   "icon": "/icons/monsters/occultist-scholar.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Occultist Scholar",
-    "pt": "Erudito Ocultista"
-   },
-   "ref": "monster:a40",
-   "slug": {
-    "en": "occultist-scholar",
-    "pt": "erudito-ocultista"
-   }
-  },
-  {
-   "facts": [
-    {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
-     "value": "295"
-    },
-    {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
-     "value": "210"
-    }
-   ],
-   "icon": "/icons/monsters/occultist-enforcer.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Occultist Enforcer",
-    "pt": "Executor Ocultista"
-   },
-   "ref": "monster:a41",
-   "slug": {
-    "en": "occultist-enforcer",
-    "pt": "executor-ocultista"
    }
   },
   {
@@ -2695,10 +1441,106 @@
     "en": "Occultist Apprentice",
     "pt": "Aprendiz Ocultista"
    },
-   "ref": "monster:a42",
+   "ref": "monster:occultist-apprentice",
    "slug": {
     "en": "occultist-apprentice",
     "pt": "aprendiz-ocultista"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "295"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "210"
+    }
+   ],
+   "icon": "/icons/monsters/occultist-enforcer.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Occultist Enforcer",
+    "pt": "Executor Ocultista"
+   },
+   "ref": "monster:occultist-enforcer",
+   "slug": {
+    "en": "occultist-enforcer",
+    "pt": "executor-ocultista"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "425"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "545"
+    }
+   ],
+   "icon": "/icons/monsters/occultist-scholar.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Occultist Scholar",
+    "pt": "Erudito Ocultista"
+   },
+   "ref": "monster:occultist-scholar",
+   "slug": {
+    "en": "occultist-scholar",
+    "pt": "erudito-ocultista"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "800"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "900"
+    }
+   ],
+   "icon": "/icons/monsters/omen.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Omen",
+    "pt": "Presságio"
+   },
+   "ref": "monster:omen",
+   "slug": {
+    "en": "omen",
+    "pt": "pressagio"
    }
   },
   {
@@ -2727,7 +1569,7 @@
     "en": "Orc Berserker",
     "pt": "Orc Berserker"
    },
-   "ref": "monster:a43",
+   "ref": "monster:orc-berserker",
    "slug": {
     "en": "orc-berserker",
     "pt": "orc-berserker"
@@ -2759,42 +1601,10 @@
     "en": "Orc General",
     "pt": "General Orc"
    },
-   "ref": "monster:a44",
+   "ref": "monster:orc-general",
    "slug": {
     "en": "orc-general",
     "pt": "general-orc"
-   }
-  },
-  {
-   "facts": [
-    {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
-     "value": "585"
-    },
-    {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
-     "value": "1.365"
-    }
-   ],
-   "icon": "/icons/monsters/orc-shaman.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Orc Shaman",
-    "pt": "Xamã Orc"
-   },
-   "ref": "monster:a45",
-   "slug": {
-    "en": "orc-shaman",
-    "pt": "xama-orc"
    }
   },
   {
@@ -2823,10 +1633,42 @@
     "en": "Orc Infantry",
     "pt": "Infantaria Orc"
    },
-   "ref": "monster:a46",
+   "ref": "monster:orc-infantry",
    "slug": {
     "en": "orc-infantry",
     "pt": "infantaria-orc"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "585"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "1.365"
+    }
+   ],
+   "icon": "/icons/monsters/orc-shaman.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Orc Shaman",
+    "pt": "Xamã Orc"
+   },
+   "ref": "monster:orc-shaman",
+   "slug": {
+    "en": "orc-shaman",
+    "pt": "xama-orc"
    }
   },
   {
@@ -2856,7 +1698,7 @@
     "en": "Pestilence Knight",
     "pt": "Cavaleiro de Pestilence"
    },
-   "ref": "monster:a47",
+   "ref": "monster:pestilence-knight",
    "slug": {
     "en": "pestilence-knight",
     "pt": "cavaleiro-de-pestilence"
@@ -2869,29 +1711,61 @@
       "en": "Health",
       "pt": "Vida"
      },
-     "value": "1.800"
+     "value": "1.500"
     },
     {
      "label": {
       "en": "Exp",
       "pt": "Exp"
      },
-     "value": "4.000"
+     "value": "1.480"
     }
    ],
-   "icon": "/icons/monsters/eye-of-pestilence.png",
+   "icon": "/icons/monsters/pestilence-plague.png",
    "iconSize": [
     64,
     64
    ],
    "name": {
-    "en": "Eye Of Pestilence",
-    "pt": "Olho de Pestilence"
+    "en": "Pestilence Plague",
+    "pt": "Praga de Pestilence"
    },
-   "ref": "monster:a5",
+   "ref": "monster:pestilence-plague",
    "slug": {
-    "en": "eye-of-pestilence",
-    "pt": "olho-de-pestilence"
+    "en": "pestilence-plague",
+    "pt": "praga-de-pestilence"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "285"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "175"
+    }
+   ],
+   "icon": "/icons/monsters/pestilence-spawn.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Pestilence Spawn",
+    "pt": "Cria de Pestilence"
+   },
+   "ref": "monster:pestilence-spawn",
+   "slug": {
+    "en": "pestilence-spawn",
+    "pt": "cria-de-pestilence"
    }
   },
   {
@@ -2920,10 +1794,1071 @@
     "en": "Pestilence Stinger",
     "pt": "Ferrão de Pestilence"
    },
-   "ref": "monster:a7",
+   "ref": "monster:pestilence-stinger",
    "slug": {
     "en": "pestilence-stinger",
     "pt": "ferrao-de-pestilence"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "155"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "90"
+    }
+   ],
+   "icon": "/icons/monsters/plea.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Plea",
+    "pt": "Plea"
+   },
+   "ref": "monster:plea",
+   "slug": {
+    "en": "plea",
+    "pt": "plea"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "195"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "150"
+    }
+   ],
+   "icon": "/icons/monsters/plea-occultist.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Plea Occultist",
+    "pt": "Ocultista Plea"
+   },
+   "ref": "monster:plea-occultist",
+   "slug": {
+    "en": "plea-occultist",
+    "pt": "ocultista-plea"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "1.000"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "590"
+    }
+   ],
+   "icon": "/icons/monsters/profaner.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Profaner",
+    "pt": "Profanador"
+   },
+   "ref": "monster:profaner",
+   "slug": {
+    "en": "profaner",
+    "pt": "profanador"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "35"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "10"
+    }
+   ],
+   "icon": "/icons/monsters/rat.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Rat",
+    "pt": "Rato"
+   },
+   "ref": "monster:rat",
+   "slug": {
+    "en": "rat",
+    "pt": "rato"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "355"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "15"
+    }
+   ],
+   "icon": "/icons/monsters/rat-shipper.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Rat Shipper",
+    "pt": "Rato Transportador"
+   },
+   "ref": "monster:rat-shipper",
+   "slug": {
+    "en": "rat-shipper",
+    "pt": "rato-transportador"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "800"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "490"
+    }
+   ],
+   "icon": "/icons/monsters/rotwurm.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Rotwurm",
+    "pt": "Rotwurm"
+   },
+   "ref": "monster:rotwurm",
+   "slug": {
+    "en": "rotwurm",
+    "pt": "rotwurm"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "205"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "145"
+    }
+   ],
+   "icon": "/icons/monsters/rubellus.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Rubellus",
+    "pt": "Rubellus"
+   },
+   "ref": "monster:rubellus",
+   "slug": {
+    "en": "rubellus",
+    "pt": "rubellus"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "30"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "4"
+    }
+   ],
+   "icon": "/icons/monsters/sheep.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Sheep",
+    "pt": "Ovelha"
+   },
+   "ref": "monster:sheep",
+   "slug": {
+    "en": "sheep",
+    "pt": "ovelha"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "1.450"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "730"
+    }
+   ],
+   "icon": "/icons/monsters/skal-traitor.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Skal Traitor",
+    "pt": "Skal Traidor"
+   },
+   "ref": "monster:skal-traitor",
+   "slug": {
+    "en": "skal-traitor",
+    "pt": "skal-traidor"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "45"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "20"
+    }
+   ],
+   "icon": "/icons/monsters/skeleton.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Skeleton",
+    "pt": "Esqueleto"
+   },
+   "ref": "monster:skeleton",
+   "slug": {
+    "en": "skeleton",
+    "pt": "esqueleto"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "200"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "180"
+    }
+   ],
+   "icon": "/icons/monsters/smelt-ooze.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Smelt Ooze",
+    "pt": "Lodo Fundido"
+   },
+   "ref": "monster:smelt-ooze",
+   "slug": {
+    "en": "smelt-ooze",
+    "pt": "lodo-fundido"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "375"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "185"
+    }
+   ],
+   "icon": "/icons/monsters/sunskin.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Sunskin",
+    "pt": "Pele Solar"
+   },
+   "ref": "monster:sunskin",
+   "slug": {
+    "en": "sunskin",
+    "pt": "pele-solar"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "500"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "575"
+    }
+   ],
+   "icon": "/icons/monsters/sunskin-enchanter.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Sunskin Enchanter",
+    "pt": "Encantador Pele Solar"
+   },
+   "ref": "monster:sunskin-enchanter",
+   "slug": {
+    "en": "sunskin-enchanter",
+    "pt": "encantador-pele-solar"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "200"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "35"
+    }
+   ],
+   "icon": "/icons/monsters/swamp-tentacle.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Swamp Tentacle",
+    "pt": "Tentáculo do Pântano"
+   },
+   "ref": "monster:swamp-tentacle",
+   "slug": {
+    "en": "swamp-tentacle",
+    "pt": "tentaculo-do-pantano"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "2.550"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "5.970"
+    }
+   ],
+   "icon": "/icons/monsters/swamp-troll.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Swamp Troll",
+    "pt": "Troll do Pântano"
+   },
+   "ref": "monster:swamp-troll",
+   "slug": {
+    "en": "swamp-troll",
+    "pt": "troll-do-pantano"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "3.000"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "6.000"
+    }
+   ],
+   "icon": "/icons/monsters/terror-spider.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Terror Spider",
+    "pt": "Aranha do Terror"
+   },
+   "ref": "monster:terror-spider",
+   "slug": {
+    "en": "terror-spider",
+    "pt": "aranha-do-terror"
+   }
+  },
+  {
+   "boss": true,
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "7.500"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "7.500"
+    }
+   ],
+   "icon": "/icons/monsters/the-augur.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "The Augur",
+    "pt": "O Augúrio"
+   },
+   "ref": "monster:the-augur",
+   "slug": {
+    "en": "the-augur",
+    "pt": "o-augurio"
+   }
+  },
+  {
+   "boss": true,
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "10.000"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "10.000"
+    }
+   ],
+   "icon": "/icons/monsters/the-black-knight.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "The Black Knight",
+    "pt": "O Cavaleiro Negro"
+   },
+   "ref": "monster:the-black-knight",
+   "slug": {
+    "en": "the-black-knight",
+    "pt": "o-cavaleiro-negro"
+   }
+  },
+  {
+   "boss": true,
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "7.500"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "7.500"
+    }
+   ],
+   "icon": "/icons/monsters/the-blackhat.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "The Blackhat",
+    "pt": "O Chapéu Negro"
+   },
+   "ref": "monster:the-blackhat",
+   "slug": {
+    "en": "the-blackhat",
+    "pt": "o-chapeu-negro"
+   }
+  },
+  {
+   "boss": true,
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "6.000"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "6.000"
+    }
+   ],
+   "icon": "/icons/monsters/the-broodmother.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "The Broodmother",
+    "pt": "A Mãe da Ninhada"
+   },
+   "ref": "monster:the-broodmother",
+   "slug": {
+    "en": "the-broodmother",
+    "pt": "a-mae-da-ninhada"
+   }
+  },
+  {
+   "boss": true,
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "5.000"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "5.000"
+    }
+   ],
+   "icon": "/icons/monsters/the-gardener.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "The Gardener",
+    "pt": "O Jardineiro"
+   },
+   "ref": "monster:the-gardener",
+   "slug": {
+    "en": "the-gardener",
+    "pt": "o-jardineiro"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "255"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "90"
+    }
+   ],
+   "icon": "/icons/monsters/thug.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Thug",
+    "pt": "Bandido"
+   },
+   "ref": "monster:thug",
+   "slug": {
+    "en": "thug",
+    "pt": "bandido"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "10.000"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "15.000"
+    }
+   ],
+   "icon": "/icons/monsters/titan.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Titan",
+    "pt": "Titã"
+   },
+   "ref": "monster:titan",
+   "slug": {
+    "en": "titan",
+    "pt": "tita"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "750"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "1.260"
+    }
+   ],
+   "icon": "/icons/monsters/tomb-diviner.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Tomb Diviner",
+    "pt": "Adivinho da Tumba"
+   },
+   "ref": "monster:tomb-diviner",
+   "slug": {
+    "en": "tomb-diviner",
+    "pt": "adivinho-da-tumba"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "800"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "725"
+    }
+   ],
+   "icon": "/icons/monsters/tomb-guardian.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Tomb Guardian",
+    "pt": "Guardião da Tumba"
+   },
+   "ref": "monster:tomb-guardian",
+   "slug": {
+    "en": "tomb-guardian",
+    "pt": "guardiao-da-tumba"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "850"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "225"
+    }
+   ],
+   "icon": "/icons/monsters/tomb-worker.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Tomb Worker",
+    "pt": "Trabalhador da Tumba"
+   },
+   "ref": "monster:tomb-worker",
+   "slug": {
+    "en": "tomb-worker",
+    "pt": "trabalhador-da-tumba"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "375"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "295"
+    }
+   ],
+   "icon": "/icons/monsters/tundra-rat.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Tundra Rat",
+    "pt": "Rato da Tundra"
+   },
+   "ref": "monster:tundra-rat",
+   "slug": {
+    "en": "tundra-rat",
+    "pt": "rato-da-tundra"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "500"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "150"
+    }
+   ],
+   "icon": "/icons/monsters/unstable-quartz.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Unstable Quartz",
+    "pt": "Quartzo Instável"
+   },
+   "ref": "monster:unstable-quartz",
+   "slug": {
+    "en": "unstable-quartz",
+    "pt": "quartzo-instavel"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "195"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "125"
+    }
+   ],
+   "icon": "/icons/monsters/viscid-goblin.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Viscid Goblin",
+    "pt": "Goblin Viscoso"
+   },
+   "ref": "monster:viscid-goblin",
+   "slug": {
+    "en": "viscid-goblin",
+    "pt": "goblin-viscoso"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "165"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "75"
+    }
+   ],
+   "icon": "/icons/monsters/walking-boletus.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Walking Boletus",
+    "pt": "Boleto Ambulante"
+   },
+   "ref": "monster:walking-boletus",
+   "slug": {
+    "en": "walking-boletus",
+    "pt": "boleto-ambulante"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "150"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "300"
+    }
+   ],
+   "icon": "/icons/monsters/wisp.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Wisp",
+    "pt": "Wisp"
+   },
+   "ref": "monster:wisp",
+   "slug": {
+    "en": "wisp",
+    "pt": "wisp"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "65"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "35"
+    }
+   ],
+   "icon": "/icons/monsters/wolf.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Wolf",
+    "pt": "Lobo"
+   },
+   "ref": "monster:wolf",
+   "slug": {
+    "en": "wolf",
+    "pt": "lobo"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "1.350"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "1.790"
+    }
+   ],
+   "icon": "/icons/monsters/young-amphitere.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Young Amphitere",
+    "pt": "Amphitere Jovem"
+   },
+   "ref": "monster:young-amphitere",
+   "slug": {
+    "en": "young-amphitere",
+    "pt": "amphitere-jovem"
    }
   },
   {

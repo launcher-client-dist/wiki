@@ -2107,6 +2107,362 @@
   "en": "pestilence-stinger",
   "pt": "ferrao-de-pestilence"
  },
+ "monster:alpha-wolf": {
+  "en": "alpha-wolf",
+  "pt": "lobo-alfa"
+ },
+ "monster:amphitere": {
+  "en": "amphitere",
+  "pt": "amphitere"
+ },
+ "monster:ancient-snake": {
+  "en": "ancient-snake",
+  "pt": "serpente-antiga"
+ },
+ "monster:bandit": {
+  "en": "bandit",
+  "pt": "bandido-bandit"
+ },
+ "monster:banshee": {
+  "en": "banshee",
+  "pt": "banshee"
+ },
+ "monster:bear": {
+  "en": "bear",
+  "pt": "urso"
+ },
+ "monster:black-lamb": {
+  "en": "black-lamb",
+  "pt": "cordeiro-negro"
+ },
+ "monster:black-sheep": {
+  "en": "black-sheep",
+  "pt": "ovelha-negra"
+ },
+ "monster:bone-eater": {
+  "en": "bone-eater",
+  "pt": "devorador-de-ossos"
+ },
+ "monster:brother-rossi": {
+  "en": "brother-rossi",
+  "pt": "irmao-rossi"
+ },
+ "monster:capozzi-the-bandit": {
+  "en": "capozzi-the-bandit",
+  "pt": "capozzi-o-bandido"
+ },
+ "monster:cave-spider": {
+  "en": "cave-spider",
+  "pt": "aranha-da-caverna"
+ },
+ "monster:cave-troll": {
+  "en": "cave-troll",
+  "pt": "troll-da-caverna"
+ },
+ "monster:conquest-champion": {
+  "en": "conquest-champion",
+  "pt": "campeao-de-conquest"
+ },
+ "monster:conquest-crow": {
+  "en": "conquest-crow",
+  "pt": "corvo-de-conquest"
+ },
+ "monster:conquest-fowler": {
+  "en": "conquest-fowler",
+  "pt": "cacador-de-conquest"
+ },
+ "monster:conquest-priestess": {
+  "en": "conquest-priestess",
+  "pt": "sacerdotisa-de-conquest"
+ },
+ "monster:crazed-occultist": {
+  "en": "crazed-occultist",
+  "pt": "ocultista-enlouquecido"
+ },
+ "monster:cube-of-doom": {
+  "en": "cube-of-doom",
+  "pt": "cubo-da-perdicao"
+ },
+ "monster:deadly-webcap": {
+  "en": "deadly-webcap",
+  "pt": "webcap-mortal"
+ },
+ "monster:deer": {
+  "en": "deer",
+  "pt": "veado"
+ },
+ "monster:devil-spider": {
+  "en": "devil-spider",
+  "pt": "aranha-demoniaca"
+ },
+ "monster:digger": {
+  "en": "digger",
+  "pt": "escavador"
+ },
+ "monster:eye-of-pestilence": {
+  "en": "eye-of-pestilence",
+  "pt": "olho-de-pestilence"
+ },
+ "monster:faun": {
+  "en": "faun",
+  "pt": "fauno"
+ },
+ "monster:frozen-chest": {
+  "en": "frozen-chest",
+  "pt": "bau-congelado"
+ },
+ "monster:gaglio-the-bandit": {
+  "en": "gaglio-the-bandit",
+  "pt": "gaglio-o-bandido"
+ },
+ "monster:ghost": {
+  "en": "ghost",
+  "pt": "fantasma"
+ },
+ "monster:ghoul": {
+  "en": "ghoul",
+  "pt": "carnical"
+ },
+ "monster:giant-rat": {
+  "en": "giant-rat",
+  "pt": "rato-gigante"
+ },
+ "monster:goblin": {
+  "en": "goblin",
+  "pt": "goblin"
+ },
+ "monster:great-lintwurm": {
+  "en": "great-lintwurm",
+  "pt": "grande-lintwurm"
+ },
+ "monster:grizzly-bear": {
+  "en": "grizzly-bear",
+  "pt": "urso-pardo"
+ },
+ "monster:huntsman": {
+  "en": "huntsman",
+  "pt": "cacador"
+ },
+ "monster:imp": {
+  "en": "imp",
+  "pt": "diabrete"
+ },
+ "monster:lamb": {
+  "en": "lamb",
+  "pt": "cordeiro"
+ },
+ "monster:lintwurm": {
+  "en": "lintwurm",
+  "pt": "lintwurm"
+ },
+ "monster:mateo-the-bandit": {
+  "en": "mateo-the-bandit",
+  "pt": "mateo-o-bandido"
+ },
+ "monster:minotaur": {
+  "en": "minotaur",
+  "pt": "minotauro"
+ },
+ "monster:mireling": {
+  "en": "mireling",
+  "pt": "mireling"
+ },
+ "monster:mireling-noble": {
+  "en": "mireling-noble",
+  "pt": "mireling-nobre"
+ },
+ "monster:monk": {
+  "en": "monk",
+  "pt": "monge"
+ },
+ "monster:necromancer": {
+  "en": "necromancer",
+  "pt": "necromante"
+ },
+ "monster:occultist-acolyte": {
+  "en": "occultist-acolyte",
+  "pt": "acolito-ocultista"
+ },
+ "monster:occultist-apprentice": {
+  "en": "occultist-apprentice",
+  "pt": "aprendiz-ocultista"
+ },
+ "monster:occultist-enforcer": {
+  "en": "occultist-enforcer",
+  "pt": "executor-ocultista"
+ },
+ "monster:occultist-scholar": {
+  "en": "occultist-scholar",
+  "pt": "erudito-ocultista"
+ },
+ "monster:omen": {
+  "en": "omen",
+  "pt": "pressagio"
+ },
+ "monster:orc-berserker": {
+  "en": "orc-berserker",
+  "pt": "orc-berserker"
+ },
+ "monster:orc-general": {
+  "en": "orc-general",
+  "pt": "general-orc"
+ },
+ "monster:orc-infantry": {
+  "en": "orc-infantry",
+  "pt": "infantaria-orc"
+ },
+ "monster:orc-shaman": {
+  "en": "orc-shaman",
+  "pt": "xama-orc"
+ },
+ "monster:pestilence-knight": {
+  "en": "pestilence-knight",
+  "pt": "cavaleiro-de-pestilence"
+ },
+ "monster:pestilence-plague": {
+  "en": "pestilence-plague",
+  "pt": "praga-de-pestilence"
+ },
+ "monster:pestilence-spawn": {
+  "en": "pestilence-spawn",
+  "pt": "cria-de-pestilence"
+ },
+ "monster:pestilence-stinger": {
+  "en": "pestilence-stinger",
+  "pt": "ferrao-de-pestilence"
+ },
+ "monster:plea": {
+  "en": "plea",
+  "pt": "plea"
+ },
+ "monster:plea-occultist": {
+  "en": "plea-occultist",
+  "pt": "ocultista-plea"
+ },
+ "monster:profaner": {
+  "en": "profaner",
+  "pt": "profanador"
+ },
+ "monster:rat": {
+  "en": "rat",
+  "pt": "rato"
+ },
+ "monster:rat-shipper": {
+  "en": "rat-shipper",
+  "pt": "rato-transportador"
+ },
+ "monster:rotwurm": {
+  "en": "rotwurm",
+  "pt": "rotwurm"
+ },
+ "monster:rubellus": {
+  "en": "rubellus",
+  "pt": "rubellus"
+ },
+ "monster:sheep": {
+  "en": "sheep",
+  "pt": "ovelha"
+ },
+ "monster:skal-traitor": {
+  "en": "skal-traitor",
+  "pt": "skal-traidor"
+ },
+ "monster:skeleton": {
+  "en": "skeleton",
+  "pt": "esqueleto"
+ },
+ "monster:smelt-ooze": {
+  "en": "smelt-ooze",
+  "pt": "lodo-fundido"
+ },
+ "monster:sunskin": {
+  "en": "sunskin",
+  "pt": "pele-solar"
+ },
+ "monster:sunskin-enchanter": {
+  "en": "sunskin-enchanter",
+  "pt": "encantador-pele-solar"
+ },
+ "monster:swamp-tentacle": {
+  "en": "swamp-tentacle",
+  "pt": "tentaculo-do-pantano"
+ },
+ "monster:swamp-troll": {
+  "en": "swamp-troll",
+  "pt": "troll-do-pantano"
+ },
+ "monster:terror-spider": {
+  "en": "terror-spider",
+  "pt": "aranha-do-terror"
+ },
+ "monster:the-augur": {
+  "en": "the-augur",
+  "pt": "o-augurio"
+ },
+ "monster:the-black-knight": {
+  "en": "the-black-knight",
+  "pt": "o-cavaleiro-negro"
+ },
+ "monster:the-blackhat": {
+  "en": "the-blackhat",
+  "pt": "o-chapeu-negro"
+ },
+ "monster:the-broodmother": {
+  "en": "the-broodmother",
+  "pt": "a-mae-da-ninhada"
+ },
+ "monster:the-gardener": {
+  "en": "the-gardener",
+  "pt": "o-jardineiro"
+ },
+ "monster:thug": {
+  "en": "thug",
+  "pt": "bandido"
+ },
+ "monster:titan": {
+  "en": "titan",
+  "pt": "tita"
+ },
+ "monster:tomb-diviner": {
+  "en": "tomb-diviner",
+  "pt": "adivinho-da-tumba"
+ },
+ "monster:tomb-guardian": {
+  "en": "tomb-guardian",
+  "pt": "guardiao-da-tumba"
+ },
+ "monster:tomb-worker": {
+  "en": "tomb-worker",
+  "pt": "trabalhador-da-tumba"
+ },
+ "monster:tundra-rat": {
+  "en": "tundra-rat",
+  "pt": "rato-da-tundra"
+ },
+ "monster:unstable-quartz": {
+  "en": "unstable-quartz",
+  "pt": "quartzo-instavel"
+ },
+ "monster:viscid-goblin": {
+  "en": "viscid-goblin",
+  "pt": "goblin-viscoso"
+ },
+ "monster:walking-boletus": {
+  "en": "walking-boletus",
+  "pt": "boleto-ambulante"
+ },
+ "monster:wisp": {
+  "en": "wisp",
+  "pt": "wisp"
+ },
+ "monster:wolf": {
+  "en": "wolf",
+  "pt": "lobo"
+ },
+ "monster:young-amphitere": {
+  "en": "young-amphitere",
+  "pt": "amphitere-jovem"
+ },
  "npc:a114": {
   "en": "benedict",
   "pt": "benedict"

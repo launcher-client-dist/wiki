@@ -55,6 +55,8 @@ describe("registry", () => {
     assert.equal(shipped.url("item:example-blade", "en"), "/en/items/example-blade/");
     assert.equal(shipped.link("item:sample-ore", "en").href, "/en/items/sample-ore/");
     assert.equal(shipped.url("monster:test-slime", "pt"), null, "other kinds stay off");
+    const noPage = createRegistry(FIXTURE_ENTITIES.map((e) => ({ ...e, noPage: true })), { shippedKinds: ["item"] });
+    assert.equal(noPage.url("item:example-blade", "pt"), null, "an entity marked noPage never links");
   });
 
   test("altName is null when both languages share the name", () => {

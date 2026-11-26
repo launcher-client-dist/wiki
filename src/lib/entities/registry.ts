@@ -107,14 +107,14 @@ export function createRegistry(entities: readonly Entity[], options: RegistryOpt
   }
 
   function hasPage(ref: string): boolean {
-    require(ref);
-    return shipped.has(parseRef(ref).kind);
+    const e = require(ref);
+    return shipped.has(parseRef(ref).kind) && !e.noPage;
   }
 
   function url(ref: string, lang: Lang): string | null {
     const e = require(ref);
     const { kind } = parseRef(e.ref);
-    return shipped.has(kind) ? entityPath(kind, e.slug[lang], lang) : null;
+    return shipped.has(kind) && !e.noPage ? entityPath(kind, e.slug[lang], lang) : null;
   }
 
   return {

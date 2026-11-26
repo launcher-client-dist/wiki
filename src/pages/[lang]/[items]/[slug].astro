@@ -75,23 +75,23 @@ const jsonLd = [{
   <div class="container" id="item-page">
     <Banner>
       <div slot="media" class="hero-icon"><IconSlot icon={icon} kind="item" size={152} /></div>
-      <p class="kicker">{ti.category[item.category]}</p>
+      <p class="kicker" data-pagefind-ignore>{ti.category[item.category]}</p>
       <h1>{item.name[lang]}</h1>
       {item.name[other] !== item.name[lang] && <p class="alt" lang={HREFLANG[other]}>{item.name[other]}</p>}
       {v.text[lang] && <blockquote class="game-text">{v.text[lang]}</blockquote>}
-      <div class="tags">
+      <div class="tags" data-pagefind-ignore>
         <Tag>{item.subtype[lang]}</Tag>
         {item.slots.map((s) => <Tag icon="layers">{ti.slot[s as keyof typeof ti.slot]}</Tag>)}
         {item.armourClass && <Tag>{item.armourClass === "heavy" ? ti.heavy : ti.light}</Tag>}
         {item.twoHanded && <Tag>{ti.twoHanded}</Tag>}
-        {item.versions.length > 1 && <Tag tone="sun">{fill(ti.versionsIntro.split(":")[0]!, { n: item.versions.length })}</Tag>}
+        {item.versions.length > 1 && <Tag tone="sun">{fill(ti.versionsTag, { n: item.versions.length })}</Tag>}
       </div>
     </Banner>
 
     <div class="layout">
       <div class="main">
         {item.versions.length > 1 && (
-          <section class="block" aria-labelledby="h-versions">
+          <section class="block" aria-labelledby="h-versions" data-pagefind-ignore>
             <h2 id="h-versions">{ti.versionsTitle}</h2>
             <p class="muted">{fill(ti.versionsIntro, { n: item.versions.length })}</p>
             <div class="versions">
@@ -113,7 +113,7 @@ const jsonLd = [{
 
         {(v.food || v.potion || v.lifetime || v.drinkSeconds || v.resistSeconds) && (
           <section class="block" aria-labelledby="h-effect">
-            <h2 id="h-effect">{ti.useTitle}</h2>
+            <h2 id="h-effect">{ti.effectTitle}</h2>
             <div class="effects">
               {v.potion && <p class="effect"><Icon name="heart" /> {fill(ti.potion, { min: v.potion.min, max: v.potion.max, stat: v.potion.stat === "health" ? ti.potionHealth : ti.potionMana, s: v.potion.seconds })}</p>}
               {v.food && (
@@ -135,7 +135,7 @@ const jsonLd = [{
             <p class="muted">{ti.qualitiesIntro}</p>
             <div class="table-wrap">
               <table class="qtable">
-                <thead><tr><th scope="col">{ti.qualityCol}</th>{qualityKeys.map((k) => <th scope="col" class="r">{statLabel(k)[lang]}</th>)}<th scope="col" class="r">{ti.weight}</th>{v.lifetime && <th scope="col" class="r">s</th>}</tr></thead>
+                <thead><tr><th scope="col">{ti.qualityCol}</th>{qualityKeys.map((k) => <th scope="col" class="r">{statLabel(k)[lang]}</th>)}<th scope="col" class="r">{ti.weight}</th>{v.lifetime && <th scope="col" class="r">{ti.secondsCol}</th>}</tr></thead>
                 <tbody>
                   {qualities.map((q) => (
                     <tr class={`q${q.rarity}`}>
@@ -177,7 +177,7 @@ const jsonLd = [{
                       {s.where && <Fragment slot="sub"><span>{placeText(s.where.place)}</span><MapLink variant="inline" href={s.where.link} label={ti.mapLink} /></Fragment>}
                       <Fragment slot="end">
                         <span><span class="num">{num(s.price, lang)}</span> {ti.gold}</span>
-                        <Badge tone="count">{s.stock.kind === "unlimited" ? ti.stockUnlimited : s.stock.kind === "limited" ? fill(ti.stockLimited, { n: s.stock.n ?? 0 }) : fill(ti.stockBlack, { n: s.stock.n ?? 0 })}</Badge>
+                        <Tag tone={s.stock.kind === "blackMarket" ? "sun" : "default"}>{s.stock.kind === "unlimited" ? ti.stockUnlimited : s.stock.kind === "limited" ? fill(ti.stockLimited, { n: s.stock.n ?? 0 }) : fill(ti.stockBlack, { n: s.stock.n ?? 0 })}</Tag>
                       </Fragment>
                     </ListRow>
                   ))}
@@ -326,7 +326,7 @@ const jsonLd = [{
         )}
 
         {similar.length > 0 && (
-          <section class="block" aria-labelledby="h-similar">
+          <section class="block" aria-labelledby="h-similar" data-pagefind-ignore>
             <h2 id="h-similar">{ti.similarTitle}</h2>
             <div class="similar">
               {similar.map((o) => {
@@ -378,7 +378,7 @@ const jsonLd = [{
   .game-text { margin: 4px 0 0; padding: 8px 12px; border-left: 4px solid var(--sun); background: var(--banner-chip-bg); border-radius: 0 var(--r-m) var(--r-m) 0;
     color: var(--banner-text); font-style: italic; max-width: 42rem; }
   .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
-  .tags :global(.tag) { background: var(--banner-chip-bg); color: var(--banner-text); }
+  .tags :global(.tag) { background: var(--banner-chip-bg); color: var(--banner-text); white-space: normal; }
 
   .layout { display: grid; gap: var(--s-6); margin-top: var(--s-6); grid-template-columns: minmax(0, 1fr); }
   @media (min-width: 1000px) { .layout { grid-template-columns: minmax(0, 1fr) 330px; align-items: start; } .side { position: sticky; top: calc(var(--header-h) + var(--s-4)); } }

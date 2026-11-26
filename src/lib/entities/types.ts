@@ -53,6 +53,8 @@ export interface Entity {
   /** A few key numbers for the hover card ("Vida 300"). */
   facts?: readonly EntityFact[];
   relations?: readonly Relation[];
+  /** Never has a page, even when its kind ships (the made-up fixtures of the component gallery). */
+  noPage?: boolean;
 }
 
 /** What a link to an entity needs, in one language. `href` is null while the entity's page type hasn't shipped. */
