@@ -14,6 +14,7 @@ export const INVERSE = {
   madeFrom: "usedIn",
   teaches: "taughtBy",
   conjures: "conjuredBy",
+  leaves: "leftBy",
   opens: "openedBy",
   mentions: "mentionedIn",
   related: "related",

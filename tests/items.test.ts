@@ -13,8 +13,8 @@ function fixture(): { file: ItemsFile; stubs: StubEntity[] } {
     id, types: [1], primary: 1, name: { pt: name, en: name }, slug: { pt: id, en: id }, category: "material",
     subtype: { key: "Gems", pt: "Gemas", en: "Gems" }, slots: [], value: { npcPays: 30, npcSells: null },
     versions: [{ type: 1, text: { pt: "", en: "" }, stats: {}, weight: 3, stack: 10 }],
-    sources: { drops: [], shops: [], buyers: [], quests: [], map: [], recipes: [], conjured: [] },
-    uses: { recipes: [], questsRequire: [] },
+    sources: { drops: [], shops: [], buyers: [], quests: [], map: [], recipes: [], conjured: [], leftover: [] },
+    uses: { recipes: [], questsRequire: [], leavesEmpty: [] },
   });
   const ore = base("test-ore", "Test Ore");
   ore.sources.drops.push({ monster: "monster:m1", tier: "raro", amount: [1, 2], quality: false });
@@ -41,6 +41,21 @@ describe("item data -> registry", () => {
     assert.deepEqual(groupReverse(reg.reverse("item:test-bar")).rewardOf?.map((r) => r.from), ["quest:q1"]);
     assert.equal(reg.url("item:test-ore", "pt"), "/pt/itens/test-ore/");
     assert.equal(reg.url("monster:m1", "pt"), null, "monsters have no pages yet");
+  });
+
+  test("a potion and its empty link both ways; a map object in a recipe makes no item relation", () => {
+    const { file, stubs } = fixture();
+    const potion = { ...file.items[0]!, id: "test-potion", slug: { pt: "pocao", en: "potion" }, name: { pt: "Poção", en: "Potion" },
+      sources: { ...file.items[0]!.sources, drops: [], shops: [] }, uses: { recipes: [], questsRequire: [], leavesEmpty: [{ item: "test-empty" }] } };
+    const empty = { ...file.items[0]!, id: "test-empty", slug: { pt: "vazio", en: "empty" }, name: { pt: "Vazio", en: "Empty" },
+      sources: { ...file.items[0]!.sources, drops: [], shops: [], leftover: [{ item: "test-potion" }] } };
+    const filled = { ...file.items[1]!, id: "test-filled", slug: { pt: "cheio", en: "filled" }, name: { pt: "Cheio", en: "Filled" },
+      sources: { ...file.items[1]!.sources, quests: [], recipes: [{ method: "join" as const, result: "test-filled",
+        ingredients: [{ item: "test-empty", n: 1, tool: false }, { object: "well" as const, where: [], n: 1, tool: true }] }] } };
+    const reg = createRegistry(entitiesFromData({ ...file, items: [...file.items, potion, empty, filled] }, stubs), { shippedKinds: ["item"] });
+    assert.deepEqual(groupReverse(reg.reverse("item:test-empty")).leftBy?.map((r) => r.from), ["item:test-potion"]);
+    assert.deepEqual(sourceKinds(empty), ["leftover"]);
+    assert.deepEqual(reg.require("item:test-filled").relations?.map((r) => [r.type, r.to]), [["madeFrom", "item:test-empty"]]);
   });
 
   test("helpers: where it comes from, gold per ounce, signed stats", () => {

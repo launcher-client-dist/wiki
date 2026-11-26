@@ -42,6 +42,7 @@ Write a relation once, on one side. The `relations` of the monster below produce
 | opens | Aberto por |
 | requires | Pedido por |
 | conjures | Conjurado por |
+| leaves | Sobra ao beber |
 | mentions | Citado em |
 | related | Relacionado |
 

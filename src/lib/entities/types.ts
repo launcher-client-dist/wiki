@@ -29,7 +29,7 @@ export interface EntityFact {
  * "sold by", "used in") comes from the reverse index (reverse.ts).
  */
 /** mentions: a content page (guide, build, class...) links to the entity: its EntityLinks and frontmatter. */
-export const RELATION_TYPES = ["drops", "sells", "buys", "rewards", "requires", "madeFrom", "teaches", "conjures", "opens", "mentions", "related"] as const;
+export const RELATION_TYPES = ["drops", "sells", "buys", "rewards", "requires", "madeFrom", "teaches", "conjures", "leaves", "opens", "mentions", "related"] as const;
 export type RelationType = (typeof RELATION_TYPES)[number];
 
 export interface Relation {

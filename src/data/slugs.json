@@ -535,6 +535,10 @@
   "en": "elvish-amanita",
   "pt": "amanita-elfica"
  },
+ "item:empty-elixir-potion": {
+  "en": "empty-elixir-potion",
+  "pt": "pocao-elixir-vazia"
+ },
  "item:empty-flasks": {
   "en": "empty-flasks",
   "pt": "frascos-vazios"

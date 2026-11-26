@@ -16,6 +16,7 @@ import Callout from "../../../components/ui/Callout.astro";
 import MapLink from "../../../components/ui/MapLink.astro";
 import Card from "../../../components/ui/Card.astro";
 import EntityLink from "../../../components/entity/EntityLink.astro";
+import Ingredient from "../../../components/entity/Ingredient.astro";
 import { ui, fill } from "../../../i18n/index.ts";
 import { HREFLANG, LANGS, otherLang, type Lang } from "../../../lib/i18n.ts";
 import { absoluteUrl, homePath, SECTIONS, sectionPath } from "../../../lib/routes.ts";
@@ -54,7 +55,7 @@ const runesForThis = items.filter((o) => o.rune?.fitsItems.includes(item.id));
 const spells = [...new Set(item.versions.map((x) => x.spell).filter(Boolean))] as string[];
 const ingotSteps = ITEMS.forging.filter((f) => f.ingot === item.id);
 const similar = similarItems(items, item);
-const appears = appearsIn(registry, ref, ["droppedBy", "soldBy", "boughtBy", "rewardOf", "requiredBy", "usedIn", "conjuredBy", "taughtBy"]);
+const appears = appearsIn(registry, ref, ["droppedBy", "soldBy", "boughtBy", "rewardOf", "requiredBy", "usedIn", "conjuredBy", "taughtBy", "leftBy"]);
 const description = metaDescription(item, lang);
 const placeText = (p: Place) => `${p.town[lang]}${p.near ? ` · ${ti.near} ${p.near[lang]}` : ""}${p.underground ? ` · ${ti.underground}` : ""}`;
 const versionLabel = (i: number) => fill(ti.versionN, { n: i + 1 });
@@ -152,7 +153,7 @@ const jsonLd = [{
           </section>
         )}
 
-        {(src.drops.length > 0 || src.shops.length > 0 || src.quests.length > 0 || src.map.length > 0 || src.recipes.length > 0 || src.conjured.length > 0) && (
+        {(src.drops.length > 0 || src.shops.length > 0 || src.quests.length > 0 || src.map.length > 0 || src.recipes.length > 0 || src.conjured.length > 0 || src.leftover.length > 0) && (
           <section class="block" aria-labelledby="h-where">
             <h2 id="h-where">{ti.whereTitle}</h2>
             <div class="panels">
@@ -201,9 +202,14 @@ const jsonLd = [{
                   {src.recipes.map((r: Recipe) => (
                     <ListRow>
                       <Badge tone="new">{ti.method[r.method]}</Badge>
-                      {r.ingredients.map((ing, i) => <>{i > 0 && <span class="plus">+</span>}<EntityLink to={`item:${ing.item}`} />{ing.tool && <span class="muted small">({ti.tool})</span>}</>)}
+                      {r.ingredients.map((ing, i) => <>{i > 0 && <span class="plus">+</span>}<Ingredient ing={ing} lang={lang} /></>)}
                     </ListRow>
                   ))}
+                </ListPanel>
+              )}
+              {src.leftover.length > 0 && (
+                <ListPanel title={ti.leftoverTitle} count={src.leftover.length} icon="heart" id="leftover" note={ti.leftoverNote}>
+                  {src.leftover.map((l) => <ListRow><EntityLink to={`item:${l.item}`} /></ListRow>)}
                 </ListPanel>
               )}
               {src.map.length > 0 && (
@@ -234,7 +240,7 @@ const jsonLd = [{
           </section>
         )}
 
-        {(src.buyers.length > 0 || item.uses.recipes.length > 0 || item.uses.questsRequire.length > 0 || item.rune || runesForThis.length > 0 || item.forgeable || ingotSteps.length > 0 || spells.length > 0) && (
+        {(src.buyers.length > 0 || item.uses.recipes.length > 0 || item.uses.leavesEmpty.length > 0 || item.uses.questsRequire.length > 0 || item.rune || runesForThis.length > 0 || item.forgeable || ingotSteps.length > 0 || spells.length > 0) && (
           <section class="block" aria-labelledby="h-use">
             <h2 id="h-use">{ti.useTitle}</h2>
             <div class="panels">
@@ -260,10 +266,15 @@ const jsonLd = [{
                   {item.uses.recipes.map((r) => (
                     <ListRow>
                       <Badge tone="new">{ti.method[r.method]}</Badge>
-                      {r.ingredients.map((ing, i) => <>{i > 0 && <span class="plus">+</span>}<EntityLink to={`item:${ing.item}`} />{ing.tool && <span class="muted small">({ti.tool})</span>}</>)}
+                      {r.ingredients.map((ing, i) => <>{i > 0 && <span class="plus">+</span>}<Ingredient ing={ing} lang={lang} /></>)}
                       <span class="plus">→</span><EntityLink to={`item:${r.result}`} />
                     </ListRow>
                   ))}
+                </ListPanel>
+              )}
+              {item.uses.leavesEmpty.length > 0 && (
+                <ListPanel title={ti.leavesTitle} icon="heart" id="leaves">
+                  {item.uses.leavesEmpty.map((l) => <ListRow><EntityLink to={`item:${l.item}`} /></ListRow>)}
                 </ListPanel>
               )}
               {buyersOpen.length > 0 && (

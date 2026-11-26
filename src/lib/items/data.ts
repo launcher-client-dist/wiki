@@ -14,7 +14,7 @@ export const CLASS_KEYS = ["knight", "mage", "rogue", "squire"] as const;
 export type ClassKey = (typeof CLASS_KEYS)[number];
 export const CATEGORIES = ["weapon", "shield", "armour", "jewellery", "ammo", "container", "light", "food", "drink", "potion", "spellbook", "book", "rune", "gem", "material", "tool", "quest", "house", "other"] as const;
 export type Category = (typeof CATEGORIES)[number];
-export const SOURCE_KINDS = ["drop", "shop", "quest", "craft", "map", "conjure"] as const;
+export const SOURCE_KINDS = ["drop", "shop", "quest", "craft", "map", "conjure", "leftover"] as const;
 export type SourceKind = (typeof SOURCE_KINDS)[number];
 
 export interface OneIn {
@@ -65,7 +65,8 @@ export interface Where {
 export interface Recipe {
   method: "join" | "cook" | "cut";
   result: string;
-  ingredients: { item: string; n: number; tool: boolean }[];
+  /** An ingredient is an item, or a map object (a well) with some of the spots that hold one: no item, no link. */
+  ingredients: { item?: string; object?: "well"; where?: Where[]; n: number; tool: boolean }[];
 }
 
 export interface ItemData {
@@ -94,8 +95,11 @@ export interface ItemData {
     map: { x: number; y: number; z: number; place: Place; link: string }[];
     recipes: Recipe[];
     conjured: { spell: EntityRef; seconds: number }[];
+    /** Left in the bag after drinking these potions (item ids). */
+    leftover: { item: string }[];
   };
-  uses: { recipes: Recipe[]; questsRequire: { quest: EntityRef }[] };
+  /** `leavesEmpty`: what drinking it leaves in the bag (item ids). */
+  uses: { recipes: Recipe[]; questsRequire: { quest: EntityRef }[]; leavesEmpty: { item: string }[] };
 }
 
 export interface ForgingStep {
@@ -141,6 +145,7 @@ export function sourceKinds(item: ItemData): SourceKind[] {
   if (s.recipes.length) out.push("craft");
   if (s.map.length) out.push("map");
   if (s.conjured.length) out.push("conjure");
+  if (s.leftover.length) out.push("leftover");
   return out;
 }
 
@@ -170,7 +175,7 @@ export function signed(n: number): string {
  * The registry's entities from the item data and the stubs: one entity per item (icon, game text as summary, a few
  * stats as facts) and one per stub, with the relations the data holds written on the side that owns them (a monster
  * drops, an NPC sells and buys, a quest rewards or requires, a recipe's result is made from its ingredients, a spell
- * conjures, a spellbook teaches). The reverse index turns them around for the item pages.
+ * conjures, a spellbook teaches, a potion leaves its empty). The reverse index turns them around for the item pages.
  */
 export function entitiesFromData(file: ItemsFile, stubs: readonly StubEntity[]): Entity[] {
   const rel = new Map<EntityRef, Relation[]>();
@@ -183,7 +188,8 @@ export function entitiesFromData(file: ItemsFile, stubs: readonly StubEntity[]):
     for (const q of item.sources.quests) add(q.quest, { type: "rewards", to: me, amount: [q.amount, q.amount] });
     for (const q of item.uses.questsRequire) add(q.quest, { type: "requires", to: me });
     for (const c of item.sources.conjured) add(c.spell, { type: "conjures", to: me });
-    for (const r of item.sources.recipes) for (const ing of r.ingredients) add(me, { type: "madeFrom", to: itemRef(ing.item) });
+    for (const r of item.sources.recipes) for (const ing of r.ingredients) if (ing.item) add(me, { type: "madeFrom", to: itemRef(ing.item) });
+    for (const l of item.uses.leavesEmpty) add(me, { type: "leaves", to: itemRef(l.item) });
     for (const v of item.versions) if (v.spell) add(me, { type: "teaches", to: v.spell });
   }
   const dedupe = (rs: Relation[]) => [...new Map(rs.map((r) => [`${r.type}|${r.to}|${r.tier ?? ""}`, r])).values()];

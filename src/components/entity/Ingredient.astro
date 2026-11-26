@@ -1,0 +1,37 @@
+---
+/**
+ * One recipe ingredient: an item (a link with icon and hover card), or a map object such as a well, which is not an
+ * item a player carries: its name as plain text ("um poço (no mapa)"), and map links to some of the spots holding one.
+ */
+import EntityLink from "./EntityLink.astro";
+import MapLink from "../ui/MapLink.astro";
+import { ui } from "../../i18n/index.ts";
+import type { Lang } from "../../lib/i18n.ts";
+import type { Recipe } from "../../lib/items/data.ts";
+
+interface Props {
+  ing: Recipe["ingredients"][number];
+  lang: Lang;
+}
+const { ing, lang } = Astro.props;
+const ti = ui(lang).item;
+---
+{ing.item ? (
+  <><EntityLink to={`item:${ing.item}`} />{ing.tool && <span class="muted small">({ti.tool})</span>}</>
+) : (
+  <span class="object" data-object={ing.object}>
+    <span>{ti.wellObject}</span>
+    {ing.where && ing.where.length > 0 && (
+      <span class="spots">
+        <span class="muted small">{ti.wellWhere}:</span>
+        {ing.where.map((w) => <MapLink variant="inline" href={w.link} label={w.place.town[lang]} />)}
+      </span>
+    )}
+  </span>
+)}
+<style>
+  .object { display: inline-flex; flex-wrap: wrap; gap: 4px 10px; align-items: baseline; }
+  .spots { display: inline-flex; flex-wrap: wrap; gap: 2px 10px; align-items: baseline; }
+  .muted { color: var(--text-muted); }
+  .small { font-size: var(--fs-sm); }
+</style>

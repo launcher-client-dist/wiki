@@ -160,6 +160,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgCpBCEGAQcBAQEAABSEiGN3zElV8C1NBwA",
@@ -391,6 +392,7 @@
     178
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -631,6 +633,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -675,6 +678,7 @@
     417
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -846,6 +850,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -885,6 +890,7 @@
     416
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -1070,6 +1076,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -1114,6 +1121,7 @@
     415
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -1285,6 +1293,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -1324,6 +1333,7 @@
     414
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -1428,6 +1438,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -1442,6 +1453,7 @@
     418
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -1604,6 +1616,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -1618,6 +1631,7 @@
     411
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -1806,6 +1820,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -1820,6 +1835,7 @@
     412
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -1874,6 +1890,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -1893,6 +1910,7 @@
     355
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -1963,6 +1981,7 @@
     "buyers": [],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -1982,6 +2001,7 @@
     356
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -2028,6 +2048,7 @@
     "buyers": [],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -2047,6 +2068,7 @@
     353
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -2236,6 +2258,7 @@
     "buyers": [],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -2255,6 +2278,7 @@
     358
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -2301,6 +2325,7 @@
     "buyers": [],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -2321,6 +2346,7 @@
     352
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -2658,6 +2684,7 @@
       "tier": "comum"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgCBBZoDBgEYAQEBAAAUKCMCY3UsKMhJBQA",
@@ -2922,6 +2949,7 @@
     232
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": [
      {
@@ -3112,6 +3140,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AGNieM64iZGNEQQYGEQ6OTgdCwpyUhUCMlMB",
@@ -3215,6 +3244,7 @@
     245
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [
      {
       "quest": "quest:q1301"
@@ -3298,6 +3328,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -3312,6 +3343,7 @@
     529
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -3559,6 +3591,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgCbBeQBBgEAAQEBAACUIgJjdSwqyi8HAA",
@@ -3679,6 +3712,7 @@
     44
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -3742,6 +3776,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -3756,6 +3791,7 @@
     511
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -3996,6 +4032,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -4010,6 +4047,7 @@
     510
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -4243,6 +4281,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -4257,6 +4296,7 @@
     461
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -4507,6 +4547,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -4521,6 +4562,7 @@
     213
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -4781,6 +4823,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [
@@ -4837,6 +4880,7 @@
     182
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -4933,6 +4977,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgAVtgIGAQABAQEAAJQiAuNySiwpyUlVcKxIBQA",
@@ -4971,6 +5016,7 @@
     452
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -5197,6 +5243,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -5211,6 +5258,7 @@
     460
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -5392,6 +5440,7 @@
     "buyers": [],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -5411,6 +5460,7 @@
     475
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -5628,6 +5678,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -5672,6 +5723,7 @@
     206
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -5737,6 +5789,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -5756,6 +5809,7 @@
     577
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -6035,6 +6089,14 @@
       "tier": "raro"
      }
     ],
+    "leftover": [
+     {
+      "item": "big-health-potion"
+     },
+     {
+      "item": "big-mana-potion"
+     }
+    ],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgCDBZoDBgEYAQEBAAAUKCMC43XKTFdwzS0oqVQIyC8BAA",
@@ -6194,6 +6256,7 @@
     4
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -6247,6 +6310,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -6266,6 +6330,7 @@
     171
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -6337,6 +6402,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgCLBfQCBgEeAQEBAAAU6CMCE3TKTFfwSE3MKclQCMgvyczPAwA",
@@ -6503,6 +6569,11 @@
     5
    ],
    "uses": {
+    "leavesEmpty": [
+     {
+      "item": "big-empty-pot"
+     }
+    ],
     "questsRequire": [],
     "recipes": []
    },
@@ -6580,6 +6651,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgAalwMGAQwBAQEAABTUiON3ykxX8E3MS1QIyC_JzM8DAA",
@@ -6742,6 +6814,11 @@
     6
    ],
    "uses": {
+    "leavesEmpty": [
+     {
+      "item": "big-empty-pot"
+     }
+    ],
     "questsRequire": [],
     "recipes": []
    },
@@ -6932,6 +7009,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgDrBV4GARQBAQEAABSoIgLjccpMV_DPSVFwys_PBgA",
@@ -8020,6 +8098,7 @@
     170
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -8215,6 +8294,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -8234,6 +8314,7 @@
     10
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -8472,6 +8553,7 @@
       "tier": "comum"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgDzAVkGARIBAQEAABRoIgLjcspJTM5WCM_PzwEA",
@@ -8587,6 +8669,7 @@
     105
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [
      {
       "quest": "quest:q1080"
@@ -8701,6 +8784,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -8776,6 +8860,7 @@
     453
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -8870,6 +8955,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -8940,6 +9026,7 @@
     326
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -9027,6 +9114,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgDzA4QCBgEAAQEBAACUIgLjdcopTVVwSkzOLkhMzgYA",
@@ -9113,6 +9201,7 @@
     325
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -9381,6 +9470,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgCVBbkDBgEJAQEBAAAUpIjjdMopTVVwys_PBgA",
@@ -9687,6 +9777,7 @@
     169
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -9801,6 +9892,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgD9BZACBgEAAQEBAACUIgLjdMopTVVwz8zJAQA",
@@ -10116,6 +10208,7 @@
     15
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": [
      {
@@ -10213,6 +10306,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -10257,6 +10351,7 @@
     195
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -10321,6 +10416,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -10340,6 +10436,7 @@
     201
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -10532,6 +10629,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -10571,6 +10669,7 @@
     377
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -10740,6 +10839,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgCgAqACBgEAAQEBAACUIgITdMopTVUIKs1LVfBITE_MSawCAA",
@@ -10772,6 +10872,7 @@
     376
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -10943,6 +11044,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -10957,6 +11059,7 @@
     375
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -11095,6 +11198,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -11134,6 +11238,7 @@
     374
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -11301,6 +11406,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -11340,6 +11446,7 @@
     371
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -11514,6 +11621,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -11553,6 +11661,7 @@
     372
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -11919,6 +12028,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgDJAXwGAQABAQEAAJQiAuNzyilNVQguSM3JScrPzwYA",
@@ -12240,6 +12350,7 @@
     495
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -12513,6 +12624,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgBAigUGAQMBAQEAABQiIuN2yilNTUotKspMLQYA",
@@ -12575,6 +12687,7 @@
     234
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": [
      {
@@ -12726,6 +12839,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [
@@ -12806,6 +12920,7 @@
     242
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -12943,6 +13058,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgCHA4MDBgEUAQEBAAAUqCIC43XKz0ktKS1WCMhMTU4FAA",
@@ -13097,6 +13213,7 @@
     7
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -13152,6 +13269,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -13224,6 +13342,7 @@
     466
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -13336,6 +13455,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgCTA5sCBgEUAQEBAAAUqCIC43DKz0tVcMovBwA",
@@ -13368,6 +13488,7 @@
     344
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -13636,6 +13757,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgCTA58CBgEUAQEBAAAUqCIC43LKz0tV8M7LTEsFAA",
@@ -13677,6 +13799,7 @@
     351
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -13854,6 +13977,7 @@
     "buyers": [],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgCrBYQEBgEAAQEBAACUIgLjcMrPz05OLE4FAA",
@@ -18980,6 +19104,7 @@
     176
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -19070,6 +19195,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgCdBbkDBgEJAQEBAAAUpIjjdcovz1HwT1MITyxJLQIA",
@@ -19294,7 +19420,96 @@
      }
     ],
     "quests": [],
-    "recipes": [],
+    "recipes": [
+     {
+      "ingredients": [
+       {
+        "item": "wooden-bowl",
+        "n": 1,
+        "tool": false
+       },
+       {
+        "n": 1,
+        "object": "well",
+        "tool": true,
+        "where": [
+         {
+          "link": "https://map.opengea.tech/#2.AgCVBZwDBgEAAQEBAACUIgJjCU_NyQEA",
+          "place": {
+           "near": {
+            "en": "Residency Square",
+            "pt": "Praça da Residência"
+           },
+           "town": {
+            "en": "Basile",
+            "pt": "Basile"
+           },
+           "underground": false
+          }
+         },
+         {
+          "link": "https://map.opengea.tech/#2.AgC0AWAGAQABAQEAAJQiAmMJT83JAQA",
+          "place": {
+           "near": {
+            "en": "Old Village",
+            "pt": "Vila Antiga"
+           },
+           "town": {
+            "en": "Dorosam",
+            "pt": "Dorosam"
+           },
+           "underground": false
+          }
+         },
+         {
+          "link": "https://map.opengea.tech/#2.AgCgA4oDBgEAAQEBAACUIgJjCU_NyQEA",
+          "place": {
+           "near": {
+            "en": "Ferag Courier Stable",
+            "pt": "Estábulo de Correio Ferag"
+           },
+           "town": {
+            "en": "East Nordha",
+            "pt": "Nordha Oriental"
+           },
+           "underground": false
+          }
+         },
+         {
+          "link": "https://map.opengea.tech/#2.AgC3AZgDBgEAAQEBAACUIgJjCU_NyQEA",
+          "place": {
+           "near": {
+            "en": "Destroyed Village",
+            "pt": "Vila Destruída"
+           },
+           "town": {
+            "en": "Nordha",
+            "pt": "Nordha"
+           },
+           "underground": false
+          }
+         },
+         {
+          "link": "https://map.opengea.tech/#2.AgDrAk8GAQABAQEAAJQiAmMJT83JAQA",
+          "place": {
+           "near": {
+            "en": "El Chad Village",
+            "pt": "Vila El Chad"
+           },
+           "town": {
+            "en": "Plains Cathedral",
+            "pt": "Catedral da Planície"
+           },
+           "underground": false
+          }
+         }
+        ]
+       }
+      ],
+      "method": "join",
+      "result": "bowl-of-water"
+     }
+    ],
     "shops": [
      {
       "afterQuests": [],
@@ -19403,6 +19618,7 @@
     69
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": [
      {
@@ -19580,6 +19796,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -19650,6 +19867,7 @@
     198
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -19714,6 +19932,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -19784,6 +20003,7 @@
     204
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -19840,6 +20060,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -19859,6 +20080,7 @@
     504
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -20097,6 +20319,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -20141,6 +20364,7 @@
     146
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -20430,6 +20654,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -20449,6 +20674,7 @@
     295
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [
      {
       "quest": "quest:q1289"
@@ -20761,6 +20987,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -20805,6 +21032,7 @@
     339
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -21092,6 +21320,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AGNieM64g5GNEQQYGEQ6OfidilITUxSc8stzFIJLUssB",
@@ -21221,6 +21450,7 @@
     187
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -21578,6 +21808,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgC1BMICBgEEAQEBAAAUKiLjcipKTUxR8MlPTAMA",
@@ -21777,6 +22008,7 @@
     102
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": [
      {
@@ -22008,6 +22240,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgCNBcgDBgEAAQEBAACUIgLjdipKTUxRCMhMTU4FAA",
@@ -22477,6 +22710,7 @@
     148
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": [
      {
@@ -22643,6 +22877,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -22657,6 +22892,7 @@
     63
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -22945,6 +23181,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgCjBdgCBgEAAQEBAACUIgLjdyrKTE_MS8nMS1UISy0uAQA",
@@ -22977,6 +23214,7 @@
     62
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -23231,6 +23469,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -23300,6 +23539,7 @@
     3
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -23593,6 +23833,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgCBAoYBBgEAAQEBAACUIgLjcyrKL89TcEpMzi5ITM4GAA",
@@ -23722,6 +23963,7 @@
     9
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -24011,6 +24253,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgDzAaIBBgEAAQEBAACUIgJjdypNzs5JLQIA",
@@ -24097,6 +24340,7 @@
     90
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -24323,6 +24567,7 @@
       "tier": "comum"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -24362,6 +24607,7 @@
     122
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -24440,6 +24686,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -24454,6 +24701,7 @@
     346
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -24695,6 +24943,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -24709,6 +24958,7 @@
     347
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -24948,6 +25198,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgClBOsDBgEIAQEBAAAUlIjjdiotykksUAjPz88BAA",
@@ -25005,6 +25256,7 @@
     349
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -25089,6 +25341,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgD_BJoDBgEYAQEBAAAUKCMCY3NOzEvJSQUA",
@@ -25373,6 +25626,7 @@
     160
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -25416,6 +25670,7 @@
     "buyers": [],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgCLBcwDBgEEAQEBAAAUKiLjck7MS8lJVfDJLAEA",
@@ -26094,6 +26349,7 @@
     161
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -26160,6 +26416,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -26204,6 +26461,7 @@
     584
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -26318,6 +26576,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgDJA5QDBgEAAQEBAACUIgLjc04sKUnMzFFwy8kvTy0CAA",
@@ -26367,6 +26626,7 @@
     11
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -26534,6 +26794,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -26578,6 +26839,7 @@
     84
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -26825,6 +27087,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -26936,6 +27199,7 @@
     304
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -27048,6 +27312,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgA4mQMGAQwBAQEAABTUiONxzkhNLU5VCM7JTE4FAA",
@@ -27135,6 +27400,7 @@
     100
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": [
      {
@@ -27322,6 +27588,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -27366,6 +27633,7 @@
     142
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [
      {
       "quest": "quest:q1079"
@@ -27430,6 +27698,7 @@
     "buyers": [],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgCHA7QCBgEWAQEBAAAU6CIC43bOSC0uVgjITE1OBQA",
@@ -28000,6 +28269,7 @@
     439
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -28254,6 +28524,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -28273,6 +28544,7 @@
     459
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -28494,6 +28766,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgBBggIGAQABAQEAAJQiAuN2zskvyVAISMwrKQYA",
@@ -28689,6 +28962,7 @@
     51
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -29089,6 +29363,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgCXBasDBgEIAQEBAAAUlIjjcs7JL8lQCEstLgEA",
@@ -29295,6 +29570,7 @@
     1
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -29561,6 +29837,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgDpArcCBgESAQEBAAAUaCIC43POz8lPTizOTFQITk1NAQA",
@@ -29693,6 +29970,7 @@
     12
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -29736,6 +30014,7 @@
     "buyers": [],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -29755,6 +30034,7 @@
     287
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -29798,6 +30078,7 @@
     "buyers": [],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgCbAaAFBgEAAQEBAACUIgITcc7Pz04CYisFt8ziDIXgktTEbAA",
@@ -29835,6 +30116,7 @@
     288
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -29878,6 +30160,7 @@
     "buyers": [],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -29901,6 +30184,7 @@
     286
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -29944,6 +30228,7 @@
     "buyers": [],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -29963,6 +30248,7 @@
     289
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -30107,6 +30393,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgDtAUEGAQABAQEAAJQiAhN0zs_PTk1RcMsszlAILklNzAYA",
@@ -30251,6 +30538,7 @@
     68
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": [
      {
@@ -30390,6 +30678,7 @@
       "tier": "sempre"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [
@@ -30446,6 +30735,7 @@
     468
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -30568,6 +30858,7 @@
       "tier": "sempre"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgCzBMICBgEEAQEBAAAUKiLjds7Pz05NUfBJzE0CAA",
@@ -30683,6 +30974,7 @@
     128
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": [
      {
@@ -30964,6 +31256,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [
@@ -30995,6 +31288,7 @@
     361
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -31208,6 +31502,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgDlAaoBBgEAAQEBAACUIgITdc7Pz05NUQjPyCxJVfAtLc4oys_PBQA",
@@ -31316,6 +31611,7 @@
     65
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -31490,6 +31786,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgChAocBBgEDAQEBAAAUIiITdM7Pz05NUQjPyM9JVXDLLM4AAA",
@@ -31637,6 +31934,7 @@
     66
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -31699,6 +31997,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -31713,6 +32012,7 @@
     535
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -31829,6 +32129,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -31843,6 +32144,7 @@
     131
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -32144,6 +32446,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -32231,6 +32534,7 @@
     467
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -32584,6 +32888,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgDdA44DBgEAAQEBAACUIgJjdy7KL09KLAIA",
@@ -32714,6 +33019,7 @@
     262
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -32863,6 +33169,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -32877,6 +33184,7 @@
     469
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -33201,6 +33509,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -33245,6 +33554,7 @@
     45
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -33414,6 +33724,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -33428,6 +33739,7 @@
     134
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -33643,6 +33955,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -33662,6 +33975,7 @@
     39
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -33822,6 +34136,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgDBAlEGAQABAQEAAJQiAmN3Li3JSSwuBgA",
@@ -33859,6 +34174,7 @@
     190
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -34090,6 +34406,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -34104,6 +34421,7 @@
     227
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -34376,6 +34694,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgAZ1wMGAQABAQEAAJQiAuNySSzKVnBKTUwpBgA",
@@ -34408,6 +34727,7 @@
     561
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -34729,6 +35049,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -34773,6 +35094,7 @@
     141
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -34989,6 +35311,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -35003,6 +35326,7 @@
     226
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -35257,6 +35581,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -35271,6 +35596,7 @@
     506
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -35563,6 +35889,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -35607,6 +35934,7 @@
     96
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -35937,6 +36265,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -35976,6 +36305,7 @@
     391
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -36112,6 +36442,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -36126,6 +36457,7 @@
     390
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -36228,6 +36560,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -36242,6 +36575,7 @@
     394
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -36407,6 +36741,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -36421,6 +36756,7 @@
     387
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -36584,6 +36920,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -36623,6 +36960,7 @@
     388
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -36666,6 +37004,7 @@
     "buyers": [],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgBgbwYBBgEBAQAAFDoiE3ZJTSzJUAhKLc4sLlEIyC_JzM8DAA",
@@ -36740,6 +37079,11 @@
     483
    ],
    "uses": {
+    "leavesEmpty": [
+     {
+      "item": "empty-resist-potion"
+     }
+    ],
     "questsRequire": [],
     "recipes": []
    },
@@ -36791,6 +37135,7 @@
     "buyers": [],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -36810,6 +37155,7 @@
     476
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -37087,6 +37433,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -37198,6 +37545,7 @@
     302
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -37319,6 +37667,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgBgbwYBBgEBAQAAFDoiY3fJTMzNz0sBAA",
@@ -37402,6 +37751,7 @@
     568
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -37606,6 +37956,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -37625,6 +37976,7 @@
     276
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -37812,6 +38164,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -37856,6 +38209,7 @@
     284
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -37912,6 +38266,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -37927,6 +38282,7 @@
     517
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -38151,6 +38507,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgA2lQMGAQwBAQEAABTUiGN1yS9NzwAA",
@@ -38230,6 +38587,7 @@
     181
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": [
      {
@@ -38327,6 +38685,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [
@@ -38358,6 +38717,7 @@
     243
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": [
      {
@@ -38562,6 +38922,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -38606,6 +38967,7 @@
     235
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -38705,6 +39067,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -38719,6 +39082,7 @@
     224
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -38980,6 +39344,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -38994,6 +39359,7 @@
     225
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -39241,6 +39607,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -39285,6 +39652,7 @@
     212
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -39328,6 +39696,7 @@
     "buyers": [],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgB3ngUGAQABAQEAAJQiAmN2TU8HAA",
@@ -39360,6 +39729,7 @@
     575
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -39676,6 +40046,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -39715,6 +40086,7 @@
     236
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": [
      {
@@ -39795,6 +40167,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -39834,6 +40207,11 @@
     501
    ],
    "uses": {
+    "leavesEmpty": [
+     {
+      "item": "empty-elixir-potion"
+     }
+    ],
     "questsRequire": [],
     "recipes": []
    },
@@ -39914,6 +40292,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -39933,6 +40312,7 @@
     580
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -39965,6 +40345,90 @@
      },
      "type": 580,
      "weight": 1.2
+    }
+   ]
+  },
+  {
+   "category": "potion",
+   "icon": "/icons/items/502.png",
+   "id": "empty-elixir-potion",
+   "name": {
+    "en": "Empty Elixir Potion",
+    "pt": "Poção Elixir Vazia"
+   },
+   "primary": 502,
+   "slots": [],
+   "slug": {
+    "en": "empty-elixir-potion",
+    "pt": "pocao-elixir-vazia"
+   },
+   "sources": {
+    "buyers": [
+     {
+      "afterQuests": [],
+      "npc": "npc:a282",
+      "price": 75,
+      "spoiler": false,
+      "where": {
+       "link": "https://map.opengea.tech/#2.AgDIAwoGAQABAQEAANAJGvKAQgBEEIgQW5obGYjQG12YW9ocHQ",
+       "place": {
+        "near": {
+         "en": "Forest Temple",
+         "pt": "Templo da Floresta"
+        },
+        "town": {
+         "en": "Dorosam",
+         "pt": "Dorosam"
+        },
+        "underground": false
+       }
+      }
+     }
+    ],
+    "conjured": [],
+    "drops": [],
+    "leftover": [
+     {
+      "item": "elixir-potion"
+     }
+    ],
+    "map": [],
+    "quests": [],
+    "recipes": [],
+    "shops": []
+   },
+   "subtype": {
+    "en": "Potions",
+    "key": "Potions",
+    "pt": "Poções"
+   },
+   "types": [
+    502
+   ],
+   "uses": {
+    "leavesEmpty": [],
+    "questsRequire": [],
+    "recipes": []
+   },
+   "value": {
+    "npcPays": 75,
+    "npcSells": null
+   },
+   "versions": [
+    {
+     "icon": "/icons/items/502.png",
+     "iconSize": [
+      20,
+      28
+     ],
+     "stack": 5,
+     "stats": {},
+     "text": {
+      "en": "",
+      "pt": ""
+     },
+     "type": 502,
+     "weight": 3.0
     }
    ]
   },
@@ -40017,6 +40481,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgCSBBkGAQABAQEAAJQiAuNxzS0oqVRwy0kszi4GAA",
@@ -40079,6 +40544,7 @@
     200
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -40229,6 +40695,14 @@
       "monster": "monster:orc-shaman",
       "quality": false,
       "tier": "incomum"
+     }
+    ],
+    "leftover": [
+     {
+      "item": "health-potion"
+     },
+     {
+      "item": "mana-potion"
      }
     ],
     "map": [
@@ -40448,6 +40922,7 @@
     13
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -40491,6 +40966,17 @@
     "buyers": [],
     "conjured": [],
     "drops": [],
+    "leftover": [
+     {
+      "item": "poison-resist-potion"
+     },
+     {
+      "item": "death-resist-potion"
+     },
+     {
+      "item": "holy-resist-potion"
+     }
+    ],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgDABEMGAQABAQEAAJQiAhN2zS0oqVQISi3OLC5RCMgvyczPAwA",
@@ -40523,6 +41009,7 @@
     487
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -40566,6 +41053,7 @@
     "buyers": [],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -40610,6 +41098,7 @@
     427
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -40716,6 +41205,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -40781,6 +41271,7 @@
     290
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -40993,6 +41484,7 @@
     "buyers": [],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -41012,6 +41504,7 @@
     273
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -41227,6 +41720,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -41273,6 +41767,7 @@
     480
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -41575,6 +42070,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -41597,6 +42093,7 @@
     488
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -41721,6 +42218,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -41761,6 +42259,7 @@
     572
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -42070,6 +42569,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgCfBb0DBgEIAQEBAAAUlIjjcssszlAILklNzAYA",
@@ -42393,6 +42893,7 @@
     67
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [
      {
       "quest": "quest:q1079"
@@ -42470,6 +42971,7 @@
     "buyers": [],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -42536,6 +43038,7 @@
     334
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -42722,6 +43225,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -42741,6 +43245,7 @@
     107
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -42893,6 +43398,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -42932,6 +43438,7 @@
     454
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -42989,6 +43496,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -43003,6 +43511,7 @@
     503
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -43381,6 +43890,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgCNBIYCBgEAAQEBAACUIgLjcE_MTUotzs8DAA",
@@ -43501,6 +44011,7 @@
     83
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -43773,6 +44284,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgA7hAIGAQUBAQEAABQyIuN0T8xNVfBNTSwBAA",
@@ -43886,6 +44398,7 @@
     456
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": [
      {
@@ -44113,6 +44626,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgDbBIgCBgEAAQEBAACUIgJjc08syslMBgA",
@@ -44199,6 +44713,7 @@
     145
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [
      {
       "quest": "quest:q1079"
@@ -44340,6 +44855,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AGNieM64hZGNEQQYGEQ6OXjcE4tyMpMVnIpSE1MA",
@@ -44414,6 +44930,7 @@
     184
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -44518,6 +45035,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -44566,6 +45084,7 @@
     570
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -44721,6 +45240,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -44735,6 +45255,7 @@
     124
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -45493,6 +46014,7 @@
       "tier": "comum"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgAypQMGAQwBAQEAABTUiGNxz89JAQA",
@@ -45610,6 +46132,7 @@
     76
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -45774,6 +46297,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -45793,6 +46317,7 @@
     159
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -45957,6 +46482,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -46020,6 +46546,7 @@
     47
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -46259,6 +46786,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -46273,6 +46801,7 @@
     463
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -46593,6 +47122,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgCZBasDBgEIAQEBAAAUlIjjdS9KrFRwSkzOLkhMzgYA",
@@ -46761,6 +47291,7 @@
     340
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -46992,6 +47523,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -47007,6 +47539,7 @@
     450
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -47280,6 +47813,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -47295,6 +47829,7 @@
     133
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -47557,6 +48092,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgAOnAMGAQABAQEAAJQiAuNzL0pNzVNwSkzOLkhMzgYA",
@@ -47642,6 +48178,7 @@
     465
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -48025,6 +48562,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -48117,6 +48655,7 @@
     214
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -48297,6 +48836,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgDnBbABBgEKAQEBAAAUtIjjci9KTc1TcMrPzwYA",
@@ -48702,6 +49242,7 @@
     168
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -48848,6 +49389,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -48862,6 +49404,7 @@
     252
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -49184,6 +49727,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgAj1wMGAQABAQEAAJQiAuN1L0pNzVMISM1LScwrAQA",
@@ -49241,6 +49785,7 @@
     560
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -49503,6 +50048,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -49517,6 +50063,7 @@
     369
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -49699,6 +50246,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -49743,6 +50291,7 @@
     367
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -49881,6 +50430,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -49920,6 +50470,7 @@
     366
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -50035,6 +50586,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -50076,6 +50628,7 @@
     370
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -50228,6 +50781,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -50242,6 +50796,7 @@
     363
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -50390,6 +50945,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -50404,6 +50960,7 @@
     364
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -50830,6 +51387,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgCLBcgDBgEAAQEBAACUIgLjdy9KTc1TCC5IzclJys_PBgA",
@@ -51068,6 +51626,7 @@
     583
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -51269,6 +51828,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -51330,6 +51890,7 @@
     186
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -51474,6 +52035,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgCjBOsDBgEIAQEBAAAUlIjj9UhNzCnJUAjIL8nMzwMA",
@@ -51736,6 +52298,11 @@
     17
    ],
    "uses": {
+    "leavesEmpty": [
+     {
+      "item": "empty-pot"
+     }
+    ],
     "questsRequire": [],
     "recipes": []
    },
@@ -51785,6 +52352,7 @@
     "buyers": [],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -51804,6 +52372,7 @@
     478
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -51873,6 +52442,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -51943,6 +52513,7 @@
     203
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -52033,6 +52604,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgDFA5QDBgEAAQEBAACUIgLj9kgtyldwy8kvTy0CAA",
@@ -52107,6 +52679,7 @@
     158
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -52150,6 +52723,7 @@
     "buyers": [],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgCUBBkGAQABAQEAAJQiAhPyyM-pVAhKLc4sLlEIyC_JzM8DAA",
@@ -52207,6 +52781,11 @@
     484
    ],
    "uses": {
+    "leavesEmpty": [
+     {
+      "item": "empty-resist-potion"
+     }
+    ],
     "questsRequire": [],
     "recipes": []
    },
@@ -52315,6 +52894,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -52329,6 +52909,7 @@
     126
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -52433,6 +53014,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -52523,6 +53105,7 @@
     338
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -52672,6 +53255,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -52759,6 +53343,7 @@
     282
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -52864,6 +53449,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -52951,6 +53537,7 @@
     280
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -53066,6 +53653,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -53156,6 +53744,7 @@
     315
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -53305,6 +53894,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -53395,6 +53985,7 @@
     312
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -53548,6 +54139,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -53635,6 +54227,7 @@
     275
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -53739,6 +54332,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -53805,6 +54399,7 @@
     318
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -53897,6 +54492,7 @@
     "buyers": [],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -53919,6 +54515,7 @@
     499
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -54068,6 +54665,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -54155,6 +54753,7 @@
     281
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -54259,6 +54858,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -54347,6 +54947,7 @@
     293
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -54487,6 +55088,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -54598,6 +55200,7 @@
     299
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -54654,6 +55257,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -54674,6 +55278,7 @@
     582
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -54818,6 +55423,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgAouwMGARwBAQEAABSoIwLj8izKz1Nwys8vKQYA",
@@ -54850,6 +55456,7 @@
     530
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -55051,6 +55658,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -55070,6 +55678,7 @@
     205
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -55127,6 +55736,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgAotwMGARwBAQEAABSoIwLj9izKz1Nwz8kvSy0GAA",
@@ -55159,6 +55769,7 @@
     525
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -55574,6 +56185,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -55822,6 +56434,7 @@
     330
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -55905,6 +56518,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgC5BBQGAQABAQEAAJQiAuP0LMrPU_BNTE4FAA",
@@ -55959,6 +56573,7 @@
     514
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -56258,6 +56873,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgDbBIoCBgEAAQEBAACUIgLj8CzKz1MISMwDAA",
@@ -56608,6 +57224,7 @@
     18
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": [
      {
@@ -57028,6 +57645,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgCDBIQCBgEAAQEBAACUIgLj9CzKzysuzy9KAQA",
@@ -57176,6 +57794,7 @@
     88
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [
      {
       "quest": "quest:q1297"
@@ -57492,6 +58111,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgCNBIQCBgEAAQEBAACUIgLj9U4tKclJVfBIzclNLQEA",
@@ -57612,6 +58232,7 @@
     82
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -57849,6 +58470,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgDDA5QDBgEAAQEBAACUIgLj8s7MSy9W8MsvTgUA",
@@ -57906,6 +58528,7 @@
     155
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -58079,6 +58702,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgDHBLQEBgEUAQEBAAAUqCICY_XOy0xLBQA",
@@ -58554,6 +59178,7 @@
     77
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": [
      {
@@ -59050,6 +59675,7 @@
       "tier": "comum"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgC5Bb4BBgEAAQEBAACUIgLj9EnMTVLwTU0sAQA",
@@ -59402,6 +60028,7 @@
     101
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [
      {
       "quest": "quest:q1079"
@@ -59585,6 +60212,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgBDPwYBEwEBAQAAFIgiAmP3ScwrSS3KAwA",
@@ -59729,6 +60357,7 @@
     164
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -59897,6 +60526,7 @@
     "buyers": [],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgDnBc8DBgEKAQEBAAAUtIjj9knMK0ktylPwySwBAA",
@@ -60096,6 +60726,7 @@
     165
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -60191,6 +60822,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -60205,6 +60837,7 @@
     462
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -60456,6 +61089,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -60524,6 +61158,7 @@
     52
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -60909,6 +61544,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgCVBasDBgEIAQEBAAAUlIjj9UlNLMlILVJwys8vKQYA",
@@ -61074,6 +61710,7 @@
     57
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [
      {
       "quest": "quest:q1080"
@@ -61536,6 +62173,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgCjBOsDBgEIAQEBAAAUlIjj9UlNLMlILVJwzslPzAYA",
@@ -61734,6 +62372,7 @@
     193
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -62003,6 +62642,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -62042,6 +62682,7 @@
     64
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -62305,6 +62946,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -62319,6 +62961,7 @@
     60
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -62658,6 +63301,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgCBAqIBBgEAAQEBAACUIgLj80lNLMlILVJwLs0sLk4FAA",
@@ -62768,6 +63412,7 @@
     87
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -63059,6 +63704,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -63098,6 +63744,7 @@
     61
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -63310,6 +63957,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -63350,6 +63998,7 @@
     548
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -63691,6 +64340,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -63705,6 +64355,7 @@
     58
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -64054,6 +64705,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -64068,6 +64720,7 @@
     91
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -64289,6 +64942,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgA-2AEGAQABAQEAAJQiAuP0yc9LLy7PL0oBAA",
@@ -64322,6 +64976,7 @@
     92
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -64532,6 +65187,7 @@
      }
     ],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -64546,6 +65202,7 @@
     362
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -64630,6 +65287,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -64650,6 +65308,7 @@
     547
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -64914,6 +65573,7 @@
     "buyers": [],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgCvBaABBgEYAQEBAAAUKCMC4_JNTM9MVghPzMkBAA",
@@ -69553,6 +70213,7 @@
     80
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -69616,6 +70277,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -69635,6 +70297,7 @@
     56
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -69842,6 +70505,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -69856,6 +70520,7 @@
     55
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -70137,6 +70802,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgDLAXwGAQABAQEAAJQiAuP2TcxLVAjIL8nMzwMA",
@@ -70340,6 +71006,11 @@
     19
    ],
    "uses": {
+    "leavesEmpty": [
+     {
+      "item": "empty-pot"
+     }
+    ],
     "questsRequire": [],
     "recipes": []
    },
@@ -70389,6 +71060,7 @@
     "buyers": [],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -70408,6 +71080,7 @@
     589
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -70474,6 +71147,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -70518,6 +71192,7 @@
     207
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -70750,6 +71425,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -70858,6 +71534,7 @@
     129
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -71108,6 +71785,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgCfBd4CBgEEAQEBAAAUKiLj8k1NLKlUCC5JLQcA",
@@ -71260,6 +71938,7 @@
     130
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [
      {
       "quest": "quest:q1301"
@@ -71546,6 +72225,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -71585,6 +72265,7 @@
     217
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -71766,6 +72447,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -71780,6 +72462,7 @@
     522
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -71999,6 +72682,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -72013,6 +72697,7 @@
     521
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -72253,6 +72938,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -72272,6 +72958,7 @@
     590
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -72649,6 +73336,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -72680,6 +73368,7 @@
     333
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -72726,6 +73415,7 @@
     "buyers": [],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -72745,6 +73435,7 @@
     518
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -72963,6 +73654,7 @@
       "tier": "sempre"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -72977,6 +73669,7 @@
     592
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -73118,6 +73811,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -73157,6 +73851,7 @@
     157
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [
      {
       "quest": "quest:q1286"
@@ -73241,6 +73936,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -73255,6 +73951,7 @@
     54
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -73473,6 +74170,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -73487,6 +74185,7 @@
     53
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -73669,6 +74368,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -73683,6 +74383,7 @@
     562
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": [
      {
@@ -73774,6 +74475,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -73818,6 +74520,7 @@
     197
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -73882,6 +74585,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -73952,6 +74656,7 @@
     196
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -73998,6 +74703,7 @@
     "buyers": [],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -74017,6 +74723,7 @@
     591
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -74307,6 +75014,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -74352,6 +75060,7 @@
     472
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -74738,6 +75447,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -74782,6 +75492,7 @@
     209
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -75098,6 +75809,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgDHBb0DBgEAAQEBAACUIgLj8s9JUXDPyS9LLQYA",
@@ -75248,6 +75960,7 @@
     192
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [
      {
       "quest": "quest:q1080"
@@ -75400,6 +76113,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -75419,6 +76133,7 @@
     292
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -75562,6 +76277,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -75576,6 +76292,7 @@
     94
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [
      {
       "quest": "quest:q1080"
@@ -75677,6 +76394,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -75692,6 +76410,7 @@
     556
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -76047,6 +76766,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -76091,6 +76811,7 @@
     143
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [
      {
       "quest": "quest:q1079"
@@ -76226,6 +76947,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [
@@ -76282,6 +77004,7 @@
     183
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -76347,6 +77070,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -76361,6 +77085,7 @@
     228
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -76546,6 +77271,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -76560,6 +77286,7 @@
     230
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -76744,6 +77471,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -76758,6 +77486,7 @@
     251
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -76986,6 +77715,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -77000,6 +77730,7 @@
     229
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -77194,6 +77925,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -77208,6 +77940,7 @@
     297
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -77433,6 +78166,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -77447,6 +78181,7 @@
     277
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -77662,6 +78397,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -77676,6 +78412,7 @@
     249
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -78098,6 +78835,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgAwkQMGAQwBAQEAABTUiGPzL0rMS08FAA",
@@ -78155,6 +78893,7 @@
     233
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -78356,6 +79095,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -78448,6 +79188,7 @@
     191
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -78731,6 +79472,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -78842,6 +79584,7 @@
     301
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -78926,6 +79669,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -78949,6 +79693,7 @@
     323
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -79093,6 +79838,7 @@
       "tier": "comum"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgD_BeYBBgEHAQEBAAAUhIhjDUgsSC0CAA",
@@ -80339,6 +81085,7 @@
     163
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -80406,6 +81153,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgAf1wMGAQABAQEAAJQiAuMLSE0sylHwS03OzklMTgUA",
@@ -80463,6 +81211,7 @@
     559
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -80594,6 +81343,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -80609,6 +81359,7 @@
     247
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -80857,6 +81608,7 @@
     "buyers": [],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -80876,6 +81628,7 @@
     588
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -81076,6 +81829,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -81120,6 +81874,7 @@
     587
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -81407,6 +82162,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -81446,6 +82202,7 @@
     125
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -81566,6 +82323,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -81580,6 +82338,7 @@
     49
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -81803,6 +82562,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -81817,6 +82577,7 @@
     40
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [
      {
       "quest": "quest:q1080"
@@ -82073,6 +82834,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -82087,6 +82849,7 @@
     98
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -82444,6 +83207,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -82458,6 +83222,7 @@
     50
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -82737,6 +83502,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -82751,6 +83517,7 @@
     41
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -83029,6 +83796,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -83048,6 +83816,7 @@
     150
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -83257,6 +84026,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -83297,6 +84067,7 @@
     555
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -83659,6 +84430,7 @@
       "tier": "comum"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgDoA_kBBgEKAQEBAAAUtIjjCMhJTVQIyU8FAA",
@@ -83691,6 +84463,7 @@
     208
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [
      {
       "quest": "quest:q1081"
@@ -83931,6 +84704,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgCpBYoEBgEIAQEBAAAUlIjjCchPzk4tUQhPLEnOAAA",
@@ -84041,6 +84815,7 @@
     189
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -84094,6 +84869,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -84133,6 +84909,11 @@
     482
    ],
    "uses": {
+    "leavesEmpty": [
+     {
+      "item": "empty-resist-potion"
+     }
+    ],
     "questsRequire": [],
     "recipes": []
    },
@@ -84282,6 +85063,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgDbBIwCBgEAAQEBAACUIgJjC8gvSSzJBwA",
@@ -84365,6 +85147,7 @@
     144
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [
      {
       "quest": "quest:q1079"
@@ -84450,6 +85233,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -84494,6 +85278,7 @@
     202
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -84558,6 +85343,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -84602,6 +85388,7 @@
     211
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -84657,6 +85444,7 @@
       "tier": "comum"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -84676,6 +85464,7 @@
     557
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -84759,6 +85548,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -84774,6 +85564,7 @@
     554
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -85243,6 +86034,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -85257,6 +86049,7 @@
     239
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": [
      {
@@ -85378,6 +86171,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [
@@ -85482,6 +86276,7 @@
     244
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -85580,6 +86375,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [
@@ -85611,6 +86407,7 @@
     246
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -85709,6 +86506,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [
@@ -85765,6 +86563,7 @@
     240
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": [
      {
@@ -85865,6 +86664,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -85879,6 +86679,7 @@
     532
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -86124,6 +86925,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -86138,6 +86940,7 @@
     533
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -86408,6 +87211,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -86422,6 +87226,7 @@
     531
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -86815,6 +87620,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -86885,6 +87691,7 @@
     425
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -87012,6 +87819,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -87026,6 +87834,7 @@
     424
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -87230,6 +88039,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -87269,6 +88079,7 @@
     423
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -87396,6 +88207,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -87410,6 +88222,7 @@
     422
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -87566,6 +88379,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -87580,6 +88394,7 @@
     419
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -87774,6 +88589,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -87837,6 +88653,7 @@
     420
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -87961,6 +88778,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -88072,6 +88890,7 @@
     300
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -88236,6 +89055,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgA4lQMGAQoBAQEAABS0iGMLLM1MzkgFAA",
@@ -88326,6 +89146,7 @@
     241
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -88492,6 +89313,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgCLBcoDBgEAAQEBAACUIgJjDSzNzMkBAA",
@@ -88959,6 +89781,7 @@
     162
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [
      {
       "quest": "quest:q1229"
@@ -89050,6 +89873,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgDHBbsDBgEAAQEBAACUIgLjCyzNz85U8EhNTElPTSwCAA",
@@ -89082,6 +89906,7 @@
     343
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -89322,6 +90147,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -89336,6 +90162,7 @@
     350
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -89624,6 +90451,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgDHBbkDBgEAAQEBAACUIgLjCUpMT09NUXDOyS_JAAA",
@@ -90016,6 +90844,7 @@
     95
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [
      {
       "quest": "quest:q1077"
@@ -90066,6 +90895,7 @@
     "buyers": [],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -90112,6 +90942,7 @@
     477
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -90393,6 +91224,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgCBBK4EBgEUAQEBAAAUqCIC4whKLFEISczMAQA",
@@ -90501,6 +91333,7 @@
     121
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -90615,6 +91448,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgBOtAMGAQABAQEAAJQiAmMPSizPyExJBQA",
@@ -90647,6 +91481,7 @@
     455
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [
      {
       "quest": "quest:q1210"
@@ -90818,6 +91653,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgCDBOMDBgEIAQEBAAAUlIjjCkpNUXAqSk0sLgEA",
@@ -90918,6 +91754,7 @@
     14
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": [
      {
@@ -91075,6 +91912,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgCPBdICBgEAAQEBAACUIgLjCUpNUfDLL0lNys_PBgA",
@@ -91343,6 +92181,7 @@
     166
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -91536,6 +92375,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgCJA9MCBgEUAQEBAAAUqCICYw9KTVHwL0oCAA",
@@ -91573,6 +92413,7 @@
     218
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -91879,6 +92720,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -91893,6 +92735,7 @@
     408
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -92107,6 +92950,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -92146,6 +92990,7 @@
     407
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -92296,6 +93141,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -92310,6 +93156,7 @@
     406
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -92455,6 +93302,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -92494,6 +93342,7 @@
     410
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -92671,6 +93520,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -92685,6 +93535,7 @@
     403
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -92869,6 +93720,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -92908,6 +93760,7 @@
     404
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -93493,6 +94346,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgD1AVkGARIBAQEAABRoIgLjDUpNUQguSM3JScrPzwYA",
@@ -93929,6 +94783,7 @@
     490
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -94370,6 +95225,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -94419,6 +95275,7 @@
     75
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -94609,6 +95466,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgDDA-gCBgEAAQEBAACUIgJjCcpMTgUA",
@@ -94707,6 +95565,7 @@
     20
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": [
      {
@@ -94898,6 +95757,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgBJrgQGAQABAQEAAJQiAuMMykxOVXDJLM4AAA",
@@ -94964,6 +95824,7 @@
     72
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": [
      {
@@ -95142,6 +96003,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -95161,6 +96023,7 @@
     279
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -95379,6 +96242,7 @@
     "buyers": [],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -95402,6 +96266,7 @@
     481
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -95841,6 +96706,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [
@@ -95872,6 +96738,7 @@
     237
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -95953,6 +96820,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AGNiuM_Sy8zGCAIMDCKdHJxB-cnZCs75RakA",
@@ -96010,6 +96878,7 @@
     348
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -96257,6 +97126,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgCdBb0DBgEIAQEBAAAUlIhjCcovSAUA",
@@ -96561,6 +97431,7 @@
     261
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -96702,6 +97573,7 @@
       "tier": "comum"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgDDA5YDBgEAAQEBAACUIgJjCcovTgUA",
@@ -96776,6 +97648,7 @@
     154
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -96905,6 +97778,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgCtBOoBBgEAAQEBAACUIgLjDsqvTMxRcCzKzS8CAA",
@@ -96937,6 +97811,7 @@
     219
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -97125,6 +98000,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -97144,6 +98020,7 @@
     250
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -97405,6 +98282,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -97424,6 +98302,7 @@
     220
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -97645,6 +98524,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -97659,6 +98539,7 @@
     221
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -97912,6 +98793,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgATvQMGAQoBAQEAABS0iGMJKk2qBAA",
@@ -97991,6 +98873,7 @@
     569
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -98117,6 +99000,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgCDBOUDBgEIAQEBAAAUlIjjDipNqlRwzC3NSS0BAA",
@@ -98200,6 +99084,7 @@
     93
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -98324,6 +99209,7 @@
     "buyers": [],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -98343,6 +99229,7 @@
     585
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -98462,6 +99349,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgDNBNoCBgEAAQEBAACUIgLjDiotLqlUCC7PL0oBAA",
@@ -98499,6 +99387,7 @@
     188
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -98753,6 +99642,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -98799,6 +99689,7 @@
     321
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -98965,6 +99856,7 @@
     "buyers": [],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -99026,6 +99918,7 @@
     564
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -99083,6 +99976,7 @@
     "buyers": [],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [
@@ -99114,6 +100008,7 @@
     566
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": [
      {
@@ -99231,6 +100126,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgCjA8gCBgEQAQEBAAAUKCIC4whOzEspz0zOAAA",
@@ -99372,6 +100268,7 @@
     185
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [
      {
       "quest": "quest:q1301"
@@ -99498,6 +100395,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgDRA70EBgEAAQEBAACUIgLjCE7MSynPL8oFAA",
@@ -99564,6 +100462,7 @@
     345
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": [
      {
@@ -99671,6 +100570,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgCfBb8DBgEIAQEBAAAUlIjjDU7MSynPL8pV8E1NzAEA",
@@ -99805,6 +100705,7 @@
     359
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [
      {
       "quest": "quest:q1283"
@@ -99928,6 +100829,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -99942,6 +100844,7 @@
     470
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -100182,6 +101085,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -100196,6 +101100,7 @@
     471
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -100552,6 +101457,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -100648,6 +101554,7 @@
     296
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -100857,6 +101764,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -100872,6 +101780,7 @@
     248
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -101264,6 +102173,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgClBOsDBgEIAQEBAAAUlIhjC87IL0vNAQA",
@@ -101572,6 +102482,7 @@
     260
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -101818,6 +102729,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -101862,6 +102774,7 @@
     59
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [
      {
       "quest": "quest:q1277"
@@ -102122,6 +103035,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgChBIgEBgEeAQEBAAAU6CMC4w3OzClLLVJwSUxPTy0CAA",
@@ -102235,6 +103149,7 @@
     97
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -102416,6 +103331,7 @@
     "buyers": [],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -102435,6 +103351,7 @@
     515
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -102735,6 +103652,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -102749,6 +103667,7 @@
     231
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -103118,6 +104037,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgDCAVsGAQABAQEAAJQiAuMOzswpSy1SCMrMSwcA",
@@ -103228,6 +104148,7 @@
     274
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -103407,6 +104328,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -103422,6 +104344,7 @@
     544
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -103829,6 +104752,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgDpBLUDBgEIAQEBAAAUlIjjCs7MLchJVXBKTAcA",
@@ -104151,6 +105075,7 @@
     99
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -104486,6 +105411,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgAptgIGAQABAQEAAJQiAuMLzswtyElVcE8syk3NKwEA",
@@ -104580,6 +105506,7 @@
     86
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -104819,6 +105746,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -104864,6 +105792,7 @@
     543
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -105169,6 +106098,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -105183,6 +106113,7 @@
     586
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -105250,6 +106181,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgAouQMGARwBAQEAABSoIwLjDc5OzMkszlBwyklMSQUA",
@@ -105307,6 +106239,7 @@
     526
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -105549,6 +106482,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgAovwMGARwBAQEAABSoIwITDM5OzMkszlDwSE0sq1Rwyi8HAA",
@@ -105606,6 +106540,7 @@
     528
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -105848,6 +106783,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -105887,6 +106823,7 @@
     527
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -106089,6 +107026,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgAb1wMGAQABAQEAAJQiAhMIzk7MySzOUPBLTc7OSUxOBQA",
@@ -106146,6 +107084,7 @@
     558
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -106336,6 +107275,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgAovQMGARwBAQEAABSoIwLjCc5OzMkszlAIysxLBwA",
@@ -106397,6 +107337,7 @@
     505
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -106632,6 +107573,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -106651,6 +107593,7 @@
     127
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -106901,6 +107844,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgCsAf8BBgEAAQEBAACUIgLjDc7JzE1VcC0uTs1LTgUA",
@@ -106963,6 +107907,7 @@
     21
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -107056,6 +108001,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -107071,6 +108017,7 @@
     571
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -107357,6 +108304,7 @@
       "tier": "comum"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgDhBdEDBgEAAQEBAACUIgLjDs5NzMlRcMrPSy0GAA",
@@ -111542,6 +112490,7 @@
     8
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -111631,6 +112580,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgDBBMcEBgEAAQEBAACUIgLjCs5NzMlRCMpMKgYA",
@@ -112248,6 +113198,7 @@
     579
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -112450,6 +113401,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgDJBbkDBgEAAQEBAACUIgLjDs5NzMlRCM4uzckBAA",
@@ -114925,6 +115877,7 @@
     29
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -114968,6 +115921,7 @@
     "buyers": [],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -115004,6 +115958,7 @@
     567
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": [
      {
@@ -115117,6 +116072,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -115136,6 +116092,7 @@
     354
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -115528,6 +116485,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgDHBb8DBgEAAQEBAACUIgJjD85LLChILQIA",
@@ -115619,6 +116577,7 @@
     360
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": [
      {
@@ -115819,6 +116778,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -115908,6 +116868,7 @@
     85
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -116195,6 +117156,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [
@@ -116325,6 +117287,7 @@
     73
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -116542,6 +117505,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgDlAagBBgEAAQEBAACUIgLjCi7ITK5UCC5JLQcA",
@@ -116678,6 +117642,7 @@
     70
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": [
      {
@@ -116778,6 +117743,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -116824,6 +117790,7 @@
     473
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -116889,6 +117856,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgAkiwEGAQABAQEAAJQiAuMOLsjMTk1RcM4pTQIA",
@@ -116926,6 +117894,7 @@
     519
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -117320,6 +118289,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AGNieM64jZGNEQQYGEQ6ObiDC4oy89IVXDKLMwA",
@@ -117411,6 +118381,7 @@
     74
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -117659,6 +118630,7 @@
       "tier": "sempre"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgCVAeYBBgEAAQEBAACUIgLjDi4oysxLVwguSS0HAA",
@@ -117738,6 +118710,7 @@
     71
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": [
      {
@@ -117940,6 +118913,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -117979,6 +118953,7 @@
     216
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -118179,6 +119154,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -118290,6 +119266,7 @@
     305
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -118405,6 +119382,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -118419,6 +119397,7 @@
     278
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -118769,6 +119748,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -118836,6 +119816,7 @@
     332
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -118882,6 +119863,7 @@
     "buyers": [],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -118901,6 +119883,7 @@
     536
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -119157,6 +120140,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -119171,6 +120155,7 @@
     123
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -119435,6 +120420,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgCHA_IDBgEAAQEBAACUIgLjDi7Jz0tVCC5JTEsDAA",
@@ -119467,6 +120453,7 @@
     253
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -119714,6 +120701,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -119758,6 +120746,7 @@
     457
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -119914,6 +120903,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgCDBIYCBgEAAQEBAACUIgLjCy4pTUlJTVEIzshMzUkBAA",
@@ -120041,6 +121031,7 @@
     2
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -120228,6 +121219,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -120272,6 +121264,7 @@
     199
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -120315,6 +121308,7 @@
     "buyers": [],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [
@@ -120346,6 +121340,7 @@
     565
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [
      {
       "quest": "quest:q1274"
@@ -120640,6 +121635,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgCdBZ8DBgEAAQEBAACUIgLjDC5PzC1QcM5PAQA",
@@ -120774,6 +121770,7 @@
     16
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": [
      {
@@ -120906,6 +121903,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgAMoAMGAQABAQEAAJQiAuMLSczJLM5NzFMIyC9NzgAA",
@@ -120991,6 +121989,7 @@
     464
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -121400,6 +122399,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgA5mgIGAQABAQEAAJQiAuMMycxT8MxLzy8BAA",
@@ -121615,6 +122615,7 @@
     331
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -121707,6 +122708,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgCKAUkGAQQBAQEAABQqIuMKyU8rVXDKyU_OBgA",
@@ -121764,6 +122766,7 @@
     22
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -121877,6 +122880,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgDGAeACBgEGAQEBAAAUOiLjCMnPTSzJTy0GAA",
@@ -121926,6 +122930,7 @@
     238
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": [
      {
@@ -122090,6 +123095,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgDtBCAGAQ8BAQEAABQIIgJjDckvSs4AAA",
@@ -122467,6 +123473,7 @@
     119
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -122588,6 +123595,7 @@
     "buyers": [],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgBGogEGAQABAQEAAJQiAuMMyS9KzlDwySwBAA",
@@ -122620,6 +123628,7 @@
     120
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -122779,6 +123788,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -122793,6 +123803,7 @@
     147
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -123040,6 +124051,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -123151,6 +124163,7 @@
     306
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -123228,6 +124241,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -123248,6 +124262,7 @@
     553
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -123691,6 +124706,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -123711,6 +124727,7 @@
     546
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -124070,6 +125087,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -124084,6 +125102,7 @@
     132
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -124242,6 +125261,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgBD8gIGAQUBAQEAABQyIuMPS8xLL00sSlEIzshMzUkBAA",
@@ -124279,6 +125299,7 @@
     458
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -124548,6 +125569,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -124563,6 +125585,7 @@
     451
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -124878,6 +125901,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -124941,6 +125965,7 @@
     215
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -125172,6 +126197,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -125192,6 +126218,7 @@
     545
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -125578,6 +126605,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -125592,6 +126620,7 @@
     593
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -125657,6 +126686,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -125671,6 +126701,7 @@
     520
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -125910,6 +126941,7 @@
       "tier": "comum"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgC1ARsGARQBAQEAABSoIgLjCk9NSk4sUHCtTAUA",
@@ -125976,6 +127008,7 @@
     23
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -126050,6 +127083,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgCtBK4BBgEAAQEBAACUIgJjDc9ITSwBAA",
@@ -126320,6 +127354,7 @@
     103
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": [
      {
@@ -126549,6 +127584,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgCpBZABBgEAAQEBAACUIgLjC8_ILElV8C0tzijKz88FAA",
@@ -126855,6 +127891,7 @@
     24
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": [
      {
@@ -127048,6 +128085,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -127087,6 +128125,7 @@
     400
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -127277,6 +128316,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -127291,6 +128331,7 @@
     399
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -127432,6 +128473,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -127451,6 +128493,7 @@
     398
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -127571,6 +128614,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -127585,6 +128629,7 @@
     402
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -127747,6 +128792,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -127761,6 +128807,7 @@
     395
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -127971,6 +129018,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -128034,6 +129082,7 @@
     396
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -128108,6 +129157,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -128152,6 +129202,7 @@
     210
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -128241,6 +129292,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -128255,6 +129307,7 @@
     48
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -128462,6 +129515,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -128501,6 +129555,7 @@
     223
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -128768,6 +129823,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -128782,6 +129838,7 @@
     222
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -129018,6 +130075,7 @@
     "buyers": [],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -129037,6 +130095,7 @@
     479
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -129339,6 +130398,7 @@
       "tier": "comum"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgDJBOICBgEAAQEBAACUIgLjCs_PT1EIKc9MLwYA",
@@ -129713,6 +130773,7 @@
     28
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -129828,6 +130889,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgD1A-QBBgEAAQEBAACUIgLjCs_PT0nNU3DKLwcA",
@@ -129931,6 +130993,7 @@
     42
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -130140,6 +131203,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AGNi2Mn6kpmNEQQYGEQ6ObjD8_NTUvMUnPLLcwA",
@@ -131067,6 +132131,7 @@
     25
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": [
      {
@@ -131100,6 +132165,94 @@
       ],
       "method": "join",
       "result": "pumpkin-puree"
+     },
+     {
+      "ingredients": [
+       {
+        "item": "wooden-bowl",
+        "n": 1,
+        "tool": false
+       },
+       {
+        "n": 1,
+        "object": "well",
+        "tool": true,
+        "where": [
+         {
+          "link": "https://map.opengea.tech/#2.AgCVBZwDBgEAAQEBAACUIgJjCU_NyQEA",
+          "place": {
+           "near": {
+            "en": "Residency Square",
+            "pt": "Praça da Residência"
+           },
+           "town": {
+            "en": "Basile",
+            "pt": "Basile"
+           },
+           "underground": false
+          }
+         },
+         {
+          "link": "https://map.opengea.tech/#2.AgC0AWAGAQABAQEAAJQiAmMJT83JAQA",
+          "place": {
+           "near": {
+            "en": "Old Village",
+            "pt": "Vila Antiga"
+           },
+           "town": {
+            "en": "Dorosam",
+            "pt": "Dorosam"
+           },
+           "underground": false
+          }
+         },
+         {
+          "link": "https://map.opengea.tech/#2.AgCgA4oDBgEAAQEBAACUIgJjCU_NyQEA",
+          "place": {
+           "near": {
+            "en": "Ferag Courier Stable",
+            "pt": "Estábulo de Correio Ferag"
+           },
+           "town": {
+            "en": "East Nordha",
+            "pt": "Nordha Oriental"
+           },
+           "underground": false
+          }
+         },
+         {
+          "link": "https://map.opengea.tech/#2.AgC3AZgDBgEAAQEBAACUIgJjCU_NyQEA",
+          "place": {
+           "near": {
+            "en": "Destroyed Village",
+            "pt": "Vila Destruída"
+           },
+           "town": {
+            "en": "Nordha",
+            "pt": "Nordha"
+           },
+           "underground": false
+          }
+         },
+         {
+          "link": "https://map.opengea.tech/#2.AgDrAk8GAQABAQEAAJQiAmMJT83JAQA",
+          "place": {
+           "near": {
+            "en": "El Chad Village",
+            "pt": "Vila El Chad"
+           },
+           "town": {
+            "en": "Plains Cathedral",
+            "pt": "Catedral da Planície"
+           },
+           "underground": false
+          }
+         }
+        ]
+       }
+      ],
+      "method": "join",
+      "result": "bowl-of-water"
      },
      {
       "ingredients": [
@@ -131178,6 +132331,7 @@
       "tier": "comum"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgDlBc8DBgEKAQEBAAAUtIjjCs_PT0nNU3AuLQAA",
@@ -131762,6 +132916,7 @@
     26
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -131886,6 +133041,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgCjBc4DBgEKAQEBAAAUtIjjCs_PT0nNU_AtTQcA",
@@ -132462,6 +133618,7 @@
     179
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -132569,6 +133726,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -132596,6 +133754,7 @@
     294
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [
      {
       "quest": "quest:q1158"
@@ -132887,6 +134046,7 @@
       "tier": "comum"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgDXBIoCBgEAAQEBAACUIgLjCc_PT0nNUwguyM_PAwA",
@@ -133363,6 +134523,7 @@
     27
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -133527,6 +134688,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgDHAXwGAQABAQEAAJQiAuMJz89PSc1TCC5JTEsDAA",
@@ -133653,6 +134815,7 @@
     89
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -133922,6 +135085,7 @@
       "tier": "comum"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgDhAWoGAQABAQEAAJQiAmMJz8_PAQA",
@@ -134020,6 +135184,7 @@
     104
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [
      {
       "quest": "quest:q1080"
@@ -134148,6 +135313,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -134259,6 +135425,7 @@
     303
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -134398,6 +135565,7 @@
       "tier": "comum"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgCHA9ECBgEUAQEBAAAUqCIC4wrPL8pTCEgsSC0CAA",
@@ -134741,6 +135909,7 @@
     106
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [
      {
       "quest": "quest:q1077"
@@ -134859,6 +136028,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgDHA5QDBgEAAQEBAACUIgLjjUzNyckvV3BKTSwtqQQA",
@@ -134957,6 +136127,7 @@
     156
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -135080,6 +136251,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [
      {
       "link": "https://map.opengea.tech/#2.AgC3BVYGAQgBAQEAABSUiOOPTM3JyS9X8MsvSU3Kz88GAA",
@@ -135372,6 +136544,7 @@
     167
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -135504,6 +136677,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -135518,6 +136692,7 @@
     385
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -135692,6 +136867,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -135731,6 +136907,7 @@
     384
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -135902,6 +137079,7 @@
       "tier": "incomum"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -135916,6 +137094,7 @@
     383
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -136052,6 +137231,7 @@
       "tier": "muito-raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -136066,6 +137246,7 @@
     382
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -136222,6 +137403,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -136236,6 +137418,7 @@
     379
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -136410,6 +137593,7 @@
     ],
     "conjured": [],
     "drops": [],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -136454,6 +137638,7 @@
     380
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -136813,6 +137998,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [],
     "recipes": [],
@@ -137098,6 +138284,7 @@
     594
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },
@@ -137368,6 +138555,7 @@
       "tier": "raro"
      }
     ],
+    "leftover": [],
     "map": [],
     "quests": [
      {
@@ -137387,6 +138575,7 @@
     322
    ],
    "uses": {
+    "leavesEmpty": [],
     "questsRequire": [],
     "recipes": []
    },

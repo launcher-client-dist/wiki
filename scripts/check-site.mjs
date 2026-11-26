@@ -177,6 +177,17 @@ if (!pages.get("/en/404/")?.noindex) fail("/en/404/", "missing or not noindex");
       }
     }
   }
+  // a potion and its empty link both ways; a map object (a well) in a recipe shows as plain text, never an item link
+  for (const i of itemsFile.items) {
+    const hasObject = [...i.sources.recipes, ...i.uses.recipes].some((r) => r.ingredients.some((g) => g.object));
+    for (const url of [`/pt/itens/${i.slug.pt}/`, `/en/items/${i.slug.en}/`]) {
+      const html = pages.get(url)?.html ?? "";
+      if (i.sources.leftover.length && !html.includes('data-section="leftover"')) fail(url, "left after drinking a potion, but no \"leftover\" panel");
+      if (i.uses.leavesEmpty.length && !html.includes('data-section="leaves"')) fail(url, "leaves an empty when drunk, but no \"leaves\" panel");
+      if (hasObject && !html.includes('data-object="well"')) fail(url, "a recipe with a well, but the well isn't shown");
+      if (/href="\/(pt\/itens|en\/items)\/(poco|well)\/"/.test(html)) fail(url, "links to a well item page: the well is a map object");
+    }
+  }
   // the list's class filter carries the traits line too
   for (const url of ["/pt/itens/", "/en/items/"]) {
     if (!/class="vnote"[^>]*>(Não inclui efeitos de traits|Trait effects not included)/.test(pages.get(url)?.html ?? "")) fail(url, "the class filter without the traits line");
