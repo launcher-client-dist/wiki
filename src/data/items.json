@@ -2035,13 +2035,10 @@
     "shops": []
    },
    "subtype": {
-    "_fb": [
-     "pt"
-    ],
-    "en": "None",
+    "en": "Other",
     "es": "Otros",
     "key": "None",
-    "pt": "None"
+    "pt": "Outros"
    },
    "types": [
     355
@@ -2133,13 +2130,10 @@
     "shops": []
    },
    "subtype": {
-    "_fb": [
-     "pt"
-    ],
-    "en": "None",
+    "en": "Other",
     "es": "Otros",
     "key": "None",
-    "pt": "None"
+    "pt": "Outros"
    },
    "types": [
     356
@@ -2421,13 +2415,10 @@
     "shops": []
    },
    "subtype": {
-    "_fb": [
-     "pt"
-    ],
-    "en": "None",
+    "en": "Other",
     "es": "Otros",
     "key": "None",
-    "pt": "None"
+    "pt": "Outros"
    },
    "types": [
     358
@@ -9458,13 +9449,9 @@
      "stack": 1,
      "stats": {},
      "text": {
-      "_fb": [
-       "pt",
-       "es"
-      ],
       "en": "[Prevents equipment and experience loss]\n[Disintegrates on death]",
-      "es": "[Prevents equipment and experience loss]\n[Disintegrates on death]",
-      "pt": "[Prevents equipment and experience loss]\n[Disintegrates on death]"
+      "es": "[Previene pérdida de equipo y experiencia]\n[Se desintegra al morir]",
+      "pt": "[Impede perda de equipamento e experiência]\n[Desintegra-se ao morrer]"
      },
      "type": 43,
      "weight": 4.2
@@ -9486,13 +9473,9 @@
      "stack": 1,
      "stats": {},
      "text": {
-      "_fb": [
-       "pt",
-       "es"
-      ],
       "en": "[Prevents equipment and experience loss]\n[Disintegrates on death]",
-      "es": "[Prevents equipment and experience loss]\n[Disintegrates on death]",
-      "pt": "[Prevents equipment and experience loss]\n[Disintegrates on death]"
+      "es": "[Previene pérdida de equipo y experiencia]\n[Se desintegra al morir]",
+      "pt": "[Impede perda de equipamento e experiência]\n[Desintegra-se ao morrer]"
      },
      "type": 453,
      "weight": 4.2
@@ -12481,13 +12464,9 @@
    "icon": "/icons/items/117.png",
    "id": "blue-spellbook",
    "name": {
-    "_fb": [
-     "pt",
-     "es"
-    ],
     "en": "Blue Spellbook",
-    "es": "Blue Spellbook",
-    "pt": "Blue Spellbook"
+    "es": "Grimorio Azul",
+    "pt": "Grimório Azul"
    },
    "primary": 117,
    "slots": [],
@@ -13213,13 +13192,9 @@
      "stack": 1,
      "stats": {},
      "text": {
-      "_fb": [
-       "pt",
-       "es"
-      ],
       "en": "Its contents might give you insight\non spells, mainly the Magic Wall.",
-      "es": "Its contents might give you insight\non spells, mainly the Magic Wall.",
-      "pt": "Its contents might give you insight\non spells, mainly the Magic Wall."
+      "es": "Su contenido puede darte información\nsobre hechizos, principalmente el Muro Mágico.",
+      "pt": "Seu conteúdo pode lhe dar insights\nsobre magias, principalmente a Muralha Mágica."
      },
      "type": 117,
      "weight": 19.0
@@ -13234,13 +13209,9 @@
      "stack": 1,
      "stats": {},
      "text": {
-      "_fb": [
-       "pt",
-       "es"
-      ],
       "en": "Its contents might give you insight\non spells, mainly the Light Spell.",
-      "es": "Its contents might give you insight\non spells, mainly the Light Spell.",
-      "pt": "Its contents might give you insight\non spells, mainly the Light Spell."
+      "es": "Su contenido puede darte información\nsobre hechizos, principalmente el Hechizo de Luz.",
+      "pt": "Seu conteúdo pode lhe dar insights\nsobre magias, principalmente a Magia de Luz."
      },
      "type": 118,
      "weight": 19.0
@@ -13255,13 +13226,9 @@
      "stack": 1,
      "stats": {},
      "text": {
-      "_fb": [
-       "pt",
-       "es"
-      ],
       "en": "Its contents might give you insight\non spells, mainly the Healing Spell.",
-      "es": "Its contents might give you insight\non spells, mainly the Healing Spell.",
-      "pt": "Its contents might give you insight\non spells, mainly the Healing Spell."
+      "es": "Su contenido puede darte información\nsobre hechizos, principalmente el Hechizo de Curación.",
+      "pt": "Seu conteúdo pode lhe dar insights\nsobre magias, principalmente a Magia de Cura."
      },
      "type": 149,
      "weight": 19.0
@@ -13276,13 +13243,9 @@
      "stack": 1,
      "stats": {},
      "text": {
-      "_fb": [
-       "pt",
-       "es"
-      ],
       "en": "Its contents might give you insight\non spells, mainly the Light Missile Spell.",
-      "es": "Its contents might give you insight\non spells, mainly the Light Missile Spell.",
-      "pt": "Its contents might give you insight\non spells, mainly the Light Missile Spell."
+      "es": "Su contenido puede darte información\nsobre hechizos, principalmente el Hechizo Misil de Luz.",
+      "pt": "Seu conteúdo pode lhe dar insights\nsobre magias, principalmente a Magia Míssil de Luz."
      },
      "type": 172,
      "weight": 19.0
@@ -13297,13 +13260,9 @@
      "stack": 1,
      "stats": {},
      "text": {
-      "_fb": [
-       "pt",
-       "es"
-      ],
       "en": "Its contents might give you insight\non spells, mainly the Ice Berserk spell.",
-      "es": "Its contents might give you insight\non spells, mainly the Ice Berserk spell.",
-      "pt": "Its contents might give you insight\non spells, mainly the Ice Berserk spell."
+      "es": "Su contenido puede darte información\nsobre hechizos, principalmente el hechizo Furia Helada.",
+      "pt": "Seu conteúdo pode lhe dar insights\nsobre magias, principalmente a magia Fúria Gélida."
      },
      "type": 291,
      "weight": 19.0
@@ -13318,13 +13277,9 @@
      "stack": 1,
      "stats": {},
      "text": {
-      "_fb": [
-       "pt",
-       "es"
-      ],
       "en": "Its contents might give you insight\non spells, mainly the Mana Shield spell.",
-      "es": "Its contents might give you insight\non spells, mainly the Mana Shield spell.",
-      "pt": "Its contents might give you insight\non spells, mainly the Mana Shield spell."
+      "es": "Su contenido puede darte información\nsobre hechizos, principalmente el hechizo Escudo de Maná.",
+      "pt": "Seu conteúdo pode lhe dar insights\nsobre magias, principalmente a magia Escudo de Mana."
      },
      "type": 298,
      "weight": 19.0
@@ -13339,13 +13294,9 @@
      "stack": 1,
      "stats": {},
      "text": {
-      "_fb": [
-       "pt",
-       "es"
-      ],
       "en": "Its contents might give you insight\non spells, mainly the Adjure Spell.",
-      "es": "Its contents might give you insight\non spells, mainly the Adjure Spell.",
-      "pt": "Its contents might give you insight\non spells, mainly the Adjure Spell."
+      "es": "Su contenido puede darte conocimiento\nsobre hechizos, principalmente el Hechizo Adjure.",
+      "pt": "Seu conteúdo pode lhe dar conhecimento\nsobre feitiços, principalmente o Feitiço Adjure."
      },
      "type": 320,
      "weight": 19.0
@@ -13360,13 +13311,9 @@
      "stack": 1,
      "stats": {},
      "text": {
-      "_fb": [
-       "pt",
-       "es"
-      ],
       "en": "Its contents might give you insight\non spells, mainly the Windfall Spell.",
-      "es": "Its contents might give you insight\non spells, mainly the Windfall Spell.",
-      "pt": "Its contents might give you insight\non spells, mainly the Windfall Spell."
+      "es": "Su contenido puede darte información\nsobre hechizos, principalmente el Hechizo Vendaval.",
+      "pt": "Seu conteúdo pode lhe dar insights\nsobre magias, principalmente a Magia Ventania."
      },
      "type": 446,
      "weight": 19.0
@@ -13381,13 +13328,9 @@
      "stack": 1,
      "stats": {},
      "text": {
-      "_fb": [
-       "pt",
-       "es"
-      ],
       "en": "Its contents might give you insight\non spells, mainly the Water Wave Spell.",
-      "es": "Its contents might give you insight\non spells, mainly the Water Wave Spell.",
-      "pt": "Its contents might give you insight\non spells, mainly the Water Wave Spell."
+      "es": "Su contenido puede darte información\nsobre hechizos, principalmente el Hechizo Ola de Agua.",
+      "pt": "Seu conteúdo pode lhe dar insights\nsobre magias, principalmente a Magia Onda de Água."
      },
      "type": 491,
      "weight": 19.0
@@ -13402,13 +13345,9 @@
      "stack": 1,
      "stats": {},
      "text": {
-      "_fb": [
-       "pt",
-       "es"
-      ],
       "en": "Its contents might give you insight\non spells, mainly the Cleanse Spell.",
-      "es": "Its contents might give you insight\non spells, mainly the Cleanse Spell.",
-      "pt": "Its contents might give you insight\non spells, mainly the Cleanse Spell."
+      "es": "Su contenido puede darte conocimiento\nsobre hechizos, principalmente el Hechizo Cleanse.",
+      "pt": "Seu conteúdo pode lhe dar conhecimento\nsobre feitiços, principalmente o Feitiço Cleanse."
      },
      "type": 494,
      "weight": 19.0
@@ -13423,13 +13362,9 @@
      "stack": 1,
      "stats": {},
      "text": {
-      "_fb": [
-       "pt",
-       "es"
-      ],
       "en": "Its contents might give you insight\non spells, mainly the Conjure Rope Spell.",
-      "es": "Its contents might give you insight\non spells, mainly the Conjure Rope Spell.",
-      "pt": "Its contents might give you insight\non spells, mainly the Conjure Rope Spell."
+      "es": "Su contenido puede darte conocimiento\nsobre hechizos, principalmente el Hechizo Conjure Rope.",
+      "pt": "Seu conteúdo pode lhe dar conhecimento\nsobre feitiços, principalmente o Feitiço Conjure Rope."
      },
      "type": 495,
      "weight": 19.0
@@ -20677,13 +20612,10 @@
     "shops": []
    },
    "subtype": {
-    "_fb": [
-     "pt"
-    ],
-    "en": "None",
+    "en": "Other",
     "es": "Otros",
     "key": "None",
-    "pt": "None"
+    "pt": "Outros"
    },
    "types": [
     176
@@ -28369,13 +28301,10 @@
     "shops": []
    },
    "subtype": {
-    "_fb": [
-     "pt"
-    ],
-    "en": "None",
+    "en": "Other",
     "es": "Otros",
     "key": "None",
-    "pt": "None"
+    "pt": "Outros"
    },
    "types": [
     161
@@ -30433,13 +30362,10 @@
     "shops": []
    },
    "subtype": {
-    "_fb": [
-     "pt"
-    ],
-    "en": "None",
+    "en": "Other",
     "es": "Otros",
     "key": "None",
-    "pt": "None"
+    "pt": "Outros"
    },
    "types": [
     428,
@@ -30773,13 +30699,9 @@
      "stack": 1,
      "stats": {},
      "text": {
-      "_fb": [
-       "pt",
-       "es"
-      ],
       "en": "[removes rune effect from item]",
-      "es": "[removes rune effect from item]",
-      "pt": "[removes rune effect from item]"
+      "es": "[elimina efecto de runa del objeto]",
+      "pt": "[remove efeito de runa do item]"
      },
      "type": 459,
      "weight": 5.0
@@ -45150,13 +45072,9 @@
    "icon": "/icons/items/440.png",
    "id": "evil-spellbook",
    "name": {
-    "_fb": [
-     "pt",
-     "es"
-    ],
     "en": "Evil Spellbook",
-    "es": "Evil Spellbook",
-    "pt": "Evil Spellbook"
+    "es": "Grimorio Maligno",
+    "pt": "Grimório Maligno"
    },
    "primary": 440,
    "slots": [],
@@ -45360,13 +45278,9 @@
      "stack": 1,
      "stats": {},
      "text": {
-      "_fb": [
-       "pt",
-       "es"
-      ],
       "en": "Its contents might give you insight\non spells, mainly the Conjure Death spell.",
-      "es": "Its contents might give you insight\non spells, mainly the Conjure Death spell.",
-      "pt": "Its contents might give you insight\non spells, mainly the Conjure Death spell."
+      "es": "Su contenido puede darte información\nsobre hechizos, principalmente el hechizo Invocar Muerte.",
+      "pt": "Seu conteúdo pode lhe dar insights\nsobre magias, principalmente a magia Invocar Morte."
      },
      "type": 441,
      "weight": 20.0
@@ -45381,13 +45295,9 @@
      "stack": 1,
      "stats": {},
      "text": {
-      "_fb": [
-       "pt",
-       "es"
-      ],
       "en": "Its contents might give you insight\non spells, mainly the Vampiric Bite spell.",
-      "es": "Its contents might give you insight\non spells, mainly the Vampiric Bite spell.",
-      "pt": "Its contents might give you insight\non spells, mainly the Vampiric Bite spell."
+      "es": "Su contenido puede darte información\nsobre hechizos, principalmente el hechizo Mordisco Vampírico.",
+      "pt": "Seu conteúdo pode lhe dar insights\nsobre magias, principalmente a magia Mordida Vampírica."
      },
      "type": 442,
      "weight": 20.0
@@ -45402,13 +45312,9 @@
      "stack": 1,
      "stats": {},
      "text": {
-      "_fb": [
-       "pt",
-       "es"
-      ],
       "en": "Its contents might give you insight\non spells, mainly the Summon Death spell.",
-      "es": "Its contents might give you insight\non spells, mainly the Summon Death spell.",
-      "pt": "Its contents might give you insight\non spells, mainly the Summon Death spell."
+      "es": "Su contenido puede darte información\nsobre hechizos, principalmente el hechizo Convocar Muerte.",
+      "pt": "Seu conteúdo pode lhe dar insights\nsobre magias, principalmente a magia Convocar Morte."
      },
      "type": 488,
      "weight": 20.0
@@ -49609,13 +49515,10 @@
     "shops": []
    },
    "subtype": {
-    "_fb": [
-     "pt"
-    ],
-    "en": "None",
+    "en": "Other",
     "es": "Otros",
     "key": "None",
-    "pt": "None"
+    "pt": "Outros"
    },
    "types": [
     76
@@ -54742,13 +54645,9 @@
    "icon": "/icons/items/114.png",
    "id": "green-spellbook",
    "name": {
-    "_fb": [
-     "pt",
-     "es"
-    ],
     "en": "Green Spellbook",
-    "es": "Green Spellbook",
-    "pt": "Green Spellbook"
+    "es": "Grimorio Verde",
+    "pt": "Grimório Verde"
    },
    "primary": 114,
    "slots": [],
@@ -55447,13 +55346,9 @@
      "stack": 1,
      "stats": {},
      "text": {
-      "_fb": [
-       "pt",
-       "es"
-      ],
       "en": "Its contents might give you insight\non spells, mainly the Dash Maneuver.",
-      "es": "Its contents might give you insight\non spells, mainly the Dash Maneuver.",
-      "pt": "Its contents might give you insight\non spells, mainly the Dash Maneuver."
+      "es": "Su contenido puede darte información\nsobre hechizos, principalmente la Maniobra Embestida.",
+      "pt": "Seu conteúdo pode lhe dar insights\nsobre magias, principalmente a Manobra Investida."
      },
      "type": 114,
      "weight": 13.0
@@ -55468,13 +55363,9 @@
      "stack": 1,
      "stats": {},
      "text": {
-      "_fb": [
-       "pt",
-       "es"
-      ],
       "en": "Its contents might give you insight\non spells, mainly the Taunt Move.",
-      "es": "Its contents might give you insight\non spells, mainly the Taunt Move.",
-      "pt": "Its contents might give you insight\non spells, mainly the Taunt Move."
+      "es": "Su contenido puede darte información\nsobre hechizos, principalmente el Movimiento Provocar.",
+      "pt": "Seu conteúdo pode lhe dar insights\nsobre magias, principalmente o Movimento Provocar."
      },
      "type": 115,
      "weight": 13.0
@@ -55489,13 +55380,9 @@
      "stack": 1,
      "stats": {},
      "text": {
-      "_fb": [
-       "pt",
-       "es"
-      ],
       "en": "Its contents might give you insight\non spells, mainly the Ground Stand Spell.",
-      "es": "Its contents might give you insight\non spells, mainly the Ground Stand Spell.",
-      "pt": "Its contents might give you insight\non spells, mainly the Ground Stand Spell."
+      "es": "Su contenido puede darte información\nsobre hechizos, principalmente el Hechizo Posición Firme.",
+      "pt": "Seu conteúdo pode lhe dar insights\nsobre magias, principalmente a Magia Posição Firme."
      },
      "type": 116,
      "weight": 13.0
@@ -55510,13 +55397,9 @@
      "stack": 1,
      "stats": {},
      "text": {
-      "_fb": [
-       "pt",
-       "es"
-      ],
       "en": "Its contents might give you insight\non spells, mainly the Haste Spell.",
-      "es": "Its contents might give you insight\non spells, mainly the Haste Spell.",
-      "pt": "Its contents might give you insight\non spells, mainly the Haste Spell."
+      "es": "Su contenido puede darte información\nsobre hechizos, principalmente el Hechizo Prisa.",
+      "pt": "Seu conteúdo pode lhe dar insights\nsobre magias, principalmente a Magia Pressa."
      },
      "type": 173,
      "weight": 13.0
@@ -55531,13 +55414,9 @@
      "stack": 1,
      "stats": {},
      "text": {
-      "_fb": [
-       "pt",
-       "es"
-      ],
       "en": "Its contents might give you insight\non spells, mainly the Conjure Arrow Spell.",
-      "es": "Its contents might give you insight\non spells, mainly the Conjure Arrow Spell.",
-      "pt": "Its contents might give you insight\non spells, mainly the Conjure Arrow Spell."
+      "es": "Su contenido puede darte información\nsobre hechizos, principalmente el Hechizo Invocar Flecha.",
+      "pt": "Seu conteúdo pode lhe dar insights\nsobre magias, principalmente a Magia Invocar Flecha."
      },
      "type": 285,
      "weight": 13.0
@@ -55552,13 +55431,9 @@
      "stack": 1,
      "stats": {},
      "text": {
-      "_fb": [
-       "pt",
-       "es"
-      ],
       "en": "Its contents might give you insight\non spells, mainly the Summon Nature spell.",
-      "es": "Its contents might give you insight\non spells, mainly the Summon Nature spell.",
-      "pt": "Its contents might give you insight\non spells, mainly the Summon Nature spell."
+      "es": "Su contenido puede darte información\nsobre hechizos, principalmente el hechizo Convocar Naturaleza.",
+      "pt": "Seu conteúdo pode lhe dar insights\nsobre magias, principalmente a magia Convocar Natureza."
      },
      "type": 489,
      "weight": 13.0
@@ -55573,13 +55448,9 @@
      "stack": 1,
      "stats": {},
      "text": {
-      "_fb": [
-       "pt",
-       "es"
-      ],
       "en": "Its contents might give you insight\non spells, mainly the Summon Rat spell.",
-      "es": "Its contents might give you insight\non spells, mainly the Summon Rat spell.",
-      "pt": "Its contents might give you insight\non spells, mainly the Summon Rat spell."
+      "es": "Su contenido puede darte información\nsobre hechizos, principalmente el hechizo Convocar Rata.",
+      "pt": "Seu conteúdo pode lhe dar insights\nsobre magias, principalmente a magia Convocar Rato."
      },
      "type": 583,
      "weight": 13.0
@@ -65157,13 +65028,10 @@
     "shops": []
    },
    "subtype": {
-    "_fb": [
-     "pt"
-    ],
-    "en": "None",
+    "en": "Other",
     "es": "Otros",
     "key": "None",
-    "pt": "None"
+    "pt": "Outros"
    },
    "types": [
     165
@@ -69824,13 +69692,10 @@
     "shops": []
    },
    "subtype": {
-    "_fb": [
-     "pt"
-    ],
-    "en": "None",
+    "en": "Other",
     "es": "Otros",
     "key": "None",
-    "pt": "None"
+    "pt": "Outros"
    },
    "types": [
     362
@@ -75360,13 +75225,10 @@
     "shops": []
    },
    "subtype": {
-    "_fb": [
-     "pt"
-    ],
-    "en": "None",
+    "en": "Other",
     "es": "Otros",
     "key": "None",
-    "pt": "None"
+    "pt": "Outros"
    },
    "types": [
     80
@@ -100720,13 +100582,9 @@
    "icon": "/icons/items/108.png",
    "id": "red-spellbook",
    "name": {
-    "_fb": [
-     "pt",
-     "es"
-    ],
     "en": "Red Spellbook",
-    "es": "Red Spellbook",
-    "pt": "Red Spellbook"
+    "es": "Grimorio Rojo",
+    "pt": "Grimório Vermelho"
    },
    "primary": 108,
    "slots": [],
@@ -101813,13 +101671,9 @@
      "stack": 1,
      "stats": {},
      "text": {
-      "_fb": [
-       "pt",
-       "es"
-      ],
       "en": "Its contents might give you insight\non spells, mainly the Precise Shot Attack.",
-      "es": "Its contents might give you insight\non spells, mainly the Precise Shot Attack.",
-      "pt": "Its contents might give you insight\non spells, mainly the Precise Shot Attack."
+      "es": "Su contenido puede darte conocimiento\nsobre hechizos, principalmente el Ataque Tiro Preciso.",
+      "pt": "Seu conteúdo pode lhe dar conhecimento\nsobre magias, principalmente o Ataque Tiro Preciso."
      },
      "type": 108,
      "weight": 15.0
@@ -101834,13 +101688,9 @@
      "stack": 1,
      "stats": {},
      "text": {
-      "_fb": [
-       "pt",
-       "es"
-      ],
       "en": "Its contents might give you insight\non spells, mainly the Fierce Thrust Attack.",
-      "es": "Its contents might give you insight\non spells, mainly the Fierce Thrust Attack.",
-      "pt": "Its contents might give you insight\non spells, mainly the Fierce Thrust Attack."
+      "es": "Su contenido puede darte conocimiento\nsobre hechizos, principalmente el Ataque Embestida Feroz.",
+      "pt": "Seu conteúdo pode lhe dar conhecimento\nsobre magias, principalmente o Ataque Investida Feroz."
      },
      "type": 109,
      "weight": 15.0
@@ -101855,13 +101705,9 @@
      "stack": 1,
      "stats": {},
      "text": {
-      "_fb": [
-       "pt",
-       "es"
-      ],
       "en": "Its contents might give you insight\non spells, mainly the Energy Bolt Spell.",
-      "es": "Its contents might give you insight\non spells, mainly the Energy Bolt Spell.",
-      "pt": "Its contents might give you insight\non spells, mainly the Energy Bolt Spell."
+      "es": "Su contenido puede darte información\nsobre hechizos, principalmente el Hechizo Rayo de Energía.",
+      "pt": "Seu conteúdo pode lhe dar insights\nsobre magias, principalmente a Magia Raio de Energia."
      },
      "type": 110,
      "weight": 15.0
@@ -101903,13 +101749,9 @@
      "stack": 1,
      "stats": {},
      "text": {
-      "_fb": [
-       "pt",
-       "es"
-      ],
       "en": "Its contents might give you insight\non spells, mainly the Fireball Spell.",
-      "es": "Its contents might give you insight\non spells, mainly the Fireball Spell.",
-      "pt": "Its contents might give you insight\non spells, mainly the Fireball Spell."
+      "es": "Su contenido puede darte conocimiento\nsobre hechizos, principalmente el Hechizo Bola de Fuego.",
+      "pt": "Seu conteúdo pode lhe dar conhecimento\nsobre magias, principalmente a Magia Bola de Fogo."
      },
      "type": 111,
      "weight": 15.0
@@ -101924,13 +101766,9 @@
      "stack": 1,
      "stats": {},
      "text": {
-      "_fb": [
-       "pt",
-       "es"
-      ],
       "en": "Its contents might give you insight\non spells, mainly the Energy Hull Spell.",
-      "es": "Its contents might give you insight\non spells, mainly the Energy Hull Spell.",
-      "pt": "Its contents might give you insight\non spells, mainly the Energy Hull Spell."
+      "es": "Su contenido puede darte información\nsobre hechizos, principalmente el Hechizo Coraza de Energía.",
+      "pt": "Seu conteúdo pode lhe dar insights\nsobre magias, principalmente a Magia Invólucro de Energia."
      },
      "type": 135,
      "weight": 15.0
@@ -101945,13 +101783,9 @@
      "stack": 1,
      "stats": {},
      "text": {
-      "_fb": [
-       "pt",
-       "es"
-      ],
       "en": "Its contents might give you insight\non spells, mainly the Berserk Attack.",
-      "es": "Its contents might give you insight\non spells, mainly the Berserk Attack.",
-      "pt": "Its contents might give you insight\non spells, mainly the Berserk Attack."
+      "es": "Su contenido puede darte información\nsobre hechizos, principalmente el Ataque Furia.",
+      "pt": "Seu conteúdo pode lhe dar insights\nsobre magias, principalmente o Ataque Fúria."
      },
      "type": 136,
      "weight": 15.0
@@ -101966,13 +101800,9 @@
      "stack": 1,
      "stats": {},
      "text": {
-      "_fb": [
-       "pt",
-       "es"
-      ],
       "en": "Its contents might give you insight\non spells, mainly the Crying Arrow Spell.",
-      "es": "Its contents might give you insight\non spells, mainly the Crying Arrow Spell.",
-      "pt": "Its contents might give you insight\non spells, mainly the Crying Arrow Spell."
+      "es": "Su contenido puede darte información\nsobre hechizos, principalmente el Hechizo Flecha Llorosa.",
+      "pt": "Seu conteúdo pode lhe dar insights\nsobre magias, principalmente a Magia Flecha Cortante."
      },
      "type": 137,
      "weight": 15.0
@@ -101987,13 +101817,9 @@
      "stack": 1,
      "stats": {},
      "text": {
-      "_fb": [
-       "pt",
-       "es"
-      ],
       "en": "Its contents might give you insight\non spells, mainly the Quick Attack.",
-      "es": "Its contents might give you insight\non spells, mainly the Quick Attack.",
-      "pt": "Its contents might give you insight\non spells, mainly the Quick Attack."
+      "es": "Su contenido puede darte conocimiento\nsobre hechizos, principalmente el Ataque Rápido.",
+      "pt": "Seu conteúdo pode lhe dar conhecimento\nsobre magias, principalmente o Ataque Rápido."
      },
      "type": 138,
      "weight": 15.0
@@ -102008,13 +101834,9 @@
      "stack": 1,
      "stats": {},
      "text": {
-      "_fb": [
-       "pt",
-       "es"
-      ],
       "en": "Its contents might give you insight\non spells, mainly the Lightning Spell.",
-      "es": "Its contents might give you insight\non spells, mainly the Lightning Spell.",
-      "pt": "Its contents might give you insight\non spells, mainly the Lightning Spell."
+      "es": "Su contenido puede darte conocimiento\nsobre hechizos, principalmente el Hechizo Relámpago.",
+      "pt": "Seu conteúdo pode lhe dar conhecimento\nsobre magias, principalmente a Magia Relâmpago."
      },
      "type": 139,
      "weight": 15.0
@@ -102029,13 +101851,9 @@
      "stack": 1,
      "stats": {},
      "text": {
-      "_fb": [
-       "pt",
-       "es"
-      ],
       "en": "Its contents might give you insight\non spells, mainly the Charge Attack.",
-      "es": "Its contents might give you insight\non spells, mainly the Charge Attack.",
-      "pt": "Its contents might give you insight\non spells, mainly the Charge Attack."
+      "es": "Su contenido puede darte información\nsobre hechizos, principalmente el Ataque Carga.",
+      "pt": "Seu conteúdo pode lhe dar insights\nsobre magias, principalmente o Ataque Investida."
      },
      "type": 140,
      "weight": 15.0
@@ -102050,13 +101868,9 @@
      "stack": 1,
      "stats": {},
      "text": {
-      "_fb": [
-       "pt",
-       "es"
-      ],
       "en": "Its contents might give you insight\non spells, mainly the Fire Spell.",
-      "es": "Its contents might give you insight\non spells, mainly the Fire Spell.",
-      "pt": "Its contents might give you insight\non spells, mainly the Fire Spell."
+      "es": "Su contenido puede darte información\nsobre hechizos, principalmente el Hechizo de Fuego.",
+      "pt": "Seu conteúdo pode lhe dar insights\nsobre magias, principalmente a Magia de Fogo."
      },
      "type": 151,
      "weight": 15.0
@@ -102071,13 +101885,9 @@
      "stack": 1,
      "stats": {},
      "text": {
-      "_fb": [
-       "pt",
-       "es"
-      ],
       "en": "Its contents might give you insight\non spells, mainly the Water Pillar Spell.",
-      "es": "Its contents might give you insight\non spells, mainly the Water Pillar Spell.",
-      "pt": "Its contents might give you insight\non spells, mainly the Water Pillar Spell."
+      "es": "Su contenido puede darte conocimiento\nsobre hechizos, principalmente el Hechizo Pilar de Agua.",
+      "pt": "Seu conteúdo pode lhe dar conhecimento\nsobre magias, principalmente a Magia Pilar de Água."
      },
      "type": 152,
      "weight": 15.0
@@ -102092,13 +101902,9 @@
      "stack": 1,
      "stats": {},
      "text": {
-      "_fb": [
-       "pt",
-       "es"
-      ],
       "en": "Its contents might give you insight\non spells, mainly the Slow Spell.",
-      "es": "Its contents might give you insight\non spells, mainly the Slow Spell.",
-      "pt": "Its contents might give you insight\non spells, mainly the Slow Spell."
+      "es": "Su contenido puede darte conocimiento\nsobre hechizos, principalmente el Hechizo Lentitud.",
+      "pt": "Seu conteúdo pode lhe dar conhecimento\nsobre magias, principalmente a Magia Lentidão."
      },
      "type": 174,
      "weight": 15.0
@@ -102113,13 +101919,9 @@
      "stack": 1,
      "stats": {},
      "text": {
-      "_fb": [
-       "pt",
-       "es"
-      ],
       "en": "Its contents might give you insight\non spells, mainly the Rock Throw Spell.",
-      "es": "Its contents might give you insight\non spells, mainly the Rock Throw Spell.",
-      "pt": "Its contents might give you insight\non spells, mainly the Rock Throw Spell."
+      "es": "Su contenido puede darte conocimiento\nsobre hechizos, principalmente el Hechizo Lanzamiento de Roca.",
+      "pt": "Seu conteúdo pode lhe dar conhecimento\nsobre magias, principalmente a Magia Arremesso de Pedra."
      },
      "type": 175,
      "weight": 15.0
@@ -102134,13 +101936,9 @@
      "stack": 1,
      "stats": {},
      "text": {
-      "_fb": [
-       "pt",
-       "es"
-      ],
       "en": "Its contents might give you insight\non spells, mainly the Thrash Attack.",
-      "es": "Its contents might give you insight\non spells, mainly the Thrash Attack.",
-      "pt": "Its contents might give you insight\non spells, mainly the Thrash Attack."
+      "es": "Su contenido puede darte conocimiento\nsobre hechizos, principalmente el Ataque Azotar.",
+      "pt": "Seu conteúdo pode lhe dar conhecimento\nsobre magias, principalmente o Ataque Debulhar."
      },
      "type": 329,
      "weight": 15.0
@@ -102155,13 +101953,9 @@
      "stack": 1,
      "stats": {},
      "text": {
-      "_fb": [
-       "pt",
-       "es"
-      ],
       "en": "Its contents might give you insight\non spells, mainly the Fire Gale spell.",
-      "es": "Its contents might give you insight\non spells, mainly the Fire Gale spell.",
-      "pt": "Its contents might give you insight\non spells, mainly the Fire Gale spell."
+      "es": "Su contenido puede darte conocimiento\nsobre hechizos, principalmente el hechizo Vendaval de Fuego.",
+      "pt": "Seu conteúdo pode lhe dar conhecimento\nsobre magias, principalmente a magia Vendaval de Fogo."
      },
      "type": 490,
      "weight": 15.0
@@ -132644,13 +132438,10 @@
     "shops": []
    },
    "subtype": {
-    "_fb": [
-     "pt"
-    ],
-    "en": "None",
+    "en": "Other",
     "es": "Otros",
     "key": "None",
-    "pt": "None"
+    "pt": "Outros"
    },
    "types": [
     120
@@ -147716,13 +147507,9 @@
    "icon": "/icons/items/112.png",
    "id": "yellow-spellbook",
    "name": {
-    "_fb": [
-     "pt",
-     "es"
-    ],
     "en": "Yellow Spellbook",
-    "es": "Yellow Spellbook",
-    "pt": "Yellow Spellbook"
+    "es": "Grimorio Amarillo",
+    "pt": "Grimório Amarelo"
    },
    "primary": 112,
    "slots": [],
@@ -148405,13 +148192,9 @@
      "stack": 1,
      "stats": {},
      "text": {
-      "_fb": [
-       "pt",
-       "es"
-      ],
       "en": "Its contents might give you insight\non spells, mainly the Shield Block Defense.",
-      "es": "Its contents might give you insight\non spells, mainly the Shield Block Defense.",
-      "pt": "Its contents might give you insight\non spells, mainly the Shield Block Defense."
+      "es": "Su contenido puede darte conocimiento\nsobre hechizos, principalmente la Defensa Bloqueo con Escudo.",
+      "pt": "Seu conteúdo pode lhe dar conhecimento\nsobre magias, principalmente a Defesa Bloqueio com Escudo."
      },
      "type": 112,
      "weight": 16.0
@@ -148426,13 +148209,9 @@
      "stack": 1,
      "stats": {},
      "text": {
-      "_fb": [
-       "pt",
-       "es"
-      ],
       "en": "Its contents might give you insight\non spells, mainly the Holy Spell.",
-      "es": "Its contents might give you insight\non spells, mainly the Holy Spell.",
-      "pt": "Its contents might give you insight\non spells, mainly the Holy Spell."
+      "es": "Su contenido puede darte conocimiento\nsobre hechizos, principalmente el Hechizo Sagrado.",
+      "pt": "Seu conteúdo pode lhe dar conhecimento\nsobre magias, principalmente a Magia Sagrado."
      },
      "type": 113,
      "weight": 16.0
@@ -148447,13 +148226,9 @@
      "stack": 1,
      "stats": {},
      "text": {
-      "_fb": [
-       "pt",
-       "es"
-      ],
       "en": "Its contents might give you insight\non spells, mainly the Magic Growth Spell.",
-      "es": "Its contents might give you insight\non spells, mainly the Magic Growth Spell.",
-      "pt": "Its contents might give you insight\non spells, mainly the Magic Growth Spell."
+      "es": "Su contenido puede darte conocimiento\nsobre hechizos, principalmente el Hechizo Crecimiento Mágico.",
+      "pt": "Seu conteúdo pode lhe dar conhecimento\nsobre magias, principalmente a Magia Crescimento Mágico."
      },
      "type": 153,
      "weight": 16.0
@@ -148468,13 +148243,9 @@
      "stack": 1,
      "stats": {},
      "text": {
-      "_fb": [
-       "pt",
-       "es"
-      ],
       "en": "Its contents might give you insight\non spells, mainly the Find Person Spell.",
-      "es": "Its contents might give you insight\non spells, mainly the Find Person Spell.",
-      "pt": "Its contents might give you insight\non spells, mainly the Find Person Spell."
+      "es": "Su contenido puede darte conocimiento\nsobre hechizos, principalmente el Hechizo Encontrar Persona.",
+      "pt": "Seu conteúdo pode lhe dar conhecimento\nsobre magias, principalmente a Magia Encontrar Pessoa."
      },
      "type": 258,
      "weight": 16.0
@@ -148489,13 +148260,9 @@
      "stack": 1,
      "stats": {},
      "text": {
-      "_fb": [
-       "pt",
-       "es"
-      ],
       "en": "Its contents might give you insight\non spells, mainly the Starlight Spell.",
-      "es": "Its contents might give you insight\non spells, mainly the Starlight Spell.",
-      "pt": "Its contents might give you insight\non spells, mainly the Starlight Spell."
+      "es": "Su contenido puede darte conocimiento\nsobre hechizos, principalmente el Hechizo Luz Estelar.",
+      "pt": "Seu conteúdo pode lhe dar conhecimento\nsobre magias, principalmente a Magia Luz Estelar."
      },
      "type": 319,
      "weight": 16.0
@@ -148510,13 +148277,9 @@
      "stack": 1,
      "stats": {},
      "text": {
-      "_fb": [
-       "pt",
-       "es"
-      ],
       "en": "Its contents might give you insight\non spells, mainly the Blink Spell.",
-      "es": "Its contents might give you insight\non spells, mainly the Blink Spell.",
-      "pt": "Its contents might give you insight\non spells, mainly the Blink Spell."
+      "es": "Su contenido puede darte conocimiento\nsobre hechizos, principalmente el Hechizo Parpadeo.",
+      "pt": "Seu conteúdo pode lhe dar conhecimento\nsobre magias, principalmente a Magia Piscar."
      },
      "type": 492,
      "weight": 16.0
@@ -148531,13 +148294,9 @@
      "stack": 1,
      "stats": {},
      "text": {
-      "_fb": [
-       "pt",
-       "es"
-      ],
       "en": "Its contents might give you insight\non spells, mainly the Surge Spell.",
-      "es": "Its contents might give you insight\non spells, mainly the Surge Spell.",
-      "pt": "Its contents might give you insight\non spells, mainly the Surge Spell."
+      "es": "Su contenido puede darte conocimiento\nsobre hechizos, principalmente el Hechizo Oleada.",
+      "pt": "Seu conteúdo pode lhe dar conhecimento\nsobre magias, principalmente a Magia Surto."
      },
      "type": 493,
      "weight": 16.0

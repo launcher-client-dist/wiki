@@ -4505,7 +4505,7 @@
    "name": {
     "en": "Eye Steel Ingot",
     "es": "Lingote de Acero del Ojo",
-    "pt": "Barra de Aço do Olho"
+    "pt": "Steel Ingot do Olho"
    },
    "ref": "quest:q105",
    "slug": {
@@ -4661,7 +4661,7 @@
    "name": {
     "en": "Buried Tin Ingot",
     "es": "Lingote de Estaño Enterrado",
-    "pt": "Lingote de Estanho Enterrado"
+    "pt": "Tin Ingot Enterrado"
    },
    "ref": "quest:q109",
    "slug": {
@@ -4700,7 +4700,7 @@
    "name": {
     "en": "A Grilled Cheese",
     "es": "Un Queso a la Parrilla",
-    "pt": "Um Queijo Grelhado"
+    "pt": "Um Grilled Cheese"
    },
    "ref": "quest:q1100",
    "slug": {
@@ -4713,7 +4713,7 @@
    "name": {
     "en": "An Apple Pie",
     "es": "Un Pastel de Manzana",
-    "pt": "Uma Torta de Maçã"
+    "pt": "Uma Apple Pie"
    },
    "ref": "quest:q1101",
    "slug": {
@@ -4726,7 +4726,7 @@
    "name": {
     "en": "A Fish Steak",
     "es": "Un Filete de Pescado",
-    "pt": "Um Filé de Peixe"
+    "pt": "Um Fish Steak"
    },
    "ref": "quest:q1102",
    "slug": {
@@ -4739,7 +4739,7 @@
    "name": {
     "en": "A Spicy Stew",
     "es": "Un Estofado Picante",
-    "pt": "Um Ensopado Picante"
+    "pt": "Um Spicy Stew"
    },
    "ref": "quest:q1103",
    "slug": {
@@ -5311,7 +5311,7 @@
    "name": {
     "en": "Rock Core One",
     "es": "Núcleo de Roca Uno",
-    "pt": "Núcleo de Pedra Um"
+    "pt": "Rock Core Um"
    },
    "ref": "quest:q123",
    "slug": {
@@ -5376,7 +5376,7 @@
    "name": {
     "en": "Rock Core Key",
     "es": "Llave del Núcleo de Roca",
-    "pt": "Chave do Núcleo de Pedra"
+    "pt": "Chave do Rock Core"
    },
    "ref": "quest:q124",
    "slug": {
@@ -5402,7 +5402,7 @@
    "name": {
     "en": "Rock Core Three",
     "es": "Núcleo de Roca Tres",
-    "pt": "Núcleo de Pedra Três"
+    "pt": "Rock Core Três"
    },
    "ref": "quest:q125",
    "slug": {
@@ -5454,7 +5454,7 @@
    "name": {
     "en": "Rock Core Four",
     "es": "Núcleo de Roca Cuatro",
-    "pt": "Núcleo de Pedra Quatro"
+    "pt": "Rock Core Quatro"
    },
    "ref": "quest:q127",
    "slug": {
@@ -5519,7 +5519,7 @@
    "name": {
     "en": "Rock Core Five",
     "es": "Núcleo de Roca Cinco",
-    "pt": "Núcleo de Pedra Cinco"
+    "pt": "Rock Core Cinco"
    },
    "ref": "quest:q128",
    "slug": {
@@ -5584,7 +5584,7 @@
    "name": {
     "en": "Rock Core Six",
     "es": "Núcleo de Roca Seis",
-    "pt": "Núcleo de Pedra Seis"
+    "pt": "Rock Core Seis"
    },
    "ref": "quest:q129",
    "slug": {
@@ -5675,7 +5675,7 @@
    "name": {
     "en": "Spider Iron Ingot",
     "es": "Lingote de Hierro de la Araña",
-    "pt": "Barra de Ferro da Aranha"
+    "pt": "Iron Ingot da Aranha"
    },
    "ref": "quest:q131",
    "slug": {
@@ -5727,7 +5727,7 @@
    "name": {
     "en": "Smith's Iron Ingot",
     "es": "Lingote de Hierro del Herrero",
-    "pt": "Lingote de Ferro do Ferreiro"
+    "pt": "Iron Ingot do Ferreiro"
    },
    "ref": "quest:q133",
    "slug": {
@@ -5818,7 +5818,7 @@
    "name": {
     "en": "Silver Dagger Chest",
     "es": "Cofre de Daga de Plata",
-    "pt": "Baú da Adaga de Prata"
+    "pt": "Baú da Silver Dagger"
    },
    "ref": "quest:q14",
    "slug": {
@@ -5909,7 +5909,7 @@
    "name": {
     "en": "Heart of the Tree",
     "es": "Corazón del Árbol",
-    "pt": "Coração da Árvore"
+    "pt": "Heart Of The Tree"
    },
    "ref": "quest:q146",
    "slug": {
@@ -5961,7 +5961,7 @@
    "name": {
     "en": "Hidden Black Bag",
     "es": "Bolsa Negra Oculta",
-    "pt": "Bolsa Preta Escondida"
+    "pt": "Black Bag Escondida"
    },
    "ref": "quest:q15",
    "slug": {
@@ -6039,7 +6039,7 @@
    "name": {
     "en": "Ritual Dagger Find",
     "es": "Hallazgo de la Daga Ritual",
-    "pt": "Descoberta da Adaga Ritual"
+    "pt": "Descoberta da Ritual Dagger"
    },
    "ref": "quest:q155",
    "slug": {
@@ -6312,7 +6312,7 @@
    "name": {
     "en": "Wooden Shield Quest",
     "es": "Misión del Escudo de Madera",
-    "pt": "Missão do Escudo de Madeira"
+    "pt": "Missão do Wooden Shield"
    },
    "ref": "quest:q174",
    "slug": {
@@ -6325,7 +6325,7 @@
    "name": {
     "en": "Wooden Shield Quest",
     "es": "Misión del Escudo de Madera",
-    "pt": "Missão do Escudo de Madeira"
+    "pt": "Missão do Wooden Shield"
    },
    "ref": "quest:q175",
    "slug": {
@@ -6624,7 +6624,7 @@
    "name": {
     "en": "Silver Ring Chest",
     "es": "Cofre del Anillo de Plata",
-    "pt": "Baú do Anel de Prata"
+    "pt": "Baú do Silver Ring"
    },
    "ref": "quest:q196",
    "slug": {
@@ -6845,7 +6845,7 @@
    "name": {
     "en": "Old Amulet Key",
     "es": "Llave del Amuleto Antiguo",
-    "pt": "Chave do Amuleto Antigo"
+    "pt": "Chave do Old Amulet"
    },
    "ref": "quest:q210",
    "slug": {
@@ -7208,12 +7208,11 @@
   {
    "name": {
     "_fb": [
-     "pt",
      "es"
     ],
     "en": "Worm Chest",
     "es": "Worm Chest",
-    "pt": "Worm Chest"
+    "pt": "Baú do Verme"
    },
    "ref": "quest:q236",
    "slug": {
@@ -7225,12 +7224,11 @@
   {
    "name": {
     "_fb": [
-     "pt",
      "es"
     ],
     "en": "Impossible Chest",
     "es": "Impossible Chest",
-    "pt": "Impossible Chest"
+    "pt": "Baú Impossível"
    },
    "ref": "quest:q237",
    "slug": {
@@ -7242,12 +7240,11 @@
   {
    "name": {
     "_fb": [
-     "pt",
      "es"
     ],
     "en": "Big Bone Chest",
     "es": "Big Bone Chest",
-    "pt": "Big Bone Chest"
+    "pt": "Baú do Big Bone"
    },
    "ref": "quest:q238",
    "slug": {
@@ -7259,12 +7256,11 @@
   {
    "name": {
     "_fb": [
-     "pt",
      "es"
     ],
     "en": "Desert Bolt Chest",
     "es": "Desert Bolt Chest",
-    "pt": "Desert Bolt Chest"
+    "pt": "Baú de Virotes do Deserto"
    },
    "ref": "quest:q239",
    "slug": {
@@ -7277,7 +7273,7 @@
    "name": {
     "en": "Wooden Shield Quest",
     "es": "Misión del Escudo de Madera",
-    "pt": "Missão do Escudo de Madeira"
+    "pt": "Missão do Wooden Shield"
    },
    "ref": "quest:q24",
    "slug": {
@@ -7289,12 +7285,11 @@
   {
    "name": {
     "_fb": [
-     "pt",
      "es"
     ],
     "en": "Hell Arrow Chest",
     "es": "Hell Arrow Chest",
-    "pt": "Hell Arrow Chest"
+    "pt": "Baú da Flecha Infernal"
    },
    "ref": "quest:q240",
    "slug": {
@@ -7411,7 +7406,7 @@
    "name": {
     "en": "Cloth Vest Chest",
     "es": "Cofre del Chaleco de Tela",
-    "pt": "Baú do Colete de Pano"
+    "pt": "Baú do Cloth Vest"
    },
    "ref": "quest:q32",
    "slug": {
@@ -7515,7 +7510,7 @@
    "name": {
     "en": "Blue Ink Quest",
     "es": "Misión de la Tinta Azul",
-    "pt": "Missão da Tinta Azul"
+    "pt": "Missão da Blue Ink"
    },
    "ref": "quest:q4",
    "slug": {
@@ -7528,7 +7523,7 @@
    "name": {
     "en": "Brass Plate Quest",
     "es": "Misión de Placa de Latón",
-    "pt": "Missão da Placa de Latão"
+    "pt": "Missão da Brass Plate"
    },
    "ref": "quest:q40",
    "slug": {
@@ -7541,7 +7536,7 @@
    "name": {
     "en": "Dark Robe Quest",
     "es": "Misión de la Túnica Oscura",
-    "pt": "Missão da Túnica Sombria"
+    "pt": "Missão da Dark Robe"
    },
    "ref": "quest:q41",
    "slug": {
@@ -7554,7 +7549,7 @@
    "name": {
     "en": "Dark Hood Quest",
     "es": "Misión de la Capucha Oscura",
-    "pt": "Missão do Capuz Sombrio"
+    "pt": "Missão do Dark Hood"
    },
    "ref": "quest:q42",
    "slug": {
@@ -7580,7 +7575,7 @@
    "name": {
     "en": "Wooden Staff Quest",
     "es": "Misión del Bastón de Madera",
-    "pt": "Missão do Cajado de Madeira"
+    "pt": "Missão do Wooden Staff"
    },
    "ref": "quest:q44",
    "slug": {
@@ -7788,7 +7783,7 @@
    "name": {
     "en": "Old Backpack Quest",
     "es": "Misión de la Mochila Vieja",
-    "pt": "Missão da Mochila Velha"
+    "pt": "Missão da Old Backpack"
    },
    "ref": "quest:q59",
    "slug": {
@@ -7814,7 +7809,7 @@
    "name": {
     "en": "Crystal Staff Quest",
     "es": "Misión del Bastón de Cristal",
-    "pt": "Missão do Cajado de Cristal"
+    "pt": "Missão do Crystal Staff"
    },
    "ref": "quest:q60",
    "slug": {
@@ -7970,7 +7965,7 @@
    "name": {
     "en": "Brass Legs Quest",
     "es": "Misión de las Piernas de Bronce",
-    "pt": "Missão das Pernas de Bronze"
+    "pt": "Missão das Brass Legs"
    },
    "ref": "quest:q71",
    "slug": {
@@ -8100,7 +8095,7 @@
    "name": {
     "en": "Crystal Ring Quest",
     "es": "Misión del Anillo de Cristal",
-    "pt": "Missão do Anel de Cristal"
+    "pt": "Missão do Crystal Ring"
    },
    "ref": "quest:q80",
    "slug": {
@@ -8126,7 +8121,7 @@
    "name": {
     "en": "The Ring of Fire",
     "es": "El Anillo de Fuego",
-    "pt": "O Anel de Fogo"
+    "pt": "O Ring of Fire"
    },
    "ref": "quest:q82",
    "slug": {
@@ -8152,7 +8147,7 @@
    "name": {
     "en": "Skull Ring Chest",
     "es": "Cofre del Anillo de Calavera",
-    "pt": "Baú do Anel de Caveira"
+    "pt": "Baú do Skull Ring"
    },
    "ref": "quest:q84",
    "slug": {
@@ -8204,7 +8199,7 @@
    "name": {
     "en": "Sailor Boots Quest",
     "es": "Misión de Botas de Marinero",
-    "pt": "Missão das Botas de Marinheiro"
+    "pt": "Missão das Sailor Boots"
    },
    "ref": "quest:q88",
    "slug": {
@@ -8256,7 +8251,7 @@
    "name": {
     "en": "Silver Ring Quest",
     "es": "Misión del Anillo de Plata",
-    "pt": "Missão do Anel de Prata"
+    "pt": "Missão do Silver Ring"
    },
    "ref": "quest:q91",
    "slug": {
