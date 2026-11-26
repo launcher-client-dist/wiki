@@ -19,7 +19,7 @@ export const es: UiStrings = {
   menuOpen: "Abrir el menú",
   menuClose: "Cerrar el menú",
   navLabel: "Secciones",
-  soon: "pronto",
+  soon: "próximamente",
   breadcrumbsLabel: "Estás aquí",
   home: "Inicio",
 
@@ -54,7 +54,7 @@ export const es: UiStrings = {
   searchSections: "Secciones",
   searchResults: "Resultados",
 
-  hoverPagePending: "Página pronto",
+  hoverPagePending: "Página próximamente",
   hoverOpen: "Abrir la página",
 
   tier: { sempre: "Siempre", comum: "Común", incomum: "Poco común", raro: "Raro", "muito-raro": "Muy raro" },
@@ -107,7 +107,7 @@ export const es: UiStrings = {
   homeSectionsLabel: "Secciones de la wiki",
   homeGuidesTitle: "Empieza aquí",
   homeAboutTitle: "Sobre la wiki",
-  homeAboutText: "Una wiki hecha por la comunidad de Opengea. Las secciones abren de a una: las guías y los objetos ya están aquí, y las siguientes llegan pronto.",
+  homeAboutText: "Una wiki hecha por la comunidad de Opengea. Las secciones abren una por una: las guías y los objetos ya están aquí, y las siguientes llegan próximamente.",
   homeShortcutsTitle: "Atajos",
   homeShortcutSearch: "busca desde cualquier página",
   homeShortcutTheme: "tema claro u oscuro arriba",
