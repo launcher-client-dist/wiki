@@ -20,12 +20,13 @@ import Value from "../../../components/ui/Value.astro";
 import { statRank } from "../../../lib/items/rank.ts";
 import Ingredient from "../../../components/entity/Ingredient.astro";
 import { ui, fill } from "../../../i18n/index.ts";
-import { HREFLANG, LANGS, altLang, type Lang } from "../../../lib/i18n.ts";
+import { HREFLANG, LANGS, type Lang } from "../../../lib/i18n.ts";
 import { absoluteUrl, homePath, SECTIONS, sectionPath } from "../../../lib/routes.ts";
 import { ITEMS, STUB_BY_REF, siteData } from "../../../lib/site-registry.ts";
 import { appearsIn } from "../../../lib/entities/appears.ts";
 import { CLASS_KEYS, STAT_KEYS, goldPerOz, primaryVersion, signed, statLabel, textLang, type Fallback, type Place, type Recipe, type StatKey } from "../../../lib/items/data.ts";
 import { metaDescription, oneInText, oz, similarItems } from "../../../lib/items/view.ts";
+import { allNames, displayName, nameWithAid } from "../../../lib/names.ts";
 
 export async function getStaticPaths() {
   const { items } = await siteData();
@@ -38,7 +39,8 @@ const { registry, items } = await siteData();
 const item = items.find((i) => i.id === Astro.props.id)!;
 const ref = `item:${item.id}`;
 const v = primaryVersion(item);
-const other = altLang(lang);
+/** The title is the in-game name (English today); the page language's translation is the subtitle (src/lib/names.ts). */
+const dn = displayName(item.name, "item", lang);
 /** A text standing in as English where the game has no translation: its lang attribute (undefined when it is in `lang`). */
 const fbLang = (t: Fallback) => (textLang(t, lang) === lang ? undefined : HREFLANG[textLang(t, lang)]);
 const alternates = Object.fromEntries(LANGS.map((l) => [l, registry.url(ref, l)!])) as Record<Lang, string>;
@@ -76,8 +78,8 @@ const versionLabel = (i: number) => fill(ti.versionN, { n: i + 1 });
 const jsonLd = [{
   "@context": "https://schema.org",
   "@type": "Thing",
-  name: item.name[lang],
-  alternateName: item.name[other],
+  name: dn.name,
+  alternateName: allNames(item.name).filter((n) => n !== dn.name),
   description,
   url: absoluteUrl(alternates[lang]),
   inLanguage: HREFLANG[lang],
@@ -85,17 +87,17 @@ const jsonLd = [{
   additionalProperty: statKeys.map((k) => ({ "@type": "PropertyValue", name: statLabel(k)[lang], value: v.stats[k] })),
 }];
 ---
-<PageShell lang={lang} title={item.name[lang]} description={description} alternates={alternates} current="item"
+<PageShell lang={lang} title={nameWithAid(dn)} description={description} alternates={alternates} current="item"
   searchable={{ kind: "item", image: icon?.src }} jsonLd={jsonLd} ogImage={`/og/items/${item.slug.en}.png`}
-  crumbs={[{ label: t.home, href: homePath(lang) }, { label: ti.listTitle, href: sectionPath("item", lang) }, { label: item.name[lang] }]}>
+  crumbs={[{ label: t.home, href: homePath(lang) }, { label: ti.listTitle, href: sectionPath("item", lang) }, { label: dn.name }]}>
   <div class="container" id="item-page">
     <div class="layout">
       <div class="hero-area">
         <Banner>
           <div slot="media" class="hero-icon"><IconSlot icon={icon} kind="item" size={160} /></div>
           <p class="kicker" data-pagefind-ignore>{ti.category[item.category]}</p>
-          <h1 lang={fbLang(item.name)}>{item.name[lang]}</h1>
-          {item.name[other] !== item.name[lang] && <p class="alt" lang={HREFLANG[other]}>{item.name[other]}</p>}
+          <h1 lang={dn.nameLang !== lang ? HREFLANG[dn.nameLang] : undefined}>{dn.name}</h1>
+          {dn.aid && <p class="alt" lang={dn.aidLang && dn.aidLang !== lang ? HREFLANG[dn.aidLang] : undefined} data-pagefind-meta="alt">{dn.aid}</p>}
           {v.text[lang] && <blockquote class="game-text" lang={fbLang(v.text)}>{v.text[lang]}</blockquote>}
           <div class="tags" slot="foot" data-pagefind-ignore>
             <TipTag icon={`cat-${item.category}`} tip={ti.tipType}>{fill(ti.tagType, { v: item.subtype[lang] })}</TipTag>
@@ -320,12 +322,12 @@ const jsonLd = [{
               {item.rune && (
                 <ListPanel title={ti.runeFits} gicon="rune" id="rune">
                   <ListRow><span class="fits">{item.rune.fits.map((f) => <span class="fit"><IconSlot icon={SUB_ICON.get(f.key) ?? null} kind="item" size={32} framed={false} /><span>{f[lang]}</span></span>)}</span></ListRow>
-                  {item.rune.fitsItems.length > 0 && <ListRow><span class="links">{item.rune.fitsItems.map((id) => <EntityLink to={`item:${id}`} />)}</span></ListRow>}
+                  {item.rune.fitsItems.length > 0 && <ListRow><span class="links" data-flow>{item.rune.fitsItems.map((id) => <><EntityLink to={`item:${id}`} />{" "}</>)}</span></ListRow>}
                 </ListPanel>
               )}
               {runesForThis.length > 0 && (
                 <ListPanel title={ti.runesForThis} count={runesForThis.length} gicon="rune" id="runes">
-                  <ListRow><span class="links">{runesForThis.map((r) => <EntityLink to={`item:${r.id}`} />)}</span></ListRow>
+                  <ListRow><span class="links" data-flow>{runesForThis.map((r) => <><EntityLink to={`item:${r.id}`} />{" "}</>)}</span></ListRow>
                 </ListPanel>
               )}
               {spells.length > 0 && (
@@ -423,7 +425,7 @@ const jsonLd = [{
               {similar.map((o) => {
                 const ov = primaryVersion(o);
                 return (
-                  <Card href={registry.url(`item:${o.id}`, lang)!} title={o.name[lang]} kicker={o.subtype[lang]} layout="row">
+                  <Card href={registry.url(`item:${o.id}`, lang)!} title={displayName(o.name, "item", lang).name} kicker={o.subtype[lang]} layout="row">
                     <IconSlot slot="emblem" icon={ov.icon && ov.iconSize ? { src: ov.icon, width: ov.iconSize[0], height: ov.iconSize[1], pixel: true } : null} kind="item" size={56} />
                     {Object.values(ov.stats).some(Boolean) ? <StatChips stats={ov.stats} lang={lang} max={2} /> : o.value.npcPays ? <span class="paysline">{ti.sellValue} <Value kind="gold" n={o.value.npcPays} lang={lang} /></span> : ti.noStats}
                   </Card>
@@ -520,7 +522,12 @@ const jsonLd = [{
     color: var(--banner-text); font-style: italic; max-width: 38rem; }
   .tags { position: relative; display: flex; flex-wrap: wrap; gap: 8px; }
   /* where three or four tags can't share one line, one per line (never two and one) */
-  @container foot (max-width: 679px) { .tags { flex-direction: column; align-items: flex-start; } }
+  /* one per line, all as wide as the widest (an even column, not three widths) */
+  @container foot (max-width: 679px) {
+    .tags { display: inline-grid; grid-template-columns: minmax(0, max-content); }
+    .tags :global(.tiptag) { display: block; }
+    .tags :global(.tt) { width: 100%; }
+  }
   .tags :global(.tag) { background: var(--banner-chip-bg); color: var(--banner-text); white-space: normal; }
 
   .layout { display: grid; gap: var(--s-6); grid-template-columns: minmax(0, 1fr); grid-template-areas: "hero" "side" "main"; }
@@ -660,8 +667,11 @@ const jsonLd = [{
   .more-rows ul { list-style: none; margin: 0; padding: 0; }
   .plus { color: var(--text-faint); font-weight: 700; }
   .links { display: flex; flex-wrap: wrap; gap: 6px 14px; }
-  .fits { display: flex; flex-wrap: wrap; gap: 8px; }
-  .fit { display: inline-flex; align-items: center; gap: 8px; padding: 4px 12px 4px 4px; border-radius: var(--r-m); background: var(--surface-2);
+  /* the types a rune fits: inline, the lines balanced (never one chip alone on the last line) */
+  .fits { display: block; text-wrap: balance; margin-bottom: -8px; }
+  /* a narrow column (a phone): one type per line, a short list rather than a ragged strip */
+  @container main (max-width: 520px) { .fits { display: grid; gap: 8px; margin-bottom: 0; justify-items: start; } .fit { margin: 0; } }
+  .fit { margin: 0 8px 8px 0; vertical-align: middle; display: inline-flex; align-items: center; gap: 8px; padding: 4px 12px 4px 4px; border-radius: var(--r-m); background: var(--surface-2);
     border: 1px solid var(--row-border); font-size: var(--fs-sm); font-weight: 600; color: var(--text); }
   .fit :global(.slot) { border-radius: 6px; background: var(--well); }
 

@@ -21,6 +21,16 @@ How a link renders:
   links. Adding the kind to `SHIPPED_KINDS` turns every one of these into a link at once.
 - **An unknown ref:** the build fails and names it.
 
+## Names: what the game shows
+
+An item's, spell's or monster's name is what the game shows: English today, in every language, because the client
+doesn't translate them. It is the title everywhere: the page, the list, links, hover cards, search results, the
+breadcrumb, the `<title>`. The page language's translation is a reading aid beside it (the subtitle, a smaller second
+line), never the name, and search finds both. Quests, NPCs, books and places are translated in the game, so their title
+is the page language's name. One table says which language the game uses per kind and page language:
+`src/lib/in-game.json`; the day the client translates items, set `item.pt` to `pt`. `src/lib/names.ts`
+(`displayName`) reads it, and every component that shows a name goes through it. Slugs never change.
+
 ## Reverse references
 
 Write a relation once, on one side. The `relations` of the monster below produce the "Dropado por" line on the item:
@@ -61,7 +71,7 @@ Drop rarity is always a **tier**: sempre, comum, incomum, raro or muito-raro. A 
 | `registry.all(kind?)` | every entity, or every entity of one kind |
 | `registry.hasPage(ref)` | whether the entity has a page |
 | `registry.url(ref, lang)` | the page path, or null while the kind hasn't shipped |
-| `registry.link(ref, lang)` | `{ name, altName, href, icon, summary, facts, kind, id }`: everything a link and its card need |
+| `registry.link(ref, lang)` | `{ name, nameLang, altName, altNameLang, href, icon, summary, facts, kind, id }`: everything a link and its card need |
 | `registry.reverse(ref)` | the other side of every relation pointing here |
 | `parseRef(ref)`, `isEntityRef(x)` | splits and checks refs |
 

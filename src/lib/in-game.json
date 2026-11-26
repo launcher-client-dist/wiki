@@ -1,0 +1,6 @@
+{
+  "_about": "The language the game shows an entity kind's names in, per page language. A kind left out shows the page language's own name (quests, NPCs, books, places: the client translates those). Items, spells and monsters stay English in the client today (the user and the developers, 2026-11-26), so their titles are the English names in every language; the day the client translates items, set item.pt to pt (and so on).",
+  "item": { "pt": "en", "en": "en", "es": "en" },
+  "spell": { "pt": "en", "en": "en", "es": "en" },
+  "monster": { "pt": "en", "en": "en", "es": "en" }
+}

@@ -2,6 +2,7 @@
 import { LOCALE, type Lang } from "../i18n.ts";
 import { ui, fill } from "../../i18n/index.ts";
 import { primaryVersion, statLabel, signed, STAT_KEYS, type ItemData, type OneIn, type StatKey } from "./data.ts";
+import { displayName, nameWithAid } from "../names.ts";
 
 /** A rough size of an item: its positive stats added up, plus its value (only to rank neighbours). */
 function power(item: ItemData): number {
@@ -39,7 +40,8 @@ export function topStats(item: ItemData, lang: Lang, n = 3): string {
  */
 export function metaDescription(item: ItemData, lang: Lang): string {
   const m = ui(lang).item.meta;
-  const name = item.name[lang];
+  // the in-game name first, the translation beside it (people search both)
+  const name = nameWithAid(displayName(item.name, "item", lang));
   const type = item.subtype[lang].toLowerCase();
   const stats = topStats(item, lang);
   const s = item.sources;

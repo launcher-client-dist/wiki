@@ -42,8 +42,10 @@ describe("registry", () => {
     assert.equal(reg.url("item:example-blade", "pt"), null);
     const info = reg.link("item:example-blade", "pt");
     assert.equal(info.href, null);
-    assert.equal(info.name, "Lâmina de Exemplo");
-    assert.equal(info.altName, "Example Blade");
+    // an item's title is its in-game name (English: the game doesn't translate items); the translation is the aid
+    assert.equal(info.name, "Example Blade");
+    assert.equal(info.nameLang, "en");
+    assert.equal(info.altName, "Lâmina de Exemplo");
     assert.ok(info.icon?.src.startsWith("data:image/svg+xml"));
     assert.deepEqual(info.facts[0], { label: "Dano", value: "12" });
   });

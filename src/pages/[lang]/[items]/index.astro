@@ -8,11 +8,12 @@ import DataTable from "../../../components/data/DataTable.astro";
 import DataRow from "../../../components/data/DataRow.astro";
 import DataCell from "../../../components/data/DataCell.astro";
 import { ui, fill } from "../../../i18n/index.ts";
-import { HREFLANG, LANGS, altLang, type Lang } from "../../../lib/i18n.ts";
+import { HREFLANG, LANGS, type Lang } from "../../../lib/i18n.ts";
 import { homePath, SECTIONS, sectionAlternates, sectionPath } from "../../../lib/routes.ts";
 import { siteData } from "../../../lib/site-registry.ts";
-import { CATEGORIES, CLASS_KEYS, SOURCE_KINDS, STAT_KEYS, goldPerOz, primaryVersion, sourceKinds, statLabel, textLang, type StatKey } from "../../../lib/items/data.ts";
+import { CATEGORIES, CLASS_KEYS, SOURCE_KINDS, STAT_KEYS, goldPerOz, primaryVersion, sourceKinds, statLabel, type StatKey } from "../../../lib/items/data.ts";
 import { num, oz } from "../../../lib/items/view.ts";
+import { displayName } from "../../../lib/names.ts";
 
 export function getStaticPaths() {
   return LANGS.map((lang) => ({ params: { lang, items: SECTIONS.item.slug[lang] } }));
@@ -21,7 +22,9 @@ const lang = Astro.params.lang as Lang;
 const t = ui(lang);
 const ti = t.item;
 const { registry, items } = await siteData();
-const rows = [...items].sort((a, b) => a.name[lang].localeCompare(b.name[lang], lang));
+/** Each item's in-game name (the title, English today) and its translation (the second line): src/lib/names.ts. */
+const NAMES = new Map(items.map((i) => [i.id, displayName(i.name, "item", lang)]));
+const rows = [...items].sort((a, b) => NAMES.get(a.id)!.name.localeCompare(NAMES.get(b.id)!.name, lang));
 const SLOT_ORDER = ["head", "neck", "body", "legs", "feet", "hands", "ring", "back", "ammo"];
 const UI = uiSizes as Record<string, number[]>;
 const SOURCE_ICON: Record<string, string> = { drop: "src-drop", shop: "src-shop", quest: "src-quest", craft: "src-craft", map: "src-map", conjure: "src-conjure", leftover: "src-leftover" };
@@ -63,7 +66,7 @@ const CLASSED: StatKey[] = ["armor", "defense", "attackSpeed", "health", "mana",
         const v = primaryVersion(item);
         const st = v.stats;
         const sort: Record<string, string | number> = {
-          sortname: item.name[lang], type: item.subtype[lang], weight: v.weight,
+          sortname: NAMES.get(item.id)!.name, type: item.subtype[lang], weight: v.weight,
           value: item.value.npcPays ?? 0, goldoz: goldPerOz(item) ?? 0,
         };
         // only what an item has: a missing sort value reads as 0 (keeps 436 rows light)
@@ -85,7 +88,10 @@ const CLASSED: StatKey[] = ["armor", "defense", "attackSpeed", "health", "mana",
             <DataCell label={ti.colItem} primary>
               <span class="name">
                 <IconSlot icon={icon} kind="item" size={44} />
-                <span class="ntext"><a href={href} title={item.name[lang]} lang={textLang(item.name, lang) === lang ? undefined : HREFLANG.en}>{item.name[lang]}</a>{item.name[altLang(lang)] !== item.name[lang] && <span class="alt" title={item.name[altLang(lang)]}>{item.name[altLang(lang)]}</span>}</span>
+                {(() => {
+                  const dn = NAMES.get(item.id)!;
+                  return <span class="ntext"><a href={href} title={dn.name} lang={dn.nameLang !== lang ? HREFLANG[dn.nameLang] : undefined}>{dn.name}</a>{dn.aid && <span class="alt" title={dn.aid} lang={dn.aidLang && dn.aidLang !== lang ? HREFLANG[dn.aidLang] : undefined}>{dn.aid}</span>}</span>;
+                })()}
               </span>
             </DataCell>
             <DataCell label={ti.colType} hideOnPhone><span class="type">{item.subtype[lang]}</span></DataCell>

@@ -5,7 +5,8 @@
  *
  * Pure TypeScript (no astro:content), so it runs under `node --test`. src/lib/site-registry.ts fills it for the site.
  */
-import { LANGS, altLang, type Lang } from "../i18n.ts";
+import { LANGS, type Lang } from "../i18n.ts";
+import { displayName } from "../names.ts";
 import { entityPath } from "../routes.ts";
 import { buildReverseIndex, type ReverseIndex, type ReverseRef } from "./reverse.ts";
 import { ENTITY_KINDS, type Entity, type EntityKind, type EntityLinkInfo, type EntityRef } from "./types.ts";
@@ -127,13 +128,15 @@ export function createRegistry(entities: readonly Entity[], options: RegistryOpt
     link(ref, lang) {
       const e = require(ref);
       const { kind, id } = parseRef(e.ref);
-      const alt = e.name[altLang(lang)];
+      const dn = displayName(e.name, kind, lang);
       return {
         ref: e.ref,
         kind,
         id,
-        name: e.name[lang],
-        altName: alt && alt !== e.name[lang] ? alt : null,
+        name: dn.name,
+        nameLang: dn.nameLang,
+        altName: dn.aid,
+        altNameLang: dn.aidLang,
         href: url(ref, lang),
         icon: e.icon ?? null,
         summary: e.summary?.[lang] ?? null,

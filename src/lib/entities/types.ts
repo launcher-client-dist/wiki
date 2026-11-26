@@ -64,9 +64,13 @@ export interface EntityLinkInfo {
   ref: EntityRef;
   kind: EntityKind;
   id: string;
+  /** The name the game shows (src/lib/names.ts): English for items, spells and monsters today. */
   name: string;
-  /** The name in the other language, when it differs. */
+  /** The language `name` is written in. */
+  nameLang: Lang;
+  /** A reading aid beside it (the page language's translation, or the other language's name), when it differs. */
   altName: string | null;
+  altNameLang: Lang | null;
   href: string | null;
   icon: EntityIcon | null;
   summary: string | null;
