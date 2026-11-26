@@ -23,7 +23,7 @@ import Ingredient from "../../../components/entity/Ingredient.astro";
 import { ui, fill } from "../../../i18n/index.ts";
 import { HREFLANG, LANGS, otherLang, type Lang } from "../../../lib/i18n.ts";
 import { absoluteUrl, homePath, SECTIONS, sectionPath } from "../../../lib/routes.ts";
-import { ITEMS, siteData } from "../../../lib/site-registry.ts";
+import { ITEMS, STUB_BY_REF, siteData } from "../../../lib/site-registry.ts";
 import { appearsIn } from "../../../lib/entities/appears.ts";
 import { CLASS_KEYS, STAT_KEYS, goldPerOz, primaryVersion, signed, statLabel, type Place, type Recipe, type StatKey } from "../../../lib/items/data.ts";
 import { metaDescription, num, oneInText, oz, similarItems } from "../../../lib/items/view.ts";
@@ -184,6 +184,20 @@ const jsonLd = [{
                   {src.drops.map((d) => (
                     <ListRow>
                       <EntityLink to={d.monster} iconSize={40} />
+                      {(() => {
+                        const ap = STUB_BY_REF.get(d.monster)?.appears;
+                        if (!ap) return null;
+                        return (
+                          <Fragment slot="sub">
+                            <span class="appears" data-appears={ap.how}>
+                              {ap.how === "timed" && <><GameIcon name="time" scale={1} />{ti.appearsTimed}</>}
+                              {ap.how === "placed" && <><GameIcon name="src-map" scale={1} />{ti.appearsPlaced} {placeText(ap.where.place)} <MapLink variant="inline" href={ap.where.link} label={ti.mapLink} /></>}
+                              {ap.how === "lever" && <>{ti.appearsLever} <EntityLink to={ap.place} icon={false} /> <MapLink variant="inline" href={ap.where.link} label={ti.mapLink} /></>}
+                              {ap.how === "travel" && <>{ti.appearsTravel} <EntityLink to={ap.via} iconSize={22} /></>}
+                            </span>
+                          </Fragment>
+                        );
+                      })()}
                       <Fragment slot="end">
                         {d.quality && <span class="qchip" title={ti.qualityYes}><GameIcon name="quality-any" /><span class="sr-only">{ti.qualityYes}</span></span>}
                         <span class="num">× {d.amount[0] === d.amount[1] ? d.amount[0] : `${d.amount[0]}–${d.amount[1]}`}</span>
@@ -578,6 +592,7 @@ const jsonLd = [{
   .switch .label { display: flex; align-items: center; gap: 6px; font-size: var(--fs-xs); font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; }
   .switch .traits-note { margin: 0; font-size: var(--fs-xs); color: var(--text-muted); }
   .gated li { padding: 4px 0; }
+  .appears { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 4px 6px; font-size: var(--fs-sm); color: var(--text-muted); }
   .gated .q { display: block; font-size: var(--fs-sm); color: var(--text-muted); }
 
   /* the stats box: the game's icon in a slot, the number big, where it stands among its type */

@@ -1,6 +1,9 @@
 {
  "entities": [
   {
+   "appears": {
+    "how": "timed"
+   },
    "boss": true,
    "facts": [
     {
@@ -290,6 +293,60 @@
    }
   },
   {
+   "appears": {
+    "how": "lever",
+    "place": "place:lever-2877",
+    "where": {
+     "link": "https://map.opengea.tech/#2.AgDYAeUBBgEAAQEBAACUIgJj9UktSy0CAA",
+     "place": {
+      "near": {
+       "en": "Royal Bridge",
+       "pt": "Ponte Real"
+      },
+      "town": {
+       "en": "Dorosam",
+       "pt": "Dorosam"
+      },
+      "underground": false
+     }
+    }
+   },
+   "boss": true,
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "2.500"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "120"
+    }
+   ],
+   "icon": "/icons/monsters/bridge-troll.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Bridge Troll",
+    "pt": "Troll da Ponte"
+   },
+   "ref": "monster:bridge-troll",
+   "slug": {
+    "en": "bridge-troll",
+    "pt": "troll-da-ponte"
+   }
+  },
+  {
+   "appears": {
+    "how": "timed"
+   },
    "boss": true,
    "facts": [
     {
@@ -323,6 +380,9 @@
    }
   },
   {
+   "appears": {
+    "how": "timed"
+   },
    "boss": true,
    "facts": [
     {
@@ -837,6 +897,9 @@
    }
   },
   {
+   "appears": {
+    "how": "timed"
+   },
    "boss": true,
    "facts": [
     {
@@ -998,6 +1061,9 @@
    }
   },
   {
+   "appears": {
+    "how": "timed"
+   },
    "boss": true,
    "facts": [
     {
@@ -1191,6 +1257,9 @@
    }
   },
   {
+   "appears": {
+    "how": "timed"
+   },
    "boss": true,
    "facts": [
     {
@@ -1221,6 +1290,56 @@
    "slug": {
     "en": "mateo-the-bandit",
     "pt": "mateo-o-bandido"
+   }
+  },
+  {
+   "appears": {
+    "how": "placed",
+    "where": {
+     "link": "https://map.opengea.tech/#2.AgCeBB8GAQ0BAQEAABTkiGP3zcxLLSpLBAA",
+     "place": {
+      "near": {
+       "en": "Myrtle's House",
+       "pt": "Casa de Myrtle"
+      },
+      "town": {
+       "en": "Dorosam",
+       "pt": "Dorosam"
+      },
+      "underground": false
+     }
+    }
+   },
+   "boss": true,
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "5.000"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "5.000"
+    }
+   ],
+   "icon": "/icons/monsters/minerva.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Minerva",
+    "pt": "Minerva"
+   },
+   "ref": "monster:minerva",
+   "slug": {
+    "en": "minerva",
+    "pt": "minerva"
    }
   },
   {
@@ -1897,6 +2016,57 @@
    }
   },
   {
+   "appears": {
+    "how": "lever",
+    "place": "place:lever-2917",
+    "where": {
+     "link": "https://map.opengea.tech/#2.AgCCAd4EBgEPAQEBAAAUCCICY_VJLUstAgA",
+     "place": {
+      "near": {
+       "en": "The Citadel",
+       "pt": "A Cidadela"
+      },
+      "town": {
+       "en": "Nordha",
+       "pt": "Nordha"
+      },
+      "underground": false
+     }
+    }
+   },
+   "boss": true,
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "2.000"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "875"
+    }
+   ],
+   "icon": "/icons/monsters/queen-zoe.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Queen Zoe",
+    "pt": "Rainha Zoe"
+   },
+   "ref": "monster:queen-zoe",
+   "slug": {
+    "en": "queen-zoe",
+    "pt": "rainha-zoe"
+   }
+  },
+  {
    "facts": [
     {
      "label": {
@@ -2054,6 +2224,43 @@
    "slug": {
     "en": "sheep",
     "pt": "ovelha"
+   }
+  },
+  {
+   "appears": {
+    "how": "travel",
+    "via": "npc:a288"
+   },
+   "boss": true,
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "500"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "250"
+    }
+   ],
+   "icon": "/icons/monsters/skal-brawler.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Skal Brawler",
+    "pt": "Brigão Skal"
+   },
+   "ref": "monster:skal-brawler",
+   "slug": {
+    "en": "skal-brawler",
+    "pt": "brigao-skal"
    }
   },
   {
@@ -2313,6 +2520,9 @@
    }
   },
   {
+   "appears": {
+    "how": "timed"
+   },
    "boss": true,
    "facts": [
     {
@@ -2379,6 +2589,9 @@
    }
   },
   {
+   "appears": {
+    "how": "timed"
+   },
    "boss": true,
    "facts": [
     {
@@ -2412,6 +2625,9 @@
    }
   },
   {
+   "appears": {
+    "how": "timed"
+   },
    "boss": true,
    "facts": [
     {
@@ -2445,6 +2661,9 @@
    }
   },
   {
+   "appears": {
+    "how": "timed"
+   },
    "boss": true,
    "facts": [
     {
@@ -2539,6 +2758,57 @@
    "slug": {
     "en": "titan",
     "pt": "tita"
+   }
+  },
+  {
+   "appears": {
+    "how": "lever",
+    "place": "place:lever-2651",
+    "where": {
+     "link": "https://map.opengea.tech/#2.AgC6AsYCBgEEAQEBAAAUKiJj9UktSy0CAA",
+     "place": {
+      "near": {
+       "en": "East Nordha Mines",
+       "pt": "Minas de Nordha Oriental"
+      },
+      "town": {
+       "en": "East Nordha",
+       "pt": "Nordha Oriental"
+      },
+      "underground": false
+     }
+    }
+   },
+   "boss": true,
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "500"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "35"
+    }
+   ],
+   "icon": "/icons/monsters/tock.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Tock",
+    "pt": "Tock"
+   },
+   "ref": "monster:tock",
+   "slug": {
+    "en": "tock",
+    "pt": "tock"
    }
   },
   {
@@ -2766,6 +3036,9 @@
    }
   },
   {
+   "appears": {
+    "how": "timed"
+   },
    "facts": [
     {
      "label": {
@@ -3518,6 +3791,22 @@
    }
   },
   {
+   "icon": "/icons/npcs/berk.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Berk",
+    "pt": "Berk"
+   },
+   "ref": "npc:a288",
+   "slug": {
+    "en": "berk",
+    "pt": "berk"
+   }
+  },
+  {
    "icon": "/icons/npcs/egemen.png",
    "iconSize": [
     64,
@@ -4091,6 +4380,51 @@
    "slug": {
     "en": "jebidiah",
     "pt": "jebidiah"
+   }
+  },
+  {
+   "name": {
+    "en": "Lever near East Nordha Mines",
+    "pt": "Alavanca perto de Minas de Nordha Oriental"
+   },
+   "ref": "place:lever-2651",
+   "slug": {
+    "en": "lever-near-east-nordha-mines",
+    "pt": "alavanca-perto-de-minas-de-nordha-oriental"
+   },
+   "summary": {
+    "en": "A lever in East Nordha.",
+    "pt": "Uma alavanca em Nordha Oriental."
+   }
+  },
+  {
+   "name": {
+    "en": "Lever near Royal Bridge",
+    "pt": "Alavanca perto de Ponte Real"
+   },
+   "ref": "place:lever-2877",
+   "slug": {
+    "en": "lever-near-royal-bridge",
+    "pt": "alavanca-perto-de-ponte-real"
+   },
+   "summary": {
+    "en": "A lever in Dorosam.",
+    "pt": "Uma alavanca em Dorosam."
+   }
+  },
+  {
+   "name": {
+    "en": "Lever near The Citadel",
+    "pt": "Alavanca perto de A Cidadela"
+   },
+   "ref": "place:lever-2917",
+   "slug": {
+    "en": "lever-near-the-citadel",
+    "pt": "alavanca-perto-de-a-cidadela"
+   },
+   "summary": {
+    "en": "A lever in Nordha.",
+    "pt": "Uma alavanca em Nordha."
    }
   },
   {

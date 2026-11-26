@@ -25,6 +25,8 @@ export const CONTENT_KINDS: Record<string, EntityKind> = { guides: "guide", buil
 
 export const ITEMS = itemsJson as unknown as ItemsFile;
 const STUBS = (entitiesJson as unknown as { entities: StubEntity[] }).entities;
+/** A stub by its ref (a monster's `appears`, a lever place): for what the item pages show beside a link. */
+export const STUB_BY_REF: ReadonlyMap<string, StubEntity> = new Map(STUBS.map((e) => [e.ref, e]));
 
 type ContentEntry = { id: string; body?: string; data: { key: string; title: string; description: string; related?: string[] } };
 

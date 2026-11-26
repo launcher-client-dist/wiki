@@ -431,6 +431,10 @@
   "en": "dark-beads",
   "pt": "contas-sombrias"
  },
+ "item:dark-dagger": {
+  "en": "dark-dagger",
+  "pt": "adaga-sombria"
+ },
  "item:dark-hood": {
   "en": "dark-hood",
   "pt": "capuz-sombrio"
@@ -919,9 +923,17 @@
   "en": "mireling-armor",
   "pt": "armadura-mireling"
  },
+ "item:mireling-boots": {
+  "en": "mireling-boots",
+  "pt": "botas-de-mireling"
+ },
  "item:mireling-helmet": {
   "en": "mireling-helmet",
   "pt": "elmo-de-mireling"
+ },
+ "item:mireling-legs": {
+  "en": "mireling-legs",
+  "pt": "pernas-de-mireling"
  },
  "item:monk-habit": {
   "en": "monk-habit",
@@ -1643,6 +1655,10 @@
   "en": "white-rune-uruz",
   "pt": "runa-branca-uruz"
  },
+ "item:wig-piece": {
+  "en": "wig-piece",
+  "pt": "pedaco-de-peruca"
+ },
  "item:wilfred-package": {
   "en": "wilfred-package",
   "pt": "pacote-de-wilfred"
@@ -1783,6 +1799,10 @@
   "en": "bone-eater",
   "pt": "devorador-de-ossos"
  },
+ "monster:bridge-troll": {
+  "en": "bridge-troll",
+  "pt": "troll-da-ponte"
+ },
  "monster:brother-rossi": {
   "en": "brother-rossi",
   "pt": "irmao-rossi"
@@ -1899,6 +1919,10 @@
   "en": "mateo-the-bandit",
   "pt": "mateo-o-bandido"
  },
+ "monster:minerva": {
+  "en": "minerva",
+  "pt": "minerva"
+ },
  "monster:minotaur": {
   "en": "minotaur",
   "pt": "minotauro"
@@ -1983,6 +2007,10 @@
   "en": "profaner",
   "pt": "profanador"
  },
+ "monster:queen-zoe": {
+  "en": "queen-zoe",
+  "pt": "rainha-zoe"
+ },
  "monster:rat": {
   "en": "rat",
   "pt": "rato"
@@ -2002,6 +2030,10 @@
  "monster:sheep": {
   "en": "sheep",
   "pt": "ovelha"
+ },
+ "monster:skal-brawler": {
+  "en": "skal-brawler",
+  "pt": "brigao-skal"
  },
  "monster:skal-traitor": {
   "en": "skal-traitor",
@@ -2062,6 +2094,10 @@
  "monster:titan": {
   "en": "titan",
   "pt": "tita"
+ },
+ "monster:tock": {
+  "en": "tock",
+  "pt": "tock"
  },
  "monster:tomb-diviner": {
   "en": "tomb-diviner",
@@ -2267,6 +2303,10 @@
   "en": "a-blind-botanist",
   "pt": "um-botanico-cego"
  },
+ "npc:a288": {
+  "en": "berk",
+  "pt": "berk"
+ },
  "npc:a290": {
   "en": "egemen",
   "pt": "egemen"
@@ -2410,6 +2450,18 @@
  "npc:a98": {
   "en": "jebidiah",
   "pt": "jebidiah"
+ },
+ "place:lever-2651": {
+  "en": "lever-near-east-nordha-mines",
+  "pt": "alavanca-perto-de-minas-de-nordha-oriental"
+ },
+ "place:lever-2877": {
+  "en": "lever-near-royal-bridge",
+  "pt": "alavanca-perto-de-ponte-real"
+ },
+ "place:lever-2917": {
+  "en": "lever-near-the-citadel",
+  "pt": "alavanca-perto-de-a-cidadela"
  },
  "quest:q1": {
   "en": "goblin-cave-quest",

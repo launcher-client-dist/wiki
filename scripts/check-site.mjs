@@ -200,6 +200,14 @@ if (!pages.get("/en/404/")?.noindex) fail("/en/404/", "missing or not noindex");
     const html = pages.get(`/pt/itens/${i.slug.pt}/`)?.html ?? "";
     if (!html.includes('data-section="statlist"') || !html.includes('src="/ui/stat-')) fail(`/pt/itens/${i.slug.pt}/`, "has stats but no stat list with the game's icons");
   }
+  // a monster that isn't an ordinary spawn (a lever boss, a timed boss, a placed or travel-called one) says how it appears
+  const stubs = new Map(JSON.parse(readFileSync(new URL("../src/data/entities.json", import.meta.url), "utf8")).entities.map((e) => [e.ref, e]));
+  for (const i of itemsFile.items) {
+    const hows = new Set(i.sources.drops.map((d) => stubs.get(d.monster)?.appears?.how).filter(Boolean));
+    for (const how of hows) for (const url of [`/pt/itens/${i.slug.pt}/`, `/en/items/${i.slug.en}/`]) {
+      if (!pages.get(url)?.html.includes(`data-appears="${how}"`)) fail(url, `a drop from a "${how}" monster without its how-it-appears line`);
+    }
+  }
   // the list's class filter carries the traits line too
   for (const url of ["/pt/itens/", "/en/items/"]) {
     if (!/class="vnote"[^>]*>(Não inclui efeitos de traits|Trait effects not included)/.test(pages.get(url)?.html ?? "")) fail(url, "the class filter without the traits line");

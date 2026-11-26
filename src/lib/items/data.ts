@@ -124,7 +124,18 @@ export interface StubEntity {
   iconSize?: [number, number];
   facts?: { label: Localized; value: string }[];
   boss?: boolean;
+  /** One or two sentences for its hover card (a lever's place). */
+  summary?: Localized;
+  /** How a monster that doesn't come from an ordinary spawn point appears (no field: an ordinary spawn). */
+  appears?: MonsterAppears;
 }
+
+/** A monster's way into the world, when it isn't an ordinary spawn point. */
+export type MonsterAppears =
+  | { how: "timed" }
+  | { how: "placed"; where: Where }
+  | { how: "lever"; place: EntityRef; where: Where }
+  | { how: "travel"; via: EntityRef };
 
 export function itemRef(id: string): EntityRef {
   return `item:${id}`;
@@ -218,6 +229,7 @@ export function entitiesFromData(file: ItemsFile, stubs: readonly StubEntity[]):
       name: s.name,
       slug: s.slug,
       ...(s.icon && s.iconSize ? { icon: { src: s.icon, width: s.iconSize[0], height: s.iconSize[1] } } : {}),
+      ...(s.summary ? { summary: s.summary } : {}),
       ...(s.facts ? { facts: s.facts.map((f) => (STUB_FACT_ICON[f.label.en] ? { ...f, icon: STUB_FACT_ICON[f.label.en] } : f)) } : {}),
       relations: dedupe(rel.get(s.ref) ?? []),
     });

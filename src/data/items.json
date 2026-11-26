@@ -529,6 +529,7 @@
      "crystal-ring",
      "crystal-staff",
      "cutlass",
+     "dark-dagger",
      "dark-orb",
      "deer-charm",
      "diamond-ring",
@@ -986,6 +987,7 @@
      "cloth-pants",
      "crossbow",
      "cutlass",
+     "dark-dagger",
      "dark-legs",
      "double-axe",
      "epee",
@@ -1001,6 +1003,7 @@
      "lineage-shield",
      "longbow",
      "longsword",
+     "mireling-legs",
      "morning-star",
      "old-axe",
      "old-gloves",
@@ -1402,6 +1405,8 @@
      "iron-boots",
      "leather-boots",
      "leather-cuisse",
+     "mireling-boots",
+     "mireling-legs",
      "onyx-boots",
      "onyx-legs",
      "plated-boots",
@@ -1730,6 +1735,7 @@
      "crossbow",
      "cutlass",
      "dark-armor",
+     "dark-dagger",
      "double-axe",
      "epee",
      "gambeson",
@@ -3135,6 +3141,15 @@
        1,
        1
       ],
+      "monster": "monster:minerva",
+      "quality": false,
+      "tier": "raro"
+     },
+     {
+      "amount": [
+       1,
+       1
+      ],
       "monster": "monster:thug",
       "quality": false,
       "tier": "raro"
@@ -4268,6 +4283,15 @@
        1
       ],
       "monster": "monster:frozen-chest",
+      "quality": true,
+      "tier": "raro"
+     },
+     {
+      "amount": [
+       1,
+       1
+      ],
+      "monster": "monster:minerva",
       "quality": true,
       "tier": "raro"
      },
@@ -5785,6 +5809,15 @@
        1
       ],
       "monster": "monster:ghoul",
+      "quality": true,
+      "tier": "muito-raro"
+     },
+     {
+      "amount": [
+       1,
+       1
+      ],
+      "monster": "monster:skal-brawler",
       "quality": true,
       "tier": "muito-raro"
      }
@@ -10521,6 +10554,7 @@
      "crystal-ring",
      "crystal-staff",
      "cutlass",
+     "dark-dagger",
      "dark-orb",
      "deer-charm",
      "diamond-ring",
@@ -10769,6 +10803,7 @@
      "leather-cuisse",
      "magician-hat",
      "mireling-helmet",
+     "mireling-legs",
      "monk-habit",
      "nightshade-kilt",
      "onyx-helmet",
@@ -10957,6 +10992,7 @@
      "crystal-ring",
      "crystal-staff",
      "cutlass",
+     "dark-dagger",
      "dark-orb",
      "deer-charm",
      "diamond-ring",
@@ -28492,6 +28528,15 @@
        1,
        1
       ],
+      "monster": "monster:minerva",
+      "quality": false,
+      "tier": "incomum"
+     },
+     {
+      "amount": [
+       1,
+       1
+      ],
       "monster": "monster:conquest-priestess",
       "quality": false,
       "tier": "raro"
@@ -34973,6 +35018,298 @@
    ]
   },
   {
+   "category": "weapon",
+   "forgeable": true,
+   "icon": "/icons/items/563.png",
+   "id": "dark-dagger",
+   "name": {
+    "en": "Dark Dagger",
+    "pt": "Adaga Sombria"
+   },
+   "primary": 563,
+   "slots": [
+    "hands"
+   ],
+   "slug": {
+    "en": "dark-dagger",
+    "pt": "adaga-sombria"
+   },
+   "sources": {
+    "buyers": [],
+    "conjured": [],
+    "drops": [
+     {
+      "amount": [
+       1,
+       1
+      ],
+      "monster": "monster:queen-zoe",
+      "quality": true,
+      "tier": "raro"
+     }
+    ],
+    "leftover": [],
+    "map": [],
+    "quests": [],
+    "recipes": [],
+    "shops": []
+   },
+   "subtype": {
+    "en": "Daggers & Knives",
+    "key": "Daggers",
+    "pt": "Adagas e Facas"
+   },
+   "types": [
+    563
+   ],
+   "uses": {
+    "leavesEmpty": [],
+    "questsRequire": [],
+    "recipes": []
+   },
+   "value": {
+    "npcPays": null,
+    "npcSells": null
+   },
+   "versions": [
+    {
+     "classes": {
+      "knight": {
+       "attackSpeed": -1,
+       "defense": 5,
+       "health": 50,
+       "mana": -25
+      },
+      "mage": {
+       "attackSpeed": -1,
+       "defense": 3,
+       "health": 19,
+       "mana": -100
+      },
+      "rogue": {
+       "attackSpeed": -1,
+       "defense": 3,
+       "health": 25,
+       "mana": -63
+      },
+      "squire": {
+       "attackSpeed": -1,
+       "defense": 3,
+       "health": 25,
+       "mana": -50
+      }
+     },
+     "icon": "/icons/items/563.png",
+     "iconSize": [
+      17,
+      26
+     ],
+     "qualities": [
+      {
+       "classes": {
+        "knight": {
+         "attackSpeed": -1,
+         "defense": 5,
+         "health": 50,
+         "mana": -25
+        },
+        "mage": {
+         "attackSpeed": -1,
+         "defense": 3,
+         "health": 19,
+         "mana": -100
+        },
+        "rogue": {
+         "attackSpeed": -1,
+         "defense": 3,
+         "health": 25,
+         "mana": -63
+        },
+        "squire": {
+         "attackSpeed": -1,
+         "defense": 3,
+         "health": 25,
+         "mana": -50
+        }
+       },
+       "rarity": 0,
+       "stats": {
+        "attackSpeed": -1,
+        "damage": 9,
+        "defense": 3,
+        "health": 25,
+        "mana": -50,
+        "range": 14
+       },
+       "weight": 34.0
+      },
+      {
+       "classes": {
+        "knight": {
+         "attackSpeed": -1,
+         "defense": 5,
+         "health": 60,
+         "mana": -20
+        },
+        "mage": {
+         "attackSpeed": -1,
+         "defense": 3,
+         "health": 23,
+         "mana": -80
+        },
+        "rogue": {
+         "attackSpeed": -1,
+         "defense": 3,
+         "health": 30,
+         "mana": -50
+        },
+        "squire": {
+         "attackSpeed": -1,
+         "defense": 3,
+         "health": 30,
+         "mana": -40
+        }
+       },
+       "rarity": 1,
+       "stats": {
+        "attackSpeed": -1,
+        "damage": 9,
+        "defense": 3,
+        "health": 30,
+        "mana": -40,
+        "range": 14
+       },
+       "weight": 27.2
+      },
+      {
+       "classes": {
+        "knight": {
+         "defense": 6,
+         "health": 64,
+         "mana": -18
+        },
+        "mage": {
+         "defense": 3,
+         "health": 24,
+         "mana": -72
+        },
+        "rogue": {
+         "defense": 3,
+         "health": 32,
+         "mana": -45
+        },
+        "squire": {
+         "defense": 4,
+         "health": 32,
+         "mana": -36
+        }
+       },
+       "rarity": 2,
+       "stats": {
+        "damage": 10,
+        "defense": 4,
+        "health": 32,
+        "mana": -36,
+        "range": 14
+       },
+       "weight": 23.8
+      },
+      {
+       "classes": {
+        "knight": {
+         "attackSpeed": 1,
+         "defense": 8,
+         "health": 70,
+         "mana": -16
+        },
+        "mage": {
+         "attackSpeed": 1,
+         "defense": 4,
+         "health": 27,
+         "mana": -62
+        },
+        "rogue": {
+         "attackSpeed": 2,
+         "defense": 4,
+         "health": 35,
+         "mana": -39
+        },
+        "squire": {
+         "attackSpeed": 1,
+         "defense": 5,
+         "health": 35,
+         "mana": -31
+        }
+       },
+       "rarity": 3,
+       "stats": {
+        "attackSpeed": 1,
+        "damage": 11,
+        "defense": 5,
+        "health": 35,
+        "mana": -31,
+        "range": 14
+       },
+       "weight": 20.4
+      },
+      {
+       "classes": {
+        "knight": {
+         "attackSpeed": 2,
+         "defense": 9,
+         "health": 74,
+         "mana": -13
+        },
+        "mage": {
+         "attackSpeed": 2,
+         "defense": 5,
+         "health": 28,
+         "mana": -50
+        },
+        "rogue": {
+         "attackSpeed": 3,
+         "defense": 5,
+         "health": 37,
+         "mana": -32
+        },
+        "squire": {
+         "attackSpeed": 2,
+         "defense": 6,
+         "health": 37,
+         "mana": -25
+        }
+       },
+       "rarity": 4,
+       "stats": {
+        "attackSpeed": 2,
+        "damage": 12,
+        "defense": 6,
+        "health": 37,
+        "mana": -25,
+        "range": 15
+       },
+       "weight": 17.0
+      }
+     ],
+     "stack": 1,
+     "stats": {
+      "attackSpeed": -1,
+      "damage": 9,
+      "defense": 3,
+      "health": 25,
+      "mana": -50,
+      "range": 14
+     },
+     "text": {
+      "en": "A red gem holds it together.",
+      "pt": "Uma gema vermelha a mantém unida."
+     },
+     "type": 563,
+     "weight": 34.0
+    }
+   ]
+  },
+  {
    "armourClass": "light",
    "category": "armour",
    "forgeable": true,
@@ -35839,6 +36176,15 @@
        1,
        1
       ],
+      "monster": "monster:queen-zoe",
+      "quality": true,
+      "tier": "comum"
+     },
+     {
+      "amount": [
+       1,
+       1
+      ],
       "monster": "monster:the-broodmother",
       "quality": true,
       "tier": "incomum"
@@ -36178,6 +36524,7 @@
      "crystal-ring",
      "crystal-staff",
      "cutlass",
+     "dark-dagger",
      "dark-orb",
      "deer-charm",
      "diamond-ring",
@@ -39054,6 +39401,15 @@
        1
       ],
       "monster": "monster:banshee",
+      "quality": true,
+      "tier": "raro"
+     },
+     {
+      "amount": [
+       1,
+       1
+      ],
+      "monster": "monster:minerva",
       "quality": true,
       "tier": "raro"
      },
@@ -41985,6 +42341,15 @@
        1
       ],
       "monster": "monster:occultist-scholar",
+      "quality": false,
+      "tier": "incomum"
+     },
+     {
+      "amount": [
+       1,
+       1
+      ],
+      "monster": "monster:queen-zoe",
       "quality": false,
       "tier": "incomum"
      },
@@ -45403,6 +45768,15 @@
      },
      {
       "amount": [
+       2,
+       6
+      ],
+      "monster": "monster:bridge-troll",
+      "quality": false,
+      "tier": "sempre"
+     },
+     {
+      "amount": [
        1,
        5
       ],
@@ -45673,6 +46047,15 @@
      },
      {
       "amount": [
+       3,
+       16
+      ],
+      "monster": "monster:queen-zoe",
+      "quality": false,
+      "tier": "sempre"
+     },
+     {
+      "amount": [
        1,
        2
       ],
@@ -45704,6 +46087,15 @@
        7
       ],
       "monster": "monster:rubellus",
+      "quality": false,
+      "tier": "sempre"
+     },
+     {
+      "amount": [
+       2,
+       6
+      ],
+      "monster": "monster:skal-brawler",
       "quality": false,
       "tier": "sempre"
      },
@@ -45889,6 +46281,15 @@
      },
      {
       "amount": [
+       6,
+       25
+      ],
+      "monster": "monster:minerva",
+      "quality": false,
+      "tier": "comum"
+     },
+     {
+      "amount": [
        7,
        19
       ],
@@ -45983,6 +46384,15 @@
        10
       ],
       "monster": "monster:thug",
+      "quality": false,
+      "tier": "comum"
+     },
+     {
+      "amount": [
+       1,
+       2
+      ],
+      "monster": "monster:tock",
       "quality": false,
       "tier": "comum"
      },
@@ -50148,6 +50558,7 @@
      "crystal-ring",
      "crystal-staff",
      "cutlass",
+     "dark-dagger",
      "dark-orb",
      "deer-charm",
      "diamond-ring",
@@ -50720,6 +51131,7 @@
      "crooked-vest",
      "crossbow",
      "dark-armor",
+     "dark-dagger",
      "dark-legs",
      "gambeson",
      "iron-gloves",
@@ -50729,6 +51141,7 @@
      "leather-gloves",
      "longbow",
      "mireling-armor",
+     "mireling-legs",
      "old-gloves",
      "onyx-armor",
      "onyx-dagger",
@@ -50880,6 +51293,7 @@
      "crossbow",
      "cutlass",
      "dark-armor",
+     "dark-dagger",
      "epee",
      "gambeson",
      "iron-gloves",
@@ -56144,6 +56558,15 @@
        1,
        1
       ],
+      "monster": "monster:bridge-troll",
+      "quality": false,
+      "tier": "incomum"
+     },
+     {
+      "amount": [
+       1,
+       1
+      ],
       "monster": "monster:cave-troll",
       "quality": false,
       "tier": "incomum"
@@ -59650,6 +60073,15 @@
      {
       "amount": [
        1,
+       2
+      ],
+      "monster": "monster:bridge-troll",
+      "quality": false,
+      "tier": "comum"
+     },
+     {
+      "amount": [
+       1,
        1
       ],
       "monster": "monster:cave-troll",
@@ -61522,6 +61954,15 @@
        1
       ],
       "monster": "monster:bone-eater",
+      "quality": true,
+      "tier": "incomum"
+     },
+     {
+      "amount": [
+       1,
+       1
+      ],
+      "monster": "monster:bridge-troll",
       "quality": true,
       "tier": "incomum"
      },
@@ -70704,6 +71145,15 @@
      },
      {
       "amount": [
+       3,
+       3
+      ],
+      "monster": "monster:queen-zoe",
+      "quality": false,
+      "tier": "sempre"
+     },
+     {
+      "amount": [
        1,
        1
       ],
@@ -72645,6 +73095,208 @@
    "armourClass": "heavy",
    "category": "armour",
    "forgeable": true,
+   "icon": "/icons/items/524.png",
+   "id": "mireling-boots",
+   "name": {
+    "en": "Mireling Boots",
+    "pt": "Botas de Mireling"
+   },
+   "primary": 524,
+   "slots": [
+    "feet"
+   ],
+   "slug": {
+    "en": "mireling-boots",
+    "pt": "botas-de-mireling"
+   },
+   "sources": {
+    "buyers": [],
+    "conjured": [],
+    "drops": [
+     {
+      "amount": [
+       1,
+       1
+      ],
+      "monster": "monster:queen-zoe",
+      "quality": true,
+      "tier": "raro"
+     }
+    ],
+    "leftover": [],
+    "map": [],
+    "quests": [],
+    "recipes": [],
+    "shops": []
+   },
+   "subtype": {
+    "en": "Heavy Boots",
+    "key": "HeavyBoots",
+    "pt": "Botas Pesadas"
+   },
+   "types": [
+    524
+   ],
+   "uses": {
+    "leavesEmpty": [],
+    "questsRequire": [],
+    "recipes": []
+   },
+   "value": {
+    "npcPays": null,
+    "npcSells": null
+   },
+   "versions": [
+    {
+     "classes": {
+      "knight": {
+       "armor": 3
+      },
+      "mage": {
+       "armor": 2
+      },
+      "rogue": {
+       "armor": 2
+      },
+      "squire": {
+       "armor": 2
+      }
+     },
+     "icon": "/icons/items/524.png",
+     "iconSize": [
+      23,
+      26
+     ],
+     "qualities": [
+      {
+       "classes": {
+        "knight": {
+         "armor": 3
+        },
+        "mage": {
+         "armor": 2
+        },
+        "rogue": {
+         "armor": 2
+        },
+        "squire": {
+         "armor": 2
+        }
+       },
+       "rarity": 0,
+       "stats": {
+        "armor": 2,
+        "magic": 1
+       },
+       "weight": 29.0
+      },
+      {
+       "classes": {
+        "knight": {
+         "armor": 3
+        },
+        "mage": {
+         "armor": 2
+        },
+        "rogue": {
+         "armor": 2
+        },
+        "squire": {
+         "armor": 2
+        }
+       },
+       "rarity": 1,
+       "stats": {
+        "armor": 2,
+        "magic": 1
+       },
+       "weight": 23.2
+      },
+      {
+       "classes": {
+        "knight": {
+         "armor": 5
+        },
+        "mage": {
+         "armor": 3
+        },
+        "rogue": {
+         "armor": 3
+        },
+        "squire": {
+         "armor": 3
+        }
+       },
+       "rarity": 2,
+       "stats": {
+        "armor": 3,
+        "magic": 2
+       },
+       "weight": 20.3
+      },
+      {
+       "classes": {
+        "knight": {
+         "armor": 5
+        },
+        "mage": {
+         "armor": 3
+        },
+        "rogue": {
+         "armor": 3
+        },
+        "squire": {
+         "armor": 3
+        }
+       },
+       "rarity": 3,
+       "stats": {
+        "armor": 3,
+        "magic": 3
+       },
+       "weight": 17.4
+      },
+      {
+       "classes": {
+        "knight": {
+         "armor": 5
+        },
+        "mage": {
+         "armor": 3
+        },
+        "rogue": {
+         "armor": 3
+        },
+        "squire": {
+         "armor": 3
+        }
+       },
+       "rarity": 4,
+       "stats": {
+        "armor": 3,
+        "magic": 4
+       },
+       "weight": 14.5
+      }
+     ],
+     "stack": 1,
+     "stats": {
+      "armor": 2,
+      "magic": 1
+     },
+     "text": {
+      "en": "",
+      "pt": ""
+     },
+     "type": 524,
+     "weight": 29.0
+    }
+   ]
+  },
+  {
+   "armourClass": "heavy",
+   "category": "armour",
+   "forgeable": true,
    "icon": "/icons/items/521.png",
    "id": "mireling-helmet",
    "name": {
@@ -72903,6 +73555,208 @@
      },
      "type": 521,
      "weight": 27.0
+    }
+   ]
+  },
+  {
+   "armourClass": "heavy",
+   "category": "armour",
+   "forgeable": true,
+   "icon": "/icons/items/523.png",
+   "id": "mireling-legs",
+   "name": {
+    "en": "Mireling Legs",
+    "pt": "Pernas de Mireling"
+   },
+   "primary": 523,
+   "slots": [
+    "legs"
+   ],
+   "slug": {
+    "en": "mireling-legs",
+    "pt": "pernas-de-mireling"
+   },
+   "sources": {
+    "buyers": [],
+    "conjured": [],
+    "drops": [
+     {
+      "amount": [
+       1,
+       1
+      ],
+      "monster": "monster:minerva",
+      "quality": true,
+      "tier": "raro"
+     }
+    ],
+    "leftover": [],
+    "map": [],
+    "quests": [],
+    "recipes": [],
+    "shops": []
+   },
+   "subtype": {
+    "en": "Heavy Legs",
+    "key": "HeavyLegs",
+    "pt": "Pernas Pesadas"
+   },
+   "types": [
+    523
+   ],
+   "uses": {
+    "leavesEmpty": [],
+    "questsRequire": [],
+    "recipes": []
+   },
+   "value": {
+    "npcPays": null,
+    "npcSells": null
+   },
+   "versions": [
+    {
+     "classes": {
+      "knight": {
+       "armor": 9
+      },
+      "mage": {
+       "armor": 5
+      },
+      "rogue": {
+       "armor": 6
+      },
+      "squire": {
+       "armor": 6
+      }
+     },
+     "icon": "/icons/items/523.png",
+     "iconSize": [
+      25,
+      29
+     ],
+     "qualities": [
+      {
+       "classes": {
+        "knight": {
+         "armor": 9
+        },
+        "mage": {
+         "armor": 5
+        },
+        "rogue": {
+         "armor": 6
+        },
+        "squire": {
+         "armor": 6
+        }
+       },
+       "rarity": 0,
+       "stats": {
+        "armor": 6,
+        "skill": 2
+       },
+       "weight": 42.0
+      },
+      {
+       "classes": {
+        "knight": {
+         "armor": 9
+        },
+        "mage": {
+         "armor": 5
+        },
+        "rogue": {
+         "armor": 6
+        },
+        "squire": {
+         "armor": 6
+        }
+       },
+       "rarity": 1,
+       "stats": {
+        "armor": 6,
+        "skill": 2
+       },
+       "weight": 33.6
+      },
+      {
+       "classes": {
+        "knight": {
+         "armor": 11
+        },
+        "mage": {
+         "armor": 6
+        },
+        "rogue": {
+         "armor": 7
+        },
+        "squire": {
+         "armor": 7
+        }
+       },
+       "rarity": 2,
+       "stats": {
+        "armor": 7,
+        "skill": 3
+       },
+       "weight": 29.4
+      },
+      {
+       "classes": {
+        "knight": {
+         "armor": 12
+        },
+        "mage": {
+         "armor": 6
+        },
+        "rogue": {
+         "armor": 8
+        },
+        "squire": {
+         "armor": 8
+        }
+       },
+       "rarity": 3,
+       "stats": {
+        "armor": 8,
+        "skill": 4
+       },
+       "weight": 25.2
+      },
+      {
+       "classes": {
+        "knight": {
+         "armor": 12
+        },
+        "mage": {
+         "armor": 6
+        },
+        "rogue": {
+         "armor": 8
+        },
+        "squire": {
+         "armor": 8
+        }
+       },
+       "rarity": 4,
+       "stats": {
+        "armor": 8,
+        "skill": 5
+       },
+       "weight": 21.0
+      }
+     ],
+     "stack": 1,
+     "stats": {
+      "armor": 6,
+      "skill": 2
+     },
+     "text": {
+      "en": "",
+      "pt": ""
+     },
+     "type": 523,
+     "weight": 42.0
     }
    ]
   },
@@ -73774,6 +74628,15 @@
     ],
     "conjured": [],
     "drops": [
+     {
+      "amount": [
+       1,
+       1
+      ],
+      "monster": "monster:minerva",
+      "quality": false,
+      "tier": "incomum"
+     },
      {
       "amount": [
        1,
@@ -75012,6 +75875,15 @@
       "monster": "monster:rotwurm",
       "quality": true,
       "tier": "incomum"
+     },
+     {
+      "amount": [
+       1,
+       1
+      ],
+      "monster": "monster:tock",
+      "quality": true,
+      "tier": "muito-raro"
      }
     ],
     "leftover": [],
@@ -75427,6 +76299,15 @@
       "monster": "monster:cave-troll",
       "quality": true,
       "tier": "incomum"
+     },
+     {
+      "amount": [
+       1,
+       1
+      ],
+      "monster": "monster:bridge-troll",
+      "quality": true,
+      "tier": "raro"
      },
      {
       "amount": [
@@ -84428,6 +85309,15 @@
       "monster": "monster:plea",
       "quality": false,
       "tier": "comum"
+     },
+     {
+      "amount": [
+       1,
+       1
+      ],
+      "monster": "monster:tock",
+      "quality": false,
+      "tier": "raro"
      }
     ],
     "leftover": [],
@@ -87500,6 +88390,7 @@
      "crystal-ring",
      "crystal-staff",
      "cutlass",
+     "dark-dagger",
      "dark-orb",
      "deer-charm",
      "diamond-ring",
@@ -87925,6 +88816,7 @@
      "crystal-ring",
      "crystal-staff",
      "cutlass",
+     "dark-dagger",
      "dark-orb",
      "deer-charm",
      "diamond-ring",
@@ -88203,6 +89095,15 @@
        1
       ],
       "monster": "monster:banshee",
+      "quality": false,
+      "tier": "raro"
+     },
+     {
+      "amount": [
+       1,
+       1
+      ],
+      "monster": "monster:minerva",
       "quality": false,
       "tier": "raro"
      }
@@ -90401,6 +91302,15 @@
        1,
        1
       ],
+      "monster": "monster:bridge-troll",
+      "quality": false,
+      "tier": "comum"
+     },
+     {
+      "amount": [
+       1,
+       1
+      ],
       "monster": "monster:cave-troll",
       "quality": false,
       "tier": "comum"
@@ -92343,6 +93253,15 @@
        1,
        1
       ],
+      "monster": "monster:queen-zoe",
+      "quality": true,
+      "tier": "raro"
+     },
+     {
+      "amount": [
+       1,
+       1
+      ],
       "monster": "monster:crazed-occultist",
       "quality": true,
       "tier": "muito-raro"
@@ -92826,6 +93745,7 @@
      "crystal-ring",
      "crystal-staff",
      "cutlass",
+     "dark-dagger",
      "dark-orb",
      "deer-charm",
      "diamond-ring",
@@ -93225,6 +94145,8 @@
      "iron-boots",
      "leather-boots",
      "leather-cuisse",
+     "mireling-boots",
+     "mireling-legs",
      "onyx-boots",
      "onyx-legs",
      "plated-boots",
@@ -94198,6 +95120,15 @@
        1
       ],
       "monster": "monster:mateo-the-bandit",
+      "quality": false,
+      "tier": "incomum"
+     },
+     {
+      "amount": [
+       1,
+       1
+      ],
+      "monster": "monster:minerva",
       "quality": false,
       "tier": "incomum"
      },
@@ -97569,6 +98500,15 @@
        1
       ],
       "monster": "monster:banshee",
+      "quality": false,
+      "tier": "comum"
+     },
+     {
+      "amount": [
+       1,
+       1
+      ],
+      "monster": "monster:minerva",
       "quality": false,
       "tier": "comum"
      }
@@ -106093,6 +107033,15 @@
        1,
        1
       ],
+      "monster": "monster:skal-brawler",
+      "quality": false,
+      "tier": "sempre"
+     },
+     {
+      "amount": [
+       1,
+       1
+      ],
       "monster": "monster:skal-traitor",
       "quality": false,
       "tier": "incomum"
@@ -113285,12 +114234,30 @@
     "drops": [
      {
       "amount": [
+       2,
+       2
+      ],
+      "monster": "monster:queen-zoe",
+      "quality": false,
+      "tier": "sempre"
+     },
+     {
+      "amount": [
        1,
        2
       ],
       "monster": "monster:the-gardener",
       "quality": false,
       "tier": "sempre"
+     },
+     {
+      "amount": [
+       1,
+       1
+      ],
+      "monster": "monster:bridge-troll",
+      "quality": false,
+      "tier": "comum"
      },
      {
       "amount": [
@@ -120871,6 +121838,15 @@
        1,
        1
       ],
+      "monster": "monster:bridge-troll",
+      "quality": true,
+      "tier": "incomum"
+     },
+     {
+      "amount": [
+       1,
+       1
+      ],
       "monster": "monster:cave-troll",
       "quality": true,
       "tier": "incomum"
@@ -128005,6 +128981,7 @@
     "fitsItems": [
      "bone-knife",
      "brass-knuckles",
+     "dark-dagger",
      "dark-orb",
      "fur-boots",
      "green-orb",
@@ -128014,6 +128991,7 @@
      "leather-boots",
      "leather-gloves",
      "magician-shoes",
+     "mireling-boots",
      "old-gloves",
      "omen-shard",
      "onyx-boots",
@@ -128218,6 +129196,7 @@
      "crossbow",
      "crystal-ring",
      "cutlass",
+     "dark-dagger",
      "deer-charm",
      "diamond-ring",
      "double-axe",
@@ -128417,6 +129396,7 @@
      "leather-collar",
      "leather-cuisse",
      "mireling-helmet",
+     "mireling-legs",
      "onyx-helmet",
      "onyx-legs",
      "pearl-necklace",
@@ -128574,6 +129554,8 @@
      "leather-boots",
      "leather-cuisse",
      "magician-shoes",
+     "mireling-boots",
+     "mireling-legs",
      "nightshade-kilt",
      "onyx-boots",
      "onyx-legs",
@@ -128906,6 +129888,7 @@
      "crossbow",
      "cutlass",
      "dark-armor",
+     "dark-dagger",
      "double-axe",
      "epee",
      "gambeson",
@@ -129105,6 +130088,75 @@
      },
      "type": 396,
      "weight": 5.0
+    }
+   ]
+  },
+  {
+   "category": "quest",
+   "icon": "/icons/items/474.png",
+   "id": "wig-piece",
+   "name": {
+    "en": "Wig Piece",
+    "pt": "Pedaço de Peruca"
+   },
+   "primary": 474,
+   "slots": [],
+   "slug": {
+    "en": "wig-piece",
+    "pt": "pedaco-de-peruca"
+   },
+   "sources": {
+    "buyers": [],
+    "conjured": [],
+    "drops": [
+     {
+      "amount": [
+       1,
+       1
+      ],
+      "monster": "monster:tock",
+      "quality": false,
+      "tier": "sempre"
+     }
+    ],
+    "leftover": [],
+    "map": [],
+    "quests": [],
+    "recipes": [],
+    "shops": []
+   },
+   "subtype": {
+    "en": "Smuggled Items",
+    "key": "SmuggleItems",
+    "pt": "Itens Contrabandeados"
+   },
+   "types": [
+    474
+   ],
+   "uses": {
+    "leavesEmpty": [],
+    "questsRequire": [],
+    "recipes": []
+   },
+   "value": {
+    "npcPays": null,
+    "npcSells": null
+   },
+   "versions": [
+    {
+     "icon": "/icons/items/474.png",
+     "iconSize": [
+      16,
+      16
+     ],
+     "stack": 1,
+     "stats": {},
+     "text": {
+      "en": "It used to belong to Tock.",
+      "pt": "Costumava pertencer a Tock."
+     },
+     "type": 474,
+     "weight": 0.5
     }
    ]
   },
@@ -136630,6 +137682,7 @@
      "leather-collar",
      "leather-cuisse",
      "mireling-helmet",
+     "mireling-legs",
      "onyx-helmet",
      "onyx-legs",
      "pearl-necklace",
@@ -136769,6 +137822,7 @@
      "buckler",
      "crystal-ring",
      "cutlass",
+     "dark-dagger",
      "deer-charm",
      "diamond-ring",
      "epee",
@@ -136990,6 +138044,7 @@
      "crystal-ring",
      "crystal-staff",
      "cutlass",
+     "dark-dagger",
      "dark-orb",
      "deer-charm",
      "diamond-ring",
@@ -138551,6 +139606,15 @@
        1
       ],
       "monster": "monster:devil-spider",
+      "quality": true,
+      "tier": "raro"
+     },
+     {
+      "amount": [
+       1,
+       1
+      ],
+      "monster": "monster:queen-zoe",
       "quality": true,
       "tier": "raro"
      }
