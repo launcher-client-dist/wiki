@@ -168,10 +168,18 @@ if (!pages.get("/en/404/")?.noindex) fail("/en/404/", "missing or not noindex");
   for (const i of itemsFile.items) {
     for (const [list, section] of [[i.sources.shops, "shops-after-quest"], [i.sources.buyers, "buyers-after-quest"]]) {
       if (!list.some((s) => s.spoiler)) continue;
+      const alsoTitle = list.some((s) => !s.spoiler);   // "Também ..." only under an open list it adds to
       for (const url of [`/pt/itens/${i.slug.pt}/`, `/en/items/${i.slug.en}/`]) {
-        if (!pages.get(url)?.html.includes(`data-section="${section}"`)) fail(url, `a quest-opened NPC but no ${section} spoiler`);
+        const html = pages.get(url)?.html ?? "";
+        if (!html.includes(`data-section="${section}"`)) fail(url, `a quest-opened NPC but no ${section} spoiler`);
+        const also = section === "shops-after-quest" ? /Também vendido por|Also sold by/ : /Também comprado por|Also bought by/;
+        if (also.test(html) !== alsoTitle) fail(url, `${section}: the "also" title ${alsoTitle ? "is missing" : "shows with no open list above it"}`);
       }
     }
+  }
+  // the list's class filter carries the traits line too
+  for (const url of ["/pt/itens/", "/en/items/"]) {
+    if (!/class="vnote"[^>]*>(Não inclui efeitos de traits|Trait effects not included)/.test(pages.get(url)?.html ?? "")) fail(url, "the class filter without the traits line");
   }
   if (pages.has("/pt/kit/")) {
     const ingot = itemsFile.items.find((i) => i.id === "iron-ingot");

@@ -227,6 +227,8 @@ export const en: UiStrings = {
     spoilerQuestNeed: "Quests that ask for this item",
     spoilerShop: "Also sold by: appears after a quest",
     spoilerBuyer: "Also bought by: appears after a quest",
+    spoilerShopOnly: "Sold by: appears after a quest",
+    spoilerBuyerOnly: "Bought by: appears after a quest",
     afterQuest: "quest",
     or: "or",
     sellValue: "An NPC pays",

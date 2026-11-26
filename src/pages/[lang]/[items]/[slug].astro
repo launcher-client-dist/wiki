@@ -185,7 +185,7 @@ const jsonLd = [{
                 </ListPanel>
               )}
               {shopsGated.length > 0 && (
-                <Spoiler title={ti.spoilerShop}>
+                <Spoiler title={shopsOpen.length ? ti.spoilerShop : ti.spoilerShopOnly}>
                   <ul class="plain gated" data-section="shops-after-quest">
                     {shopsGated.map((s) => <li><EntityLink to={s.npc} /> · <span class="num">{num(s.price, lang)}</span> {ti.gold}{s.where && <> · <MapLink variant="inline" href={s.where.link} label={ti.mapLink} /></>}{s.afterQuests.length > 0 && <span class="q">{ti.afterQuest}: {s.afterQuests.map((q, i) => <>{i > 0 && ` ${ti.or} `}<EntityLink to={q} /></>)}</span>}</li>)}
                   </ul>
@@ -278,7 +278,7 @@ const jsonLd = [{
                 </ListPanel>
               )}
               {buyersGated.length > 0 && (
-                <Spoiler title={ti.spoilerBuyer}>
+                <Spoiler title={buyersOpen.length ? ti.spoilerBuyer : ti.spoilerBuyerOnly}>
                   <ul class="plain gated" data-section="buyers-after-quest">
                     {buyersGated.map((b) => <li><EntityLink to={b.npc} /> · <span class="num">{num(b.price, lang)}</span> {ti.gold}{b.where && <> · <MapLink variant="inline" href={b.where.link} label={ti.mapLink} /></>}{b.afterQuests.length > 0 && <span class="q">{ti.afterQuest}: {b.afterQuests.map((q, i) => <>{i > 0 && ` ${ti.or} `}<EntityLink to={q} /></>)}</span>}</li>)}
                   </ul>

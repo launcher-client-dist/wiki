@@ -225,6 +225,8 @@ export const pt = {
     spoilerQuestNeed: "Missões que pedem este item",
     spoilerShop: "Também vendido por: aparece depois de uma missão",
     spoilerBuyer: "Também comprado por: aparece depois de uma missão",
+    spoilerShopOnly: "Vendido por: aparece depois de uma missão",
+    spoilerBuyerOnly: "Comprado por: aparece depois de uma missão",
     afterQuest: "missão",
     or: "ou",
     sellValue: "Um NPC paga",
