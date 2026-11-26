@@ -96,7 +96,7 @@ const CLASSED: StatKey[] = ["armor", "defense", "attackSpeed", "health", "mana",
             <DataCell label={ti.colWeight} align="end" hideOnPhone><span class="num v v-oz">{oz(v.weight, lang)}</span></DataCell>
             <DataCell label={ti.colValue} align="end">{item.value.npcPays ? <span class="num v v-gold">{num(item.value.npcPays, lang)}</span> : <span class="nil">—</span>}</DataCell>
             <DataCell label={ti.colGoldOz} align="end" hideOnPhone>{goldPerOz(item) ? <span class="num v v-gold">{num(goldPerOz(item)!, lang)}</span> : <span class="nil">—</span>}</DataCell>
-            <DataCell label={ti.colWhere}><span class="where">{sourceKinds(item).map((k) => <span class="srcb" title={ti.source[k]}><img src={`/ui/${SOURCE_ICON[k]}.png`} width={UI[SOURCE_ICON[k]!]![0]! * 2} height={UI[SOURCE_ICON[k]!]![1]! * 2} alt={ti.source[k]} class="px" /></span>)}{sourceKinds(item).length > 4 && <span class="more" aria-hidden="true" title={sourceKinds(item).slice(3).map((k) => ti.source[k]).join(", ")}>+{sourceKinds(item).length - 3}</span>}</span></DataCell>
+            <DataCell label={ti.colWhere}><span class:list={["where", { many: sourceKinds(item).length > 4 }]}>{sourceKinds(item).map((k) => <span class="srcb" title={ti.source[k]}><img src={`/ui/${SOURCE_ICON[k]}.png`} width={UI[SOURCE_ICON[k]!]![0]! * 2} height={UI[SOURCE_ICON[k]!]![1]! * 2} alt={ti.source[k]} class="px" /></span>)}{sourceKinds(item).length > 4 && <span class="more" aria-hidden="true" title={sourceKinds(item).slice(3).map((k) => ti.source[k]).join(", ")}>+{sourceKinds(item).length - 3}</span>}</span></DataCell>
           </DataRow>
         );
       })}
@@ -120,7 +120,7 @@ const CLASSED: StatKey[] = ["armor", "defense", "attackSpeed", "health", "mana",
   .items-page .nil { color: var(--text-faint); }
   /* where it comes from: one line, four badges at most; five show three and "+2" (the rest stay for screen readers) */
   .items-page .where { display: inline-flex; flex-wrap: nowrap; gap: 4px; align-items: center; }
-  .items-page .where:has(.more) .srcb:nth-child(n+4) { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .items-page .where.many .srcb:nth-child(n+4) { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
   .items-page .more { display: inline-flex; align-items: center; justify-content: center; height: 26px; min-width: 26px; padding: 0 4px; border-radius: 6px;
     font: 700 var(--fs-xs) / 1 var(--font-num); color: var(--text-muted); border: 1px dashed var(--border-strong); }
   /* the table view: the name column takes the room left, every other column is as wide as its header or its values */
