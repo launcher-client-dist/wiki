@@ -1,0 +1,38 @@
+---
+/**
+ * Hidden until opened. A native <details>, so it works with the keyboard and without JavaScript. Its text is left out
+ * of search (data-pagefind-ignore) and never belongs in a page's description or social card.
+ */
+import { ui } from "../../i18n/index.ts";
+import { isLang, DEFAULT_LANG } from "../../lib/i18n.ts";
+import Icon from "./Icon.astro";
+interface Props {
+  title?: string;
+}
+const t = ui(isLang(Astro.params.lang) ? Astro.params.lang : DEFAULT_LANG);
+const { title = t.spoilerDefault } = Astro.props;
+---
+<details class="spoiler" data-pagefind-ignore="all">
+  <summary>
+    <Icon name="eyeOff" size={18} class="closed-icon" /><Icon name="eye" size={18} class="open-icon" />
+    <span class="title">{title}</span>
+    <span class="hint"><span class="closed">{t.spoilerShow}</span><span class="opened">{t.spoilerHide}</span></span>
+  </summary>
+  <div class="body"><slot /></div>
+</details>
+<style>
+  .spoiler { border-radius: var(--r-l); border: var(--bw) dashed var(--callout-warn); background: var(--surface); overflow: hidden; }
+  summary { list-style: none; display: flex; align-items: center; gap: 10px; padding: 14px 16px; cursor: pointer; font-weight: 700; color: var(--heading); }
+  summary::-webkit-details-marker { display: none; }
+  summary :global(.icon) { color: var(--callout-warn); }
+  .hint { margin-left: auto; font-size: var(--fs-sm); font-weight: 500; color: var(--text-muted); }
+  .spoiler:not([open]) :global(.open-icon), .spoiler[open] :global(.closed-icon),
+  .spoiler:not([open]) .opened, .spoiler[open] .closed { display: none; }
+  .spoiler[open] { border-style: solid; }
+  .body { padding: 0 16px 16px; }
+  .body :global(p) { margin: 0; }
+  @media (prefers-reduced-motion: no-preference) {
+    .spoiler[open] .body { animation: reveal var(--t-med) var(--ease); }
+  }
+  @keyframes reveal { from { filter: blur(6px); opacity: 0; } to { filter: none; opacity: 1; } }
+</style>

@@ -1,0 +1,47 @@
+---
+/**
+ * A link to any entity, by ref: <EntityLink to="item:arbalest" />.
+ *
+ * - The entity's page exists (its kind shipped): a real link with icon and hover card.
+ * - Not yet: the same icon, name and hover card, as a button that opens the card on tap or Enter (no dead link).
+ * - Unknown ref: the build fails, naming the ref.
+ *
+ * The card's content travels in a <template> next to the link (left out of search) and HoverCard.astro shows it.
+ */
+import { getRegistry } from "../../lib/site-registry.ts";
+import { isLang, DEFAULT_LANG, type Lang } from "../../lib/i18n.ts";
+import IconSlot from "../ui/IconSlot.astro";
+import HoverCardBody from "./HoverCardBody.astro";
+
+interface Props {
+  to: string;
+  lang?: Lang;
+  /** Text to show instead of the entity's name. */
+  label?: string;
+  icon?: boolean;
+}
+const lang: Lang = Astro.props.lang ?? (isLang(Astro.params.lang) ? Astro.params.lang : DEFAULT_LANG);
+const registry = await getRegistry();
+const info = registry.link(Astro.props.to, lang);
+const { label, icon = true } = Astro.props;
+const text = label ?? info.name;
+---
+<span class="elink-wrap">{info.href ? (
+  <a class="elink" href={info.href} data-hc>{icon && <IconSlot icon={info.icon} kind={info.kind} size={22} framed={false} />}<span class="elink-text">{text}</span></a>
+) : (
+  <button type="button" class="elink elink--pending" data-hc aria-expanded="false">{icon && <IconSlot icon={info.icon} kind={info.kind} size={22} framed={false} />}<span class="elink-text">{text}</span></button>
+)}<template data-hc-tpl data-pagefind-ignore="all"><HoverCardBody info={info} /></template></span>
+<style>
+  .elink-wrap { display: inline; }
+  .elink {
+    display: inline-flex; align-items: center; gap: 4px; vertical-align: bottom; max-width: 100%;
+    font: inherit; font-weight: 600; color: var(--link); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px;
+  }
+  .elink:hover { color: var(--link-hover); }
+  .elink--pending {
+    appearance: none; background: none; border: 0; padding: 0; cursor: help; color: var(--text);
+    text-decoration-style: dotted; text-decoration-color: var(--text-faint);
+  }
+  .elink--pending:hover, .elink--pending[aria-expanded="true"] { color: var(--heading); text-decoration-color: currentColor; }
+  .elink-text { overflow-wrap: anywhere; }
+</style>

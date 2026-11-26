@@ -8,12 +8,14 @@
   },
   "scripts": {
     "dev": "astro dev",
+    "kit": "node scripts/with-kit.mjs astro dev",
     "build": "astro build && pagefind --site dist",
+    "build:kit": "node scripts/with-kit.mjs astro build",
     "preview": "astro preview",
     "test": "node --test \"tests/**/*.test.ts\"",
     "check:types": "astro check",
     "check:site": "node scripts/check-site.mjs",
-    "verify": "npm test && npm run check:types && npm run build && npm run check:site"
+    "verify": "npm test && npm run check:types && npm run build:kit && npm run check:site && npm run build && npm run check:site"
   },
   "dependencies": {
     "@astrojs/mdx": "^8.1.6",

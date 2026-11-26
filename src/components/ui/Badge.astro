@@ -1,0 +1,16 @@
+---
+/** A tiny uppercase marker: "em breve", "chefe", "novo", a count. */
+interface Props {
+  tone?: "soon" | "boss" | "new" | "count";
+}
+const { tone = "soon" } = Astro.props;
+---
+<span class:list={["badge", `badge--${tone}`]}><slot /></span>
+<style>
+  .badge { display: inline-flex; align-items: center; height: 20px; padding: 0 6px; border-radius: var(--r-xs);
+    font: 800 0.625rem / 1 var(--font-body); letter-spacing: 0.08em; text-transform: uppercase; white-space: nowrap; vertical-align: middle; }
+  .badge--soon { border: var(--bw) dashed var(--border-strong); color: var(--text-faint); }
+  .badge--boss { border: var(--bw) solid currentColor; color: var(--danger); }
+  .badge--new { background: var(--sun); color: var(--on-sun); border: var(--bw) solid var(--hard); }
+  .badge--count { background: var(--surface-2); color: var(--text-muted); letter-spacing: 0; font-family: var(--font-num); }
+</style>

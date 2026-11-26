@@ -1,0 +1,62 @@
+---
+import { ui } from "../../i18n/index.ts";
+import { LANGS, HREFLANG, type Lang } from "../../lib/i18n.ts";
+import { homePath, NAV_KINDS, sectionPath, SHIPPED_KINDS, type Alternates } from "../../lib/routes.ts";
+import PixelArt from "../ui/PixelArt.astro";
+interface Props {
+  lang: Lang;
+  alternates: Alternates;
+}
+const { lang, alternates } = Astro.props;
+const t = ui(lang);
+const year = 2026;
+---
+<footer class="site-footer">
+  <div class="grass" aria-hidden="true"></div>
+  <div class="container cols">
+    <div class="about">
+      <a class="brand" href={homePath(lang)}><PixelArt logo size={30} /><span>Opengea Wiki</span></a>
+      <p>{t.footerAbout}</p>
+    </div>
+    <nav aria-label={t.footerExplore}>
+      <h2>{t.footerExplore}</h2>
+      <ul>
+        {NAV_KINDS.filter((k) => SHIPPED_KINDS.includes(k)).map((k) => <li><a href={sectionPath(k, lang)}>{t.kindPlural[k]}</a></li>)}
+        <li><a href={homePath(lang)}>{t.home}</a></li>
+      </ul>
+    </nav>
+    <nav aria-label={t.footerTools}>
+      <h2>{t.footerTools}</h2>
+      <ul>
+        <li><a href="https://map.opengea.tech/" rel="noopener">{t.footerMap}</a></li>
+        <li><button type="button" class="linkish" data-open-search>{t.footerSearch} <kbd>Ctrl K</kbd></button></li>
+      </ul>
+    </nav>
+    <nav aria-label={t.footerLanguage}>
+      <h2>{t.footerLanguage}</h2>
+      <ul>
+        {LANGS.map((l) => <li><a href={alternates[l]} hreflang={HREFLANG[l]} lang={HREFLANG[l]} aria-current={l === lang ? "true" : undefined}>{ui(l).langName}</a></li>)}
+      </ul>
+    </nav>
+  </div>
+  <div class="container legal">
+    <span>© {year} Opengea Wiki</span>
+    <span>{t.footerFonts}</span>
+  </div>
+</footer>
+<style>
+  .site-footer { margin-top: var(--s-8); background: var(--bg-deep); border-top: var(--bw) solid var(--hard); color: var(--text-muted); font-size: var(--fs-sm); }
+  .grass { height: 14px; background: repeating-linear-gradient(90deg, var(--grass-a) 0 14px, var(--grass-b) 14px 28px); border-bottom: var(--bw) solid var(--hard); margin-top: -1px; }
+  .cols { display: grid; gap: var(--s-5); grid-template-columns: 1fr 1fr; padding-top: var(--s-6); padding-bottom: var(--s-5); }
+  .about { grid-column: 1 / -1; }
+  @media (min-width: 820px) { .cols { grid-template-columns: 2fr 1fr 1fr 1fr; } .about { grid-column: auto; } }
+  .brand { display: inline-flex; align-items: center; gap: 10px; color: var(--heading); text-decoration: none; font: 600 1.25rem / 1 var(--font-display); }
+  .about p { margin: 12px 0 0; max-width: 34ch; }
+  h2 { font: 800 var(--fs-xs) / 1 var(--font-body); letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-faint); text-shadow: none; margin-bottom: 10px; }
+  ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+  a, .linkish { color: var(--text-muted); text-decoration: none; }
+  a:hover, .linkish:hover { color: var(--link); text-decoration: underline; }
+  a[aria-current="true"] { color: var(--heading); font-weight: 700; }
+  .linkish { background: none; border: 0; padding: 0; cursor: pointer; font: inherit; display: inline-flex; gap: 8px; align-items: center; }
+  .legal { display: flex; flex-wrap: wrap; gap: 6px 20px; justify-content: space-between; padding-top: var(--s-4); padding-bottom: var(--s-6); border-top: 1px solid var(--row-border); font-size: var(--fs-xs); color: var(--text-faint); }
+</style>

@@ -1,0 +1,137 @@
+---
+import PageShell from "../../components/layout/PageShell.astro";
+import Card from "../../components/ui/Card.astro";
+import PixelArt from "../../components/ui/PixelArt.astro";
+import Icon from "../../components/ui/Icon.astro";
+import Tag from "../../components/ui/Tag.astro";
+import EntityLink from "../../components/entity/EntityLink.astro";
+import { ui } from "../../i18n/index.ts";
+import { LANGS, type Lang } from "../../lib/i18n.ts";
+import { absoluteUrl, homeAlternates, NAV_KINDS, sectionPath, SHIPPED_KINDS } from "../../lib/routes.ts";
+import { siteData } from "../../lib/site-registry.ts";
+
+export function getStaticPaths() {
+  return LANGS.map((lang) => ({ params: { lang } }));
+}
+const lang = Astro.params.lang as Lang;
+const t = ui(lang);
+const { guides } = await siteData();
+const myGuides = guides.filter((g) => g.lang === lang);
+const counts: Partial<Record<string, number>> = { guide: myGuides.length };
+const jsonLd = [{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: t.siteName,
+  url: absoluteUrl(`/${lang}/`),
+  inLanguage: lang === "pt" ? "pt-BR" : "en",
+  description: t.siteDescription,
+  potentialAction: {
+    "@type": "SearchAction",
+    target: { "@type": "EntryPoint", urlTemplate: `${absoluteUrl(`/${lang}/`)}?q={search_term_string}` },
+    "query-input": "required name=search_term_string",
+  },
+}];
+---
+<PageShell lang={lang} title={`${t.siteName}: ${t.siteTagline.charAt(0).toLowerCase()}${t.siteTagline.slice(1)}`} bareTitle description={t.siteDescription} alternates={homeAlternates()} jsonLd={jsonLd}>
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="sky" aria-hidden="true">
+      <span class="cloud c1"></span><span class="cloud c2"></span><span class="cloud c3"></span>
+      <span class="hill h1"></span><span class="hill h2"></span>
+    </div>
+    <div class="container inner">
+      <p class="kicker">{t.homeKicker}</p>
+      <h1 id="hero-title">Opengea <span>Wiki</span></h1>
+      <p class="lead">{t.homeLead}</p>
+      <button class="big-search" type="button" data-open-search aria-label={t.searchOpen}>
+        <Icon name="search" size={22} /><span class="ph">{t.searchHeroPlaceholder}</span><kbd>Ctrl K</kbd>
+      </button>
+    </div>
+    <div class="ground" aria-hidden="true"></div>
+  </section>
+
+  <div class="container">
+    <nav class="sections" aria-label={t.homeSectionsLabel}>
+      {NAV_KINDS.map((kind) => {
+        const shipped = SHIPPED_KINDS.includes(kind);
+        return (
+          <Card href={shipped ? sectionPath(kind, lang) : undefined} title={t.kindPlural[kind]} soon={shipped ? undefined : t.soon} headingLevel={2}>
+            <PixelArt slot="emblem" kind={kind} size={52} />
+            {t.kindBlurb[kind]}
+            {shipped && counts[kind] !== undefined && <Tag slot="footer" tone="sun">{`${counts[kind]} ${t.kindPlural[kind].toLowerCase()}`}</Tag>}
+          </Card>
+        );
+      })}
+    </nav>
+
+    <div class="row">
+      <section class="panel start" aria-labelledby="start-title">
+        <h2 id="start-title">{t.homeGuidesTitle}</h2>
+        <ul class="guide-list">
+          {myGuides.map((g) => (
+            <li>
+              <PixelArt kind="guide" size={28} />
+              <span class="g-text"><EntityLink to={g.ref} lang={lang} icon={false} /><span class="g-desc">{g.entry.data.description}</span></span>
+            </li>
+          ))}
+        </ul>
+      </section>
+      <aside class="panel about" aria-labelledby="about-title">
+        <h2 id="about-title">{t.homeAboutTitle}</h2>
+        <p>{t.homeAboutText}</p>
+        <h3>{t.homeShortcutsTitle}</h3>
+        <ul class="keys">
+          <li><span><kbd>Ctrl</kbd> <kbd>K</kbd> · <kbd>/</kbd></span>{t.homeShortcutSearch}</li>
+          <li><span class="key-icon"><Icon name="sun" size={16} /> <Icon name="moon" size={16} /></span>{t.homeShortcutTheme}</li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</PageShell>
+
+<style>
+  .hero { position: relative; overflow: hidden; isolation: isolate; background: linear-gradient(180deg, var(--sky-top) 0%, var(--sky-mid) 62%, var(--sky-bottom) 100%); border-bottom: var(--bw) solid var(--hard); }
+  .sky { position: absolute; inset: 0; z-index: -1; pointer-events: none; }
+  .cloud { position: absolute; height: 22px; background: var(--cloud); box-shadow: 22px -14px 0 0 var(--cloud), 44px 0 0 0 var(--cloud), 22px 0 0 0 var(--cloud); width: 44px; }
+  .c1 { top: 18%; left: 8%; }
+  .c2 { top: 30%; right: 12%; transform: scale(1.4); }
+  .c3 { top: 58%; left: 22%; transform: scale(0.8); opacity: 0.8; }
+  .hill { position: absolute; bottom: 30px; background: color-mix(in srgb, var(--grass-a) 45%, var(--sky-bottom)); border: var(--bw) solid var(--hard); border-bottom: 0; }
+  .h1 { left: -40px; width: 260px; height: 70px; box-shadow: 60px -30px 0 -20px color-mix(in srgb, var(--grass-a) 45%, var(--sky-bottom)); }
+  .h2 { right: -30px; width: 320px; height: 96px; }
+  .ground { height: 30px; background: repeating-linear-gradient(90deg, var(--grass-a) 0 30px, var(--grass-b) 30px 60px); border-top: var(--bw) solid var(--hard); }
+  .inner { padding-top: clamp(56px, 9vw, 112px); padding-bottom: clamp(64px, 10vw, 128px); text-align: center; }
+  .kicker { margin: 0 0 var(--s-3); font: 800 var(--fs-xs) / 1 var(--font-body); letter-spacing: 0.22em; text-transform: uppercase; color: var(--sun); text-shadow: 0 2px 0 var(--hard); }
+  :global(:root[data-theme="light"]) .kicker { color: #7a4a00; text-shadow: none; }
+  h1 { font-size: var(--fs-hero); color: var(--banner-text); text-shadow: 0 5px 0 var(--hard); margin-bottom: var(--s-4); }
+  :global(:root[data-theme="light"]) h1 { text-shadow: 0 4px 0 #fff; }
+  h1 span { color: var(--accent-text); }
+  :global(:root[data-theme="light"]) h1 span { color: var(--accent); }
+  .lead { max-width: 36rem; margin: 0 auto var(--s-5); font-size: var(--fs-lg); color: var(--banner-muted); }
+  .big-search {
+    width: min(100%, 640px); display: flex; align-items: center; gap: 14px; height: 64px; margin: 0 auto; padding: 0 14px 0 20px; cursor: text;
+    background: var(--surface); color: var(--text-muted); border: var(--bw) solid var(--hard); border-radius: var(--r-l); box-shadow: var(--shadow-3);
+    font: 500 1.0625rem / 1 var(--font-body); text-align: left; transition: transform var(--t-fast) var(--ease);
+  }
+  .big-search:hover { transform: translateY(-2px); }
+  .big-search :global(.icon) { color: var(--accent-text); }
+  .big-search kbd { margin-left: auto; }
+  .ph { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+  .sections { display: grid; gap: 18px; grid-template-columns: 1fr; margin-top: calc(-1 * var(--s-5)); position: relative; }
+  @media (min-width: 620px) { .sections { grid-template-columns: 1fr 1fr; } }
+  @media (min-width: 1000px) { .sections { grid-template-columns: repeat(3, 1fr); } }
+
+  .row { display: grid; gap: var(--s-5); margin-top: var(--s-7); }
+  @media (min-width: 1000px) { .row { grid-template-columns: 1.4fr 1fr; } }
+  .panel { padding: var(--s-5); background: var(--card-bg); border: var(--bw) solid var(--hard); border-radius: var(--r-l); box-shadow: var(--shadow-2); }
+  .panel h2 { font-size: 1.625rem; margin-bottom: var(--s-4); }
+  .panel h3 { font: 700 var(--fs-md) / 1.2 var(--font-body); margin: var(--s-5) 0 var(--s-3); color: var(--heading); }
+  .guide-list, .keys { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+  .guide-list li { display: flex; gap: 12px; align-items: flex-start; padding: 12px; border: var(--bw) solid var(--border); border-radius: var(--r-m); background: var(--surface-2); }
+  .g-text { display: flex; flex-direction: column; gap: 4px; min-width: 0; font-size: 1.0625rem; }
+  .g-desc { font-size: var(--fs-sm); color: var(--text-muted); }
+  .about p { color: var(--text-muted); }
+  .keys li { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; font-size: var(--fs-sm); color: var(--text-muted); }
+  .keys li > span { min-width: 120px; color: var(--text); }
+  .key-icon { display: inline-flex; gap: 6px; }
+</style>

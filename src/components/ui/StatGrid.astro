@@ -1,0 +1,33 @@
+---
+/** Key numbers in a grid of cells: label (with an optional icon) over a big value. */
+import Icon from "./Icon.astro";
+export interface Stat {
+  label: string;
+  value: string;
+  icon?: Parameters<typeof Icon>[0]["name"];
+  wide?: boolean;
+  note?: string;
+}
+interface Props {
+  stats: Stat[];
+  columns?: 2 | 3 | 4;
+}
+const { stats, columns = 2 } = Astro.props;
+---
+<dl class="stat-grid" style={`--cols:${columns}`}>
+  {stats.map((s) => (
+    <div class:list={["stat", { wide: s.wide }]}>
+      <dt>{s.icon && <Icon name={s.icon} size={14} />}{s.label}</dt>
+      <dd class="num">{s.value}{s.note && <small>{s.note}</small>}</dd>
+    </div>
+  ))}
+</dl>
+<style>
+  .stat-grid { display: grid; grid-template-columns: repeat(var(--cols), minmax(0, 1fr)); gap: var(--bw); margin: 0; background: var(--hard); }
+  .stat { background: var(--card-bg); padding: 12px 14px; display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+  .stat.wide { grid-column: 1 / -1; }
+  dt { display: flex; align-items: center; gap: 6px; font-size: var(--fs-xs); color: var(--text-muted); }
+  dt :global(.icon) { color: var(--sun); }
+  dd { margin: 0; font-size: 1.375rem; font-weight: 700; color: var(--heading); line-height: 1.2; overflow-wrap: anywhere; }
+  small { margin-left: 6px; font-size: var(--fs-xs); font-weight: 500; color: var(--text-muted); }
+</style>

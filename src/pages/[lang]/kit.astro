@@ -1,0 +1,147 @@
+---
+/**
+ * The component gallery: every building block with made-up fixture data, in both themes and languages.
+ * Built only with WIKI_KIT=1 (`npm run kit`, and `npm run verify` builds it once so it keeps compiling);
+ * never in the deployed site, never indexed.
+ */
+import PageShell from "../../components/layout/PageShell.astro";
+import Tag from "../../components/ui/Tag.astro";
+import Badge from "../../components/ui/Badge.astro";
+import Chip from "../../components/ui/Chip.astro";
+import TierBadge from "../../components/ui/TierBadge.astro";
+import Callout from "../../components/ui/Callout.astro";
+import Spoiler from "../../components/ui/Spoiler.astro";
+import Tabs from "../../components/ui/Tabs.astro";
+import Card from "../../components/ui/Card.astro";
+import InfoBox from "../../components/ui/InfoBox.astro";
+import StatGrid from "../../components/ui/StatGrid.astro";
+import Figure from "../../components/ui/Figure.astro";
+import MapLink from "../../components/ui/MapLink.astro";
+import IconSlot from "../../components/ui/IconSlot.astro";
+import RenderSlot from "../../components/ui/RenderSlot.astro";
+import PixelArt from "../../components/ui/PixelArt.astro";
+import EntityLink from "../../components/entity/EntityLink.astro";
+import ReverseRefs from "../../components/entity/ReverseRefs.astro";
+import DataTable from "../../components/data/DataTable.astro";
+import DataRow from "../../components/data/DataRow.astro";
+import DataCell from "../../components/data/DataCell.astro";
+import { ui } from "../../i18n/index.ts";
+import { LANGS, otherLang, type Lang } from "../../lib/i18n.ts";
+import { ENTITY_KINDS } from "../../lib/entities/types.ts";
+import { TIERS } from "../../lib/entities/tiers.ts";
+import { getRegistry, KIT_ENABLED } from "../../lib/site-registry.ts";
+import { homePath } from "../../lib/routes.ts";
+
+export function getStaticPaths() {
+  return KIT_ENABLED ? LANGS.map((lang) => ({ params: { lang } })) : [];
+}
+const lang = Astro.params.lang as Lang;
+const t = ui(lang);
+const registry = await getRegistry();
+const fixtures = registry.all().filter((e) => !e.ref.startsWith("guide:"));
+const L = (pt: string, en: string) => (lang === "pt" ? pt : en);
+const kinds = [...new Set(fixtures.map((e) => e.ref.split(":")[0]!))];
+const swatches = ["--bg", "--surface", "--surface-2", "--accent", "--sky", "--sun", "--danger", "--magic", "--text", "--text-muted", "--hard", "--border"];
+const scene = `data:image/svg+xml,${encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 24" shape-rendering="crispEdges"><rect width="64" height="24" fill="#7cc4ff"/><rect y="8" width="64" height="16" fill="#b9e0ff"/><rect x="6" y="4" width="8" height="2" fill="#fff"/><rect x="8" y="2" width="4" height="2" fill="#fff"/><rect x="44" y="6" width="10" height="2" fill="#fff"/><rect y="16" width="20" height="8" fill="#5cb733"/><rect x="20" y="18" width="44" height="6" fill="#4fa52a"/><rect x="40" y="12" width="12" height="6" fill="#4fa52a"/><rect y="22" width="64" height="2" fill="#8a5a2b"/></svg>')}`;
+---
+<PageShell lang={lang} title={L("Componentes", "Components")} description={L("Galeria de componentes da wiki, com dados inventados.", "The wiki's component gallery, every block with made-up data.")}
+  alternates={{ pt: "/pt/kit/", en: "/en/kit/" }} noindex
+  crumbs={[{ label: t.home, href: homePath(lang) }, { label: L("Componentes", "Components") }]}>
+  <div class="container kit">
+    <h1>{L("Componentes", "Components")}</h1>
+    <p class="lede">{L("Tudo aqui usa dados inventados (tests/fixtures). Os tokens vêm de src/styles/tokens.css.", "Everything here uses made-up data (tests/fixtures). Tokens come from src/styles/tokens.css.")}</p>
+
+    <section><h2>Tokens</h2>
+      <div class="swatches">{swatches.map((v) => <div class="sw"><span style={`background:var(${v})`}></span><code>{v}</code></div>)}</div>
+      <div class="kinds">{ENTITY_KINDS.map((k) => <span class="kind"><PixelArt kind={k} size={40} /><small>{t.kindSingular[k]}</small></span>)}</div>
+    </section>
+
+    <section><h2>{L("Etiquetas, chips e selos", "Tags, chips and badges")}</h2>
+      <div class="row">
+        <Tag icon="pin">Tag</Tag><Tag tone="accent">accent</Tag><Tag tone="sun">sun</Tag><Tag tone="placeholder">placeholder</Tag><Tag tone="danger">danger</Tag>
+        <Badge tone="soon">{t.soon}</Badge><Badge tone="boss">boss</Badge><Badge tone="new">new</Badge><Badge tone="count">12</Badge>
+      </div>
+      <div class="row"><Chip count={4}>Chip</Chip><Chip pressed count={2}>{L("Ligado", "On")}</Chip><Chip href="#tiers">Link</Chip></div>
+      <div class="row" id="tiers">{TIERS.map((tier) => <TierBadge tier={tier} />)}</div>
+    </section>
+
+    <section><h2>{L("Links de entidades", "Entity links")}</h2>
+      <p class="demo">
+        {L("Com página:", "With a page:")} <EntityLink to="guide:glossary" />.
+        {L("Sem página ainda (toque para ver a ficha):", "No page yet (tap to see the card):")} <EntityLink to="item:example-blade" />, <EntityLink to="monster:test-slime" />, <EntityLink to="monster:practice-golem" />.
+      </p>
+      <h3>{L("Referências reversas de", "Reverse references of")} <EntityLink to="item:sample-ore" /></h3>
+      <ReverseRefs of="item:sample-ore" />
+    </section>
+
+    <section><h2>{L("Avisos e spoiler", "Callouts and spoiler")}</h2>
+      <div class="stack">
+        <Callout type="info"><p>{L("Uma nota.", "A note.")}</p></Callout>
+        <Callout type="tip"><p>{L("Uma dica.", "A tip.")}</p></Callout>
+        <Callout type="warn"><p>{L("Um aviso.", "A warning.")}</p></Callout>
+        <Spoiler title={L("Segredo de exemplo", "Example secret")}><p>{L("O texto escondido.", "The hidden text.")}</p></Spoiler>
+      </div>
+    </section>
+
+    <section><h2>Tabs</h2>
+      <Tabs label="Tabs" tabs={[{ id: "a", label: L("Primeira", "First"), count: 2 }, { id: "b", label: L("Segunda", "Second"), count: 1 }]}>
+        <p slot="a">{L("Conteúdo da primeira aba.", "First tab content.")}</p>
+        <p slot="b">{L("Conteúdo da segunda aba.", "Second tab content.")}</p>
+      </Tabs>
+    </section>
+
+    <section><h2>{L("Ficha, cartões e imagens", "Info box, cards and pictures")}</h2>
+      <div class="split">
+        <InfoBox title={L("Ficha", "Sheet")}>
+          <RenderSlot slot="media" alt={registry.link("monster:test-slime", lang).name} size={220} />
+          <StatGrid stats={[{ label: L("Vida", "Health"), value: "300", icon: "heart" }, { label: "Exp", value: "120", icon: "star" }, { label: L("Dano", "Damage"), value: "18", icon: "sword" }, { label: L("Defesa", "Defense"), value: "9", icon: "shield" }]} />
+          <MapLink slot="actions" href="https://map.opengea.tech/" />
+          <span slot="footer">{L("Dados inventados", "Made-up data")}</span>
+        </InfoBox>
+        <div class="stack">
+          <Card href="#" title="Card" kicker="Kicker" layout="row"><PixelArt slot="emblem" kind="item" size={34} />{L("Um cartão com link.", "A linked card.")}</Card>
+          <Card title={L("Em breve", "Soon")} soon={t.soon} layout="row"><PixelArt slot="emblem" kind="quest" size={34} />{L("Uma seção que ainda não abriu.", "A section not open yet.")}</Card>
+          <div class="row">{[24, 32, 44, 64].map((s) => <IconSlot icon={registry.link("item:sample-potion", lang).icon} kind="item" size={s} />)}<IconSlot kind="monster" size={44} /></div>
+          <Figure src={scene} alt={L("Uma paisagem de exemplo em pixels", "A sample pixel landscape")} width={640} height={240} pixel caption={L("Figura com legenda", "A figure with a caption")} />
+          <MapLink variant="inline" href="https://map.opengea.tech/" />
+        </div>
+      </div>
+    </section>
+
+    <section><h2>DataTable</h2>
+      <DataTable id="kit-table" lang={lang} caption={L("Entidades de exemplo", "Example entities")} total={fixtures.length} sort={{ key: "name", dir: "asc" }}
+        columns={[{ key: "name", label: L("Nome", "Name") }, { key: "kind", label: L("Tipo", "Kind") }, { key: "refs", label: L("Citado por", "Referenced by"), align: "end" }, { key: "other", label: ui(otherLang(lang)).langName, sortable: false, hideOnPhone: true }]}
+        filters={[{ key: "kind", label: L("Tipo", "Kind"), options: kinds.map((k) => ({ value: k, label: t.kindSingular[k as keyof typeof t.kindSingular], count: fixtures.filter((e) => e.ref.startsWith(`${k}:`)).length })) }]}>
+        {fixtures.map((e) => {
+          const info = registry.link(e.ref, lang);
+          const n = registry.reverse(e.ref).length;
+          return (
+            <DataRow search={`${e.name.pt} ${e.name.en}`} sort={{ name: info.name, kind: info.kind, refs: n }} filters={{ kind: info.kind }}>
+              <DataCell label={L("Nome", "Name")} primary><span class="name-cell"><IconSlot icon={info.icon} kind={info.kind} size={36} /><EntityLink to={e.ref} icon={false} /></span></DataCell>
+              <DataCell label={L("Tipo", "Kind")}>{t.kindSingular[info.kind]}</DataCell>
+              <DataCell label={L("Citado por", "Referenced by")} align="end"><span class="num">{n}</span></DataCell>
+              <DataCell label={ui(otherLang(lang)).langName} hideOnPhone><span class="muted">{info.altName ?? "—"}</span></DataCell>
+            </DataRow>
+          );
+        })}
+      </DataTable>
+    </section>
+  </div>
+</PageShell>
+<style>
+  .kit section { margin-top: var(--s-7); }
+  .kit h2 { margin-bottom: var(--s-4); }
+  .kit h3 { margin: var(--s-5) 0 var(--s-3); font: 700 var(--fs-lg) / 1.3 var(--font-body); }
+  .lede { color: var(--text-muted); }
+  .row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 12px; }
+  .stack { display: grid; gap: 14px; align-content: start; }
+  .split { display: grid; gap: var(--s-5); }
+  @media (min-width: 900px) { .split { grid-template-columns: 340px 1fr; } }
+  .swatches { display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+  .sw { display: flex; align-items: center; gap: 8px; font-size: var(--fs-xs); }
+  .sw span { width: 32px; height: 32px; border: var(--bw) solid var(--hard); border-radius: var(--r-s); box-shadow: var(--shadow-1); }
+  .kinds { display: flex; flex-wrap: wrap; gap: 18px; margin-top: var(--s-5); }
+  .kind { display: grid; justify-items: center; gap: 6px; color: var(--text-muted); }
+  .demo { line-height: 2.2; }
+  .name-cell { display: inline-flex; align-items: center; gap: 10px; }
+</style>

@@ -1,0 +1,30 @@
+---
+/** A link to the interactive map (map.opengea.tech), opening in a new tab. Other hosts fail the build. */
+import { ui } from "../../i18n/index.ts";
+import { isLang, DEFAULT_LANG } from "../../lib/i18n.ts";
+import Icon from "./Icon.astro";
+interface Props {
+  href: string;
+  variant?: "button" | "inline";
+  label?: string;
+}
+const t = ui(isLang(Astro.params.lang) ? Astro.params.lang : DEFAULT_LANG);
+const { href, variant = "button", label = t.mapOpen } = Astro.props;
+const url = new URL(href);
+if (url.hostname !== "map.opengea.tech" || url.protocol !== "https:") throw new Error(`MapLink only links to https://map.opengea.tech (got ${href})`);
+---
+<a class:list={["maplink", `maplink--${variant}`]} href={url.href} target="_blank" rel="noopener" aria-label={`${label} (${t.mapOpenNew})`}>
+  <Icon name="map" size={variant === "button" ? 18 : 16} /><span>{label}</span><Icon name="external" size={14} class="ext" />
+</a>
+<style>
+  .maplink { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; font-weight: 700; }
+  .maplink--button {
+    height: 44px; padding: 0 16px; border-radius: var(--r-m); background: var(--accent); color: var(--on-accent);
+    border: var(--bw) solid var(--hard); box-shadow: var(--shadow-1); transition: transform var(--t-fast) var(--ease), box-shadow var(--t-fast);
+  }
+  .maplink--button:hover { background: var(--accent-hover); color: var(--on-accent); }
+  .maplink--button:active { transform: translateY(2px); box-shadow: 0 1px 0 var(--hard); }
+  .maplink--inline { color: var(--link); font-size: var(--fs-sm); }
+  .maplink--inline:hover { color: var(--link-hover); text-decoration: underline; }
+  .ext { opacity: 0.8; }
+</style>

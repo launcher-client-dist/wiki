@@ -1,0 +1,53 @@
+---
+import PageShell from "../../../components/layout/PageShell.astro";
+import Card from "../../../components/ui/Card.astro";
+import PixelArt from "../../../components/ui/PixelArt.astro";
+import Icon from "../../../components/ui/Icon.astro";
+import { ui, fill } from "../../../i18n/index.ts";
+import { LANGS, type Lang } from "../../../lib/i18n.ts";
+import { homePath, SECTIONS, sectionAlternates, sectionPath } from "../../../lib/routes.ts";
+import { siteData } from "../../../lib/site-registry.ts";
+
+export function getStaticPaths() {
+  return LANGS.map((lang) => ({ params: { lang, guides: SECTIONS.guide.slug[lang] } }));
+}
+const lang = Astro.params.lang as Lang;
+const t = ui(lang);
+const { registry, guides } = await siteData();
+const mine = guides.filter((g) => g.lang === lang);
+const words = (body?: string) => (body ?? "").split(/\s+/).filter(Boolean).length;
+const fmt = new Intl.DateTimeFormat(lang === "pt" ? "pt-BR" : "en", { dateStyle: "medium", timeZone: "UTC" });
+---
+<PageShell lang={lang} title={t.kindPlural.guide} description={t.guidesIntro} alternates={sectionAlternates("guide")} current="guide"
+  searchable={{ kind: "guide" }}
+  crumbs={[{ label: t.home, href: homePath(lang) }, { label: t.kindPlural.guide, href: sectionPath("guide", lang) }]}>
+  <div class="container">
+    <header class="page-head">
+      <PixelArt kind="guide" size={64} />
+      <div>
+        <h1>{t.kindPlural.guide}</h1>
+        <p>{t.guidesIntro}</p>
+      </div>
+    </header>
+    <div class="grid">
+      {mine.map((g) => (
+        <Card href={registry.url(g.ref, lang)!} title={g.entry.data.title} layout="row" headingLevel={2}>
+          <PixelArt slot="emblem" kind="guide" size={36} />
+          {g.entry.data.description}
+          <span slot="footer" class="meta">
+            <span><Icon name="clock" size={14} /> {fill(t.readingTime, { n: Math.max(1, Math.round(words(g.entry.body) / 200)) })}</span>
+            <span><Icon name="calendar" size={14} /> <time datetime={g.entry.data.updated.toISOString().slice(0, 10)}>{fmt.format(g.entry.data.updated)}</time></span>
+          </span>
+        </Card>
+      ))}
+    </div>
+  </div>
+</PageShell>
+<style>
+  .page-head { display: flex; gap: var(--s-5); align-items: center; margin-bottom: var(--s-6); }
+  .page-head p { margin: 8px 0 0; color: var(--text-muted); max-width: 40rem; font-size: var(--fs-lg); }
+  .grid { display: grid; gap: 18px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 420px), 1fr)); }
+  .meta { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: var(--fs-xs); color: var(--text-faint); }
+  .meta span { display: inline-flex; align-items: center; gap: 5px; }
+  @media (max-width: 520px) { .page-head { flex-direction: column; align-items: flex-start; gap: var(--s-3); } }
+</style>

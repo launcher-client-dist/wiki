@@ -1,0 +1,237 @@
+---
+/**
+ * A list of entities: sortable columns, filter chips, a name filter, a table/grid view toggle, cards at phone width
+ * and an empty state. Rows are <DataRow> children; the grid and phone cards are the same rows restyled (no copies).
+ *
+ *   <DataTable id="items" columns={[...]} filters={[...]} lang="pt">
+ *     <DataRow search="..." sort={{ name: "...", hp: 300 }} filters={{ region: ["north"] }}>
+ *       <DataCell col="name" primary>...</DataCell> ...
+ *     </DataRow>
+ *   </DataTable>
+ */
+import { ui, fill } from "../../i18n/index.ts";
+import type { Lang } from "../../lib/i18n.ts";
+import Icon from "../ui/Icon.astro";
+import Chip from "../ui/Chip.astro";
+
+export interface Column {
+  key: string;
+  label: string;
+  align?: "start" | "end";
+  sortable?: boolean;
+  /** Left out of the phone cards (the column stays in the table and grid). */
+  hideOnPhone?: boolean;
+}
+export interface FilterGroup {
+  key: string;
+  label: string;
+  options: { value: string; label: string; count?: number }[];
+}
+interface Props {
+  id: string;
+  lang: Lang;
+  caption: string;
+  columns: Column[];
+  filters?: FilterGroup[];
+  defaultView?: "table" | "grid";
+  sort?: { key: string; dir: "asc" | "desc" };
+  total: number;
+}
+const { id, lang, caption, columns, filters = [], defaultView = "table", sort, total } = Astro.props;
+const t = ui(lang);
+const strings = { count: t.tableCount, countAll: t.tableCountAll };
+---
+<div class="dt" id={id} data-datatable data-view={defaultView} data-sort-key={sort?.key} data-sort-dir={sort?.dir} data-strings={JSON.stringify(strings)}>
+  <div class="toolbar">
+    <label class="field">
+      <Icon name="search" />
+      <span class="sr-only">{t.tableFilter}</span>
+      <input type="search" data-q placeholder={t.tableFilterPlaceholder} autocomplete="off" />
+    </label>
+    <div class="view" role="group" aria-label={t.tableView}>
+      <button type="button" data-view-btn="table" aria-pressed={defaultView === "table" ? "true" : "false"} aria-label={t.tableViewTable}><Icon name="list" /></button>
+      <button type="button" data-view-btn="grid" aria-pressed={defaultView === "grid" ? "true" : "false"} aria-label={t.tableViewGrid}><Icon name="grid" /></button>
+    </div>
+  </div>
+  {filters.length > 0 && (
+    <div class="filters">
+      {filters.map((g) => (
+        <div class="fgroup" role="group" aria-label={g.label}>
+          <span class="flabel">{g.label}</span>
+          <div class="chips">{g.options.map((o) => <Chip filter={g.key} value={o.value} count={o.count}>{o.label}</Chip>)}</div>
+        </div>
+      ))}
+    </div>
+  )}
+  <div class="status">
+    <span data-count aria-live="polite">{fill(t.tableCountAll, { total })}</span>
+    <button type="button" class="clear" data-clear hidden>{t.tableClear}</button>
+  </div>
+  <div class="frame">
+    <table>
+      <caption class="sr-only">{caption}</caption>
+      <thead>
+        <tr>
+          {columns.map((c) => (
+            <th scope="col" class:list={[`a-${c.align ?? "start"}`]} data-col={c.key} aria-sort={sort?.key === c.key ? (sort.dir === "asc" ? "ascending" : "descending") : undefined}>
+              {c.sortable === false ? <span class="th">{c.label}</span> : (
+                <button type="button" class="th" data-sort={c.key}>{c.label}<span class="arrow" aria-hidden="true">{sort?.key === c.key ? (sort.dir === "asc" ? "▲" : "▼") : "↕"}</span></button>
+              )}
+            </th>
+          ))}
+        </tr>
+      </thead>
+      <tbody><slot /></tbody>
+    </table>
+  </div>
+  <div class="empty" data-empty hidden>
+    <Icon name="ghost" size={44} />
+    <p class="empty-title">{t.tableEmptyTitle}</p>
+    <p>{t.tableEmptyText}</p>
+    <button type="button" class="empty-btn" data-clear>{t.tableClear}</button>
+  </div>
+</div>
+
+<script>
+  const fold = (s: string) => s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+
+  for (const root of document.querySelectorAll<HTMLElement>("[data-datatable]")) {
+    const tbody = root.querySelector("tbody")!;
+    const rows = [...tbody.querySelectorAll<HTMLTableRowElement>("tr[data-row]")];
+    const q = root.querySelector<HTMLInputElement>("[data-q]")!;
+    const count = root.querySelector<HTMLElement>("[data-count]")!;
+    const empty = root.querySelector<HTMLElement>("[data-empty]")!;
+    const frame = root.querySelector<HTMLElement>(".frame")!;
+    const clearTop = root.querySelector<HTMLButtonElement>(".status [data-clear]")!;
+    const S = JSON.parse(root.dataset.strings!) as { count: string; countAll: string };
+    let sortKey = root.dataset.sortKey ?? "";
+    let dir = root.dataset.sortDir === "asc" ? 1 : -1;
+
+    const value = (r: HTMLElement, k: string) => r.dataset[`s_${k}`] ?? "";
+    const chips = () => [...root.querySelectorAll<HTMLButtonElement>(".chip[data-filter]")];
+
+    function apply() {
+      const text = fold(q.value.trim());
+      const active = new Map<string, string[]>();
+      for (const c of chips()) if (c.getAttribute("aria-pressed") === "true") active.set(c.dataset.filter!, [...(active.get(c.dataset.filter!) ?? []), c.dataset.value!]);
+      if (sortKey) {
+        rows.sort((a, b) => {
+          const x = value(a, sortKey), y = value(b, sortKey);
+          const nx = Number(x), ny = Number(y);
+          const cmp = x !== "" && y !== "" && !Number.isNaN(nx) && !Number.isNaN(ny) ? nx - ny : x.localeCompare(y, document.documentElement.lang);
+          return dir * cmp;
+        });
+        tbody.append(...rows);
+      }
+      let shown = 0;
+      for (const r of rows) {
+        let ok = !text || (r.dataset.search ?? "").includes(text);
+        for (const [key, values] of active) {
+          const have = (r.dataset[`f_${key}`] ?? "").split("|");
+          if (!values.some((v) => have.includes(v))) ok = false;
+        }
+        r.hidden = !ok;
+        if (ok) shown++;
+      }
+      count.textContent = shown === rows.length ? S.countAll.replace("{total}", String(rows.length)) : S.count.replace("{n}", String(shown)).replace("{total}", String(rows.length));
+      empty.hidden = shown > 0;
+      frame.hidden = shown === 0;
+      clearTop.hidden = !text && active.size === 0;
+      for (const th of root.querySelectorAll<HTMLElement>("th[data-col]")) {
+        const on = th.dataset.col === sortKey;
+        if (on) th.setAttribute("aria-sort", dir > 0 ? "ascending" : "descending"); else th.removeAttribute("aria-sort");
+        const arrow = th.querySelector(".arrow");
+        if (arrow) arrow.textContent = on ? (dir > 0 ? "▲" : "▼") : "↕";
+      }
+    }
+
+    q.addEventListener("input", apply);
+    for (const c of chips()) c.addEventListener("click", () => { c.setAttribute("aria-pressed", String(c.getAttribute("aria-pressed") !== "true")); apply(); });
+    for (const b of root.querySelectorAll<HTMLButtonElement>("[data-sort]")) {
+      b.addEventListener("click", () => {
+        const k = b.dataset.sort!;
+        if (k === sortKey) dir = -dir; else { sortKey = k; dir = k === "name" ? 1 : -1; }
+        apply();
+      });
+    }
+    for (const b of root.querySelectorAll<HTMLButtonElement>("[data-clear]")) {
+      b.addEventListener("click", () => { q.value = ""; for (const c of chips()) c.setAttribute("aria-pressed", "false"); apply(); q.focus(); });
+    }
+    for (const b of root.querySelectorAll<HTMLButtonElement>("[data-view-btn]")) {
+      b.addEventListener("click", () => {
+        root.dataset.view = b.dataset.viewBtn!;
+        for (const x of root.querySelectorAll("[data-view-btn]")) x.setAttribute("aria-pressed", String(x === b));
+      });
+    }
+  }
+</script>
+
+<style>
+  .toolbar { display: flex; gap: 10px; align-items: center; margin-bottom: var(--s-3); }
+  .field { position: relative; flex: 1; }
+  .field :global(.icon) { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--text-muted); pointer-events: none; }
+  .field input { width: 100%; height: 44px; padding: 0 12px 0 40px; border-radius: var(--r-m); border: var(--bw) solid var(--border);
+    background: var(--input-bg); color: var(--text); font: 500 0.9375rem / 1 var(--font-body); box-shadow: var(--shadow-1); }
+  .field input::placeholder { color: var(--text-faint); }
+  .field input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--focus-ring); }
+  .view { display: flex; padding: 3px; gap: 2px; height: 44px; border-radius: var(--r-m); border: var(--bw) solid var(--border); background: var(--surface); box-shadow: var(--shadow-1); }
+  .view button { width: 38px; border: 0; background: none; color: var(--text-muted); border-radius: var(--r-s); cursor: pointer; display: grid; place-items: center; }
+  .view button[aria-pressed="true"] { background: var(--accent); color: var(--on-accent); }
+
+  .filters { display: grid; gap: 10px; margin-bottom: var(--s-3); }
+  .fgroup { display: grid; grid-template-columns: 86px minmax(0, 1fr); gap: 10px; align-items: center; }
+  .flabel { font: 800 0.6875rem / 1.2 var(--font-body); letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-faint); }
+  .chips { display: flex; gap: 6px; flex-wrap: wrap; padding-bottom: 4px; }
+  @media (max-width: 719px) { .chips { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; padding: 2px 2px 6px; } }
+
+  .status { display: flex; justify-content: space-between; align-items: center; gap: 10px; min-height: 30px; margin-bottom: 8px; font-size: var(--fs-sm); color: var(--text-muted); }
+  .clear, .empty-btn { background: none; border: 0; padding: 0; color: var(--link); font: inherit; font-weight: 600; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
+
+  .frame { border: var(--bw) solid var(--hard); border-radius: var(--r-l); background: var(--card-bg); box-shadow: var(--shadow-2); overflow: clip; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.9375rem; }
+  thead th { position: sticky; top: var(--header-h); z-index: 2; background: var(--surface-2); padding: 0; text-align: left; white-space: nowrap;
+    font: 700 var(--fs-sm) / 1 var(--font-body); color: var(--text-muted); border-bottom: var(--bw) solid var(--hard); }
+  .th { all: unset; box-sizing: border-box; display: flex; align-items: center; gap: 6px; width: 100%; padding: 13px 14px; cursor: pointer; }
+  span.th { cursor: default; }
+  .th:focus-visible { outline: 3px solid var(--focus); outline-offset: -3px; }
+  .a-end .th { justify-content: flex-end; }
+  th[aria-sort] { color: var(--heading); }
+  .arrow { font-size: 0.6875rem; opacity: 0.4; }
+  th[aria-sort] .arrow { opacity: 1; color: var(--accent-text); }
+  tbody :global(tr) { transition: background var(--t-fast); }
+  tbody :global(tr:hover) { background: var(--hover); }
+  tbody :global(td) { padding: 10px 14px; border-top: 1px solid var(--row-border); vertical-align: middle; }
+  tbody :global(tr:first-child td) { border-top: 0; }
+  tbody :global(td.a-end) { text-align: right; }
+
+  /* grid view and phone width: the same rows as cards */
+  .dt[data-view="grid"] thead { display: none; }
+  .dt[data-view="grid"] .frame { border: 0; background: none; box-shadow: none; overflow: visible; }
+  .dt[data-view="grid"] table, .dt[data-view="grid"] tbody { display: block; }
+  .dt[data-view="grid"] tbody { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr)); }
+  .dt[data-view="grid"] tbody :global(tr) { display: flex; flex-direction: column; gap: 8px; padding: 14px; background: var(--card-bg); border: var(--bw) solid var(--hard);
+    border-radius: var(--r-l); box-shadow: var(--shadow-2); transition: transform var(--t-fast) var(--ease), box-shadow var(--t-fast); }
+  .dt[data-view="grid"] tbody :global(tr:hover) { transform: translateY(var(--lift)); box-shadow: 0 7px 0 var(--hard); }
+  .dt[data-view="grid"] tbody :global(tr[hidden]) { display: none; }
+  .dt[data-view="grid"] tbody :global(td) { display: flex; justify-content: space-between; gap: 8px; padding: 0; border: 0; text-align: left; font-size: var(--fs-sm); }
+  .dt[data-view="grid"] tbody :global(td::before) { content: attr(data-label); color: var(--text-muted); font-size: var(--fs-xs); }
+  .dt[data-view="grid"] tbody :global(td.primary) { order: -1; margin-bottom: 4px; font-size: 1rem; }
+  .dt[data-view="grid"] tbody :global(td.primary::before) { display: none; }
+  @media (max-width: 719px) {
+    thead { display: none; }
+    table, tbody { display: block; }
+    tbody :global(tr) { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 14px; padding: 12px 14px; border-top: 1px solid var(--row-border); }
+    tbody :global(tr:first-child) { border-top: 0; }
+    tbody :global(tr[hidden]) { display: none; }
+    tbody :global(td) { display: flex; justify-content: space-between; gap: 8px; padding: 0; border: 0; font-size: var(--fs-sm); }
+    tbody :global(td::before) { content: attr(data-label); color: var(--text-muted); font-size: var(--fs-xs); }
+    tbody :global(td.primary) { grid-column: 1 / -1; font-size: 1rem; }
+    tbody :global(td.primary::before), tbody :global(td.phone-hide) { display: none; }
+    .dt[data-view="grid"] tbody { grid-template-columns: 1fr; }
+  }
+
+  .empty { text-align: center; padding: var(--s-7) var(--s-5); border: var(--bw) dashed var(--border-strong); border-radius: var(--r-l); color: var(--text-muted); }
+  .empty :global(.icon) { color: var(--text-faint); margin: 0 auto 8px; display: block; }
+  .empty-title { margin: 0 0 4px; font: 600 1.375rem / 1.2 var(--font-display); color: var(--heading); }
+  .empty p { margin: 0 0 12px; }
+</style>

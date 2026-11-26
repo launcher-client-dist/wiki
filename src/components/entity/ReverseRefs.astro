@@ -1,0 +1,58 @@
+---
+/**
+ * The other side of an entity's relations, grouped: "Dropado por", "Vendido por", "Usado em"... with the drop tier,
+ * the amount and the price. Comes from the reverse index, so the data is written once (on the monster, the NPC).
+ */
+import { ui } from "../../i18n/index.ts";
+import { isLang, DEFAULT_LANG, type Lang } from "../../lib/i18n.ts";
+import { getRegistry } from "../../lib/site-registry.ts";
+import { groupReverse, type InverseType } from "../../lib/entities/reverse.ts";
+import EntityLink from "./EntityLink.astro";
+import TierBadge from "../ui/TierBadge.astro";
+interface Props {
+  of: string;
+  lang?: Lang;
+  /** Only these groups, in this order (default: all, in a fixed order). */
+  only?: InverseType[];
+}
+const lang: Lang = Astro.props.lang ?? (isLang(Astro.params.lang) ? Astro.params.lang : DEFAULT_LANG);
+const t = ui(lang);
+const registry = await getRegistry();
+registry.require(Astro.props.of);
+const groups = groupReverse(registry.reverse(Astro.props.of));
+const ORDER: InverseType[] = ["droppedBy", "soldBy", "boughtBy", "rewardOf", "usedIn", "taughtBy", "openedBy", "related"];
+const order = (Astro.props.only ?? ORDER).filter((g) => groups[g]?.length);
+const amount = (a?: readonly [number, number]) => (a ? (a[0] === a[1] ? `× ${a[0]}` : `× ${a[0]}–${a[1]}`) : null);
+---
+{order.length > 0 && (
+  <div class="reverse">
+    {order.map((g) => (
+      <section class="group">
+        <h3>{t.reverse[g]} <span class="n">{groups[g]!.length}</span></h3>
+        <ul>
+          {groups[g]!.map((r) => (
+            <li>
+              <span class="who"><EntityLink to={r.from} lang={lang} /></span>
+              <span class="what">
+                {r.tier && <TierBadge tier={r.tier} lang={lang} />}
+                {amount(r.amount) && <span class="qty num">{amount(r.amount)}</span>}
+                {r.price !== undefined && <span class="qty num">{r.price} {t.gold}</span>}
+              </span>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))}
+  </div>
+)}
+<style>
+  .reverse { display: grid; gap: var(--s-4); grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); }
+  .group { background: var(--card-bg); border: var(--bw) solid var(--hard); border-radius: var(--r-l); box-shadow: var(--shadow-1); overflow: hidden; }
+  h3 { font: 700 var(--fs-md) / 1 var(--font-body); padding: 12px 14px; background: var(--surface-2); border-bottom: var(--bw) solid var(--hard); display: flex; gap: 8px; align-items: center; }
+  .n { font: 600 var(--fs-xs) / 1 var(--font-num); color: var(--text-faint); }
+  ul { list-style: none; margin: 0; padding: 4px 0; }
+  li { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 12px; padding: 8px 14px; }
+  li + li { border-top: 1px solid var(--row-border); }
+  .what { display: inline-flex; align-items: center; gap: 8px; }
+  .qty { font-size: var(--fs-sm); color: var(--text-muted); font-weight: 600; }
+</style>

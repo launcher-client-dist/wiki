@@ -1,0 +1,110 @@
+---
+/**
+ * Every page's frame: <head> (title, description, canonical, hreflang, Open Graph, Twitter, JSON-LD, fonts, theme),
+ * the skip link, Header, <main>, Footer, the search dialog and the hover card.
+ *
+ * `searchable` puts the page in the search index (data-pagefind-body on <main>), under its kind. Pages left out:
+ * the 404, the language picker, the component gallery.
+ */
+import "../../styles/global.css";
+import { ui } from "../../i18n/index.ts";
+import { HREFLANG, OG_LOCALE, otherLang, type Lang } from "../../lib/i18n.ts";
+import { absoluteUrl, type Alternates } from "../../lib/routes.ts";
+import type { EntityKind } from "../../lib/entities/types.ts";
+import Header from "./Header.astro";
+import Footer from "./Footer.astro";
+import Breadcrumbs, { type Crumb } from "./Breadcrumbs.astro";
+import SearchOverlay from "./SearchOverlay.astro";
+import HoverCard from "./HoverCard.astro";
+
+interface Props {
+  lang: Lang;
+  /** The page's own title; " · Opengea Wiki" is added unless `bareTitle`. */
+  title: string;
+  bareTitle?: boolean;
+  description: string;
+  alternates: Alternates;
+  crumbs?: Crumb[];
+  noindex?: boolean;
+  searchable?: { kind: EntityKind } | false;
+  ogType?: "website" | "article";
+  jsonLd?: object[];
+  current?: EntityKind;
+  mainClass?: string;
+}
+const { lang, title, bareTitle = false, description, alternates, crumbs, noindex = false, searchable = false, ogType = "website", jsonLd = [], current, mainClass } = Astro.props;
+const t = ui(lang);
+const fullTitle = bareTitle ? title : `${title} · ${t.siteName}`;
+const canonical = absoluteUrl(alternates[lang]);
+const ogImage = absoluteUrl("/og/default.png");
+const breadcrumbLd = crumbs && crumbs.length > 1 ? {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: crumbs.map((c, i) => ({ "@type": "ListItem", position: i + 1, name: c.label, item: absoluteUrl(c.href ?? alternates[lang]) })),
+} : null;
+const ld = [...jsonLd, ...(breadcrumbLd ? [breadcrumbLd] : [])];
+---
+<!doctype html>
+<html lang={HREFLANG[lang]} data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script is:inline>
+    (function () {
+      var d = document.documentElement, s = null;
+      d.classList.add("js");
+      try { s = localStorage.getItem("wiki-theme"); } catch (e) {}
+      d.dataset.theme = s === "light" || s === "dark" ? s : matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+    })();
+  </script>
+  <title>{fullTitle}</title>
+  <meta name="description" content={description} />
+  {!noindex && <link rel="canonical" href={canonical} />}
+  {!noindex && <link rel="alternate" hreflang={HREFLANG.pt} href={absoluteUrl(alternates.pt)} />}
+  {!noindex && <link rel="alternate" hreflang={HREFLANG.en} href={absoluteUrl(alternates.en)} />}
+  {!noindex && <link rel="alternate" hreflang="x-default" href={absoluteUrl(alternates.pt)} />}
+  {noindex && <meta name="robots" content="noindex, follow" />}
+  <meta name="theme-color" content="#121729" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#e6f1ff" media="(prefers-color-scheme: light)" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="preload" href="/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/fonts/pixelify-sans-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="sitemap" href="/sitemap.xml" />
+  <meta property="og:site_name" content={t.siteName} />
+  <meta property="og:type" content={ogType} />
+  <meta property="og:title" content={fullTitle} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonical} />
+  <meta property="og:locale" content={OG_LOCALE[lang]} />
+  <meta property="og:locale:alternate" content={OG_LOCALE[otherLang(lang)]} />
+  <meta property="og:image" content={ogImage} />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content={`${t.siteName}: ${t.siteTagline}`} />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={fullTitle} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={ogImage} />
+  {ld.map((obj) => <script type="application/ld+json" set:html={JSON.stringify(obj)} />)}
+</head>
+<body>
+  <a class="skip-link" href="#wiki-main">{t.skipToContent}</a>
+  <Header lang={lang} alternates={alternates} current={current} />
+  <main id="wiki-main" tabindex="-1" class={mainClass}
+    data-pagefind-body={searchable ? "" : undefined}
+    data-pagefind-filter={searchable ? `kind:${searchable.kind}` : undefined}>
+    {crumbs && crumbs.length > 1 && <div class="container"><Breadcrumbs items={crumbs} label={t.breadcrumbsLabel} /></div>}
+    <slot />
+  </main>
+  <Footer lang={lang} alternates={alternates} />
+  <SearchOverlay lang={lang} />
+  <HoverCard />
+</body>
+</html>
+<style is:global>
+  .skip-link { position: absolute; left: 12px; top: -80px; z-index: 100; padding: 10px 16px; border-radius: var(--r-m); background: var(--sun); color: var(--on-sun);
+    font-weight: 800; text-decoration: none; border: var(--bw) solid var(--hard); box-shadow: var(--shadow-1); }
+  .skip-link:focus { top: 12px; }
+  main:focus { outline: none; }
+  html.search-open { overflow: hidden; }
+</style>

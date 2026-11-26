@@ -1,0 +1,25 @@
+---
+/**
+ * A picture with a caption. Width and height are required (no layout shift); below-the-fold pictures load lazily.
+ * `pixel` keeps pixel art crisp when scaled.
+ */
+interface Props {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+  caption?: string;
+  eager?: boolean;
+  pixel?: boolean;
+}
+const { src, alt, width, height, caption, eager = false, pixel = false } = Astro.props;
+---
+<figure class="figure">
+  <img src={src} alt={alt} width={width} height={height} loading={eager ? "eager" : "lazy"} decoding="async" class:list={{ px: pixel }} style={`aspect-ratio:${width}/${height}`} />
+  {(caption || Astro.slots.has("default")) && <figcaption>{caption}<slot /></figcaption>}
+</figure>
+<style>
+  .figure { margin: 0; border: var(--bw) solid var(--hard); border-radius: var(--r-l); overflow: hidden; background: var(--surface); box-shadow: var(--shadow-2); }
+  img { width: 100%; height: auto; object-fit: cover; }
+  figcaption { padding: 10px 14px; font-size: var(--fs-sm); color: var(--text-muted); border-top: var(--bw) solid var(--hard); }
+</style>

@@ -1,0 +1,23 @@
+---
+/** Inline pixel art (a kind emblem, the logo): crisp at any integer scale. */
+import { KIND_ART, LOGO_ART } from "../../lib/kind-art.ts";
+import { pixelSvg, type PixelArt } from "../../lib/pixel.ts";
+import type { EntityKind } from "../../lib/entities/types.ts";
+
+interface Props {
+  kind?: EntityKind;
+  logo?: boolean;
+  art?: PixelArt;
+  size?: number;
+  class?: string;
+}
+const { kind, logo, art, size = 24, class: cls } = Astro.props;
+const source = art ?? (logo ? LOGO_ART : kind ? KIND_ART[kind] : undefined);
+if (!source) throw new Error("PixelArt needs kind, logo or art");
+const svg = pixelSvg(source, `width="${size}" height="${size}" aria-hidden="true" focusable="false"`);
+---
+<span class:list={["pixel-art", cls]} style={`--size:${size}px`} set:html={svg} />
+<style>
+  .pixel-art { display: inline-grid; place-items: center; width: var(--size); height: var(--size); flex-shrink: 0; line-height: 0; }
+  .pixel-art :global(svg) { width: 100%; height: 100%; }
+</style>

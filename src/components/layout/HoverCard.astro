@@ -1,0 +1,124 @@
+---
+/**
+ * The one floating card of the page. Any element with [data-hc] followed by a <template data-hc-tpl> shows that
+ * template's content: on hover (mouse), on keyboard focus, and on click/tap for pending links (no page yet).
+ * Esc or a click elsewhere closes it.
+ */
+---
+<div class="hovercard" id="wiki-hovercard" role="tooltip" hidden></div>
+<script>
+  const card = document.getElementById("wiki-hovercard") as HTMLElement;
+  let owner: HTMLElement | null = null;
+  let pinned = false;
+  let showTimer = 0;
+  let hideTimer = 0;
+  const finePointer = matchMedia("(hover: hover) and (pointer: fine)");
+
+  function templateOf(el: HTMLElement): HTMLTemplateElement | null {
+    const next = el.nextElementSibling;
+    return next instanceof HTMLTemplateElement && next.hasAttribute("data-hc-tpl") ? next : null;
+  }
+
+  function place(el: HTMLElement) {
+    const r = el.getBoundingClientRect();
+    const w = card.offsetWidth;
+    const h = card.offsetHeight;
+    const x = Math.min(Math.max(12, r.left), window.innerWidth - w - 12);
+    let y = r.bottom + 10;
+    if (y + h > window.innerHeight - 8 && r.top - h - 10 > 8) y = r.top - h - 10;
+    card.style.left = `${Math.round(x)}px`;
+    card.style.top = `${Math.round(y)}px`;
+  }
+
+  function show(el: HTMLElement, pin = false) {
+    const tpl = templateOf(el);
+    if (!tpl) return;
+    clearTimeout(hideTimer);
+    if (owner && owner !== el) hide(true);
+    owner = el;
+    pinned = pin;
+    card.replaceChildren(tpl.content.cloneNode(true));
+    card.hidden = false;
+    place(el);
+    requestAnimationFrame(() => card.classList.add("show"));
+    el.setAttribute("aria-describedby", "wiki-hovercard");
+    if (el.hasAttribute("aria-expanded")) el.setAttribute("aria-expanded", "true");
+  }
+
+  function hide(now = false) {
+    clearTimeout(showTimer);
+    const done = () => {
+      if (owner) {
+        owner.removeAttribute("aria-describedby");
+        if (owner.hasAttribute("aria-expanded")) owner.setAttribute("aria-expanded", "false");
+      }
+      owner = null;
+      pinned = false;
+      card.classList.remove("show");
+      card.hidden = true;
+    };
+    if (now) done();
+    else hideTimer = window.setTimeout(done, 120);
+  }
+
+  document.addEventListener("pointerover", (e) => {
+    if (!finePointer.matches) return;
+    const el = (e.target as Element).closest<HTMLElement>("[data-hc]");
+    if (el && el !== owner) {
+      clearTimeout(showTimer);
+      showTimer = window.setTimeout(() => show(el), 140);
+    } else if (el === owner) clearTimeout(hideTimer);
+  });
+  document.addEventListener("pointerout", (e) => {
+    const el = (e.target as Element).closest<HTMLElement>("[data-hc]");
+    if (!el) return;
+    clearTimeout(showTimer);
+    if (el === owner && !pinned) hide();
+  });
+  card.addEventListener("pointerover", () => clearTimeout(hideTimer));
+  card.addEventListener("pointerleave", () => { if (!pinned) hide(); });
+  document.addEventListener("focusin", (e) => {
+    const el = (e.target as Element).closest<HTMLElement>("[data-hc]");
+    if (el) show(el);
+    else if (owner && !card.contains(e.target as Node)) hide(true);
+  });
+  document.addEventListener("click", (e) => {
+    const el = (e.target as Element).closest<HTMLElement>("[data-hc]");
+    if (el && el.tagName === "BUTTON") {
+      if (owner === el && pinned) hide(true);
+      else show(el, true);
+      return;
+    }
+    if (owner && !card.contains(e.target as Node)) hide(true);
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && owner) {
+      const el = owner;
+      hide(true);
+      el.focus();
+    }
+  });
+  window.addEventListener("scroll", () => { if (owner && !pinned) hide(true); else if (owner) place(owner); }, { passive: true });
+  window.addEventListener("resize", () => owner && place(owner));
+</script>
+<style is:global>
+  .hovercard {
+    position: fixed; z-index: 80; width: 320px; max-width: calc(100vw - 24px); padding: 14px; font-size: var(--fs-sm);
+    background: var(--popover-bg); color: var(--text); border: var(--bw) solid var(--hard); border-radius: var(--r-l); box-shadow: var(--shadow-3);
+    opacity: 0; transform: translateY(4px); transition: opacity var(--t-fast) var(--ease), transform var(--t-fast) var(--ease);
+  }
+  .hovercard.show { opacity: 1; transform: none; }
+  .hc-head { display: flex; gap: 12px; align-items: center; }
+  .hc-names { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+  .hc-kind { font: 800 0.625rem / 1 var(--font-body); letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-text); }
+  .hc-title { font: 700 1.0625rem / 1.2 var(--font-body); color: var(--heading); }
+  .hc-alt { font-size: var(--fs-xs); color: var(--text-muted); }
+  .hc-summary { margin: 10px 0 0; color: var(--text-muted); line-height: 1.5; }
+  .hc-facts { display: grid; grid-template-columns: repeat(auto-fill, minmax(84px, 1fr)); gap: 6px; margin: 10px 0 0; }
+  .hc-facts div { background: var(--surface-2); border-radius: var(--r-s); padding: 6px 8px; }
+  .hc-facts dt { font-size: 0.6875rem; color: var(--text-muted); }
+  .hc-facts dd { margin: 0; font-weight: 700; color: var(--heading); }
+  .hc-foot { margin-top: 10px; padding-top: 8px; border-top: 1px solid var(--row-border); font-size: var(--fs-xs); color: var(--text-muted); }
+  .hc-foot span { display: inline-flex; align-items: center; gap: 4px; }
+  .hc-foot .pending { color: var(--text-faint); font-style: italic; }
+</style>

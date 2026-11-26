@@ -1,0 +1,17 @@
+---
+/**
+ * One row of a DataTable. `search`: the text the name filter matches (both languages' names, accents folded here).
+ * `sort`: the value per sortable column key. `filters`: the values per filter group key.
+ */
+interface Props {
+  search: string;
+  sort: Record<string, string | number>;
+  filters?: Record<string, string | string[]>;
+}
+const { search, sort, filters = {} } = Astro.props;
+const fold = (s: string) => s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+const attrs: Record<string, string> = { "data-row": "", "data-search": fold(search) };
+for (const [k, v] of Object.entries(sort)) attrs[`data-s_${k}`] = typeof v === "number" ? String(v) : fold(v);
+for (const [k, v] of Object.entries(filters)) attrs[`data-f_${k}`] = (Array.isArray(v) ? v : [v]).join("|");
+---
+<tr {...attrs}><slot /></tr>

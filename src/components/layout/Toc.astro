@@ -1,0 +1,37 @@
+---
+/** "Nesta página": the h2 headings of a long text, with the current one highlighted while reading. */
+import type { MarkdownHeading } from "astro";
+interface Props {
+  headings: MarkdownHeading[];
+  label: string;
+}
+const { headings, label } = Astro.props;
+const items = headings.filter((h) => h.depth === 2);
+---
+{items.length > 1 && (
+  <nav class="toc" aria-label={label} data-toc>
+    <p class="toc-title">{label}</p>
+    <ol>{items.map((h) => <li><a href={`#${h.slug}`}>{h.text}</a></li>)}</ol>
+  </nav>
+)}
+<script>
+  for (const toc of document.querySelectorAll<HTMLElement>("[data-toc]")) {
+    const links = [...toc.querySelectorAll<HTMLAnchorElement>("a")];
+    const targets = links.map((a) => document.getElementById(decodeURIComponent(a.hash.slice(1)))).filter((x): x is HTMLElement => !!x);
+    const observer = new IntersectionObserver((entries) => {
+      for (const e of entries) {
+        if (!e.isIntersecting) continue;
+        for (const a of links) a.toggleAttribute("aria-current", a.hash === `#${e.target.id}`);
+      }
+    }, { rootMargin: "-80px 0px -70% 0px" });
+    targets.forEach((t) => observer.observe(t));
+  }
+</script>
+<style>
+  .toc { font-size: var(--fs-sm); }
+  .toc-title { margin: 0 0 10px; font: 800 0.6875rem / 1 var(--font-body); letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-faint); }
+  ol { list-style: none; margin: 0; padding: 0; border-left: var(--bw) solid var(--border); }
+  a { display: block; padding: 6px 12px; margin-left: calc(-1 * var(--bw)); border-left: 3px solid transparent; color: var(--text-muted); text-decoration: none; }
+  a:hover { color: var(--text); }
+  a[aria-current] { color: var(--heading); border-color: var(--accent); font-weight: 600; }
+</style>

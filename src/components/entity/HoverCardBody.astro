@@ -1,0 +1,31 @@
+---
+/** What a hover card shows for an entity: icon, names, kind, summary, a few facts, and whether the page exists. */
+import { ui } from "../../i18n/index.ts";
+import type { EntityLinkInfo } from "../../lib/entities/types.ts";
+import IconSlot from "../ui/IconSlot.astro";
+import Icon from "../ui/Icon.astro";
+interface Props {
+  info: EntityLinkInfo;
+}
+const { info } = Astro.props;
+const t = ui(info.lang);
+---
+<div class="hc">
+  <div class="hc-head">
+    <IconSlot icon={info.icon} kind={info.kind} size={56} />
+    <div class="hc-names">
+      <span class="hc-kind">{t.kindSingular[info.kind]}</span>
+      <span class="hc-title">{info.name}</span>
+      {info.altName && <span class="hc-alt" lang={info.lang === "pt" ? "en" : "pt-BR"}>{info.altName}</span>}
+    </div>
+  </div>
+  {info.summary && <p class="hc-summary">{info.summary}</p>}
+  {info.facts.length > 0 && (
+    <dl class="hc-facts">
+      {info.facts.map((f) => <div><dt>{f.label}</dt><dd class="num">{f.value}</dd></div>)}
+    </dl>
+  )}
+  <div class="hc-foot">
+    {info.href ? <span><Icon name="arrowRight" size={14} /> {t.hoverOpen}</span> : <span class="pending">{t.hoverPagePending}</span>}
+  </div>
+</div>

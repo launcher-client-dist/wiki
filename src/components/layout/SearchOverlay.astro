@@ -1,0 +1,237 @@
+---
+/**
+ * The search dialog, opened by Ctrl+K / Cmd+K, "/", any [data-open-search] button, or a ?q= in the URL (the
+ * SearchAction target). Results come from Pagefind's index of this language (built after `astro build`), grouped by
+ * kind with each kind's emblem. With an empty query it lists the sections.
+ */
+import { ui } from "../../i18n/index.ts";
+import type { Lang } from "../../lib/i18n.ts";
+import { ENTITY_KINDS } from "../../lib/entities/types.ts";
+import { NAV_KINDS, sectionPath, SHIPPED_KINDS } from "../../lib/routes.ts";
+import Icon from "../ui/Icon.astro";
+import PixelArt from "../ui/PixelArt.astro";
+import Badge from "../ui/Badge.astro";
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = ui(lang);
+const strings = {
+  empty: t.searchEmpty,
+  emptyHint: t.searchEmptyHint,
+  unavailable: t.searchUnavailable,
+  loading: t.searchLoading,
+  results: t.searchResults,
+  kinds: t.kindPlural,
+};
+---
+<dialog class="search" id="wiki-search" aria-label={t.searchOpen} data-strings={JSON.stringify(strings)}>
+  <div class="box">
+    <div class="input-row">
+      <Icon name="search" size={20} />
+      <input type="search" id="wiki-search-input" placeholder={t.searchPlaceholder} autocomplete="off" spellcheck="false"
+        role="combobox" aria-expanded="true" aria-controls="wiki-search-list" aria-autocomplete="list" aria-label={t.searchOpen} />
+      <button type="button" class="close" data-close aria-label={t.searchClose}><kbd>Esc</kbd></button>
+    </div>
+    <div class="results" id="wiki-search-results">
+      <div class="shortcuts" data-shortcuts>
+        <p class="group">{t.searchSections}</p>
+        <ul class="list" role="listbox" aria-label={t.searchSections}>
+          {NAV_KINDS.map((kind) => {
+            const shipped = SHIPPED_KINDS.includes(kind);
+            return (
+              <li role="option" aria-selected="false" aria-disabled={shipped ? undefined : "true"}>
+                {shipped ? (
+                  <a href={sectionPath(kind, lang)}><PixelArt kind={kind} size={26} /><span class="title">{t.kindPlural[kind]}</span><span class="meta">{t.kindBlurb[kind]}</span></a>
+                ) : (
+                  <span class="row is-soon"><PixelArt kind={kind} size={26} /><span class="title">{t.kindPlural[kind]}</span><Badge tone="soon">{t.soon}</Badge></span>
+                )}
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+      <ul class="list" id="wiki-search-list" role="listbox" aria-label={t.searchResults} hidden></ul>
+      <p class="status" data-status role="status" aria-live="polite"></p>
+    </div>
+    <div class="foot" aria-hidden="true">
+      <span><kbd>↑</kbd> <kbd>↓</kbd> {t.searchNavigate}</span>
+      <span><kbd>Enter</kbd> {t.searchOpenResult}</span>
+      <span><kbd>Esc</kbd> {t.searchClose.toLowerCase()}</span>
+    </div>
+  </div>
+  {ENTITY_KINDS.map((kind) => <template data-kind-icon={kind}><PixelArt kind={kind} size={26} /></template>)}
+</dialog>
+
+<script>
+  type PagefindResult = { url: string; excerpt: string; meta: Record<string, string>; filters: Record<string, string[]> };
+  type Pagefind = {
+    options: (o: object) => Promise<void>;
+    init: () => void;
+    debouncedSearch: (q: string, o?: object, ms?: number) => Promise<{ results: { data: () => Promise<PagefindResult> }[] } | null>;
+  };
+
+  const dialog = document.getElementById("wiki-search") as HTMLDialogElement;
+  const input = document.getElementById("wiki-search-input") as HTMLInputElement;
+  const list = document.getElementById("wiki-search-list") as HTMLUListElement;
+  const shortcuts = dialog.querySelector<HTMLElement>("[data-shortcuts]")!;
+  const status = dialog.querySelector<HTMLElement>("[data-status]")!;
+  const S = JSON.parse(dialog.dataset.strings!) as { empty: string; emptyHint: string; unavailable: string; loading: string; results: string; kinds: Record<string, string> };
+  let pagefind: Pagefind | null | undefined;
+  let active = -1;
+  let opener: Element | null = null;
+
+  async function load(): Promise<Pagefind | null> {
+    if (pagefind !== undefined) return pagefind;
+    try {
+      const path = "/pagefind/pagefind.js";
+      const pf = (await import(/* @vite-ignore */ path)) as Pagefind;
+      await pf.options({ excerptLength: 18 });
+      pf.init();
+      pagefind = pf;
+    } catch {
+      pagefind = null;
+    }
+    return pagefind;
+  }
+
+  function options(): HTMLElement[] {
+    const root = list.hidden ? shortcuts : list;
+    return [...root.querySelectorAll<HTMLElement>('[role="option"]:not([aria-disabled="true"])')];
+  }
+
+  function setActive(i: number) {
+    const opts = options();
+    if (!opts.length) { active = -1; input.removeAttribute("aria-activedescendant"); return; }
+    active = (i + opts.length) % opts.length;
+    opts.forEach((o, k) => {
+      o.id ||= `wiki-search-opt-${Math.random().toString(36).slice(2, 8)}`;
+      o.setAttribute("aria-selected", String(k === active));
+    });
+    input.setAttribute("aria-activedescendant", opts[active]!.id);
+    opts[active]!.scrollIntoView({ block: "nearest" });
+  }
+
+  function escapeHtml(s: string) {
+    return s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]!);
+  }
+
+  function kindIcon(kind: string): string {
+    return dialog.querySelector<HTMLTemplateElement>(`template[data-kind-icon="${kind}"]`)?.innerHTML ?? "";
+  }
+
+  async function run() {
+    const q = input.value.trim();
+    if (!q) {
+      list.hidden = true;
+      shortcuts.hidden = false;
+      status.textContent = "";
+      setActive(-1);
+      return;
+    }
+    const pf = await load();
+    if (!pf) {
+      list.hidden = true;
+      shortcuts.hidden = true;
+      status.textContent = S.unavailable;
+      return;
+    }
+    status.textContent = S.loading;
+    const search = await pf.debouncedSearch(q, {}, 120);
+    if (search === null || input.value.trim() !== q) return;
+    const data = await Promise.all(search.results.slice(0, 12).map((r) => r.data()));
+    const groups = new Map<string, PagefindResult[]>();
+    for (const d of data) {
+      const kind = d.filters.kind?.[0] ?? "guide";
+      groups.set(kind, [...(groups.get(kind) ?? []), d]);
+    }
+    let html = "";
+    for (const [kind, items] of groups) {
+      html += `<li class="group" role="presentation">${escapeHtml(S.kinds[kind] ?? S.results)}</li>`;
+      for (const d of items) {
+        html += `<li role="option" aria-selected="false"><a href="${escapeHtml(d.url)}">${kindIcon(kind)}<span class="text"><span class="title">${escapeHtml(d.meta.title ?? d.url)}</span><span class="excerpt">${d.excerpt}</span></span></a></li>`;
+      }
+    }
+    list.innerHTML = html;
+    shortcuts.hidden = true;
+    list.hidden = data.length === 0;
+    status.textContent = data.length ? "" : `${S.empty.replace("{q}", q)} ${S.emptyHint}`;
+    setActive(0);
+  }
+
+  function open(q = "") {
+    if (dialog.open) return;
+    opener = document.activeElement;
+    input.value = q;
+    dialog.showModal();
+    document.documentElement.classList.add("search-open");
+    input.focus();
+    void run();
+    void load();
+  }
+
+  dialog.addEventListener("close", () => {
+    document.documentElement.classList.remove("search-open");
+    if (opener instanceof HTMLElement) opener.focus();
+  });
+  dialog.addEventListener("click", (e) => {
+    if (e.target === dialog || (e.target as Element).closest("[data-close]")) dialog.close();
+  });
+  input.addEventListener("input", () => void run());
+  input.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowDown") { e.preventDefault(); setActive(active + 1); }
+    else if (e.key === "ArrowUp") { e.preventDefault(); setActive(active - 1); }
+    else if (e.key === "Enter") {
+      const link = options()[active]?.querySelector("a");
+      if (link) { e.preventDefault(); link.click(); }
+    }
+  });
+  document.addEventListener("keydown", (e) => {
+    const typing = e.target instanceof HTMLElement && (e.target.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName));
+    if ((e.key === "k" || e.key === "K") && (e.ctrlKey || e.metaKey)) {
+      e.preventDefault();
+      if (dialog.open) dialog.close(); else open();
+    } else if (e.key === "/" && !typing && !dialog.open) {
+      e.preventDefault();
+      open();
+    }
+  });
+  document.addEventListener("click", (e) => {
+    const trigger = (e.target as Element).closest("[data-open-search]");
+    if (trigger) { e.preventDefault(); open(trigger.getAttribute("data-q") ?? ""); }
+  });
+  const q = new URLSearchParams(location.search).get("q");
+  if (q) open(q);
+</script>
+
+<style>
+  .search { padding: 0; border: 0; background: transparent; width: min(680px, calc(100vw - 24px)); max-height: none; margin: 10vh auto auto; overflow: visible; color: var(--text); }
+  .search::backdrop { background: var(--scrim); backdrop-filter: blur(3px); }
+  .box { background: var(--popover-bg); border: var(--bw) solid var(--hard); border-radius: var(--r-xl); box-shadow: var(--shadow-3); overflow: hidden; }
+  .input-row { display: flex; align-items: center; gap: 12px; padding: 0 12px 0 16px; border-bottom: var(--bw) solid var(--hard); }
+  .input-row > :global(.icon) { color: var(--accent-text); }
+  input { flex: 1; min-width: 0; height: 60px; border: 0; background: none; color: var(--text); font: 500 1.125rem / 1 var(--font-body); outline: none; }
+  input::placeholder { color: var(--text-faint); }
+  input::-webkit-search-cancel-button { display: none; }
+  .close { background: none; border: 0; padding: 4px; cursor: pointer; }
+  .results { max-height: min(60vh, 520px); overflow: auto; padding: 8px; overscroll-behavior: contain; }
+  .list { list-style: none; margin: 0; padding: 0; }
+  .group { padding: 10px 10px 6px; margin: 0; font: 800 0.6875rem / 1 var(--font-body); letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-faint); }
+  .list :global([role="option"] > a), .row { display: flex; align-items: center; gap: 12px; padding: 9px 10px; border-radius: var(--r-m); color: var(--text); text-decoration: none; }
+  .list :global([role="option"][aria-selected="true"] > a), .list :global([role="option"] > a:hover) { background: var(--hover-strong); }
+  .list :global(.title) { font-weight: 700; color: var(--heading); white-space: nowrap; }
+  .list :global(.meta) { margin-left: auto; font-size: var(--fs-xs); color: var(--text-muted); text-align: right; }
+  .list :global(.text) { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+  .list :global(.excerpt) { font-size: var(--fs-sm); color: var(--text-muted); overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+  .is-soon { color: var(--text-faint); }
+  .is-soon :global(.pixel-art) { opacity: 0.5; filter: saturate(0.3); }
+  .is-soon :global(.badge) { margin-left: auto; }
+  .status { margin: 0; padding: 18px 12px; text-align: center; color: var(--text-muted); }
+  .status:empty { display: none; }
+  .foot { display: flex; gap: 16px; flex-wrap: wrap; padding: 10px 16px; border-top: var(--bw) solid var(--hard); font-size: var(--fs-xs); color: var(--text-muted); }
+  @media (max-width: 600px) {
+    .search { margin-top: 12px; }
+    .foot { display: none; }
+    .list :global(.meta) { display: none; }
+  }
+</style>

@@ -1,0 +1,101 @@
+---
+import { render } from "astro:content";
+import PageShell from "../../../components/layout/PageShell.astro";
+import Toc from "../../../components/layout/Toc.astro";
+import Card from "../../../components/ui/Card.astro";
+import PixelArt from "../../../components/ui/PixelArt.astro";
+import Icon from "../../../components/ui/Icon.astro";
+import Callout from "../../../components/ui/Callout.astro";
+import Spoiler from "../../../components/ui/Spoiler.astro";
+import Tabs from "../../../components/ui/Tabs.astro";
+import TierBadge from "../../../components/ui/TierBadge.astro";
+import Tag from "../../../components/ui/Tag.astro";
+import Figure from "../../../components/ui/Figure.astro";
+import MapLink from "../../../components/ui/MapLink.astro";
+import EntityLink from "../../../components/entity/EntityLink.astro";
+import { ui, fill } from "../../../i18n/index.ts";
+import { HREFLANG, LANGS, type Lang } from "../../../lib/i18n.ts";
+import { absoluteUrl, homePath, SECTIONS, sectionPath } from "../../../lib/routes.ts";
+import { siteData } from "../../../lib/site-registry.ts";
+
+export async function getStaticPaths() {
+  const { guides } = await siteData();
+  return guides.map((g) => ({ params: { lang: g.lang, guides: SECTIONS.guide.slug[g.lang], slug: g.slug }, props: { ref: g.ref } }));
+}
+const lang = Astro.params.lang as Lang;
+const t = ui(lang);
+const { registry, guides } = await siteData();
+const page = guides.find((g) => g.ref === Astro.props.ref && g.lang === lang)!;
+const { entry } = page;
+const { Content, headings } = await render(entry);
+const alternates = Object.fromEntries(LANGS.map((l) => [l, registry.url(page.ref, l)!])) as Record<Lang, string>;
+const words = (entry.body ?? "").split(/\s+/).filter(Boolean).length;
+const minutes = Math.max(1, Math.round(words / 200));
+const fmt = new Intl.DateTimeFormat(lang === "pt" ? "pt-BR" : "en", { dateStyle: "long", timeZone: "UTC" });
+const updated = entry.data.updated.toISOString().slice(0, 10);
+const related = entry.data.related.map((r) => registry.link(r, lang));
+const jsonLd = [{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: entry.data.title,
+  description: entry.data.description,
+  inLanguage: HREFLANG[lang],
+  dateModified: updated,
+  mainEntityOfPage: absoluteUrl(alternates[lang]),
+  image: absoluteUrl("/og/default.png"),
+  publisher: { "@type": "Organization", name: t.siteName, url: absoluteUrl("/") },
+}];
+---
+<PageShell lang={lang} title={entry.data.title} description={entry.data.description} alternates={alternates} current="guide" ogType="article"
+  searchable={{ kind: "guide" }} jsonLd={jsonLd}
+  crumbs={[{ label: t.home, href: homePath(lang) }, { label: t.kindPlural.guide, href: sectionPath("guide", lang) }, { label: entry.data.title }]}>
+  <div class="container layout">
+    <article class="article">
+      <header class="head">
+        <p class="kicker"><PixelArt kind="guide" size={20} /> {t.kindSingular.guide}</p>
+        <h1>{entry.data.title}</h1>
+        <p class="desc">{entry.data.description}</p>
+        <p class="meta">
+          <span><Icon name="calendar" size={15} /> {t.updated} <time datetime={updated}>{fmt.format(entry.data.updated)}</time></span>
+          <span><Icon name="clock" size={15} /> {fill(t.readingTime, { n: minutes })}</span>
+        </p>
+      </header>
+      <div class="prose">
+        <Content components={{ Callout, Spoiler, Tabs, TierBadge, Tag, Figure, MapLink, EntityLink }} />
+      </div>
+      {related.length > 0 && (
+        <section class="related" aria-labelledby="related-title">
+          <h2 id="related-title">{t.relatedGuides}</h2>
+          <div class="related-grid">
+            {related.map((r) => (
+              <Card href={r.href ?? undefined} title={r.name} kicker={t.kindSingular[r.kind]} layout="row" soon={r.href ? undefined : t.soon}>
+                <PixelArt slot="emblem" kind={r.kind} size={32} />
+                {r.summary}
+              </Card>
+            ))}
+          </div>
+        </section>
+      )}
+    </article>
+    <aside class="side">
+      <Toc headings={headings} label={t.onThisPage} />
+      <a class="all" href={sectionPath("guide", lang)}><Icon name="arrowRight" size={16} /> {t.allGuides}</a>
+    </aside>
+  </div>
+</PageShell>
+<style>
+  .layout { display: grid; gap: var(--s-6); grid-template-columns: minmax(0, 1fr); }
+  @media (min-width: 1060px) { .layout { grid-template-columns: minmax(0, 1fr) 240px; } .side { position: sticky; top: calc(var(--header-h) + var(--s-5)); align-self: start; } }
+  .head { margin-bottom: var(--s-6); padding-bottom: var(--s-5); border-bottom: var(--bw) solid var(--border); max-width: var(--prose-w); }
+  .kicker { display: inline-flex; align-items: center; gap: 8px; margin: 0 0 var(--s-3); font: 800 var(--fs-xs) / 1 var(--font-body); letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-text); }
+  h1 { margin-bottom: var(--s-3); }
+  .desc { font-size: var(--fs-lg); color: var(--text-muted); margin-bottom: var(--s-3); }
+  .meta { display: flex; flex-wrap: wrap; gap: 6px 18px; margin: 0; font-size: var(--fs-sm); color: var(--text-faint); }
+  .meta span { display: inline-flex; align-items: center; gap: 6px; }
+  .related { margin-top: var(--s-7); max-width: var(--prose-w); }
+  .related h2 { margin-bottom: var(--s-4); }
+  .related-grid { display: grid; gap: 14px; }
+  .side { display: grid; gap: var(--s-5); align-content: start; }
+  .all { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; font-size: var(--fs-sm); text-decoration: none; }
+  @media (max-width: 1059px) { .side :global(.toc) { display: none; } }
+</style>

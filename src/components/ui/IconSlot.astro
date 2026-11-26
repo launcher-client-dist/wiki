@@ -1,0 +1,35 @@
+---
+/**
+ * The square slot an entity's icon sits in. Game sprites are pixel art: they scale by a whole number with
+ * nearest-neighbour (never blurred). Without an icon the kind's emblem shows instead.
+ */
+import type { EntityIcon, EntityKind } from "../../lib/entities/types.ts";
+import PixelArt from "./PixelArt.astro";
+interface Props {
+  icon?: EntityIcon | null;
+  kind: EntityKind;
+  size?: number;
+  framed?: boolean;
+}
+const { icon, kind, size = 44, framed = true } = Astro.props;
+const inner = Math.round(size * 0.78);
+let w = inner;
+let h = inner;
+if (icon) {
+  const scale = icon.pixel ? Math.max(1, Math.floor(inner / Math.max(icon.width, icon.height))) : inner / Math.max(icon.width, icon.height);
+  w = Math.round(icon.width * scale);
+  h = Math.round(icon.height * scale);
+}
+---
+<span class:list={["slot", { framed, empty: !icon }]} style={`--size:${size}px`}>
+  {icon ? (
+    <img src={icon.src} alt="" width={w} height={h} class:list={{ px: icon.pixel }} loading="lazy" decoding="async" />
+  ) : (
+    <PixelArt kind={kind} size={Math.round(size * 0.62)} />
+  )}
+</span>
+<style>
+  .slot { width: var(--size); height: var(--size); flex-shrink: 0; display: inline-grid; place-items: center; vertical-align: middle; }
+  .framed { background: var(--icon-slot-bg); border: var(--bw) solid var(--hard); border-radius: var(--r-s); box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.25); }
+  .empty :global(.pixel-art) { opacity: 0.55; filter: saturate(0.3); }
+</style>

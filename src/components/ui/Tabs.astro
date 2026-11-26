@@ -1,0 +1,68 @@
+---
+/**
+ * Tabs (ARIA tablist, arrow keys, Home/End). Each tab's content is the named slot of its id:
+ *   <Tabs tabs={[{ id: "a", label: "Todos" }, { id: "b", label: "Superfície", count: 1 }]}>
+ *     <div slot="a">...</div><div slot="b">...</div>
+ *   </Tabs>
+ * Without JavaScript every panel shows, one after the other (global.css, html:not(.js)).
+ */
+interface Tab {
+  id: string;
+  label: string;
+  count?: number;
+}
+interface Props {
+  tabs: Tab[];
+  label: string;
+}
+const { tabs, label } = Astro.props;
+const uid = `tabs-${Math.random().toString(36).slice(2, 8)}`;
+const panels = await Promise.all(tabs.map((tab) => Astro.slots.render(tab.id)));
+---
+<div class="tabs" data-tabs>
+  <div class="tablist" role="tablist" aria-label={label}>
+    {tabs.map((tab, i) => (
+      <button role="tab" type="button" id={`${uid}-tab-${tab.id}`} aria-controls={`${uid}-panel-${tab.id}`} aria-selected={i === 0 ? "true" : "false"} tabindex={i === 0 ? 0 : -1}>
+        {tab.label}{tab.count !== undefined && <span class="count">{tab.count}</span>}
+      </button>
+    ))}
+  </div>
+  {tabs.map((tab, i) => (
+    <div role="tabpanel" id={`${uid}-panel-${tab.id}`} aria-labelledby={`${uid}-tab-${tab.id}`} tabindex="0" hidden={i > 0} set:html={panels[i]} />
+  ))}
+</div>
+<script>
+  for (const root of document.querySelectorAll<HTMLElement>("[data-tabs]")) {
+    const tabs = [...root.querySelectorAll<HTMLButtonElement>('[role="tab"]')];
+    const pick = (tab: HTMLButtonElement, focus = false) => {
+      for (const t of tabs) {
+        const on = t === tab;
+        t.setAttribute("aria-selected", String(on));
+        t.tabIndex = on ? 0 : -1;
+        document.getElementById(t.getAttribute("aria-controls")!)!.hidden = !on;
+      }
+      if (focus) tab.focus();
+    };
+    tabs.forEach((tab, i) => {
+      tab.addEventListener("click", () => pick(tab));
+      tab.addEventListener("keydown", (e) => {
+        const next = { ArrowRight: i + 1, ArrowLeft: i - 1, Home: 0, End: tabs.length - 1 }[e.key];
+        if (next === undefined) return;
+        e.preventDefault();
+        pick(tabs[(next + tabs.length) % tabs.length]!, true);
+      });
+    });
+  }
+</script>
+<style>
+  .tablist { display: flex; gap: 6px; margin-bottom: var(--s-4); overflow-x: auto; padding-bottom: 6px; scrollbar-width: thin; }
+  [role="tab"] {
+    appearance: none; display: inline-flex; align-items: center; gap: 8px; height: 38px; padding: 0 14px; cursor: pointer;
+    background: var(--surface); color: var(--text-muted); border: var(--bw) solid var(--border); border-radius: var(--r-m);
+    font: 600 var(--fs-sm) / 1 var(--font-body); white-space: nowrap; box-shadow: var(--shadow-1);
+  }
+  [role="tab"]:hover { color: var(--text); }
+  [role="tab"][aria-selected="true"] { background: var(--accent); color: var(--on-accent); border-color: var(--hard); }
+  .count { font: 600 0.6875rem / 1 var(--font-num); opacity: 0.75; }
+  [role="tabpanel"]:focus-visible { outline-offset: 4px; }
+</style>

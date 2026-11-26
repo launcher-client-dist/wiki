@@ -1,0 +1,45 @@
+---
+/**
+ * The full-body picture of a creature or character on a soft ground shadow (transparent PNG renders, coming with
+ * the monster pages). Until a render exists a neutral blocky silhouette holds the space, marked as a placeholder.
+ */
+import { ui } from "../../i18n/index.ts";
+import { isLang, DEFAULT_LANG } from "../../lib/i18n.ts";
+interface Props {
+  src?: string;
+  alt: string;
+  width?: number;
+  height?: number;
+  size?: number;
+  eager?: boolean;
+}
+const t = ui(isLang(Astro.params.lang) ? Astro.params.lang : DEFAULT_LANG);
+const { src, alt, width = 512, height = 512, size = 280, eager = false } = Astro.props;
+---
+<div class="render" style={`--size:${size}px`}>
+  {src ? (
+    <img src={src} alt={alt} width={width} height={height} loading={eager ? "eager" : "lazy"} decoding="async" />
+  ) : (
+    <div class="placeholder" role="img" aria-label={`${alt} (${t.renderPlaceholder})`}>
+      <svg viewBox="0 0 120 120" aria-hidden="true">
+        <defs><pattern id="render-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="3" height="6" fill="currentColor" opacity=".2" /></pattern></defs>
+        <g fill="url(#render-hatch)" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 3">
+          <rect x="44" y="14" width="32" height="26" rx="4" /><rect x="30" y="40" width="60" height="42" rx="6" />
+          <rect x="12" y="44" width="18" height="40" rx="5" /><rect x="90" y="44" width="18" height="40" rx="5" />
+          <rect x="36" y="82" width="18" height="30" rx="4" /><rect x="66" y="82" width="18" height="30" rx="4" />
+        </g>
+      </svg>
+      <span class="label">{t.renderPlaceholder}</span>
+    </div>
+  )}
+</div>
+<style>
+  .render { position: relative; width: min(var(--size), 100%); aspect-ratio: 1; display: grid; place-items: end center; isolation: isolate; margin: 0 auto; }
+  .render::before { content: ""; position: absolute; inset: auto 14% 3% 14%; height: 14%; border-radius: 50%; z-index: -1;
+    background: radial-gradient(closest-side, var(--render-shadow), transparent); }
+  img { width: 100%; height: 100%; object-fit: contain; }
+  .placeholder { width: 80%; height: 90%; color: var(--placeholder-ink); position: relative; display: grid; place-items: end center; }
+  svg { width: 100%; height: 100%; }
+  .label { position: absolute; top: 6px; left: 50%; transform: translateX(-50%); white-space: nowrap; font: 700 0.625rem / 1 var(--font-body);
+    letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); background: var(--surface); border: 1px dashed currentColor; padding: 5px 8px; border-radius: var(--r-s); }
+</style>

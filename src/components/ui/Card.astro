@@ -1,0 +1,51 @@
+---
+/**
+ * A block card: emblem, title, text, a footer line. With `href` the whole card is one link; `soon` marks a section
+ * that hasn't opened yet (not a link, dashed badge).
+ */
+import Badge from "./Badge.astro";
+interface Props {
+  href?: string;
+  title: string;
+  kicker?: string;
+  soon?: string;
+  layout?: "stack" | "row";
+  headingLevel?: 2 | 3;
+}
+const { href, title, kicker, soon, layout = "stack", headingLevel = 3 } = Astro.props;
+const Tag = href && !soon ? "a" : "div";
+const H = `h${headingLevel}` as "h2" | "h3";
+---
+<Tag class:list={["card", `card--${layout}`, { "card--link": Tag === "a", "card--soon": !!soon }]} href={Tag === "a" ? href : undefined}>
+  {Astro.slots.has("emblem") && <span class="emblem"><slot name="emblem" /></span>}
+  <span class="body">
+    {kicker && <span class="kicker">{kicker}</span>}
+    <H class="title">{title}</H>
+    <span class="text"><slot /></span>
+    {Astro.slots.has("footer") && <span class="footer"><slot name="footer" /></span>}
+  </span>
+  {soon && <span class="soon"><Badge tone="soon">{soon}</Badge></span>}
+</Tag>
+<style>
+  .card {
+    position: relative; display: flex; gap: var(--s-4); padding: 20px; color: var(--text); text-decoration: none;
+    background: var(--card-bg); border: var(--bw) solid var(--hard); border-radius: var(--r-l); box-shadow: var(--shadow-2);
+    transition: transform var(--t-fast) var(--ease), box-shadow var(--t-fast) var(--ease);
+  }
+  .card--stack { flex-direction: column; }
+  .card--row { align-items: flex-start; }
+  .card--link:hover { transform: translateY(var(--lift)); box-shadow: 0 8px 0 var(--hard); color: var(--text); }
+  .card--link:hover .title { color: var(--accent-text); }
+  .card--soon { box-shadow: var(--shadow-1); }
+  .card--soon .emblem { filter: saturate(0.4); opacity: 0.75; }
+  .emblem { width: 72px; height: 72px; flex-shrink: 0; display: grid; place-items: center; border-radius: var(--r-m);
+    background: var(--icon-slot-bg); border: var(--bw) solid var(--hard); box-shadow: inset 0 -6px 0 rgba(0, 0, 0, 0.25); }
+  .card--row .emblem { width: 56px; height: 56px; }
+  .body { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+  .kicker { font: 800 var(--fs-xs) / 1 var(--font-body); letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-text); }
+  .title { font-size: 1.5rem; text-shadow: none; transition: color var(--t-fast); }
+  .card--row .title { font-size: 1.25rem; }
+  .text { color: var(--text-muted); font-size: var(--fs-sm); }
+  .footer { margin-top: 4px; }
+  .soon { position: absolute; top: 14px; right: 14px; }
+</style>

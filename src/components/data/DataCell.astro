@@ -1,0 +1,11 @@
+---
+/** One cell of a DataRow. `label` shows beside the value in grid and phone cards; `primary` is the card's title. */
+interface Props {
+  label: string;
+  align?: "start" | "end";
+  primary?: boolean;
+  hideOnPhone?: boolean;
+}
+const { label, align = "start", primary = false, hideOnPhone = false } = Astro.props;
+---
+<td data-label={label} class:list={[`a-${align}`, { primary, "phone-hide": hideOnPhone }]}><slot /></td>

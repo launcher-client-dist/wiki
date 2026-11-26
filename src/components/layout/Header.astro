@@ -1,0 +1,152 @@
+---
+/** The site header: brand, sections (shipped ones are links, the rest "em breve"), search, language, theme, phone menu. */
+import { ui } from "../../i18n/index.ts";
+import { LANGS, HREFLANG, type Lang } from "../../lib/i18n.ts";
+import { homePath, NAV_KINDS, sectionPath, SHIPPED_KINDS, type Alternates } from "../../lib/routes.ts";
+import type { EntityKind } from "../../lib/entities/types.ts";
+import Icon from "../ui/Icon.astro";
+import PixelArt from "../ui/PixelArt.astro";
+import Badge from "../ui/Badge.astro";
+interface Props {
+  lang: Lang;
+  alternates: Alternates;
+  current?: EntityKind;
+}
+const { lang, alternates, current } = Astro.props;
+const t = ui(lang);
+const shipped = (k: EntityKind) => SHIPPED_KINDS.includes(k);
+---
+<header class="site-header">
+  <div class="container bar">
+    <a class="brand" href={homePath(lang)} aria-label={`${t.siteName}, ${t.home.toLowerCase()}`}>
+      <PixelArt logo size={34} />
+      <span class="brand-name">Opengea<small>Wiki</small></span>
+    </a>
+    <nav class="main-nav" aria-label={t.navLabel}>
+      {NAV_KINDS.map((k) => shipped(k) ? (
+        <a href={sectionPath(k, lang)} aria-current={current === k ? "page" : undefined}>{t.kindPlural[k]}</a>
+      ) : (
+        <span class="soon" title={t.soon} aria-disabled="true">{t.kindPlural[k]}</span>
+      ))}
+    </nav>
+    <div class="tools">
+      <button class="search-trigger" type="button" data-open-search aria-label={`${t.searchOpen} (Ctrl+K)`}>
+        <Icon name="search" /><span class="label">{t.searchShort}</span><kbd>Ctrl K</kbd>
+      </button>
+      <nav class="lang" aria-label={t.langSwitchLabel}>
+        {LANGS.map((l) => (
+          <a href={alternates[l]} hreflang={HREFLANG[l]} lang={HREFLANG[l]} aria-current={l === lang ? "true" : undefined} title={ui(l).readIn}>{ui(l).langShort}</a>
+        ))}
+      </nav>
+      <button class="icon-btn theme-toggle" type="button" data-theme-toggle data-to-dark={t.themeToDark} data-to-light={t.themeToLight} aria-label={t.themeToLight}>
+        <span class="moon"><Icon name="moon" /></span><span class="sun"><Icon name="sun" /></span>
+      </button>
+      <button class="icon-btn menu-btn" type="button" aria-expanded="false" aria-controls="wiki-mobile-nav" data-menu data-open-label={t.menuOpen} data-close-label={t.menuClose} aria-label={t.menuOpen}>
+        <span class="open-i"><Icon name="menu" /></span><span class="close-i"><Icon name="close" /></span>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-nav" id="wiki-mobile-nav" aria-label={t.navLabel} hidden>
+    <ul class="container">
+      {NAV_KINDS.map((k) => (
+        <li>
+          {shipped(k) ? (
+            <a href={sectionPath(k, lang)} aria-current={current === k ? "page" : undefined}><PixelArt kind={k} size={28} />{t.kindPlural[k]}</a>
+          ) : (
+            <span class="soon-row"><PixelArt kind={k} size={28} />{t.kindPlural[k]}<Badge tone="soon">{t.soon}</Badge></span>
+          )}
+        </li>
+      ))}
+    </ul>
+  </nav>
+</header>
+<script>
+  const toggle = document.querySelector<HTMLButtonElement>("[data-theme-toggle]");
+  const root = document.documentElement;
+  const label = () => {
+    if (!toggle) return;
+    const light = root.dataset.theme === "light";
+    toggle.setAttribute("aria-label", (light ? toggle.dataset.toDark : toggle.dataset.toLight) ?? "");
+  };
+  label();
+  toggle?.addEventListener("click", () => {
+    const next = root.dataset.theme === "light" ? "dark" : "light";
+    root.dataset.theme = next;
+    try { localStorage.setItem("wiki-theme", next); } catch { /* private mode: the choice lasts this page */ }
+    label();
+  });
+
+  const menuBtn = document.querySelector<HTMLButtonElement>("[data-menu]");
+  const menu = document.getElementById("wiki-mobile-nav");
+  const setMenu = (open: boolean) => {
+    if (!menuBtn || !menu) return;
+    menu.hidden = !open;
+    menuBtn.setAttribute("aria-expanded", String(open));
+    menuBtn.setAttribute("aria-label", (open ? menuBtn.dataset.closeLabel : menuBtn.dataset.openLabel) ?? "");
+  };
+  menuBtn?.addEventListener("click", () => setMenu(menu?.hidden === true));
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape" && menu && !menu.hidden) { setMenu(false); menuBtn?.focus(); } });
+  matchMedia("(min-width: 1100px)").addEventListener("change", (e) => e.matches && setMenu(false));
+</script>
+<style>
+  .site-header { position: sticky; top: 0; z-index: 50; background: var(--header-bg); border-bottom: var(--bw) solid var(--hard);
+    backdrop-filter: saturate(1.4) blur(10px); -webkit-backdrop-filter: saturate(1.4) blur(10px); }
+  .bar { display: flex; align-items: center; gap: var(--s-3); height: var(--header-h); }
+  .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--heading); flex-shrink: 0; }
+  .brand :global(.pixel-art) { filter: drop-shadow(0 2px 0 var(--hard)); }
+  .brand-name { font: 600 1.375rem / 1 var(--font-display); letter-spacing: 0.01em; }
+  .brand-name small { display: block; margin-top: 3px; font: 700 0.625rem / 1 var(--font-body); letter-spacing: 0.18em; text-transform: uppercase; color: var(--text-muted); }
+
+  .main-nav { display: none; gap: 2px; margin-left: var(--s-4); }
+  .main-nav a, .main-nav .soon { padding: 8px 11px; border-radius: var(--r-m); font-weight: 600; font-size: 0.9375rem; text-decoration: none; }
+  .main-nav a { color: var(--text-muted); }
+  .main-nav a:hover { color: var(--text); background: var(--hover-strong); }
+  .main-nav a[aria-current="page"] { color: var(--heading); background: var(--surface-2); box-shadow: inset 0 -3px 0 var(--accent); }
+  .main-nav .soon { color: var(--text-faint); cursor: default; }
+  @media (min-width: 1100px) { .main-nav { display: flex; } .menu-btn { display: none !important; } }
+
+  .tools { margin-left: auto; display: flex; align-items: center; gap: 8px; }
+  .search-trigger, .icon-btn, .lang {
+    height: 40px; border: var(--bw) solid var(--border); border-radius: var(--r-m); background: var(--surface); color: var(--text-muted);
+    box-shadow: var(--shadow-1); cursor: pointer;
+  }
+  .search-trigger { display: flex; align-items: center; gap: 10px; padding: 0 10px; font: 500 var(--fs-sm) / 1 var(--font-body); }
+  .search-trigger:hover, .icon-btn:hover { color: var(--text); background: var(--surface-2); }
+  .search-trigger .label, .search-trigger kbd { display: none; }
+  @media (min-width: 720px) {
+    .search-trigger { min-width: 220px; padding: 0 8px 0 12px; }
+    .search-trigger .label { display: inline; }
+    .search-trigger kbd { display: inline-block; margin-left: auto; }
+  }
+  .icon-btn { width: 40px; display: grid; place-items: center; }
+  .lang { display: flex; padding: 3px; gap: 2px; cursor: default; }
+  .lang a { display: grid; place-items: center; padding: 0 8px; border-radius: var(--r-s); font: 800 0.75rem / 1 var(--font-body); letter-spacing: 0.05em; color: var(--text-muted); text-decoration: none; }
+  .lang a:hover { color: var(--text); background: var(--hover-strong); }
+  .lang a[aria-current="true"] { background: var(--accent); color: var(--on-accent); }
+
+  .theme-toggle .sun, :global(:root[data-theme="light"]) .theme-toggle .moon { display: none; }
+  :global(:root[data-theme="light"]) .theme-toggle .sun { display: contents; }
+  .menu-btn .close-i, .menu-btn[aria-expanded="true"] .open-i { display: none; }
+  .menu-btn[aria-expanded="true"] .close-i { display: contents; }
+  .menu-btn[aria-expanded="true"] { background: var(--surface-2); color: var(--heading); }
+
+  .mobile-nav { border-top: var(--bw) solid var(--hard); background: var(--bg); box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); }
+  .mobile-nav ul { list-style: none; margin: 0; padding-top: 10px; padding-bottom: 14px; display: grid; gap: 6px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr)); }
+  .mobile-nav a, .soon-row { display: flex; align-items: center; gap: 12px; padding: 10px 12px; border-radius: var(--r-m); font-weight: 700; text-decoration: none; border: var(--bw) solid var(--border); background: var(--surface); }
+  .mobile-nav a { color: var(--heading); }
+  .mobile-nav a[aria-current="page"] { border-color: var(--accent); }
+  .soon-row { color: var(--text-faint); border-style: dashed; }
+  .soon-row :global(.badge) { margin-left: auto; }
+  .soon-row :global(.pixel-art) { opacity: 0.55; filter: saturate(0.3); }
+  @media (max-width: 479px) {
+    .bar { gap: 8px; }
+    .tools { gap: 5px; }
+    .brand { gap: 8px; }
+    .brand :global(.pixel-art) { --size: 28px !important; }
+    .brand-name { font-size: 1.1875rem; }
+    .search-trigger, .icon-btn { width: 36px; height: 36px; padding: 0; justify-content: center; }
+    .lang { height: 36px; }
+    .lang a { padding: 0 6px; }
+  }
+  @media (max-width: 359px) { .brand-name small { display: none; } }
+</style>

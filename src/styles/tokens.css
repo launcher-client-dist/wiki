@@ -11,7 +11,7 @@
   --font-display: "Pixelify Sans", "Courier New", monospace;
   --font-body: "Rubik", "Segoe UI", system-ui, sans-serif;
   --font-num: "Rubik", system-ui, sans-serif;
-  --display-weight: 600;
+  --display-weight: 400;      /* Pixelify Sans keeps its C open at 400 (heavier weights read "C" as "O") */
   --display-tracking: 0.01em;
 
   /* ---- type scale */
