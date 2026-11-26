@@ -1,49 +1,53 @@
 /*
- * Opengea Wiki: design tokens (design C, "Voxel").
+ * Opengea Wiki: design tokens (design "Codex escuro").
  *
- * The whole look lives here: colours (dark and light), fonts, type scale, spacing, radii, outlines, block shadows and
+ * The whole look lives here: colours (dark and light), fonts, type scale, spacing, radii, outlines, shadows and
  * motion. Components read only these variables, so a redesign means editing this file (and, for shapes, the
  * components' own <style> blocks). See docs/theming.md.
+ *
+ * Codex escuro: a calm, neutral game database. Charcoal (or off-white) surfaces, thin outlines and soft shadows,
+ * sections separated by space and type rather than boxes, the pixel font only on page titles (and the logo), the
+ * game's own pixel icons a step bigger, one green accent; yellow ("sun") only for "the best".
  */
 
 :root {
   /* ---- fonts (self-hosted in public/fonts, see src/styles/fonts.css) */
-  --font-display: "Pixelify Sans", "Courier New", monospace;
+  --font-display: "Pixelify Sans", "Courier New", monospace;   /* page titles and the logo only */
   --font-body: "Rubik", "Segoe UI", system-ui, sans-serif;
   --font-num: "Rubik", system-ui, sans-serif;
   --display-weight: 400;      /* Pixelify Sans keeps its C open at 400 (heavier weights read "C" as "O") */
   --display-tracking: 0.01em;
 
-  /* ---- type scale */
-  --fs-xs: 0.75rem;   /* 12 */
-  --fs-sm: 0.875rem;  /* 14 */
+  /* ---- type scale (secondary text a step larger than in Voxel: 13 / 15) */
+  --fs-xs: 0.8125rem; /* 13 */
+  --fs-sm: 0.9375rem; /* 15 */
   --fs-md: 1rem;      /* 16: body */
   --fs-lg: 1.125rem;  /* 18 */
   --fs-xl: 1.375rem;  /* 22 */
-  --fs-h3: 1.25rem;
-  --fs-h2: clamp(1.5rem, 1.2rem + 1vw, 1.875rem);
+  --fs-h3: 1.125rem;
+  --fs-h2: clamp(1.375rem, 1.2rem + 0.6vw, 1.625rem);
   --fs-h1: clamp(2.125rem, 1.6rem + 2.4vw, 3.375rem);
   --fs-hero: clamp(2.75rem, 1.8rem + 5vw, 5.75rem);
   --lh-body: 1.65;
-  --lh-tight: 1.15;
+  --lh-tight: 1.2;
 
-  /* ---- space (4 px grid) */
-  --s-1: 0.25rem; --s-2: 0.5rem; --s-3: 0.75rem; --s-4: 1rem; --s-5: 1.5rem; --s-6: 2rem; --s-7: 3rem; --s-8: 4.5rem;
+  /* ---- space (4 px grid; the larger steps roomier than in Voxel) */
+  --s-1: 0.25rem; --s-2: 0.5rem; --s-3: 0.75rem; --s-4: 1rem; --s-5: 1.75rem; --s-6: 2.5rem; --s-7: 3.5rem; --s-8: 4.5rem;
   --gutter: 1rem;
   --max-w: 1280px;
   --prose-w: 46rem;
   --header-h: 4rem;
 
-  /* ---- shape: chunky blocks */
-  --bw: 2px;                 /* the outline every block wears */
-  --r-xs: 2px; --r-s: 3px; --r-m: 5px; --r-l: 8px; --r-xl: 10px;
-  --r-pill: 6px;             /* pills stay blocky in this design */
+  /* ---- shape: thin outlines, soft corners */
+  --bw: 1px;                 /* the outline a block wears */
+  --r-xs: 3px; --r-s: 4px; --r-m: 8px; --r-l: 12px; --r-xl: 14px;
+  --r-pill: 999px;
 
   /* ---- motion */
   --ease: cubic-bezier(0.2, 0.7, 0.3, 1);
   --t-fast: 120ms;
   --t-med: 200ms;
-  --lift: -3px;              /* how far a block rises on hover */
+  --lift: -2px;              /* how far a block rises on hover */
 }
 @media (min-width: 720px) { :root { --gutter: 2rem; } }
 @media (prefers-reduced-motion: reduce) { :root { --t-fast: 0ms; --t-med: 0ms; --lift: 0px; } }
@@ -51,71 +55,72 @@
 /* ---------------------------------------------------------------- dark (the default) */
 :root, :root[data-theme="dark"] {
   color-scheme: dark;
-  --bg: #121729;
-  --bg-deep: #0d1120;
-  --surface: #1b2340;
-  --surface-2: #252f54;
-  --surface-3: #2e3a66;
-  --hard: #0b0f1c;                       /* outlines and block shadows */
-  --border: #36427a;
-  --border-strong: #5361a8;
-  --row-border: #2a3463;
+  --bg: #0e1013;
+  --bg-deep: #0a0b0d;
+  --surface: #15181c;
+  --surface-2: #1b1f24;
+  --surface-3: #252a31;
+  --hard: #2a2f37;                       /* outlines (thin, quiet) */
+  --well: #0b0c0f;                       /* the dark slot a game icon sits in */
+  --border: #2a2f37;
+  --border-strong: #3b424d;
+  --row-border: #20242a;
 
-  --text: #eef1ff;
-  --text-muted: #aab3d9;
-  --text-faint: #8590c0;
+  --text: #e9eaee;
+  --text-muted: #b2b7c2;
+  --text-faint: #979ca8;
   --heading: #ffffff;
 
-  --accent: #86d957;                     /* grass */
+  --accent: #86d957;                     /* grass: the one accent */
   --accent-hover: #9be86d;
   --accent-text: #9be86d;
   --on-accent: #0e1a06;
-  --sky: #7fd2ff;
-  --sun: #ffd34e;
+  --sky: #8fb8d9;
+  --sun: #ffd34e;                        /* "the best" only (best rank, best price) */
   --on-sun: #2a1f00;
   --danger: #ff6b6b;
   --magic: #e0a6ff;
 
-  --link: #7fd2ff;
-  --link-hover: #b3e6ff;
-  --focus: #ffd34e;
-  --focus-ring: rgba(255, 211, 78, 0.35);
-  --hover: rgba(127, 210, 255, 0.06);
-  --hover-strong: rgba(127, 210, 255, 0.14);
-  --mark-bg: rgba(255, 211, 78, 0.4);
-  --scrim: rgba(6, 9, 20, 0.75);
+  --link: #9be86d;
+  --link-hover: #b8f28f;
+  --focus: #9be86d;
+  --focus-ring: rgba(155, 232, 109, 0.35);
+  --hover: rgba(255, 255, 255, 0.04);
+  --hover-strong: rgba(255, 255, 255, 0.08);
+  --mark-bg: rgba(134, 217, 87, 0.32);
+  --scrim: rgba(5, 6, 8, 0.75);
 
-  --header-bg: rgba(18, 23, 41, 0.9);
-  --input-bg: #161d36;
-  --card-bg: #1b2340;
-  --popover-bg: #1f2849;
+  --header-bg: rgba(14, 16, 19, 0.92);
+  --input-bg: #121418;
+  --card-bg: #15181c;
+  --popover-bg: #1b1f24;
   --chip-on-bg: #86d957;
   --chip-on-text: #0e1a06;
-  --tag-bg: #252f54;
-  --tag-text: #d5dbf7;
-  --icon-slot-bg: #0f1430;
-  --render-bg: linear-gradient(180deg, #2a3a78 0%, #1b2340 70%);
+  --tag-bg: #1b1f24;
+  --tag-text: #dcdfe6;
+  --icon-slot-bg: #0c0d10;
+  --render-bg: linear-gradient(180deg, #20252c 0%, #15181c 80%);
   --render-shadow: rgba(0, 0, 0, 0.55);
-  --placeholder-ink: #6a78bd;
-  --bar-track: #0f1430;
+  --placeholder-ink: #5f6672;
+  --bar-track: #0c0d10;
   --bar-fill: linear-gradient(90deg, #4fbf2f, #9be86d);
-  --callout-info: #7fd2ff;
+  --callout-info: #8fb8d9;
   --callout-tip: #86d957;
   --callout-warn: #ffa44e;
-  --callout-bg: #1d2d4a;
+  --callout-bg: #171b20;
 
-  /* the sky banner (home hero, entity heroes) */
-  --sky-top: #3b5bb5;
-  --sky-mid: #2a3f86;
-  --sky-bottom: #1b2340;
+  /* the hero panel (home hero, entity heroes): calm, no sky */
+  --sky-top: #1a1e24;
+  --sky-mid: #16191e;
+  --sky-bottom: #15181c;
   --grass-a: #4fa52a;
   --grass-b: #5cb733;
-  --cloud: rgba(255, 255, 255, 0.14);
+  --cloud: rgba(255, 255, 255, 0.05);
   --banner-text: #ffffff;
-  --banner-muted: rgba(255, 255, 255, 0.82);
-  --banner-chip-bg: rgba(10, 14, 30, 0.55);
-
-  /* drop rarity tiers: colour + label + pips, never colour alone, never a % */
+  --banner-muted: #c4c8d2;
+  --banner-chip-bg: rgba(0, 0, 0, 0.3);
+  --hero-slot: radial-gradient(circle at 50% 42%, #2b3139 0%, #15181c 62%, #0b0c0f 100%);
+  --hero-glow: radial-gradient(circle, rgba(134, 217, 87, 0.18) 0%, transparent 65%);
 
   /* item qualities (Comum .. Lendário) */
   --quality-0: var(--text);
@@ -124,78 +129,80 @@
   --quality-3: #d18cff;
   --quality-4: #ffa44e;
 
-  --shadow-1: 0 3px 0 var(--hard);
-  --shadow-2: 0 5px 0 var(--hard);
-  --shadow-3: 0 8px 0 var(--hard), 0 20px 40px rgba(0, 0, 0, 0.45);
-  --text-shadow-block: 0 3px 0 var(--hard);
+  --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-2: 0 6px 18px rgba(0, 0, 0, 0.28);
+  --shadow-3: 0 18px 44px rgba(0, 0, 0, 0.5);
+  --text-shadow-block: none;
 }
 
 /* ---------------------------------------------------------------- light */
 :root[data-theme="light"] {
   color-scheme: light;
-  --bg: #e6f1ff;
-  --bg-deep: #d8e8fb;
+  --bg: #f5f6f8;
+  --bg-deep: #eceef2;
   --surface: #ffffff;
-  --surface-2: #eef3ff;
-  --surface-3: #dfe8fb;
-  --hard: #1d2747;
-  --border: #1d2747;
-  --border-strong: #1d2747;
-  --row-border: #d5def0;
+  --surface-2: #f2f4f7;
+  --surface-3: #e6e9ee;
+  --hard: #dde1e7;
+  --well: #1a1d22;
+  --border: #dde1e7;
+  --border-strong: #c5cbd4;
+  --row-border: #e8ebef;
 
-  --text: #19213b;
-  --text-muted: #46507a;
-  --text-faint: #4a5478;
-  --heading: #0f1530;
+  --text: #16181d;
+  --text-muted: #4a515d;
+  --text-faint: #5b626e;
+  --heading: #0d0f12;
 
   --accent: #2f7d12;
   --accent-hover: #256a0c;
-  --accent-text: #2f7d12;
+  --accent-text: #2a6f10;
   --on-accent: #ffffff;
-  --sky: #1557b0;
+  --sky: #1d5fa8;
   --sun: #ffd34e;
   --on-sun: #2a1f00;
   --danger: #c8231b;
   --magic: #7a2fc0;
 
-  --link: #1557b0;
-  --link-hover: #0d3d80;
-  --focus: #c26a00;
-  --focus-ring: rgba(194, 106, 0, 0.3);
-  --hover: rgba(21, 87, 176, 0.05);
-  --hover-strong: rgba(21, 87, 176, 0.1);
-  --mark-bg: rgba(255, 211, 78, 0.6);
-  --scrim: rgba(15, 21, 48, 0.4);
+  --link: #2a6f10;
+  --link-hover: #1f550b;
+  --focus: #2f7d12;
+  --focus-ring: rgba(47, 125, 18, 0.3);
+  --hover: rgba(0, 0, 0, 0.035);
+  --hover-strong: rgba(0, 0, 0, 0.07);
+  --mark-bg: rgba(134, 217, 87, 0.4);
+  --scrim: rgba(15, 18, 24, 0.4);
 
-  --header-bg: rgba(230, 241, 255, 0.92);
+  --header-bg: rgba(245, 246, 248, 0.92);
   --input-bg: #ffffff;
   --card-bg: #ffffff;
   --popover-bg: #ffffff;
   --chip-on-bg: #2f7d12;
   --chip-on-text: #ffffff;
-  --tag-bg: #eef3ff;
-  --tag-text: #2b355c;
-  --icon-slot-bg: #1d2747;
-  --render-bg: linear-gradient(180deg, #9fd4ff 0%, #e6f1ff 75%);
-  --render-shadow: rgba(20, 40, 90, 0.3);
-  --placeholder-ink: #8a96c4;
-  --bar-track: #dfe7f7;
+  --tag-bg: #f2f4f7;
+  --tag-text: #2b303a;
+  --icon-slot-bg: #1a1d22;
+  --render-bg: linear-gradient(180deg, #eef0f3 0%, #ffffff 80%);
+  --render-shadow: rgba(0, 0, 0, 0.18);
+  --placeholder-ink: #8b929e;
+  --bar-track: #e6e9ee;
   --bar-fill: linear-gradient(90deg, #3f9d1f, #2f7d12);
-  --callout-info: #1557b0;
+  --callout-info: #1d5fa8;
   --callout-tip: #2f7d12;
   --callout-warn: #b85a00;
-  --callout-bg: #e3f2ff;
+  --callout-bg: #f2f4f7;
 
-  --sky-top: #7cc4ff;
-  --sky-mid: #b9e0ff;
-  --sky-bottom: #e6f1ff;
+  --sky-top: #ffffff;
+  --sky-mid: #fafbfc;
+  --sky-bottom: #f5f6f8;
   --grass-a: #4fa52a;
   --grass-b: #5cb733;
-  --cloud: rgba(255, 255, 255, 0.7);
-  --banner-text: #0f1530;
-  --banner-muted: #2b355c;
-  --banner-chip-bg: rgba(255, 255, 255, 0.85);
-
+  --cloud: rgba(0, 0, 0, 0.04);
+  --banner-text: #0d0f12;
+  --banner-muted: #4a515d;
+  --banner-chip-bg: #ffffff;
+  --hero-slot: radial-gradient(circle at 50% 42%, #2b3139 0%, #1a1d22 70%);
+  --hero-glow: radial-gradient(circle, rgba(47, 125, 18, 0.12) 0%, transparent 65%);
 
   --quality-0: var(--text);
   --quality-1: #286b0f;
@@ -203,8 +210,8 @@
   --quality-3: #6a27a8;
   --quality-4: #984a00;
 
-  --shadow-1: 0 3px 0 var(--hard);
-  --shadow-2: 0 4px 0 var(--hard);
-  --shadow-3: 0 6px 0 var(--hard), 0 18px 36px rgba(20, 40, 90, 0.2);
+  --shadow-1: 0 1px 2px rgba(16, 24, 40, 0.08);
+  --shadow-2: 0 4px 14px rgba(16, 24, 40, 0.08);
+  --shadow-3: 0 16px 40px rgba(16, 24, 40, 0.16);
   --text-shadow-block: none;
 }

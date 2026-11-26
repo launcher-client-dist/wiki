@@ -24,16 +24,16 @@ a { color: var(--link); text-decoration-thickness: 1px; text-underline-offset: 3
 a:hover { color: var(--link-hover); }
 :focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; border-radius: var(--r-s); }
 button { font: inherit; color: inherit; }
-h1, h2, h3, h4 { font-family: var(--font-display); font-weight: var(--display-weight); letter-spacing: var(--display-tracking);
+h1, h2, h3, h4 { font-family: var(--font-body); font-weight: 700; letter-spacing: -0.01em;
   line-height: var(--lh-tight); color: var(--heading); margin: 0; text-wrap: balance; }
-h1 { font-size: var(--fs-h1); text-shadow: var(--text-shadow-block); }
-h2 { font-size: var(--fs-h2); text-shadow: var(--text-shadow-block); }
+/* Codex: the pixel face only on the page title (h1) and the logo; every other heading in the body face */
+h1 { font-family: var(--font-display); font-weight: var(--display-weight); letter-spacing: var(--display-tracking); font-size: var(--fs-h1); }
+h2 { font-size: var(--fs-h2); }
 h3 { font-size: var(--fs-h3); }
-/* the pixel face reads badly small (its C looks like an O): small headings use the body face */
-h4, h5, h6 { font-family: var(--font-body); font-weight: 700; }
+h5, h6 { font-family: var(--font-body); font-weight: 700; }
 p { margin: 0 0 var(--s-4); }
 kbd { font: 600 0.6875rem/1 var(--font-num); padding: 3px 6px; border-radius: var(--r-s); border: 1px solid var(--border);
-  background: var(--surface-2); color: var(--text-muted); white-space: nowrap; box-shadow: 0 2px 0 var(--hard); }
+  background: var(--surface-2); color: var(--text-muted); white-space: nowrap; box-shadow: var(--shadow-1); }
 mark { background: var(--mark-bg); color: inherit; border-radius: 2px; padding: 0 1px; }
 hr { border: 0; border-top: var(--bw) solid var(--border); margin: var(--s-6) 0; }
 ::selection { background: var(--mark-bg); }
@@ -51,7 +51,7 @@ html:not(.js) [role="tabpanel"][hidden] { display: block !important; }
 .prose > * + * { margin-top: var(--s-4); }
 .prose p { margin: 0; }
 .prose h2 { margin-top: var(--s-7); margin-bottom: var(--s-3); scroll-margin-top: calc(var(--header-h) + var(--s-4)); }
-.prose h3 { margin-top: var(--s-6); margin-bottom: var(--s-2); font-family: var(--font-body); font-weight: 700; }
+.prose h3 { margin-top: var(--s-6); margin-bottom: var(--s-2); }
 .prose h2 + *, .prose h3 + * { margin-top: 0; }
 .prose ul, .prose ol { padding-left: 1.4em; margin: 0; }
 .prose li + li { margin-top: var(--s-2); }
