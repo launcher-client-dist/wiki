@@ -278,7 +278,7 @@ export function entitiesFromData(file: ItemsFile, stubs: readonly StubEntity[]):
       ref: s.ref,
       name: s.name,
       slug: s.slug,
-      ...(s.icon && s.iconSize ? { icon: { src: s.icon, width: s.iconSize[0], height: s.iconSize[1] } } : {}),
+      ...(s.icon && s.iconSize ? { icon: { src: s.icon, width: s.iconSize[0], height: s.iconSize[1], ...(s.ref.startsWith("spell:") ? { pixel: true } : {}) } } : {}),
       ...(s.summary ? { summary: s.summary } : {}),
       ...(s.facts ? { facts: s.facts.map((f) => ({ label: perLang((l) => ui(l).facts[f.key]), value: f.value, icon: STUB_FACT_ICON[f.key] })) } : {}),
       relations: dedupe(rel.get(s.ref) ?? []),

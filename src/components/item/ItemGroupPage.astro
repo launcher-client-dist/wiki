@@ -64,7 +64,7 @@ const jsonLd = [{
           return (
             <ListRow>
               <EntityLink to={`item:${m.id}`} iconSize={44} />
-              {v.spell && <Fragment slot="sub"><span class="teaches"><GameIcon name="stat-magic" scale={1} />{ti.groupTeaches} <EntityLink to={v.spell} icon={false} /></span></Fragment>}
+              {v.spell && <Fragment slot="sub"><span class="teaches">{ti.groupTeaches} <EntityLink to={v.spell} iconSize={28} /></span></Fragment>}
               <Fragment slot="end">
                 <span class="where">{kinds.map((k) => <span class="srcb" title={ti.source[k]}><img src={`/ui/${SOURCE_ICON[k]}.png`} width={UI[SOURCE_ICON[k]!]![0]! * 2} height={UI[SOURCE_ICON[k]!]![1]! * 2} alt={ti.source[k]} class="px" /></span>)}</span>
               </Fragment>
