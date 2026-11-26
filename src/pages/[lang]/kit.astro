@@ -20,6 +20,10 @@ import MapLink from "../../components/ui/MapLink.astro";
 import IconSlot from "../../components/ui/IconSlot.astro";
 import RenderSlot from "../../components/ui/RenderSlot.astro";
 import PixelArt from "../../components/ui/PixelArt.astro";
+import GameIcon from "../../components/ui/GameIcon.astro";
+import TipTag from "../../components/ui/TipTag.astro";
+import StatChips from "../../components/ui/StatChips.astro";
+import uiIcons from "../../data/ui-icons.json";
 import EntityLink from "../../components/entity/EntityLink.astro";
 import ReverseRefs from "../../components/entity/ReverseRefs.astro";
 import DataTable from "../../components/data/DataTable.astro";
@@ -65,6 +69,14 @@ const scene = `data:image/svg+xml,${encodeURIComponent('<svg xmlns="http://www.w
       <div class="row" id="tiers">{TIERS.map((tier) => <TierBadge tier={tier} />)}</div>
     </section>
 
+    <section><h2>{L("Ícones do jogo", "Game icons")}</h2>
+      <div class="row">{Object.keys(uiIcons).filter((n) => !n.startsWith("cat-")).map((n) => <span title={n}><GameIcon name={n} fit={27} alt={n} /></span>)}</div>
+      <div class="row">
+        <TipTag icon="slot-hands" iconScale={1} tip={L("Onde se equipa: o espaço Mãos do inventário.", "Where it is worn: the Hands slot.")}>{L("Espaço: Mãos", "Slot: Hands")}</TipTag>
+        <TipTag tone="sun" tip={L("Um exemplo de dica.", "An example tip.")}>{L("2 versões", "2 versions")}</TipTag>
+      </div>
+      <div class="row"><StatChips stats={{ damage: 35, defense: 3, health: -100 }} lang={lang} /></div>
+    </section>
     <section><h2>{L("Links de entidades", "Entity links")}</h2>
       <p class="demo">
         {L("Com página:", "With a page:")} <EntityLink to="guide:glossary" />.{" "}

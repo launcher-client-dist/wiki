@@ -1,7 +1,9 @@
 ---
 /**
  * A tag that explains itself: an icon (a GameIcon name) and its words, plus a tooltip that opens on hover, keyboard
- * focus and tap (the tag is a button described by the tip), so it never relies on `title` alone.
+ * focus and tap or click (a toggle, so it works where a tap doesn't focus a button; Escape or a click elsewhere closes
+ * it). The tag is a button described by the tip: never `title` alone. The tip opens upward, so a container that clips
+ * at its bottom edge never cuts it; on a phone it spans the tags' row (the row is its positioning box).
  *   <TipTag icon="slot-hands" iconScale={1} tip="Onde se equipa...">Espaço: Mãos</TipTag>
  */
 import GameIcon from "./GameIcon.astro";
@@ -12,31 +14,57 @@ interface Props {
   tone?: "default" | "sun";
 }
 const { tip, icon, iconScale = 2, tone = "default" } = Astro.props;
-const id = `tip-${Math.random().toString(36).slice(2, 9)}`;
+// a stable id (the same build gives the same page): from the tip's own text
+let h = 0;
+for (const c of tip) h = (h * 31 + c.charCodeAt(0)) >>> 0;
+const id = `tip-${h.toString(36)}`;
 ---
-<span class:list={["tiptag", `tone-${tone}`]}>
-  <button type="button" class="tt" aria-describedby={id}>
+<span class:list={["tiptag", `tone-${tone}`]} data-tiptag>
+  <button type="button" class="tt" aria-describedby={id} aria-expanded="false">
     {icon && <span class="ti"><GameIcon name={icon} scale={iconScale} /></span>}
     <span class="tw"><slot /></span>
     <span class="q" aria-hidden="true">?</span>
   </button>
   <span role="tooltip" id={id} class="tip">{tip}</span>
 </span>
+<script>
+  const close = (except?: Element) => {
+    for (const t of document.querySelectorAll<HTMLElement>("[data-tiptag].open")) {
+      if (t === except) continue;
+      t.classList.remove("open");
+      t.querySelector("button")?.setAttribute("aria-expanded", "false");
+    }
+  };
+  for (const t of document.querySelectorAll<HTMLElement>("[data-tiptag]")) {
+    const b = t.querySelector("button")!;
+    b.addEventListener("click", (e) => {
+      e.stopPropagation();
+      close(t);
+      const open = t.classList.toggle("open");
+      b.setAttribute("aria-expanded", String(open));
+    });
+  }
+  document.addEventListener("click", () => close());
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape") close(); });
+</script>
 <style>
   .tiptag { position: relative; display: inline-flex; }
   .tt { display: inline-flex; align-items: center; gap: 8px; min-height: 36px; padding: 3px 10px 3px 4px; border-radius: var(--r-m);
     border: var(--bw) solid var(--hard); background: var(--surface); color: var(--text); font: 700 var(--fs-sm) / 1.1 var(--font-body);
     box-shadow: 0 2px 0 var(--hard); cursor: help; text-align: left; }
   .tone-sun .tt { background: var(--sun); color: var(--on-sun); }
-  .ti :global(img[src*="/ui/slot-"]) { filter: brightness(1.6) contrast(1.1); }
   .ti { display: inline-grid; place-items: center; min-width: 28px; min-height: 28px; border-radius: 6px; background: var(--hard); }
   .q { display: inline-grid; place-items: center; width: 16px; height: 16px; border-radius: 50%; font-size: 11px; color: var(--text-muted);
     border: 1px solid currentColor; opacity: 0.8; }
   .tone-sun .q { color: var(--on-sun); }
-  .tt:hover, .tt:focus-visible { border-color: var(--focus); }
-  .tip { position: absolute; z-index: 30; left: 0; top: calc(100% + 8px); width: max-content; max-width: min(280px, 80vw); padding: 10px 12px;
+  .tt:hover, .tt:focus-visible, .open .tt { border-color: var(--focus); }
+  .tip { position: absolute; z-index: 30; left: 0; bottom: calc(100% + 8px); width: max-content; max-width: min(300px, calc(100vw - 32px)); padding: 10px 12px;
     border-radius: var(--r-m); border: var(--bw) solid var(--hard); background: var(--popover-bg); color: var(--text);
     font: 500 var(--fs-sm) / 1.4 var(--font-body); box-shadow: var(--shadow-2); visibility: hidden; opacity: 0; transition: opacity 0.12s; pointer-events: none; }
-  .tiptag:hover .tip, .tt:focus + .tip, .tt:focus-visible + .tip { visibility: visible; opacity: 1; }
+  .tiptag:hover .tip, .tt:focus-visible + .tip, .open .tip { visibility: visible; opacity: 1; }
+  @media (max-width: 640px) {
+    .tiptag { position: static; }
+    .tip { left: 0; right: 0; width: auto; max-width: none; }
+  }
   @media (prefers-reduced-motion: reduce) { .tip { transition: none; } }
 </style>

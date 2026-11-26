@@ -7,7 +7,8 @@ The design lives in two places. Pages and content never carry styles of their ow
    of the banners, the five item-quality colours and motion. Change a value here and every component follows. (Drop
    tiers have no colour of their own: a word and pips, so they never look like a quality.)
 2. **The components' own `<style>` blocks: the shapes.** `src/components/ui/` (Tag, Chip, Badge, TierBadge, Callout,
-   Spoiler, Tabs, Card, InfoBox, StatGrid, Figure, MapLink, IconSlot, RenderSlot, PixelArt, Icon),
+   Spoiler, Tabs, Card, InfoBox, StatGrid, Figure, MapLink, IconSlot, RenderSlot, PixelArt, Icon, GameIcon (the game's
+   own UI icons, `public/ui/`, by meaning), TipTag (a tag that explains itself), StatChips, StatValue, VariantSwitch),
    `src/components/layout/` (PageShell, Header, Footer, Breadcrumbs, SearchOverlay, HoverCard, Toc),
    `src/components/entity/` (EntityLink, ReverseRefs) and `src/components/data/` (DataTable, DataRow, DataCell).
    They read only tokens, so a new direction rarely needs more than the outline, radius and shadow rules there.

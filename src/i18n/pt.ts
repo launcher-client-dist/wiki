@@ -223,7 +223,7 @@ export const pt = {
     stockBlack: "mercado negro: {n}, só em alguns dias",
     amount: "Qtd.",
     tierCol: "Frequência",
-    qualityNote: "A barrinha colorida ao lado: este drop pode vir numa qualidade melhor (veja abaixo).",
+    qualityNote: "A marca de quatro cores ao lado: este drop pode vir numa qualidade melhor (veja abaixo).",
     qualityYes: "pode vir com qualidade",
     useTitle: "Uso",
     usedInTitle: "Usado em receitas",

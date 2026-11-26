@@ -141,7 +141,7 @@ const jsonLd = [{
           <section class="block" aria-labelledby="h-qualities">
             <h2 id="h-qualities">{ti.qualities}</h2>
             <p class="muted">{ti.qualitiesIntro}</p>
-            <ol class="qcards" data-section="quality-cards">
+            <ol class="qcards" data-section="quality-cards" data-pagefind-ignore="all">
               {qualities.map((q) => {
                 const q0 = qualities[0]!;
                 const qname = ti.quality[`q${q.rarity}` as keyof typeof ti.quality];
@@ -185,7 +185,7 @@ const jsonLd = [{
                     <ListRow>
                       <EntityLink to={d.monster} iconSize={40} />
                       <Fragment slot="end">
-                        {d.quality && <span class="qchip" title={ti.qualityYes}><GameIcon name="quality-3" /><span class="sr-only">{ti.qualityYes}</span></span>}
+                        {d.quality && <span class="qchip" title={ti.qualityYes}><GameIcon name="quality-any" /><span class="sr-only">{ti.qualityYes}</span></span>}
                         <span class="num">× {d.amount[0] === d.amount[1] ? d.amount[0] : `${d.amount[0]}–${d.amount[1]}`}</span>
                         <TierBadge tier={d.tier} />
                       </Fragment>
@@ -254,7 +254,7 @@ const jsonLd = [{
               <div class="dq">
                 <h3>{ti.dropQualityTitle}</h3>
                 <p class="muted">{ti.dropQualityIntro}</p>
-                <ul class="odds" data-section="drop-quality">
+                <ul class="odds" data-section="drop-quality" data-pagefind-ignore="all">
                   {ITEMS.dropQuality.map((q) => (
                     <li class={`odd q${q.rarity}`}>
                       <GameIcon name={`quality-${q.rarity}`} scale={3} />
@@ -417,7 +417,7 @@ const jsonLd = [{
                     </span>
                     <StatValue value={n} variants={v.classes ? classVariants(k, v) : undefined} size="big" />
                     {r && (
-                      <span class="rank">
+                      <span class="rank" data-pagefind-ignore>
                         <span class="rbar" aria-hidden="true"><span class:list={["rfill", { best: r.rank === 1 }]} style={`width:${Math.max(6, Math.round(r.share * 100))}%`}></span></span>
                         <span class="rtext">{fill(r.rank === 1 ? ti.rankBest : ti.rankOf, { n: r.rank, of: r.of, group: item.subtype[lang] })}</span>
                       </span>
@@ -485,7 +485,7 @@ const jsonLd = [{
   .alt { margin: 0; color: var(--banner-muted); font-size: var(--fs-lg); }
   .game-text { margin: 4px 0 0; padding: 8px 12px; border-left: 4px solid var(--sun); background: var(--banner-chip-bg); border-radius: 0 var(--r-m) var(--r-m) 0;
     color: var(--banner-text); font-style: italic; max-width: 42rem; }
-  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+  .tags { position: relative; display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
   .tags :global(.tag) { background: var(--banner-chip-bg); color: var(--banner-text); white-space: normal; }
 
   .layout { display: grid; gap: var(--s-6); margin-top: var(--s-6); grid-template-columns: minmax(0, 1fr); }
