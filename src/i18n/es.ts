@@ -233,6 +233,7 @@ export const es: UiStrings = {
     buyersTitle: "Lo compran",
     questsTitle: "Recompensas de misiones",
     mapTitle: "En el mapa",
+    mapMore: "Mostrar los otros {n} lugares",
     recipesTitle: "Cómo hacerlo",
     conjuredTitle: "Lo conjura el hechizo",
     conjuredNote: "desaparece después de {n} s",

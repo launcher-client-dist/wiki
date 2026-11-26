@@ -227,6 +227,7 @@ export const pt = {
     buyersTitle: "Comprado por",
     questsTitle: "Recompensa de missões",
     mapTitle: "No mapa",
+    mapMore: "Mostrar os outros {n} lugares",
     recipesTitle: "Como fazer",
     conjuredTitle: "Conjurado pela magia",
     conjuredNote: "some depois de {n} s",

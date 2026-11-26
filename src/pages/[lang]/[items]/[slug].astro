@@ -65,6 +65,8 @@ for (const o of [...items].sort((a, b) => a.id.localeCompare(b.id))) {
   const ov = primaryVersion(o);
   if (!SUB_ICON.has(o.subtype.key) && ov.icon && ov.iconSize) SUB_ICON.set(o.subtype.key, { src: ov.icon, width: ov.iconSize[0], height: ov.iconSize[1], pixel: true });
 }
+/** A long list of places (some items lie in 300 spots): the first ones shown, the rest one click away. */
+const MAP_SHOWN = 12;
 /** A potion's or a food's effect is told once: in the stats box when the item has no stats, else in "Efeito". */
 const effectInBox = statKeys.length === 0 && !!(v.potion || v.food);
 const appears = appearsIn(registry, ref, ["droppedBy", "soldBy", "boughtBy", "rewardOf", "requiredBy", "usedIn", "conjuredBy", "taughtBy", "leftBy"]);
@@ -260,12 +262,27 @@ const jsonLd = [{
               )}
               {src.map.length > 0 && (
                 <ListPanel title={ti.mapTitle} count={src.map.length} gicon="src-map" id="map">
-                  {src.map.map((m) => (
+                  {src.map.slice(0, MAP_SHOWN).map((m) => (
                     <ListRow>
                       <span>{placeText(m.place)}</span>
                       <Fragment slot="end"><MapLink variant="inline" href={m.link} label={ti.mapLink} /></Fragment>
                     </ListRow>
                   ))}
+                  {src.map.length > MAP_SHOWN && (
+                    <li class="more-rows">
+                      <details>
+                        <summary>{fill(ti.mapMore, { n: src.map.length - MAP_SHOWN })}</summary>
+                        <ul>
+                          {src.map.slice(MAP_SHOWN).map((m) => (
+                            <ListRow>
+                              <span>{placeText(m.place)}</span>
+                              <Fragment slot="end"><MapLink variant="inline" href={m.link} label={ti.mapLink} /></Fragment>
+                            </ListRow>
+                          ))}
+                        </ul>
+                      </details>
+                    </li>
+                  )}
                 </ListPanel>
               )}
               {src.conjured.length > 0 && (
@@ -633,6 +650,12 @@ const jsonLd = [{
   .gain:empty { display: none; }
 
   .plain { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+  .more-rows { list-style: none; border-top: 1px solid var(--row-border); }
+  .more-rows summary { display: inline-flex; align-items: center; gap: 6px; padding: 12px 0; cursor: pointer; font-weight: 700; font-size: var(--fs-sm); color: var(--link); }
+  .more-rows summary::-webkit-details-marker { display: none; }
+  .more-rows summary::before { content: "+"; display: inline-grid; place-items: center; width: 20px; height: 20px; border-radius: 6px; background: var(--surface-3); color: var(--text); font-weight: 700; }
+  .more-rows details[open] summary::before { content: "−"; }
+  .more-rows ul { list-style: none; margin: 0; padding: 0; }
   .plus { color: var(--text-faint); font-weight: 700; }
   .links { display: flex; flex-wrap: wrap; gap: 6px 14px; }
   .fits { display: flex; flex-wrap: wrap; gap: 8px; }

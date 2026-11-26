@@ -229,6 +229,7 @@ export const en: UiStrings = {
     buyersTitle: "Bought by",
     questsTitle: "Quest rewards",
     mapTitle: "On the map",
+    mapMore: "Show the other {n} places",
     recipesTitle: "How to make it",
     conjuredTitle: "Conjured by the spell",
     conjuredNote: "vanishes after {n} s",
