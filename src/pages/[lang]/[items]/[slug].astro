@@ -2,7 +2,6 @@
 import PageShell from "../../../components/layout/PageShell.astro";
 import Banner from "../../../components/ui/Banner.astro";
 import IconSlot from "../../../components/ui/IconSlot.astro";
-import Icon from "../../../components/ui/Icon.astro";
 import Tag from "../../../components/ui/Tag.astro";
 import Badge from "../../../components/ui/Badge.astro";
 import InfoBox from "../../../components/ui/InfoBox.astro";
@@ -123,16 +122,16 @@ const jsonLd = [{
           <section class="block" aria-labelledby="h-effect">
             <h2 id="h-effect">{ti.effectTitle}</h2>
             <div class="effects">
-              {v.potion && <p class="effect"><Icon name="heart" /> {fill(ti.potion, { min: v.potion.min, max: v.potion.max, stat: v.potion.stat === "health" ? ti.potionHealth : ti.potionMana, s: v.potion.seconds })}</p>}
+              {v.potion && <p class="effect"><span class="eicon"><GameIcon name={v.potion.stat === "health" ? "stat-health" : "stat-mana"} scale={3} /></span> {fill(ti.potion, { min: v.potion.min, max: v.potion.max, stat: v.potion.stat === "health" ? ti.potionHealth : ti.potionMana, s: v.potion.seconds })}</p>}
               {v.food && (
                 <div class="effect">
-                  <p><Icon name="clock" /> {fill(ti.food, { n: v.food.seconds })}</p>
-                  {Object.keys(v.food.buff).length > 0 && <p class="buffs">{ti.foodBuff}: {(Object.entries(v.food.buff) as [StatKey, number][]).map(([k, n]) => <span>{statLabel(k)[lang]} <StatValue value={n} /></span>)}</p>}
+                  <p class="erow"><span class="eicon"><GameIcon name="food" scale={3} /></span> {fill(ti.food, { n: v.food.seconds })}</p>
+                  {Object.keys(v.food.buff).length > 0 && <p class="buffs">{ti.foodBuff}: {(Object.entries(v.food.buff) as [StatKey, number][]).map(([k, n]) => <span class="buff"><GameIcon name={`stat-${k}`} />{statLabel(k)[lang]} <StatValue value={n} /></span>)}</p>}
                 </div>
               )}
-              {v.drinkSeconds && <p class="effect"><Icon name="clock" /> {fill(ti.drink, { n: v.drinkSeconds })}</p>}
-              {v.resistSeconds && <p class="effect"><Icon name="shield" /> {fill(ti.resist, { n: v.resistSeconds })}</p>}
-              {v.lifetime && <p class="effect"><Icon name="clock" /> {fill(ti.lifetime, { n: v.lifetime })}</p>}
+              {v.drinkSeconds && <p class="effect"><span class="eicon"><GameIcon name="time" scale={3} /></span> {fill(ti.drink, { n: v.drinkSeconds })}</p>}
+              {v.resistSeconds && <p class="effect"><span class="eicon"><GameIcon name="stat-defense" scale={3} /></span> {fill(ti.resist, { n: v.resistSeconds })}</p>}
+              {v.lifetime && <p class="effect"><span class="eicon"><GameIcon name="time" scale={3} /></span> {fill(ti.lifetime, { n: v.lifetime })}</p>}
             </div>
           </section>
         )}
@@ -180,12 +179,12 @@ const jsonLd = [{
             <h2 id="h-where">{ti.whereTitle}</h2>
             <div class="panels">
               {src.drops.length > 0 && (
-                <ListPanel title={ti.dropsTitle} count={src.drops.length} icon="sword" id="drops">
+                <ListPanel title={ti.dropsTitle} count={src.drops.length} gicon="src-drop" id="drops" note={anyQualityDrop ? ti.qualityNote : undefined}>
                   {src.drops.map((d) => (
                     <ListRow>
-                      <EntityLink to={d.monster} />
+                      <EntityLink to={d.monster} iconSize={40} />
                       <Fragment slot="end">
-                        {d.quality && <span class="qchip" title={ti.qualityYes}><Icon name="gem" size={14} /></span>}
+                        {d.quality && <span class="qchip" title={ti.qualityYes}><GameIcon name="quality-3" /><span class="sr-only">{ti.qualityYes}</span></span>}
                         <span class="num">× {d.amount[0] === d.amount[1] ? d.amount[0] : `${d.amount[0]}–${d.amount[1]}`}</span>
                         <TierBadge tier={d.tier} />
                       </Fragment>
@@ -194,10 +193,10 @@ const jsonLd = [{
                 </ListPanel>
               )}
               {shopsOpen.length > 0 && (
-                <ListPanel title={ti.shopsTitle} count={shopsOpen.length} icon="pin" id="shops">
+                <ListPanel title={ti.shopsTitle} count={shopsOpen.length} gicon="src-shop" id="shops">
                   {shopsOpen.map((s) => (
                     <ListRow>
-                      <EntityLink to={s.npc} />
+                      <EntityLink to={s.npc} iconSize={40} />
                       {s.where && <Fragment slot="sub"><span>{placeText(s.where.place)}</span><MapLink variant="inline" href={s.where.link} label={ti.mapLink} /></Fragment>}
                       <Fragment slot="end">
                         <span><span class="num">{num(s.price, lang)}</span> {ti.gold}</span>
@@ -220,7 +219,7 @@ const jsonLd = [{
                 </Spoiler>
               )}
               {src.recipes.length > 0 && (
-                <ListPanel title={ti.recipesTitle} count={src.recipes.length} icon="tip" id="recipes">
+                <ListPanel title={ti.recipesTitle} count={src.recipes.length} gicon="src-craft" id="recipes">
                   {src.recipes.map((r: Recipe) => (
                     <ListRow>
                       <Badge tone="new">{ti.method[r.method]}</Badge>
@@ -230,12 +229,12 @@ const jsonLd = [{
                 </ListPanel>
               )}
               {src.leftover.length > 0 && (
-                <ListPanel title={ti.leftoverTitle} count={src.leftover.length} icon="heart" id="leftover" note={ti.leftoverNote}>
+                <ListPanel title={ti.leftoverTitle} count={src.leftover.length} gicon="src-leftover" id="leftover" note={ti.leftoverNote}>
                   {src.leftover.map((l) => <ListRow><EntityLink to={`item:${l.item}`} /></ListRow>)}
                 </ListPanel>
               )}
               {src.map.length > 0 && (
-                <ListPanel title={ti.mapTitle} count={src.map.length} icon="map" id="map">
+                <ListPanel title={ti.mapTitle} count={src.map.length} gicon="src-map" id="map">
                   {src.map.map((m) => (
                     <ListRow>
                       <span>{placeText(m.place)}</span>
@@ -245,7 +244,7 @@ const jsonLd = [{
                 </ListPanel>
               )}
               {src.conjured.length > 0 && (
-                <ListPanel title={ti.conjuredTitle} icon="star" id="conjured">
+                <ListPanel title={ti.conjuredTitle} gicon="src-conjure" id="conjured">
                   {src.conjured.map((c) => <ListRow><EntityLink to={c.spell} /><Fragment slot="end">{fill(ti.conjuredNote, { n: c.seconds })}</Fragment></ListRow>)}
                 </ListPanel>
               )}
@@ -277,24 +276,24 @@ const jsonLd = [{
             <h2 id="h-use">{ti.useTitle}</h2>
             <div class="panels">
               {item.rune && (
-                <ListPanel title={ti.runeEffect} icon="gem" id="rune">
+                <ListPanel title={ti.runeEffect} gicon="rune" id="rune">
                   <ListRow><span>{v.text[lang]}</span></ListRow>
                   <ListRow><span class="muted">{ti.runeFits}:</span>{item.rune.fits.map((f) => <Tag>{f[lang]}</Tag>)}</ListRow>
                   {item.rune.fitsItems.length > 0 && <ListRow><span class="links">{item.rune.fitsItems.map((id) => <EntityLink to={`item:${id}`} />)}</span></ListRow>}
                 </ListPanel>
               )}
               {runesForThis.length > 0 && (
-                <ListPanel title={ti.runesForThis} count={runesForThis.length} icon="gem" id="runes">
+                <ListPanel title={ti.runesForThis} count={runesForThis.length} gicon="rune" id="runes">
                   <ListRow><span class="links">{runesForThis.map((r) => <EntityLink to={`item:${r.id}`} />)}</span></ListRow>
                 </ListPanel>
               )}
               {spells.length > 0 && (
-                <ListPanel title={ti.spellTitle} icon="star" id="spell">
+                <ListPanel title={ti.spellTitle} gicon="stat-magic" id="spell">
                   {spells.map((s) => <ListRow><EntityLink to={s} /></ListRow>)}
                 </ListPanel>
               )}
               {item.uses.recipes.length > 0 && (
-                <ListPanel title={ti.usedInTitle} count={item.uses.recipes.length} icon="tip" id="used-in">
+                <ListPanel title={ti.usedInTitle} count={item.uses.recipes.length} gicon="src-craft" id="used-in">
                   {item.uses.recipes.map((r) => (
                     <ListRow>
                       <Badge tone="new">{ti.method[r.method]}</Badge>
@@ -305,15 +304,15 @@ const jsonLd = [{
                 </ListPanel>
               )}
               {item.uses.leavesEmpty.length > 0 && (
-                <ListPanel title={ti.leavesTitle} icon="heart" id="leaves">
+                <ListPanel title={ti.leavesTitle} gicon="src-leftover" id="leaves">
                   {item.uses.leavesEmpty.map((l) => <ListRow><EntityLink to={`item:${l.item}`} /></ListRow>)}
                 </ListPanel>
               )}
               {buyersOpen.length > 0 && (
-                <ListPanel title={ti.buyersTitle} count={buyersOpen.length} icon="pin" id="buyers">
+                <ListPanel title={ti.buyersTitle} count={buyersOpen.length} gicon="gold" id="buyers">
                   {buyersOpen.map((b) => (
                     <ListRow>
-                      <EntityLink to={b.npc} />
+                      <EntityLink to={b.npc} iconSize={40} />
                       {b.where && <Fragment slot="sub"><span>{placeText(b.where.place)}</span><MapLink variant="inline" href={b.where.link} label={ti.mapLink} /></Fragment>}
                       <Fragment slot="end"><span><span class="num">{num(b.price, lang)}</span> {ti.gold}</span></Fragment>
                     </ListRow>
@@ -339,12 +338,12 @@ const jsonLd = [{
                 <p class="muted">{ti.forgingIntro}</p>
                 <div class="table-wrap">
                   <table class="qtable">
-                    <thead><tr><th scope="col">{ti.qualityCol}</th><th scope="col">{ti.forgingTakes}</th><th scope="col" class="r">{ti.forgingUpgrade}</th><th scope="col" class="r">{ti.forgingBreak}</th></tr></thead>
+                    <thead><tr><th scope="col">{ti.qualityCol}</th><th scope="col"><span class="hcell"><GameIcon name="anvil" fit={20} />{ti.forgingTakes}</span></th><th scope="col" class="r"><span class="hcell"><GameIcon name="plus" scale={2} />{ti.forgingUpgrade}</span></th><th scope="col" class="r"><span class="hcell"><GameIcon name="minus" scale={2} />{ti.forgingBreak}</span></th></tr></thead>
                     <tbody>
                       {ITEMS.forging.map((f) => (
                         <tr>
-                          <th scope="row"><span class={`qname q${f.from}`}>{ti.quality[`q${f.from}` as keyof typeof ti.quality]}</span> → <span class={`qname q${f.from + 1}`}>{ti.quality[`q${f.from + 1}` as keyof typeof ti.quality]}</span></th>
-                          <td><span class="num">{f.count} ×</span> <EntityLink to={`item:${f.ingot}`} /></td>
+                          <th scope="row"><span class="fstep"><span class={`fq q${f.from}`}><GameIcon name={`quality-${f.from}`} /><span class="qname">{ti.quality[`q${f.from}` as keyof typeof ti.quality]}</span></span><span class="farrow" aria-hidden="true">➜</span><span class={`fq q${f.from + 1}`}><GameIcon name={`quality-${f.from + 1}`} /><span class="qname">{ti.quality[`q${f.from + 1}` as keyof typeof ti.quality]}</span></span></span></th>
+                          <td><span class="num">{f.count} ×</span> <EntityLink to={`item:${f.ingot}`} iconSize={32} /></td>
                           <td class="r num">{oneInText(f.upgrade, ti, lang)}</td>
                           <td class="r num">{oneInText(f.bothBreak, ti, lang)}</td>
                         </tr>
@@ -443,7 +442,17 @@ const jsonLd = [{
   </div>
 </PageShell>
 <style>
-  .hero-icon :global(.slot) { box-shadow: 0 8px 0 var(--hard), inset 0 -10px 0 rgba(0, 0, 0, 0.25); }
+  /* the hero: the item on a lit slot, framed in gold like a looted item, a soft glow behind */
+  .hero-icon { position: relative; isolation: isolate; padding: 6px; }
+  .hero-icon::before { content: ""; position: absolute; inset: -26px; z-index: -1; border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 211, 78, 0.42) 0%, rgba(127, 210, 255, 0.18) 40%, transparent 68%); }
+  .hero-icon :global(.slot) { position: relative; border-radius: 12px;
+    background: radial-gradient(circle at 50% 42%, #33468f 0%, #1b2340 62%, #10162c 100%);
+    box-shadow: 0 0 0 3px var(--hard), 0 0 0 6px var(--sun), 0 0 0 9px var(--hard), 0 12px 0 9px var(--hard), inset 0 -12px 0 rgba(0, 0, 0, 0.3); }
+  .hero-icon :global(.slot)::after { content: ""; position: absolute; inset: 8px; border-radius: 8px; pointer-events: none;
+    box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.06); }
+  .hero-icon :global(.slot img) { filter: drop-shadow(0 6px 0 rgba(0, 0, 0, 0.35)); }
+  @media (max-width: 640px) { .hero-icon::before { inset: -14px; } }
   .kicker { margin: 0; font: 800 var(--fs-xs) / 1 var(--font-body); letter-spacing: 0.14em; text-transform: uppercase; color: var(--sun); text-shadow: 0 2px 0 var(--hard); }
   :global(:root[data-theme="light"]) .kicker { color: #7a4a00; text-shadow: none; }
   .alt { margin: 0; color: var(--banner-muted); font-size: var(--fs-lg); }
@@ -474,6 +483,13 @@ const jsonLd = [{
   .effect p { margin: 0; }
   p.effect { flex-direction: row; align-items: center; gap: 8px; }
   .effect :global(.icon) { color: var(--sun); }
+  .eicon { display: inline-grid; place-items: center; width: 40px; height: 40px; flex: none; border-radius: 8px; background: var(--hard); }
+  .erow { display: flex; align-items: center; gap: 8px; }
+  .buff { display: inline-flex; align-items: center; gap: 6px; }
+  .fstep { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; }
+  .fq { display: inline-flex; align-items: center; gap: 6px; }
+  .farrow { color: var(--text-faint); }
+  .hcell { display: inline-flex; align-items: center; gap: 6px; }
   .buffs { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: var(--fs-sm); color: var(--text-muted); }
 
   .table-wrap { overflow-x: auto; border: var(--bw) solid var(--hard); border-radius: var(--r-l); box-shadow: var(--shadow-1); background: var(--card-bg); }

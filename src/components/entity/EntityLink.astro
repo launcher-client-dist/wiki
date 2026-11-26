@@ -19,17 +19,19 @@ interface Props {
   /** Text to show instead of the entity's name. */
   label?: string;
   icon?: boolean;
+  /** The icon slot's size in px (22 by default; 40 in the where-to-get lists, where the portrait matters). */
+  iconSize?: number;
 }
 const lang: Lang = Astro.props.lang ?? (isLang(Astro.params.lang) ? Astro.params.lang : DEFAULT_LANG);
 const registry = await getRegistry();
 const info = registry.link(Astro.props.to, lang);
-const { label, icon = true } = Astro.props;
+const { label, icon = true, iconSize = 22 } = Astro.props;
 const text = label ?? info.name;
 ---
 <span class="elink-wrap">{info.href ? (
-  <a class="elink" href={info.href} data-hc>{icon && <IconSlot icon={info.icon} kind={info.kind} size={22} framed={false} />}<span class="elink-text">{text}</span></a>
+  <a class="elink" href={info.href} data-hc>{icon && <IconSlot icon={info.icon} kind={info.kind} size={iconSize} framed={false} />}<span class="elink-text">{text}</span></a>
 ) : (
-  <button type="button" class="elink elink--pending" data-hc aria-expanded="false">{icon && <IconSlot icon={info.icon} kind={info.kind} size={22} framed={false} />}<span class="elink-text">{text}</span></button>
+  <button type="button" class="elink elink--pending" data-hc aria-expanded="false">{icon && <IconSlot icon={info.icon} kind={info.kind} size={iconSize} framed={false} />}<span class="elink-text">{text}</span></button>
 )}<template data-hc-tpl data-pagefind-ignore="all"><HoverCardBody info={info} /></template></span>
 <style>
   .elink-wrap { display: inline; }

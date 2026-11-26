@@ -116,11 +116,6 @@
   --banner-chip-bg: rgba(10, 14, 30, 0.55);
 
   /* drop rarity tiers: colour + label + pips, never colour alone, never a % */
-  --tier-sempre: #d7dcf2;
-  --tier-comum: #86d957;
-  --tier-incomum: #5cc8ff;
-  --tier-raro: #d18cff;
-  --tier-muito-raro: #ffa44e;
 
   /* item qualities (Comum .. Lendário) */
   --quality-0: var(--text);
@@ -201,11 +196,6 @@
   --banner-muted: #2b355c;
   --banner-chip-bg: rgba(255, 255, 255, 0.85);
 
-  --tier-sempre: #4a5275;
-  --tier-comum: #286b0f;
-  --tier-incomum: #09559c;
-  --tier-raro: #6a27a8;
-  --tier-muito-raro: #984a00;
 
   --quality-0: var(--text);
   --quality-1: #286b0f;

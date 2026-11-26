@@ -18,6 +18,7 @@ import { ui, fill } from "../../i18n/index.ts";
 import type { Lang } from "../../lib/i18n.ts";
 import Icon from "../ui/Icon.astro";
 import Chip from "../ui/Chip.astro";
+import GameIcon from "../ui/GameIcon.astro";
 
 export interface Column {
   key: string;
@@ -26,15 +27,18 @@ export interface Column {
   sortable?: boolean;
   /** Left out of the phone cards (the column stays in the table and grid). */
   hideOnPhone?: boolean;
+  /** One of the game's icons (a GameIcon name), beside the header's word. */
+  icon?: string;
 }
 export interface Variant {
   key: string;
   label: string;
+  icon?: string;
 }
 export interface FilterGroup {
   key: string;
   label: string;
-  options: { value: string; label: string; count?: number }[];
+  options: { value: string; label: string; count?: number; icon?: string }[];
 }
 interface Props {
   id: string;
@@ -73,7 +77,7 @@ const strings = { count: t.tableCount, countAll: t.tableCountAll };
       {filters.map((g) => (
         <div class="fgroup" role="group" aria-label={g.label}>
           <span class="flabel">{g.label}</span>
-          <div class="chips">{g.options.map((o) => <Chip filter={g.key} value={o.value} count={o.count}>{o.label}</Chip>)}</div>
+          <div class="chips">{g.options.map((o) => <Chip filter={g.key} value={o.value} count={o.count}>{o.icon && <GameIcon name={o.icon} fit={18} />}{o.label}</Chip>)}</div>
         </div>
       ))}
     </div>
@@ -83,7 +87,7 @@ const strings = { count: t.tableCount, countAll: t.tableCountAll };
       {variants.length > 0 && (
         <div class="fgroup" role="group" aria-label={variantLabel}>
           <span class="flabel">{variantLabel}</span>
-          <div class="chips seg">{variants.map((v, i) => <button type="button" class="chip" data-variant={v.key} aria-pressed={i === 0 ? "true" : "false"}>{v.label}</button>)}</div>
+          <div class="chips seg">{variants.map((v, i) => <button type="button" class="chip" data-variant={v.key} aria-pressed={i === 0 ? "true" : "false"}>{v.icon && <GameIcon name={v.icon} fit={20} />}{v.label}</button>)}</div>
           {variantNote && <p class="vnote">{variantNote}</p>}
         </div>
       )}
@@ -114,8 +118,8 @@ const strings = { count: t.tableCount, countAll: t.tableCountAll };
         <tr>
           {columns.map((c) => (
             <th scope="col" class:list={[`a-${c.align ?? "start"}`]} data-col={c.key} aria-sort={sort?.key === c.key ? (sort.dir === "asc" ? "ascending" : "descending") : undefined}>
-              {c.sortable === false ? <span class="th">{c.label}</span> : (
-                <button type="button" class="th" data-sort={c.key}>{c.label}<span class="arrow" aria-hidden="true">{sort?.key === c.key ? (sort.dir === "asc" ? "▲" : "▼") : "↕"}</span></button>
+              {c.sortable === false ? <span class="th">{c.icon && <GameIcon name={c.icon} fit={18} />}{c.label}</span> : (
+                <button type="button" class="th" data-sort={c.key}>{c.icon && <GameIcon name={c.icon} fit={18} />}{c.label}<span class="arrow" aria-hidden="true">{sort?.key === c.key ? (sort.dir === "asc" ? "▲" : "▼") : "↕"}</span></button>
               )}
             </th>
           ))}
@@ -276,7 +280,7 @@ const strings = { count: t.tableCount, countAll: t.tableCountAll };
     font: 500 var(--fs-sm) / 1 var(--font-body); padding: 0 10px; box-shadow: var(--shadow-1); }
   .range input { width: 84px; }
   .range select:focus, .range input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--focus-ring); }
-  .seg .chip { display: inline-flex; align-items: center; height: 32px; padding: 0 12px; border-radius: var(--r-pill); border: var(--bw) solid var(--border);
+  .seg .chip { display: inline-flex; align-items: center; gap: 6px; height: 32px; padding: 0 12px; border-radius: var(--r-pill); border: var(--bw) solid var(--border);
     background: var(--surface); color: var(--text); font: 600 var(--fs-sm) / 1 var(--font-body); cursor: pointer; box-shadow: var(--shadow-1); white-space: nowrap; }
   .seg .chip:hover { background: var(--surface-2); }
   tbody :global(.neg) { color: var(--danger); }

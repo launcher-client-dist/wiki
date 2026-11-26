@@ -219,6 +219,7 @@ export const en: UiStrings = {
     stockBlack: "black market: {n}, only some days",
     amount: "Qty.",
     tierCol: "How often",
+    qualityNote: "The coloured bar beside it: this drop can come in a better quality (see below).",
     qualityYes: "can come with a quality",
     useTitle: "Use",
     usedInTitle: "Used in recipes",

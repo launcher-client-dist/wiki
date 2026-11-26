@@ -11,12 +11,15 @@ import sizes from "../../data/ui-icons.json";
 interface Props {
   name: string;
   scale?: number;
+  /** Fit a box this many px wide and tall: the largest whole scale that fits (overrides `scale`). */
+  fit?: number;
   alt?: string;
   class?: string;
 }
-const { name, scale = 2, alt = "", class: cls } = Astro.props;
+const { name, scale: wanted = 2, fit, alt = "", class: cls } = Astro.props;
 const size = (sizes as Record<string, number[]>)[name] as [number, number] | undefined;
 if (!size) throw new Error(`GameIcon: no icon named "${name}" (src/data/ui-icons.json)`);
+const scale = fit ? Math.max(1, Math.floor(fit / Math.max(size[0], size[1]))) : wanted;
 ---
 <img class:list={["gicon", cls]} src={`/ui/${name}.png`} width={size[0] * scale} height={size[1] * scale} alt={alt} loading="lazy" decoding="async" />
 <style>

@@ -1,5 +1,8 @@
 ---
-/** A drop rarity tier: colour + label + 1-5 pips (never colour alone, never a %). */
+/**
+ * A drop frequency tier: its word and 1-5 pips, all in one neutral colour (never a %). Colour on the item pages means
+ * an item's quality (Comum ... Lendário); a drop tier never borrows those colours, so the two never read alike.
+ */
 import { ui } from "../../i18n/index.ts";
 import { isLang, DEFAULT_LANG, type Lang } from "../../lib/i18n.ts";
 import { TIER_PIPS, type TierKey } from "../../lib/entities/tiers.ts";
@@ -19,15 +22,10 @@ const lit = TIER_PIPS[tier];
 <style>
   .tier {
     display: inline-flex; align-items: center; gap: 7px; height: 26px; padding: 0 9px 0 7px; border-radius: var(--r-s);
-    font: 700 var(--fs-xs) / 1 var(--font-body); white-space: nowrap; color: var(--t);
-    background: color-mix(in srgb, var(--t) 14%, transparent); border: var(--bw) solid color-mix(in srgb, var(--t) 55%, transparent);
+    font: 700 var(--fs-xs) / 1 var(--font-body); white-space: nowrap; color: var(--text);
+    background: var(--surface-2); border: var(--bw) solid var(--border-strong);
   }
   .pips { display: inline-flex; gap: 2px; }
-  .pips i { width: 4px; height: 10px; background: currentColor; opacity: 0.22; }
+  .pips i { width: 4px; height: 10px; background: currentColor; opacity: 0.2; border-radius: 1px; }
   .pips i.on { opacity: 1; }
-  .tier--sempre { --t: var(--tier-sempre); }
-  .tier--comum { --t: var(--tier-comum); }
-  .tier--incomum { --t: var(--tier-incomum); }
-  .tier--raro { --t: var(--tier-raro); }
-  .tier--muito-raro { --t: var(--tier-muito-raro); }
 </style>

@@ -23,6 +23,7 @@ const ti = t.item;
 const { registry, items } = await siteData();
 const rows = [...items].sort((a, b) => a.name[lang].localeCompare(b.name[lang], lang));
 const SLOT_ORDER = ["head", "neck", "body", "legs", "feet", "hands", "ring", "back", "ammo"];
+const SOURCE_ICON: Record<string, string> = { drop: "src-drop", shop: "src-shop", quest: "src-quest", craft: "src-craft", map: "src-map", conjure: "src-conjure", leftover: "src-leftover" };
 const count = <T extends string>(key: T, fn: (i: (typeof items)[number]) => T[]) => items.filter((i) => fn(i).includes(key)).length;
 const CLASSED: StatKey[] = ["armor", "defense", "attackSpeed", "health", "mana", "hpRegen", "mpRegen"];
 ---
@@ -41,21 +42,21 @@ const CLASSED: StatKey[] = ["armor", "defense", "attackSpeed", "health", "mana",
       columns={[
         { key: "sortname", label: ti.colItem },
         { key: "type", label: ti.colType, hideOnPhone: true },
-        { key: "damage", label: statLabel("damage")[lang], align: "end" },
-        { key: "armor", label: statLabel("armor")[lang], align: "end" },
-        { key: "defense", label: statLabel("defense")[lang], align: "end" },
-        { key: "magic", label: statLabel("magic")[lang], align: "end", hideOnPhone: true },
-        { key: "weight", label: ti.colWeight, align: "end", hideOnPhone: true },
-        { key: "value", label: ti.colValue, align: "end" },
-        { key: "goldoz", label: ti.colGoldOz, align: "end", hideOnPhone: true },
+        { key: "damage", label: statLabel("damage")[lang], align: "end", icon: "stat-damage" },
+        { key: "armor", label: statLabel("armor")[lang], align: "end", icon: "stat-armor" },
+        { key: "defense", label: statLabel("defense")[lang], align: "end", icon: "stat-defense" },
+        { key: "magic", label: statLabel("magic")[lang], align: "end", hideOnPhone: true, icon: "stat-magic" },
+        { key: "weight", label: ti.colWeight, align: "end", hideOnPhone: true, icon: "stat-weight" },
+        { key: "value", label: ti.colValue, align: "end", icon: "gold" },
+        { key: "goldoz", label: ti.colGoldOz, align: "end", hideOnPhone: true, icon: "gold" },
         { key: "where", label: ti.colWhere, sortable: false },
       ]}
       filters={[
-        { key: "category", label: ti.filterCategory, options: CATEGORIES.filter((c) => items.some((i) => i.category === c)).map((c) => ({ value: c, label: ti.category[c], count: items.filter((i) => i.category === c).length })) },
-        { key: "slot", label: ti.filterSlot, options: SLOT_ORDER.filter((s) => items.some((i) => i.slots.includes(s))).map((s) => ({ value: s, label: ti.slot[s as keyof typeof ti.slot], count: count(s, (i) => i.slots) })) },
-        { key: "where", label: ti.filterWhere, options: SOURCE_KINDS.map((k) => ({ value: k, label: ti.source[k], count: count(k, sourceKinds) })).filter((o) => o.count) },
+        { key: "category", label: ti.filterCategory, options: CATEGORIES.filter((c) => items.some((i) => i.category === c)).map((c) => ({ value: c, label: ti.category[c], count: items.filter((i) => i.category === c).length, icon: `cat-${c}` })) },
+        { key: "slot", label: ti.filterSlot, options: SLOT_ORDER.filter((s) => items.some((i) => i.slots.includes(s))).map((s) => ({ value: s, label: ti.slot[s as keyof typeof ti.slot], count: count(s, (i) => i.slots), icon: `slot-${s}` })) },
+        { key: "where", label: ti.filterWhere, options: SOURCE_KINDS.map((k) => ({ value: k, label: ti.source[k], count: count(k, sourceKinds), icon: SOURCE_ICON[k] })).filter((o) => o.count) },
       ]}
-      variants={[{ key: "base", label: ti.classBase }, ...CLASS_KEYS.map((k) => ({ key: k, label: ti.classes[k] }))]} variantLabel={ti.filterClass} variantNote={ti.traitsNote}
+      variants={[{ key: "base", label: ti.classBase }, ...CLASS_KEYS.map((k) => ({ key: k, label: ti.classes[k], icon: `class-${k}` }))]} variantLabel={ti.filterClass} variantNote={ti.traitsNote}
       ranges={STAT_KEYS.map((k) => ({ key: k, label: statLabel(k)[lang] }))} rangeLabel={ti.filterStat}>
       {rows.map((item) => {
         const v = primaryVersion(item);

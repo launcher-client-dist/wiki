@@ -4,7 +4,8 @@ The design lives in two places. Pages and content never carry styles of their ow
 
 1. **`src/styles/tokens.css`: the whole palette and feel.** Colours for dark (the default) and light, fonts, type
    scale, spacing, radii, the 2 px outline (`--bw`), the block shadows (`--shadow-1..3`, `--hard`), the sky and grass
-   of the banners, the five drop-tier colours and motion. Change a value here and every component follows.
+   of the banners, the five item-quality colours and motion. Change a value here and every component follows. (Drop
+   tiers have no colour of their own: a word and pips, so they never look like a quality.)
 2. **The components' own `<style>` blocks: the shapes.** `src/components/ui/` (Tag, Chip, Badge, TierBadge, Callout,
    Spoiler, Tabs, Card, InfoBox, StatGrid, Figure, MapLink, IconSlot, RenderSlot, PixelArt, Icon),
    `src/components/layout/` (PageShell, Header, Footer, Breadcrumbs, SearchOverlay, HoverCard, Toc),
