@@ -4,7 +4,8 @@
 //               matches its column's cells (numbers right, text left)
 //   row-height  every row of a table has the same height
 //   icon-column in a box or list with an icon column, every row has one leading icon box, all at one x and one size
-//   orphan      a wrapping flex/grid group of 3 to 6 items never leaves one item alone on its last line
+//   orphan      a wrapping group of 3 or more items (flex, grid, or chips laid inline) never leaves one item alone on its
+//               last line; a list that reads like text opts out with data-flow (listed, not failed)
 //   overflow    no horizontal page overflow; no element clips its content (hidden/clip with content wider than it)
 //   expect      every page answers its status and has the parts the rules measure (a rule that matches nothing fails)
 //
@@ -32,7 +33,7 @@ const pick = (fn) => [...data.items].filter(fn).sort((a, b) => richness(b) - ric
 const KINDS = {
   weapon: (i) => i.category === "weapon", armour: (i) => i.category === "armour", jewel: (i) => i.category === "jewellery",
   food: (i) => i.category === "food", potion: (i) => i.category === "potion", material: (i) => i.category === "material",
-  rune: (i) => i.category === "rune", spellbook: (i) => i.category === "spellbook", container: (i) => i.category === "container",
+  rune: (i) => i.category === "rune" && i.rune?.fits?.length > 0, versions: (i) => i.versions.length > 1, spellbook: (i) => i.category === "spellbook", container: (i) => i.category === "container",
   leftover: (i) => i.sources.leftover?.length > 0,
 };
 const guideSlug = (lang) => {
@@ -158,15 +159,21 @@ function measure() {
     if (Math.max(...ws) - Math.min(...ws) > 1) fail("icon-column", `${g.where}: row icons ${[...new Set(ws.map(Math.round))].join(" / ")} px wide (one size expected)`);
   }
 
-  // orphan: any wrapping flex or grid group of 3-6 items with one item alone on its last line
+  // orphan: any wrapping group of 3 or more items with one item alone on its last line: a flex row that wraps, a grid
+  // of columns, or a block of atomic inline items (chips laid inline, balanced with text-wrap)
+  const flows = [];
   for (const el of document.querySelectorAll("body *")) {
     const s = getComputedStyle(el);
     const flexWrap = s.display.includes("flex") && s.flexWrap === "wrap" && s.flexDirection.startsWith("row");
     const grid = s.display.includes("grid") && s.gridTemplateColumns.split(" ").length > 1 && s.gridTemplateAreas === "none";
-    if (!flexWrap && !grid) continue;
+    const elKids = [...el.children].filter((c) => getComputedStyle(c).display !== "none" && c.tagName !== "SCRIPT" && c.tagName !== "TEMPLATE");
+    const inlineBlock = s.display === "block" && elKids.length >= 3 && elKids.every((c) => /^inline-(flex|block|grid)$/.test(getComputedStyle(c).display))
+      && ![...el.childNodes].some((n) => n.nodeType === 3 && n.nodeValue.trim());
+    if (!flexWrap && !grid && !inlineBlock) continue;
     if (!vis(el) || el.closest(".sr-only, [hidden]")) continue;
+    if (el.closest("[data-flow]")) { flows.push(name(el)); continue; }
     const kids = [...el.children].filter((c) => vis(c) && getComputedStyle(c).position !== "absolute" && getComputedStyle(c).position !== "fixed");
-    if (kids.length < 3 || kids.length > 6) continue;
+    if (kids.length < 3) continue;
     const rows = [];
     for (const k of kids) { const t = k.getBoundingClientRect().top; const row = rows.find((r) => Math.abs(r.top - t) < 6); if (row) row.n.push(k); else rows.push({ top: t, n: [k] }); }
     if (rows.length < 2) continue;
@@ -199,7 +206,7 @@ function measure() {
     });
     if (past) fail("overflow", `${name(el)} clips ${name(past)} (${Math.round(past.getBoundingClientRect().right - box.right)} px past its edge)`);
   }
-  return { out, seen, scrollers };
+  return { out, seen, scrollers, flows };
 }
 
 // ---- run
@@ -211,6 +218,7 @@ const base = `http://localhost:${server.address().port}`;
 const browser = await chromium.launch({ executablePath: browserPath });
 const failures = [];
 const scrollRows = new Map();
+const flowRows = new Map();
 const pages = PAGES.filter((p) => !ONLY || ONLY.includes(p.id));
 const viewports = SWEEP ? Array.from({ length: 28 }, (_, i) => ({ name: String(360 + i * 40), width: 360 + i * 40, height: 900, mobile: 360 + i * 40 < 520 })) : VIEWPORTS;
 for (const vp of viewports) {
@@ -223,7 +231,8 @@ for (const vp of viewports) {
     const want = p.status ?? 200;
     if (resp.status() !== want) { failures.push({ rule: "expect", where, detail: `${p.url} answered ${resp.status()}, expected ${want}` }); continue; }
     await page.evaluate(() => document.fonts.ready);
-    const { out, seen, scrollers } = await page.evaluate(measure);
+    const { out, seen, scrollers, flows } = await page.evaluate(measure);
+    for (const f of flows) flowRows.set(f, (flowRows.get(f) ?? 0) + 1);
     for (const f of out) if (!SWEEP || f.rule === "orphan" || f.rule === "overflow") failures.push({ ...f, where });
     for (const s of scrollers) scrollRows.set(s, (scrollRows.get(s) ?? 0) + 1);
     if (!SWEEP) {
@@ -244,6 +253,8 @@ for (const [rule, fs_] of Object.entries(byRule)) {
   for (const f of fs_) { const k = f.detail; if (!grouped.has(k)) grouped.set(k, []); grouped.get(k).push(f.where); }
   for (const [detail, wheres] of grouped) console.log(`  ${detail}\n      at ${wheres.slice(0, 4).join("; ")}${wheres.length > 4 ? `; +${wheres.length - 4} more` : ""}`);
 }
+if (flowRows.size) console.log(`
+lists that read like text, wrapping freely (data-flow, not failures): ${[...flowRows.keys()].join(", ")}`);
 if (scrollRows.size) console.log(`\nside-scrolling rows on purpose (not failures): ${[...scrollRows.keys()].join(", ")}`);
 console.log(`\ncheck-layout: ${pages.length} pages × ${viewports.length} widths, ${failures.length} failure(s)`);
 process.exit(failures.length ? 1 : 0);

@@ -47,9 +47,12 @@ and 390 px, in Portuguese and Spanish. Chrome comes from `CHROME_PATH` or the us
   padding of a number column. *Checked (header, row-height).*
 - **One spacing rhythm.** 56 px between sections, 16 px from a section title to its content, 32 px between the groups
   of a section, 12 px from a group's title to its rows. Counts are readable pills.
-- **No orphans.** A wrapping group of 3 to 6 controls never leaves one alone on its last line: choose the columns by
-  the room (quality cards 5 / 3 / 2 with the last across, drop odds 4 / 2 / 1, similar items by count), or stack them
-  all (the hero's tags), or make the last one take the whole line. *Checked (orphan).*
+- **No orphans.** A wrapping group of 3 or more items never leaves one alone on its last line: choose the columns by
+  the room (quality cards 5 / 3 / 2 with the last across, drop odds 4 / 2 / 1, similar items by count), lay chips
+  inline with `text-wrap: balance` (filter chips, stat chips, a rune's types: seven wrap 4+3, never 6+1), stack them all
+  as an even column (the hero's tags on a phone, each as wide as the widest), or make the last one take the whole line.
+  A list that reads like text (a rune's 19 linked items) opts out with `data-flow`; the check lists those.
+  *Checked (orphan).*
 - **No duplicate content.** A fact is told once: a potion's effect in the stats box, not again in "Efeito"; a rune's
   effect is its hero text.
 - **The hero.** The icon sized to the hero, no dead area (the tags run under icon and text), the description at its own

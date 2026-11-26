@@ -28,7 +28,9 @@ if (max) keys = [...keys].sort((a, b) => Math.abs(stats[b]!) - Math.abs(stats[a]
   </ul>
 )}
 <style>
-  .schips { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+  /* the chips laid inline, the lines balanced: seven wrap 4+3, never 6+1 */
+  .schips { list-style: none; margin: 0 0 -6px; padding: 0; display: block; text-wrap: balance; }
+  .schips > li { margin: 0 6px 6px 0; vertical-align: middle; }
   .schip { display: inline-flex; align-items: center; gap: 5px; height: 26px; padding: 0 8px 0 4px; border-radius: 999px; font-size: var(--fs-sm);
     background: var(--surface-2); border: 1px solid var(--row-border); color: var(--heading); }
   .schip.neg { border-color: var(--danger); border-style: dashed; }
