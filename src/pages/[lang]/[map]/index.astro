@@ -10,6 +10,8 @@ import { pathToFileURL } from "node:url";
 import PageShell from "../../../components/layout/PageShell.astro";
 import GameIcon from "../../../components/ui/GameIcon.astro";
 import Icon from "../../../components/ui/Icon.astro";
+import Tag from "../../../components/ui/Tag.astro";
+import Value from "../../../components/ui/Value.astro";
 import { ui, fill } from "../../../i18n/index.ts";
 import { LANGS, LOCALE, type Lang } from "../../../lib/i18n.ts";
 import { MAP_SLUG, mapPath } from "../../../lib/map/links.ts";
@@ -28,8 +30,8 @@ const num = (n: number) => n.toLocaleString(LOCALE[lang]);
 const meta = JSON.parse(readFileSync(new URL("public/map/tiles/meta.json", pathToFileURL(`${process.cwd()}/`)), "utf8"));
 const counts = layerCounts();
 const floors = [...POINTS.floors].sort((a, b) => level(b) - level(a));
-/** The list: the surface first, then the caves going down, then the buildings' upper floors going up. */
-const floorList = [...floors.filter((f) => f === "s"), ...floors.filter((f) => level(f) < 0.5), ...floors.filter((f) => level(f) > 0.5).reverse()];
+/** The list reads by height, as the ▲▼ selector steps: the upper floors on top, the surface, then the caves going down. */
+const floorList = floors;
 const floorName = (f: string) => (f === "s" ? tm.surface : fill(tm.floorN, { n: f }));
 const config = {
   lang, layers: LAYERS, defaultOn: DEFAULT_ON, floors, meta,
@@ -37,6 +39,8 @@ const config = {
     surface: tm.surface, floorN: tm.floorN, up: tm.up, down: tm.down, searchEmpty: tm.searchEmpty, gotoBad: tm.gotoBad, openPage: tm.openPage,
     noPage: tm.noPage, spotsN: tm.spotsN, spotsHere: tm.spotsHere, otherFloors: tm.otherFloors, pin: tm.pin, zoomIn: tm.zoomIn, zoomOut: tm.zoomOut,
     layer: tm.layer, next: tmo.windowNext, now: tmo.windowNow, clock: tmo.yourClock, close: tm.close,
+    spot1: tm.spot1, floor1: tm.floor1, floorsF: tm.floorsF, spotsIn: tm.spotsIn, highlighted: tm.highlighted, clearHighlight: tm.clearHighlight,
+    hereTitle: tm.hereTitle, zoomToSee: tm.zoomToSee, pays: t.item.colValue,
   },
 };
 const jsonLd = [{ "@context": "https://schema.org", "@type": "Map", name: `${tm.title} · ${t.siteName}`, description: tm.description, inLanguage: lang }];
@@ -100,8 +104,15 @@ const jsonLd = [{ "@context": "https://schema.org", "@type": "Map", name: `${tm.
         <span class="fl" data-floor-label aria-live="polite">{tm.surface}</span>
         <button type="button" data-floor-down aria-label={tm.down}><Icon name="chevron" size={18} class="rot-down" /></button>
       </div>
-      <div class="others" data-other-floors hidden></div>
+      <div class="hl" data-highlight hidden>
+        <div class="hlhead" data-hl-head></div>
+        <div class="others" data-other-floors hidden></div>
+      </div>
       <div class="card" data-card hidden role="dialog" aria-label={tm.title}></div>
+      {/* the card's facts are drawn by the site's own Tag and Value (their styles and markup): the script clones these */}
+      <template data-tpl="tag"><Tag gicon="xp">·</Tag></template>
+      <template data-tpl="tag-sun"><Tag gicon="time" tone="sun">·</Tag></template>
+      <template data-tpl="gold"><Value kind="gold" n={0} lang={lang} /></template>
       <button type="button" class="drawerbtn" data-drawer aria-expanded="false"><GameIcon name="src-map" fit={20} />{tm.layersButton}</button>
     </div>
   </div>
@@ -155,7 +166,7 @@ const jsonLd = [{ "@context": "https://schema.org", "@type": "Map", name: `${tm.
   /* its own stacking context: Leaflet's panes (z-index 400+) stay inside it, under the panel, floors and card */
   /* the game's map is dark in both themes (its colours are the minimap's): the space between its tiles too */
   .mapcanvas { position: absolute; inset: 0; z-index: 0; isolation: isolate; background: #0a0b0d; outline: none; }
-  .mapcanvas:focus-visible { box-shadow: inset 0 0 0 3px var(--focus); }
+  .mapcanvas:focus-visible:not(.by-pointer) { box-shadow: inset 0 0 0 3px var(--focus); }
   .maploading { position: absolute; inset: 0; display: grid; place-items: center; margin: 0; color: var(--text-muted); }
   .mapapp.ready .maploading { display: none; }
   .leaflet-container { background: #0a0b0d; font-family: var(--font-body); }
@@ -198,8 +209,21 @@ const jsonLd = [{ "@context": "https://schema.org", "@type": "Map", name: `${tm.
   .floorctl .fl { min-width: 7.5rem; text-align: center; font-weight: 700; color: var(--heading); font-size: var(--fs-sm); }
   .rot-up { transform: rotate(-90deg); }
   .rot-down { transform: rotate(90deg); }
-  .others { position: absolute; top: 64px; right: 12px; z-index: 2; display: flex; flex-wrap: wrap; justify-content: flex-end; align-items: center; gap: 6px; max-width: 420px; padding: 8px 10px;
-    border-radius: var(--r-l); background: var(--surface); border: var(--bw) solid var(--border); box-shadow: var(--shadow-2); font-size: var(--fs-xs); color: var(--text-muted); }
+  /* what a deep link (or a search pick) highlights: the entity, its spots and floors, its page; its other floors */
+  .hl { position: absolute; top: 64px; right: 12px; z-index: 2; display: grid; gap: 10px; width: 340px; padding: 12px 14px; border-radius: var(--r-l);
+    background: var(--surface); border: var(--bw) solid var(--border); box-shadow: var(--shadow-2); }
+  .hlhead { position: relative; display: grid; gap: 8px; }
+  .hlk { font: 700 var(--fs-xs) / 1 var(--font-body); letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); }
+  .hlx { position: absolute; top: -4px; right: -4px; width: 28px; height: 28px; border: 0; border-radius: 7px; background: var(--surface-2); color: var(--text); font-size: 18px; line-height: 1; cursor: pointer; }
+  .hlx:hover { background: var(--surface-3); }
+  .hlmain { display: flex; align-items: center; gap: 12px; }
+  .hlmain .cicon { width: 44px; height: 44px; }
+  .hlmain .ctext { gap: 6px; }
+  .hlrow { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; }
+  .hlfacts { display: flex; flex-wrap: wrap; gap: 6px; }
+  .hl .copen { font-size: var(--fs-sm); white-space: nowrap; }
+  .others { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; padding-top: 10px; border-top: 1px solid var(--row-border); font-size: var(--fs-xs); color: var(--text-muted); }
+  .others .ok { width: 100%; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
   .others button { display: inline-flex; gap: 6px; align-items: center; height: 26px; padding: 0 9px; border-radius: var(--r-pill); border: var(--bw) solid var(--border); background: var(--surface-2);
     color: var(--text); font: inherit; font-size: var(--fs-xs); cursor: pointer; }
   .others button:hover { border-color: var(--accent); }
@@ -213,6 +237,10 @@ const jsonLd = [{ "@context": "https://schema.org", "@type": "Map", name: `${tm.
   .mk--places { background: rgba(20, 30, 16, 0.85); }
   .mk b { position: absolute; right: -7px; top: -7px; min-width: 17px; height: 17px; padding: 0 4px; border-radius: 9px; background: var(--accent); color: var(--on-accent);
     font: 700 10px / 17px var(--font-num); text-align: center; }
+  /* a group of different things on one spot: a second well peeking behind (zoom in, or at the closest zoom a list) */
+  .mk.stack::before { content: ""; position: absolute; inset: 0; z-index: -1; border-radius: inherit; transform: translate(4px, 4px); background: #2a2d33;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.3), 0 2px 6px rgba(0, 0, 0, 0.5); }
+  .mtip i { display: block; font-style: normal; font-weight: 500; color: var(--text-muted); }
   .mk.hit { box-shadow: 0 0 0 3px var(--sun), 0 0 14px 2px color-mix(in srgb, var(--sun) 60%, transparent); }
   .mk.dim { opacity: 0.45; }
   .pinwrap { background: none; border: 0; }
@@ -230,8 +258,13 @@ const jsonLd = [{ "@context": "https://schema.org", "@type": "Map", name: `${tm.
   .ctext { display: grid; gap: 2px; min-width: 0; }
   .cname { font-weight: 700; color: var(--heading); }
   .calt { font-size: var(--fs-xs); color: var(--text-muted); }
-  .cfact, .cspots { margin: 0; font-size: var(--fs-sm); color: var(--text); }
-  .cspots { color: var(--text-muted); }
+  .cfacts { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+  .cgold { display: inline-flex; align-items: center; gap: 6px; font-size: var(--fs-xs); font-weight: 600; color: var(--text-muted); }
+  .ctitle { margin: 0; font: 700 var(--fs-xs) / 1 var(--font-body); letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); }
+  .clist { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; max-height: 240px; overflow: auto; }
+  .clist button { display: flex; align-items: center; gap: 10px; width: 100%; padding: 6px 8px; border: 0; border-radius: var(--r-m); background: none; color: var(--text); text-align: left; font: inherit; cursor: pointer; }
+  .clist button:hover { background: var(--hover-strong); }
+  .clist .cicon { width: 36px; height: 36px; }
   .copen { justify-self: start; font-weight: 700; color: var(--link); text-decoration: none; font-size: var(--fs-sm); }
   .copen:hover { text-decoration: underline; }
   .csoon { font-size: var(--fs-xs); color: var(--text-faint); }
@@ -261,12 +294,23 @@ const jsonLd = [{ "@context": "https://schema.org", "@type": "Map", name: `${tm.
     .gl { display: none; }
     .panel { top: auto; left: 0; right: 0; bottom: 0; width: auto; max-height: 62%; border-radius: var(--r-xl) var(--r-xl) 0 0; transform: translateY(105%); transition: transform var(--t-med) var(--ease); z-index: 4; }
     .mapapp.drawer-open .panel { transform: none; }
+    /* the drawer scrolls as one: the layers, then every floor */
+    .panel { overflow-y: auto; overscroll-behavior: contain; }
+    .pblock:last-child { flex: none; }
+    .pblock:last-child .floors { overflow: visible; }
     .drawerbtn { position: absolute; left: 50%; bottom: 16px; transform: translateX(-50%); z-index: 3; display: inline-flex; align-items: center; gap: 8px; height: 44px; padding: 0 16px;
       border-radius: var(--r-pill); border: var(--bw) solid var(--hard); background: var(--accent); color: var(--on-accent); font-weight: 700; box-shadow: var(--shadow-2); white-space: nowrap; }
     .mapapp.drawer-open .drawerbtn { bottom: calc(62% + 12px); }
     .card { left: 12px; right: 12px; bottom: 76px; width: auto; }
     .floorctl { top: 10px; right: 10px; }
-    .others { top: 60px; right: 10px; left: 10px; max-width: none; justify-content: flex-start; }
+    .hl { top: 60px; right: 10px; left: 10px; width: auto; padding: 10px 12px; gap: 8px; }
+    .hlk { display: none; }
+    .hlx { top: 0; right: 0; }
+    .hlmain { padding-right: 32px; }
+    .hlmain .cicon { width: 40px; height: 40px; }
+    .hl .others { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 2px; }
+    .others .ok { width: auto; flex: none; }
+    .others button { flex: none; }
     .leaflet-bottom.leaflet-right { bottom: 64px; }
   }
 </style>

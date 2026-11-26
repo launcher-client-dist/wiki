@@ -1,7 +1,7 @@
 import { describe, test } from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
-import { parsePlace, placeFloors, search } from "../src/lib/map/goto.ts";
+import { level, parsePlace, placeFloors, search } from "../src/lib/map/goto.ts";
 import { mapHref, readDeepLink } from "../src/lib/map/links.ts";
 import { nextWindow, windowSeconds } from "../src/lib/monsters/window.ts";
 
@@ -74,6 +74,11 @@ describe("Ir para (the editor's own parsing)", () => {
     assert.deepEqual(placeFloors(place, ["s", "-2"], () => true), ["-2", "s"]);
     assert.deepEqual(placeFloors(place, ["s", "-2"], () => false), ["s", "-2"]);
     assert.deepEqual(placeFloors(place, ["s"]), ["s"]);
+  });
+
+  test("the floor list and the ▲▼ selector read by height: upper floors on top, the surface, then the caves", () => {
+    const floors = ["s", "0", "-1", "-16", "1", "2"];
+    assert.deepEqual([...floors].sort((a, b) => level(b) - level(a)), ["2", "1", "s", "0", "-1", "-16"]);
   });
 
   test("search: every word, accents folded, the start of a name first", () => {

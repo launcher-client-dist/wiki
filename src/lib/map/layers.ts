@@ -33,12 +33,21 @@ export interface PointsFile { floors: string[]; layers: Record<LayerKey, RawPoin
 export const POINTS = pointsJson as unknown as PointsFile;
 
 export interface Icon { s: string; w: number; h: number; px?: boolean }
-export interface Entry { r: string; n: string; a?: string; u: string | null; i?: Icon; k?: string }
+/** A card fact, never bare text: a game icon (drawn 16 px, its whole scale: w, h) and its words, or a gold value. */
+export type Fact = [icon: string, text: string, w: number, h: number] | ["$gold", number];
+export interface Entry { r: string; n: string; a?: string; u: string | null; i?: Icon; k?: string; x?: Fact[] }
 export type Point = (number | string)[];
 export interface LayerFile { e: Entry[]; p: Point[] }
 
 const UI = uiSizes as Record<string, number[]>;
 const uiIcon = (name: string): Icon => ({ s: `/ui/${name}.png`, w: UI[name]![0]!, h: UI[name]![1]!, px: true });
+/** A fact with its game icon at the largest whole scale that fits 16 px (GameIcon's `fit`, as the Tag draws it). */
+export function fact(icon: string, text: string): Fact {
+  const [w, h] = UI[icon] as [number, number];
+  if (!w) throw new Error(`map fact: no game icon "${icon}"`);
+  const k = Math.max(1, Math.floor(16 / Math.max(w, h)));
+  return [icon, text, w * k, h * k];
+}
 
 /** The nearest temple's town of a point (a place's fact: "Poço · Basile"). */
 function townOf(x: number, z: number): string {
@@ -52,11 +61,12 @@ function townOf(x: number, z: number): string {
 }
 
 /** Every layer and the spoiler file in one language. */
-export function buildLayers(lang: Lang, registry: Registry, monsters: readonly MonsterData[]): Record<LayerKey | "spoiler", LayerFile> {
+export function buildLayers(lang: Lang, registry: Registry, monsters: readonly MonsterData[], items: readonly { id: string; value: { npcPays: number | null } }[] = []): Record<LayerKey | "spoiler", LayerFile> {
   const t = ui(lang);
   const tm = t.map;
   const num = (n: number) => n.toLocaleString(LOCALE[lang]);
   const byId = new Map(monsters.map((m) => [m.id, m]));
+  const pays = new Map(items.map((i) => [i.id, i.value.npcPays]));
   const out = {} as Record<LayerKey | "spoiler", LayerFile>;
   const spoiler: LayerFile = { e: [], p: [] };
   const spoilerIdx = new Map<string, number>();
@@ -68,34 +78,41 @@ export function buildLayers(lang: Lang, registry: Registry, monsters: readonly M
       if (i === undefined) { i = target.e.length; target.e.push(make()); map.set(key, i); }
       return i;
     };
-    const entity = (ref: string, fact: string | undefined): Entry => {
+    const entity = (ref: string, facts: Fact[]): Entry => {
       const e = registry.require(ref);
       const kind = ref.slice(0, ref.indexOf(":")) as "monster";
       const dn = displayName(e.name, kind, lang);
-      return { r: ref, n: dn.name, ...(dn.aid ? { a: dn.aid } : {}), u: registry.url(ref, lang), ...(e.icon ? { i: { s: e.icon.src, w: e.icon.width, h: e.icon.height, ...(e.icon.pixel ? { px: true } : {}) } } : {}), ...(fact ? { k: fact } : {}) };
+      // k: the facts' words, for the search and the result's second line
+      const words = facts.filter((f): f is [string, string, number, number] => f[0] !== "$gold").map((f) => f[1]).join(" · ");
+      return { r: ref, n: dn.name, ...(dn.aid ? { a: dn.aid } : {}), u: registry.url(ref, lang), ...(e.icon ? { i: { s: e.icon.src, w: e.icon.width, h: e.icon.height, ...(e.icon.pixel ? { px: true } : {}) } } : {}),
+        ...(words ? { k: words } : {}), ...(facts.length ? { x: facts } : {}) };
     };
     for (const p of POINTS.layers[layer]) {
       if (layer === "places") {
         const kind = p.kind!;
         const town = p.town ?? townOf(p.x, p.z);
-        const i = entryOf(`${kind}|${town}`, () => ({ r: `place:${kind}`, n: tm.place[kind], u: null, i: uiIcon(PLACE_ICON[kind]), k: town }), file, idx);
+        const i = entryOf(`${kind}|${town}`, () => ({ r: `place:${kind}`, n: tm.place[kind], u: null, i: uiIcon(PLACE_ICON[kind]), k: town, x: town ? [fact("house", town)] : [] }), file, idx);
         file.p.push([p.x, p.z, p.f, i, p.n ?? 1]);
         continue;
       }
       const ref = p.ref!;
-      let fact: string | undefined;
+      const facts: Fact[] = [];
       if (layer === "monsters" || layer === "bosses") {
         const m = byId.get(ref.slice("monster:".length));
-        fact = m?.level ? fill(tm.levelShort, m.level) : undefined;
+        if (m?.level) facts.push(fact("xp", fill(tm.levelShort, m.level)));
       } else if (layer === "npcs") {
-        fact = [p.sells ? fill(tm.sells, { n: num(p.sells) }) : "", p.buys ? fill(tm.buys, { n: num(p.buys) }) : ""].filter(Boolean).join(" · ") || undefined;
+        if (p.sells) facts.push(fact("src-shop", fill(tm.sells, { n: num(p.sells) })));
+        if (p.buys) facts.push(fact("gold", fill(tm.buys, { n: num(p.buys) })));
       } else if (layer === "items") {
         const it = registry.require(ref);
-        fact = it.facts?.[0] ? (typeof it.facts[0].value === "string" ? it.facts[0].value : it.facts[0].value[lang]) : undefined;
+        const f0 = it.facts?.[0];
+        if (f0) facts.push(fact(f0.icon ?? "stack", typeof f0.value === "string" ? f0.value : f0.value[lang]));
+        const gold = pays.get(ref.slice("item:".length));
+        if (gold) facts.push(["$gold", gold]);
       }
       const target = p.spoiler ? spoiler : file;
       const map = p.spoiler ? spoilerIdx : idx;
-      const i = entryOf(ref, () => entity(ref, fact), target, map);
+      const i = entryOf(ref, () => entity(ref, facts), target, map);
       const row: Point = [p.x, p.z, p.f, i, p.n ?? 1];
       if (layer === "bosses") row.push(p.hours?.[0] ?? -1, p.hours?.[1] ?? -1, p.invasion ? 1 : 0);
       if (p.spoiler) row.push(LAYERS.indexOf(layer));

@@ -15,8 +15,8 @@ const cache = new Map<Lang, ReturnType<typeof buildLayers>>();
 export const GET: APIRoute = async ({ params }) => {
   const lang = params.lang as Lang;
   if (!cache.has(lang)) {
-    const { registry, monsters } = await siteData();
-    cache.set(lang, buildLayers(lang, registry, monsters));
+    const { registry, monsters, items } = await siteData();
+    cache.set(lang, buildLayers(lang, registry, monsters, items));
   }
   const file = cache.get(lang)![params.layer as keyof ReturnType<typeof buildLayers>];
   return new Response(JSON.stringify(file), { headers: { "Content-Type": "application/json; charset=utf-8" } });

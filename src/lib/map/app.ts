@@ -8,13 +8,14 @@ import L from "leaflet";
 import { parsePlace, placeFloors, search, level } from "./goto.ts";
 import { readDeepLink, type Spot } from "./links.ts";
 import { nextWindow, windowSeconds } from "../monsters/window.ts";
-import type { Entry, LayerFile, LayerKey } from "./layers.ts";
+import type { Entry, Fact, LayerFile, LayerKey } from "./layers.ts";
 
 interface TileMeta { version: string; bounds: [[number, number], [number, number]]; floors: string[]; tiles: Record<string, Record<string, string[]>> }
 interface Strings {
   surface: string; floorN: string; up: string; down: string; searchEmpty: string; gotoBad: string; openPage: string; noPage: string;
   spotsN: string; spotsHere: string; otherFloors: string; pin: string; zoomIn: string; zoomOut: string; layer: Record<LayerKey, string>;
   next: string; now: string; clock: string; close: string;
+  spot1: string; floor1: string; floorsF: string; spotsIn: string; highlighted: string; clearHighlight: string; hereTitle: string; zoomToSee: string; pays: string;
 }
 interface Config { lang: string; layers: LayerKey[]; defaultOn: LayerKey[]; floors: string[]; meta: TileMeta; s: Strings }
 
@@ -42,6 +43,9 @@ export function startMap(root: HTMLElement): void {
     maxBounds: bounds.pad(0.3), maxBoundsViscosity: 0.8, keyboard: true,
   });
   L.control.zoom({ position: "bottomright", zoomInTitle: s.zoomIn, zoomOutTitle: s.zoomOut }).addTo(map);
+  // Leaflet focuses the map on a click; its focus ring is for the keyboard only
+  canvas.addEventListener("pointerdown", () => canvas.classList.add("by-pointer"));
+  canvas.addEventListener("keydown", () => canvas.classList.remove("by-pointer"));
   const TileLayer = L.TileLayer.extend({
     getTileUrl(this: L.TileLayer & { options: { floor: string } }, c: L.Coords) {
       const have = meta.tiles[this.options.floor];
@@ -80,44 +84,93 @@ export function startMap(root: HTMLElement): void {
     return out;
   };
 
-  // ---- markers: the game icon in a small well; a count badge; the highlighted entity's spots ringed
-  const iconHtml = (m: Mark) => {
-    const i = m.entry.i;
-    // sizes inline: Leaflet's stylesheet sets marker images to width: auto
-    const box = m.layer === "items" ? 18 : 26;
-    const [w, h] = i?.px ? [i.w * 2, i.h * 2] : [box, box];
-    const img = i ? `<img src="${esc(i.s)}" width="${w}" height="${h}" style="width:${w}px;height:${h}px" alt=""${i.px ? ' class="px"' : ""}>` : "";
-    const badge = m.n > 1 && m.layer !== "places" ? `<b>${m.n}</b>` : "";
-    return `<span class="mk mk--${m.layer}${highlight === m.entry.r ? " hit" : ""}${highlight && highlight !== m.entry.r ? " dim" : ""}">${img}${badge}</span>`;
+  // ---- markers: the entity's game icon in a small dark well, a count badge; the highlighted entity's spots ringed.
+  // Zoomed far out (below zoom 0) a small dot per spot, on one canvas: the world fits the screen and icons can't. From
+  // zoom 0 in, icons, gathered on the screen so none overlaps another: a spot closer than an icon's width (plus a gap)
+  // to one already drawn joins it, and the group shows its first member's icon (bosses, NPCs, monsters, places, items,
+  // in that order), the count of what it holds, and a stack edge when it holds more than one thing.
+  const ORDER: Record<LayerKey, number> = { bosses: 0, npcs: 1, monsters: 2, places: 3, items: 4 };
+  const imgHtml = (i: Entry["i"], box: number) => {
+    if (!i) return "";
+    // a pixel icon at its largest whole scale that fits the well; a render scaled to fit (sizes inline: Leaflet's
+    // stylesheet sets marker images to width: auto)
+    const k = i.px ? Math.max(1, Math.floor(box / Math.max(i.w, i.h))) : 0;
+    const [w, h] = i.px ? [i.w * k, i.h * k] : i.w >= i.h ? [box, Math.round((box * i.h) / i.w)] : [Math.round((box * i.w) / i.h), box];
+    return `<img src="${esc(i.s)}" width="${w}" height="${h}" style="width:${w}px;height:${h}px" alt=""${i.px ? ' class="px"' : ""}>`;
   };
+  interface Group { m: Mark; all: Mark[]; refs: Set<string>; n: number; p: L.Point }
+  const countOf = (m: Mark) => (m.layer === "places" ? 1 : m.n);
   let current: Mark[] = [];
   let paintId = 0;
-  // zoomed out (zoom 0 and less): a dot per spot, drawn on one canvas (thousands stay light); the bosses and the
-  // picked entity keep their icons. Zoomed in: the icons, only those in view (redrawn as the map moves).
   const dots = L.canvas({ padding: 0.3 });
   const DOT: Record<LayerKey, string> = { monsters: "#ff8a6b", bosses: "#ff4d4d", npcs: "#8fd3ff", places: "#9be86d", items: "#ffd34e" };
+  const tipOf = (g: Group) => {
+    if (g.refs.size === 1) return esc(g.m.entry.n) + (g.n > 1 ? ` · ${esc(spotsText(g.n))}` : "");
+    const names = [...new Map(g.all.map((m) => [m.entry.r + m.entry.n, m.entry.n])).values()];
+    return `${names.slice(0, 4).map(esc).join(" · ")}${names.length > 4 ? ` · +${names.length - 4}` : ""}`;
+  };
   const draw = () => {
     marks.clearLayers();
-    const far = map.getZoom() <= 0;
-    const view = map.getBounds().pad(0.25);
-    for (const m of current) {
-      if (m.f !== floor) continue;
-      const hit = highlight === m.entry.r;
-      if (far && !hit && m.layer !== "bosses") {
-        const c = L.circleMarker(ll(m.x, m.z), { renderer: dots, radius: m.layer === "items" ? 2.5 : 3.5, weight: 1, color: "rgba(10,11,13,0.9)", fillColor: DOT[m.layer], fillOpacity: highlight ? 0.35 : 0.95 });
+    const z = map.getZoom();
+    const view = map.getBounds().pad(0.2);
+    const here = current.filter((m) => m.f === floor);
+    if (z < 0) {
+      for (const m of here) {
+        if (highlight === m.entry.r || m.layer === "bosses") continue;
+        const c = L.circleMarker(ll(m.x, m.z), { renderer: dots, radius: m.layer === "items" ? 2 : 3, weight: 1, color: "rgba(10,11,13,0.9)", fillColor: DOT[m.layer], fillOpacity: highlight ? 0.3 : 0.95 });
         c.bindTooltip(esc(m.entry.n), { direction: "top", className: "mtip" });
         c.on("click", () => showCard(m));
         marks.addLayer(c);
-        continue;
       }
-      if (!view.contains(ll(m.x, m.z))) continue;
-      const size = m.layer === "items" ? 22 : 30;
-      const mk = L.marker(ll(m.x, m.z), {
-        icon: L.divIcon({ html: iconHtml(m), className: "mkwrap", iconSize: [size, size], iconAnchor: [size / 2, size / 2] }),
-        keyboard: false, riseOnHover: true, zIndexOffset: hit ? 1000 : m.layer === "bosses" ? 500 : 0,
+    }
+    const box = z <= 0 ? 24 : 30;      // the well
+    const reach = box + (z <= 0 ? 10 : 8);   // two wells' centres never closer than this: no overlap, a gap between
+    const groups: Group[] = [];
+    const grid = new Map<string, Group[]>();
+    const around = function* (p: L.Point) {
+      const cx = Math.floor(p.x / reach), cy = Math.floor(p.y / reach);
+      for (let dx = -1; dx <= 1; dx++) for (let dy = -1; dy <= 1; dy++) yield* grid.get(`${cx + dx}|${cy + dy}`) ?? [];
+    };
+    const sorted = here.filter((m) => z >= 0 || highlight === m.entry.r || m.layer === "bosses")
+      .sort((a, b) => Number(highlight === b.entry.r) - Number(highlight === a.entry.r) || ORDER[a.layer] - ORDER[b.layer] || countOf(b) - countOf(a));
+    for (const m of sorted) {
+      const p = map.latLngToLayerPoint(ll(m.x, m.z));
+      const hit = highlight === m.entry.r;
+      let join: Group | null = null, under = false;
+      for (const g of around(p)) {
+        if (g.p.distanceTo(p) >= reach) continue;
+        const gHit = highlight === g.m.entry.r;
+        if (gHit === hit) { join = g; break; }
+        if (gHit) under = true;   // a dimmed spot under a highlighted one is left out: the ring stays clear
+      }
+      if (join) { join.all.push(m); join.refs.add(m.entry.r + "|" + m.entry.n); join.n += countOf(m); continue; }
+      if (under) continue;
+      const ng: Group = { m, all: [m], refs: new Set([m.entry.r + "|" + m.entry.n]), n: countOf(m), p };
+      groups.push(ng);
+      const k = `${Math.floor(p.x / reach)}|${Math.floor(p.y / reach)}`;
+      (grid.get(k) ?? grid.set(k, []).get(k)!).push(ng);
+    }
+    for (const g of groups) {
+      const at = map.layerPointToLatLng(g.p);
+      if (!view.contains(at)) continue;
+      const hit = highlight === g.m.entry.r;
+      const many = g.refs.size > 1;
+      const size = g.m.layer === "items" && !many ? box - 6 : box;
+      const cls = `mk mk--${g.m.layer}${many ? " stack" : ""}${hit ? " hit" : ""}${highlight && !hit ? " dim" : ""}`;
+      const badge = g.n > 1 ? `<b>${g.n}</b>` : "";
+      const mk = L.marker(at, {
+        icon: L.divIcon({ html: `<span class="${cls}">${imgHtml(g.m.entry.i, size - 6)}${badge}</span>`, className: "mkwrap", iconSize: [size, size], iconAnchor: [size / 2, size / 2] }),
+        keyboard: false, riseOnHover: true, zIndexOffset: hit ? 1000 : g.m.layer === "bosses" ? 500 : 0,
       });
-      mk.bindTooltip(esc(m.entry.n) + (m.n > 1 && m.layer !== "places" ? ` · ${esc(s.spotsN.replace("{n}", String(m.n)))}` : ""), { direction: "top", offset: [0, -size / 2], className: "mtip" });
-      mk.on("click", () => showCard(m));
+      mk.bindTooltip(tipOf(g) + (many && z < map.getMaxZoom() ? ` <i>${esc(s.zoomToSee)}</i>` : ""), { direction: "top", offset: [0, -size / 2], className: "mtip" });
+      mk.on("click", () => {
+        if (!many) return showCard(g.m, mk);
+        if (z < map.getMaxZoom()) {
+          const b = L.latLngBounds(g.all.map((m) => ll(m.x, m.z)));
+          const to = Math.min(map.getMaxZoom(), Math.max(z + 2, map.getBoundsZoom(b.pad(0.5))));
+          map.flyTo(b.getCenter(), to, { duration: 0.4 });
+        } else showGroup(g, mk);
+      });
       marks.addLayer(mk);
     }
   };
@@ -139,27 +192,81 @@ export function startMap(root: HTMLElement): void {
     paintCounts();
   };
 
-  // ---- the card: icon, name, translation, the key fact (a boss: its next window), the page link
+  // ---- the card: icon, name, translation, its facts (each with its game icon, drawn by the site's Tag and Value),
+  // a boss's next window, how many spots on how many floors, the page link. Docked beside the panel; when it would
+  // cover the marker it describes, the map slides that marker clear of it.
   const card = root.querySelector<HTMLElement>("[data-card]")!;
-  const showCard = (m: Mark) => {
-    const i = m.entry.i;
-    let fact = m.entry.k ?? "";
+  const tpl = (name: string) => root.querySelector<HTMLTemplateElement>(`template[data-tpl="${name}"]`)!.content.firstElementChild!.cloneNode(true) as HTMLElement;
+  const tagOf = (f: Fact, tone = "tag"): HTMLElement => {
+    if (f[0] === "$gold") {
+      const v = tpl("gold");
+      v.querySelector("b")!.textContent = (f[1] as number).toLocaleString(document.documentElement.lang || undefined);
+      const wrap = document.createElement("span");
+      wrap.className = "cgold";
+      const label = document.createElement("span");
+      label.textContent = s.pays;
+      wrap.append(label, v);
+      return wrap;
+    }
+    const t = tpl(tone);
+    const img = t.querySelector("img")!;
+    img.src = `/ui/${f[0]}.png`;
+    img.width = f[2] as number;
+    img.height = f[3] as number;
+    for (const n of [...t.childNodes]) if (n.nodeType === Node.TEXT_NODE) n.remove();
+    t.append(document.createTextNode(f[1] as string));
+    return t;
+  };
+  const plural = (n: number, one: string, many: string) => (n === 1 ? one : many.replace("{n}", n.toLocaleString(document.documentElement.lang || undefined)));
+  const spotsText = (n: number) => plural(n, s.spot1, s.spotsN);
+  const spread = (ref: string) => {
+    const spots = current.filter((o) => o.entry.r === ref);
+    const n = spots.reduce((a, o) => a + countOf(o), 0);
+    const floors = new Set(spots.map((o) => o.f)).size;
+    return { n, floors, text: s.spotsIn.replace("{spots}", spotsText(n)).replace("{floors}", plural(floors, s.floor1, s.floorsF)) };
+  };
+  const headHtml = (e: Entry, big = 40) => `${e.i ? `<span class="cicon">${imgHtml(e.i, big)}</span>` : ""}<span class="ctext"><span class="cname">${esc(e.n)}</span>${e.a ? `<span class="calt">${esc(e.a)}</span>` : ""}</span>`;
+  const keepClear = (mk?: L.Marker) => {
+    if (!mk) return;
+    requestAnimationFrame(() => {
+      if (card.hidden) return;
+      const st = canvas.getBoundingClientRect(), cr = card.getBoundingClientRect();
+      const pt = map.latLngToContainerPoint(mk.getLatLng());
+      const x = pt.x + st.left, y = pt.y + st.top, pad = 28;
+      if (x > cr.left - pad && x < cr.right + pad && y > cr.top - pad && y < cr.bottom + pad) map.panBy([0, y - (cr.top - pad - 24)], { animate: true, duration: 0.3 });
+    });
+  };
+  const showCard = (m: Mark, mk?: L.Marker) => {
+    const facts = document.createElement("div");
+    facts.className = "cfacts";
+    for (const f of m.entry.x ?? []) facts.append(tagOf(f));
     if (m.hours) {
       const w = nextWindow(windowSeconds(m.hours), Date.now() / 1000);
       const fmt = new Intl.DateTimeFormat(document.documentElement.lang || undefined, { hour: "2-digit", minute: "2-digit" });
-      fact = `${fact ? `${fact} · ` : ""}${(w.open ? s.now : s.next).replace("{t}", fmt.format((w.open ? w.until : w.at) * 1000))} (${s.clock})`;
+      facts.append(tagOf(["time", `${(w.open ? s.now : s.next).replace("{t}", fmt.format((w.open ? w.until : w.at) * 1000))} (${s.clock})`, 16, 16], "tag-sun"));
     }
-    const spots = current.filter((o) => o.entry.r === m.entry.r);
-    const total = spots.reduce((n, o) => n + o.n, 0);
+    const sp = spread(m.entry.r);
+    if (m.layer !== "places" && sp.n > 0) facts.append(tagOf(["src-map", sp.text, 16, 16]));
     card.innerHTML = `
       <button type="button" class="cclose" aria-label="${esc(s.close)}">×</button>
-      <div class="chead">${i ? `<span class="cicon"><img src="${esc(i.s)}" width="${i.px ? i.w * 3 : 40}" height="${i.px ? i.h * 3 : 40}" alt=""${i.px ? ' class="px"' : ""}></span>` : ""}
-        <span class="ctext"><span class="cname">${esc(m.entry.n)}</span>${m.entry.a ? `<span class="calt">${esc(m.entry.a)}</span>` : ""}</span></div>
-      ${fact ? `<p class="cfact">${esc(fact)}</p>` : ""}
-      ${total > 1 ? `<p class="cspots">${esc(s.spotsN.replace("{n}", String(total)))}</p>` : ""}
+      <div class="chead">${headHtml(m.entry)}</div>
       ${m.entry.u ? `<a class="copen" href="${esc(m.entry.u)}">${esc(s.openPage)} →</a>` : m.layer === "places" ? "" : `<span class="csoon">${esc(s.noPage)}</span>`}`;
+    if (facts.childNodes.length) card.querySelector(".chead")!.after(facts);
     card.hidden = false;
     card.querySelector<HTMLButtonElement>(".cclose")!.onclick = () => { card.hidden = true; };
+    keepClear(mk);
+  };
+  /** Several things on one spot at the closest zoom: their list, each opening its own card. */
+  const showGroup = (g: Group, mk: L.Marker) => {
+    const seen = new Map<string, Mark>();
+    for (const m of g.all) if (!seen.has(m.entry.r + m.entry.n)) seen.set(m.entry.r + m.entry.n, m);
+    const list = [...seen.values()];
+    card.innerHTML = `<button type="button" class="cclose" aria-label="${esc(s.close)}">×</button><p class="ctitle">${esc(s.hereTitle)}</p>
+      <ul class="clist">${list.map((m, i) => `<li><button type="button" data-pick="${i}">${headHtml(m.entry, 28)}</button></li>`).join("")}</ul>`;
+    card.hidden = false;
+    card.querySelector<HTMLButtonElement>(".cclose")!.onclick = () => { card.hidden = true; };
+    card.querySelectorAll<HTMLButtonElement>("[data-pick]").forEach((b) => (b.onclick = () => showCard(list[+b.dataset.pick!]!, mk)));
+    keepClear(mk);
   };
   map.on("click", () => { card.hidden = true; });
 
@@ -186,23 +293,38 @@ export function startMap(root: HTMLElement): void {
     for (const b of floorBtns) {
       const f = b.dataset.floor!;
       b.setAttribute("aria-pressed", f === floor ? "true" : "false");
-      if (f === floor) {   // the current floor in view in the floor list's own scroll (never the page's)
-        const list = b.closest<HTMLElement>(".floors")!;
-        const lr = list.getBoundingClientRect(), br = b.getBoundingClientRect();
-        if (br.top < lr.top || br.bottom > lr.bottom) list.scrollTop += br.top - lr.top - lr.height / 2;
-      }
+      if (f === floor) showFloorRow(b);
       const c = b.querySelector<HTMLElement>(".n");
       if (c) c.textContent = counts.get(f) ? String(counts.get(f)) : "";
       b.classList.toggle("has", !!counts.get(f));
     }
+    // the highlighted entity: what it is, how many spots on how many floors, its page; then its other floors
+    const box = root.querySelector<HTMLElement>("[data-highlight]")!;
     const other = root.querySelector<HTMLElement>("[data-other-floors]")!;
-    if (highlight) {
+    const hm = highlight ? current.find((m) => m.entry.r === highlight) : undefined;
+    if (hm) {
+      const sp = spread(hm.entry.r);
+      const head = root.querySelector<HTMLElement>("[data-hl-head]")!;
+      head.innerHTML = `<span class="hlk">${esc(s.highlighted)}</span>
+        <button type="button" class="hlx" aria-label="${esc(s.clearHighlight)}" title="${esc(s.clearHighlight)}">×</button>
+        <div class="hlmain">${hm.entry.i ? `<span class="cicon">${imgHtml(hm.entry.i, 30)}</span>` : ""}<span class="ctext"><span class="cname">${esc(hm.entry.n)}</span>
+          <span class="hlrow"><span class="hlfacts"></span>${hm.entry.u ? `<a class="copen" href="${esc(hm.entry.u)}">${esc(s.openPage)} →</a>` : ""}</span></span></div>`;
+      head.querySelector(".hlfacts")!.append(tagOf(["src-map", sp.text, 16, 16]));
+      head.querySelector<HTMLButtonElement>(".hlx")!.onclick = () => clearHighlight();
       const list = [...counts.entries()].filter(([f]) => f !== floor).sort((a, b) => level(b[0]) - level(a[0]));
       other.hidden = !list.length;
-      other.innerHTML = list.length ? `<span>${esc(s.otherFloors)}:</span>${list.map(([f, n]) => `<button type="button" data-go-floor="${esc(f)}">${esc(floorName(f))} <b>${n}</b></button>`).join("")}` : "";
+      other.innerHTML = list.length ? `<span class="ok">${esc(s.otherFloors)}</span>${list.map(([f, n]) => `<button type="button" data-go-floor="${esc(f)}">${esc(floorName(f))} <b>${n}</b></button>`).join("")}` : "";
       other.querySelectorAll<HTMLButtonElement>("[data-go-floor]").forEach((b) => (b.onclick = () => { setFloor(b.dataset.goFloor!); fitHighlight(); }));
-    } else other.hidden = true;
+      box.hidden = false;
+    } else box.hidden = true;
   };
+  /** The current floor's row in view, in the floor list's own scroll (a phone: the drawer's), never the page's. */
+  function showFloorRow(b: HTMLElement) {
+    const list = b.closest<HTMLElement>(".floors")!;
+    const box = list.scrollHeight > list.clientHeight + 1 ? list : panel;
+    const lr = box.getBoundingClientRect(), br = b.getBoundingClientRect();
+    if (lr.height && (br.top < lr.top || br.bottom > lr.bottom)) box.scrollTop += br.top - lr.top - lr.height / 2;
+  }
   for (const b of floorBtns) b.onclick = () => { setFloor(b.dataset.floor!); closeDrawer(); };
   function setFloor(f: string) {
     if (!allFloors.includes(f)) return;
@@ -238,10 +360,36 @@ export function startMap(root: HTMLElement): void {
   };
 
   // ---- highlight an entity: every spot of it, on the floor that has most of them unless one is given
+  /** The map's part no overlay covers (the panel on a desktop, the highlight box, the drawer button): [top-left, bottom-right] padding. */
+  const freeArea = (): [L.Point, L.Point] => {
+    const st = canvas.getBoundingClientRect();
+    let left = 16, top = 16, right = 16, bottom = 16;
+    const pr = panel.getBoundingClientRect();
+    if (pr.width && pr.right < st.left + st.width / 2 && pr.bottom > st.top) left = pr.right - st.left + 16;
+    const hb = root.querySelector<HTMLElement>("[data-highlight]")!;
+    if (!hb.hidden) {
+      const r = hb.getBoundingClientRect();
+      if (r.width > st.width * 0.6) top = r.bottom - st.top + 16;   // a phone: the box spans the map's width
+      else right = st.right - r.left + 16;
+    }
+    const db = root.querySelector<HTMLElement>("[data-drawer]")!.getBoundingClientRect();
+    if (db.height) bottom = st.bottom - db.top + 16;
+    return [L.point(left, top), L.point(right, bottom)];
+  };
   const fitHighlight = () => {
     const here = current.filter((m) => m.entry.r === highlight && m.f === floor);
-    if (here.length === 1) map.setView(ll(here[0]!.x, here[0]!.z), Math.max(map.getZoom(), 2));
-    else if (here.length) map.fitBounds(L.latLngBounds(here.map((m) => ll(m.x, m.z))).pad(0.25), { maxZoom: 2 });
+    if (!here.length) return;
+    const [tl, br] = freeArea();
+    const b = L.latLngBounds(here.map((m) => ll(m.x, m.z)));
+    map.fitBounds(here.length === 1 ? b.pad(0.02) : b.pad(0.1), { paddingTopLeft: tl, paddingBottomRight: br, maxZoom: 2, animate: false });
+  };
+  const clearHighlight = () => {
+    highlight = null;
+    const q = new URLSearchParams(location.search);
+    q.delete("e");
+    const qs = q.toString().replace(/%3A/gi, ":");
+    history.replaceState(null, "", `${location.pathname}${qs ? `?${qs}` : ""}`);
+    paint();
   };
   const select = async (ref: string, opts: { floor?: string; fit?: boolean } = {}) => {
     highlight = ref;
@@ -287,7 +435,7 @@ export function startMap(root: HTMLElement): void {
     results.hidden = false;
     results.innerHTML = hits.length ? hits.map((h, i) => {
       const ic = h.entry.i;
-      return `<li role="option" id="mres-${i}"><button type="button" data-hit="${i}">${ic ? `<span class="ricon"><img src="${esc(ic.s)}" width="${ic.px ? ic.w * 2 : 28}" height="${ic.px ? ic.h * 2 : 28}" alt=""${ic.px ? ' class="px"' : ""}></span>` : ""}<span class="rtext"><span class="rname">${esc(h.entry.n)}</span><span class="rsub">${esc([h.entry.k && h.layer === "places" ? h.entry.k : s.layer[h.layer], s.spotsN.replace("{n}", String(h.n))].join(" · "))}</span></span></button></li>`;
+      return `<li role="option" id="mres-${i}"><button type="button" data-hit="${i}">${ic ? `<span class="ricon"><img src="${esc(ic.s)}" width="${ic.px ? ic.w * 2 : 28}" height="${ic.px ? ic.h * 2 : 28}" alt=""${ic.px ? ' class="px"' : ""}></span>` : ""}<span class="rtext"><span class="rname">${esc(h.entry.n)}</span><span class="rsub">${esc([h.entry.k && h.layer === "places" ? h.entry.k : s.layer[h.layer], spotsText(h.n)].join(" · "))}</span></span></button></li>`;
     }).join("") : `<li class="rempty">${esc(s.searchEmpty.replace("{q}", q))}</li>`;
     results.querySelectorAll<HTMLButtonElement>("[data-hit]").forEach((b) => (b.onclick = () => pick(hits[+b.dataset.hit!]!)));
     (results as HTMLElement & { _hits?: typeof hits })._hits = hits;
@@ -342,7 +490,11 @@ export function startMap(root: HTMLElement): void {
     const open = !root.classList.contains("drawer-open");
     root.classList.toggle("drawer-open", open);
     drawerBtn.setAttribute("aria-expanded", open ? "true" : "false");
-    if (open) panel.querySelector<HTMLElement>("input, button")?.focus();
+    if (open) {
+      panel.querySelector<HTMLElement>("input, button")?.focus({ preventScroll: true });
+      const cur = root.querySelector<HTMLElement>(`[data-floor="${CSS.escape(floor)}"]`);
+      if (cur) setTimeout(() => showFloorRow(cur), 50);
+    }
   };
 
   // ---- open: the deep link (a spot, an entity, a floor), else the surface's middle
