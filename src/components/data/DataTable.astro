@@ -316,7 +316,7 @@ const strings = { count: t.tableCount, countAll: t.tableCountAll };
   tbody :global(tr:first-child td) { border-top: 0; }
   tbody :global(td.a-end) { text-align: right; }
 
-  /* grid view and narrow widths (phones and small tablets, below 900 px: the table would not fit): the same rows as cards */
+  /* grid view and narrow widths (phones and tablets, below 1024 px: the names would not fit): the same rows as cards */
   .dt[data-view="grid"] thead { display: none; }
   .dt[data-view="grid"] .frame { border: 0; background: none; box-shadow: none; overflow: visible; }
   .dt[data-view="grid"] table, .dt[data-view="grid"] tbody { display: block; }
@@ -329,7 +329,7 @@ const strings = { count: t.tableCount, countAll: t.tableCountAll };
   .dt[data-view="grid"] tbody :global(td::before) { content: attr(data-label); color: var(--text-muted); font-size: var(--fs-xs); }
   .dt[data-view="grid"] tbody :global(td.primary) { order: -1; margin-bottom: 4px; font-size: 1rem; }
   .dt[data-view="grid"] tbody :global(td.primary::before) { display: none; }
-  @media (max-width: 899px) {
+  @media (max-width: 1023px) {
     thead { display: none; }
     table, tbody { display: block; }
     tbody :global(tr) { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 14px; padding: 12px 14px; border-top: 1px solid var(--row-border); }

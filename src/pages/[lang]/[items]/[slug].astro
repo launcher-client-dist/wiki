@@ -438,9 +438,9 @@ const jsonLd = [{
         <InfoBox title={ti.stats}>
           {hasClasses && (
             <div class="switch">
-              <span class="label"><GameIcon name="class" />{ti.classSwitch}<b class="vcap" data-vcap="item-page" aria-hidden="true">{ti.classBase}</b></span>
+              <span class="label"><GameIcon name="class" />{ti.classSwitch}</span>
               <VariantSwitch scope="item-page" compact label={ti.classSwitch} variants={[{ key: "base", label: ti.classBase, icon: "class" }, ...CLASS_KEYS.map((k) => ({ key: k, label: ti.classes[k], icon: `class-${k}` }))]} />
-              <p class="traits-note" data-section="traits-note">{ti.traitsNote}</p>
+              <p class="traits-note" data-section="traits-note"><b class="vcap" data-vcap="item-page" aria-hidden="true">{ti.classBase}</b> · {ti.traitsNote}</p>
             </div>
           )}
           {statKeys.length > 0 ? (
@@ -529,8 +529,10 @@ const jsonLd = [{
   .side { grid-area: side; min-width: 0; }
   @media (min-width: 1000px) {
     .layout { grid-template-columns: minmax(0, 1fr) 330px; grid-template-areas: "hero side" "main side"; align-items: start; column-gap: var(--s-6); row-gap: var(--s-7); }
-    .side { position: sticky; top: calc(var(--header-h) + var(--s-4)); }
+    /* not sticky: a stats box is often taller than the screen, and a stuck one hides its last rows (price, weight) */
   }
+  /* a narrow desktop (1000-1199): the main column is ~600 px, too narrow for the hero; it spans both columns there */
+  @media (min-width: 1000px) and (max-width: 1199px) { .layout { grid-template-areas: "hero hero" "main side"; } }
   /* one rhythm (layout rules): 56 px between sections, 16 px from a section title to its content, 32 px between the
      groups of a section, 12 px from a group's title to its rows */
   .block + .block { margin-top: var(--s-7); }
@@ -679,7 +681,7 @@ const jsonLd = [{
 
   .switch { padding: 14px 18px; border-bottom: 1px solid var(--row-border); display: grid; gap: 10px; }
   .switch .label { display: flex; align-items: center; gap: 6px; font-size: var(--fs-xs); font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; }
-  .vcap { margin-left: auto; font-size: var(--fs-sm); text-transform: none; letter-spacing: 0; color: var(--heading); }
+  .vcap { color: var(--heading); font-weight: 700; }
   .switch .traits-note { margin: 0; font-size: var(--fs-xs); color: var(--text-muted); }
   .gated li { padding: 4px 0; }
   .paysline { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 6px; }

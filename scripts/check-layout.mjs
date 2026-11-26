@@ -8,7 +8,7 @@
 //   overflow    no horizontal page overflow; no element clips its content (hidden/clip with content wider than it)
 //   expect      every page answers its status and has the parts the rules measure (a rule that matches nothing fails)
 //
-//   node scripts/check-layout.mjs [--dist DIR] [--only home,list,item-rune] [--sweep]
+//   node scripts/check-layout.mjs [--dist DIR] [--only home,list,item-rune] [--langs pt,es,en] [--sweep]
 // Chrome: CHROME_PATH, else the usual install paths (Windows, macOS, Linux).
 import http from "node:http";
 import fs from "node:fs";
@@ -22,7 +22,7 @@ const arg = (name) => { const i = process.argv.indexOf(name); return i > 0 ? pro
 const DIST = path.resolve(arg("--dist") ?? path.join(ROOT, "dist"));
 const ONLY = arg("--only")?.split(",");
 const SWEEP = process.argv.includes("--sweep");
-const LANGS = ["pt", "es"];
+const LANGS = (arg("--langs") ?? "pt,es,en").split(",");
 const VIEWPORTS = [{ name: "1440", width: 1440, height: 900 }, { name: "1024", width: 1024, height: 800 }, { name: "390", width: 390, height: 844, mobile: true }];
 
 // ---- the page set: home, list, a guide, 404 and one item of every kind (picked from the data, the fullest page)
