@@ -120,6 +120,12 @@ export const pt = {
 
   pickLanguageTitle: "Escolha o idioma",
 
+  value: {
+    gold: "ouro", goldoz: "ouro/oz", perRestock: "por reposição", unlimited: "estoque ilimitado", blackMarket: "mercado negro: {n}, em alguns dias",
+    goldTip: "Preço em ouro", goldozTip: "Ouro por onça de peso: quanto rende carregar isto", weightTip: "Peso em onças (oz)",
+    amountTip: "Quantidade", timeTip: "Duração em segundos", stockTip: "Quantos o NPC tem até a próxima reposição",
+    blackMarketTip: "Mercado negro: só aparece em alguns dias",
+  },
   item: {
     listTitle: "Itens",
     listIntro: "Todos os itens de Opengea: armas, armaduras, comida, poções, materiais e runas, com atributos, de onde vêm e quanto valem.",
@@ -172,6 +178,9 @@ export const pt = {
     appearsPlaced: "Fica sempre no mesmo lugar:",
     appearsLever: "Aparece ao puxar uma alavanca:",
     appearsTravel: "Aparece no fim de uma viagem com",
+    methodTip: { join: "Juntar: os dois itens da receita, um com o outro.", cook: "Cozinhar: no fogo, com uma panela de ferro.", cut: "Cortar: com uma faca." },
+    toolWord: "ferramenta",
+    toolTip: "A ferramenta não se gasta na receita.",
     stats: "Atributos",
     weight: "Peso",
     stack: "Empilha até",

@@ -3,7 +3,6 @@ import PageShell from "../../../components/layout/PageShell.astro";
 import Banner from "../../../components/ui/Banner.astro";
 import IconSlot from "../../../components/ui/IconSlot.astro";
 import Tag from "../../../components/ui/Tag.astro";
-import Badge from "../../../components/ui/Badge.astro";
 import InfoBox from "../../../components/ui/InfoBox.astro";
 import StatValue from "../../../components/ui/StatValue.astro";
 import VariantSwitch from "../../../components/ui/VariantSwitch.astro";
@@ -18,6 +17,7 @@ import EntityLink from "../../../components/entity/EntityLink.astro";
 import GameIcon from "../../../components/ui/GameIcon.astro";
 import StatChips from "../../../components/ui/StatChips.astro";
 import TipTag from "../../../components/ui/TipTag.astro";
+import Value from "../../../components/ui/Value.astro";
 import { statRank } from "../../../lib/items/rank.ts";
 import Ingredient from "../../../components/entity/Ingredient.astro";
 import { ui, fill } from "../../../i18n/index.ts";
@@ -26,7 +26,7 @@ import { absoluteUrl, homePath, SECTIONS, sectionPath } from "../../../lib/route
 import { ITEMS, STUB_BY_REF, siteData } from "../../../lib/site-registry.ts";
 import { appearsIn } from "../../../lib/entities/appears.ts";
 import { CLASS_KEYS, STAT_KEYS, goldPerOz, primaryVersion, signed, statLabel, type Place, type Recipe, type StatKey } from "../../../lib/items/data.ts";
-import { metaDescription, num, oneInText, oz, similarItems } from "../../../lib/items/view.ts";
+import { metaDescription, oneInText, oz, similarItems } from "../../../lib/items/view.ts";
 
 export async function getStaticPaths() {
   const { items } = await siteData();
@@ -58,6 +58,8 @@ const runesForThis = items.filter((o) => o.rune?.fitsItems.includes(item.id));
 const spells = [...new Set(item.versions.map((x) => x.spell).filter(Boolean))] as string[];
 const ingotSteps = ITEMS.forging.filter((f) => f.ingot === item.id);
 const similar = similarItems(items, item);
+/** A game subtype's wiki category (a rune's "fits" tags take that category's icon). */
+const CAT_OF_SUB = new Map(items.map((i) => [i.subtype.key, i.category]));
 const appears = appearsIn(registry, ref, ["droppedBy", "soldBy", "boughtBy", "rewardOf", "requiredBy", "usedIn", "conjuredBy", "taughtBy", "leftBy"]);
 const description = metaDescription(item, lang);
 const placeText = (p: Place) => `${p.town[lang]}${p.near ? ` · ${ti.near} ${p.near[lang]}` : ""}${p.underground ? ` · ${ti.underground}` : ""}`;
@@ -200,7 +202,7 @@ const jsonLd = [{
                       })()}
                       <Fragment slot="end">
                         {d.quality && <span class="qchip" title={ti.qualityYes}><GameIcon name="quality-any" /><span class="sr-only">{ti.qualityYes}</span></span>}
-                        <span class="num">× {d.amount[0] === d.amount[1] ? d.amount[0] : `${d.amount[0]}–${d.amount[1]}`}</span>
+                        <Value kind="amount" n={d.amount[0] === d.amount[1] ? d.amount[0] : `${d.amount[0]}–${d.amount[1]}`} lang={lang} />
                         <TierBadge tier={d.tier} />
                       </Fragment>
                     </ListRow>
@@ -214,8 +216,8 @@ const jsonLd = [{
                       <EntityLink to={s.npc} iconSize={40} />
                       {s.where && <Fragment slot="sub"><span>{placeText(s.where.place)}</span><MapLink variant="inline" href={s.where.link} label={ti.mapLink} /></Fragment>}
                       <Fragment slot="end">
-                        <span><span class="num">{num(s.price, lang)}</span> {ti.gold}</span>
-                        <Tag tone={s.stock.kind === "blackMarket" ? "sun" : "default"}>{s.stock.kind === "unlimited" ? ti.stockUnlimited : s.stock.kind === "limited" ? fill(ti.stockLimited, { n: s.stock.n ?? 0 }) : fill(ti.stockBlack, { n: s.stock.n ?? 0 })}</Tag>
+                        <Value kind="gold" n={s.price} lang={lang} best={s.price === Math.min(...shopsOpen.map((x) => x.price)) && shopsOpen.some((x) => x.price !== s.price)} />
+                        {s.stock.kind === "unlimited" ? <Value kind="stockUnlimited" lang={lang} /> : s.stock.kind === "limited" ? <Value kind="stock" n={s.stock.n ?? 0} lang={lang} /> : <Value kind="blackMarket" n={s.stock.n ?? 0} lang={lang} />}
                       </Fragment>
                     </ListRow>
                   ))}
@@ -224,20 +226,20 @@ const jsonLd = [{
               {shopsGated.length > 0 && (
                 <Spoiler title={shopsOpen.length ? ti.spoilerShop : ti.spoilerShopOnly}>
                   <ul class="plain gated" data-section="shops-after-quest">
-                    {shopsGated.map((s) => <li><EntityLink to={s.npc} /> · <span class="num">{num(s.price, lang)}</span> {ti.gold}{s.where && <> · <MapLink variant="inline" href={s.where.link} label={ti.mapLink} /></>}{s.afterQuests.length > 0 && <span class="q">{ti.afterQuest}: {s.afterQuests.map((q, i) => <>{i > 0 && ` ${ti.or} `}<EntityLink to={q} /></>)}</span>}</li>)}
+                    {shopsGated.map((s) => <li><EntityLink to={s.npc} /> · <Value kind="gold" n={s.price} lang={lang} />{s.where && <> · <MapLink variant="inline" href={s.where.link} label={ti.mapLink} /></>}{s.afterQuests.length > 0 && <span class="q">{ti.afterQuest}: {s.afterQuests.map((q, i) => <>{i > 0 && ` ${ti.or} `}<EntityLink to={q} /></>)}</span>}</li>)}
                   </ul>
                 </Spoiler>
               )}
               {src.quests.length > 0 && (
                 <Spoiler title={ti.spoilerQuests}>
-                  <ul class="plain">{src.quests.map((q) => <li><EntityLink to={q.quest} />{q.amount > 1 && <span class="num"> × {q.amount}</span>}</li>)}</ul>
+                  <ul class="plain">{src.quests.map((q) => <li><EntityLink to={q.quest} />{q.amount > 1 && <> <Value kind="amount" n={q.amount} lang={lang} /></>}</li>)}</ul>
                 </Spoiler>
               )}
               {src.recipes.length > 0 && (
                 <ListPanel title={ti.recipesTitle} count={src.recipes.length} gicon="src-craft" id="recipes">
                   {src.recipes.map((r: Recipe) => (
                     <ListRow>
-                      <Badge tone="new">{ti.method[r.method]}</Badge>
+                      <TipTag size="small" icon={`method-${r.method}`} tip={ti.methodTip[r.method]}>{ti.method[r.method]}</TipTag>
                       {r.ingredients.map((ing, i) => <>{i > 0 && <span class="plus">+</span>}<Ingredient ing={ing} lang={lang} /></>)}
                     </ListRow>
                   ))}
@@ -260,7 +262,7 @@ const jsonLd = [{
               )}
               {src.conjured.length > 0 && (
                 <ListPanel title={ti.conjuredTitle} gicon="src-conjure" id="conjured">
-                  {src.conjured.map((c) => <ListRow><EntityLink to={c.spell} /><Fragment slot="end">{fill(ti.conjuredNote, { n: c.seconds })}</Fragment></ListRow>)}
+                  {src.conjured.map((c) => <ListRow><EntityLink to={c.spell} /><Fragment slot="end"><span class="vanish"><GameIcon name="time" />{fill(ti.conjuredNote, { n: c.seconds })}</span></Fragment></ListRow>)}
                 </ListPanel>
               )}
             </div>
@@ -293,7 +295,7 @@ const jsonLd = [{
               {item.rune && (
                 <ListPanel title={ti.runeEffect} gicon="rune" id="rune">
                   <ListRow><span>{v.text[lang]}</span></ListRow>
-                  <ListRow><span class="muted">{ti.runeFits}:</span>{item.rune.fits.map((f) => <Tag>{f[lang]}</Tag>)}</ListRow>
+                  <ListRow><span class="muted">{ti.runeFits}:</span>{item.rune.fits.map((f) => <Tag gicon={`cat-${CAT_OF_SUB.get(f.key) ?? "other"}`}>{f[lang]}</Tag>)}</ListRow>
                   {item.rune.fitsItems.length > 0 && <ListRow><span class="links">{item.rune.fitsItems.map((id) => <EntityLink to={`item:${id}`} />)}</span></ListRow>}
                 </ListPanel>
               )}
@@ -311,7 +313,7 @@ const jsonLd = [{
                 <ListPanel title={ti.usedInTitle} count={item.uses.recipes.length} gicon="src-craft" id="used-in">
                   {item.uses.recipes.map((r) => (
                     <ListRow>
-                      <Badge tone="new">{ti.method[r.method]}</Badge>
+                      <TipTag size="small" icon={`method-${r.method}`} tip={ti.methodTip[r.method]}>{ti.method[r.method]}</TipTag>
                       {r.ingredients.map((ing, i) => <>{i > 0 && <span class="plus">+</span>}<Ingredient ing={ing} lang={lang} /></>)}
                       <span class="plus">→</span><EntityLink to={`item:${r.result}`} />
                     </ListRow>
@@ -329,7 +331,7 @@ const jsonLd = [{
                     <ListRow>
                       <EntityLink to={b.npc} iconSize={40} />
                       {b.where && <Fragment slot="sub"><span>{placeText(b.where.place)}</span><MapLink variant="inline" href={b.where.link} label={ti.mapLink} /></Fragment>}
-                      <Fragment slot="end"><span><span class="num">{num(b.price, lang)}</span> {ti.gold}</span></Fragment>
+                      <Fragment slot="end"><Value kind="gold" n={b.price} lang={lang} best={b.price === Math.max(...buyersOpen.map((x) => x.price)) && buyersOpen.some((x) => x.price !== b.price)} /></Fragment>
                     </ListRow>
                   ))}
                 </ListPanel>
@@ -337,7 +339,7 @@ const jsonLd = [{
               {buyersGated.length > 0 && (
                 <Spoiler title={buyersOpen.length ? ti.spoilerBuyer : ti.spoilerBuyerOnly}>
                   <ul class="plain gated" data-section="buyers-after-quest">
-                    {buyersGated.map((b) => <li><EntityLink to={b.npc} /> · <span class="num">{num(b.price, lang)}</span> {ti.gold}{b.where && <> · <MapLink variant="inline" href={b.where.link} label={ti.mapLink} /></>}{b.afterQuests.length > 0 && <span class="q">{ti.afterQuest}: {b.afterQuests.map((q, i) => <>{i > 0 && ` ${ti.or} `}<EntityLink to={q} /></>)}</span>}</li>)}
+                    {buyersGated.map((b) => <li><EntityLink to={b.npc} /> · <Value kind="gold" n={b.price} lang={lang} />{b.where && <> · <MapLink variant="inline" href={b.where.link} label={ti.mapLink} /></>}{b.afterQuests.length > 0 && <span class="q">{ti.afterQuest}: {b.afterQuests.map((q, i) => <>{i > 0 && ` ${ti.or} `}<EntityLink to={q} /></>)}</span>}</li>)}
                   </ul>
                 </Spoiler>
               )}
@@ -399,7 +401,7 @@ const jsonLd = [{
                 return (
                   <Card href={registry.url(`item:${o.id}`, lang)!} title={o.name[lang]} kicker={o.subtype[lang]} layout="row">
                     <IconSlot slot="emblem" icon={ov.icon && ov.iconSize ? { src: ov.icon, width: ov.iconSize[0], height: ov.iconSize[1], pixel: true } : null} kind="item" size={56} />
-                    {Object.values(ov.stats).some(Boolean) ? <StatChips stats={ov.stats} lang={lang} max={3} /> : ti.noStats}
+                    {Object.values(ov.stats).some(Boolean) ? <StatChips stats={ov.stats} lang={lang} max={3} /> : o.value.npcPays ? <span class="paysline">{ti.sellValue} <Value kind="gold" n={o.value.npcPays} lang={lang} /></span> : ti.noStats}
                   </Card>
                 );
               })}
@@ -413,7 +415,7 @@ const jsonLd = [{
           {hasClasses && (
             <div class="switch">
               <span class="label"><GameIcon name="class" />{ti.classSwitch}</span>
-              <VariantSwitch scope="item-page" label={ti.classSwitch} variants={[{ key: "base", label: ti.classBase }, ...CLASS_KEYS.map((k) => ({ key: k, label: ti.classes[k], icon: `class-${k}` }))]} />
+              <VariantSwitch scope="item-page" label={ti.classSwitch} variants={[{ key: "base", label: ti.classBase, icon: "class" }, ...CLASS_KEYS.map((k) => ({ key: k, label: ti.classes[k], icon: `class-${k}` }))]} />
               <p class="traits-note" data-section="traits-note">{ti.traitsNote}</p>
             </div>
           )}
@@ -471,8 +473,8 @@ const jsonLd = [{
             <li><GameIcon name="stat-weight" /><span>{ti.weight}</span><b class="num">{oz(v.weight, lang)}</b></li>
             {v.stack > 1 && <li><GameIcon name="stack" /><span>{ti.stack}</span><b class="num">{v.stack}</b></li>}
             {v.slots && <li><GameIcon name="slot-back" scale={1} /><span>{ti.slots}</span><b class="num">{v.slots}</b></li>}
-            <li><GameIcon name="gold" scale={1} /><span>{ti.sellValue}</span><b class="num">{item.value.npcPays ? `${num(item.value.npcPays, lang)} ${ti.gold}` : "—"}</b></li>
-            {goldPerOz(item) && <li><span class="pair"><GameIcon name="gold" scale={1} /><GameIcon name="stat-weight" /></span><span>{ti.goldPerOz}</span><b class="num">{num(goldPerOz(item)!, lang)}</b></li>}
+            <li><span aria-hidden="true">{!item.value.npcPays && <GameIcon name="gold" scale={1} />}</span><span>{ti.sellValue}</span><b>{item.value.npcPays ? <Value kind="gold" n={item.value.npcPays} lang={lang} size="big" /> : "—"}</b></li>
+            {goldPerOz(item) && <li><span aria-hidden="true"></span><span>{ti.goldPerOz}</span><b><Value kind="goldoz" n={goldPerOz(item)!} lang={lang} size="big" /></b></li>}
           </ul>
           {statKeys.some((k) => statRank(items, item, k)) && <p slot="footer">{fill(ti.rankNote, { group: item.subtype[lang] })}</p>}
           {statKeys.some((k) => (v.stats[k] ?? 0) < 0) && <p slot="footer">{ti.negativeNote}</p>}
@@ -592,6 +594,8 @@ const jsonLd = [{
   .switch .label { display: flex; align-items: center; gap: 6px; font-size: var(--fs-xs); font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; }
   .switch .traits-note { margin: 0; font-size: var(--fs-xs); color: var(--text-muted); }
   .gated li { padding: 4px 0; }
+  .paysline { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+  .vanish { display: inline-flex; align-items: center; gap: 6px; color: var(--text-muted); font-size: var(--fs-sm); }
   .appears { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 4px 6px; font-size: var(--fs-sm); color: var(--text-muted); }
   .gated .q { display: block; font-size: var(--fs-sm); color: var(--text-muted); }
 

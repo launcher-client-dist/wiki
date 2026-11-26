@@ -53,7 +53,7 @@ const shipped = (k: EntityKind) => SHIPPED_KINDS.includes(k);
           {shipped(k) ? (
             <a href={sectionPath(k, lang)} aria-current={current === k ? "page" : undefined}><PixelArt kind={k} size={28} />{t.kindPlural[k]}</a>
           ) : (
-            <span class="soon-row"><PixelArt kind={k} size={28} />{t.kindPlural[k]}<Badge tone="soon">{t.soon}</Badge></span>
+            <span class="soon-row"><PixelArt kind={k} size={28} />{t.kindPlural[k]}<Badge tone="soon" icon="clock">{t.soon}</Badge></span>
           )}
         </li>
       ))}

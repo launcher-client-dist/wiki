@@ -7,21 +7,24 @@
  *   <TipTag icon="slot-hands" iconScale={1} tip="Onde se equipa...">Espaço: Mãos</TipTag>
  */
 import GameIcon from "./GameIcon.astro";
+import { stableId } from "../../lib/ids.ts";
 interface Props {
   tip: string;
   icon?: string;
   iconScale?: number;
   tone?: "default" | "sun";
+  /** "small": inside a list row (a recipe's method). */
+  size?: "normal" | "small";
 }
-const { tip, icon, iconScale = 2, tone = "default" } = Astro.props;
+const { tip, icon, iconScale = 2, tone = "default", size = "normal" } = Astro.props;
 // a stable id (the same build gives the same page): from the tip's own text
 let h = 0;
 for (const c of tip) h = (h * 31 + c.charCodeAt(0)) >>> 0;
-const id = `tip-${h.toString(36)}`;
+const id = stableId(Astro.request, `tip-${h.toString(36)}`);
 ---
-<span class:list={["tiptag", `tone-${tone}`]} data-tiptag>
+<span class:list={["tiptag", `tone-${tone}`, { small: size === "small" }]} data-tiptag>
   <button type="button" class="tt" aria-describedby={id} aria-expanded="false">
-    {icon && <span class="ti"><GameIcon name={icon} scale={iconScale} /></span>}
+    {icon && <span class="ti"><GameIcon name={icon} fit={size === "small" ? 18 : 28} scale={iconScale} /></span>}
     <span class="tw"><slot /></span>
     <span class="q" aria-hidden="true">?</span>
   </button>
@@ -53,6 +56,9 @@ const id = `tip-${h.toString(36)}`;
     border: var(--bw) solid var(--hard); background: var(--surface); color: var(--text); font: 700 var(--fs-sm) / 1.1 var(--font-body);
     box-shadow: 0 2px 0 var(--hard); cursor: help; text-align: left; }
   .tone-sun .tt { background: var(--sun); color: var(--on-sun); }
+  .small .tt { min-height: 28px; padding: 2px 8px 2px 3px; gap: 6px; font-size: var(--fs-xs); box-shadow: 0 1px 0 var(--hard); }
+  .small .ti { min-width: 22px; min-height: 22px; }
+  .small .q { width: 13px; height: 13px; font-size: 9px; }
   .ti { display: inline-grid; place-items: center; min-width: 28px; min-height: 28px; border-radius: 6px; background: var(--hard); }
   .q { display: inline-grid; place-items: center; width: 16px; height: 16px; border-radius: 50%; font-size: 11px; color: var(--text-muted);
     border: 1px solid currentColor; opacity: 0.8; }

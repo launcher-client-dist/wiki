@@ -1,14 +1,20 @@
 ---
-/** A small label: a fact, a region, a state. `tone="placeholder"` marks something provisional (dashed). */
+/**
+ * A small label: a fact, a region, a state. `tone="placeholder"` marks something provisional (dashed).
+ * Never plain text: it carries an icon, `icon` (the wiki's line icons) or `gicon` (one of the game's), or says why
+ * not with `plainBecause` (rare; the site check lists every such tag).
+ */
 import Icon from "./Icon.astro";
-interface Props {
-  tone?: "default" | "accent" | "sun" | "placeholder" | "danger";
-  icon?: Parameters<typeof Icon>[0]["name"];
-  title?: string;
-}
-const { tone = "default", icon, title } = Astro.props;
+import GameIcon from "./GameIcon.astro";
+type Base = { tone?: "default" | "accent" | "sun" | "placeholder" | "danger"; title?: string };
+type Props = Base & (
+  | { icon: Parameters<typeof Icon>[0]["name"]; gicon?: never; plainBecause?: never }
+  | { gicon: string; icon?: never; plainBecause?: never }
+  | { plainBecause: string; icon?: never; gicon?: never }
+);
+const { tone = "default", icon, gicon, plainBecause, title } = Astro.props as Base & { icon?: Parameters<typeof Icon>[0]["name"]; gicon?: string; plainBecause?: string };
 ---
-<span class:list={["tag", `tag--${tone}`]} title={title}>{icon && <Icon name={icon} size={14} />}<slot /></span>
+<span class:list={["tag", `tag--${tone}`]} title={title} data-plain={plainBecause}>{icon && <Icon name={icon} size={14} />}{gicon && <GameIcon name={gicon} fit={16} />}<slot /></span>
 <style>
   .tag {
     display: inline-flex; align-items: center; gap: 6px; padding: 4px 9px; border-radius: var(--r-s);

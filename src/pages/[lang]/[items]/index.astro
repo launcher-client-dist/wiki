@@ -57,7 +57,7 @@ const CLASSED: StatKey[] = ["armor", "defense", "attackSpeed", "health", "mana",
         { key: "slot", label: ti.filterSlot, options: SLOT_ORDER.filter((s) => items.some((i) => i.slots.includes(s))).map((s) => ({ value: s, label: ti.slot[s as keyof typeof ti.slot], count: count(s, (i) => i.slots), icon: `slot-${s}` })) },
         { key: "where", label: ti.filterWhere, options: SOURCE_KINDS.map((k) => ({ value: k, label: ti.source[k], count: count(k, sourceKinds), icon: SOURCE_ICON[k] })).filter((o) => o.count) },
       ]}
-      variants={[{ key: "base", label: ti.classBase }, ...CLASS_KEYS.map((k) => ({ key: k, label: ti.classes[k], icon: `class-${k}` }))]} variantLabel={ti.filterClass} variantNote={ti.traitsNote}
+      variants={[{ key: "base", label: ti.classBase, icon: "class" }, ...CLASS_KEYS.map((k) => ({ key: k, label: ti.classes[k], icon: `class-${k}` }))]} variantLabel={ti.filterClass} variantNote={ti.traitsNote}
       ranges={STAT_KEYS.map((k) => ({ key: k, label: statLabel(k)[lang] }))} rangeLabel={ti.filterStat}>
       {rows.map((item) => {
         const v = primaryVersion(item);
@@ -93,10 +93,10 @@ const CLASSED: StatKey[] = ["armor", "defense", "attackSpeed", "health", "mana",
             <DataCell label={statLabel("armor")[lang]} align="end">{st.armor ? <StatValue value={st.armor} variants={cls("armor")} /> : <span class="nil">—</span>}</DataCell>
             <DataCell label={statLabel("defense")[lang]} align="end">{st.defense ? <StatValue value={st.defense} variants={cls("defense")} /> : <span class="nil">—</span>}</DataCell>
             <DataCell label={statLabel("magic")[lang]} align="end" hideOnPhone>{st.magic ? <StatValue value={st.magic} /> : <span class="nil">—</span>}</DataCell>
-            <DataCell label={ti.colWeight} align="end" hideOnPhone><span class="num">{oz(v.weight, lang)}</span></DataCell>
-            <DataCell label={ti.colValue} align="end">{item.value.npcPays ? <span class="num">{num(item.value.npcPays, lang)}</span> : <span class="nil">—</span>}</DataCell>
-            <DataCell label={ti.colGoldOz} align="end" hideOnPhone>{goldPerOz(item) ? <span class="num">{num(goldPerOz(item)!, lang)}</span> : <span class="nil">—</span>}</DataCell>
-            <DataCell label={ti.colWhere}><span class="where">{sourceKinds(item).map((k) => <span class="srcb"><img src={`/ui/${SOURCE_ICON[k]}.png`} width={UI[SOURCE_ICON[k]!]![0]! * 2} height={UI[SOURCE_ICON[k]!]![1]! * 2} alt="" class="px" />{ti.source[k]}</span>)}</span></DataCell>
+            <DataCell label={ti.colWeight} align="end" hideOnPhone><span class="num v v-oz">{oz(v.weight, lang)}</span></DataCell>
+            <DataCell label={ti.colValue} align="end">{item.value.npcPays ? <span class="num v v-gold">{num(item.value.npcPays, lang)}</span> : <span class="nil">—</span>}</DataCell>
+            <DataCell label={ti.colGoldOz} align="end" hideOnPhone>{goldPerOz(item) ? <span class="num v v-gold">{num(goldPerOz(item)!, lang)}</span> : <span class="nil">—</span>}</DataCell>
+            <DataCell label={ti.colWhere}><span class="where">{sourceKinds(item).map((k) => <span class="srcb" title={ti.source[k]}><img src={`/ui/${SOURCE_ICON[k]}.png`} width={UI[SOURCE_ICON[k]!]![0]! * 2} height={UI[SOURCE_ICON[k]!]![1]! * 2} alt={ti.source[k]} class="px" /></span>)}</span></DataCell>
           </DataRow>
         );
       })}
@@ -115,9 +115,16 @@ const CLASSED: StatKey[] = ["armor", "defense", "attackSpeed", "health", "mana",
   .items-page .type { font-size: var(--fs-sm); color: var(--text-muted); }
   .items-page .nil { color: var(--text-faint); }
   .items-page .where { display: inline-flex; flex-wrap: wrap; gap: 4px; }
-  .items-page .srcb { display: inline-flex; align-items: center; gap: 4px; height: 24px; padding: 0 7px 0 3px; border-radius: 6px; font-size: var(--fs-xs);
+  .items-page .srcb { display: inline-flex; align-items: center; justify-content: center; gap: 4px; height: 26px; min-width: 26px; padding: 0 3px; border-radius: 6px; font-size: var(--fs-xs);
     font-weight: 700; color: var(--text-muted); background: var(--surface-2); border: 1px solid var(--row-border); white-space: nowrap; }
   .items-page .srcb .px { image-rendering: pixelated; }
+  /* the money and weight cells: the game's coin / weight icon before the number (CSS, so 440 rows carry no extra tags) */
+  .items-page .v { display: inline-flex; align-items: center; gap: 4px; white-space: nowrap; }
+  .items-page .v::before { content: ""; flex: none; image-rendering: pixelated; background: center / contain no-repeat; }
+  .items-page .v-gold::before { width: 16px; height: 16px; background-image: url(/ui/gold.png); }
+  .items-page .v-oz::before { width: 18px; height: 18px; background-image: url(/ui/stat-weight.png); }
   .items-page .count-note { margin-top: var(--s-4); font-size: var(--fs-sm); color: var(--text-faint); }
+  /* narrow desktops (1024-1199): the type column goes (its filter chips stay), so every column fits without scrolling */
+  @media (min-width: 720px) and (max-width: 1199px) { .items-page th[data-col="type"], .items-page tbody td:nth-child(2) { display: none; } }
   @media (max-width: 520px) { .items-page .page-head { flex-direction: column; align-items: flex-start; gap: var(--s-3); } }
 </style>

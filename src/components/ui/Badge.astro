@@ -1,13 +1,21 @@
 ---
-/** A tiny uppercase marker: "em breve", "chefe", "novo", a count. */
-interface Props {
-  tone?: "soon" | "boss" | "new" | "count";
-}
-const { tone = "soon" } = Astro.props;
+/**
+ * A tiny uppercase marker: "em breve", "chefe", "novo", a count. Never plain text: `icon` (the wiki's line icons) or
+ * `gicon` (the game's), or `plainBecause` (rare; listed by the site check).
+ */
+import Icon from "./Icon.astro";
+import GameIcon from "./GameIcon.astro";
+type Base = { tone?: "soon" | "boss" | "new" | "count" };
+type Props = Base & (
+  | { icon: Parameters<typeof Icon>[0]["name"]; gicon?: never; plainBecause?: never }
+  | { gicon: string; icon?: never; plainBecause?: never }
+  | { plainBecause: string; icon?: never; gicon?: never }
+);
+const { tone = "soon", icon, gicon, plainBecause } = Astro.props as Base & { icon?: Parameters<typeof Icon>[0]["name"]; gicon?: string; plainBecause?: string };
 ---
-<span class:list={["badge", `badge--${tone}`]}><slot /></span>
+<span class:list={["badge", `badge--${tone}`]} data-plain={plainBecause}>{icon && <Icon name={icon} size={12} />}{gicon && <GameIcon name={gicon} fit={14} />}<slot /></span>
 <style>
-  .badge { display: inline-flex; align-items: center; height: 20px; padding: 0 6px; border-radius: var(--r-xs);
+  .badge { display: inline-flex; align-items: center; gap: 4px; height: 20px; padding: 0 6px; border-radius: var(--r-xs);
     font: 800 0.625rem / 1 var(--font-body); letter-spacing: 0.08em; text-transform: uppercase; white-space: nowrap; vertical-align: middle; }
   .badge--soon { border: var(--bw) dashed var(--border-strong); color: var(--text-faint); }
   .badge--boss { border: var(--bw) solid currentColor; color: var(--danger); }

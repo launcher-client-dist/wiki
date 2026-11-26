@@ -3,20 +3,22 @@
  * A pressable chip. As a filter in a DataTable: `filter="region" value="north"` (the table's script reads them).
  * With `href` it is a plain link styled as a chip.
  */
-interface Props {
-  pressed?: boolean;
-  count?: number;
-  href?: string;
-  filter?: string;
-  value?: string;
-}
-const { pressed = false, count, href, filter, value } = Astro.props;
+import Icon from "./Icon.astro";
+import GameIcon from "./GameIcon.astro";
+type Base = { pressed?: boolean; count?: number; href?: string; filter?: string; value?: string };
+/** Never plain text: `icon`, `gicon` (the game's), or `plainBecause` (rare; listed by the site check). */
+type Props = Base & (
+  | { icon: Parameters<typeof Icon>[0]["name"]; gicon?: never; plainBecause?: never }
+  | { gicon: string; icon?: never; plainBecause?: never }
+  | { plainBecause: string; icon?: never; gicon?: never }
+);
+const { pressed = false, count, href, filter, value, icon, gicon, plainBecause } = Astro.props as Base & { icon?: Parameters<typeof Icon>[0]["name"]; gicon?: string; plainBecause?: string };
 ---
 {href ? (
-  <a class="chip" href={href}><slot />{count !== undefined && <span class="count">{count}</span>}</a>
+  <a class="chip" href={href} data-plain={plainBecause}>{icon && <Icon name={icon} size={14} />}{gicon && <GameIcon name={gicon} fit={18} />}<slot />{count !== undefined && <span class="count">{count}</span>}</a>
 ) : (
-  <button class="chip" type="button" aria-pressed={pressed ? "true" : "false"} data-filter={filter} data-value={value}>
-    <slot />{count !== undefined && <span class="count">{count}</span>}
+  <button class="chip" type="button" aria-pressed={pressed ? "true" : "false"} data-filter={filter} data-value={value} data-plain={plainBecause}>
+    {icon && <Icon name={icon} size={14} />}{gicon && <GameIcon name={gicon} fit={18} />}<slot />{count !== undefined && <span class="count">{count}</span>}
   </button>
 )}
 <style>

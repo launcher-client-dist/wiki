@@ -1,0 +1,47 @@
+---
+/**
+ * A number that is a game value, never bare: its icon, the number, and its unit small after it (the unit's full
+ * meaning in the tooltip). `best` lifts it (the cheapest seller, the best-paying buyer).
+ *   <Value kind="gold" n={25} lang="pt" />            🪙 25 ouro
+ *   <Value kind="amount" n="1–2" lang="pt" />         × 1–2
+ *   <Value kind="stock" n={10} lang="pt" />           10 por reposição
+ */
+import GameIcon from "./GameIcon.astro";
+import { ui, fill } from "../../i18n/index.ts";
+import type { Lang } from "../../lib/i18n.ts";
+interface Props {
+  kind: "gold" | "goldoz" | "weight" | "amount" | "time" | "stock" | "stockUnlimited" | "blackMarket";
+  n?: number | string;
+  lang: Lang;
+  best?: boolean;
+  size?: "normal" | "big";
+}
+const { kind, n, lang, best = false, size = "normal" } = Astro.props;
+const t = ui(lang).value;
+const text = typeof n === "number" ? n.toLocaleString(lang === "pt" ? "pt-BR" : "en") : (n ?? "");
+const ICON: Record<Props["kind"], string> = { gold: "gold", goldoz: "gold", weight: "stat-weight", amount: "stack", time: "time", stock: "stack",
+  stockUnlimited: "stack", blackMarket: "gold" };
+const unit = { gold: t.gold, goldoz: t.goldoz, weight: "oz", amount: "", time: "s", stock: t.perRestock, stockUnlimited: t.unlimited, blackMarket: fill(t.blackMarket, { n: text }) }[kind];
+const tip = { gold: t.goldTip, goldoz: t.goldozTip, weight: t.weightTip, amount: t.amountTip, time: t.timeTip, stock: t.stockTip, stockUnlimited: t.stockTip,
+  blackMarket: t.blackMarketTip }[kind];
+---
+<span class:list={["val", `val--${kind}`, { best, big: size === "big" }]} title={tip}>
+  <GameIcon name={ICON[kind]} fit={kind === "gold" || kind === "goldoz" || kind === "blackMarket" ? 16 : 18} />
+  {kind === "goldoz" && <GameIcon name="stat-weight" scale={2} />}
+  {kind === "amount" && <span class="x" aria-hidden="true">×</span>}
+  {kind !== "stockUnlimited" && kind !== "blackMarket" && <b class="num">{text}</b>}
+  {unit && <small>{unit}</small>}
+  <span class="sr-only">{tip}</span>
+</span>
+<style>
+  .val { display: inline-flex; align-items: center; gap: 4px; white-space: nowrap; color: var(--heading); vertical-align: middle; }
+  .val b { font: 700 1rem / 1 var(--font-num); }
+  .val.big b { font-size: 1.25rem; }
+  .val small { font-size: var(--fs-xs); color: var(--text-muted); font-weight: 600; }
+  .val .x { color: var(--text-faint); font-weight: 700; }
+  .val--stock, .val--stockUnlimited, .val--blackMarket { padding: 2px 8px 2px 4px; border-radius: var(--r-s); border: 1px solid var(--row-border); background: var(--surface-2); }
+  .val--blackMarket { background: var(--sun); border-color: var(--hard); }
+  .val--blackMarket small { color: var(--on-sun); }
+  .val.best small { color: var(--text); }
+  .val.best { padding: 2px 8px 2px 4px; border-radius: var(--r-s); background: color-mix(in srgb, var(--sun) 22%, transparent); box-shadow: inset 0 0 0 1px var(--sun); }
+</style>

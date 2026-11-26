@@ -24,7 +24,7 @@ const H = `h${headingLevel}` as "h2" | "h3";
     <span class="text"><slot /></span>
     {Astro.slots.has("footer") && <span class="footer"><slot name="footer" /></span>}
   </span>
-  {soon && <span class="soon"><Badge tone="soon">{soon}</Badge></span>}
+  {soon && <span class="soon"><Badge tone="soon" icon="clock">{soon}</Badge></span>}
 </Tag>
 <style>
   .card {

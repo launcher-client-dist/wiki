@@ -122,6 +122,12 @@ export const en: UiStrings = {
 
   pickLanguageTitle: "Choose your language",
 
+  value: {
+    gold: "gold", goldoz: "gold/oz", perRestock: "per restock", unlimited: "unlimited stock", blackMarket: "black market: {n}, some days",
+    goldTip: "Price in gold", goldozTip: "Gold per ounce of weight: what carrying it is worth", weightTip: "Weight in ounces (oz)",
+    amountTip: "Amount", timeTip: "Duration in seconds", stockTip: "How many the NPC has until the next restock",
+    blackMarketTip: "Black market: only on some days",
+  },
   item: {
     listTitle: "Items",
     listIntro: "Every Opengea item: weapons, armour, food, potions, materials and runes, with their stats, where they come from and what they sell for.",
@@ -174,6 +180,9 @@ export const en: UiStrings = {
     appearsPlaced: "Always in the same place:",
     appearsLever: "Comes out when a lever is pulled:",
     appearsTravel: "Comes out at the end of a trip with",
+    methodTip: { join: "Join: the recipe's two items, one with the other.", cook: "Cook: over a fire, with an iron pan.", cut: "Cut: with a knife." },
+    toolWord: "tool",
+    toolTip: "The tool isn't used up by the recipe.",
     stats: "Stats",
     weight: "Weight",
     stack: "Stacks to",

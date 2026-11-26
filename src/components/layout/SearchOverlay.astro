@@ -44,7 +44,7 @@ const strings = {
                 {shipped ? (
                   <a href={sectionPath(kind, lang)}><PixelArt kind={kind} size={26} /><span class="title">{t.kindPlural[kind]}</span><span class="meta">{t.kindBlurb[kind]}</span></a>
                 ) : (
-                  <span class="row is-soon"><PixelArt kind={kind} size={26} /><span class="title">{t.kindPlural[kind]}</span><Badge tone="soon">{t.soon}</Badge></span>
+                  <span class="row is-soon"><PixelArt kind={kind} size={26} /><span class="title">{t.kindPlural[kind]}</span><Badge tone="soon" icon="clock">{t.soon}</Badge></span>
                 )}
               </li>
             );

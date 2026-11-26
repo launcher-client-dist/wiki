@@ -57,7 +57,7 @@ const jsonLd = [{
           <Card href={shipped ? sectionPath(kind, lang) : undefined} title={t.kindPlural[kind]} soon={shipped ? undefined : t.soon} headingLevel={2}>
             <PixelArt slot="emblem" kind={kind} size={52} />
             {t.kindBlurb[kind]}
-            {shipped && counts[kind] !== undefined && <Tag slot="footer" tone="sun">{`${counts[kind]} ${t.kindPlural[kind].toLowerCase()}`}</Tag>}
+            {shipped && counts[kind] !== undefined && <Tag slot="footer" tone="sun" icon="layers">{`${counts[kind]} ${t.kindPlural[kind].toLowerCase()}`}</Tag>}
           </Card>
         );
       })}

@@ -38,7 +38,8 @@ export interface Variant {
 export interface FilterGroup {
   key: string;
   label: string;
-  options: { value: string; label: string; count?: number; icon?: string }[];
+  /** Every option shows its game icon (a filter chip is never plain text). */
+  options: { value: string; label: string; count?: number; icon: string }[];
 }
 interface Props {
   id: string;
@@ -77,7 +78,7 @@ const strings = { count: t.tableCount, countAll: t.tableCountAll };
       {filters.map((g) => (
         <div class="fgroup" role="group" aria-label={g.label}>
           <span class="flabel">{g.label}</span>
-          <div class="chips">{g.options.map((o) => <Chip filter={g.key} value={o.value} count={o.count}>{o.icon && <GameIcon name={o.icon} fit={18} />}{o.label}</Chip>)}</div>
+          <div class="chips">{g.options.map((o) => <Chip filter={g.key} value={o.value} count={o.count} gicon={o.icon}>{o.label}</Chip>)}</div>
         </div>
       ))}
     </div>
@@ -290,9 +291,10 @@ const strings = { count: t.tableCount, countAll: t.tableCountAll };
 
   .frame { border: var(--bw) solid var(--hard); border-radius: var(--r-l); background: var(--card-bg); box-shadow: var(--shadow-2); overflow: clip; }
   table { width: 100%; border-collapse: collapse; font-size: 0.9375rem; }
-  thead th { position: sticky; top: var(--header-h); z-index: 2; background: var(--surface-2); padding: 0; text-align: left; white-space: nowrap;
-    font: 700 var(--fs-sm) / 1 var(--font-body); color: var(--text-muted); border-bottom: var(--bw) solid var(--hard); }
-  .th { all: unset; box-sizing: border-box; display: flex; align-items: center; gap: 6px; width: 100%; padding: 13px 14px; cursor: pointer; }
+  thead th { position: sticky; top: var(--header-h); z-index: 2; background: var(--surface-2); padding: 0; text-align: left;
+    font: 700 var(--fs-sm) / 1.15 var(--font-body); color: var(--text-muted); border-bottom: var(--bw) solid var(--hard); vertical-align: bottom; }
+  /* a header wraps its words (two lines at most in practice) rather than widen its column: the table fits its frame */
+  .th { all: unset; box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: center; gap: 4px 6px; width: 100%; padding: 12px 10px; cursor: pointer; }
   span.th { cursor: default; }
   .th:focus-visible { outline: 3px solid var(--focus); outline-offset: -3px; }
   .a-end .th { justify-content: flex-end; }

@@ -40,6 +40,8 @@ export function getStaticPaths() {
   return KIT_ENABLED ? LANGS.map((lang) => ({ params: { lang } })) : [];
 }
 const lang = Astro.params.lang as Lang;
+/** Each entity kind's game icon, for the filter chips. */
+const KIND_ICON: Record<string, string> = { item: "cat-weapon", monster: "src-drop", npc: "src-shop", place: "src-map", spell: "stat-magic", trait: "class", quest: "src-quest", guide: "src-map", build: "class", class: "class" };
 const t = ui(lang);
 const registry = await getRegistry();
 const fixtures = registry.all().filter((e) => !e.ref.startsWith("guide:"));
@@ -62,10 +64,10 @@ const scene = `data:image/svg+xml,${encodeURIComponent('<svg xmlns="http://www.w
 
     <section><h2>{L("Etiquetas, chips e selos", "Tags, chips and badges")}</h2>
       <div class="row">
-        <Tag icon="pin">Tag</Tag><Tag tone="accent">accent</Tag><Tag tone="sun">sun</Tag><Tag tone="placeholder">placeholder</Tag><Tag tone="danger">danger</Tag>
-        <Badge tone="soon">{t.soon}</Badge><Badge tone="boss">boss</Badge><Badge tone="new">new</Badge><Badge tone="count">12</Badge>
+        <Tag icon="pin">Tag</Tag><Tag tone="accent" gicon="stat-damage">accent</Tag><Tag tone="sun" gicon="gold">sun</Tag><Tag tone="placeholder" icon="clock">placeholder</Tag><Tag tone="danger" plainBecause="the gallery shows the bare component once">danger</Tag>
+        <Badge tone="soon" icon="clock">{t.soon}</Badge><Badge tone="boss" gicon="src-drop">boss</Badge><Badge tone="new" icon="star">new</Badge><Badge tone="count" gicon="stack">12</Badge>
       </div>
-      <div class="row"><Chip count={4}>Chip</Chip><Chip pressed count={2}>{L("Ligado", "On")}</Chip><Chip href="#tiers">Link</Chip></div>
+      <div class="row"><Chip count={4} gicon="cat-weapon">Chip</Chip><Chip pressed count={2} gicon="cat-armour">{L("Ligado", "On")}</Chip><Chip href="#tiers" icon="arrowRight">Link</Chip></div>
       <div class="row" id="tiers">{TIERS.map((tier) => <TierBadge tier={tier} />)}</div>
     </section>
 
@@ -123,7 +125,7 @@ const scene = `data:image/svg+xml,${encodeURIComponent('<svg xmlns="http://www.w
     <section><h2>DataTable</h2>
       <DataTable id="kit-table" lang={lang} caption={L("Entidades de exemplo", "Example entities")} total={fixtures.length} sort={{ key: "name", dir: "asc" }}
         columns={[{ key: "name", label: L("Nome", "Name") }, { key: "kind", label: L("Tipo", "Kind") }, { key: "refs", label: L("Citado por", "Referenced by"), align: "end" }, { key: "other", label: ui(otherLang(lang)).langName, sortable: false, hideOnPhone: true }]}
-        filters={[{ key: "kind", label: L("Tipo", "Kind"), options: kinds.map((k) => ({ value: k, label: t.kindSingular[k as keyof typeof t.kindSingular], count: fixtures.filter((e) => e.ref.startsWith(`${k}:`)).length })) }]}>
+        filters={[{ key: "kind", label: L("Tipo", "Kind"), options: kinds.map((k) => ({ value: k, label: t.kindSingular[k as keyof typeof t.kindSingular], count: fixtures.filter((e) => e.ref.startsWith(`${k}:`)).length, icon: KIND_ICON[k] ?? "xp" })) }]}>
         {fixtures.map((e) => {
           const info = registry.link(e.ref, lang);
           const n = registry.reverse(e.ref).length;

@@ -208,7 +208,23 @@ if (!pages.get("/en/404/")?.noindex) fail("/en/404/", "missing or not noindex");
       if (!pages.get(url)?.html.includes(`data-appears="${how}"`)) fail(url, `a drop from a "${how}" monster without its how-it-appears line`);
     }
   }
-  // the list's class filter carries the traits line too
+  // the list's class filter carries the traits line too (below); first: no tag, badge or chip is plain text anywhere.
+  // Each one carries an icon (<svg> or <img>) before its closing tag, or says why not (data-plain), and those are listed.
+  const plainOk = new Map();
+  let tagsSeen = 0;
+  for (const p of pages.values()) {
+    for (const m of p.html.matchAll(/<(span|button|a)\b([^>]*\bclass="(?:tag|badge|chip)(?:\s[^"]*)?"[^>]*)>/g)) {
+      tagsSeen++;
+      const attrs = m[2];
+      const plain = attrs.match(/data-plain="([^"]*)"/);
+      if (plain) { plainOk.set(plain[1], (plainOk.get(plain[1]) ?? 0) + 1); continue; }
+      const rest = p.html.slice(m.index + m[0].length, m.index + m[0].length + 2000);
+      const end = rest.indexOf(`</${m[1]}>`);
+      const inside = end >= 0 ? rest.slice(0, end) : rest;
+      if (!/<svg|<img/.test(inside)) fail(p.url, `a plain-text ${m[1]}.${attrs.match(/class="([^ "]+)/)?.[1]}: "${inside.replace(/<[^>]+>/g, "").trim().slice(0, 40)}"`);
+    }
+  }
+  console.log(`checked ${tagsSeen} tags, badges and chips for an icon${plainOk.size ? `; plain on purpose: ${[...plainOk].map(([why, n]) => `${n}× ${why}`).join("; ")}` : ""}`);
   for (const url of ["/pt/itens/", "/en/items/"]) {
     if (!/class="vnote"[^>]*>(Não inclui efeitos de traits|Trait effects not included)/.test(pages.get(url)?.html ?? "")) fail(url, "the class filter without the traits line");
   }
