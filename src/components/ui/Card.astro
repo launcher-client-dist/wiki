@@ -44,7 +44,8 @@ const H = `h${headingLevel}` as "h2" | "h3";
   .body { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
   .kicker { font: 800 var(--fs-xs) / 1 var(--font-body); letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-text); }
   .title { font-size: 1.5rem; text-shadow: none; transition: color var(--t-fast); }
-  .card--row .title { font-size: 1.25rem; }
+  /* the pixel face only from 1.5rem up: smaller, its C reads as an O */
+  .card--row .title { font: 700 1.125rem / 1.25 var(--font-body); }
   .text { color: var(--text-muted); font-size: var(--fs-sm); }
   .footer { margin-top: 4px; }
   .soon { position: absolute; top: 14px; right: 14px; }
