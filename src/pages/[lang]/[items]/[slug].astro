@@ -16,6 +16,7 @@ import MapLink from "../../../components/ui/MapLink.astro";
 import Card from "../../../components/ui/Card.astro";
 import EntityLink from "../../../components/entity/EntityLink.astro";
 import GameIcon from "../../../components/ui/GameIcon.astro";
+import StatChips from "../../../components/ui/StatChips.astro";
 import TipTag from "../../../components/ui/TipTag.astro";
 import { statRank } from "../../../lib/items/rank.ts";
 import Ingredient from "../../../components/entity/Ingredient.astro";
@@ -25,7 +26,7 @@ import { absoluteUrl, homePath, SECTIONS, sectionPath } from "../../../lib/route
 import { ITEMS, siteData } from "../../../lib/site-registry.ts";
 import { appearsIn } from "../../../lib/entities/appears.ts";
 import { CLASS_KEYS, STAT_KEYS, goldPerOz, primaryVersion, signed, statLabel, type Place, type Recipe, type StatKey } from "../../../lib/items/data.ts";
-import { metaDescription, num, oneInText, oz, similarItems, topStats } from "../../../lib/items/view.ts";
+import { metaDescription, num, oneInText, oz, similarItems } from "../../../lib/items/view.ts";
 
 export async function getStaticPaths() {
   const { items } = await siteData();
@@ -108,7 +109,7 @@ const jsonLd = [{
                   <div>
                     <strong>{versionLabel(i)}{x.type === v.type ? " ★" : ""}</strong>
                     {x.text[lang] && <p class="vt">{x.text[lang]}</p>}
-                    <p class="vs">{(Object.entries(x.stats) as [StatKey, number][]).map(([k, n]) => <span>{statLabel(k)[lang]} <StatValue value={n} /></span>)}</p>
+                    <div class="vs"><StatChips stats={x.stats} lang={lang} /></div>
                     {x.becomesWhenEquipped && <p class="muted small">{ti.versionEquip}</p>}
                     {x.spell && <p class="small">{ti.spellTitle}: <EntityLink to={x.spell} /></p>}
                   </div>
@@ -383,8 +384,8 @@ const jsonLd = [{
                 const ov = primaryVersion(o);
                 return (
                   <Card href={registry.url(`item:${o.id}`, lang)!} title={o.name[lang]} kicker={o.subtype[lang]} layout="row">
-                    <IconSlot slot="emblem" icon={ov.icon && ov.iconSize ? { src: ov.icon, width: ov.iconSize[0], height: ov.iconSize[1], pixel: true } : null} kind="item" size={48} framed={false} />
-                    {topStats(o, lang) || ti.noStats}
+                    <IconSlot slot="emblem" icon={ov.icon && ov.iconSize ? { src: ov.icon, width: ov.iconSize[0], height: ov.iconSize[1], pixel: true } : null} kind="item" size={56} />
+                    {Object.values(ov.stats).some(Boolean) ? <StatChips stats={ov.stats} lang={lang} max={3} /> : ti.noStats}
                   </Card>
                 );
               })}
@@ -433,7 +434,7 @@ const jsonLd = [{
             <li><GameIcon name="gold" scale={1} /><span>{ti.sellValue}</span><b class="num">{item.value.npcPays ? `${num(item.value.npcPays, lang)} ${ti.gold}` : "—"}</b></li>
             {goldPerOz(item) && <li><span class="pair"><GameIcon name="gold" scale={1} /><GameIcon name="stat-weight" /></span><span>{ti.goldPerOz}</span><b class="num">{num(goldPerOz(item)!, lang)}</b></li>}
           </ul>
-          {statKeys.some((k) => statRank(items, item, k)) && <p slot="footer">{ti.rankNote}</p>}
+          {statKeys.some((k) => statRank(items, item, k)) && <p slot="footer">{fill(ti.rankNote, { group: item.subtype[lang] })}</p>}
           {statKeys.some((k) => (v.stats[k] ?? 0) < 0) && <p slot="footer">{ti.negativeNote}</p>}
           {hasClasses && <p slot="footer">{ti.classNote}</p>}
         </InfoBox>
@@ -476,7 +477,7 @@ const jsonLd = [{
   .version { display: flex; gap: 14px; padding: 12px; background: var(--card-bg); border: var(--bw) solid var(--hard); border-radius: var(--r-l); box-shadow: var(--shadow-1); }
   .version p { margin: 4px 0 0; }
   .vt { font-style: italic; color: var(--text-muted); }
-  .vs { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: var(--fs-sm); }
+  .vs { margin-top: 6px; }
 
   .effects { display: grid; gap: 10px; }
   .effect { display: flex; flex-direction: column; gap: 6px; margin: 0; padding: 12px 14px; background: var(--card-bg); border: var(--bw) solid var(--hard); border-radius: var(--r-l); box-shadow: var(--shadow-1); }
@@ -566,11 +567,11 @@ const jsonLd = [{
   .takes { display: inline-flex; align-items: center; gap: 4px; padding: 1px 6px 1px 3px; border-radius: 999px; font-size: var(--fs-xs); font-weight: 700;
     color: var(--danger); background: color-mix(in srgb, var(--danger) 14%, transparent); }
   .stat.negative .sicon { box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.35), inset 0 0 0 2px var(--danger); }
-  .rank { grid-area: rank; display: grid; grid-template-columns: minmax(40px, 90px) minmax(0, 1fr); align-items: center; gap: 8px; }
+  .rank { grid-area: rank; display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 10px; }
   .rbar { height: 6px; border-radius: 3px; background: var(--surface-3); overflow: hidden; box-shadow: inset 0 0 0 1px var(--row-border); }
   .rfill { display: block; height: 100%; border-radius: 3px; background: var(--sky); }
   .rfill.best { background: var(--sun); }
-  .rtext { font-size: var(--fs-xs); color: var(--text-muted); overflow-wrap: anywhere; }
+  .rtext { font-size: var(--fs-xs); color: var(--text-muted); white-space: nowrap; }
   .facts { list-style: none; margin: 0; padding: 4px 0; display: grid; border-top: var(--bw) solid var(--hard); background: var(--surface-2); }
   .facts li { display: grid; grid-template-columns: 40px minmax(0, 1fr) auto; align-items: center; gap: 12px; padding: 7px 16px; }
   .facts li + li { border-top: 1px solid var(--row-border); }

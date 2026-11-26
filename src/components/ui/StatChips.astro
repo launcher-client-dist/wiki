@@ -1,0 +1,35 @@
+---
+/**
+ * A row of stats as chips: the game's icon, the number (sign and danger colour for one that takes away), the stat's
+ * name for screen readers (and on hover). For the versions block, the similar items, anywhere a few stats travel.
+ *   <StatChips stats={{ damage: 35, health: -100 }} lang="pt" max={3} />
+ */
+import GameIcon from "./GameIcon.astro";
+import StatValue from "./StatValue.astro";
+import { STAT_KEYS, statLabel, type StatKey } from "../../lib/items/data.ts";
+import type { Lang } from "../../lib/i18n.ts";
+interface Props {
+  stats: Partial<Record<StatKey, number>>;
+  lang: Lang;
+  /** Show at most this many (the biggest first); all of them by default. */
+  max?: number;
+}
+const { stats, lang, max } = Astro.props;
+let keys = STAT_KEYS.filter((k) => stats[k]);
+if (max) keys = [...keys].sort((a, b) => Math.abs(stats[b]!) - Math.abs(stats[a]!)).slice(0, max);
+---
+{keys.length > 0 && (
+  <ul class="schips">
+    {keys.map((k) => (
+      <li class:list={["schip", { neg: stats[k]! < 0 }]} title={statLabel(k)[lang]}>
+        <GameIcon name={`stat-${k}`} /><span class="sr-only">{statLabel(k)[lang]}</span><StatValue value={stats[k]!} />
+      </li>
+    ))}
+  </ul>
+)}
+<style>
+  .schips { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+  .schip { display: inline-flex; align-items: center; gap: 5px; height: 26px; padding: 0 8px 0 4px; border-radius: 999px; font-size: var(--fs-sm);
+    background: var(--surface-2); border: 1px solid var(--row-border); color: var(--heading); }
+  .schip.neg { border-color: color-mix(in srgb, var(--danger) 55%, transparent); background: color-mix(in srgb, var(--danger) 10%, var(--surface-2)); }
+</style>
