@@ -3,7 +3,23 @@
  * that name inside) and the stubs of what items point at (src/data/entities.json). Pure TypeScript: the registry's
  * entities and relations are made here, so tests can build them without Astro.
  */
-import type { Localized } from "../i18n.ts";
+import { LANGS, type Lang, type Localized } from "../i18n.ts";
+import { ui } from "../../i18n/index.ts";
+
+/** Which languages of a text are the English, standing in where the game has no translation (the export marks them). */
+export interface Fallback {
+  _fb?: Lang[];
+}
+
+/** The language a text really is in, for its `lang` attribute: English where it stands in for `lang`, else `lang`. */
+/** A text per language, from a function of the language. */
+export function perLang(f: (lang: Lang) => string): Localized {
+  return Object.fromEntries(LANGS.map((l) => [l, f(l)])) as Localized;
+}
+
+export function textLang(text: Fallback | null | undefined, lang: Lang): Lang {
+  return text?._fb?.includes(lang) ? "en" : lang;
+}
 import type { Entity, EntityRef, Relation } from "../entities/types.ts";
 import type { TierKey } from "../entities/tiers.ts";
 
@@ -32,7 +48,7 @@ export interface Quality {
 
 export interface Version {
   type: number;
-  text: Localized;
+  text: Localized & Fallback;
   stats: Stats;
   weight: number;
   stack: number;
@@ -53,8 +69,8 @@ export interface Version {
 }
 
 export interface Place {
-  town: Localized;
-  near: Localized | null;
+  town: Localized & Fallback;
+  near: (Localized & Fallback) | null;
   underground: boolean;
 }
 export interface Where {
@@ -73,17 +89,18 @@ export interface ItemData {
   id: string;
   types: number[];
   primary: number;
-  name: Localized;
+  name: Localized & Fallback;
   slug: Localized;
   category: Category;
-  subtype: { key: string; pt: string; en: string };
+  /** The game's item type: its key and its name per language (`_fb`: the languages showing the English). */
+  subtype: { key: string } & Localized & Fallback;
   slots: string[];
   icon?: string;
   armourClass?: "heavy" | "light";
   twoHanded?: boolean;
   forgeable?: boolean;
   ingotFor?: number[];
-  rune?: { fits: { key: string; pt: string; en: string }[]; subtypes: number[]; fitsItems: string[] };
+  rune?: { fits: ({ key: string } & Localized & Fallback)[]; subtypes: number[]; fitsItems: string[] };
   value: { npcPays: number | null; npcSells: number | null };
   versions: Version[];
   sources: {
@@ -118,11 +135,12 @@ export interface ItemsFile {
 
 export interface StubEntity {
   ref: EntityRef;
-  name: Localized;
+  name: Localized & Fallback;
   slug: Localized;
   icon?: string;
   iconSize?: [number, number];
-  facts?: { label: Localized; value: string }[];
+  /** A few numbers for its hover card, labelled by key from the site's dictionary (`facts`): no UI words in the data. */
+  facts?: { key: "health" | "exp"; value: string }[];
   boss?: boolean;
   /** One or two sentences for its hover card (a lever's place). */
   summary?: Localized;
@@ -167,11 +185,12 @@ export function goldPerOz(item: ItemData): number | null {
 }
 
 const STAT_LABEL: Record<StatKey, Localized> = {
-  damage: { pt: "Dano", en: "Damage" }, defense: { pt: "Defesa", en: "Defense" }, armor: { pt: "Armadura", en: "Armor" },
-  attackSpeed: { pt: "Vel. de ataque", en: "Attack speed" }, range: { pt: "Alcance", en: "Range" }, magic: { pt: "Magia", en: "Magic" },
-  skill: { pt: "Habilidade", en: "Ability" }, health: { pt: "Vida", en: "Health" }, mana: { pt: "Mana", en: "Mana" },
-  hpRegen: { pt: "Regen. de vida", en: "Health regen" }, mpRegen: { pt: "Regen. de mana", en: "Mana regen" },
-  moveSpeed: { pt: "Velocidade", en: "Speed" },
+  damage: { pt: "Dano", en: "Damage", es: "Daño" }, defense: { pt: "Defesa", en: "Defense", es: "Defensa" }, armor: { pt: "Armadura", en: "Armor", es: "Armadura" },
+  attackSpeed: { pt: "Vel. de ataque", en: "Attack speed", es: "Vel. de ataque" }, range: { pt: "Alcance", en: "Range", es: "Alcance" },
+  magic: { pt: "Magia", en: "Magic", es: "Magia" }, skill: { pt: "Habilidade", en: "Ability", es: "Habilidad" },
+  health: { pt: "Vida", en: "Health", es: "Vida" }, mana: { pt: "Mana", en: "Mana", es: "Maná" },
+  hpRegen: { pt: "Regen. de vida", en: "Health regen", es: "Regen. de vida" }, mpRegen: { pt: "Regen. de mana", en: "Mana regen", es: "Regen. de maná" },
+  moveSpeed: { pt: "Velocidade", en: "Speed", es: "Velocidad" },
 };
 export function statLabel(k: StatKey): Localized {
   return STAT_LABEL[k];
@@ -189,7 +208,7 @@ export function signed(n: number): string {
  * conjures, a spellbook teaches, a potion leaves its empty). The reverse index turns them around for the item pages.
  */
 /** The stubs' facts (a monster's health and exp) and the game icon each one shows with. */
-const STUB_FACT_ICON: Record<string, string> = { Health: "stat-health", Exp: "xp" };
+const STUB_FACT_ICON: Record<string, string> = { health: "stat-health", exp: "xp" };
 
 export function entitiesFromData(file: ItemsFile, stubs: readonly StubEntity[]): Entity[] {
   const rel = new Map<EntityRef, Relation[]>();
@@ -217,8 +236,8 @@ export function entitiesFromData(file: ItemsFile, stubs: readonly StubEntity[]):
       name: item.name,
       slug: item.slug,
       ...(icon ? { icon } : {}),
-      summary: { pt: v.text.pt || item.subtype.pt, en: v.text.en || item.subtype.en },
-      facts: [{ label: { pt: "Tipo", en: "Type" }, value: { pt: item.subtype.pt, en: item.subtype.en }, icon: `cat-${item.category}` },
+      summary: perLang((l) => v.text[l] || item.subtype[l]),
+      facts: [{ label: perLang((l) => ui(l).item.colType), value: perLang((l) => item.subtype[l]), icon: `cat-${item.category}` },
         ...stats.map(([k, n]) => ({ label: statLabel(k), value: signed(n), icon: `stat-${k}` }))],
       relations: dedupe(rel.get(me) ?? []),
     };
@@ -230,7 +249,7 @@ export function entitiesFromData(file: ItemsFile, stubs: readonly StubEntity[]):
       slug: s.slug,
       ...(s.icon && s.iconSize ? { icon: { src: s.icon, width: s.iconSize[0], height: s.iconSize[1] } } : {}),
       ...(s.summary ? { summary: s.summary } : {}),
-      ...(s.facts ? { facts: s.facts.map((f) => (STUB_FACT_ICON[f.label.en] ? { ...f, icon: STUB_FACT_ICON[f.label.en] } : f)) } : {}),
+      ...(s.facts ? { facts: s.facts.map((f) => ({ label: perLang((l) => ui(l).facts[f.key]), value: f.value, icon: STUB_FACT_ICON[f.key] })) } : {}),
       relations: dedupe(rel.get(s.ref) ?? []),
     });
   }

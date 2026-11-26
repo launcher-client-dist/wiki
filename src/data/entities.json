@@ -7,17 +7,11 @@
    "boss": true,
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "5.500"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "5.500"
     }
    ],
@@ -28,28 +22,24 @@
    ],
    "name": {
     "en": "Alpha Wolf",
+    "es": "Lobo Alfa",
     "pt": "Lobo Alfa"
    },
    "ref": "monster:alpha-wolf",
    "slug": {
     "en": "alpha-wolf",
+    "es": "lobo-alfa",
     "pt": "lobo-alfa"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "7.500"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "10.000"
     }
    ],
@@ -60,28 +50,24 @@
    ],
    "name": {
     "en": "Amphitere",
+    "es": "Amphitere",
     "pt": "Amphitere"
    },
    "ref": "monster:amphitere",
    "slug": {
     "en": "amphitere",
+    "es": "amphitere",
     "pt": "amphitere"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "450"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "400"
     }
    ],
@@ -92,28 +78,24 @@
    ],
    "name": {
     "en": "Ancient Snake",
+    "es": "Serpiente Antigua",
     "pt": "Serpente Antiga"
    },
    "ref": "monster:ancient-snake",
    "slug": {
     "en": "ancient-snake",
+    "es": "serpiente-antigua",
     "pt": "serpente-antiga"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "85"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "30"
     }
    ],
@@ -124,28 +106,24 @@
    ],
    "name": {
     "en": "Bandit",
+    "es": "Bandido",
     "pt": "Bandido"
    },
    "ref": "monster:bandit",
    "slug": {
     "en": "bandit",
+    "es": "bandido",
     "pt": "bandido-bandit"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "950"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "1.850"
     }
    ],
@@ -156,28 +134,24 @@
    ],
    "name": {
     "en": "Banshee",
+    "es": "Banshee",
     "pt": "Banshee"
    },
    "ref": "monster:banshee",
    "slug": {
     "en": "banshee",
+    "es": "banshee",
     "pt": "banshee"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "300"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "130"
     }
    ],
@@ -188,28 +162,24 @@
    ],
    "name": {
     "en": "Bear",
+    "es": "Oso",
     "pt": "Urso"
    },
    "ref": "monster:bear",
    "slug": {
     "en": "bear",
+    "es": "oso",
     "pt": "urso"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "25"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "3"
     }
    ],
@@ -220,28 +190,24 @@
    ],
    "name": {
     "en": "Black Lamb",
+    "es": "Cordero Negro",
     "pt": "Cordeiro Negro"
    },
    "ref": "monster:black-lamb",
    "slug": {
     "en": "black-lamb",
+    "es": "cordero-negro",
     "pt": "cordeiro-negro"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "35"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "6"
     }
    ],
@@ -252,28 +218,24 @@
    ],
    "name": {
     "en": "Black Sheep",
+    "es": "Oveja Negra",
     "pt": "Ovelha Negra"
    },
    "ref": "monster:black-sheep",
    "slug": {
     "en": "black-sheep",
+    "es": "oveja-negra",
     "pt": "ovelha-negra"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "400"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "220"
     }
    ],
@@ -284,11 +246,13 @@
    ],
    "name": {
     "en": "Bone Eater",
+    "es": "Devorador de Huesos",
     "pt": "Devorador de Ossos"
    },
    "ref": "monster:bone-eater",
    "slug": {
     "en": "bone-eater",
+    "es": "devorador-de-huesos",
     "pt": "devorador-de-ossos"
    }
   },
@@ -301,10 +265,12 @@
      "place": {
       "near": {
        "en": "Royal Bridge",
+       "es": "Puente Real",
        "pt": "Ponte Real"
       },
       "town": {
        "en": "Dorosam",
+       "es": "Dorosam",
        "pt": "Dorosam"
       },
       "underground": false
@@ -314,17 +280,11 @@
    "boss": true,
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "2.500"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "120"
     }
    ],
@@ -335,11 +295,13 @@
    ],
    "name": {
     "en": "Bridge Troll",
+    "es": "Trol del Puente",
     "pt": "Troll da Ponte"
    },
    "ref": "monster:bridge-troll",
    "slug": {
     "en": "bridge-troll",
+    "es": "trol-del-puente",
     "pt": "troll-da-ponte"
    }
   },
@@ -350,17 +312,11 @@
    "boss": true,
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "6.000"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "6.000"
     }
    ],
@@ -371,11 +327,13 @@
    ],
    "name": {
     "en": "Brother Rossi",
+    "es": "Hermano Rossi",
     "pt": "Irmão Rossi"
    },
    "ref": "monster:brother-rossi",
    "slug": {
     "en": "brother-rossi",
+    "es": "hermano-rossi",
     "pt": "irmao-rossi"
    }
   },
@@ -386,17 +344,11 @@
    "boss": true,
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "2.500"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "3.500"
     }
    ],
@@ -407,28 +359,24 @@
    ],
    "name": {
     "en": "Capozzi The Bandit",
+    "es": "Capozzi el Bandido",
     "pt": "Capozzi, o Bandido"
    },
    "ref": "monster:capozzi-the-bandit",
    "slug": {
     "en": "capozzi-the-bandit",
+    "es": "capozzi-el-bandido",
     "pt": "capozzi-o-bandido"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "100"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "50"
     }
    ],
@@ -439,28 +387,24 @@
    ],
    "name": {
     "en": "Cave Spider",
+    "es": "Araña de Cueva",
     "pt": "Aranha da Caverna"
    },
    "ref": "monster:cave-spider",
    "slug": {
     "en": "cave-spider",
+    "es": "arana-de-cueva",
     "pt": "aranha-da-caverna"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "1.000"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "660"
     }
    ],
@@ -471,11 +415,13 @@
    ],
    "name": {
     "en": "Cave Troll",
+    "es": "Trol de Cueva",
     "pt": "Troll da Caverna"
    },
    "ref": "monster:cave-troll",
    "slug": {
     "en": "cave-troll",
+    "es": "trol-de-cueva",
     "pt": "troll-da-caverna"
    }
   },
@@ -483,17 +429,11 @@
    "boss": true,
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "20.000"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "50.000"
     }
    ],
@@ -504,28 +444,24 @@
    ],
    "name": {
     "en": "Conquest Champion",
+    "es": "Campeón de Conquest",
     "pt": "Campeão de Conquest"
    },
    "ref": "monster:conquest-champion",
    "slug": {
     "en": "conquest-champion",
+    "es": "campeon-de-conquest",
     "pt": "campeao-de-conquest"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "650"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "500"
     }
    ],
@@ -536,28 +472,24 @@
    ],
    "name": {
     "en": "Conquest Crow",
+    "es": "Cuervo de Conquest",
     "pt": "Corvo de Conquest"
    },
    "ref": "monster:conquest-crow",
    "slug": {
     "en": "conquest-crow",
+    "es": "cuervo-de-conquest",
     "pt": "corvo-de-conquest"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "300"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "170"
     }
    ],
@@ -568,28 +500,24 @@
    ],
    "name": {
     "en": "Conquest Fowler",
+    "es": "Cazador de Conquest",
     "pt": "Caçador de Conquest"
    },
    "ref": "monster:conquest-fowler",
    "slug": {
     "en": "conquest-fowler",
+    "es": "cazador-de-conquest",
     "pt": "cacador-de-conquest"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "375"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "380"
     }
    ],
@@ -600,28 +528,24 @@
    ],
    "name": {
     "en": "Conquest Priestess",
+    "es": "Sacerdotisa de Conquest",
     "pt": "Sacerdotisa de Conquest"
    },
    "ref": "monster:conquest-priestess",
    "slug": {
     "en": "conquest-priestess",
+    "es": "sacerdotisa-de-conquest",
     "pt": "sacerdotisa-de-conquest"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "200"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "190"
     }
    ],
@@ -632,28 +556,24 @@
    ],
    "name": {
     "en": "Crazed Occultist",
+    "es": "Ocultista Enloquecido",
     "pt": "Ocultista Enlouquecido"
    },
    "ref": "monster:crazed-occultist",
    "slug": {
     "en": "crazed-occultist",
+    "es": "ocultista-enloquecido",
     "pt": "ocultista-enlouquecido"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "375"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "180"
     }
    ],
@@ -664,28 +584,24 @@
    ],
    "name": {
     "en": "Cube Of Doom",
+    "es": "Cubo de la Perdición",
     "pt": "Cubo da Perdição"
    },
    "ref": "monster:cube-of-doom",
    "slug": {
     "en": "cube-of-doom",
+    "es": "cubo-de-la-perdicion",
     "pt": "cubo-da-perdicao"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "3.000"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "6.000"
     }
    ],
@@ -696,28 +612,24 @@
    ],
    "name": {
     "en": "Deadly Webcap",
+    "es": "Webcap Mortal",
     "pt": "Webcap Mortal"
    },
    "ref": "monster:deadly-webcap",
    "slug": {
     "en": "deadly-webcap",
+    "es": "webcap-mortal",
     "pt": "webcap-mortal"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "50"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "10"
     }
    ],
@@ -728,28 +640,24 @@
    ],
    "name": {
     "en": "Deer",
+    "es": "Ciervo",
     "pt": "Veado"
    },
    "ref": "monster:deer",
    "slug": {
     "en": "deer",
+    "es": "ciervo",
     "pt": "veado"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "575"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "655"
     }
    ],
@@ -760,28 +668,24 @@
    ],
    "name": {
     "en": "Devil Spider",
+    "es": "Araña Diabólica",
     "pt": "Aranha Demoníaca"
    },
    "ref": "monster:devil-spider",
    "slug": {
     "en": "devil-spider",
+    "es": "arana-diabolica",
     "pt": "aranha-demoniaca"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "255"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "155"
     }
    ],
@@ -792,28 +696,24 @@
    ],
    "name": {
     "en": "Digger",
+    "es": "Excavador",
     "pt": "Escavador"
    },
    "ref": "monster:digger",
    "slug": {
     "en": "digger",
+    "es": "excavador",
     "pt": "escavador"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "1.800"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "4.000"
     }
    ],
@@ -824,28 +724,24 @@
    ],
    "name": {
     "en": "Eye Of Pestilence",
+    "es": "Ojo de Pestilence",
     "pt": "Olho de Pestilence"
    },
    "ref": "monster:eye-of-pestilence",
    "slug": {
     "en": "eye-of-pestilence",
+    "es": "ojo-de-pestilence",
     "pt": "olho-de-pestilence"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "200"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "175"
     }
    ],
@@ -856,28 +752,24 @@
    ],
    "name": {
     "en": "Faun",
+    "es": "Fauno",
     "pt": "Fauno"
    },
    "ref": "monster:faun",
    "slug": {
     "en": "faun",
+    "es": "fauno",
     "pt": "fauno"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "4.000"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "200"
     }
    ],
@@ -888,11 +780,13 @@
    ],
    "name": {
     "en": "Frozen Chest",
+    "es": "Cofre Congelado",
     "pt": "Baú Congelado"
    },
    "ref": "monster:frozen-chest",
    "slug": {
     "en": "frozen-chest",
+    "es": "cofre-congelado",
     "pt": "bau-congelado"
    }
   },
@@ -903,17 +797,11 @@
    "boss": true,
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "4.500"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "3.500"
     }
    ],
@@ -924,28 +812,24 @@
    ],
    "name": {
     "en": "Gaglio The Bandit",
+    "es": "Gaglio el Bandido",
     "pt": "Gaglio, o Bandido"
    },
    "ref": "monster:gaglio-the-bandit",
    "slug": {
     "en": "gaglio-the-bandit",
+    "es": "gaglio-el-bandido",
     "pt": "gaglio-o-bandido"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "150"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "120"
     }
    ],
@@ -956,28 +840,24 @@
    ],
    "name": {
     "en": "Ghost",
+    "es": "Fantasma",
     "pt": "Fantasma"
    },
    "ref": "monster:ghost",
    "slug": {
     "en": "ghost",
+    "es": "fantasma",
     "pt": "fantasma"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "220"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "60"
     }
    ],
@@ -988,28 +868,24 @@
    ],
    "name": {
     "en": "Ghoul",
+    "es": "Necrófago",
     "pt": "Carniçal"
    },
    "ref": "monster:ghoul",
    "slug": {
     "en": "ghoul",
+    "es": "necrofago",
     "pt": "carnical"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "195"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "100"
     }
    ],
@@ -1020,28 +896,24 @@
    ],
    "name": {
     "en": "Giant Rat",
+    "es": "Rata Gigante",
     "pt": "Rato Gigante"
    },
    "ref": "monster:giant-rat",
    "slug": {
     "en": "giant-rat",
+    "es": "rata-gigante",
     "pt": "rato-gigante"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "90"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "40"
     }
    ],
@@ -1052,11 +924,13 @@
    ],
    "name": {
     "en": "Goblin",
+    "es": "Goblin",
     "pt": "Goblin"
    },
    "ref": "monster:goblin",
    "slug": {
     "en": "goblin",
+    "es": "goblin",
     "pt": "goblin"
    }
   },
@@ -1067,17 +941,11 @@
    "boss": true,
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "15.000"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "15.000"
     }
    ],
@@ -1088,28 +956,24 @@
    ],
    "name": {
     "en": "Great Lintwurm",
+    "es": "Gran Lintwurm",
     "pt": "Grande Lintwurm"
    },
    "ref": "monster:great-lintwurm",
    "slug": {
     "en": "great-lintwurm",
+    "es": "gran-lintwurm",
     "pt": "grande-lintwurm"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "750"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "315"
     }
    ],
@@ -1120,28 +984,24 @@
    ],
    "name": {
     "en": "Grizzly Bear",
+    "es": "Oso Pardo",
     "pt": "Urso Pardo"
    },
    "ref": "monster:grizzly-bear",
    "slug": {
     "en": "grizzly-bear",
+    "es": "oso-pardo",
     "pt": "urso-pardo"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "175"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "135"
     }
    ],
@@ -1152,28 +1012,24 @@
    ],
    "name": {
     "en": "Huntsman",
+    "es": "Cazador",
     "pt": "Caçador"
    },
    "ref": "monster:huntsman",
    "slug": {
     "en": "huntsman",
+    "es": "cazador",
     "pt": "cacador"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "300"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "220"
     }
    ],
@@ -1184,28 +1040,24 @@
    ],
    "name": {
     "en": "Imp",
+    "es": "Diablillo",
     "pt": "Diabrete"
    },
    "ref": "monster:imp",
    "slug": {
     "en": "imp",
+    "es": "diablillo",
     "pt": "diabrete"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "20"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "2"
     }
    ],
@@ -1216,28 +1068,24 @@
    ],
    "name": {
     "en": "Lamb",
+    "es": "Cordero",
     "pt": "Cordeiro"
    },
    "ref": "monster:lamb",
    "slug": {
     "en": "lamb",
+    "es": "cordero",
     "pt": "cordeiro"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "200"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "80"
     }
    ],
@@ -1248,11 +1096,13 @@
    ],
    "name": {
     "en": "Lintwurm",
+    "es": "Lintwurm",
     "pt": "Lintwurm"
    },
    "ref": "monster:lintwurm",
    "slug": {
     "en": "lintwurm",
+    "es": "lintwurm",
     "pt": "lintwurm"
    }
   },
@@ -1263,17 +1113,11 @@
    "boss": true,
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "3.500"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "3.500"
     }
    ],
@@ -1284,11 +1128,13 @@
    ],
    "name": {
     "en": "Mateo The Bandit",
+    "es": "Mateo el Bandido",
     "pt": "Mateo, o Bandido"
    },
    "ref": "monster:mateo-the-bandit",
    "slug": {
     "en": "mateo-the-bandit",
+    "es": "mateo-el-bandido",
     "pt": "mateo-o-bandido"
    }
   },
@@ -1300,10 +1146,12 @@
      "place": {
       "near": {
        "en": "Myrtle's House",
+       "es": "Casa de Myrtle",
        "pt": "Casa de Myrtle"
       },
       "town": {
        "en": "Dorosam",
+       "es": "Dorosam",
        "pt": "Dorosam"
       },
       "underground": false
@@ -1313,17 +1161,11 @@
    "boss": true,
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "5.000"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "5.000"
     }
    ],
@@ -1334,28 +1176,24 @@
    ],
    "name": {
     "en": "Minerva",
+    "es": "Minerva",
     "pt": "Minerva"
    },
    "ref": "monster:minerva",
    "slug": {
     "en": "minerva",
+    "es": "minerva",
     "pt": "minerva"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "870"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "1.135"
     }
    ],
@@ -1366,28 +1204,24 @@
    ],
    "name": {
     "en": "Minotaur",
+    "es": "Minotauro",
     "pt": "Minotauro"
    },
    "ref": "monster:minotaur",
    "slug": {
     "en": "minotaur",
+    "es": "minotauro",
     "pt": "minotauro"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "175"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "115"
     }
    ],
@@ -1398,28 +1232,24 @@
    ],
    "name": {
     "en": "Mireling",
+    "es": "Mireling",
     "pt": "Mireling"
    },
    "ref": "monster:mireling",
    "slug": {
     "en": "mireling",
+    "es": "mireling",
     "pt": "mireling"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "425"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "430"
     }
    ],
@@ -1430,28 +1260,24 @@
    ],
    "name": {
     "en": "Mireling Noble",
+    "es": "Mireling Noble",
     "pt": "Mireling Nobre"
    },
    "ref": "monster:mireling-noble",
    "slug": {
     "en": "mireling-noble",
+    "es": "mireling-noble",
     "pt": "mireling-nobre"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "275"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "140"
     }
    ],
@@ -1462,28 +1288,24 @@
    ],
    "name": {
     "en": "Monk",
+    "es": "Monje",
     "pt": "Monge"
    },
    "ref": "monster:monk",
    "slug": {
     "en": "monk",
+    "es": "monje",
     "pt": "monge"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "660"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "1.525"
     }
    ],
@@ -1494,28 +1316,24 @@
    ],
    "name": {
     "en": "Necromancer",
+    "es": "Nigromante",
     "pt": "Necromante"
    },
    "ref": "monster:necromancer",
    "slug": {
     "en": "necromancer",
+    "es": "nigromante",
     "pt": "necromante"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "155"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "85"
     }
    ],
@@ -1526,28 +1344,24 @@
    ],
    "name": {
     "en": "Occultist Acolyte",
+    "es": "Acólito Ocultista",
     "pt": "Acólito Ocultista"
    },
    "ref": "monster:occultist-acolyte",
    "slug": {
     "en": "occultist-acolyte",
+    "es": "acolito-ocultista",
     "pt": "acolito-ocultista"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "95"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "45"
     }
    ],
@@ -1558,28 +1372,24 @@
    ],
    "name": {
     "en": "Occultist Apprentice",
+    "es": "Aprendiz Ocultista",
     "pt": "Aprendiz Ocultista"
    },
    "ref": "monster:occultist-apprentice",
    "slug": {
     "en": "occultist-apprentice",
+    "es": "aprendiz-ocultista",
     "pt": "aprendiz-ocultista"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "295"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "210"
     }
    ],
@@ -1590,28 +1400,24 @@
    ],
    "name": {
     "en": "Occultist Enforcer",
+    "es": "Ejecutor Ocultista",
     "pt": "Executor Ocultista"
    },
    "ref": "monster:occultist-enforcer",
    "slug": {
     "en": "occultist-enforcer",
+    "es": "ejecutor-ocultista",
     "pt": "executor-ocultista"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "425"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "545"
     }
    ],
@@ -1622,28 +1428,24 @@
    ],
    "name": {
     "en": "Occultist Scholar",
+    "es": "Erudito Ocultista",
     "pt": "Erudito Ocultista"
    },
    "ref": "monster:occultist-scholar",
    "slug": {
     "en": "occultist-scholar",
+    "es": "erudito-ocultista",
     "pt": "erudito-ocultista"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "800"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "900"
     }
    ],
@@ -1654,28 +1456,24 @@
    ],
    "name": {
     "en": "Omen",
+    "es": "Presagio",
     "pt": "Presságio"
    },
    "ref": "monster:omen",
    "slug": {
     "en": "omen",
+    "es": "presagio",
     "pt": "pressagio"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "750"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "1.240"
     }
    ],
@@ -1686,28 +1484,24 @@
    ],
    "name": {
     "en": "Orc Berserker",
+    "es": "Orco Berserker",
     "pt": "Orc Berserker"
    },
    "ref": "monster:orc-berserker",
    "slug": {
     "en": "orc-berserker",
+    "es": "orco-berserker",
     "pt": "orc-berserker"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "1.750"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "3.465"
     }
    ],
@@ -1718,28 +1512,24 @@
    ],
    "name": {
     "en": "Orc General",
+    "es": "General Orco",
     "pt": "General Orc"
    },
    "ref": "monster:orc-general",
    "slug": {
     "en": "orc-general",
+    "es": "general-orco",
     "pt": "general-orc"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "550"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "455"
     }
    ],
@@ -1750,28 +1540,24 @@
    ],
    "name": {
     "en": "Orc Infantry",
+    "es": "Infantería Orco",
     "pt": "Infantaria Orc"
    },
    "ref": "monster:orc-infantry",
    "slug": {
     "en": "orc-infantry",
+    "es": "infanteria-orco",
     "pt": "infantaria-orc"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "585"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "1.365"
     }
    ],
@@ -1782,11 +1568,13 @@
    ],
    "name": {
     "en": "Orc Shaman",
+    "es": "Chamán Orco",
     "pt": "Xamã Orc"
    },
    "ref": "monster:orc-shaman",
    "slug": {
     "en": "orc-shaman",
+    "es": "chaman-orco",
     "pt": "xama-orc"
    }
   },
@@ -1794,17 +1582,11 @@
    "boss": true,
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "35.000"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "70.000"
     }
    ],
@@ -1815,28 +1597,24 @@
    ],
    "name": {
     "en": "Pestilence Knight",
+    "es": "Caballero de Pestilence",
     "pt": "Cavaleiro de Pestilence"
    },
    "ref": "monster:pestilence-knight",
    "slug": {
     "en": "pestilence-knight",
+    "es": "caballero-de-pestilence",
     "pt": "cavaleiro-de-pestilence"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "1.500"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "1.480"
     }
    ],
@@ -1847,28 +1625,24 @@
    ],
    "name": {
     "en": "Pestilence Plague",
+    "es": "Plaga de Pestilence",
     "pt": "Praga de Pestilence"
    },
    "ref": "monster:pestilence-plague",
    "slug": {
     "en": "pestilence-plague",
+    "es": "plaga-de-pestilence",
     "pt": "praga-de-pestilence"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "285"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "175"
     }
    ],
@@ -1879,28 +1653,24 @@
    ],
    "name": {
     "en": "Pestilence Spawn",
+    "es": "Engendro de Pestilence",
     "pt": "Cria de Pestilence"
    },
    "ref": "monster:pestilence-spawn",
    "slug": {
     "en": "pestilence-spawn",
+    "es": "engendro-de-pestilence",
     "pt": "cria-de-pestilence"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "220"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "220"
     }
    ],
@@ -1911,28 +1681,24 @@
    ],
    "name": {
     "en": "Pestilence Stinger",
+    "es": "Aguijón de Pestilence",
     "pt": "Ferrão de Pestilence"
    },
    "ref": "monster:pestilence-stinger",
    "slug": {
     "en": "pestilence-stinger",
+    "es": "aguijon-de-pestilence",
     "pt": "ferrao-de-pestilence"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "155"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "90"
     }
    ],
@@ -1943,28 +1709,24 @@
    ],
    "name": {
     "en": "Plea",
+    "es": "Plea",
     "pt": "Plea"
    },
    "ref": "monster:plea",
    "slug": {
     "en": "plea",
+    "es": "plea",
     "pt": "plea"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "195"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "150"
     }
    ],
@@ -1975,28 +1737,24 @@
    ],
    "name": {
     "en": "Plea Occultist",
+    "es": "Ocultista Plea",
     "pt": "Ocultista Plea"
    },
    "ref": "monster:plea-occultist",
    "slug": {
     "en": "plea-occultist",
+    "es": "ocultista-plea",
     "pt": "ocultista-plea"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "1.000"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "590"
     }
    ],
@@ -2007,11 +1765,13 @@
    ],
    "name": {
     "en": "Profaner",
+    "es": "Profanador",
     "pt": "Profanador"
    },
    "ref": "monster:profaner",
    "slug": {
     "en": "profaner",
+    "es": "profanador",
     "pt": "profanador"
    }
   },
@@ -2024,10 +1784,12 @@
      "place": {
       "near": {
        "en": "The Citadel",
+       "es": "La Ciudadela",
        "pt": "A Cidadela"
       },
       "town": {
        "en": "Nordha",
+       "es": "Nordha",
        "pt": "Nordha"
       },
       "underground": false
@@ -2037,17 +1799,11 @@
    "boss": true,
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "2.000"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "875"
     }
    ],
@@ -2058,28 +1814,24 @@
    ],
    "name": {
     "en": "Queen Zoe",
+    "es": "Reina Zoe",
     "pt": "Rainha Zoe"
    },
    "ref": "monster:queen-zoe",
    "slug": {
     "en": "queen-zoe",
+    "es": "reina-zoe",
     "pt": "rainha-zoe"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "35"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "10"
     }
    ],
@@ -2090,28 +1842,24 @@
    ],
    "name": {
     "en": "Rat",
+    "es": "Rata",
     "pt": "Rato"
    },
    "ref": "monster:rat",
    "slug": {
     "en": "rat",
+    "es": "rata",
     "pt": "rato"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "355"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "15"
     }
    ],
@@ -2122,28 +1870,24 @@
    ],
    "name": {
     "en": "Rat Shipper",
+    "es": "Transportista de Ratas",
     "pt": "Rato Transportador"
    },
    "ref": "monster:rat-shipper",
    "slug": {
     "en": "rat-shipper",
+    "es": "transportista-de-ratas",
     "pt": "rato-transportador"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "800"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "490"
     }
    ],
@@ -2154,28 +1898,24 @@
    ],
    "name": {
     "en": "Rotwurm",
+    "es": "Rotwurm",
     "pt": "Rotwurm"
    },
    "ref": "monster:rotwurm",
    "slug": {
     "en": "rotwurm",
+    "es": "rotwurm",
     "pt": "rotwurm"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "205"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "145"
     }
    ],
@@ -2186,28 +1926,24 @@
    ],
    "name": {
     "en": "Rubellus",
+    "es": "Rubellus",
     "pt": "Rubellus"
    },
    "ref": "monster:rubellus",
    "slug": {
     "en": "rubellus",
+    "es": "rubellus",
     "pt": "rubellus"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "30"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "4"
     }
    ],
@@ -2218,11 +1954,13 @@
    ],
    "name": {
     "en": "Sheep",
+    "es": "Oveja",
     "pt": "Ovelha"
    },
    "ref": "monster:sheep",
    "slug": {
     "en": "sheep",
+    "es": "oveja",
     "pt": "ovelha"
    }
   },
@@ -2234,17 +1972,11 @@
    "boss": true,
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "500"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "250"
     }
    ],
@@ -2255,28 +1987,24 @@
    ],
    "name": {
     "en": "Skal Brawler",
+    "es": "Bravucón Skal",
     "pt": "Brigão Skal"
    },
    "ref": "monster:skal-brawler",
    "slug": {
     "en": "skal-brawler",
+    "es": "bravucon-skal",
     "pt": "brigao-skal"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "1.450"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "730"
     }
    ],
@@ -2287,28 +2015,24 @@
    ],
    "name": {
     "en": "Skal Traitor",
+    "es": "Skal Traidor",
     "pt": "Skal Traidor"
    },
    "ref": "monster:skal-traitor",
    "slug": {
     "en": "skal-traitor",
+    "es": "skal-traidor",
     "pt": "skal-traidor"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "45"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "20"
     }
    ],
@@ -2319,28 +2043,24 @@
    ],
    "name": {
     "en": "Skeleton",
+    "es": "Esqueleto",
     "pt": "Esqueleto"
    },
    "ref": "monster:skeleton",
    "slug": {
     "en": "skeleton",
+    "es": "esqueleto",
     "pt": "esqueleto"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "200"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "180"
     }
    ],
@@ -2351,28 +2071,24 @@
    ],
    "name": {
     "en": "Smelt Ooze",
+    "es": "Lodo Fundido",
     "pt": "Lodo Fundido"
    },
    "ref": "monster:smelt-ooze",
    "slug": {
     "en": "smelt-ooze",
+    "es": "lodo-fundido",
     "pt": "lodo-fundido"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "375"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "185"
     }
    ],
@@ -2383,28 +2099,24 @@
    ],
    "name": {
     "en": "Sunskin",
+    "es": "Piel Solar",
     "pt": "Pele Solar"
    },
    "ref": "monster:sunskin",
    "slug": {
     "en": "sunskin",
+    "es": "piel-solar",
     "pt": "pele-solar"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "500"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "575"
     }
    ],
@@ -2415,28 +2127,24 @@
    ],
    "name": {
     "en": "Sunskin Enchanter",
+    "es": "Encantador Piel Solar",
     "pt": "Encantador Pele Solar"
    },
    "ref": "monster:sunskin-enchanter",
    "slug": {
     "en": "sunskin-enchanter",
+    "es": "encantador-piel-solar",
     "pt": "encantador-pele-solar"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "200"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "35"
     }
    ],
@@ -2447,28 +2155,24 @@
    ],
    "name": {
     "en": "Swamp Tentacle",
+    "es": "Tentáculo del Pantano",
     "pt": "Tentáculo do Pântano"
    },
    "ref": "monster:swamp-tentacle",
    "slug": {
     "en": "swamp-tentacle",
+    "es": "tentaculo-del-pantano",
     "pt": "tentaculo-do-pantano"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "2.550"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "5.970"
     }
    ],
@@ -2479,28 +2183,24 @@
    ],
    "name": {
     "en": "Swamp Troll",
+    "es": "Trol del Pantano",
     "pt": "Troll do Pântano"
    },
    "ref": "monster:swamp-troll",
    "slug": {
     "en": "swamp-troll",
+    "es": "trol-del-pantano",
     "pt": "troll-do-pantano"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "3.000"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "6.000"
     }
    ],
@@ -2511,11 +2211,13 @@
    ],
    "name": {
     "en": "Terror Spider",
+    "es": "Araña del Terror",
     "pt": "Aranha do Terror"
    },
    "ref": "monster:terror-spider",
    "slug": {
     "en": "terror-spider",
+    "es": "arana-del-terror",
     "pt": "aranha-do-terror"
    }
   },
@@ -2526,17 +2228,11 @@
    "boss": true,
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "7.500"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "7.500"
     }
    ],
@@ -2547,11 +2243,13 @@
    ],
    "name": {
     "en": "The Augur",
+    "es": "El Augur",
     "pt": "O Augúrio"
    },
    "ref": "monster:the-augur",
    "slug": {
     "en": "the-augur",
+    "es": "el-augur",
     "pt": "o-augurio"
    }
   },
@@ -2559,17 +2257,11 @@
    "boss": true,
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "10.000"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "10.000"
     }
    ],
@@ -2580,11 +2272,13 @@
    ],
    "name": {
     "en": "The Black Knight",
+    "es": "El Caballero Negro",
     "pt": "O Cavaleiro Negro"
    },
    "ref": "monster:the-black-knight",
    "slug": {
     "en": "the-black-knight",
+    "es": "el-caballero-negro",
     "pt": "o-cavaleiro-negro"
    }
   },
@@ -2595,17 +2289,11 @@
    "boss": true,
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "7.500"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "7.500"
     }
    ],
@@ -2616,11 +2304,13 @@
    ],
    "name": {
     "en": "The Blackhat",
+    "es": "El Sombrero Negro",
     "pt": "O Chapéu Negro"
    },
    "ref": "monster:the-blackhat",
    "slug": {
     "en": "the-blackhat",
+    "es": "el-sombrero-negro",
     "pt": "o-chapeu-negro"
    }
   },
@@ -2631,17 +2321,11 @@
    "boss": true,
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "6.000"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "6.000"
     }
    ],
@@ -2652,11 +2336,13 @@
    ],
    "name": {
     "en": "The Broodmother",
+    "es": "La Madre de la Cría",
     "pt": "A Mãe da Ninhada"
    },
    "ref": "monster:the-broodmother",
    "slug": {
     "en": "the-broodmother",
+    "es": "la-madre-de-la-cria",
     "pt": "a-mae-da-ninhada"
    }
   },
@@ -2667,17 +2353,11 @@
    "boss": true,
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "5.000"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "5.000"
     }
    ],
@@ -2688,28 +2368,24 @@
    ],
    "name": {
     "en": "The Gardener",
+    "es": "El Jardinero",
     "pt": "O Jardineiro"
    },
    "ref": "monster:the-gardener",
    "slug": {
     "en": "the-gardener",
+    "es": "el-jardinero",
     "pt": "o-jardineiro"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "255"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "90"
     }
    ],
@@ -2720,28 +2396,24 @@
    ],
    "name": {
     "en": "Thug",
+    "es": "Matón",
     "pt": "Bandido"
    },
    "ref": "monster:thug",
    "slug": {
     "en": "thug",
+    "es": "maton",
     "pt": "bandido"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "10.000"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "15.000"
     }
    ],
@@ -2752,11 +2424,13 @@
    ],
    "name": {
     "en": "Titan",
+    "es": "Titán",
     "pt": "Titã"
    },
    "ref": "monster:titan",
    "slug": {
     "en": "titan",
+    "es": "titan",
     "pt": "tita"
    }
   },
@@ -2769,10 +2443,12 @@
      "place": {
       "near": {
        "en": "East Nordha Mines",
+       "es": "Minas de Nordha Este",
        "pt": "Minas de Nordha Oriental"
       },
       "town": {
        "en": "East Nordha",
+       "es": "Nordha Este",
        "pt": "Nordha Oriental"
       },
       "underground": false
@@ -2782,17 +2458,11 @@
    "boss": true,
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "500"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "35"
     }
    ],
@@ -2803,28 +2473,24 @@
    ],
    "name": {
     "en": "Tock",
+    "es": "Tock",
     "pt": "Tock"
    },
    "ref": "monster:tock",
    "slug": {
     "en": "tock",
+    "es": "tock",
     "pt": "tock"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "750"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "1.260"
     }
    ],
@@ -2835,28 +2501,24 @@
    ],
    "name": {
     "en": "Tomb Diviner",
+    "es": "Adivino de la Tumba",
     "pt": "Adivinho da Tumba"
    },
    "ref": "monster:tomb-diviner",
    "slug": {
     "en": "tomb-diviner",
+    "es": "adivino-de-la-tumba",
     "pt": "adivinho-da-tumba"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "800"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "725"
     }
    ],
@@ -2867,28 +2529,24 @@
    ],
    "name": {
     "en": "Tomb Guardian",
+    "es": "Guardián de la Tumba",
     "pt": "Guardião da Tumba"
    },
    "ref": "monster:tomb-guardian",
    "slug": {
     "en": "tomb-guardian",
+    "es": "guardian-de-la-tumba",
     "pt": "guardiao-da-tumba"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "850"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "225"
     }
    ],
@@ -2899,28 +2557,24 @@
    ],
    "name": {
     "en": "Tomb Worker",
+    "es": "Trabajador de la Tumba",
     "pt": "Trabalhador da Tumba"
    },
    "ref": "monster:tomb-worker",
    "slug": {
     "en": "tomb-worker",
+    "es": "trabajador-de-la-tumba",
     "pt": "trabalhador-da-tumba"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "375"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "295"
     }
    ],
@@ -2931,28 +2585,24 @@
    ],
    "name": {
     "en": "Tundra Rat",
+    "es": "Rata de la Tundra",
     "pt": "Rato da Tundra"
    },
    "ref": "monster:tundra-rat",
    "slug": {
     "en": "tundra-rat",
+    "es": "rata-de-la-tundra",
     "pt": "rato-da-tundra"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "500"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "150"
     }
    ],
@@ -2963,28 +2613,24 @@
    ],
    "name": {
     "en": "Unstable Quartz",
+    "es": "Cuarzo Inestable",
     "pt": "Quartzo Instável"
    },
    "ref": "monster:unstable-quartz",
    "slug": {
     "en": "unstable-quartz",
+    "es": "cuarzo-inestable",
     "pt": "quartzo-instavel"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "195"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "125"
     }
    ],
@@ -2995,28 +2641,24 @@
    ],
    "name": {
     "en": "Viscid Goblin",
+    "es": "Goblin Viscoso",
     "pt": "Goblin Viscoso"
    },
    "ref": "monster:viscid-goblin",
    "slug": {
     "en": "viscid-goblin",
+    "es": "goblin-viscoso",
     "pt": "goblin-viscoso"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "165"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "75"
     }
    ],
@@ -3027,11 +2669,13 @@
    ],
    "name": {
     "en": "Walking Boletus",
+    "es": "Boleto Ambulante",
     "pt": "Boleto Ambulante"
    },
    "ref": "monster:walking-boletus",
    "slug": {
     "en": "walking-boletus",
+    "es": "boleto-ambulante",
     "pt": "boleto-ambulante"
    }
   },
@@ -3041,17 +2685,11 @@
    },
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "150"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "300"
     }
    ],
@@ -3061,29 +2699,29 @@
     64
    ],
    "name": {
+    "_fb": [
+     "pt",
+     "es"
+    ],
     "en": "Wisp",
+    "es": "Wisp",
     "pt": "Wisp"
    },
    "ref": "monster:wisp",
    "slug": {
     "en": "wisp",
+    "es": "wisp",
     "pt": "wisp"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "65"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "35"
     }
    ],
@@ -3094,28 +2732,24 @@
    ],
    "name": {
     "en": "Wolf",
+    "es": "Lobo",
     "pt": "Lobo"
    },
    "ref": "monster:wolf",
    "slug": {
     "en": "wolf",
+    "es": "lobo",
     "pt": "lobo"
    }
   },
   {
    "facts": [
     {
-     "label": {
-      "en": "Health",
-      "pt": "Vida"
-     },
+     "key": "health",
      "value": "1.350"
     },
     {
-     "label": {
-      "en": "Exp",
-      "pt": "Exp"
-     },
+     "key": "exp",
      "value": "1.790"
     }
    ],
@@ -3126,11 +2760,13 @@
    ],
    "name": {
     "en": "Young Amphitere",
+    "es": "Amphitere Joven",
     "pt": "Amphitere Jovem"
    },
    "ref": "monster:young-amphitere",
    "slug": {
     "en": "young-amphitere",
+    "es": "amphitere-joven",
     "pt": "amphitere-jovem"
    }
   },
@@ -3142,11 +2778,13 @@
    ],
    "name": {
     "en": "Benedict",
+    "es": "Benedict",
     "pt": "Benedict"
    },
    "ref": "npc:a114",
    "slug": {
     "en": "benedict",
+    "es": "benedict",
     "pt": "benedict"
    }
   },
@@ -3158,11 +2796,13 @@
    ],
    "name": {
     "en": "El Chad",
+    "es": "El Chad",
     "pt": "El Chad"
    },
    "ref": "npc:a117",
    "slug": {
     "en": "el-chad",
+    "es": "el-chad",
     "pt": "el-chad"
    }
   },
@@ -3174,11 +2814,13 @@
    ],
    "name": {
     "en": "Rubius",
+    "es": "Rubius",
     "pt": "Rubius"
    },
    "ref": "npc:a119",
    "slug": {
     "en": "rubius",
+    "es": "rubius",
     "pt": "rubius"
    }
   },
@@ -3190,11 +2832,13 @@
    ],
    "name": {
     "en": "Bresenham",
+    "es": "Bresenham",
     "pt": "Bresenham"
    },
    "ref": "npc:a120",
    "slug": {
     "en": "bresenham",
+    "es": "bresenham",
     "pt": "bresenham"
    }
   },
@@ -3206,11 +2850,13 @@
    ],
    "name": {
     "en": "Tim",
+    "es": "Tim",
     "pt": "Tim"
    },
    "ref": "npc:a129",
    "slug": {
     "en": "tim",
+    "es": "tim",
     "pt": "tim"
    }
   },
@@ -3222,11 +2868,13 @@
    ],
    "name": {
     "en": "Sal",
+    "es": "Sal",
     "pt": "Sal"
    },
    "ref": "npc:a13",
    "slug": {
     "en": "sal",
+    "es": "sal",
     "pt": "sal"
    }
   },
@@ -3238,11 +2886,13 @@
    ],
    "name": {
     "en": "Ozrid",
+    "es": "Ozrid",
     "pt": "Ozrid"
    },
    "ref": "npc:a130",
    "slug": {
     "en": "ozrid",
+    "es": "ozrid",
     "pt": "ozrid"
    }
   },
@@ -3254,11 +2904,13 @@
    ],
    "name": {
     "en": "Nick",
+    "es": "Nick",
     "pt": "Nick"
    },
    "ref": "npc:a131",
    "slug": {
     "en": "nick",
+    "es": "nick",
     "pt": "nick"
    }
   },
@@ -3270,11 +2922,13 @@
    ],
    "name": {
     "en": "A Stressed Chef",
+    "es": "Un Chef Estresado",
     "pt": "Um Chefe Estressado"
    },
    "ref": "npc:a132",
    "slug": {
     "en": "a-stressed-chef",
+    "es": "un-chef-estresado",
     "pt": "um-chefe-estressado"
    }
   },
@@ -3286,11 +2940,13 @@
    ],
    "name": {
     "en": "Maxwell",
+    "es": "Maxwell",
     "pt": "Maxwell"
    },
    "ref": "npc:a134",
    "slug": {
     "en": "maxwell",
+    "es": "maxwell",
     "pt": "maxwell"
    }
   },
@@ -3302,11 +2958,13 @@
    ],
    "name": {
     "en": "Mary",
+    "es": "Mary",
     "pt": "Mary"
    },
    "ref": "npc:a14",
    "slug": {
     "en": "mary",
+    "es": "mary",
     "pt": "mary"
    }
   },
@@ -3318,11 +2976,13 @@
    ],
    "name": {
     "en": "Margery",
+    "es": "Margery",
     "pt": "Margery"
    },
    "ref": "npc:a149",
    "slug": {
     "en": "margery-a149",
+    "es": "margery-a149",
     "pt": "margery-a149"
    }
   },
@@ -3334,11 +2994,13 @@
    ],
    "name": {
     "en": "Yoz",
+    "es": "Yoz",
     "pt": "Yoz"
    },
    "ref": "npc:a150",
    "slug": {
     "en": "yoz",
+    "es": "yoz",
     "pt": "yoz"
    }
   },
@@ -3350,11 +3012,13 @@
    ],
    "name": {
     "en": "Matthew",
+    "es": "Matthew",
     "pt": "Matthew"
    },
    "ref": "npc:a152",
    "slug": {
     "en": "matthew",
+    "es": "matthew",
     "pt": "matthew"
    }
   },
@@ -3366,11 +3030,13 @@
    ],
    "name": {
     "en": "Newell",
+    "es": "Newell",
     "pt": "Newell"
    },
    "ref": "npc:a158",
    "slug": {
     "en": "newell",
+    "es": "newell",
     "pt": "newell"
    }
   },
@@ -3382,11 +3048,13 @@
    ],
    "name": {
     "en": "Gabe",
+    "es": "Gabe",
     "pt": "Gabe"
    },
    "ref": "npc:a159",
    "slug": {
     "en": "gabe",
+    "es": "gabe",
     "pt": "gabe"
    }
   },
@@ -3398,11 +3066,13 @@
    ],
    "name": {
     "en": "Amlon",
+    "es": "Amlon",
     "pt": "Amlon"
    },
    "ref": "npc:a162",
    "slug": {
     "en": "amlon",
+    "es": "amlon",
     "pt": "amlon"
    }
   },
@@ -3414,11 +3084,13 @@
    ],
    "name": {
     "en": "Amlon",
+    "es": "Amlon",
     "pt": "Amlon"
    },
    "ref": "npc:a164",
    "slug": {
     "en": "amlon-a164",
+    "es": "amlon-a164",
     "pt": "amlon-a164"
    }
   },
@@ -3430,11 +3102,13 @@
    ],
    "name": {
     "en": "Amlon",
+    "es": "Amlon",
     "pt": "Amlon"
    },
    "ref": "npc:a166",
    "slug": {
     "en": "amlon-a166",
+    "es": "amlon-a166",
     "pt": "amlon-a166"
    }
   },
@@ -3446,11 +3120,13 @@
    ],
    "name": {
     "en": "Martem",
+    "es": "Martem",
     "pt": "Martem"
    },
    "ref": "npc:a178",
    "slug": {
     "en": "martem",
+    "es": "martem",
     "pt": "martem"
    }
   },
@@ -3462,11 +3138,13 @@
    ],
    "name": {
     "en": "Edmund",
+    "es": "Edmund",
     "pt": "Edmund"
    },
    "ref": "npc:a18",
    "slug": {
     "en": "edmund",
+    "es": "edmund",
     "pt": "edmund"
    }
   },
@@ -3478,11 +3156,13 @@
    ],
    "name": {
     "en": "Constine",
+    "es": "Constine",
     "pt": "Constine"
    },
    "ref": "npc:a182",
    "slug": {
     "en": "constine",
+    "es": "constine",
     "pt": "constine"
    }
   },
@@ -3494,11 +3174,13 @@
    ],
    "name": {
     "en": "Joan",
+    "es": "Joan",
     "pt": "Joan"
    },
    "ref": "npc:a184",
    "slug": {
     "en": "joan",
+    "es": "joan",
     "pt": "joan"
    }
   },
@@ -3510,11 +3192,13 @@
    ],
    "name": {
     "en": "Odie",
+    "es": "Odie",
     "pt": "Odie"
    },
    "ref": "npc:a185",
    "slug": {
     "en": "odie",
+    "es": "odie",
     "pt": "odie"
    }
   },
@@ -3526,11 +3210,13 @@
    ],
    "name": {
     "en": "Gonlle",
+    "es": "Gonlle",
     "pt": "Gonlle"
    },
    "ref": "npc:a186",
    "slug": {
     "en": "gonlle",
+    "es": "gonlle",
     "pt": "gonlle"
    }
   },
@@ -3542,11 +3228,13 @@
    ],
    "name": {
     "en": "Nunie",
+    "es": "Nunie",
     "pt": "Nunie"
    },
    "ref": "npc:a187",
    "slug": {
     "en": "nunie",
+    "es": "nunie",
     "pt": "nunie"
    }
   },
@@ -3558,11 +3246,13 @@
    ],
    "name": {
     "en": "Hoder",
+    "es": "Hoder",
     "pt": "Hoder"
    },
    "ref": "npc:a204",
    "slug": {
     "en": "hoder",
+    "es": "hoder",
     "pt": "hoder"
    }
   },
@@ -3574,11 +3264,13 @@
    ],
    "name": {
     "en": "Reika",
+    "es": "Reika",
     "pt": "Reika"
    },
    "ref": "npc:a206",
    "slug": {
     "en": "reika",
+    "es": "reika",
     "pt": "reika"
    }
   },
@@ -3590,11 +3282,13 @@
    ],
    "name": {
     "en": "Dionel",
+    "es": "Dionel",
     "pt": "Dionel"
    },
    "ref": "npc:a213",
    "slug": {
     "en": "dionel",
+    "es": "dionel",
     "pt": "dionel"
    }
   },
@@ -3606,11 +3300,13 @@
    ],
    "name": {
     "en": "Rosel",
+    "es": "Rosel",
     "pt": "Rosel"
    },
    "ref": "npc:a214",
    "slug": {
     "en": "rosel",
+    "es": "rosel",
     "pt": "rosel"
    }
   },
@@ -3622,11 +3318,13 @@
    ],
    "name": {
     "en": "Petrus",
+    "es": "Petrus",
     "pt": "Petrus"
    },
    "ref": "npc:a215",
    "slug": {
     "en": "petrus",
+    "es": "petrus",
     "pt": "petrus"
    }
   },
@@ -3638,11 +3336,13 @@
    ],
    "name": {
     "en": "Morrigan",
+    "es": "Morrigan",
     "pt": "Morrigan"
    },
    "ref": "npc:a229",
    "slug": {
     "en": "morrigan",
+    "es": "morrigan",
     "pt": "morrigan"
    }
   },
@@ -3654,11 +3354,13 @@
    ],
    "name": {
     "en": "Colman",
+    "es": "Colman",
     "pt": "Colman"
    },
    "ref": "npc:a241",
    "slug": {
     "en": "colman",
+    "es": "colman",
     "pt": "colman"
    }
   },
@@ -3670,11 +3372,13 @@
    ],
    "name": {
     "en": "Brean",
+    "es": "Brean",
     "pt": "Brean"
    },
    "ref": "npc:a242",
    "slug": {
     "en": "brean",
+    "es": "brean",
     "pt": "brean"
    }
   },
@@ -3686,11 +3390,13 @@
    ],
    "name": {
     "en": "Salazar",
+    "es": "Salazar",
     "pt": "Salazar"
    },
    "ref": "npc:a243",
    "slug": {
     "en": "salazar",
+    "es": "salazar",
     "pt": "salazar"
    }
   },
@@ -3702,11 +3408,13 @@
    ],
    "name": {
     "en": "Logan",
+    "es": "Logan",
     "pt": "Logan"
    },
    "ref": "npc:a244",
    "slug": {
     "en": "logan",
+    "es": "logan",
     "pt": "logan"
    }
   },
@@ -3718,11 +3426,13 @@
    ],
    "name": {
     "en": "Tock",
+    "es": "Tock",
     "pt": "Tock"
    },
    "ref": "npc:a247",
    "slug": {
     "en": "tock",
+    "es": "tock",
     "pt": "tock"
    }
   },
@@ -3734,11 +3444,13 @@
    ],
    "name": {
     "en": "Loke",
+    "es": "Loke",
     "pt": "Loke"
    },
    "ref": "npc:a248",
    "slug": {
     "en": "loke",
+    "es": "loke",
     "pt": "loke"
    }
   },
@@ -3750,11 +3462,13 @@
    ],
    "name": {
     "en": "A Blue Mage",
+    "es": "Un Mago Azul",
     "pt": "Um Mago Azul"
    },
    "ref": "npc:a253",
    "slug": {
     "en": "a-blue-mage",
+    "es": "un-mago-azul",
     "pt": "um-mago-azul"
    }
   },
@@ -3766,11 +3480,13 @@
    ],
    "name": {
     "en": "A Ghoulish Secretary",
+    "es": "Una Secretaria Macabra",
     "pt": "Uma Secretária Macabra"
    },
    "ref": "npc:a269",
    "slug": {
     "en": "a-ghoulish-secretary",
+    "es": "una-secretaria-macabra",
     "pt": "uma-secretaria-macabra"
    }
   },
@@ -3782,11 +3498,13 @@
    ],
    "name": {
     "en": "A Blind Botanist",
+    "es": "Un Botánico Ciego",
     "pt": "Um Botânico Cego"
    },
    "ref": "npc:a282",
    "slug": {
     "en": "a-blind-botanist",
+    "es": "un-botanico-ciego",
     "pt": "um-botanico-cego"
    }
   },
@@ -3798,11 +3516,13 @@
    ],
    "name": {
     "en": "Berk",
+    "es": "Berk",
     "pt": "Berk"
    },
    "ref": "npc:a288",
    "slug": {
     "en": "berk",
+    "es": "berk",
     "pt": "berk"
    }
   },
@@ -3814,11 +3534,13 @@
    ],
    "name": {
     "en": "Egemen",
+    "es": "Egemen",
     "pt": "Egemen"
    },
    "ref": "npc:a290",
    "slug": {
     "en": "egemen",
+    "es": "egemen",
     "pt": "egemen"
    }
   },
@@ -3830,11 +3552,13 @@
    ],
    "name": {
     "en": "Nebil",
+    "es": "Nebil",
     "pt": "Nebil"
    },
    "ref": "npc:a293",
    "slug": {
     "en": "nebil",
+    "es": "nebil",
     "pt": "nebil"
    }
   },
@@ -3846,11 +3570,13 @@
    ],
    "name": {
     "en": "Tink",
+    "es": "Tink",
     "pt": "Tink"
    },
    "ref": "npc:a298",
    "slug": {
     "en": "tink",
+    "es": "tink",
     "pt": "tink"
    }
   },
@@ -3862,11 +3588,13 @@
    ],
    "name": {
     "en": "Hagar",
+    "es": "Hagar",
     "pt": "Hagar"
    },
    "ref": "npc:a300",
    "slug": {
     "en": "hagar",
+    "es": "hagar",
     "pt": "hagar"
    }
   },
@@ -3878,11 +3606,13 @@
    ],
    "name": {
     "en": "Kazim",
+    "es": "Kazim",
     "pt": "Kazim"
    },
    "ref": "npc:a301",
    "slug": {
     "en": "kazim",
+    "es": "kazim",
     "pt": "kazim"
    }
   },
@@ -3894,11 +3624,13 @@
    ],
    "name": {
     "en": "Isra",
+    "es": "Isra",
     "pt": "Isra"
    },
    "ref": "npc:a303",
    "slug": {
     "en": "isra",
+    "es": "isra",
     "pt": "isra"
    }
   },
@@ -3910,11 +3642,13 @@
    ],
    "name": {
     "en": "Ismet",
+    "es": "Ismet",
     "pt": "Ismet"
    },
    "ref": "npc:a304",
    "slug": {
     "en": "ismet",
+    "es": "ismet",
     "pt": "ismet"
    }
   },
@@ -3926,11 +3660,13 @@
    ],
    "name": {
     "en": "Yacht",
+    "es": "Yacht",
     "pt": "Yacht"
    },
    "ref": "npc:a306",
    "slug": {
     "en": "yacht",
+    "es": "yacht",
     "pt": "yacht"
    }
   },
@@ -3942,11 +3678,13 @@
    ],
    "name": {
     "en": "Hoder",
+    "es": "Hoder",
     "pt": "Hoder"
    },
    "ref": "npc:a331",
    "slug": {
     "en": "hoder-a331",
+    "es": "hoder-a331",
     "pt": "hoder-a331"
    }
   },
@@ -3958,11 +3696,13 @@
    ],
    "name": {
     "en": "Seymour",
+    "es": "Seymour",
     "pt": "Seymour"
    },
    "ref": "npc:a49",
    "slug": {
     "en": "seymour",
+    "es": "seymour",
     "pt": "seymour"
    }
   },
@@ -3974,11 +3714,13 @@
    ],
    "name": {
     "en": "Gavin",
+    "es": "Gavin",
     "pt": "Gavin"
    },
    "ref": "npc:a51",
    "slug": {
     "en": "gavin",
+    "es": "gavin",
     "pt": "gavin"
    }
   },
@@ -3990,11 +3732,13 @@
    ],
    "name": {
     "en": "Guy",
+    "es": "Guy",
     "pt": "Guy"
    },
    "ref": "npc:a54",
    "slug": {
     "en": "guy",
+    "es": "guy",
     "pt": "guy"
    }
   },
@@ -4006,11 +3750,13 @@
    ],
    "name": {
     "en": "Rasobar",
+    "es": "Rasobar",
     "pt": "Rasobar"
    },
    "ref": "npc:a56",
    "slug": {
     "en": "rasobar",
+    "es": "rasobar",
     "pt": "rasobar"
    }
   },
@@ -4022,11 +3768,13 @@
    ],
    "name": {
     "en": "Sigurd",
+    "es": "Sigurd",
     "pt": "Sigurd"
    },
    "ref": "npc:a59",
    "slug": {
     "en": "sigurd",
+    "es": "sigurd",
     "pt": "sigurd"
    }
   },
@@ -4038,11 +3786,13 @@
    ],
    "name": {
     "en": "Violet",
+    "es": "Violet",
     "pt": "Violet"
    },
    "ref": "npc:a6",
    "slug": {
     "en": "violet",
+    "es": "violet",
     "pt": "violet"
    }
   },
@@ -4054,11 +3804,13 @@
    ],
    "name": {
     "en": "Wolfram",
+    "es": "Wolfram",
     "pt": "Wolfram"
    },
    "ref": "npc:a60",
    "slug": {
     "en": "wolfram",
+    "es": "wolfram",
     "pt": "wolfram"
    }
   },
@@ -4070,11 +3822,13 @@
    ],
    "name": {
     "en": "Jaques",
+    "es": "Jaques",
     "pt": "Jaques"
    },
    "ref": "npc:a61",
    "slug": {
     "en": "jaques",
+    "es": "jaques",
     "pt": "jaques"
    }
   },
@@ -4086,11 +3840,13 @@
    ],
    "name": {
     "en": "Maude",
+    "es": "Maude",
     "pt": "Maude"
    },
    "ref": "npc:a72",
    "slug": {
     "en": "maude",
+    "es": "maude",
     "pt": "maude"
    }
   },
@@ -4102,11 +3858,13 @@
    ],
    "name": {
     "en": "Benedict",
+    "es": "Benedict",
     "pt": "Benedict"
    },
    "ref": "npc:a73",
    "slug": {
     "en": "benedict-a73",
+    "es": "benedict-a73",
     "pt": "benedict-a73"
    }
   },
@@ -4118,11 +3876,13 @@
    ],
    "name": {
     "en": "Roland",
+    "es": "Roland",
     "pt": "Roland"
    },
    "ref": "npc:a75",
    "slug": {
     "en": "roland",
+    "es": "roland",
     "pt": "roland"
    }
   },
@@ -4134,11 +3894,13 @@
    ],
    "name": {
     "en": "Meredith",
+    "es": "Meredith",
     "pt": "Meredith"
    },
    "ref": "npc:a78",
    "slug": {
     "en": "meredith",
+    "es": "meredith",
     "pt": "meredith"
    }
   },
@@ -4150,11 +3912,13 @@
    ],
    "name": {
     "en": "Wilfred",
+    "es": "Wilfred",
     "pt": "Wilfred"
    },
    "ref": "npc:a80",
    "slug": {
     "en": "wilfred",
+    "es": "wilfred",
     "pt": "wilfred"
    }
   },
@@ -4166,11 +3930,13 @@
    ],
    "name": {
     "en": "Mabel",
+    "es": "Mabel",
     "pt": "Mabel"
    },
    "ref": "npc:a81",
    "slug": {
     "en": "mabel",
+    "es": "mabel",
     "pt": "mabel"
    }
   },
@@ -4182,11 +3948,13 @@
    ],
    "name": {
     "en": "Reginald",
+    "es": "Reginald",
     "pt": "Reginald"
    },
    "ref": "npc:a82",
    "slug": {
     "en": "reginald",
+    "es": "reginald",
     "pt": "reginald"
    }
   },
@@ -4198,11 +3966,13 @@
    ],
    "name": {
     "en": "Margery",
+    "es": "Margery",
     "pt": "Margery"
    },
    "ref": "npc:a83",
    "slug": {
     "en": "margery",
+    "es": "margery",
     "pt": "margery"
    }
   },
@@ -4214,11 +3984,13 @@
    ],
    "name": {
     "en": "Zebulon",
+    "es": "Zebulon",
     "pt": "Zebulon"
    },
    "ref": "npc:a85",
    "slug": {
     "en": "zebulon",
+    "es": "zebulon",
     "pt": "zebulon"
    }
   },
@@ -4230,11 +4002,13 @@
    ],
    "name": {
     "en": "Lurleen",
+    "es": "Lurleen",
     "pt": "Lurleen"
    },
    "ref": "npc:a86",
    "slug": {
     "en": "lurleen",
+    "es": "lurleen",
     "pt": "lurleen"
    }
   },
@@ -4246,11 +4020,13 @@
    ],
    "name": {
     "en": "Erastus",
+    "es": "Erastus",
     "pt": "Erastus"
    },
    "ref": "npc:a87",
    "slug": {
     "en": "erastus",
+    "es": "erastus",
     "pt": "erastus"
    }
   },
@@ -4262,11 +4038,13 @@
    ],
    "name": {
     "en": "Otis",
+    "es": "Otis",
     "pt": "Otis"
    },
    "ref": "npc:a88",
    "slug": {
     "en": "otis",
+    "es": "otis",
     "pt": "otis"
    }
   },
@@ -4278,11 +4056,13 @@
    ],
    "name": {
     "en": "Hester",
+    "es": "Hester",
     "pt": "Hester"
    },
    "ref": "npc:a89",
    "slug": {
     "en": "hester",
+    "es": "hester",
     "pt": "hester"
    }
   },
@@ -4294,11 +4074,13 @@
    ],
    "name": {
     "en": "Dewey",
+    "es": "Dewey",
     "pt": "Dewey"
    },
    "ref": "npc:a90",
    "slug": {
     "en": "dewey",
+    "es": "dewey",
     "pt": "dewey"
    }
   },
@@ -4310,11 +4092,13 @@
    ],
    "name": {
     "en": "Opal",
+    "es": "Opal",
     "pt": "Opal"
    },
    "ref": "npc:a91",
    "slug": {
     "en": "opal",
+    "es": "opal",
     "pt": "opal"
    }
   },
@@ -4326,11 +4110,13 @@
    ],
    "name": {
     "en": "Burl",
+    "es": "Burl",
     "pt": "Burl"
    },
    "ref": "npc:a92",
    "slug": {
     "en": "burl",
+    "es": "burl",
     "pt": "burl"
    }
   },
@@ -4342,11 +4128,13 @@
    ],
    "name": {
     "en": "Bessie",
+    "es": "Bessie",
     "pt": "Bessie"
    },
    "ref": "npc:a95",
    "slug": {
     "en": "bessie",
+    "es": "bessie",
     "pt": "bessie"
    }
   },
@@ -4358,11 +4146,13 @@
    ],
    "name": {
     "en": "Hobart",
+    "es": "Hobart",
     "pt": "Hobart"
    },
    "ref": "npc:a96",
    "slug": {
     "en": "hobart",
+    "es": "hobart",
     "pt": "hobart"
    }
   },
@@ -4374,4049 +4164,4814 @@
    ],
    "name": {
     "en": "Jebidiah",
+    "es": "Jebidiah",
     "pt": "Jebidiah"
    },
    "ref": "npc:a98",
    "slug": {
     "en": "jebidiah",
+    "es": "jebidiah",
     "pt": "jebidiah"
    }
   },
   {
    "name": {
     "en": "Lever near East Nordha Mines",
+    "es": "Palanca cerca de Minas de Nordha Este",
     "pt": "Alavanca perto de Minas de Nordha Oriental"
    },
    "ref": "place:lever-2651",
    "slug": {
     "en": "lever-near-east-nordha-mines",
+    "es": "palanca-cerca-de-minas-de-nordha-este",
     "pt": "alavanca-perto-de-minas-de-nordha-oriental"
    },
    "summary": {
     "en": "A lever in East Nordha.",
+    "es": "Una palanca en Nordha Este.",
     "pt": "Uma alavanca em Nordha Oriental."
    }
   },
   {
    "name": {
     "en": "Lever near Royal Bridge",
+    "es": "Palanca cerca de Puente Real",
     "pt": "Alavanca perto de Ponte Real"
    },
    "ref": "place:lever-2877",
    "slug": {
     "en": "lever-near-royal-bridge",
+    "es": "palanca-cerca-de-puente-real",
     "pt": "alavanca-perto-de-ponte-real"
    },
    "summary": {
     "en": "A lever in Dorosam.",
+    "es": "Una palanca en Dorosam.",
     "pt": "Uma alavanca em Dorosam."
    }
   },
   {
    "name": {
     "en": "Lever near The Citadel",
+    "es": "Palanca cerca de La Ciudadela",
     "pt": "Alavanca perto de A Cidadela"
    },
    "ref": "place:lever-2917",
    "slug": {
     "en": "lever-near-the-citadel",
+    "es": "palanca-cerca-de-la-ciudadela",
     "pt": "alavanca-perto-de-a-cidadela"
    },
    "summary": {
     "en": "A lever in Nordha.",
+    "es": "Una palanca en Nordha.",
     "pt": "Uma alavanca em Nordha."
    }
   },
   {
    "name": {
     "en": "Goblin Cave Quest",
+    "es": "Misión de la Cueva de Trasgos",
     "pt": "Missão da Caverna dos Goblins"
    },
    "ref": "quest:q1",
    "slug": {
     "en": "goblin-cave-quest",
+    "es": "mision-de-la-cueva-de-trasgos",
     "pt": "missao-da-caverna-dos-goblins"
    }
   },
   {
    "name": {
     "en": "Annoying Quest",
+    "es": "Misión Molesta",
     "pt": "Missão Irritante"
    },
    "ref": "quest:q10",
    "slug": {
     "en": "annoying-quest",
+    "es": "mision-molesta",
     "pt": "missao-irritante"
    }
   },
   {
    "name": {
     "en": "Devil's Ingot",
+    "es": "Lingote del Diablo",
     "pt": "Barra do Diabo"
    },
    "ref": "quest:q100",
    "slug": {
     "en": "devil-s-ingot",
+    "es": "lingote-del-diablo",
     "pt": "barra-do-diabo"
    }
   },
   {
    "name": {
     "en": "Occultist Spy",
+    "es": "Espía Ocultista",
     "pt": "Espião Ocultista"
    },
    "ref": "quest:q1001",
    "slug": {
     "en": "occultist-spy",
+    "es": "espia-ocultista",
     "pt": "espiao-ocultista"
    }
   },
   {
    "name": {
     "en": "Delivery to Seraphina",
+    "es": "Entrega para Seraphina",
     "pt": "Entrega para Seraphina"
    },
    "ref": "quest:q1002",
    "slug": {
     "en": "delivery-to-seraphina",
+    "es": "entrega-para-seraphina",
     "pt": "entrega-para-seraphina"
    }
   },
   {
    "name": {
     "en": "Love Letter Delivery",
+    "es": "Entrega de Carta de Amor",
     "pt": "Entrega da Carta de Amor"
    },
    "ref": "quest:q1004",
    "slug": {
     "en": "love-letter-delivery",
+    "es": "entrega-de-carta-de-amor",
     "pt": "entrega-da-carta-de-amor"
    }
   },
   {
    "name": {
     "en": "A New Rat",
+    "es": "Una Nueva Rata",
     "pt": "Um Novo Rato"
    },
    "ref": "quest:q1008",
    "slug": {
     "en": "a-new-rat",
+    "es": "una-nueva-rata",
     "pt": "um-novo-rato"
    }
   },
   {
    "name": {
     "en": "Digger Cave Ingot",
+    "es": "Lingote de la Cueva de Diggers",
     "pt": "Barra da Caverna dos Diggers"
    },
    "ref": "quest:q101",
    "slug": {
     "en": "digger-cave-ingot",
+    "es": "lingote-de-la-cueva-de-diggers",
     "pt": "barra-da-caverna-dos-diggers"
    }
   },
   {
    "name": {
     "en": "Novel Hero",
+    "es": "Héroe de la Novela",
     "pt": "Herói do Romance"
    },
    "ref": "quest:q1010",
    "slug": {
     "en": "novel-hero",
+    "es": "heroe-de-la-novela",
     "pt": "heroi-do-romance"
    }
   },
   {
    "name": {
     "en": "Bad Ink Gatherer",
+    "es": "Recolector de Tinta Mala",
     "pt": "Coletor de Tinta Ruim"
    },
    "ref": "quest:q1013",
    "slug": {
     "en": "bad-ink-gatherer",
+    "es": "recolector-de-tinta-mala",
     "pt": "coletor-de-tinta-ruim"
    }
   },
   {
    "name": {
     "en": "Letter for Dewey",
+    "es": "Carta para Dewey",
     "pt": "Carta para Dewey"
    },
    "ref": "quest:q1014",
    "slug": {
     "en": "letter-for-dewey",
+    "es": "carta-para-dewey",
     "pt": "carta-para-dewey"
    }
   },
   {
    "name": {
     "en": "Bread Delivery",
+    "es": "Entrega de Pan",
     "pt": "Entrega de Pão"
    },
    "ref": "quest:q1016",
    "slug": {
     "en": "bread-delivery",
+    "es": "entrega-de-pan",
     "pt": "entrega-de-pao"
    }
   },
   {
    "name": {
     "en": "Family Rebound",
+    "es": "Reencuentro Familiar",
     "pt": "Reencontro Familiar"
    },
    "ref": "quest:q1018",
    "slug": {
     "en": "family-rebound",
+    "es": "reencuentro-familiar",
     "pt": "reencontro-familiar"
    }
   },
   {
    "name": {
     "en": "Amphitere's Treasure",
+    "es": "Tesoro del Amphitere",
     "pt": "Tesouro do Amphitere"
    },
    "ref": "quest:q102",
    "slug": {
     "en": "amphitere-s-treasure",
+    "es": "tesoro-del-amphitere",
     "pt": "tesouro-do-amphitere"
    }
   },
   {
    "name": {
     "en": "Potion Shipper",
+    "es": "Transportista de Pociones",
     "pt": "Entregador de Poções"
    },
    "ref": "quest:q1025",
    "slug": {
     "en": "potion-shipper",
+    "es": "transportista-de-pociones",
     "pt": "entregador-de-pocoes"
    }
   },
   {
    "name": {
     "en": "Deep Cave Ingot",
+    "es": "Lingote de la Cueva Profunda",
     "pt": "Lingote da Caverna Profunda"
    },
    "ref": "quest:q103",
    "slug": {
     "en": "deep-cave-ingot",
+    "es": "lingote-de-la-cueva-profunda",
     "pt": "lingote-da-caverna-profunda"
    }
   },
   {
    "name": {
     "en": "Drystan's Letter",
+    "es": "Carta de Drystan",
     "pt": "Carta de Drystan"
    },
    "ref": "quest:q1032",
    "slug": {
     "en": "drystan-s-letter",
+    "es": "carta-de-drystan",
     "pt": "carta-de-drystan"
    }
   },
   {
    "name": {
     "en": "Mountain Ingot",
+    "es": "Lingote de la Montaña",
     "pt": "Lingote da Montanha"
    },
    "ref": "quest:q104",
    "slug": {
     "en": "mountain-ingot",
+    "es": "lingote-de-la-montana",
     "pt": "lingote-da-montanha"
    }
   },
   {
    "name": {
     "en": "Wilfred's Gift",
+    "es": "Regalo de Wilfred",
     "pt": "Presente de Wilfred"
    },
    "ref": "quest:q1044",
    "slug": {
     "en": "wilfred-s-gift",
+    "es": "regalo-de-wilfred",
     "pt": "presente-de-wilfred"
    }
   },
   {
    "name": {
     "en": "Hero in Basile",
+    "es": "Héroe en Basile",
     "pt": "Herói em Basile"
    },
    "ref": "quest:q1047",
    "slug": {
     "en": "hero-in-basile",
+    "es": "heroe-en-basile",
     "pt": "heroi-em-basile"
    }
   },
   {
    "name": {
     "en": "Package for Elsie",
+    "es": "Paquete para Elsie",
     "pt": "Pacote para Elsie"
    },
    "ref": "quest:q1048",
    "slug": {
     "en": "package-for-elsie",
+    "es": "paquete-para-elsie",
     "pt": "pacote-para-elsie"
    }
   },
   {
    "name": {
     "en": "Eye Steel Ingot",
+    "es": "Lingote de Acero del Ojo",
     "pt": "Barra de Aço do Olho"
    },
    "ref": "quest:q105",
    "slug": {
     "en": "eye-steel-ingot",
+    "es": "lingote-de-acero-del-ojo",
     "pt": "barra-de-aco-do-olho"
    }
   },
   {
    "name": {
     "en": "Lunch Rescuer",
+    "es": "Rescatador del Almuerzo",
     "pt": "Resgatador do Almoço"
    },
    "ref": "quest:q1054",
    "slug": {
     "en": "lunch-rescuer",
+    "es": "rescatador-del-almuerzo",
     "pt": "resgatador-do-almoco"
    }
   },
   {
    "name": {
     "en": "Yseult's Mission",
+    "es": "Misión de Yseult",
     "pt": "Missão de Yseult"
    },
    "ref": "quest:q1057",
    "slug": {
     "en": "yseult-s-mission",
+    "es": "mision-de-yseult",
     "pt": "missao-de-yseult"
    }
   },
   {
    "name": {
     "en": "Blacksmith Assistant",
+    "es": "Asistente del Herrero",
     "pt": "Assistente do Ferreiro"
    },
    "ref": "quest:q1059",
    "slug": {
     "en": "blacksmith-assistant",
+    "es": "asistente-del-herrero",
     "pt": "assistente-do-ferreiro"
    }
   },
   {
    "name": {
     "en": "Old House Ingot",
+    "es": "Lingote de la Casa Vieja",
     "pt": "Lingote da Casa Antiga"
    },
    "ref": "quest:q106",
    "slug": {
     "en": "old-house-ingot",
+    "es": "lingote-de-la-casa-vieja",
     "pt": "lingote-da-casa-antiga"
    }
   },
   {
    "name": {
     "en": "General's Ingot",
+    "es": "Lingote del General",
     "pt": "Lingote do General"
    },
    "ref": "quest:q107",
    "slug": {
     "en": "general-s-ingot",
+    "es": "lingote-del-general",
     "pt": "lingote-do-general"
    }
   },
   {
    "name": {
     "en": "The Hat Task",
+    "es": "Tarea del Sombrero",
     "pt": "Tarefa do Chapéu"
    },
    "ref": "quest:q1077",
    "slug": {
     "en": "the-hat-task",
+    "es": "tarea-del-sombrero",
     "pt": "tarefa-do-chapeu"
    }
   },
   {
    "name": {
     "en": "Drystan's Grocery",
+    "es": "Provisiones de Drystan",
     "pt": "Mantimentos de Drystan"
    },
    "ref": "quest:q1079",
    "slug": {
     "en": "drystan-s-grocery",
+    "es": "provisiones-de-drystan",
     "pt": "mantimentos-de-drystan"
    }
   },
   {
    "name": {
     "en": "The Grave Ingot",
+    "es": "El Lingote de la Tumba",
     "pt": "O Lingote da Tumba"
    },
    "ref": "quest:q108",
    "slug": {
     "en": "the-grave-ingot",
+    "es": "el-lingote-de-la-tumba",
     "pt": "o-lingote-da-tumba"
    }
   },
   {
    "name": {
     "en": "Boat Tailor",
+    "es": "Sastre del Barco",
     "pt": "Alfaiate do Barco"
    },
    "ref": "quest:q1080",
    "slug": {
     "en": "boat-tailor",
+    "es": "sastre-del-barco",
     "pt": "alfaiate-do-barco"
    }
   },
   {
    "name": {
     "en": "Toe Hunt",
+    "es": "Caza de Dedos",
     "pt": "Caça aos Dedos"
    },
    "ref": "quest:q1081",
    "slug": {
     "en": "toe-hunt",
+    "es": "caza-de-dedos",
     "pt": "caca-aos-dedos"
    }
   },
   {
    "name": {
     "en": "Good Ink Gatherer",
+    "es": "Buen Recolector de Tinta",
     "pt": "Bom Coletor de Tinta"
    },
    "ref": "quest:q1083",
    "slug": {
     "en": "good-ink-gatherer",
+    "es": "buen-recolector-de-tinta",
     "pt": "bom-coletor-de-tinta"
    }
   },
   {
    "name": {
     "en": "Buried Tin Ingot",
+    "es": "Lingote de Estaño Enterrado",
     "pt": "Lingote de Estanho Enterrado"
    },
    "ref": "quest:q109",
    "slug": {
     "en": "buried-tin-ingot",
+    "es": "lingote-de-estano-enterrado",
     "pt": "lingote-de-estanho-enterrado"
    }
   },
   {
    "name": {
     "en": "Old Lighthouse Quest",
+    "es": "Misión del Faro Viejo",
     "pt": "Missão do Farol Antigo"
    },
    "ref": "quest:q11",
    "slug": {
     "en": "old-lighthouse-quest",
+    "es": "mision-del-faro-viejo",
     "pt": "missao-do-farol-antigo"
    }
   },
   {
    "name": {
     "en": "Frozen Ingot",
+    "es": "Lingote Congelado",
     "pt": "Lingote Congelado"
    },
    "ref": "quest:q110",
    "slug": {
     "en": "frozen-ingot",
+    "es": "lingote-congelado",
     "pt": "lingote-congelado"
    }
   },
   {
    "name": {
     "en": "A Grilled Cheese",
+    "es": "Un Queso a la Parrilla",
     "pt": "Um Queijo Grelhado"
    },
    "ref": "quest:q1100",
    "slug": {
     "en": "a-grilled-cheese",
+    "es": "un-queso-a-la-parrilla",
     "pt": "um-queijo-grelhado"
    }
   },
   {
    "name": {
     "en": "An Apple Pie",
+    "es": "Un Pastel de Manzana",
     "pt": "Uma Torta de Maçã"
    },
    "ref": "quest:q1101",
    "slug": {
     "en": "an-apple-pie",
+    "es": "un-pastel-de-manzana",
     "pt": "uma-torta-de-maca"
    }
   },
   {
    "name": {
     "en": "A Fish Steak",
+    "es": "Un Filete de Pescado",
     "pt": "Um Filé de Peixe"
    },
    "ref": "quest:q1102",
    "slug": {
     "en": "a-fish-steak",
+    "es": "un-filete-de-pescado",
     "pt": "um-file-de-peixe"
    }
   },
   {
    "name": {
     "en": "A Spicy Stew",
+    "es": "Un Estofado Picante",
     "pt": "Um Ensopado Picante"
    },
    "ref": "quest:q1103",
    "slug": {
     "en": "a-spicy-stew",
+    "es": "un-estofado-picante",
     "pt": "um-ensopado-picante"
    }
   },
   {
    "name": {
     "en": "Licensed Chef",
+    "es": "Chef Licenciado",
     "pt": "Chef Licenciado"
    },
    "ref": "quest:q1104",
    "slug": {
     "en": "licensed-chef",
+    "es": "chef-licenciado",
     "pt": "chef-licenciado"
    }
   },
   {
    "name": {
     "en": "Drunkard's Gift",
+    "es": "Regalo del Borracho",
     "pt": "Presente do Bêbado"
    },
    "ref": "quest:q1106",
    "slug": {
     "en": "drunkard-s-gift",
+    "es": "regalo-del-borracho",
     "pt": "presente-do-bebado"
    }
   },
   {
    "name": {
     "en": "Stairs Ingot",
+    "es": "Lingote de Escaleras",
     "pt": "Lingote das Escadas"
    },
    "ref": "quest:q111",
    "slug": {
     "en": "stairs-ingot",
+    "es": "lingote-de-escaleras",
     "pt": "lingote-das-escadas"
    }
   },
   {
    "name": {
     "en": "Lantern Rescued",
+    "es": "Linterna Rescatada",
     "pt": "Lanterna Resgatada"
    },
    "ref": "quest:q1112",
    "slug": {
     "en": "lantern-rescued",
+    "es": "linterna-rescatada",
     "pt": "lanterna-resgatada"
    }
   },
   {
    "name": {
     "en": "A Clue Found",
+    "es": "Una Pista Encontrada",
     "pt": "Uma Pista Encontrada"
    },
    "ref": "quest:q1115",
    "slug": {
     "en": "a-clue-found",
+    "es": "una-pista-encontrada",
     "pt": "uma-pista-encontrada"
    }
   },
   {
    "name": {
     "en": "Spellbook Hero",
+    "es": "Héroe del Grimorio",
     "pt": "Herói do Grimório"
    },
    "ref": "quest:q1118",
    "slug": {
     "en": "spellbook-hero",
+    "es": "heroe-del-grimorio",
     "pt": "heroi-do-grimorio"
    }
   },
   {
    "name": {
     "en": "Waterfall Ingot",
+    "es": "Lingote de la Cascada",
     "pt": "Lingote da Cachoeira"
    },
    "ref": "quest:q112",
    "slug": {
     "en": "waterfall-ingot",
+    "es": "lingote-de-la-cascada",
     "pt": "lingote-da-cachoeira"
    }
   },
   {
    "name": {
     "en": "Gil and the Key",
+    "es": "Gil y la Llave",
     "pt": "Gil e a Chave"
    },
    "ref": "quest:q1121",
    "slug": {
     "en": "gil-and-the-key",
+    "es": "gil-y-la-llave",
     "pt": "gil-e-a-chave"
    }
   },
   {
    "name": {
     "en": "Food Sample",
+    "es": "Muestra de Comida",
     "pt": "Amostra de Comida"
    },
    "ref": "quest:q1124",
    "slug": {
     "en": "food-sample",
+    "es": "muestra-de-comida",
     "pt": "amostra-de-comida"
    }
   },
   {
    "name": {
     "en": "Papaya Reward",
+    "es": "Recompensa de Papaya",
     "pt": "Recompensa de Papaia"
    },
    "ref": "quest:q1128",
    "slug": {
     "en": "papaya-reward",
+    "es": "recompensa-de-papaya",
     "pt": "recompensa-de-papaia"
    }
   },
   {
    "name": {
     "en": "Smith Apprentice",
+    "es": "Aprendiz de Herrero",
     "pt": "Aprendiz de Ferreiro"
    },
    "ref": "quest:q1129",
    "slug": {
     "en": "smith-apprentice",
+    "es": "aprendiz-de-herrero",
     "pt": "aprendiz-de-ferreiro"
    }
   },
   {
    "name": {
     "en": "General's Key",
+    "es": "Llave del General",
     "pt": "Chave do General"
    },
    "ref": "quest:q113",
    "slug": {
     "en": "general-s-key",
+    "es": "llave-del-general",
     "pt": "chave-do-general"
    }
   },
   {
    "name": {
     "en": "El Chad's Trust",
+    "es": "Confianza de El Chad",
     "pt": "Confiança do El Chad"
    },
    "ref": "quest:q1131",
    "slug": {
     "en": "el-chad-s-trust",
+    "es": "confianza-de-el-chad",
     "pt": "confianca-do-el-chad"
    }
   },
   {
    "name": {
     "en": "Nick's Ingot",
+    "es": "Lingote de Nick",
     "pt": "Barra de Nick"
    },
    "ref": "quest:q114",
    "slug": {
     "en": "nick-s-ingot",
+    "es": "lingote-de-nick",
     "pt": "barra-de-nick"
    }
   },
   {
    "name": {
     "en": "Caravan Helper",
+    "es": "Ayudante de la Caravana",
     "pt": "Ajudante da Caravana"
    },
    "ref": "quest:q1143",
    "slug": {
     "en": "caravan-helper",
+    "es": "ayudante-de-la-caravana",
     "pt": "ajudante-da-caravana"
    }
   },
   {
    "name": {
     "en": "Farmer's Friend",
+    "es": "Amigo del Granjero",
     "pt": "Amigo do Fazendeiro"
    },
    "ref": "quest:q1146",
    "slug": {
     "en": "farmer-s-friend",
+    "es": "amigo-del-granjero",
     "pt": "amigo-do-fazendeiro"
    }
   },
   {
    "name": {
     "en": "Trader's Ingot",
+    "es": "Lingote del Mercader",
     "pt": "Barra do Mercador"
    },
    "ref": "quest:q115",
    "slug": {
     "en": "trader-s-ingot",
+    "es": "lingote-del-mercader",
     "pt": "barra-do-mercador"
    }
   },
   {
    "name": {
     "en": "Rock Delivery",
+    "es": "Entrega de Rocas",
     "pt": "Entrega de Pedras"
    },
    "ref": "quest:q1153",
    "slug": {
     "en": "rock-delivery",
+    "es": "entrega-de-rocas",
     "pt": "entrega-de-pedras"
    }
   },
   {
    "name": {
     "en": "Wood for Outlaws",
+    "es": "Madera para Forajidos",
     "pt": "Madeira para Foras da Lei"
    },
    "ref": "quest:q1158",
    "slug": {
     "en": "wood-for-outlaws",
+    "es": "madera-para-forajidos",
     "pt": "madeira-para-foras-da-lei"
    }
   },
   {
    "name": {
     "en": "El Chad's Ingot",
+    "es": "Lingote de El Chad",
     "pt": "Barra do El Chad"
    },
    "ref": "quest:q116",
    "slug": {
     "en": "el-chad-s-ingot",
+    "es": "lingote-de-el-chad",
     "pt": "barra-do-el-chad"
    }
   },
   {
    "name": {
     "en": "Papaya Reward",
+    "es": "Recompensa de Papaya",
     "pt": "Recompensa de Papaia"
    },
    "ref": "quest:q1166",
    "slug": {
     "en": "papaya-reward-q1166",
+    "es": "recompensa-de-papaya-q1166",
     "pt": "recompensa-de-papaia-q1166"
    }
   },
   {
    "name": {
     "en": "Satisfied Fan",
+    "es": "Fan Satisfecha",
     "pt": "Fã Satisfeita"
    },
    "ref": "quest:q1169",
    "slug": {
     "en": "satisfied-fan",
+    "es": "fan-satisfecha",
     "pt": "fa-satisfeita"
    }
   },
   {
    "name": {
     "en": "Prison Ingot",
+    "es": "Lingote de la Prisión",
     "pt": "Barra da Prisão"
    },
    "ref": "quest:q117",
    "slug": {
     "en": "prison-ingot",
+    "es": "lingote-de-la-prision",
     "pt": "barra-da-prisao"
    }
   },
   {
    "name": {
     "en": "Elmo's Gift",
+    "es": "Regalo de Elmo",
     "pt": "Presente de Elmo"
    },
    "ref": "quest:q118",
    "slug": {
     "en": "elmo-s-gift",
+    "es": "regalo-de-elmo",
     "pt": "presente-de-elmo"
    }
   },
   {
    "name": {
     "en": "Tomb Ornate Chest",
+    "es": "Cofre Ornamentado de la Tumba",
     "pt": "Baú Ornamentado da Tumba"
    },
    "ref": "quest:q119",
    "slug": {
     "en": "tomb-ornate-chest",
+    "es": "cofre-ornamentado-de-la-tumba",
     "pt": "bau-ornamentado-da-tumba"
    }
   },
   {
    "name": {
     "en": "The Ghost Trapper",
+    "es": "El Cazador de Fantasmas",
     "pt": "O Caçador de Fantasmas"
    },
    "ref": "quest:q1195",
    "slug": {
     "en": "the-ghost-trapper",
+    "es": "el-cazador-de-fantasmas",
     "pt": "o-cacador-de-fantasmas"
    }
   },
   {
    "name": {
     "en": "Ghost Exchange",
+    "es": "Intercambio de Fantasma",
     "pt": "Troca de Fantasma"
    },
    "ref": "quest:q1198",
    "slug": {
     "en": "ghost-exchange",
+    "es": "intercambio-de-fantasma",
     "pt": "troca-de-fantasma"
    }
   },
   {
    "name": {
     "en": "Thadeu's Clothes",
+    "es": "Ropas de Thadeu",
     "pt": "Roupas de Thadeu"
    },
    "ref": "quest:q12",
    "slug": {
     "en": "thadeu-s-clothes",
+    "es": "ropas-de-thadeu",
     "pt": "roupas-de-thadeu"
    }
   },
   {
    "name": {
     "en": "Hidden Desert Ingot",
+    "es": "Lingote Oculto del Desierto",
     "pt": "Lingote Oculto do Deserto"
    },
    "ref": "quest:q120",
    "slug": {
     "en": "hidden-desert-ingot",
+    "es": "lingote-oculto-del-desierto",
     "pt": "lingote-oculto-do-deserto"
    }
   },
   {
    "name": {
     "en": "Farm Saver",
+    "es": "Salvador de la Granja",
     "pt": "Salvador da Fazenda"
    },
    "ref": "quest:q1203",
    "slug": {
     "en": "farm-saver",
+    "es": "salvador-de-la-granja",
     "pt": "salvador-da-fazenda"
    }
   },
   {
    "name": {
     "en": "Friend of a Witch",
+    "es": "Amigo de una Bruja",
     "pt": "Amigo de uma Bruxa"
    },
    "ref": "quest:q1205",
    "slug": {
     "en": "friend-of-a-witch",
+    "es": "amigo-de-una-bruja",
     "pt": "amigo-de-uma-bruxa"
    }
   },
   {
    "name": {
     "en": "Church Investigated",
+    "es": "Iglesia Investigada",
     "pt": "Igreja Investigada"
    },
    "ref": "quest:q1206",
    "slug": {
     "en": "church-investigated",
+    "es": "iglesia-investigada",
     "pt": "igreja-investigada"
    }
   },
   {
    "name": {
     "en": "Champion Defeated",
+    "es": "Campeón Derrotado",
     "pt": "Campeão Derrotado"
    },
    "ref": "quest:q1208",
    "slug": {
     "en": "champion-defeated",
+    "es": "campeon-derrotado",
     "pt": "campeao-derrotado"
    }
   },
   {
    "name": {
     "en": "Loke Avenger",
+    "es": "Vengador de Loke",
     "pt": "Vingador de Loke"
    },
    "ref": "quest:q1209",
    "slug": {
     "en": "loke-avenger",
+    "es": "vengador-de-loke",
     "pt": "vingador-de-loke"
    }
   },
   {
    "name": {
     "en": "Dead Man's Ingot",
+    "es": "Lingote del Hombre Muerto",
     "pt": "Lingote do Homem Morto"
    },
    "ref": "quest:q121",
    "slug": {
     "en": "dead-man-s-ingot-q121",
+    "es": "lingote-del-hombre-muerto-q121",
     "pt": "lingote-do-homem-morto-q121"
    }
   },
   {
    "name": {
     "en": "Balder Hunt",
+    "es": "Cacería de Balder",
     "pt": "Caçada de Balder"
    },
    "ref": "quest:q1210",
    "slug": {
     "en": "balder-hunt",
+    "es": "caceria-de-balder",
     "pt": "cacada-de-balder"
    }
   },
   {
    "name": {
     "en": "Brean's Worries",
+    "es": "Preocupaciones de Brean",
     "pt": "Preocupações de Brean"
    },
    "ref": "quest:q1212",
    "slug": {
     "en": "brean-s-worries",
+    "es": "preocupaciones-de-brean",
     "pt": "preocupacoes-de-brean"
    }
   },
   {
    "name": {
     "en": "Morrigan's Gift",
+    "es": "Regalo de Morrigan",
     "pt": "Presente de Morrigan"
    },
    "ref": "quest:q1216",
    "slug": {
     "en": "morrigan-s-gift",
+    "es": "regalo-de-morrigan",
     "pt": "presente-de-morrigan"
    }
   },
   {
    "name": {
     "en": "A Blessed Reward",
+    "es": "Una Recompensa Bendita",
     "pt": "Uma Recompensa Abençoada"
    },
    "ref": "quest:q1219",
    "slug": {
     "en": "a-blessed-reward",
+    "es": "una-recompensa-bendita",
     "pt": "uma-recompensa-abencoada"
    }
   },
   {
    "name": {
     "en": "Tomb's Ingot",
+    "es": "Lingote de la Tumba",
     "pt": "Lingote da Tumba"
    },
    "ref": "quest:q122",
    "slug": {
     "en": "tomb-s-ingot",
+    "es": "lingote-de-la-tumba",
     "pt": "lingote-da-tumba"
    }
   },
   {
    "name": {
     "en": "A Ghost Meeting",
+    "es": "Encuentro con un Fantasma",
     "pt": "Encontro com um Fantasma"
    },
    "ref": "quest:q1224",
    "slug": {
     "en": "a-ghost-meeting",
+    "es": "encuentro-con-un-fantasma",
     "pt": "encontro-com-um-fantasma"
    }
   },
   {
    "name": {
     "en": "Terrible Service",
+    "es": "Servicio Terrible",
     "pt": "Serviço Terrível"
    },
    "ref": "quest:q1226",
    "slug": {
     "en": "terrible-service",
+    "es": "servicio-terrible",
     "pt": "servico-terrivel"
    }
   },
   {
    "name": {
     "en": "Perry's School Gift",
+    "es": "Regalo Escolar de Perry",
     "pt": "Presente Escolar de Perry"
    },
    "ref": "quest:q1229",
    "slug": {
     "en": "perry-s-school-gift",
+    "es": "regalo-escolar-de-perry",
     "pt": "presente-escolar-de-perry"
    }
   },
   {
    "name": {
     "en": "Rock Core One",
+    "es": "Núcleo de Roca Uno",
     "pt": "Núcleo de Pedra Um"
    },
    "ref": "quest:q123",
    "slug": {
     "en": "rock-core-one",
+    "es": "nucleo-de-roca-uno",
     "pt": "nucleo-de-pedra-um"
    }
   },
   {
    "name": {
     "en": "Vee's School Gift",
+    "es": "Regalo Escolar de Vee",
     "pt": "Presente Escolar de Vee"
    },
    "ref": "quest:q1230",
    "slug": {
     "en": "vee-s-school-gift",
+    "es": "regalo-escolar-de-vee",
     "pt": "presente-escolar-de-vee"
    }
   },
   {
    "name": {
     "en": "Dee's School Gift",
+    "es": "Regalo Escolar de Dee",
     "pt": "Presente Escolar de Dee"
    },
    "ref": "quest:q1231",
    "slug": {
     "en": "dee-s-school-gift",
+    "es": "regalo-escolar-de-dee",
     "pt": "presente-escolar-de-dee"
    }
   },
   {
    "name": {
     "en": "Teacher's Joy",
+    "es": "Alegría de la Maestra",
     "pt": "Alegria da Professora"
    },
    "ref": "quest:q1235",
    "slug": {
     "en": "teacher-s-joy",
+    "es": "alegria-de-la-maestra",
     "pt": "alegria-da-professora"
    }
   },
   {
    "name": {
     "en": "Tooth and Glory",
+    "es": "Diente y Gloria",
     "pt": "Dente e Glória"
    },
    "ref": "quest:q1238",
    "slug": {
     "en": "tooth-and-glory",
+    "es": "diente-y-gloria",
     "pt": "dente-e-gloria"
    }
   },
   {
    "name": {
     "en": "Rock Core Key",
+    "es": "Llave del Núcleo de Roca",
     "pt": "Chave do Núcleo de Pedra"
    },
    "ref": "quest:q124",
    "slug": {
     "en": "rock-core-key",
+    "es": "llave-del-nucleo-de-roca",
     "pt": "chave-do-nucleo-de-pedra"
    }
   },
   {
    "name": {
     "en": "Journeymen",
+    "es": "Jornaleros",
     "pt": "Jornaleiros"
    },
    "ref": "quest:q1244",
    "slug": {
     "en": "journeymen",
+    "es": "jornaleros",
     "pt": "jornaleiros"
    }
   },
   {
    "name": {
     "en": "Rock Core Three",
+    "es": "Núcleo de Roca Tres",
     "pt": "Núcleo de Pedra Três"
    },
    "ref": "quest:q125",
    "slug": {
     "en": "rock-core-three",
+    "es": "nucleo-de-roca-tres",
     "pt": "nucleo-de-pedra-tres"
    }
   },
   {
    "name": {
     "en": "Helped in Heat",
+    "es": "Ayudaste en el Calor",
     "pt": "Ajudou no Calor"
    },
    "ref": "quest:q1252",
    "slug": {
     "en": "helped-in-heat",
+    "es": "ayudaste-en-el-calor",
     "pt": "ajudou-no-calor"
    }
   },
   {
    "name": {
     "en": "Vecan's Hidden Ingot",
+    "es": "Lingote Escondido de Vecan",
     "pt": "Lingote Escondido de Vecan"
    },
    "ref": "quest:q126",
    "slug": {
     "en": "vecan-s-hidden-ingot",
+    "es": "lingote-escondido-de-vecan",
     "pt": "lingote-escondido-de-vecan"
    }
   },
   {
    "name": {
     "en": "Tink's Reward",
+    "es": "Recompensa de Tink",
     "pt": "Recompensa de Tink"
    },
    "ref": "quest:q1269",
    "slug": {
     "en": "tink-s-reward",
+    "es": "recompensa-de-tink",
     "pt": "recompensa-de-tink"
    }
   },
   {
    "name": {
     "en": "Rock Core Four",
+    "es": "Núcleo de Roca Cuatro",
     "pt": "Núcleo de Pedra Quatro"
    },
    "ref": "quest:q127",
    "slug": {
     "en": "rock-core-four",
+    "es": "nucleo-de-roca-cuatro",
     "pt": "nucleo-de-pedra-quatro"
    }
   },
   {
    "name": {
     "en": "Sushi to Sushi",
+    "es": "Sushi para Sushi",
     "pt": "Sushi para Sushi"
    },
    "ref": "quest:q1274",
    "slug": {
     "en": "sushi-to-sushi",
+    "es": "sushi-para-sushi",
     "pt": "sushi-para-sushi"
    }
   },
   {
    "name": {
     "en": "Gourmand's Cat",
+    "es": "Gato del Gourmet",
     "pt": "Gato do Gourmet"
    },
    "ref": "quest:q1276",
    "slug": {
     "en": "gourmand-s-cat",
+    "es": "gato-del-gourmet",
     "pt": "gato-do-gourmet"
    }
   },
   {
    "name": {
     "en": "Aurora's Gift",
+    "es": "Regalo de Aurora",
     "pt": "Presente de Aurora"
    },
    "ref": "quest:q1277",
    "slug": {
     "en": "aurora-s-gift",
+    "es": "regalo-de-aurora",
     "pt": "presente-de-aurora"
    }
   },
   {
    "name": {
     "en": "General's Cat",
+    "es": "Gato del General",
     "pt": "Gato do General"
    },
    "ref": "quest:q1279",
    "slug": {
     "en": "general-s-cat",
+    "es": "gato-del-general",
     "pt": "gato-do-general"
    }
   },
   {
    "name": {
     "en": "Rock Core Five",
+    "es": "Núcleo de Roca Cinco",
     "pt": "Núcleo de Pedra Cinco"
    },
    "ref": "quest:q128",
    "slug": {
     "en": "rock-core-five",
+    "es": "nucleo-de-roca-cinco",
     "pt": "nucleo-de-pedra-cinco"
    }
   },
   {
    "name": {
     "en": "Baron's Cat",
+    "es": "El Gato del Barón",
     "pt": "O Gato do Barão"
    },
    "ref": "quest:q1282",
    "slug": {
     "en": "baron-s-cat",
+    "es": "el-gato-del-baron",
     "pt": "o-gato-do-barao"
    }
   },
   {
    "name": {
     "en": "Millen's Idea",
+    "es": "Idea de Millen",
     "pt": "Ideia de Millen"
    },
    "ref": "quest:q1283",
    "slug": {
     "en": "millen-s-idea",
+    "es": "idea-de-millen",
     "pt": "ideia-de-millen"
    }
   },
   {
    "name": {
     "en": "Jon's Idea",
+    "es": "Idea de Jon",
     "pt": "Ideia de Jon"
    },
    "ref": "quest:q1286",
    "slug": {
     "en": "jon-s-idea",
+    "es": "idea-de-jon",
     "pt": "ideia-de-jon"
    }
   },
   {
    "name": {
     "en": "Karmac's Idea",
+    "es": "Idea de Karmac",
     "pt": "Ideia de Karmac"
    },
    "ref": "quest:q1289",
    "slug": {
     "en": "karmac-s-idea",
+    "es": "idea-de-karmac",
     "pt": "ideia-de-karmac"
    }
   },
   {
    "name": {
     "en": "Rock Core Six",
+    "es": "Núcleo de Roca Seis",
     "pt": "Núcleo de Pedra Seis"
    },
    "ref": "quest:q129",
    "slug": {
     "en": "rock-core-six",
+    "es": "nucleo-de-roca-seis",
     "pt": "nucleo-de-pedra-seis"
    }
   },
   {
    "name": {
     "en": "Hagar Sample",
+    "es": "Muestra de Hagar",
     "pt": "Amostra de Hagar"
    },
    "ref": "quest:q1296",
    "slug": {
     "en": "hagar-sample",
+    "es": "muestra-de-hagar",
     "pt": "amostra-de-hagar"
    }
   },
   {
    "name": {
     "en": "Arming Outlaws",
+    "es": "Armando a los Forajidos",
     "pt": "Armando os Foras da Lei"
    },
    "ref": "quest:q1297",
    "slug": {
     "en": "arming-outlaws",
+    "es": "armando-a-los-forajidos",
     "pt": "armando-os-foras-da-lei"
    }
   },
   {
    "name": {
     "en": "Lost Herbs",
+    "es": "Hierbas Perdidas",
     "pt": "Ervas Perdidas"
    },
    "ref": "quest:q13",
    "slug": {
     "en": "lost-herbs",
+    "es": "hierbas-perdidas",
     "pt": "ervas-perdidas"
    }
   },
   {
    "name": {
     "en": "Tower Gem",
+    "es": "Gema de la Torre",
     "pt": "Gema da Torre"
    },
    "ref": "quest:q130",
    "slug": {
     "en": "tower-gem",
+    "es": "gema-de-la-torre",
     "pt": "gema-da-torre"
    }
   },
   {
    "name": {
     "en": "Cooking for Outlaws",
+    "es": "Cocinando para Forajidos",
     "pt": "Cozinhando para Foras da Lei"
    },
    "ref": "quest:q1301",
    "slug": {
     "en": "cooking-for-outlaws",
+    "es": "cocinando-para-forajidos",
     "pt": "cozinhando-para-foras-da-lei"
    }
   },
   {
    "name": {
     "en": "Feeding Outlaws",
+    "es": "Alimentando Forajidos",
     "pt": "Alimentando Foras da Lei"
    },
    "ref": "quest:q1302",
    "slug": {
     "en": "feeding-outlaws",
+    "es": "alimentando-forajidos",
     "pt": "alimentando-foras-da-lei"
    }
   },
   {
    "name": {
     "en": "Spider Iron Ingot",
+    "es": "Lingote de Hierro de la Araña",
     "pt": "Barra de Ferro da Aranha"
    },
    "ref": "quest:q131",
    "slug": {
     "en": "spider-iron-ingot",
+    "es": "lingote-de-hierro-de-la-arana",
     "pt": "barra-de-ferro-da-aranha"
    }
   },
   {
    "name": {
     "en": "Monastery Cave Ingot",
+    "es": "Lingote de la Cueva del Monasterio",
     "pt": "Lingote da Caverna do Monastério"
    },
    "ref": "quest:q132",
    "slug": {
     "en": "monastery-cave-ingot",
+    "es": "lingote-de-la-cueva-del-monasterio",
     "pt": "lingote-da-caverna-do-monasterio"
    }
   },
   {
    "name": {
     "en": "Constructing for Outlaws",
+    "es": "Construyendo para Forajidos",
     "pt": "Construindo para Foras da Lei"
    },
    "ref": "quest:q1321",
    "slug": {
     "en": "constructing-for-outlaws",
+    "es": "construyendo-para-forajidos",
     "pt": "construindo-para-foras-da-lei"
    }
   },
   {
    "name": {
     "en": "Gear for Outlaws",
+    "es": "Equipo para Forajidos",
     "pt": "Equipamento para Foras da Lei"
    },
    "ref": "quest:q1322",
    "slug": {
     "en": "gear-for-outlaws",
+    "es": "equipo-para-forajidos",
     "pt": "equipamento-para-foras-da-lei"
    }
   },
   {
    "name": {
     "en": "Smith's Iron Ingot",
+    "es": "Lingote de Hierro del Herrero",
     "pt": "Lingote de Ferro do Ferreiro"
    },
    "ref": "quest:q133",
    "slug": {
     "en": "smith-s-iron-ingot",
+    "es": "lingote-de-hierro-del-herrero",
     "pt": "lingote-de-ferro-do-ferreiro"
    }
   },
   {
    "name": {
     "en": "Smith's Knife Part One",
+    "es": "Cuchillo del Herrero Parte Uno",
     "pt": "Faca do Ferreiro Parte Um"
    },
    "ref": "quest:q134",
    "slug": {
     "en": "smith-s-knife-part-one",
+    "es": "cuchillo-del-herrero-parte-uno",
     "pt": "faca-do-ferreiro-parte-um"
    }
   },
   {
    "name": {
     "en": "Smith's Knife Part One",
+    "es": "Cuchillo del Herrero Parte Uno",
     "pt": "Faca do Ferreiro Parte Um"
    },
    "ref": "quest:q135",
    "slug": {
     "en": "smith-s-knife-part-one-q135",
+    "es": "cuchillo-del-herrero-parte-uno-q135",
     "pt": "faca-do-ferreiro-parte-um-q135"
    }
   },
   {
    "name": {
     "en": "Spider Mound Ingot",
+    "es": "Lingote del Montículo de Arañas",
     "pt": "Lingote do Monte das Aranhas"
    },
    "ref": "quest:q136",
    "slug": {
     "en": "spider-mound-ingot",
+    "es": "lingote-del-monticulo-de-aranas",
     "pt": "lingote-do-monte-das-aranhas"
    }
   },
   {
    "name": {
     "en": "Mausoleum Rat Chest",
+    "es": "Cofre de la Rata del Mausoleo",
     "pt": "Baú do Rato do Mausoléu"
    },
    "ref": "quest:q137",
    "slug": {
     "en": "mausoleum-rat-chest",
+    "es": "cofre-de-la-rata-del-mausoleo",
     "pt": "bau-do-rato-do-mausoleu"
    }
   },
   {
    "name": {
     "en": "Labyrinth Chest",
+    "es": "Cofre del Laberinto",
     "pt": "Baú do Labirinto"
    },
    "ref": "quest:q138",
    "slug": {
     "en": "labyrinth-chest",
+    "es": "cofre-del-laberinto",
     "pt": "bau-do-labirinto"
    }
   },
   {
    "name": {
     "en": "Church Tower Chest",
+    "es": "Cofre de la Torre de la Iglesia",
     "pt": "Baú da Torre da Igreja"
    },
    "ref": "quest:q139",
    "slug": {
     "en": "church-tower-chest",
+    "es": "cofre-de-la-torre-de-la-iglesia",
     "pt": "bau-da-torre-da-igreja"
    }
   },
   {
    "name": {
     "en": "Silver Dagger Chest",
+    "es": "Cofre de Daga de Plata",
     "pt": "Baú da Adaga de Prata"
    },
    "ref": "quest:q14",
    "slug": {
     "en": "silver-dagger-chest",
+    "es": "cofre-de-daga-de-plata",
     "pt": "bau-da-adaga-de-prata"
    }
   },
   {
    "name": {
     "en": "Occult Charm Chest",
+    "es": "Cofre del Amuleto Oculto",
     "pt": "Baú do Amuleto Oculto"
    },
    "ref": "quest:q140",
    "slug": {
     "en": "occult-charm-chest",
+    "es": "cofre-del-amuleto-oculto",
     "pt": "bau-do-amuleto-oculto"
    }
   },
   {
    "name": {
     "en": "Church Final Chest 1",
+    "es": "Cofre Final de la Iglesia 1",
     "pt": "Baú Final da Igreja 1"
    },
    "ref": "quest:q141",
    "slug": {
     "en": "church-final-chest-1",
+    "es": "cofre-final-de-la-iglesia-1",
     "pt": "bau-final-da-igreja-1"
    }
   },
   {
    "name": {
     "en": "Church Final Chest 2",
+    "es": "Cofre Final de la Iglesia 2",
     "pt": "Baú Final da Igreja 2"
    },
    "ref": "quest:q142",
    "slug": {
     "en": "church-final-chest-2",
+    "es": "cofre-final-de-la-iglesia-2",
     "pt": "bau-final-da-igreja-2"
    }
   },
   {
    "name": {
     "en": "Ghost Tower Chest",
+    "es": "Cofre de la Torre Fantasma",
     "pt": "Baú da Torre Fantasma"
    },
    "ref": "quest:q143",
    "slug": {
     "en": "ghost-tower-chest",
+    "es": "cofre-de-la-torre-fantasma",
     "pt": "bau-da-torre-fantasma"
    }
   },
   {
    "name": {
     "en": "Ghost Cellar Chest",
+    "es": "Cofre del Sótano Fantasma",
     "pt": "Baú da Adega Fantasma"
    },
    "ref": "quest:q144",
    "slug": {
     "en": "ghost-cellar-chest",
+    "es": "cofre-del-sotano-fantasma",
     "pt": "bau-da-adega-fantasma"
    }
   },
   {
    "name": {
     "en": "Ghost Ingot Chest",
+    "es": "Cofre del Lingote Fantasma",
     "pt": "Baú do Lingote Fantasma"
    },
    "ref": "quest:q145",
    "slug": {
     "en": "ghost-ingot-chest",
+    "es": "cofre-del-lingote-fantasma",
     "pt": "bau-do-lingote-fantasma"
    }
   },
   {
    "name": {
     "en": "Heart of the Tree",
+    "es": "Corazón del Árbol",
     "pt": "Coração da Árvore"
    },
    "ref": "quest:q146",
    "slug": {
     "en": "heart-of-the-tree",
+    "es": "corazon-del-arbol",
     "pt": "coracao-da-arvore"
    }
   },
   {
    "name": {
     "en": "Outlaw Chest",
+    "es": "Cofre de los Forajidos",
     "pt": "Baú dos Fora da Lei"
    },
    "ref": "quest:q147",
    "slug": {
     "en": "outlaw-chest",
+    "es": "cofre-de-los-forajidos",
     "pt": "bau-dos-fora-da-lei"
    }
   },
   {
    "name": {
     "en": "Ghost House Chest",
+    "es": "Cofre de la Casa Fantasma",
     "pt": "Baú da Casa Fantasma"
    },
    "ref": "quest:q148",
    "slug": {
     "en": "ghost-house-chest",
+    "es": "cofre-de-la-casa-fantasma",
     "pt": "bau-da-casa-fantasma"
    }
   },
   {
    "name": {
     "en": "Snow Bear Chest",
+    "es": "Cofre del Oso de Nieve",
     "pt": "Baú do Urso da Neve"
    },
    "ref": "quest:q149",
    "slug": {
     "en": "snow-bear-chest",
+    "es": "cofre-del-oso-de-nieve",
     "pt": "bau-do-urso-da-neve"
    }
   },
   {
    "name": {
     "en": "Hidden Black Bag",
+    "es": "Bolsa Negra Oculta",
     "pt": "Bolsa Preta Escondida"
    },
    "ref": "quest:q15",
    "slug": {
     "en": "hidden-black-bag",
+    "es": "bolsa-negra-oculta",
     "pt": "bolsa-preta-escondida"
    }
   },
   {
    "name": {
     "en": "Tomb Bandit Chest",
+    "es": "Cofre de Bandidos de la Tumba",
     "pt": "Baú dos Bandidos da Tumba"
    },
    "ref": "quest:q150",
    "slug": {
     "en": "tomb-bandit-chest",
+    "es": "cofre-de-bandidos-de-la-tumba",
     "pt": "bau-dos-bandidos-da-tumba"
    }
   },
   {
    "name": {
     "en": "Tomb Top Chest",
+    "es": "Cofre Superior de la Tumba",
     "pt": "Baú do Topo da Tumba"
    },
    "ref": "quest:q151",
    "slug": {
     "en": "tomb-top-chest",
+    "es": "cofre-superior-de-la-tumba",
     "pt": "bau-do-topo-da-tumba"
    }
   },
   {
    "name": {
     "en": "Tomb Pit Ingot",
+    "es": "Lingote del Pozo de la Tumba",
     "pt": "Lingote do Poço da Tumba"
    },
    "ref": "quest:q152",
    "slug": {
     "en": "tomb-pit-ingot",
+    "es": "lingote-del-pozo-de-la-tumba",
     "pt": "lingote-do-poco-da-tumba"
    }
   },
   {
    "name": {
     "en": "Mines Chest",
+    "es": "Cofre de las Minas",
     "pt": "Baú das Minas"
    },
    "ref": "quest:q153",
    "slug": {
     "en": "mines-chest",
+    "es": "cofre-de-las-minas",
     "pt": "bau-das-minas"
    }
   },
   {
    "name": {
     "en": "Mines Deep Reward",
+    "es": "Recompensa de las Profundidades de las Minas",
     "pt": "Recompensa das Profundezas das Minas"
    },
    "ref": "quest:q154",
    "slug": {
     "en": "mines-deep-reward",
+    "es": "recompensa-de-las-profundidades-de-las-minas",
     "pt": "recompensa-das-profundezas-das-minas"
    }
   },
   {
    "name": {
     "en": "Ritual Dagger Find",
+    "es": "Hallazgo de la Daga Ritual",
     "pt": "Descoberta da Adaga Ritual"
    },
    "ref": "quest:q155",
    "slug": {
     "en": "ritual-dagger-find",
+    "es": "hallazgo-de-la-daga-ritual",
     "pt": "descoberta-da-adaga-ritual"
    }
   },
   {
    "name": {
     "en": "Gavin Book Chest",
+    "es": "Cofre de Libros de Gavin",
     "pt": "Baú de Livros de Gavin"
    },
    "ref": "quest:q156",
    "slug": {
     "en": "gavin-book-chest",
+    "es": "cofre-de-libros-de-gavin",
     "pt": "bau-de-livros-de-gavin"
    }
   },
   {
    "name": {
     "en": "Ship Rat Chest",
+    "es": "Cofre de Rata del Barco",
     "pt": "Baú do Rato do Navio"
    },
    "ref": "quest:q157",
    "slug": {
     "en": "ship-rat-chest",
+    "es": "cofre-de-rata-del-barco",
     "pt": "bau-do-rato-do-navio"
    }
   },
   {
    "name": {
     "en": "Spire Pants",
+    "es": "Pantalones de la Aguja",
     "pt": "Calças da Agulha"
    },
    "ref": "quest:q158",
    "slug": {
     "en": "spire-pants",
+    "es": "pantalones-de-la-aguja",
     "pt": "calcas-da-agulha"
    }
   },
   {
    "name": {
     "en": "Longhouse Ingot",
+    "es": "Lingote de la Casa Larga",
     "pt": "Lingote da Casa Longa"
    },
    "ref": "quest:q159",
    "slug": {
     "en": "longhouse-ingot",
+    "es": "lingote-de-la-casa-larga",
     "pt": "lingote-da-casa-longa"
    }
   },
   {
    "name": {
     "en": "Crude Quest",
+    "es": "Misión Cruda",
     "pt": "Missão Rústica"
    },
    "ref": "quest:q16",
    "slug": {
     "en": "crude-quest",
+    "es": "mision-cruda",
     "pt": "missao-rustica"
    }
   },
   {
    "name": {
     "en": "Longhouse Prison Chest",
+    "es": "Cofre de la Prisión de la Casa Larga",
     "pt": "Baú da Prisão da Casa Longa"
    },
    "ref": "quest:q160",
    "slug": {
     "en": "longhouse-prison-chest",
+    "es": "cofre-de-la-prision-de-la-casa-larga",
     "pt": "bau-da-prisao-da-casa-longa"
    }
   },
   {
    "name": {
     "en": "Spider Ring Chest",
+    "es": "Cofre del Anillo de Araña",
     "pt": "Baú do Anel da Aranha"
    },
    "ref": "quest:q161",
    "slug": {
     "en": "spider-ring-chest",
+    "es": "cofre-del-anillo-de-arana",
     "pt": "bau-do-anel-da-aranha"
    }
   },
   {
    "name": {
     "en": "Morrigan's Reward",
+    "es": "Recompensa de Morrigan",
     "pt": "Recompensa de Morrigan"
    },
    "ref": "quest:q162",
    "slug": {
     "en": "morrigan-s-reward",
+    "es": "recompensa-de-morrigan",
     "pt": "recompensa-de-morrigan"
    }
   },
   {
    "name": {
     "en": "Frances Stashed Bread",
+    "es": "Pan Escondido de Frances",
     "pt": "Pão Escondido de Frances"
    },
    "ref": "quest:q163",
    "slug": {
     "en": "frances-stashed-bread",
+    "es": "pan-escondido-de-frances",
     "pt": "pao-escondido-de-frances"
    }
   },
   {
    "name": {
     "en": "Nordha Farm Ingot",
+    "es": "Lingote de la Granja de Nordha",
     "pt": "Barra da Fazenda de Nordha"
    },
    "ref": "quest:q164",
    "slug": {
     "en": "nordha-farm-ingot",
+    "es": "lingote-de-la-granja-de-nordha",
     "pt": "barra-da-fazenda-de-nordha"
    }
   },
   {
    "name": {
     "en": "Slime Chest",
+    "es": "Cofre de Limo",
     "pt": "Baú de Limo"
    },
    "ref": "quest:q165",
    "slug": {
     "en": "slime-chest",
+    "es": "cofre-de-limo",
     "pt": "bau-de-limo"
    }
   },
   {
    "name": {
     "en": "Guri's Gear",
+    "es": "Equipo de Guri",
     "pt": "Equipamento de Guri"
    },
    "ref": "quest:q166",
    "slug": {
     "en": "guri-s-gear",
+    "es": "equipo-de-guri",
     "pt": "equipamento-de-guri"
    }
   },
   {
    "name": {
     "en": "Reika's Kitchen Chest",
+    "es": "Cofre de la Cocina de Reika",
     "pt": "Baú da Cozinha de Reika"
    },
    "ref": "quest:q167",
    "slug": {
     "en": "reika-s-kitchen-chest",
+    "es": "cofre-de-la-cocina-de-reika",
     "pt": "bau-da-cozinha-de-reika"
    }
   },
   {
    "name": {
     "en": "Reika's Reward",
+    "es": "Recompensa de Reika",
     "pt": "Recompensa de Reika"
    },
    "ref": "quest:q168",
    "slug": {
     "en": "reika-s-reward",
+    "es": "recompensa-de-reika",
     "pt": "recompensa-de-reika"
    }
   },
   {
    "name": {
     "en": "Bedroom Quill Chest",
+    "es": "Cofre con Pluma del Dormitorio",
     "pt": "Baú com Pena do Quarto"
    },
    "ref": "quest:q169",
    "slug": {
     "en": "bedroom-quill-chest",
+    "es": "cofre-con-pluma-del-dormitorio",
     "pt": "bau-com-pena-do-quarto"
    }
   },
   {
    "name": {
     "en": "Trident Chest",
+    "es": "Cofre de Trident",
     "pt": "Baú de Trident"
    },
    "ref": "quest:q17",
    "slug": {
     "en": "trident-chest",
+    "es": "cofre-de-trident",
     "pt": "bau-de-trident"
    }
   },
   {
    "name": {
     "en": "Lisa's Chest",
+    "es": "Cofre de Lisa",
     "pt": "Baú de Lisa"
    },
    "ref": "quest:q170",
    "slug": {
     "en": "lisa-s-chest",
+    "es": "cofre-de-lisa",
     "pt": "bau-de-lisa"
    }
   },
   {
    "name": {
     "en": "Siege Quest",
+    "es": "Misión del Asedio",
     "pt": "Missão do Cerco"
    },
    "ref": "quest:q171",
    "slug": {
     "en": "siege-quest",
+    "es": "mision-del-asedio",
     "pt": "missao-do-cerco"
    }
   },
   {
    "name": {
     "en": "Torch Quest",
+    "es": "Misión de la Antorcha",
     "pt": "Missão da Tocha"
    },
    "ref": "quest:q172",
    "slug": {
     "en": "torch-quest-q172",
+    "es": "mision-de-la-antorcha-q172",
     "pt": "missao-da-tocha-q172"
    }
   },
   {
    "name": {
     "en": "Torch Quest",
+    "es": "Misión de la Antorcha",
     "pt": "Missão da Tocha"
    },
    "ref": "quest:q173",
    "slug": {
     "en": "torch-quest-q173",
+    "es": "mision-de-la-antorcha-q173",
     "pt": "missao-da-tocha-q173"
    }
   },
   {
    "name": {
     "en": "Wooden Shield Quest",
+    "es": "Misión del Escudo de Madera",
     "pt": "Missão do Escudo de Madeira"
    },
    "ref": "quest:q174",
    "slug": {
     "en": "wooden-shield-quest-q174",
+    "es": "mision-del-escudo-de-madera-q174",
     "pt": "missao-do-escudo-de-madeira-q174"
    }
   },
   {
    "name": {
     "en": "Wooden Shield Quest",
+    "es": "Misión del Escudo de Madera",
     "pt": "Missão do Escudo de Madeira"
    },
    "ref": "quest:q175",
    "slug": {
     "en": "wooden-shield-quest-q175",
+    "es": "mision-del-escudo-de-madera-q175",
     "pt": "missao-do-escudo-de-madeira-q175"
    }
   },
   {
    "name": {
     "en": "Rope Quest",
+    "es": "Misión de la Cuerda",
     "pt": "Missão da Corda"
    },
    "ref": "quest:q176",
    "slug": {
     "en": "rope-quest-q176",
+    "es": "mision-de-la-cuerda-q176",
     "pt": "missao-da-corda-q176"
    }
   },
   {
    "name": {
     "en": "Rope Quest",
+    "es": "Misión de la Cuerda",
     "pt": "Missão da Corda"
    },
    "ref": "quest:q177",
    "slug": {
     "en": "rope-quest-q177",
+    "es": "mision-de-la-cuerda-q177",
     "pt": "missao-da-corda-q177"
    }
   },
   {
    "name": {
     "en": "Spire's Backpack",
+    "es": "Mochila de la Aguja",
     "pt": "Mochila da Agulha"
    },
    "ref": "quest:q178",
    "slug": {
     "en": "spire-s-backpack",
+    "es": "mochila-de-la-aguja",
     "pt": "mochila-da-agulha"
    }
   },
   {
    "name": {
     "en": "Bandit Stash",
+    "es": "Alijo de Bandidos",
     "pt": "Esconderijo de Bandidos"
    },
    "ref": "quest:q179",
    "slug": {
     "en": "bandit-stash",
+    "es": "alijo-de-bandidos",
     "pt": "esconderijo-de-bandidos"
    }
   },
   {
    "name": {
     "en": "Violet's Reward",
+    "es": "Recompensa de Violet",
     "pt": "Recompensa de Violet"
    },
    "ref": "quest:q18",
    "slug": {
     "en": "violet-s-reward",
+    "es": "recompensa-de-violet",
     "pt": "recompensa-de-violet"
    }
   },
   {
    "name": {
     "en": "Hoder Chest",
+    "es": "Cofre de Hoder",
     "pt": "Baú de Hoder"
    },
    "ref": "quest:q180",
    "slug": {
     "en": "hoder-chest",
+    "es": "cofre-de-hoder",
     "pt": "bau-de-hoder"
    }
   },
   {
    "name": {
     "en": "Hidden Mushroom",
+    "es": "Hongo Escondido",
     "pt": "Cogumelo Escondido"
    },
    "ref": "quest:q181",
    "slug": {
     "en": "hidden-mushroom",
+    "es": "hongo-escondido",
     "pt": "cogumelo-escondido"
    }
   },
   {
    "name": {
     "en": "Repellent Chest",
+    "es": "Cofre del Repelente",
     "pt": "Baú do Repelente"
    },
    "ref": "quest:q182",
    "slug": {
     "en": "repellent-chest",
+    "es": "cofre-del-repelente",
     "pt": "bau-do-repelente"
    }
   },
   {
    "name": {
     "en": "Capital Hidden Ingot",
+    "es": "Lingote Oculto de la Capital",
     "pt": "Lingote Oculto da Capital"
    },
    "ref": "quest:q183",
    "slug": {
     "en": "capital-hidden-ingot",
+    "es": "lingote-oculto-de-la-capital",
     "pt": "lingote-oculto-da-capital"
    }
   },
   {
    "name": {
     "en": "Boat Hidden Ingot",
+    "es": "Lingote Oculto del Barco",
     "pt": "Barra Escondida do Barco"
    },
    "ref": "quest:q184",
    "slug": {
     "en": "boat-hidden-ingot",
+    "es": "lingote-oculto-del-barco",
     "pt": "barra-escondida-do-barco"
    }
   },
   {
    "name": {
     "en": "Tomb Robot Chest",
+    "es": "Cofre del Robot de la Tumba",
     "pt": "Baú do Robô da Tumba"
    },
    "ref": "quest:q185",
    "slug": {
     "en": "tomb-robot-chest",
+    "es": "cofre-del-robot-de-la-tumba",
     "pt": "bau-do-robo-da-tumba"
    }
   },
   {
    "name": {
     "en": "Stone Hidden Ingot",
+    "es": "Lingote Oculto en Piedra",
     "pt": "Lingote Escondido na Pedra"
    },
    "ref": "quest:q186",
    "slug": {
     "en": "stone-hidden-ingot",
+    "es": "lingote-oculto-en-piedra",
     "pt": "lingote-escondido-na-pedra"
    }
   },
   {
    "name": {
     "en": "Desert Outpost Chest",
+    "es": "Cofre del Puesto del Desierto",
     "pt": "Baú do Posto do Deserto"
    },
    "ref": "quest:q187",
    "slug": {
     "en": "desert-outpost-chest",
+    "es": "cofre-del-puesto-del-desierto",
     "pt": "bau-do-posto-do-deserto"
    }
   },
   {
    "name": {
     "en": "Maze Tower Chest",
+    "es": "Cofre de la Torre del Laberinto",
     "pt": "Baú da Torre do Labirinto"
    },
    "ref": "quest:q188",
    "slug": {
     "en": "maze-tower-chest",
+    "es": "cofre-de-la-torre-del-laberinto",
     "pt": "bau-da-torre-do-labirinto"
    }
   },
   {
    "name": {
     "en": "Garlic Chest",
+    "es": "Cofre de Ajo",
     "pt": "Baú de Alho"
    },
    "ref": "quest:q189",
    "slug": {
     "en": "garlic-chest",
+    "es": "cofre-de-ajo",
     "pt": "bau-de-alho"
    }
   },
   {
    "name": {
     "en": "Swamp Troll's Treasure",
+    "es": "Tesoro del Trol del Pantano",
     "pt": "Tesouro do Troll do Pântano"
    },
    "ref": "quest:q19",
    "slug": {
     "en": "swamp-troll-s-treasure",
+    "es": "tesoro-del-trol-del-pantano",
     "pt": "tesouro-do-troll-do-pantano"
    }
   },
   {
    "name": {
     "en": "Darkness Chest",
+    "es": "Cofre de la Oscuridad",
     "pt": "Baú da Escuridão"
    },
    "ref": "quest:q190",
    "slug": {
     "en": "darkness-chest",
+    "es": "cofre-de-la-oscuridad",
     "pt": "bau-da-escuridao"
    }
   },
   {
    "name": {
     "en": "Locked Ship Chest",
+    "es": "Cofre Cerrado del Barco",
     "pt": "Baú Trancado do Navio"
    },
    "ref": "quest:q191",
    "slug": {
     "en": "locked-ship-chest",
+    "es": "cofre-cerrado-del-barco",
     "pt": "bau-trancado-do-navio"
    }
   },
   {
    "name": {
     "en": "Maze Tower Chest",
+    "es": "Cofre de la Torre del Laberinto",
     "pt": "Baú da Torre do Labirinto"
    },
    "ref": "quest:q192",
    "slug": {
     "en": "maze-tower-chest-q192",
+    "es": "cofre-de-la-torre-del-laberinto-q192",
     "pt": "bau-da-torre-do-labirinto-q192"
    }
   },
   {
    "name": {
     "en": "Rot Bone Chest",
+    "es": "Cofre de Huesos Podridos",
     "pt": "Baú de Ossos Podres"
    },
    "ref": "quest:q193",
    "slug": {
     "en": "rot-bone-chest",
+    "es": "cofre-de-huesos-podridos",
     "pt": "bau-de-ossos-podres"
    }
   },
   {
    "name": {
     "en": "Terror River Chest",
+    "es": "Cofre del Río del Terror",
     "pt": "Baú do Rio do Terror"
    },
    "ref": "quest:q194",
    "slug": {
     "en": "terror-river-chest",
+    "es": "cofre-del-rio-del-terror",
     "pt": "bau-do-rio-do-terror"
    }
   },
   {
    "name": {
     "en": "Draught Spider Chest",
+    "es": "Cofre de la Araña de Draughtwood",
     "pt": "Baú da Aranha de Draughtwood"
    },
    "ref": "quest:q195",
    "slug": {
     "en": "draught-spider-chest",
+    "es": "cofre-de-la-arana-de-draughtwood",
     "pt": "bau-da-aranha-de-draughtwood"
    }
   },
   {
    "name": {
     "en": "Silver Ring Chest",
+    "es": "Cofre del Anillo de Plata",
     "pt": "Baú do Anel de Prata"
    },
    "ref": "quest:q196",
    "slug": {
     "en": "silver-ring-chest",
+    "es": "cofre-del-anillo-de-plata",
     "pt": "bau-do-anel-de-prata"
    }
   },
   {
    "name": {
     "en": "Amanita Chest",
+    "es": "Cofre de Amanita",
     "pt": "Baú do Amanita"
    },
    "ref": "quest:q197",
    "slug": {
     "en": "amanita-chest",
+    "es": "cofre-de-amanita",
     "pt": "bau-do-amanita"
    }
   },
   {
    "name": {
     "en": "Bandit Mush Stash",
+    "es": "Alijo de Setas de Bandidos",
     "pt": "Esconderijo de Cogumelos dos Bandidos"
    },
    "ref": "quest:q198",
    "slug": {
     "en": "bandit-mush-stash",
+    "es": "alijo-de-setas-de-bandidos",
     "pt": "esconderijo-de-cogumelos-dos-bandidos"
    }
   },
   {
    "name": {
     "en": "Forest Final Chest",
+    "es": "Cofre Final del Bosque",
     "pt": "Baú Final da Floresta"
    },
    "ref": "quest:q199",
    "slug": {
     "en": "forest-final-chest",
+    "es": "cofre-final-del-bosque",
     "pt": "bau-final-da-floresta"
    }
   },
   {
    "name": {
     "en": "Seymour Knife Chest",
+    "es": "Cofre del Cuchillo de Seymour",
     "pt": "Baú da Faca de Seymour"
    },
    "ref": "quest:q2",
    "slug": {
     "en": "seymour-knife-chest",
+    "es": "cofre-del-cuchillo-de-seymour",
     "pt": "bau-da-faca-de-seymour"
    }
   },
   {
    "name": {
     "en": "Lost Aqua Base",
+    "es": "Base Aqua Perdida",
     "pt": "Base Aqua Perdida"
    },
    "ref": "quest:q20",
    "slug": {
     "en": "lost-aqua-base",
+    "es": "base-aqua-perdida",
     "pt": "base-aqua-perdida"
    }
   },
   {
    "name": {
     "en": "Minerva's Stash",
+    "es": "Escondite de Minerva",
     "pt": "Esconderijo de Minerva"
    },
    "ref": "quest:q200",
    "slug": {
     "en": "minerva-s-stash",
+    "es": "escondite-de-minerva",
     "pt": "esconderijo-de-minerva"
    }
   },
   {
    "name": {
     "en": "Trash Chest",
+    "es": "Cofre de Basura",
     "pt": "Baú do Lixo"
    },
    "ref": "quest:q201",
    "slug": {
     "en": "trash-chest",
+    "es": "cofre-de-basura",
     "pt": "bau-do-lixo"
    }
   },
   {
    "name": {
     "en": "Pants Chest",
+    "es": "Cofre de Pantalones",
     "pt": "Baú de Calças"
    },
    "ref": "quest:q202",
    "slug": {
     "en": "pants-chest",
+    "es": "cofre-de-pantalones",
     "pt": "bau-de-calcas"
    }
   },
   {
    "name": {
     "en": "Flagellant's Quest",
+    "es": "Misión del Flagelante",
     "pt": "Missão do Flagelante"
    },
    "ref": "quest:q203",
    "slug": {
     "en": "flagellant-s-quest",
+    "es": "mision-del-flagelante",
     "pt": "missao-do-flagelante"
    }
   },
   {
    "name": {
     "en": "Blue Mage Chest",
+    "es": "Cofre del Mago Azul",
     "pt": "Baú do Mago Azul"
    },
    "ref": "quest:q204",
    "slug": {
     "en": "blue-mage-chest",
+    "es": "cofre-del-mago-azul",
     "pt": "bau-do-mago-azul"
    }
   },
   {
    "name": {
     "en": "Hidden Manuscript",
+    "es": "Manuscrito Oculto",
     "pt": "Manuscrito Escondido"
    },
    "ref": "quest:q205",
    "slug": {
     "en": "hidden-manuscript",
+    "es": "manuscrito-oculto",
     "pt": "manuscrito-escondido"
    }
   },
   {
    "name": {
     "en": "Port Tower Chest",
+    "es": "Cofre de la Torre del Puerto",
     "pt": "Baú da Torre do Porto"
    },
    "ref": "quest:q206",
    "slug": {
     "en": "port-tower-chest",
+    "es": "cofre-de-la-torre-del-puerto",
     "pt": "bau-da-torre-do-porto"
    }
   },
   {
    "name": {
     "en": "Temple Hidden Chest",
+    "es": "Cofre Oculto del Templo",
     "pt": "Baú Escondido do Templo"
    },
    "ref": "quest:q207",
    "slug": {
     "en": "temple-hidden-chest",
+    "es": "cofre-oculto-del-templo",
     "pt": "bau-escondido-do-templo"
    }
   },
   {
    "name": {
     "en": "Habit's Quest",
+    "es": "Misión del Hábito",
     "pt": "Missão do Hábito"
    },
    "ref": "quest:q208",
    "slug": {
     "en": "habit-s-quest",
+    "es": "mision-del-habito",
     "pt": "missao-do-habito"
    }
   },
   {
    "name": {
     "en": "Skalish Quest",
+    "es": "Misión Skalish",
     "pt": "Missão Skalish"
    },
    "ref": "quest:q209",
    "slug": {
     "en": "skalish-quest",
+    "es": "mision-skalish",
     "pt": "missao-skalish"
    }
   },
   {
    "name": {
     "en": "Fish Chest",
+    "es": "Cofre de Pescado",
     "pt": "Baú de Peixes"
    },
    "ref": "quest:q21",
    "slug": {
     "en": "fish-chest",
+    "es": "cofre-de-pescado",
     "pt": "bau-de-peixes"
    }
   },
   {
    "name": {
     "en": "Old Amulet Key",
+    "es": "Llave del Amuleto Antiguo",
     "pt": "Chave do Amuleto Antigo"
    },
    "ref": "quest:q210",
    "slug": {
     "en": "old-amulet-key",
+    "es": "llave-del-amuleto-antiguo",
     "pt": "chave-do-amuleto-antigo"
    }
   },
   {
    "name": {
     "en": "Rune Book Chest",
+    "es": "Cofre del Libro de Runas",
     "pt": "Baú do Livro de Runas"
    },
    "ref": "quest:q211",
    "slug": {
     "en": "rune-book-chest",
+    "es": "cofre-del-libro-de-runas",
     "pt": "bau-do-livro-de-runas"
    }
   },
   {
    "name": {
     "en": "Magic Rune Chest",
+    "es": "Cofre de Runa Mágica",
     "pt": "Baú da Runa Mágica"
    },
    "ref": "quest:q212",
    "slug": {
     "en": "magic-rune-chest",
+    "es": "cofre-de-runa-magica",
     "pt": "bau-da-runa-magica"
    }
   },
   {
    "name": {
     "en": "Test Dagger Chest",
+    "es": "Cofre de Daga de Prueba",
     "pt": "Baú da Adaga de Teste"
    },
    "ref": "quest:q213",
    "slug": {
     "en": "test-dagger-chest",
+    "es": "cofre-de-daga-de-prueba",
     "pt": "bau-da-adaga-de-teste"
    }
   },
   {
    "name": {
     "en": "Gem Chest",
+    "es": "Cofre de Gema",
     "pt": "Baú da Gema"
    },
    "ref": "quest:q214",
    "slug": {
     "en": "gem-chest",
+    "es": "cofre-de-gema",
     "pt": "bau-da-gema"
    }
   },
   {
    "name": {
     "en": "Lava Statue Chest",
+    "es": "Cofre de la Estatua de Lava",
     "pt": "Baú da Estátua de Lava"
    },
    "ref": "quest:q215",
    "slug": {
     "en": "lava-statue-chest",
+    "es": "cofre-de-la-estatua-de-lava",
     "pt": "bau-da-estatua-de-lava"
    }
   },
   {
    "name": {
     "en": "Ghost Rune Chest",
+    "es": "Cofre de la Runa Fantasma",
     "pt": "Baú da Runa Fantasma"
    },
    "ref": "quest:q216",
    "slug": {
     "en": "ghost-rune-chest",
+    "es": "cofre-de-la-runa-fantasma",
     "pt": "bau-da-runa-fantasma"
    }
   },
   {
    "name": {
     "en": "Ghoul Chest",
+    "es": "Cofre del Necrófago",
     "pt": "Baú do Carniçal"
    },
    "ref": "quest:q217",
    "slug": {
     "en": "ghoul-chest",
+    "es": "cofre-del-necrofago",
     "pt": "bau-do-carnical"
    }
   },
   {
    "name": {
     "en": "Lava Ingot Chest",
+    "es": "Cofre de Lingote de Lava",
     "pt": "Baú de Lingote de Lava"
    },
    "ref": "quest:q218",
    "slug": {
     "en": "lava-ingot-chest",
+    "es": "cofre-de-lingote-de-lava",
     "pt": "bau-de-lingote-de-lava"
    }
   },
   {
    "name": {
     "en": "Lava Ruby Chest",
+    "es": "Cofre de Rubí de Lava",
     "pt": "Baú de Rubi de Lava"
    },
    "ref": "quest:q219",
    "slug": {
     "en": "lava-ruby-chest",
+    "es": "cofre-de-rubi-de-lava",
     "pt": "bau-de-rubi-de-lava"
    }
   },
   {
    "name": {
     "en": "The Lost Ring",
+    "es": "El Anillo Perdido",
     "pt": "O Anel Perdido"
    },
    "ref": "quest:q22",
    "slug": {
     "en": "the-lost-ring",
+    "es": "el-anillo-perdido",
     "pt": "o-anel-perdido"
    }
   },
   {
    "name": {
     "en": "Crystal Room Key",
+    "es": "Llave de la Sala de Cristal",
     "pt": "Chave da Sala de Cristal"
    },
    "ref": "quest:q220",
    "slug": {
     "en": "crystal-room-key",
+    "es": "llave-de-la-sala-de-cristal",
     "pt": "chave-da-sala-de-cristal"
    }
   },
   {
    "name": {
     "en": "Bushes Chest",
+    "es": "Cofre de los Arbustos",
     "pt": "Baú dos Arbustos"
    },
    "ref": "quest:q221",
    "slug": {
     "en": "bushes-chest",
+    "es": "cofre-de-los-arbustos",
     "pt": "bau-dos-arbustos"
    }
   },
   {
    "name": {
     "en": "Bridge Bandit Chest",
+    "es": "Cofre de Bandidos del Puente",
     "pt": "Baú dos Bandidos da Ponte"
    },
    "ref": "quest:q222",
    "slug": {
     "en": "bridge-bandit-chest",
+    "es": "cofre-de-bandidos-del-puente",
     "pt": "bau-dos-bandidos-da-ponte"
    }
   },
   {
    "name": {
     "en": "Digger Deep Chest",
+    "es": "Cofre Profundo de Diggers",
     "pt": "Baú Profundo dos Diggers"
    },
    "ref": "quest:q223",
    "slug": {
     "en": "digger-deep-chest",
+    "es": "cofre-profundo-de-diggers",
     "pt": "bau-profundo-dos-diggers"
    }
   },
   {
    "name": {
     "en": "Windmill Chest",
+    "es": "Cofre del Molino",
     "pt": "Baú do Moinho"
    },
    "ref": "quest:q224",
    "slug": {
     "en": "windmill-chest",
+    "es": "cofre-del-molino",
     "pt": "bau-do-moinho"
    }
   },
   {
    "name": {
     "en": "Pirate Key",
+    "es": "Llave Pirata",
     "pt": "Chave Pirata"
    },
    "ref": "quest:q225",
    "slug": {
     "en": "pirate-key",
+    "es": "llave-pirata",
     "pt": "chave-pirata"
    }
   },
   {
    "name": {
     "en": "Pirate Mace Quest",
+    "es": "Misión de la Maza Pirata",
     "pt": "Missão da Maça Pirata"
    },
    "ref": "quest:q226",
    "slug": {
     "en": "pirate-mace-quest",
+    "es": "mision-de-la-maza-pirata",
     "pt": "missao-da-maca-pirata"
    }
   },
   {
    "name": {
     "en": "Felix Chest",
+    "es": "Cofre de Felix",
     "pt": "Baú de Felix"
    },
    "ref": "quest:q227",
    "slug": {
     "en": "felix-chest",
+    "es": "cofre-de-felix",
     "pt": "bau-de-felix"
    }
   },
   {
    "name": {
     "en": "Skalsbane Chest",
+    "es": "Cofre de Skalsbane",
     "pt": "Baú de Skalsbane"
    },
    "ref": "quest:q228",
    "slug": {
     "en": "skalsbane-chest",
+    "es": "cofre-de-skalsbane",
     "pt": "bau-de-skalsbane"
    }
   },
   {
    "name": {
     "en": "Zoe Toy",
+    "es": "Juguete de Zoe",
     "pt": "Brinquedo de Zoe"
    },
    "ref": "quest:q229",
    "slug": {
     "en": "zoe-toy",
+    "es": "juguete-de-zoe",
     "pt": "brinquedo-de-zoe"
    }
   },
   {
    "name": {
     "en": "An Evil Book",
+    "es": "Un Libro Maligno",
     "pt": "Um Livro Maligno"
    },
    "ref": "quest:q23",
    "slug": {
     "en": "an-evil-book",
+    "es": "un-libro-maligno",
     "pt": "um-livro-maligno"
    }
   },
   {
    "name": {
     "en": "Royal Bridge Ingot",
+    "es": "Lingote del Puente Real",
     "pt": "Lingote da Ponte Real"
    },
    "ref": "quest:q230",
    "slug": {
     "en": "royal-bridge-ingot",
+    "es": "lingote-del-puente-real",
     "pt": "lingote-da-ponte-real"
    }
   },
   {
    "name": {
     "en": "Ritual Chest",
+    "es": "Cofre del Ritual",
     "pt": "Baú do Ritual"
    },
    "ref": "quest:q231",
    "slug": {
     "en": "ritual-chest",
+    "es": "cofre-del-ritual",
     "pt": "bau-do-ritual"
    }
   },
   {
    "name": {
     "en": "Ritual Chest",
+    "es": "Cofre del Ritual",
     "pt": "Baú do Ritual"
    },
    "ref": "quest:q232",
    "slug": {
     "en": "ritual-chest-q232",
+    "es": "cofre-del-ritual-q232",
     "pt": "bau-do-ritual-q232"
    }
   },
   {
    "name": {
     "en": "Aeikz Chest",
+    "es": "Cofre de Aeikz",
     "pt": "Baú de Aeikz"
    },
    "ref": "quest:q233",
    "slug": {
     "en": "aeikz-chest",
+    "es": "cofre-de-aeikz",
     "pt": "bau-de-aeikz"
    }
   },
   {
    "name": {
     "en": "Jentes Chest",
+    "es": "Cofre de Jentes",
     "pt": "Baú de Jentes"
    },
    "ref": "quest:q234",
    "slug": {
     "en": "jentes-chest",
+    "es": "cofre-de-jentes",
     "pt": "bau-de-jentes"
    }
   },
   {
    "name": {
     "en": "Ed Chest",
+    "es": "Cofre de Ed",
     "pt": "Baú de Ed"
    },
    "ref": "quest:q235",
    "slug": {
     "en": "ed-chest",
+    "es": "cofre-de-ed",
     "pt": "bau-de-ed"
    }
   },
   {
    "name": {
+    "_fb": [
+     "pt",
+     "es"
+    ],
     "en": "Worm Chest",
+    "es": "Worm Chest",
     "pt": "Worm Chest"
    },
    "ref": "quest:q236",
    "slug": {
     "en": "worm-chest",
+    "es": "worm-chest",
     "pt": "worm-chest"
    }
   },
   {
    "name": {
+    "_fb": [
+     "pt",
+     "es"
+    ],
     "en": "Impossible Chest",
+    "es": "Impossible Chest",
     "pt": "Impossible Chest"
    },
    "ref": "quest:q237",
    "slug": {
     "en": "impossible-chest",
+    "es": "impossible-chest",
     "pt": "impossible-chest"
    }
   },
   {
    "name": {
+    "_fb": [
+     "pt",
+     "es"
+    ],
     "en": "Big Bone Chest",
+    "es": "Big Bone Chest",
     "pt": "Big Bone Chest"
    },
    "ref": "quest:q238",
    "slug": {
     "en": "big-bone-chest",
+    "es": "big-bone-chest",
     "pt": "big-bone-chest"
    }
   },
   {
    "name": {
+    "_fb": [
+     "pt",
+     "es"
+    ],
     "en": "Desert Bolt Chest",
+    "es": "Desert Bolt Chest",
     "pt": "Desert Bolt Chest"
    },
    "ref": "quest:q239",
    "slug": {
     "en": "desert-bolt-chest",
+    "es": "desert-bolt-chest",
     "pt": "desert-bolt-chest"
    }
   },
   {
    "name": {
     "en": "Wooden Shield Quest",
+    "es": "Misión del Escudo de Madera",
     "pt": "Missão do Escudo de Madeira"
    },
    "ref": "quest:q24",
    "slug": {
     "en": "wooden-shield-quest",
+    "es": "mision-del-escudo-de-madera",
     "pt": "missao-do-escudo-de-madeira"
    }
   },
   {
    "name": {
+    "_fb": [
+     "pt",
+     "es"
+    ],
     "en": "Hell Arrow Chest",
+    "es": "Hell Arrow Chest",
     "pt": "Hell Arrow Chest"
    },
    "ref": "quest:q240",
    "slug": {
     "en": "hell-arrow-chest",
+    "es": "hell-arrow-chest",
     "pt": "hell-arrow-chest"
    }
   },
   {
    "name": {
     "en": "Marshes Chest",
+    "es": "Cofre de los Pantanos",
     "pt": "Baú dos Pântanos"
    },
    "ref": "quest:q25",
    "slug": {
     "en": "marshes-chest",
+    "es": "cofre-de-los-pantanos",
     "pt": "bau-dos-pantanos"
    }
   },
   {
    "name": {
     "en": "East Trolls Quest",
+    "es": "Misión de los Trolls del Este",
     "pt": "Missão dos Trolls do Leste"
    },
    "ref": "quest:q26",
    "slug": {
     "en": "east-trolls-quest",
+    "es": "mision-de-los-trolls-del-este",
     "pt": "missao-dos-trolls-do-leste"
    }
   },
   {
    "name": {
     "en": "Regen Ring Quest",
+    "es": "Misión del Anillo de Regeneración",
     "pt": "Missão do Anel de Regeneração"
    },
    "ref": "quest:q27",
    "slug": {
     "en": "regen-ring-quest",
+    "es": "mision-del-anillo-de-regeneracion",
     "pt": "missao-do-anel-de-regeneracao"
    }
   },
   {
    "name": {
     "en": "Cheese Chest",
+    "es": "Cofre de Queso",
     "pt": "Baú de Queijo"
    },
    "ref": "quest:q28",
    "slug": {
     "en": "cheese-chest",
+    "es": "cofre-de-queso",
     "pt": "bau-de-queijo"
    }
   },
   {
    "name": {
     "en": "Occultist Tower Quest",
+    "es": "Misión de la Torre Ocultista",
     "pt": "Missão da Torre dos Ocultistas"
    },
    "ref": "quest:q29",
    "slug": {
     "en": "occultist-tower-quest",
+    "es": "mision-de-la-torre-ocultista",
     "pt": "missao-da-torre-dos-ocultistas"
    }
   },
   {
    "name": {
     "en": "Wounded Bag Chest",
+    "es": "Cofre de la Bolsa del Herido",
     "pt": "Baú da Bolsa do Ferido"
    },
    "ref": "quest:q3",
    "slug": {
     "en": "wounded-bag-chest",
+    "es": "cofre-de-la-bolsa-del-herido",
     "pt": "bau-da-bolsa-do-ferido"
    }
   },
   {
    "name": {
     "en": "Bandit Mine Chest",
+    "es": "Cofre de la Mina de Bandidos",
     "pt": "Baú da Mina dos Bandidos"
    },
    "ref": "quest:q30",
    "slug": {
     "en": "bandit-mine-chest",
+    "es": "cofre-de-la-mina-de-bandidos",
     "pt": "bau-da-mina-dos-bandidos"
    }
   },
   {
    "name": {
     "en": "Abandoned Outpost Quest",
+    "es": "Misión del Puesto Abandonado",
     "pt": "Missão do Posto Abandonado"
    },
    "ref": "quest:q31",
    "slug": {
     "en": "abandoned-outpost-quest",
+    "es": "mision-del-puesto-abandonado",
     "pt": "missao-do-posto-abandonado"
    }
   },
   {
    "name": {
     "en": "Cloth Vest Chest",
+    "es": "Cofre del Chaleco de Tela",
     "pt": "Baú do Colete de Pano"
    },
    "ref": "quest:q32",
    "slug": {
     "en": "cloth-vest-chest",
+    "es": "cofre-del-chaleco-de-tela",
     "pt": "bau-do-colete-de-pano"
    }
   },
   {
    "name": {
     "en": "Branor's Bread",
+    "es": "Pan de Branor",
     "pt": "Pão de Branor"
    },
    "ref": "quest:q33",
    "slug": {
     "en": "branor-s-bread",
+    "es": "pan-de-branor",
     "pt": "pao-de-branor"
    }
   },
   {
    "name": {
     "en": "Bascinet Quest",
+    "es": "Misión del Bacinete",
     "pt": "Missão do Bacinete"
    },
    "ref": "quest:q34",
    "slug": {
     "en": "bascinet-quest",
+    "es": "mision-del-bacinete",
     "pt": "missao-do-bacinete"
    }
   },
   {
    "name": {
     "en": "Green Bandit Quest",
+    "es": "Misión del Bandido Verde",
     "pt": "Missão do Bandido Verde"
    },
    "ref": "quest:q35",
    "slug": {
     "en": "green-bandit-quest",
+    "es": "mision-del-bandido-verde",
     "pt": "missao-do-bandido-verde"
    }
   },
   {
    "name": {
     "en": "Onion Chest",
+    "es": "Cofre de Cebollas",
     "pt": "Baú de Cebolas"
    },
    "ref": "quest:q36",
    "slug": {
     "en": "onion-chest",
+    "es": "cofre-de-cebollas",
     "pt": "bau-de-cebolas"
    }
   },
   {
    "name": {
     "en": "Lantern Quest",
+    "es": "Misión del Farol",
     "pt": "Missão da Lanterna"
    },
    "ref": "quest:q37",
    "slug": {
     "en": "lantern-quest",
+    "es": "mision-del-farol",
     "pt": "missao-da-lanterna"
    }
   },
   {
    "name": {
     "en": "Hidden Gold Chest",
+    "es": "Cofre de Oro Oculto",
     "pt": "Baú de Ouro Oculto"
    },
    "ref": "quest:q38",
    "slug": {
     "en": "hidden-gold-chest",
+    "es": "cofre-de-oro-oculto",
     "pt": "bau-de-ouro-oculto"
    }
   },
   {
    "name": {
     "en": "Sewer Bloody Chest",
+    "es": "Cofre Sangriento de la Alcantarilla",
     "pt": "Baú Sangrento do Esgoto"
    },
    "ref": "quest:q39",
    "slug": {
     "en": "sewer-bloody-chest",
+    "es": "cofre-sangriento-de-la-alcantarilla",
     "pt": "bau-sangrento-do-esgoto"
    }
   },
   {
    "name": {
     "en": "Blue Ink Quest",
+    "es": "Misión de la Tinta Azul",
     "pt": "Missão da Tinta Azul"
    },
    "ref": "quest:q4",
    "slug": {
     "en": "blue-ink-quest",
+    "es": "mision-de-la-tinta-azul",
     "pt": "missao-da-tinta-azul"
    }
   },
   {
    "name": {
     "en": "Brass Plate Quest",
+    "es": "Misión de Placa de Latón",
     "pt": "Missão da Placa de Latão"
    },
    "ref": "quest:q40",
    "slug": {
     "en": "brass-plate-quest",
+    "es": "mision-de-placa-de-laton",
     "pt": "missao-da-placa-de-latao"
    }
   },
   {
    "name": {
     "en": "Dark Robe Quest",
+    "es": "Misión de la Túnica Oscura",
     "pt": "Missão da Túnica Sombria"
    },
    "ref": "quest:q41",
    "slug": {
     "en": "dark-robe-quest",
+    "es": "mision-de-la-tunica-oscura",
     "pt": "missao-da-tunica-sombria"
    }
   },
   {
    "name": {
     "en": "Dark Hood Quest",
+    "es": "Misión de la Capucha Oscura",
     "pt": "Missão do Capuz Sombrio"
    },
    "ref": "quest:q42",
    "slug": {
     "en": "dark-hood-quest",
+    "es": "mision-de-la-capucha-oscura",
     "pt": "missao-do-capuz-sombrio"
    }
   },
   {
    "name": {
     "en": "The Final Clue",
+    "es": "La Pista Final",
     "pt": "A Pista Final"
    },
    "ref": "quest:q43",
    "slug": {
     "en": "the-final-clue",
+    "es": "la-pista-final",
     "pt": "a-pista-final"
    }
   },
   {
    "name": {
     "en": "Wooden Staff Quest",
+    "es": "Misión del Bastón de Madera",
     "pt": "Missão do Cajado de Madeira"
    },
    "ref": "quest:q44",
    "slug": {
     "en": "wooden-staff-quest",
+    "es": "mision-del-baston-de-madera",
     "pt": "missao-do-cajado-de-madeira"
    }
   },
   {
    "name": {
     "en": "Amphitere Quest",
+    "es": "Misión del Amphitere",
     "pt": "Missão do Amphitere"
    },
    "ref": "quest:q45",
    "slug": {
     "en": "amphitere-quest",
+    "es": "mision-del-amphitere",
     "pt": "missao-do-amphitere"
    }
   },
   {
    "name": {
     "en": "Orc Camp Quest",
+    "es": "Misión del Campamento Orco",
     "pt": "Missão do Acampamento Orc"
    },
    "ref": "quest:q46",
    "slug": {
     "en": "orc-camp-quest",
+    "es": "mision-del-campamento-orco",
     "pt": "missao-do-acampamento-orc"
    }
   },
   {
    "name": {
     "en": "Torch Quest",
+    "es": "Misión de la Antorcha",
     "pt": "Missão da Tocha"
    },
    "ref": "quest:q47",
    "slug": {
     "en": "torch-quest",
+    "es": "mision-de-la-antorcha",
     "pt": "missao-da-tocha"
    }
   },
   {
    "name": {
     "en": "Old Shield Quest",
+    "es": "Misión del Escudo Viejo",
     "pt": "Missão do Escudo Antigo"
    },
    "ref": "quest:q48",
    "slug": {
     "en": "old-shield-quest",
+    "es": "mision-del-escudo-viejo",
     "pt": "missao-do-escudo-antigo"
    }
   },
   {
    "name": {
     "en": "Minotaur Quest",
+    "es": "Misión del Minotauro",
     "pt": "Missão do Minotauro"
    },
    "ref": "quest:q49",
    "slug": {
     "en": "minotaur-quest",
+    "es": "mision-del-minotauro",
     "pt": "missao-do-minotauro"
    }
   },
   {
    "name": {
     "en": "A Cross Clue",
+    "es": "Una Pista Cruzada",
     "pt": "Uma Pista em Cruz"
    },
    "ref": "quest:q5",
    "slug": {
     "en": "a-cross-clue",
+    "es": "una-pista-cruzada",
     "pt": "uma-pista-em-cruz"
    }
   },
   {
    "name": {
     "en": "Gloves Quest",
+    "es": "Misión de los Guantes",
     "pt": "Missão das Luvas"
    },
    "ref": "quest:q50",
    "slug": {
     "en": "gloves-quest",
+    "es": "mision-de-los-guantes",
     "pt": "missao-das-luvas"
    }
   },
   {
    "name": {
     "en": "Sentinel's Reward",
+    "es": "Recompensa de los Centinelas",
     "pt": "Recompensa dos Sentinelas"
    },
    "ref": "quest:q51",
    "slug": {
     "en": "sentinel-s-reward",
+    "es": "recompensa-de-los-centinelas",
     "pt": "recompensa-dos-sentinelas"
    }
   },
   {
    "name": {
     "en": "The Stolen Book",
+    "es": "El Libro Robado",
     "pt": "O Livro Roubado"
    },
    "ref": "quest:q52",
    "slug": {
     "en": "the-stolen-book",
+    "es": "el-libro-robado",
     "pt": "o-livro-roubado"
    }
   },
   {
    "name": {
     "en": "Lost Flasks",
+    "es": "Frascos Perdidos",
     "pt": "Frascos Perdidos"
    },
    "ref": "quest:q53",
    "slug": {
     "en": "lost-flasks",
+    "es": "frascos-perdidos",
     "pt": "frascos-perdidos"
    }
   },
   {
    "name": {
     "en": "Whiterat Chest",
+    "es": "Cofre de los Whiterats",
     "pt": "Baú dos Whiterats"
    },
    "ref": "quest:q54",
    "slug": {
     "en": "whiterat-chest",
+    "es": "cofre-de-los-whiterats",
     "pt": "bau-dos-whiterats"
    }
   },
   {
    "name": {
     "en": "King's Dagger Reward",
+    "es": "Recompensa: Daga del Rey",
     "pt": "Recompensa: Adaga do Rei"
    },
    "ref": "quest:q55",
    "slug": {
     "en": "king-s-dagger-reward",
+    "es": "recompensa-daga-del-rey",
     "pt": "recompensa-adaga-do-rei"
    }
   },
   {
    "name": {
     "en": "King's Gold Reward",
+    "es": "Recompensa: Oro del Rey",
     "pt": "Recompensa: Ouro do Rei"
    },
    "ref": "quest:q56",
    "slug": {
     "en": "king-s-gold-reward",
+    "es": "recompensa-oro-del-rey",
     "pt": "recompensa-ouro-do-rei"
    }
   },
   {
    "name": {
     "en": "Jungle Almanac",
+    "es": "Almanaque de la Selva",
     "pt": "Almanaque da Selva"
    },
    "ref": "quest:q57",
    "slug": {
     "en": "jungle-almanac",
+    "es": "almanaque-de-la-selva",
     "pt": "almanaque-da-selva"
    }
   },
   {
    "name": {
     "en": "Barrel Pants",
+    "es": "Pantalones del Barril",
     "pt": "Calças do Barril"
    },
    "ref": "quest:q58",
    "slug": {
     "en": "barrel-pants",
+    "es": "pantalones-del-barril",
     "pt": "calcas-do-barril"
    }
   },
   {
    "name": {
     "en": "Old Backpack Quest",
+    "es": "Misión de la Mochila Vieja",
     "pt": "Missão da Mochila Velha"
    },
    "ref": "quest:q59",
    "slug": {
     "en": "old-backpack-quest",
+    "es": "mision-de-la-mochila-vieja",
     "pt": "missao-da-mochila-velha"
    }
   },
   {
    "name": {
     "en": "Wheat in the Barrel",
+    "es": "Trigo en el Barril",
     "pt": "Trigo no Barril"
    },
    "ref": "quest:q6",
    "slug": {
     "en": "wheat-in-the-barrel",
+    "es": "trigo-en-el-barril",
     "pt": "trigo-no-barril"
    }
   },
   {
    "name": {
     "en": "Crystal Staff Quest",
+    "es": "Misión del Bastón de Cristal",
     "pt": "Missão do Cajado de Cristal"
    },
    "ref": "quest:q60",
    "slug": {
     "en": "crystal-staff-quest",
+    "es": "mision-del-baston-de-cristal",
     "pt": "missao-do-cajado-de-cristal"
    }
   },
   {
    "name": {
     "en": "Rope Quest",
+    "es": "Misión de la Cuerda",
     "pt": "Missão da Corda"
    },
    "ref": "quest:q61",
    "slug": {
     "en": "rope-quest",
+    "es": "mision-de-la-cuerda",
     "pt": "missao-da-corda"
    }
   },
   {
    "name": {
     "en": "Moldy Chest",
+    "es": "Cofre Mohoso",
     "pt": "Baú Mofado"
    },
    "ref": "quest:q62",
    "slug": {
     "en": "moldy-chest",
+    "es": "cofre-mohoso",
     "pt": "bau-mofado"
    }
   },
   {
    "name": {
     "en": "The Challenge Reward",
+    "es": "Recompensa del Desafío",
     "pt": "Recompensa do Desafio"
    },
    "ref": "quest:q63",
    "slug": {
     "en": "the-challenge-reward",
+    "es": "recompensa-del-desafio",
     "pt": "recompensa-do-desafio"
    }
   },
   {
    "name": {
     "en": "Magic Orb Quest",
+    "es": "Misión del Orbe Mágico",
     "pt": "Missão do Orbe Mágico"
    },
    "ref": "quest:q64",
    "slug": {
     "en": "magic-orb-quest",
+    "es": "mision-del-orbe-magico",
     "pt": "missao-do-orbe-magico"
    }
   },
   {
    "name": {
     "en": "Wreck Ship Chest",
+    "es": "Cofre del Barco Naufragado",
     "pt": "Baú do Navio Naufragado"
    },
    "ref": "quest:q65",
    "slug": {
     "en": "wreck-ship-chest",
+    "es": "cofre-del-barco-naufragado",
     "pt": "bau-do-navio-naufragado"
    }
   },
   {
    "name": {
     "en": "Wreck Ship Key",
+    "es": "Llave del Barco Naufragado",
     "pt": "Chave do Navio Naufragado"
    },
    "ref": "quest:q66",
    "slug": {
     "en": "wreck-ship-key",
+    "es": "llave-del-barco-naufragado",
     "pt": "chave-do-navio-naufragado"
    }
   },
   {
    "name": {
     "en": "Dragonfruit Quest",
+    "es": "Misión de la Fruta del Dragón",
     "pt": "Missão da Fruta do Dragão"
    },
    "ref": "quest:q67",
    "slug": {
     "en": "dragonfruit-quest",
+    "es": "mision-de-la-fruta-del-dragon",
     "pt": "missao-da-fruta-do-dragao"
    }
   },
   {
    "name": {
     "en": "Arrow Chest",
+    "es": "Cofre de Flechas",
     "pt": "Baú de Flechas"
    },
    "ref": "quest:q68",
    "slug": {
     "en": "arrow-chest",
+    "es": "cofre-de-flechas",
     "pt": "bau-de-flechas"
    }
   },
   {
    "name": {
     "en": "Secret Puzzle Reward",
+    "es": "Recompensa del Acertijo Secreto",
     "pt": "Recompensa do Enigma Secreto"
    },
    "ref": "quest:q69",
    "slug": {
     "en": "secret-puzzle-reward",
+    "es": "recompensa-del-acertijo-secreto",
     "pt": "recompensa-do-enigma-secreto"
    }
   },
   {
    "name": {
     "en": "A Lunch Found",
+    "es": "Un Almuerzo Encontrado",
     "pt": "Um Almoço Encontrado"
    },
    "ref": "quest:q7",
    "slug": {
     "en": "a-lunch-found",
+    "es": "un-almuerzo-encontrado",
     "pt": "um-almoco-encontrado"
    }
   },
   {
    "name": {
     "en": "Apples Chest",
+    "es": "Cofre de Manzanas",
     "pt": "Baú de Maçãs"
    },
    "ref": "quest:q70",
    "slug": {
     "en": "apples-chest",
+    "es": "cofre-de-manzanas",
     "pt": "bau-de-macas"
    }
   },
   {
    "name": {
     "en": "Brass Legs Quest",
+    "es": "Misión de las Piernas de Bronce",
     "pt": "Missão das Pernas de Bronze"
    },
    "ref": "quest:q71",
    "slug": {
     "en": "brass-legs-quest",
+    "es": "mision-de-las-piernas-de-bronce",
     "pt": "missao-das-pernas-de-bronze"
    }
   },
   {
    "name": {
     "en": "Prison Key",
+    "es": "Llave de la Prisión",
     "pt": "Chave da Prisão"
    },
    "ref": "quest:q72",
    "slug": {
     "en": "prison-key",
+    "es": "llave-de-la-prision",
     "pt": "chave-da-prisao"
    }
   },
   {
    "name": {
     "en": "Ghost Key",
+    "es": "Llave Fantasma",
     "pt": "Chave Fantasma"
    },
    "ref": "quest:q73",
    "slug": {
     "en": "ghost-key",
+    "es": "llave-fantasma",
     "pt": "chave-fantasma"
    }
   },
   {
    "name": {
     "en": "Eofor's Meat",
+    "es": "Carne de Eofor",
     "pt": "Carne do Eofor"
    },
    "ref": "quest:q74",
    "slug": {
     "en": "eofor-s-meat",
+    "es": "carne-de-eofor",
     "pt": "carne-do-eofor"
    }
   },
   {
    "name": {
     "en": "Potato Key",
+    "es": "Llave de Patata",
     "pt": "Chave da Batata"
    },
    "ref": "quest:q75",
    "slug": {
     "en": "potato-key",
+    "es": "llave-de-patata",
     "pt": "chave-da-batata"
    }
   },
   {
    "name": {
     "en": "Euler's Pants",
+    "es": "Pantalones de Euler",
     "pt": "Calças do Euler"
    },
    "ref": "quest:q76",
    "slug": {
     "en": "euler-s-pants",
+    "es": "pantalones-de-euler",
     "pt": "calcas-do-euler"
    }
   },
   {
    "name": {
     "en": "The Discombobulator",
+    "es": "El Desconcertador",
     "pt": "O Descombubolador"
    },
    "ref": "quest:q77",
    "slug": {
     "en": "the-discombobulator",
+    "es": "el-desconcertador",
     "pt": "o-descombubolador"
    }
   },
   {
    "name": {
     "en": "Blueberry Key",
+    "es": "Llave de Arándano",
     "pt": "Chave de Mirtilo"
    },
    "ref": "quest:q78",
    "slug": {
     "en": "blueberry-key",
+    "es": "llave-de-arandano",
     "pt": "chave-de-mirtilo"
    }
   },
   {
    "name": {
     "en": "My First Quest",
+    "es": "Mi Primera Misión",
     "pt": "Minha Primeira Missão"
    },
    "ref": "quest:q79",
    "slug": {
     "en": "my-first-quest",
+    "es": "mi-primera-mision",
     "pt": "minha-primeira-missao"
    }
   },
   {
    "name": {
     "en": "Outlaw Tower Quest",
+    "es": "Misión de la Torre del Forajido",
     "pt": "Missão da Torre do Fora da Lei"
    },
    "ref": "quest:q8",
    "slug": {
     "en": "outlaw-tower-quest",
+    "es": "mision-de-la-torre-del-forajido",
     "pt": "missao-da-torre-do-fora-da-lei"
    }
   },
   {
    "name": {
     "en": "Crystal Ring Quest",
+    "es": "Misión del Anillo de Cristal",
     "pt": "Missão do Anel de Cristal"
    },
    "ref": "quest:q80",
    "slug": {
     "en": "crystal-ring-quest",
+    "es": "mision-del-anillo-de-cristal",
     "pt": "missao-do-anel-de-cristal"
    }
   },
   {
    "name": {
     "en": "Edmund's Cottage",
+    "es": "Cabaña de Edmund",
     "pt": "Cabana de Edmund"
    },
    "ref": "quest:q81",
    "slug": {
     "en": "edmund-s-cottage",
+    "es": "cabana-de-edmund",
     "pt": "cabana-de-edmund"
    }
   },
   {
    "name": {
     "en": "The Ring of Fire",
+    "es": "El Anillo de Fuego",
     "pt": "O Anel de Fogo"
    },
    "ref": "quest:q82",
    "slug": {
     "en": "the-ring-of-fire",
+    "es": "el-anillo-de-fuego",
     "pt": "o-anel-de-fogo"
    }
   },
   {
    "name": {
     "en": "Pestilence Tower Chest",
+    "es": "Cofre de la Torre de Pestilence",
     "pt": "Baú da Torre de Pestilence"
    },
    "ref": "quest:q83",
    "slug": {
     "en": "pestilence-tower-chest",
+    "es": "cofre-de-la-torre-de-pestilence",
     "pt": "bau-da-torre-de-pestilence"
    }
   },
   {
    "name": {
     "en": "Skull Ring Chest",
+    "es": "Cofre del Anillo de Calavera",
     "pt": "Baú do Anel de Caveira"
    },
    "ref": "quest:q84",
    "slug": {
     "en": "skull-ring-chest",
+    "es": "cofre-del-anillo-de-calavera",
     "pt": "bau-do-anel-de-caveira"
    }
   },
   {
    "name": {
     "en": "Candle Chest",
+    "es": "Cofre de la Vela",
     "pt": "Baú da Vela"
    },
    "ref": "quest:q85",
    "slug": {
     "en": "candle-chest",
+    "es": "cofre-de-la-vela",
     "pt": "bau-da-vela"
    }
   },
   {
    "name": {
     "en": "Ironsword Quest",
+    "es": "Misión de la Espada de Hierro",
     "pt": "Missão da Espada de Ferro"
    },
    "ref": "quest:q86",
    "slug": {
     "en": "ironsword-quest",
+    "es": "mision-de-la-espada-de-hierro",
     "pt": "missao-da-espada-de-ferro"
    }
   },
   {
    "name": {
     "en": "Spider Key",
+    "es": "Llave de la Araña",
     "pt": "Chave da Aranha"
    },
    "ref": "quest:q87",
    "slug": {
     "en": "spider-key",
+    "es": "llave-de-la-arana",
     "pt": "chave-da-aranha"
    }
   },
   {
    "name": {
     "en": "Sailor Boots Quest",
+    "es": "Misión de Botas de Marinero",
     "pt": "Missão das Botas de Marinheiro"
    },
    "ref": "quest:q88",
    "slug": {
     "en": "sailor-boots-quest",
+    "es": "mision-de-botas-de-marinero",
     "pt": "missao-das-botas-de-marinheiro"
    }
   },
   {
    "name": {
     "en": "Maxwell's Backpack",
+    "es": "Mochila de Maxwell",
     "pt": "Mochila de Maxwell"
    },
    "ref": "quest:q89",
    "slug": {
     "en": "maxwell-s-backpack",
+    "es": "mochila-de-maxwell",
     "pt": "mochila-de-maxwell"
    }
   },
   {
    "name": {
     "en": "Bread Chest",
+    "es": "Cofre de Pan",
     "pt": "Baú de Pão"
    },
    "ref": "quest:q9",
    "slug": {
     "en": "bread-chest",
+    "es": "cofre-de-pan",
     "pt": "bau-de-pao"
    }
   },
   {
    "name": {
     "en": "Sewer Abandoned Chest",
+    "es": "Cofre Abandonado de Alcantarilla",
     "pt": "Baú Abandonado do Esgoto"
    },
    "ref": "quest:q90",
    "slug": {
     "en": "sewer-abandoned-chest",
+    "es": "cofre-abandonado-de-alcantarilla",
     "pt": "bau-abandonado-do-esgoto"
    }
   },
   {
    "name": {
     "en": "Silver Ring Quest",
+    "es": "Misión del Anillo de Plata",
     "pt": "Missão do Anel de Prata"
    },
    "ref": "quest:q91",
    "slug": {
     "en": "silver-ring-quest",
+    "es": "mision-del-anillo-de-plata",
     "pt": "missao-do-anel-de-prata"
    }
   },
   {
    "name": {
     "en": "Smith Book Quest",
+    "es": "Misión del Libro del Herrero",
     "pt": "Missão do Livro do Ferreiro"
    },
    "ref": "quest:q92",
    "slug": {
     "en": "smith-book-quest",
+    "es": "mision-del-libro-del-herrero",
     "pt": "missao-do-livro-do-ferreiro"
    }
   },
   {
    "name": {
     "en": "Hidden Market Chest",
+    "es": "Cofre Oculto del Mercado",
     "pt": "Baú Oculto do Mercado"
    },
    "ref": "quest:q93",
    "slug": {
     "en": "hidden-market-chest",
+    "es": "cofre-oculto-del-mercado",
     "pt": "bau-oculto-do-mercado"
    }
   },
   {
    "name": {
     "en": "Orc Ritual Ingot",
+    "es": "Lingote del Ritual Orco",
     "pt": "Lingote do Ritual Orc"
    },
    "ref": "quest:q94",
    "slug": {
     "en": "orc-ritual-ingot",
+    "es": "lingote-del-ritual-orco",
     "pt": "lingote-do-ritual-orc"
    }
   },
   {
    "name": {
     "en": "Orc Ritual Potions",
+    "es": "Pociones del Ritual Orco",
     "pt": "Poções do Ritual Orc"
    },
    "ref": "quest:q95",
    "slug": {
     "en": "orc-ritual-potions",
+    "es": "pociones-del-ritual-orco",
     "pt": "pocoes-do-ritual-orc"
    }
   },
   {
    "name": {
     "en": "Occultist Gloves",
+    "es": "Guantes de los Ocultistas",
     "pt": "Luvas dos Ocultistas"
    },
    "ref": "quest:q96",
    "slug": {
     "en": "occultist-gloves",
+    "es": "guantes-de-los-ocultistas",
     "pt": "luvas-dos-ocultistas"
    }
   },
   {
    "name": {
     "en": "Occultist Ritual Ingot",
+    "es": "Lingote del Ritual Ocultista",
     "pt": "Lingote do Ritual Ocultista"
    },
    "ref": "quest:q97",
    "slug": {
     "en": "occultist-ritual-ingot",
+    "es": "lingote-del-ritual-ocultista",
     "pt": "lingote-do-ritual-ocultista"
    }
   },
   {
    "name": {
     "en": "Canyon Ingot",
+    "es": "Lingote del Cañón",
     "pt": "Lingote do Desfiladeiro"
    },
    "ref": "quest:q98",
    "slug": {
     "en": "canyon-ingot",
+    "es": "lingote-del-canon",
     "pt": "lingote-do-desfiladeiro"
    }
   },
   {
    "name": {
     "en": "Dead Man's Ingot",
+    "es": "Lingote del Hombre Muerto",
     "pt": "Lingote do Homem Morto"
    },
    "ref": "quest:q99",
    "slug": {
     "en": "dead-man-s-ingot",
+    "es": "lingote-del-hombre-muerto",
     "pt": "lingote-do-homem-morto"
    }
   },
   {
    "name": {
     "en": "Light",
+    "es": "Luz",
     "pt": "Luz"
    },
    "ref": "spell:s1",
    "slug": {
     "en": "light",
+    "es": "luz",
     "pt": "luz"
    }
   },
   {
    "name": {
     "en": "Summon Death",
+    "es": "Invocar Muerte",
     "pt": "Invocar Morte"
    },
    "ref": "spell:s101",
    "slug": {
     "en": "summon-death",
+    "es": "invocar-muerte",
     "pt": "invocar-morte"
    }
   },
   {
    "name": {
     "en": "Summon Nature",
+    "es": "Invocar Naturaleza",
     "pt": "Invocar Natureza"
    },
    "ref": "spell:s102",
    "slug": {
     "en": "summon-nature",
+    "es": "invocar-naturaleza",
     "pt": "invocar-natureza"
    }
   },
   {
    "name": {
     "en": "Fire Gale",
+    "es": "Vendaval de Fuego",
     "pt": "Vendaval de Fogo"
    },
    "ref": "spell:s103",
    "slug": {
     "en": "fire-gale",
+    "es": "vendaval-de-fuego",
     "pt": "vendaval-de-fogo"
    }
   },
   {
    "name": {
     "en": "Surge",
+    "es": "Ímpetu",
     "pt": "Ímpeto"
    },
    "ref": "spell:s104",
    "slug": {
     "en": "surge",
+    "es": "impetu",
     "pt": "impeto"
    }
   },
   {
    "name": {
     "en": "Water Wave",
+    "es": "Ola de Agua",
     "pt": "Onda d'Água"
    },
    "ref": "spell:s105",
    "slug": {
     "en": "water-wave",
+    "es": "ola-de-agua",
     "pt": "onda-d-agua"
    }
   },
   {
    "name": {
     "en": "Cleanse",
+    "es": "Purificar",
     "pt": "Purificar"
    },
    "ref": "spell:s106",
    "slug": {
     "en": "cleanse",
+    "es": "purificar",
     "pt": "purificar"
    }
   },
   {
    "name": {
     "en": "Conjure Rope",
+    "es": "Conjurar Cuerda",
     "pt": "Conjurar Corda"
    },
    "ref": "spell:s107",
    "slug": {
     "en": "conjure-rope",
+    "es": "conjurar-cuerda",
     "pt": "conjurar-corda"
    }
   },
   {
    "name": {
     "en": "Blink",
+    "es": "Parpadeo",
     "pt": "Piscar"
    },
    "ref": "spell:s108",
    "slug": {
     "en": "blink",
+    "es": "parpadeo",
     "pt": "piscar"
    }
   },
   {
    "name": {
     "en": "Summon Rat",
+    "es": "Invocar Rata",
     "pt": "Invocar Rato"
    },
    "ref": "spell:s117",
    "slug": {
     "en": "summon-rat",
+    "es": "invocar-rata",
     "pt": "invocar-rato"
    }
   },
   {
    "name": {
+    "_fb": [
+     "pt",
+     "es"
+    ],
     "en": "Summon Wisp",
+    "es": "Summon Wisp",
     "pt": "Summon Wisp"
    },
    "ref": "spell:s144",
    "slug": {
     "en": "summon-wisp",
+    "es": "summon-wisp",
     "pt": "summon-wisp"
    }
   },
   {
    "name": {
     "en": "Fierce Thrust",
+    "es": "Estocada Feroz",
     "pt": "Estocada Feroz"
    },
    "ref": "spell:s15",
    "slug": {
     "en": "fierce-thrust",
+    "es": "estocada-feroz",
     "pt": "estocada-feroz"
    }
   },
   {
    "name": {
     "en": "Conjure Fire",
+    "es": "Conjurar Fuego",
     "pt": "Conjurar Fogo"
    },
    "ref": "spell:s16",
    "slug": {
     "en": "conjure-fire",
+    "es": "conjurar-fuego",
     "pt": "conjurar-fogo"
    }
   },
   {
    "name": {
     "en": "Precise Shot",
+    "es": "Disparo Preciso",
     "pt": "Tiro Preciso"
    },
    "ref": "spell:s17",
    "slug": {
     "en": "precise-shot",
+    "es": "disparo-preciso",
     "pt": "tiro-preciso"
    }
   },
   {
    "name": {
     "en": "Energy Bolt",
+    "es": "Rayo de Energía",
     "pt": "Raio de Energia"
    },
    "ref": "spell:s18",
    "slug": {
     "en": "energy-bolt",
+    "es": "rayo-de-energia",
     "pt": "raio-de-energia"
    }
   },
   {
    "name": {
     "en": "Berserk",
+    "es": "Furia",
     "pt": "Fúria"
    },
    "ref": "spell:s19",
    "slug": {
     "en": "berserk",
+    "es": "furia",
     "pt": "furia"
    }
   },
   {
    "name": {
     "en": "Fireball",
+    "es": "Bola de Fuego",
     "pt": "Bola de Fogo"
    },
    "ref": "spell:s2",
    "slug": {
     "en": "fireball",
+    "es": "bola-de-fuego",
     "pt": "bola-de-fogo"
    }
   },
   {
    "name": {
     "en": "Crying Arrow",
+    "es": "Flecha Llorosa",
     "pt": "Flecha Chorosa"
    },
    "ref": "spell:s20",
    "slug": {
     "en": "crying-arrow",
+    "es": "flecha-llorosa",
     "pt": "flecha-chorosa"
    }
   },
   {
    "name": {
     "en": "Quick Attack",
+    "es": "Ataque Rápido",
     "pt": "Ataque Rápido"
    },
    "ref": "spell:s21",
    "slug": {
     "en": "quick-attack",
+    "es": "ataque-rapido",
     "pt": "ataque-rapido"
    }
   },
   {
    "name": {
     "en": "Lightning",
+    "es": "Relámpago",
     "pt": "Relâmpago"
    },
    "ref": "spell:s22",
    "slug": {
     "en": "lightning",
+    "es": "relampago",
     "pt": "relampago"
    }
   },
   {
    "name": {
     "en": "Charge",
+    "es": "Carga",
     "pt": "Investida"
    },
    "ref": "spell:s23",
    "slug": {
     "en": "charge",
+    "es": "carga",
     "pt": "investida"
    }
   },
   {
    "name": {
     "en": "Starlight",
+    "es": "Starlight",
     "pt": "Starlight"
    },
    "ref": "spell:s24",
    "slug": {
     "en": "starlight",
+    "es": "starlight",
     "pt": "starlight"
    }
   },
   {
    "name": {
     "en": "Ground Stand",
+    "es": "Posición Firme",
     "pt": "Posição Firme"
    },
    "ref": "spell:s25",
    "slug": {
     "en": "ground-stand",
+    "es": "posicion-firme",
     "pt": "posicao-firme"
    }
   },
   {
    "name": {
     "en": "Find Person",
+    "es": "Encontrar Persona",
     "pt": "Encontrar Pessoa"
    },
    "ref": "spell:s26",
    "slug": {
     "en": "find-person",
+    "es": "encontrar-persona",
     "pt": "encontrar-pessoa"
    }
   },
   {
    "name": {
     "en": "Adjure",
+    "es": "Adjurar",
     "pt": "Adjurar"
    },
    "ref": "spell:s27",
    "slug": {
     "en": "adjure",
+    "es": "adjurar",
     "pt": "adjurar"
    }
   },
   {
    "name": {
     "en": "Magic Wall",
+    "es": "Muro Mágico",
     "pt": "Parede Mágica"
    },
    "ref": "spell:s3",
    "slug": {
     "en": "magic-wall",
+    "es": "muro-magico",
     "pt": "parede-magica"
    }
   },
   {
    "name": {
     "en": "Heal",
+    "es": "Curar",
     "pt": "Curar"
    },
    "ref": "spell:s4",
    "slug": {
     "en": "heal",
+    "es": "curar",
     "pt": "curar"
    }
   },
   {
    "name": {
     "en": "Haste",
+    "es": "Prisa",
     "pt": "Pressa"
    },
    "ref": "spell:s43",
    "slug": {
     "en": "haste",
+    "es": "prisa",
     "pt": "pressa"
    }
   },
   {
    "name": {
     "en": "Light Missile",
+    "es": "Misil de Luz",
     "pt": "Míssil de Luz"
    },
    "ref": "spell:s44",
    "slug": {
     "en": "light-missile",
+    "es": "misil-de-luz",
     "pt": "missil-de-luz"
    }
   },
   {
    "name": {
     "en": "Slow",
+    "es": "Ralentizar",
     "pt": "Lentidão"
    },
    "ref": "spell:s45",
    "slug": {
     "en": "slow",
+    "es": "ralentizar",
     "pt": "lentidao"
    }
   },
   {
    "name": {
     "en": "Rock Throw",
+    "es": "Lanzar Roca",
     "pt": "Arremesso de Pedra"
    },
    "ref": "spell:s46",
    "slug": {
     "en": "rock-throw",
+    "es": "lanzar-roca",
     "pt": "arremesso-de-pedra"
    }
   },
   {
    "name": {
     "en": "Holy",
+    "es": "Sagrado",
     "pt": "Sagrado"
    },
    "ref": "spell:s48",
    "slug": {
     "en": "holy",
+    "es": "sagrado",
     "pt": "sagrado"
    }
   },
   {
    "name": {
     "en": "Taunt",
+    "es": "Provocar",
     "pt": "Provocar"
    },
    "ref": "spell:s49",
    "slug": {
     "en": "taunt",
+    "es": "provocar",
     "pt": "provocar"
    }
   },
   {
    "name": {
     "en": "Water Pillar",
+    "es": "Pilar de Agua",
     "pt": "Pilar de Água"
    },
    "ref": "spell:s5",
    "slug": {
     "en": "water-pillar",
+    "es": "pilar-de-agua",
     "pt": "pilar-de-agua"
    }
   },
   {
    "name": {
     "en": "Conjure Arrow",
+    "es": "Conjurar Flecha",
     "pt": "Conjurar Flecha"
    },
    "ref": "spell:s50",
    "slug": {
     "en": "conjure-arrow",
+    "es": "conjurar-flecha",
     "pt": "conjurar-flecha"
    }
   },
   {
    "name": {
     "en": "Ice Berserk",
+    "es": "Furia Helada",
     "pt": "Fúria Gélida"
    },
    "ref": "spell:s55",
    "slug": {
     "en": "ice-berserk",
+    "es": "furia-helada",
     "pt": "furia-gelida"
    }
   },
   {
    "name": {
     "en": "Energy Hull",
+    "es": "Casco de Energía",
     "pt": "Casco de Energia"
    },
    "ref": "spell:s6",
    "slug": {
     "en": "energy-hull",
+    "es": "casco-de-energia",
     "pt": "casco-de-energia"
    }
   },
   {
    "name": {
     "en": "Mana Shield",
+    "es": "Escudo de Maná",
     "pt": "Escudo de Mana"
    },
    "ref": "spell:s61",
    "slug": {
     "en": "mana-shield",
+    "es": "escudo-de-mana",
     "pt": "escudo-de-mana"
    }
   },
   {
    "name": {
     "en": "Dash",
+    "es": "Carrera",
     "pt": "Disparada"
    },
    "ref": "spell:s7",
    "slug": {
     "en": "dash",
+    "es": "carrera",
     "pt": "disparada"
    }
   },
   {
    "name": {
     "en": "Thrash",
+    "es": "Embestida",
     "pt": "Investida"
    },
    "ref": "spell:s70",
    "slug": {
     "en": "thrash",
+    "es": "embestida",
     "pt": "investida-s70"
    }
   },
   {
    "name": {
     "en": "Conjure Death",
+    "es": "Conjurar Muerte",
     "pt": "Conjurar Morte"
    },
    "ref": "spell:s78",
    "slug": {
     "en": "conjure-death",
+    "es": "conjurar-muerte",
     "pt": "conjurar-morte"
    }
   },
   {
    "name": {
     "en": "Vampiric Bite",
+    "es": "Mordida Vampírica",
     "pt": "Mordida Vampírica"
    },
    "ref": "spell:s79",
    "slug": {
     "en": "vampiric-bite",
+    "es": "mordida-vampirica",
     "pt": "mordida-vampirica"
    }
   },
   {
    "name": {
     "en": "Magic Growth",
+    "es": "Crecimiento Mágico",
     "pt": "Crescimento Mágico"
    },
    "ref": "spell:s8",
    "slug": {
     "en": "magic-growth",
+    "es": "crecimiento-magico",
     "pt": "crescimento-magico"
    }
   },
   {
    "name": {
+    "_fb": [
+     "pt",
+     "es"
+    ],
     "en": "Dark Beam",
+    "es": "Dark Beam",
     "pt": "Dark Beam"
    },
    "ref": "spell:s80",
    "slug": {
     "en": "dark-beam",
+    "es": "dark-beam",
     "pt": "dark-beam"
    }
   },
   {
    "name": {
     "en": "Windfall",
+    "es": "Dádiva",
     "pt": "Dádiva"
    },
    "ref": "spell:s85",
    "slug": {
     "en": "windfall",
+    "es": "dadiva",
     "pt": "dadiva"
    }
   },
   {
    "name": {
     "en": "Shield Block",
+    "es": "Bloqueo de Escudo",
     "pt": "Bloqueio de Escudo"
    },
    "ref": "spell:s9",
    "slug": {
     "en": "shield-block",
+    "es": "bloqueo-de-escudo",
     "pt": "bloqueio-de-escudo"
    }
   }

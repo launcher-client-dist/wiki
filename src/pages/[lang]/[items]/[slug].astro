@@ -25,7 +25,7 @@ import { HREFLANG, LANGS, altLang, type Lang } from "../../../lib/i18n.ts";
 import { absoluteUrl, homePath, SECTIONS, sectionPath } from "../../../lib/routes.ts";
 import { ITEMS, STUB_BY_REF, siteData } from "../../../lib/site-registry.ts";
 import { appearsIn } from "../../../lib/entities/appears.ts";
-import { CLASS_KEYS, STAT_KEYS, goldPerOz, primaryVersion, signed, statLabel, type Place, type Recipe, type StatKey } from "../../../lib/items/data.ts";
+import { CLASS_KEYS, STAT_KEYS, goldPerOz, primaryVersion, signed, statLabel, textLang, type Fallback, type Place, type Recipe, type StatKey } from "../../../lib/items/data.ts";
 import { metaDescription, oneInText, oz, similarItems } from "../../../lib/items/view.ts";
 
 export async function getStaticPaths() {
@@ -40,6 +40,8 @@ const item = items.find((i) => i.id === Astro.props.id)!;
 const ref = `item:${item.id}`;
 const v = primaryVersion(item);
 const other = altLang(lang);
+/** A text standing in as English where the game has no translation: its lang attribute (undefined when it is in `lang`). */
+const fbLang = (t: Fallback) => (textLang(t, lang) === lang ? undefined : HREFLANG[textLang(t, lang)]);
 const alternates = Object.fromEntries(LANGS.map((l) => [l, registry.url(ref, l)!])) as Record<Lang, string>;
 const icon = v.icon && v.iconSize ? { src: v.icon, width: v.iconSize[0], height: v.iconSize[1], pixel: true } : null;
 const statKeys = STAT_KEYS.filter((k) => v.stats[k]);
@@ -83,9 +85,9 @@ const jsonLd = [{
     <Banner>
       <div slot="media" class="hero-icon"><IconSlot icon={icon} kind="item" size={152} /></div>
       <p class="kicker" data-pagefind-ignore>{ti.category[item.category]}</p>
-      <h1>{item.name[lang]}</h1>
+      <h1 lang={fbLang(item.name)}>{item.name[lang]}</h1>
       {item.name[other] !== item.name[lang] && <p class="alt" lang={HREFLANG[other]}>{item.name[other]}</p>}
-      {v.text[lang] && <blockquote class="game-text">{v.text[lang]}</blockquote>}
+      {v.text[lang] && <blockquote class="game-text" lang={fbLang(v.text)}>{v.text[lang]}</blockquote>}
       <div class="tags" data-pagefind-ignore>
         <TipTag icon={`cat-${item.category}`} tip={ti.tipType}>{fill(ti.tagType, { v: item.subtype[lang] })}</TipTag>
         {item.slots.map((s) => {
@@ -110,7 +112,7 @@ const jsonLd = [{
                   <IconSlot icon={x.icon && x.iconSize ? { src: x.icon, width: x.iconSize[0], height: x.iconSize[1], pixel: true } : null} kind="item" size={48} />
                   <div>
                     <strong>{versionLabel(i)}{x.type === v.type ? " ★" : ""}</strong>
-                    {x.text[lang] && <p class="vt">{x.text[lang]}</p>}
+                    {x.text[lang] && <p class="vt" lang={fbLang(x.text)}>{x.text[lang]}</p>}
                     <div class="vs"><StatChips stats={x.stats} lang={lang} /></div>
                     {x.becomesWhenEquipped && <p class="muted small">{ti.versionEquip}</p>}
                     {x.spell && <p class="small">{ti.spellTitle}: <EntityLink to={x.spell} /></p>}

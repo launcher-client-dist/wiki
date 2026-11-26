@@ -8,10 +8,10 @@ import DataTable from "../../../components/data/DataTable.astro";
 import DataRow from "../../../components/data/DataRow.astro";
 import DataCell from "../../../components/data/DataCell.astro";
 import { ui, fill } from "../../../i18n/index.ts";
-import { LANGS, altLang, type Lang } from "../../../lib/i18n.ts";
+import { HREFLANG, LANGS, altLang, type Lang } from "../../../lib/i18n.ts";
 import { homePath, SECTIONS, sectionAlternates, sectionPath } from "../../../lib/routes.ts";
 import { siteData } from "../../../lib/site-registry.ts";
-import { CATEGORIES, CLASS_KEYS, SOURCE_KINDS, STAT_KEYS, goldPerOz, primaryVersion, sourceKinds, statLabel, type StatKey } from "../../../lib/items/data.ts";
+import { CATEGORIES, CLASS_KEYS, SOURCE_KINDS, STAT_KEYS, goldPerOz, primaryVersion, sourceKinds, statLabel, textLang, type StatKey } from "../../../lib/items/data.ts";
 import { num, oz } from "../../../lib/items/view.ts";
 
 export function getStaticPaths() {
@@ -85,7 +85,7 @@ const CLASSED: StatKey[] = ["armor", "defense", "attackSpeed", "health", "mana",
             <DataCell label={ti.colItem} primary>
               <span class="name">
                 <IconSlot icon={icon} kind="item" size={40} />
-                <span><a href={href}>{item.name[lang]}</a>{item.name[altLang(lang)] !== item.name[lang] && <span class="alt">{item.name[altLang(lang)]}</span>}</span>
+                <span><a href={href} lang={textLang(item.name, lang) === lang ? undefined : HREFLANG.en}>{item.name[lang]}</a>{item.name[altLang(lang)] !== item.name[lang] && <span class="alt">{item.name[altLang(lang)]}</span>}</span>
               </span>
             </DataCell>
             <DataCell label={ti.colType} hideOnPhone><span class="type">{item.subtype[lang]}</span></DataCell>

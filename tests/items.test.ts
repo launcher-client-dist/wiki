@@ -11,9 +11,9 @@ import { entitiesFromData, goldPerOz, signed, sourceKinds, type ItemData, type I
 /** A made-up item file: two items, one recipe, a dropping monster, a selling NPC, a rewarding quest. */
 function fixture(): { file: ItemsFile; stubs: StubEntity[] } {
   const base = (id: string, name: string): ItemData => ({
-    id, types: [1], primary: 1, name: { pt: name, en: name }, slug: { pt: id, en: id }, category: "material",
-    subtype: { key: "Gems", pt: "Gemas", en: "Gems" }, slots: [], value: { npcPays: 30, npcSells: null },
-    versions: [{ type: 1, text: { pt: "", en: "" }, stats: {}, weight: 3, stack: 10 }],
+    id, types: [1], primary: 1, name: { pt: name, en: name, es: name }, slug: { pt: id, en: id, es: id }, category: "material",
+    subtype: { key: "Gems", pt: "Gemas", en: "Gems", es: "Gems" }, slots: [], value: { npcPays: 30, npcSells: null },
+    versions: [{ type: 1, text: { pt: "", en: "", es: "" }, stats: {}, weight: 3, stack: 10 }],
     sources: { drops: [], shops: [], buyers: [], quests: [], map: [], recipes: [], conjured: [], leftover: [] },
     uses: { recipes: [], questsRequire: [], leavesEmpty: [] },
   });
@@ -24,9 +24,9 @@ function fixture(): { file: ItemsFile; stubs: StubEntity[] } {
   bar.sources.recipes.push({ method: "join", result: "test-bar", ingredients: [{ item: "test-ore", n: 1, tool: false }] });
   bar.sources.quests.push({ quest: "quest:q1", amount: 1 });
   const stubs: StubEntity[] = [
-    { ref: "monster:m1", name: { pt: "Bicho", en: "Critter" }, slug: { pt: "bicho", en: "critter" } },
-    { ref: "npc:n1", name: { pt: "Vendedor", en: "Vendor" }, slug: { pt: "vendedor", en: "vendor" } },
-    { ref: "quest:q1", name: { pt: "Missão", en: "Quest" }, slug: { pt: "missao", en: "quest" } },
+    { ref: "monster:m1", name: { pt: "Bicho", en: "Critter", es: "Critter" }, slug: { pt: "bicho", en: "critter", es: "critter" } },
+    { ref: "npc:n1", name: { pt: "Vendedor", en: "Vendor", es: "Vendor" }, slug: { pt: "vendedor", en: "vendor", es: "vendor" } },
+    { ref: "quest:q1", name: { pt: "Missão", en: "Quest", es: "Quest" }, slug: { pt: "missao", en: "quest", es: "quest" } },
   ];
   return { file: { items: [ore, bar], forging: [], dropQuality: [] }, stubs };
 }
@@ -46,11 +46,11 @@ describe("item data -> registry", () => {
 
   test("a potion and its empty link both ways; a map object in a recipe makes no item relation", () => {
     const { file, stubs } = fixture();
-    const potion = { ...file.items[0]!, id: "test-potion", slug: { pt: "pocao", en: "potion" }, name: { pt: "Poção", en: "Potion" },
+    const potion = { ...file.items[0]!, id: "test-potion", slug: { pt: "pocao", en: "potion", es: "potion" }, name: { pt: "Poção", en: "Potion", es: "Potion" },
       sources: { ...file.items[0]!.sources, drops: [], shops: [] }, uses: { recipes: [], questsRequire: [], leavesEmpty: [{ item: "test-empty" }] } };
-    const empty = { ...file.items[0]!, id: "test-empty", slug: { pt: "vazio", en: "empty" }, name: { pt: "Vazio", en: "Empty" },
+    const empty = { ...file.items[0]!, id: "test-empty", slug: { pt: "vazio", en: "empty", es: "empty" }, name: { pt: "Vazio", en: "Empty", es: "Empty" },
       sources: { ...file.items[0]!.sources, drops: [], shops: [], leftover: [{ item: "test-potion" }] } };
-    const filled = { ...file.items[1]!, id: "test-filled", slug: { pt: "cheio", en: "filled" }, name: { pt: "Cheio", en: "Filled" },
+    const filled = { ...file.items[1]!, id: "test-filled", slug: { pt: "cheio", en: "filled", es: "filled" }, name: { pt: "Cheio", en: "Filled", es: "Filled" },
       sources: { ...file.items[1]!.sources, quests: [], recipes: [{ method: "join" as const, result: "test-filled",
         ingredients: [{ item: "test-empty", n: 1, tool: false }, { object: "well" as const, where: [], n: 1, tool: true }] }] } };
     const reg = createRegistry(entitiesFromData({ ...file, items: [...file.items, potion, empty, filled] }, stubs), { shippedKinds: ["item"] });
@@ -73,11 +73,11 @@ describe("where an item appears: any kind of page, by itself", () => {
   test("a page of a new kind (a build) that links to an item makes a section on that item, with no item-page change", () => {
     const { file, stubs } = fixture();
     const build: Entity = {
-      ref: "build:example", name: { pt: "Build", en: "Build" }, slug: { pt: "build", en: "build" },
+      ref: "build:example", name: { pt: "Build", en: "Build", es: "Build" }, slug: { pt: "build", en: "build", es: "build" },
       relations: [{ type: "mentions", to: "item:test-ore" }],
     };
     const guide: Entity = {
-      ref: "guide:g", name: { pt: "Guia", en: "Guide" }, slug: { pt: "guia", en: "guide" },
+      ref: "guide:g", name: { pt: "Guia", en: "Guide", es: "Guide" }, slug: { pt: "guia", en: "guide", es: "guide" },
       relations: [{ type: "mentions", to: "item:test-ore" }],
     };
     const before = createRegistry(entitiesFromData(file, stubs), { shippedKinds: ["item"] });
@@ -135,9 +135,9 @@ describe("NPCs that appear after a quest", () => {
 
 describe("a stat's rank among items of the same type", () => {
   const item = (id: string, sub: string, damage: number): ItemData => ({
-    id, types: [1], primary: 1, name: { pt: id, en: id }, slug: { pt: id, en: id }, category: "weapon",
-    subtype: { key: sub, pt: sub, en: sub }, slots: ["hands"], value: { npcPays: null, npcSells: null },
-    versions: [{ type: 1, text: { pt: "", en: "" }, stats: damage ? { damage } : {}, weight: 3, stack: 1 }],
+    id, types: [1], primary: 1, name: { pt: id, en: id, es: id }, slug: { pt: id, en: id, es: id }, category: "weapon",
+    subtype: { key: sub, pt: sub, en: sub, es: sub }, slots: ["hands"], value: { npcPays: null, npcSells: null },
+    versions: [{ type: 1, text: { pt: "", en: "", es: "" }, stats: damage ? { damage } : {}, weight: 3, stack: 1 }],
     sources: { drops: [], shops: [], buyers: [], quests: [], map: [], recipes: [], conjured: [], leftover: [] },
     uses: { recipes: [], questsRequire: [], leavesEmpty: [] },
   });

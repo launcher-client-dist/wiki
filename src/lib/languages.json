@@ -1,7 +1,23 @@
 {
   "default": "pt",
   "languages": {
-    "pt": { "hreflang": "pt-BR", "og": "pt_BR", "locale": "pt-BR", "alt": "en" },
-    "en": { "hreflang": "en", "og": "en_US", "locale": "en", "alt": "pt" }
+    "pt": {
+      "hreflang": "pt-BR",
+      "og": "pt_BR",
+      "locale": "pt-BR",
+      "alt": "en"
+    },
+    "en": {
+      "hreflang": "en",
+      "og": "en_US",
+      "locale": "en",
+      "alt": "pt"
+    },
+    "es": {
+      "hreflang": "es",
+      "og": "es_LA",
+      "locale": "es-419",
+      "alt": "en"
+    }
   }
 }

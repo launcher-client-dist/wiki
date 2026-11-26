@@ -97,11 +97,11 @@ export const pt = {
   guidesIntro: "Guias escritos pela comunidade: como começar, como achar as coisas e o que cada termo quer dizer.",
 
   homeKicker: "A wiki da comunidade",
-  homeLead: "Monstros, itens, NPCs, lugares e missões de Opengea, num só lugar, em português e inglês.",
+  homeLead: "Monstros, itens, NPCs, lugares e missões de Opengea, num só lugar, em português, inglês e espanhol.",
   homeSectionsLabel: "Seções da wiki",
   homeGuidesTitle: "Comece por aqui",
   homeAboutTitle: "Sobre a wiki",
-  homeAboutText: "Uma wiki feita pela comunidade de Opengea. As seções abrem uma a uma: os guias já estão aqui, e as próximas chegam em breve.",
+  homeAboutText: "Uma wiki feita pela comunidade de Opengea. As seções abrem uma a uma: os guias e os itens já estão aqui, e as próximas chegam em breve.",
   homeShortcutsTitle: "Atalhos",
   homeShortcutSearch: "busca em qualquer página",
   homeShortcutTheme: "tema claro ou escuro no topo",
@@ -120,6 +120,7 @@ export const pt = {
 
   pickLanguageTitle: "Escolha o idioma",
 
+  facts: { health: "Vida", exp: "Exp" },
   value: {
     gold: "ouro", goldoz: "ouro/oz", perRestock: "por reposição", unlimited: "estoque ilimitado", blackMarket: "mercado negro: {n}, em alguns dias",
     goldTip: "Preço em ouro", goldozTip: "Ouro por onça de peso: quanto rende carregar isto", weightTip: "Peso em onças (oz)",

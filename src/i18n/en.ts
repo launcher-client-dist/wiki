@@ -99,11 +99,11 @@ export const en: UiStrings = {
   guidesIntro: "Guides written by the community: how to start, how to find things and what each term means.",
 
   homeKicker: "The community wiki",
-  homeLead: "Opengea's monsters, items, NPCs, places and quests in one place, in Portuguese and English.",
+  homeLead: "Opengea's monsters, items, NPCs, places and quests in one place, in Portuguese, English and Spanish.",
   homeSectionsLabel: "Wiki sections",
   homeGuidesTitle: "Start here",
   homeAboutTitle: "About the wiki",
-  homeAboutText: "A wiki made by the Opengea community. Sections open one at a time: the guides are here now, and the next ones are coming soon.",
+  homeAboutText: "A wiki made by the Opengea community. Sections open one at a time: the guides and the items are here now, and the next ones are coming soon.",
   homeShortcutsTitle: "Shortcuts",
   homeShortcutSearch: "search from any page",
   homeShortcutTheme: "light or dark theme at the top",
@@ -122,6 +122,7 @@ export const en: UiStrings = {
 
   pickLanguageTitle: "Choose your language",
 
+  facts: { health: "Health", exp: "Exp" },
   value: {
     gold: "gold", goldoz: "gold/oz", perRestock: "per restock", unlimited: "unlimited stock", blackMarket: "black market: {n}, some days",
     goldTip: "Price in gold", goldozTip: "Gold per ounce of weight: what carrying it is worth", weightTip: "Weight in ounces (oz)",

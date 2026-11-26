@@ -1,8 +1,9 @@
 import type { Lang } from "../lib/i18n.ts";
 import { en } from "./en.ts";
+import { es } from "./es.ts";
 import { pt, type UiStrings } from "./pt.ts";
 
-const UI: Record<Lang, UiStrings> = { pt, en };
+const UI: Record<Lang, UiStrings> = { pt, en, es };
 
 /** The interface strings of a language. */
 export function ui(lang: Lang): UiStrings {

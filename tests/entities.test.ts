@@ -60,15 +60,15 @@ describe("registry", () => {
   });
 
   test("altName is null when both languages share the name", () => {
-    const one: Entity[] = [{ ref: "place:same", name: { pt: "Vale", en: "Vale" }, slug: { pt: "vale", en: "vale" } }];
+    const one: Entity[] = [{ ref: "place:same", name: { pt: "Vale", en: "Vale", es: "Vale" }, slug: { pt: "vale", en: "vale", es: "vale" } }];
     assert.equal(createRegistry(one, shipNone).link("place:same", "en").altName, null);
   });
 
   test("rejects bad data, listing every problem", () => {
     const bad: Entity[] = [
-      { ref: "item:a", name: { pt: "A", en: "A" }, slug: { pt: "a", en: "a" }, relations: [{ type: "madeFrom", to: "item:ghost" }] },
-      { ref: "item:a", name: { pt: "A2", en: "A2" }, slug: { pt: "a2", en: "a2" } },
-      { ref: "item:b", name: { pt: "B", en: "" }, slug: { pt: "a", en: "B B" } },
+      { ref: "item:a", name: { pt: "A", en: "A", es: "A" }, slug: { pt: "a", en: "a", es: "a" }, relations: [{ type: "madeFrom", to: "item:ghost" }] },
+      { ref: "item:a", name: { pt: "A2", en: "A2", es: "A2" }, slug: { pt: "a2", en: "a2", es: "a2" } },
+      { ref: "item:b", name: { pt: "B", en: "", es: "" }, slug: { pt: "a", en: "B B", es: "B B" } },
     ];
     assert.throws(() => createRegistry(bad, shipNone), (err: Error) => {
       assert.ok(err instanceof EntityError);

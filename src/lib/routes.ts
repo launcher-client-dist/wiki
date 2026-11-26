@@ -9,16 +9,16 @@ export const SITE_URL = "https://wiki.opengea.tech";
 
 /** Each entity kind's section: its URL segment per language, and whether it shows in the main navigation. */
 export const SECTIONS: Record<EntityKind, { slug: Record<Lang, string>; nav: boolean }> = {
-  monster: { slug: { pt: "monstros", en: "monsters" }, nav: true },
-  item: { slug: { pt: "itens", en: "items" }, nav: true },
-  npc: { slug: { pt: "npcs", en: "npcs" }, nav: true },
-  place: { slug: { pt: "lugares", en: "places" }, nav: true },
-  quest: { slug: { pt: "missoes", en: "quests" }, nav: true },
-  guide: { slug: { pt: "guias", en: "guides" }, nav: true },
-  spell: { slug: { pt: "magias", en: "spells" }, nav: false },
-  trait: { slug: { pt: "talentos", en: "traits" }, nav: false },
-  build: { slug: { pt: "builds", en: "builds" }, nav: false },
-  class: { slug: { pt: "classes", en: "classes" }, nav: false },
+  monster: { slug: { pt: "monstros", en: "monsters", es: "monstruos" }, nav: true },
+  item: { slug: { pt: "itens", en: "items", es: "objetos" }, nav: true },
+  npc: { slug: { pt: "npcs", en: "npcs", es: "npcs" }, nav: true },
+  place: { slug: { pt: "lugares", en: "places", es: "lugares" }, nav: true },
+  quest: { slug: { pt: "missoes", en: "quests", es: "misiones" }, nav: true },
+  guide: { slug: { pt: "guias", en: "guides", es: "guias" }, nav: true },
+  spell: { slug: { pt: "magias", en: "spells", es: "hechizos" }, nav: false },
+  trait: { slug: { pt: "talentos", en: "traits", es: "talentos" }, nav: false },
+  build: { slug: { pt: "builds", en: "builds", es: "builds" }, nav: false },
+  class: { slug: { pt: "classes", en: "classes", es: "clases" }, nav: false },
 };
 
 /**

@@ -16,6 +16,8 @@ const DEFAULT_HREF = HREF[LANG_TABLE.default];
 const HREFS = LANG_CODES.map((l) => HREF[l]);
 // each language's item URLs, from the route table (Node strips the types)
 const { SECTIONS } = await import("../src/lib/routes.ts");
+const { ui } = await import("../src/i18n/index.ts");
+const htmlText = (t) => t.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 const ITEM_DIR = Object.fromEntries(LANG_CODES.map((l) => [l, `/${l}/${SECTIONS.item.slug[l]}/`]));
 const itemUrls = (i) => LANG_CODES.map((l) => `${ITEM_DIR[l]}${i.slug[l]}/`);
 
@@ -179,12 +181,13 @@ for (const l of LANG_CODES.filter((c) => c !== LANG_TABLE.default)) if (!pages.g
     for (const [list, section] of [[i.sources.shops, "shops-after-quest"], [i.sources.buyers, "buyers-after-quest"]]) {
       if (!list.some((s) => s.spoiler)) continue;
       const alsoTitle = list.some((s) => !s.spoiler);   // "Também ..." only under an open list it adds to
-      for (const url of itemUrls(i)) {
+      itemUrls(i).forEach((url, k) => {
         const html = pages.get(url)?.html ?? "";
         if (!html.includes(`data-section="${section}"`)) fail(url, `a quest-opened NPC but no ${section} spoiler`);
-        const also = section === "shops-after-quest" ? /Também vendido por|Also sold by/ : /Também comprado por|Also bought by/;
-        if (also.test(html) !== alsoTitle) fail(url, `${section}: the "also" title ${alsoTitle ? "is missing" : "shows with no open list above it"}`);
-      }
+        const words = ui(LANG_CODES[k]).item;   // the page's own "also" title, from its language's dictionary
+        const also = htmlText(section === "shops-after-quest" ? words.spoilerShop : words.spoilerBuyer);
+        if (html.includes(also) !== alsoTitle) fail(url, `${section}: the "also" title ${alsoTitle ? "is missing" : "shows with no open list above it"}`);
+      });
     }
   }
   // a potion and its empty link both ways; a map object (a well) in a recipe shows as plain text, never an item link
