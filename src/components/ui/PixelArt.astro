@@ -1,6 +1,7 @@
 ---
-/** Inline pixel art (a kind emblem, the logo): crisp at any integer scale. */
-import { KIND_ART, LOGO_ART } from "../../lib/kind-art.ts";
+/**
+ * Pixel art: a kind emblem or the logo as a cached file (/art/<name>.svg), or any `art` inline. Crisp at any size.
+ */
 import { pixelSvg, type PixelArt } from "../../lib/pixel.ts";
 import type { EntityKind } from "../../lib/entities/types.ts";
 
@@ -12,12 +13,15 @@ interface Props {
   class?: string;
 }
 const { kind, logo, art, size = 24, class: cls } = Astro.props;
-const source = art ?? (logo ? LOGO_ART : kind ? KIND_ART[kind] : undefined);
-if (!source) throw new Error("PixelArt needs kind, logo or art");
-const svg = pixelSvg(source, `width="${size}" height="${size}" aria-hidden="true" focusable="false"`);
+const name = logo ? "logo" : kind;
+if (!art && !name) throw new Error("PixelArt needs kind, logo or art");
 ---
-<span class:list={["pixel-art", cls]} style={`--size:${size}px`} set:html={svg} />
+{art ? (
+  <span class:list={["pixel-art", cls]} style={`--size:${size}px`} set:html={pixelSvg(art, `width="${size}" height="${size}" aria-hidden="true" focusable="false"`)} />
+) : (
+  <span class:list={["pixel-art", cls]} style={`--size:${size}px`}><img src={`/art/${name}.svg`} width={size} height={size} alt="" decoding="async" /></span>
+)}
 <style>
   .pixel-art { display: inline-grid; place-items: center; width: var(--size); height: var(--size); flex-shrink: 0; line-height: 0; }
-  .pixel-art :global(svg) { width: 100%; height: 100%; }
+  .pixel-art :global(svg), .pixel-art img { width: 100%; height: 100%; image-rendering: pixelated; }
 </style>
