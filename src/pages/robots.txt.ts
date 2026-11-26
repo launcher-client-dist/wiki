@@ -2,6 +2,6 @@ import type { APIRoute } from "astro";
 import { absoluteUrl } from "../lib/routes.ts";
 
 export const GET: APIRoute = () =>
-  new Response(`User-agent: *\nAllow: /\nDisallow: /pagefind/\n\nSitemap: ${absoluteUrl("/sitemap.xml")}\n`, {
+  new Response(`User-agent: *\nAllow: /\nDisallow: /pagefind/\nDisallow: /map/tiles/\nDisallow: /map-data/\n\nSitemap: ${absoluteUrl("/sitemap.xml")}\n`, {
     headers: { "Content-Type": "text/plain; charset=utf-8" },
   });
