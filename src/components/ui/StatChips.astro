@@ -31,5 +31,5 @@ if (max) keys = [...keys].sort((a, b) => Math.abs(stats[b]!) - Math.abs(stats[a]
   .schips { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
   .schip { display: inline-flex; align-items: center; gap: 5px; height: 26px; padding: 0 8px 0 4px; border-radius: 999px; font-size: var(--fs-sm);
     background: var(--surface-2); border: 1px solid var(--row-border); color: var(--heading); }
-  .schip.neg { border-color: color-mix(in srgb, var(--danger) 55%, transparent); background: color-mix(in srgb, var(--danger) 10%, var(--surface-2)); }
+  .schip.neg { border-color: var(--danger); border-style: dashed; }
 </style>
