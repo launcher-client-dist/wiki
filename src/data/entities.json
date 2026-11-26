@@ -1,0 +1,7439 @@
+{
+ "entities": [
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "275"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "140"
+    }
+   ],
+   "icon": "/icons/monsters/monk.png",
+   "name": {
+    "en": "Monk",
+    "pt": "Monge"
+   },
+   "ref": "monster:a113",
+   "slug": {
+    "en": "monk",
+    "pt": "monge"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "355"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "15"
+    }
+   ],
+   "icon": "/icons/monsters/rat-shipper.png",
+   "name": {
+    "en": "Rat Shipper",
+    "pt": "Rato Transportador"
+   },
+   "ref": "monster:a123",
+   "slug": {
+    "en": "rat-shipper",
+    "pt": "rato-transportador"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "1.500"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "1.480"
+    }
+   ],
+   "icon": "/icons/monsters/pestilence-plague.png",
+   "name": {
+    "en": "Pestilence Plague",
+    "pt": "Praga de Pestilence"
+   },
+   "ref": "monster:a124",
+   "slug": {
+    "en": "pestilence-plague",
+    "pt": "praga-de-pestilence"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "205"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "145"
+    }
+   ],
+   "icon": "/icons/monsters/rubellus.png",
+   "name": {
+    "en": "Rubellus",
+    "pt": "Rubellus"
+   },
+   "ref": "monster:a125",
+   "slug": {
+    "en": "rubellus",
+    "pt": "rubellus"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "375"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "185"
+    }
+   ],
+   "icon": "/icons/monsters/sunskin.png",
+   "name": {
+    "en": "Sunskin",
+    "pt": "Pele Solar"
+   },
+   "ref": "monster:a138",
+   "slug": {
+    "en": "sunskin",
+    "pt": "pele-solar"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "500"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "575"
+    }
+   ],
+   "icon": "/icons/monsters/sunskin-enchanter.png",
+   "name": {
+    "en": "Sunskin Enchanter",
+    "pt": "Encantador Pele Solar"
+   },
+   "ref": "monster:a139",
+   "slug": {
+    "en": "sunskin-enchanter",
+    "pt": "encantador-pele-solar"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "1.000"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "590"
+    }
+   ],
+   "icon": "/icons/monsters/profaner.png",
+   "name": {
+    "en": "Profaner",
+    "pt": "Profanador"
+   },
+   "ref": "monster:a140",
+   "slug": {
+    "en": "profaner",
+    "pt": "profanador"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "100"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "50"
+    }
+   ],
+   "icon": "/icons/monsters/cave-spider.png",
+   "name": {
+    "en": "Cave Spider",
+    "pt": "Aranha da Caverna"
+   },
+   "ref": "monster:a141",
+   "slug": {
+    "en": "cave-spider",
+    "pt": "aranha-da-caverna"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "575"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "655"
+    }
+   ],
+   "icon": "/icons/monsters/devil-spider.png",
+   "name": {
+    "en": "Devil Spider",
+    "pt": "Aranha Demoníaca"
+   },
+   "ref": "monster:a142",
+   "slug": {
+    "en": "devil-spider",
+    "pt": "aranha-demoniaca"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "3.000"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "6.000"
+    }
+   ],
+   "icon": "/icons/monsters/terror-spider.png",
+   "name": {
+    "en": "Terror Spider",
+    "pt": "Aranha do Terror"
+   },
+   "ref": "monster:a143",
+   "slug": {
+    "en": "terror-spider",
+    "pt": "aranha-do-terror"
+   }
+  },
+  {
+   "boss": true,
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "7.500"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "7.500"
+    }
+   ],
+   "icon": "/icons/monsters/the-blackhat.png",
+   "name": {
+    "en": "The Blackhat",
+    "pt": "O Chapéu Negro"
+   },
+   "ref": "monster:a146",
+   "slug": {
+    "en": "the-blackhat",
+    "pt": "o-chapeu-negro"
+   }
+  },
+  {
+   "boss": true,
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "5.000"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "5.000"
+    }
+   ],
+   "icon": "/icons/monsters/the-gardener.png",
+   "name": {
+    "en": "The Gardener",
+    "pt": "O Jardineiro"
+   },
+   "ref": "monster:a147",
+   "slug": {
+    "en": "the-gardener",
+    "pt": "o-jardineiro"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "155"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "90"
+    }
+   ],
+   "icon": "/icons/monsters/plea.png",
+   "name": {
+    "en": "Plea",
+    "pt": "Plea"
+   },
+   "ref": "monster:a15",
+   "slug": {
+    "en": "plea",
+    "pt": "plea"
+   }
+  },
+  {
+   "boss": true,
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "3.500"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "3.500"
+    }
+   ],
+   "icon": "/icons/monsters/mateo-the-bandit.png",
+   "name": {
+    "en": "Mateo The Bandit",
+    "pt": "Mateo, o Bandido"
+   },
+   "ref": "monster:a155",
+   "slug": {
+    "en": "mateo-the-bandit",
+    "pt": "mateo-o-bandido"
+   }
+  },
+  {
+   "boss": true,
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "2.500"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "3.500"
+    }
+   ],
+   "icon": "/icons/monsters/capozzi-the-bandit.png",
+   "name": {
+    "en": "Capozzi The Bandit",
+    "pt": "Capozzi, o Bandido"
+   },
+   "ref": "monster:a156",
+   "slug": {
+    "en": "capozzi-the-bandit",
+    "pt": "capozzi-o-bandido"
+   }
+  },
+  {
+   "boss": true,
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "4.500"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "3.500"
+    }
+   ],
+   "icon": "/icons/monsters/gaglio-the-bandit.png",
+   "name": {
+    "en": "Gaglio The Bandit",
+    "pt": "Gaglio, o Bandido"
+   },
+   "ref": "monster:a157",
+   "slug": {
+    "en": "gaglio-the-bandit",
+    "pt": "gaglio-o-bandido"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "285"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "175"
+    }
+   ],
+   "icon": "/icons/monsters/pestilence-spawn.png",
+   "name": {
+    "en": "Pestilence Spawn",
+    "pt": "Cria de Pestilence"
+   },
+   "ref": "monster:a16",
+   "slug": {
+    "en": "pestilence-spawn",
+    "pt": "cria-de-pestilence"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "450"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "400"
+    }
+   ],
+   "icon": "/icons/monsters/ancient-snake.png",
+   "name": {
+    "en": "Ancient Snake",
+    "pt": "Serpente Antiga"
+   },
+   "ref": "monster:a17",
+   "slug": {
+    "en": "ancient-snake",
+    "pt": "serpente-antiga"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "300"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "170"
+    }
+   ],
+   "icon": "/icons/monsters/conquest-fowler.png",
+   "name": {
+    "en": "Conquest Fowler",
+    "pt": "Caçador de Conquest"
+   },
+   "ref": "monster:a172",
+   "slug": {
+    "en": "conquest-fowler",
+    "pt": "cacador-de-conquest"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "195"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "150"
+    }
+   ],
+   "icon": "/icons/monsters/plea-occultist.png",
+   "name": {
+    "en": "Plea Occultist",
+    "pt": "Ocultista Plea"
+   },
+   "ref": "monster:a173",
+   "slug": {
+    "en": "plea-occultist",
+    "pt": "ocultista-plea"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "375"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "380"
+    }
+   ],
+   "icon": "/icons/monsters/conquest-priestess.png",
+   "name": {
+    "en": "Conquest Priestess",
+    "pt": "Sacerdotisa de Conquest"
+   },
+   "ref": "monster:a174",
+   "slug": {
+    "en": "conquest-priestess",
+    "pt": "sacerdotisa-de-conquest"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "200"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "190"
+    }
+   ],
+   "icon": "/icons/monsters/crazed-occultist.png",
+   "name": {
+    "en": "Crazed Occultist",
+    "pt": "Ocultista Enlouquecido"
+   },
+   "ref": "monster:a175",
+   "slug": {
+    "en": "crazed-occultist",
+    "pt": "ocultista-enlouquecido"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "45"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "20"
+    }
+   ],
+   "icon": "/icons/monsters/skeleton.png",
+   "name": {
+    "en": "Skeleton",
+    "pt": "Esqueleto"
+   },
+   "ref": "monster:a19",
+   "slug": {
+    "en": "skeleton",
+    "pt": "esqueleto"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "800"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "725"
+    }
+   ],
+   "icon": "/icons/monsters/tomb-guardian.png",
+   "name": {
+    "en": "Tomb Guardian",
+    "pt": "Guardião da Tumba"
+   },
+   "ref": "monster:a190",
+   "slug": {
+    "en": "tomb-guardian",
+    "pt": "guardiao-da-tumba"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "750"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "1.260"
+    }
+   ],
+   "icon": "/icons/monsters/tomb-diviner.png",
+   "name": {
+    "en": "Tomb Diviner",
+    "pt": "Adivinho da Tumba"
+   },
+   "ref": "monster:a191",
+   "slug": {
+    "en": "tomb-diviner",
+    "pt": "adivinho-da-tumba"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "850"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "225"
+    }
+   ],
+   "icon": "/icons/monsters/tomb-worker.png",
+   "name": {
+    "en": "Tomb Worker",
+    "pt": "Trabalhador da Tumba"
+   },
+   "ref": "monster:a192",
+   "slug": {
+    "en": "tomb-worker",
+    "pt": "trabalhador-da-tumba"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "650"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "500"
+    }
+   ],
+   "icon": "/icons/monsters/conquest-crow.png",
+   "name": {
+    "en": "Conquest Crow",
+    "pt": "Corvo de Conquest"
+   },
+   "ref": "monster:a194",
+   "slug": {
+    "en": "conquest-crow",
+    "pt": "corvo-de-conquest"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "400"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "220"
+    }
+   ],
+   "icon": "/icons/monsters/bone-eater.png",
+   "name": {
+    "en": "Bone Eater",
+    "pt": "Devorador de Ossos"
+   },
+   "ref": "monster:a195",
+   "slug": {
+    "en": "bone-eater",
+    "pt": "devorador-de-ossos"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "3.000"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "6.000"
+    }
+   ],
+   "icon": "/icons/monsters/deadly-webcap.png",
+   "name": {
+    "en": "Deadly Webcap",
+    "pt": "Webcap Mortal"
+   },
+   "ref": "monster:a2",
+   "slug": {
+    "en": "deadly-webcap",
+    "pt": "webcap-mortal"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "35"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "10"
+    }
+   ],
+   "icon": "/icons/monsters/rat.png",
+   "name": {
+    "en": "Rat",
+    "pt": "Rato"
+   },
+   "ref": "monster:a20",
+   "slug": {
+    "en": "rat",
+    "pt": "rato"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "2.550"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "5.970"
+    }
+   ],
+   "icon": "/icons/monsters/swamp-troll.png",
+   "name": {
+    "en": "Swamp Troll",
+    "pt": "Troll do Pântano"
+   },
+   "ref": "monster:a21",
+   "slug": {
+    "en": "swamp-troll",
+    "pt": "troll-do-pantano"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "300"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "220"
+    }
+   ],
+   "icon": "/icons/monsters/imp.png",
+   "name": {
+    "en": "Imp",
+    "pt": "Diabrete"
+   },
+   "ref": "monster:a217",
+   "slug": {
+    "en": "imp",
+    "pt": "diabrete"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "175"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "115"
+    }
+   ],
+   "icon": "/icons/monsters/mireling.png",
+   "name": {
+    "en": "Mireling",
+    "pt": "Mireling"
+   },
+   "ref": "monster:a218",
+   "slug": {
+    "en": "mireling",
+    "pt": "mireling"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "425"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "430"
+    }
+   ],
+   "icon": "/icons/monsters/mireling-noble.png",
+   "name": {
+    "en": "Mireling Noble",
+    "pt": "Mireling Nobre"
+   },
+   "ref": "monster:a219",
+   "slug": {
+    "en": "mireling-noble",
+    "pt": "mireling-nobre"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "1.000"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "660"
+    }
+   ],
+   "icon": "/icons/monsters/cave-troll.png",
+   "name": {
+    "en": "Cave Troll",
+    "pt": "Troll da Caverna"
+   },
+   "ref": "monster:a22",
+   "slug": {
+    "en": "cave-troll",
+    "pt": "troll-da-caverna"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "950"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "1.850"
+    }
+   ],
+   "icon": "/icons/monsters/banshee.png",
+   "name": {
+    "en": "Banshee",
+    "pt": "Banshee"
+   },
+   "ref": "monster:a220",
+   "slug": {
+    "en": "banshee",
+    "pt": "banshee"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "50"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "10"
+    }
+   ],
+   "icon": "/icons/monsters/deer.png",
+   "name": {
+    "en": "Deer",
+    "pt": "Veado"
+   },
+   "ref": "monster:a221",
+   "slug": {
+    "en": "deer",
+    "pt": "veado"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "300"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "130"
+    }
+   ],
+   "icon": "/icons/monsters/bear.png",
+   "name": {
+    "en": "Bear",
+    "pt": "Urso"
+   },
+   "ref": "monster:a222",
+   "slug": {
+    "en": "bear",
+    "pt": "urso"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "65"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "35"
+    }
+   ],
+   "icon": "/icons/monsters/wolf.png",
+   "name": {
+    "en": "Wolf",
+    "pt": "Lobo"
+   },
+   "ref": "monster:a223",
+   "slug": {
+    "en": "wolf",
+    "pt": "lobo"
+   }
+  },
+  {
+   "boss": true,
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "5.500"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "5.500"
+    }
+   ],
+   "icon": "/icons/monsters/alpha-wolf.png",
+   "name": {
+    "en": "Alpha Wolf",
+    "pt": "Lobo Alfa"
+   },
+   "ref": "monster:a224",
+   "slug": {
+    "en": "alpha-wolf",
+    "pt": "lobo-alfa"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "200"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "80"
+    }
+   ],
+   "icon": "/icons/monsters/lintwurm.png",
+   "name": {
+    "en": "Lintwurm",
+    "pt": "Lintwurm"
+   },
+   "ref": "monster:a225",
+   "slug": {
+    "en": "lintwurm",
+    "pt": "lintwurm"
+   }
+  },
+  {
+   "boss": true,
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "15.000"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "15.000"
+    }
+   ],
+   "icon": "/icons/monsters/great-lintwurm.png",
+   "name": {
+    "en": "Great Lintwurm",
+    "pt": "Grande Lintwurm"
+   },
+   "ref": "monster:a226",
+   "slug": {
+    "en": "great-lintwurm",
+    "pt": "grande-lintwurm"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "195"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "100"
+    }
+   ],
+   "icon": "/icons/monsters/giant-rat.png",
+   "name": {
+    "en": "Giant Rat",
+    "pt": "Rato Gigante"
+   },
+   "ref": "monster:a23",
+   "slug": {
+    "en": "giant-rat",
+    "pt": "rato-gigante"
+   }
+  },
+  {
+   "boss": true,
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "7.500"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "7.500"
+    }
+   ],
+   "icon": "/icons/monsters/the-augur.png",
+   "name": {
+    "en": "The Augur",
+    "pt": "O Augúrio"
+   },
+   "ref": "monster:a231",
+   "slug": {
+    "en": "the-augur",
+    "pt": "o-augurio"
+   }
+  },
+  {
+   "boss": true,
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "20.000"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "15.000"
+    }
+   ],
+   "icon": "/icons/monsters/great-lintwurm-a235.png",
+   "name": {
+    "en": "Great Lintwurm",
+    "pt": "Grande Lintwurm"
+   },
+   "ref": "monster:a235",
+   "slug": {
+    "en": "great-lintwurm-a235",
+    "pt": "grande-lintwurm-a235"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "750"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "315"
+    }
+   ],
+   "icon": "/icons/monsters/grizzly-bear.png",
+   "name": {
+    "en": "Grizzly Bear",
+    "pt": "Urso Pardo"
+   },
+   "ref": "monster:a236",
+   "slug": {
+    "en": "grizzly-bear",
+    "pt": "urso-pardo"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "375"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "295"
+    }
+   ],
+   "icon": "/icons/monsters/tundra-rat.png",
+   "name": {
+    "en": "Tundra Rat",
+    "pt": "Rato da Tundra"
+   },
+   "ref": "monster:a24",
+   "slug": {
+    "en": "tundra-rat",
+    "pt": "rato-da-tundra"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "90"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "40"
+    }
+   ],
+   "icon": "/icons/monsters/goblin.png",
+   "name": {
+    "en": "Goblin",
+    "pt": "Goblin"
+   },
+   "ref": "monster:a25",
+   "slug": {
+    "en": "goblin",
+    "pt": "goblin"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "200"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "35"
+    }
+   ],
+   "icon": "/icons/monsters/swamp-tentacle.png",
+   "name": {
+    "en": "Swamp Tentacle",
+    "pt": "Tentáculo do Pântano"
+   },
+   "ref": "monster:a254",
+   "slug": {
+    "en": "swamp-tentacle",
+    "pt": "tentaculo-do-pantano"
+   }
+  },
+  {
+   "boss": true,
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "6.000"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "6.000"
+    }
+   ],
+   "icon": "/icons/monsters/the-broodmother.png",
+   "name": {
+    "en": "The Broodmother",
+    "pt": "A Mãe da Ninhada"
+   },
+   "ref": "monster:a255",
+   "slug": {
+    "en": "the-broodmother",
+    "pt": "a-mae-da-ninhada"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "4.000"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "200"
+    }
+   ],
+   "icon": "/icons/monsters/frozen-chest.png",
+   "name": {
+    "en": "Frozen Chest",
+    "pt": "Baú Congelado"
+   },
+   "ref": "monster:a259",
+   "slug": {
+    "en": "frozen-chest",
+    "pt": "bau-congelado"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "195"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "125"
+    }
+   ],
+   "icon": "/icons/monsters/viscid-goblin.png",
+   "name": {
+    "en": "Viscid Goblin",
+    "pt": "Goblin Viscoso"
+   },
+   "ref": "monster:a26",
+   "slug": {
+    "en": "viscid-goblin",
+    "pt": "goblin-viscoso"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "1.000"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "50"
+    }
+   ],
+   "icon": "/icons/monsters/frozen-chest-a260.png",
+   "name": {
+    "en": "Frozen Chest",
+    "pt": "Baú Congelado"
+   },
+   "ref": "monster:a260",
+   "slug": {
+    "en": "frozen-chest-a260",
+    "pt": "bau-congelado-a260"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "800"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "900"
+    }
+   ],
+   "icon": "/icons/monsters/omen.png",
+   "name": {
+    "en": "Omen",
+    "pt": "Presságio"
+   },
+   "ref": "monster:a261",
+   "slug": {
+    "en": "omen",
+    "pt": "pressagio"
+   }
+  },
+  {
+   "boss": true,
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "20.000"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "50.000"
+    }
+   ],
+   "icon": "/icons/monsters/conquest-champion.png",
+   "name": {
+    "en": "Conquest Champion",
+    "pt": "Campeão de Conquest"
+   },
+   "ref": "monster:a262",
+   "slug": {
+    "en": "conquest-champion",
+    "pt": "campeao-de-conquest"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "800"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "490"
+    }
+   ],
+   "icon": "/icons/monsters/rotwurm.png",
+   "name": {
+    "en": "Rotwurm",
+    "pt": "Rotwurm"
+   },
+   "ref": "monster:a264",
+   "slug": {
+    "en": "rotwurm",
+    "pt": "rotwurm"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "200"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "175"
+    }
+   ],
+   "icon": "/icons/monsters/faun.png",
+   "name": {
+    "en": "Faun",
+    "pt": "Fauno"
+   },
+   "ref": "monster:a265",
+   "slug": {
+    "en": "faun",
+    "pt": "fauno"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "10.000"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "15.000"
+    }
+   ],
+   "icon": "/icons/monsters/titan.png",
+   "name": {
+    "en": "Titan",
+    "pt": "Titã"
+   },
+   "ref": "monster:a266",
+   "slug": {
+    "en": "titan",
+    "pt": "tita"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "255"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "90"
+    }
+   ],
+   "icon": "/icons/monsters/thug.png",
+   "name": {
+    "en": "Thug",
+    "pt": "Bandido"
+   },
+   "ref": "monster:a267",
+   "slug": {
+    "en": "thug",
+    "pt": "bandido"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "200"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "180"
+    }
+   ],
+   "icon": "/icons/monsters/smelt-ooze.png",
+   "name": {
+    "en": "Smelt Ooze",
+    "pt": "Lodo Fundido"
+   },
+   "ref": "monster:a268",
+   "slug": {
+    "en": "smelt-ooze",
+    "pt": "lodo-fundido"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "85"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "30"
+    }
+   ],
+   "icon": "/icons/monsters/bandit.png",
+   "name": {
+    "en": "Bandit",
+    "pt": "Bandido"
+   },
+   "ref": "monster:a27",
+   "slug": {
+    "en": "bandit",
+    "pt": "bandido-a27"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "1.350"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "1.790"
+    }
+   ],
+   "icon": "/icons/monsters/young-amphitere.png",
+   "name": {
+    "en": "Young Amphitere",
+    "pt": "Amphitere Jovem"
+   },
+   "ref": "monster:a28",
+   "slug": {
+    "en": "young-amphitere",
+    "pt": "amphitere-jovem"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "150"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "120"
+    }
+   ],
+   "icon": "/icons/monsters/ghost.png",
+   "name": {
+    "en": "Ghost",
+    "pt": "Fantasma"
+   },
+   "ref": "monster:a283",
+   "slug": {
+    "en": "ghost",
+    "pt": "fantasma"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "7.500"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "10.000"
+    }
+   ],
+   "icon": "/icons/monsters/amphitere.png",
+   "name": {
+    "en": "Amphitere",
+    "pt": "Amphitere"
+   },
+   "ref": "monster:a29",
+   "slug": {
+    "en": "amphitere",
+    "pt": "amphitere"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "165"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "75"
+    }
+   ],
+   "icon": "/icons/monsters/walking-boletus.png",
+   "name": {
+    "en": "Walking Boletus",
+    "pt": "Boleto Ambulante"
+   },
+   "ref": "monster:a3",
+   "slug": {
+    "en": "walking-boletus",
+    "pt": "boleto-ambulante"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "220"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "60"
+    }
+   ],
+   "icon": "/icons/monsters/ghoul.png",
+   "name": {
+    "en": "Ghoul",
+    "pt": "Carniçal"
+   },
+   "ref": "monster:a307",
+   "slug": {
+    "en": "ghoul",
+    "pt": "carnical"
+   }
+  },
+  {
+   "boss": true,
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "10.000"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "10.000"
+    }
+   ],
+   "icon": "/icons/monsters/the-black-knight.png",
+   "name": {
+    "en": "The Black Knight",
+    "pt": "O Cavaleiro Negro"
+   },
+   "ref": "monster:a309",
+   "slug": {
+    "en": "the-black-knight",
+    "pt": "o-cavaleiro-negro"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "500"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "150"
+    }
+   ],
+   "icon": "/icons/monsters/unstable-quartz.png",
+   "name": {
+    "en": "Unstable Quartz",
+    "pt": "Quartzo Instável"
+   },
+   "ref": "monster:a313",
+   "slug": {
+    "en": "unstable-quartz",
+    "pt": "quartzo-instavel"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "1.450"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "730"
+    }
+   ],
+   "icon": "/icons/monsters/skal-traitor.png",
+   "name": {
+    "en": "Skal Traitor",
+    "pt": "Skal Traidor"
+   },
+   "ref": "monster:a314",
+   "slug": {
+    "en": "skal-traitor",
+    "pt": "skal-traidor"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "175"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "135"
+    }
+   ],
+   "icon": "/icons/monsters/huntsman.png",
+   "name": {
+    "en": "Huntsman",
+    "pt": "Caçador"
+   },
+   "ref": "monster:a316",
+   "slug": {
+    "en": "huntsman",
+    "pt": "cacador"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "870"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "1.135"
+    }
+   ],
+   "icon": "/icons/monsters/minotaur.png",
+   "name": {
+    "en": "Minotaur",
+    "pt": "Minotauro"
+   },
+   "ref": "monster:a32",
+   "slug": {
+    "en": "minotaur",
+    "pt": "minotauro"
+   }
+  },
+  {
+   "boss": true,
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "6.000"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "6.000"
+    }
+   ],
+   "icon": "/icons/monsters/brother-rossi.png",
+   "name": {
+    "en": "Brother Rossi",
+    "pt": "Irmão Rossi"
+   },
+   "ref": "monster:a321",
+   "slug": {
+    "en": "brother-rossi",
+    "pt": "irmao-rossi"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "255"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "155"
+    }
+   ],
+   "icon": "/icons/monsters/digger.png",
+   "name": {
+    "en": "Digger",
+    "pt": "Escavador"
+   },
+   "ref": "monster:a33",
+   "slug": {
+    "en": "digger",
+    "pt": "escavador"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "150"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "300"
+    }
+   ],
+   "icon": "/icons/monsters/wisp.png",
+   "name": {
+    "en": "Wisp",
+    "pt": "Wisp"
+   },
+   "ref": "monster:a333",
+   "slug": {
+    "en": "wisp",
+    "pt": "wisp"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "30"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "4"
+    }
+   ],
+   "icon": "/icons/monsters/sheep.png",
+   "name": {
+    "en": "Sheep",
+    "pt": "Ovelha"
+   },
+   "ref": "monster:a34",
+   "slug": {
+    "en": "sheep",
+    "pt": "ovelha"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "35"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "6"
+    }
+   ],
+   "icon": "/icons/monsters/black-sheep.png",
+   "name": {
+    "en": "Black Sheep",
+    "pt": "Ovelha Negra"
+   },
+   "ref": "monster:a35",
+   "slug": {
+    "en": "black-sheep",
+    "pt": "ovelha-negra"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "20"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "2"
+    }
+   ],
+   "icon": "/icons/monsters/lamb.png",
+   "name": {
+    "en": "Lamb",
+    "pt": "Cordeiro"
+   },
+   "ref": "monster:a36",
+   "slug": {
+    "en": "lamb",
+    "pt": "cordeiro"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "25"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "3"
+    }
+   ],
+   "icon": "/icons/monsters/black-lamb.png",
+   "name": {
+    "en": "Black Lamb",
+    "pt": "Cordeiro Negro"
+   },
+   "ref": "monster:a37",
+   "slug": {
+    "en": "black-lamb",
+    "pt": "cordeiro-negro"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "660"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "1.525"
+    }
+   ],
+   "icon": "/icons/monsters/necromancer.png",
+   "name": {
+    "en": "Necromancer",
+    "pt": "Necromante"
+   },
+   "ref": "monster:a38",
+   "slug": {
+    "en": "necromancer",
+    "pt": "necromante"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "155"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "85"
+    }
+   ],
+   "icon": "/icons/monsters/occultist-acolyte.png",
+   "name": {
+    "en": "Occultist Acolyte",
+    "pt": "Acólito Ocultista"
+   },
+   "ref": "monster:a39",
+   "slug": {
+    "en": "occultist-acolyte",
+    "pt": "acolito-ocultista"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "375"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "180"
+    }
+   ],
+   "icon": "/icons/monsters/cube-of-doom.png",
+   "name": {
+    "en": "Cube Of Doom",
+    "pt": "Cubo da Perdição"
+   },
+   "ref": "monster:a4",
+   "slug": {
+    "en": "cube-of-doom",
+    "pt": "cubo-da-perdicao"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "425"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "545"
+    }
+   ],
+   "icon": "/icons/monsters/occultist-scholar.png",
+   "name": {
+    "en": "Occultist Scholar",
+    "pt": "Erudito Ocultista"
+   },
+   "ref": "monster:a40",
+   "slug": {
+    "en": "occultist-scholar",
+    "pt": "erudito-ocultista"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "295"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "210"
+    }
+   ],
+   "icon": "/icons/monsters/occultist-enforcer.png",
+   "name": {
+    "en": "Occultist Enforcer",
+    "pt": "Executor Ocultista"
+   },
+   "ref": "monster:a41",
+   "slug": {
+    "en": "occultist-enforcer",
+    "pt": "executor-ocultista"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "95"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "45"
+    }
+   ],
+   "icon": "/icons/monsters/occultist-apprentice.png",
+   "name": {
+    "en": "Occultist Apprentice",
+    "pt": "Aprendiz Ocultista"
+   },
+   "ref": "monster:a42",
+   "slug": {
+    "en": "occultist-apprentice",
+    "pt": "aprendiz-ocultista"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "750"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "1.240"
+    }
+   ],
+   "icon": "/icons/monsters/orc-berserker.png",
+   "name": {
+    "en": "Orc Berserker",
+    "pt": "Orc Berserker"
+   },
+   "ref": "monster:a43",
+   "slug": {
+    "en": "orc-berserker",
+    "pt": "orc-berserker"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "1.750"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "3.465"
+    }
+   ],
+   "icon": "/icons/monsters/orc-general.png",
+   "name": {
+    "en": "Orc General",
+    "pt": "General Orc"
+   },
+   "ref": "monster:a44",
+   "slug": {
+    "en": "orc-general",
+    "pt": "general-orc"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "585"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "1.365"
+    }
+   ],
+   "icon": "/icons/monsters/orc-shaman.png",
+   "name": {
+    "en": "Orc Shaman",
+    "pt": "Xamã Orc"
+   },
+   "ref": "monster:a45",
+   "slug": {
+    "en": "orc-shaman",
+    "pt": "xama-orc"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "550"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "455"
+    }
+   ],
+   "icon": "/icons/monsters/orc-infantry.png",
+   "name": {
+    "en": "Orc Infantry",
+    "pt": "Infantaria Orc"
+   },
+   "ref": "monster:a46",
+   "slug": {
+    "en": "orc-infantry",
+    "pt": "infantaria-orc"
+   }
+  },
+  {
+   "boss": true,
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "35.000"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "70.000"
+    }
+   ],
+   "icon": "/icons/monsters/pestilence-knight.png",
+   "name": {
+    "en": "Pestilence Knight",
+    "pt": "Cavaleiro de Pestilence"
+   },
+   "ref": "monster:a47",
+   "slug": {
+    "en": "pestilence-knight",
+    "pt": "cavaleiro-de-pestilence"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "1.800"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "4.000"
+    }
+   ],
+   "icon": "/icons/monsters/eye-of-pestilence.png",
+   "name": {
+    "en": "Eye Of Pestilence",
+    "pt": "Olho de Pestilence"
+   },
+   "ref": "monster:a5",
+   "slug": {
+    "en": "eye-of-pestilence",
+    "pt": "olho-de-pestilence"
+   }
+  },
+  {
+   "facts": [
+    {
+     "label": {
+      "en": "Health",
+      "pt": "Vida"
+     },
+     "value": "220"
+    },
+    {
+     "label": {
+      "en": "Exp",
+      "pt": "Exp"
+     },
+     "value": "220"
+    }
+   ],
+   "icon": "/icons/monsters/pestilence-stinger.png",
+   "name": {
+    "en": "Pestilence Stinger",
+    "pt": "Ferrão de Pestilence"
+   },
+   "ref": "monster:a7",
+   "slug": {
+    "en": "pestilence-stinger",
+    "pt": "ferrao-de-pestilence"
+   }
+  },
+  {
+   "icon": "/icons/npcs/benedict.png",
+   "name": {
+    "en": "Benedict",
+    "pt": "Benedict"
+   },
+   "ref": "npc:a114",
+   "slug": {
+    "en": "benedict",
+    "pt": "benedict"
+   }
+  },
+  {
+   "icon": "/icons/npcs/el-chad.png",
+   "name": {
+    "en": "El Chad",
+    "pt": "El Chad"
+   },
+   "ref": "npc:a117",
+   "slug": {
+    "en": "el-chad",
+    "pt": "el-chad"
+   }
+  },
+  {
+   "icon": "/icons/npcs/rubius.png",
+   "name": {
+    "en": "Rubius",
+    "pt": "Rubius"
+   },
+   "ref": "npc:a119",
+   "slug": {
+    "en": "rubius",
+    "pt": "rubius"
+   }
+  },
+  {
+   "icon": "/icons/npcs/bresenham.png",
+   "name": {
+    "en": "Bresenham",
+    "pt": "Bresenham"
+   },
+   "ref": "npc:a120",
+   "slug": {
+    "en": "bresenham",
+    "pt": "bresenham"
+   }
+  },
+  {
+   "icon": "/icons/npcs/tim.png",
+   "name": {
+    "en": "Tim",
+    "pt": "Tim"
+   },
+   "ref": "npc:a129",
+   "slug": {
+    "en": "tim",
+    "pt": "tim"
+   }
+  },
+  {
+   "icon": "/icons/npcs/sal.png",
+   "name": {
+    "en": "Sal",
+    "pt": "Sal"
+   },
+   "ref": "npc:a13",
+   "slug": {
+    "en": "sal",
+    "pt": "sal"
+   }
+  },
+  {
+   "icon": "/icons/npcs/ozrid.png",
+   "name": {
+    "en": "Ozrid",
+    "pt": "Ozrid"
+   },
+   "ref": "npc:a130",
+   "slug": {
+    "en": "ozrid",
+    "pt": "ozrid"
+   }
+  },
+  {
+   "icon": "/icons/npcs/nick.png",
+   "name": {
+    "en": "Nick",
+    "pt": "Nick"
+   },
+   "ref": "npc:a131",
+   "slug": {
+    "en": "nick",
+    "pt": "nick"
+   }
+  },
+  {
+   "icon": "/icons/npcs/a-stressed-chef.png",
+   "name": {
+    "en": "A Stressed Chef",
+    "pt": "Um Chefe Estressado"
+   },
+   "ref": "npc:a132",
+   "slug": {
+    "en": "a-stressed-chef",
+    "pt": "um-chefe-estressado"
+   }
+  },
+  {
+   "icon": "/icons/npcs/maxwell.png",
+   "name": {
+    "en": "Maxwell",
+    "pt": "Maxwell"
+   },
+   "ref": "npc:a134",
+   "slug": {
+    "en": "maxwell",
+    "pt": "maxwell"
+   }
+  },
+  {
+   "icon": "/icons/npcs/mary.png",
+   "name": {
+    "en": "Mary",
+    "pt": "Mary"
+   },
+   "ref": "npc:a14",
+   "slug": {
+    "en": "mary",
+    "pt": "mary"
+   }
+  },
+  {
+   "icon": "/icons/npcs/margery-a149.png",
+   "name": {
+    "en": "Margery",
+    "pt": "Margery"
+   },
+   "ref": "npc:a149",
+   "slug": {
+    "en": "margery-a149",
+    "pt": "margery-a149"
+   }
+  },
+  {
+   "icon": "/icons/npcs/yoz.png",
+   "name": {
+    "en": "Yoz",
+    "pt": "Yoz"
+   },
+   "ref": "npc:a150",
+   "slug": {
+    "en": "yoz",
+    "pt": "yoz"
+   }
+  },
+  {
+   "icon": "/icons/npcs/matthew.png",
+   "name": {
+    "en": "Matthew",
+    "pt": "Matthew"
+   },
+   "ref": "npc:a152",
+   "slug": {
+    "en": "matthew",
+    "pt": "matthew"
+   }
+  },
+  {
+   "icon": "/icons/npcs/newell.png",
+   "name": {
+    "en": "Newell",
+    "pt": "Newell"
+   },
+   "ref": "npc:a158",
+   "slug": {
+    "en": "newell",
+    "pt": "newell"
+   }
+  },
+  {
+   "icon": "/icons/npcs/gabe.png",
+   "name": {
+    "en": "Gabe",
+    "pt": "Gabe"
+   },
+   "ref": "npc:a159",
+   "slug": {
+    "en": "gabe",
+    "pt": "gabe"
+   }
+  },
+  {
+   "icon": "/icons/npcs/amlon.png",
+   "name": {
+    "en": "Amlon",
+    "pt": "Amlon"
+   },
+   "ref": "npc:a162",
+   "slug": {
+    "en": "amlon",
+    "pt": "amlon"
+   }
+  },
+  {
+   "icon": "/icons/npcs/amlon-a164.png",
+   "name": {
+    "en": "Amlon",
+    "pt": "Amlon"
+   },
+   "ref": "npc:a164",
+   "slug": {
+    "en": "amlon-a164",
+    "pt": "amlon-a164"
+   }
+  },
+  {
+   "icon": "/icons/npcs/amlon-a166.png",
+   "name": {
+    "en": "Amlon",
+    "pt": "Amlon"
+   },
+   "ref": "npc:a166",
+   "slug": {
+    "en": "amlon-a166",
+    "pt": "amlon-a166"
+   }
+  },
+  {
+   "icon": "/icons/npcs/martem.png",
+   "name": {
+    "en": "Martem",
+    "pt": "Martem"
+   },
+   "ref": "npc:a178",
+   "slug": {
+    "en": "martem",
+    "pt": "martem"
+   }
+  },
+  {
+   "icon": "/icons/npcs/edmund.png",
+   "name": {
+    "en": "Edmund",
+    "pt": "Edmund"
+   },
+   "ref": "npc:a18",
+   "slug": {
+    "en": "edmund",
+    "pt": "edmund"
+   }
+  },
+  {
+   "icon": "/icons/npcs/constine.png",
+   "name": {
+    "en": "Constine",
+    "pt": "Constine"
+   },
+   "ref": "npc:a182",
+   "slug": {
+    "en": "constine",
+    "pt": "constine"
+   }
+  },
+  {
+   "icon": "/icons/npcs/joan.png",
+   "name": {
+    "en": "Joan",
+    "pt": "Joan"
+   },
+   "ref": "npc:a184",
+   "slug": {
+    "en": "joan",
+    "pt": "joan"
+   }
+  },
+  {
+   "icon": "/icons/npcs/odie.png",
+   "name": {
+    "en": "Odie",
+    "pt": "Odie"
+   },
+   "ref": "npc:a185",
+   "slug": {
+    "en": "odie",
+    "pt": "odie"
+   }
+  },
+  {
+   "icon": "/icons/npcs/gonlle.png",
+   "name": {
+    "en": "Gonlle",
+    "pt": "Gonlle"
+   },
+   "ref": "npc:a186",
+   "slug": {
+    "en": "gonlle",
+    "pt": "gonlle"
+   }
+  },
+  {
+   "icon": "/icons/npcs/nunie.png",
+   "name": {
+    "en": "Nunie",
+    "pt": "Nunie"
+   },
+   "ref": "npc:a187",
+   "slug": {
+    "en": "nunie",
+    "pt": "nunie"
+   }
+  },
+  {
+   "icon": "/icons/npcs/hoder.png",
+   "name": {
+    "en": "Hoder",
+    "pt": "Hoder"
+   },
+   "ref": "npc:a204",
+   "slug": {
+    "en": "hoder",
+    "pt": "hoder"
+   }
+  },
+  {
+   "icon": "/icons/npcs/reika.png",
+   "name": {
+    "en": "Reika",
+    "pt": "Reika"
+   },
+   "ref": "npc:a206",
+   "slug": {
+    "en": "reika",
+    "pt": "reika"
+   }
+  },
+  {
+   "icon": "/icons/npcs/dionel.png",
+   "name": {
+    "en": "Dionel",
+    "pt": "Dionel"
+   },
+   "ref": "npc:a213",
+   "slug": {
+    "en": "dionel",
+    "pt": "dionel"
+   }
+  },
+  {
+   "icon": "/icons/npcs/rosel.png",
+   "name": {
+    "en": "Rosel",
+    "pt": "Rosel"
+   },
+   "ref": "npc:a214",
+   "slug": {
+    "en": "rosel",
+    "pt": "rosel"
+   }
+  },
+  {
+   "icon": "/icons/npcs/petrus.png",
+   "name": {
+    "en": "Petrus",
+    "pt": "Petrus"
+   },
+   "ref": "npc:a215",
+   "slug": {
+    "en": "petrus",
+    "pt": "petrus"
+   }
+  },
+  {
+   "icon": "/icons/npcs/morrigan.png",
+   "name": {
+    "en": "Morrigan",
+    "pt": "Morrigan"
+   },
+   "ref": "npc:a229",
+   "slug": {
+    "en": "morrigan",
+    "pt": "morrigan"
+   }
+  },
+  {
+   "icon": "/icons/npcs/colman.png",
+   "name": {
+    "en": "Colman",
+    "pt": "Colman"
+   },
+   "ref": "npc:a241",
+   "slug": {
+    "en": "colman",
+    "pt": "colman"
+   }
+  },
+  {
+   "icon": "/icons/npcs/brean.png",
+   "name": {
+    "en": "Brean",
+    "pt": "Brean"
+   },
+   "ref": "npc:a242",
+   "slug": {
+    "en": "brean",
+    "pt": "brean"
+   }
+  },
+  {
+   "icon": "/icons/npcs/salazar.png",
+   "name": {
+    "en": "Salazar",
+    "pt": "Salazar"
+   },
+   "ref": "npc:a243",
+   "slug": {
+    "en": "salazar",
+    "pt": "salazar"
+   }
+  },
+  {
+   "icon": "/icons/npcs/logan.png",
+   "name": {
+    "en": "Logan",
+    "pt": "Logan"
+   },
+   "ref": "npc:a244",
+   "slug": {
+    "en": "logan",
+    "pt": "logan"
+   }
+  },
+  {
+   "icon": "/icons/npcs/tock.png",
+   "name": {
+    "en": "Tock",
+    "pt": "Tock"
+   },
+   "ref": "npc:a247",
+   "slug": {
+    "en": "tock",
+    "pt": "tock"
+   }
+  },
+  {
+   "icon": "/icons/npcs/loke.png",
+   "name": {
+    "en": "Loke",
+    "pt": "Loke"
+   },
+   "ref": "npc:a248",
+   "slug": {
+    "en": "loke",
+    "pt": "loke"
+   }
+  },
+  {
+   "icon": "/icons/npcs/a-blue-mage.png",
+   "name": {
+    "en": "A Blue Mage",
+    "pt": "Um Mago Azul"
+   },
+   "ref": "npc:a253",
+   "slug": {
+    "en": "a-blue-mage",
+    "pt": "um-mago-azul"
+   }
+  },
+  {
+   "icon": "/icons/npcs/a-ghoulish-secretary.png",
+   "name": {
+    "en": "A Ghoulish Secretary",
+    "pt": "Uma Secretária Macabra"
+   },
+   "ref": "npc:a269",
+   "slug": {
+    "en": "a-ghoulish-secretary",
+    "pt": "uma-secretaria-macabra"
+   }
+  },
+  {
+   "icon": "/icons/npcs/a-blind-botanist.png",
+   "name": {
+    "en": "A Blind Botanist",
+    "pt": "Um Botânico Cego"
+   },
+   "ref": "npc:a282",
+   "slug": {
+    "en": "a-blind-botanist",
+    "pt": "um-botanico-cego"
+   }
+  },
+  {
+   "icon": "/icons/npcs/egemen.png",
+   "name": {
+    "en": "Egemen",
+    "pt": "Egemen"
+   },
+   "ref": "npc:a290",
+   "slug": {
+    "en": "egemen",
+    "pt": "egemen"
+   }
+  },
+  {
+   "icon": "/icons/npcs/nebil.png",
+   "name": {
+    "en": "Nebil",
+    "pt": "Nebil"
+   },
+   "ref": "npc:a293",
+   "slug": {
+    "en": "nebil",
+    "pt": "nebil"
+   }
+  },
+  {
+   "icon": "/icons/npcs/tink.png",
+   "name": {
+    "en": "Tink",
+    "pt": "Tink"
+   },
+   "ref": "npc:a298",
+   "slug": {
+    "en": "tink",
+    "pt": "tink"
+   }
+  },
+  {
+   "icon": "/icons/npcs/hagar.png",
+   "name": {
+    "en": "Hagar",
+    "pt": "Hagar"
+   },
+   "ref": "npc:a300",
+   "slug": {
+    "en": "hagar",
+    "pt": "hagar"
+   }
+  },
+  {
+   "icon": "/icons/npcs/kazim.png",
+   "name": {
+    "en": "Kazim",
+    "pt": "Kazim"
+   },
+   "ref": "npc:a301",
+   "slug": {
+    "en": "kazim",
+    "pt": "kazim"
+   }
+  },
+  {
+   "icon": "/icons/npcs/isra.png",
+   "name": {
+    "en": "Isra",
+    "pt": "Isra"
+   },
+   "ref": "npc:a303",
+   "slug": {
+    "en": "isra",
+    "pt": "isra"
+   }
+  },
+  {
+   "icon": "/icons/npcs/ismet.png",
+   "name": {
+    "en": "Ismet",
+    "pt": "Ismet"
+   },
+   "ref": "npc:a304",
+   "slug": {
+    "en": "ismet",
+    "pt": "ismet"
+   }
+  },
+  {
+   "icon": "/icons/npcs/yacht.png",
+   "name": {
+    "en": "Yacht",
+    "pt": "Yacht"
+   },
+   "ref": "npc:a306",
+   "slug": {
+    "en": "yacht",
+    "pt": "yacht"
+   }
+  },
+  {
+   "icon": "/icons/npcs/hoder-a331.png",
+   "name": {
+    "en": "Hoder",
+    "pt": "Hoder"
+   },
+   "ref": "npc:a331",
+   "slug": {
+    "en": "hoder-a331",
+    "pt": "hoder-a331"
+   }
+  },
+  {
+   "icon": "/icons/npcs/seymour.png",
+   "name": {
+    "en": "Seymour",
+    "pt": "Seymour"
+   },
+   "ref": "npc:a49",
+   "slug": {
+    "en": "seymour",
+    "pt": "seymour"
+   }
+  },
+  {
+   "icon": "/icons/npcs/gavin.png",
+   "name": {
+    "en": "Gavin",
+    "pt": "Gavin"
+   },
+   "ref": "npc:a51",
+   "slug": {
+    "en": "gavin",
+    "pt": "gavin"
+   }
+  },
+  {
+   "icon": "/icons/npcs/guy.png",
+   "name": {
+    "en": "Guy",
+    "pt": "Guy"
+   },
+   "ref": "npc:a54",
+   "slug": {
+    "en": "guy",
+    "pt": "guy"
+   }
+  },
+  {
+   "icon": "/icons/npcs/rasobar.png",
+   "name": {
+    "en": "Rasobar",
+    "pt": "Rasobar"
+   },
+   "ref": "npc:a56",
+   "slug": {
+    "en": "rasobar",
+    "pt": "rasobar"
+   }
+  },
+  {
+   "icon": "/icons/npcs/sigurd.png",
+   "name": {
+    "en": "Sigurd",
+    "pt": "Sigurd"
+   },
+   "ref": "npc:a59",
+   "slug": {
+    "en": "sigurd",
+    "pt": "sigurd"
+   }
+  },
+  {
+   "icon": "/icons/npcs/violet.png",
+   "name": {
+    "en": "Violet",
+    "pt": "Violet"
+   },
+   "ref": "npc:a6",
+   "slug": {
+    "en": "violet",
+    "pt": "violet"
+   }
+  },
+  {
+   "icon": "/icons/npcs/wolfram.png",
+   "name": {
+    "en": "Wolfram",
+    "pt": "Wolfram"
+   },
+   "ref": "npc:a60",
+   "slug": {
+    "en": "wolfram",
+    "pt": "wolfram"
+   }
+  },
+  {
+   "icon": "/icons/npcs/jaques.png",
+   "name": {
+    "en": "Jaques",
+    "pt": "Jaques"
+   },
+   "ref": "npc:a61",
+   "slug": {
+    "en": "jaques",
+    "pt": "jaques"
+   }
+  },
+  {
+   "icon": "/icons/npcs/maude.png",
+   "name": {
+    "en": "Maude",
+    "pt": "Maude"
+   },
+   "ref": "npc:a72",
+   "slug": {
+    "en": "maude",
+    "pt": "maude"
+   }
+  },
+  {
+   "icon": "/icons/npcs/benedict-a73.png",
+   "name": {
+    "en": "Benedict",
+    "pt": "Benedict"
+   },
+   "ref": "npc:a73",
+   "slug": {
+    "en": "benedict-a73",
+    "pt": "benedict-a73"
+   }
+  },
+  {
+   "icon": "/icons/npcs/roland.png",
+   "name": {
+    "en": "Roland",
+    "pt": "Roland"
+   },
+   "ref": "npc:a75",
+   "slug": {
+    "en": "roland",
+    "pt": "roland"
+   }
+  },
+  {
+   "icon": "/icons/npcs/meredith.png",
+   "name": {
+    "en": "Meredith",
+    "pt": "Meredith"
+   },
+   "ref": "npc:a78",
+   "slug": {
+    "en": "meredith",
+    "pt": "meredith"
+   }
+  },
+  {
+   "icon": "/icons/npcs/wilfred.png",
+   "name": {
+    "en": "Wilfred",
+    "pt": "Wilfred"
+   },
+   "ref": "npc:a80",
+   "slug": {
+    "en": "wilfred",
+    "pt": "wilfred"
+   }
+  },
+  {
+   "icon": "/icons/npcs/mabel.png",
+   "name": {
+    "en": "Mabel",
+    "pt": "Mabel"
+   },
+   "ref": "npc:a81",
+   "slug": {
+    "en": "mabel",
+    "pt": "mabel"
+   }
+  },
+  {
+   "icon": "/icons/npcs/reginald.png",
+   "name": {
+    "en": "Reginald",
+    "pt": "Reginald"
+   },
+   "ref": "npc:a82",
+   "slug": {
+    "en": "reginald",
+    "pt": "reginald"
+   }
+  },
+  {
+   "icon": "/icons/npcs/margery.png",
+   "name": {
+    "en": "Margery",
+    "pt": "Margery"
+   },
+   "ref": "npc:a83",
+   "slug": {
+    "en": "margery",
+    "pt": "margery"
+   }
+  },
+  {
+   "icon": "/icons/npcs/zebulon.png",
+   "name": {
+    "en": "Zebulon",
+    "pt": "Zebulon"
+   },
+   "ref": "npc:a85",
+   "slug": {
+    "en": "zebulon",
+    "pt": "zebulon"
+   }
+  },
+  {
+   "icon": "/icons/npcs/lurleen.png",
+   "name": {
+    "en": "Lurleen",
+    "pt": "Lurleen"
+   },
+   "ref": "npc:a86",
+   "slug": {
+    "en": "lurleen",
+    "pt": "lurleen"
+   }
+  },
+  {
+   "icon": "/icons/npcs/erastus.png",
+   "name": {
+    "en": "Erastus",
+    "pt": "Erastus"
+   },
+   "ref": "npc:a87",
+   "slug": {
+    "en": "erastus",
+    "pt": "erastus"
+   }
+  },
+  {
+   "icon": "/icons/npcs/otis.png",
+   "name": {
+    "en": "Otis",
+    "pt": "Otis"
+   },
+   "ref": "npc:a88",
+   "slug": {
+    "en": "otis",
+    "pt": "otis"
+   }
+  },
+  {
+   "icon": "/icons/npcs/hester.png",
+   "name": {
+    "en": "Hester",
+    "pt": "Hester"
+   },
+   "ref": "npc:a89",
+   "slug": {
+    "en": "hester",
+    "pt": "hester"
+   }
+  },
+  {
+   "icon": "/icons/npcs/dewey.png",
+   "name": {
+    "en": "Dewey",
+    "pt": "Dewey"
+   },
+   "ref": "npc:a90",
+   "slug": {
+    "en": "dewey",
+    "pt": "dewey"
+   }
+  },
+  {
+   "icon": "/icons/npcs/opal.png",
+   "name": {
+    "en": "Opal",
+    "pt": "Opal"
+   },
+   "ref": "npc:a91",
+   "slug": {
+    "en": "opal",
+    "pt": "opal"
+   }
+  },
+  {
+   "icon": "/icons/npcs/burl.png",
+   "name": {
+    "en": "Burl",
+    "pt": "Burl"
+   },
+   "ref": "npc:a92",
+   "slug": {
+    "en": "burl",
+    "pt": "burl"
+   }
+  },
+  {
+   "icon": "/icons/npcs/bessie.png",
+   "name": {
+    "en": "Bessie",
+    "pt": "Bessie"
+   },
+   "ref": "npc:a95",
+   "slug": {
+    "en": "bessie",
+    "pt": "bessie"
+   }
+  },
+  {
+   "icon": "/icons/npcs/hobart.png",
+   "name": {
+    "en": "Hobart",
+    "pt": "Hobart"
+   },
+   "ref": "npc:a96",
+   "slug": {
+    "en": "hobart",
+    "pt": "hobart"
+   }
+  },
+  {
+   "icon": "/icons/npcs/jebidiah.png",
+   "name": {
+    "en": "Jebidiah",
+    "pt": "Jebidiah"
+   },
+   "ref": "npc:a98",
+   "slug": {
+    "en": "jebidiah",
+    "pt": "jebidiah"
+   }
+  },
+  {
+   "name": {
+    "en": "Goblin Cave Quest",
+    "pt": "Missão da Caverna dos Goblins"
+   },
+   "ref": "quest:q1",
+   "slug": {
+    "en": "goblin-cave-quest",
+    "pt": "missao-da-caverna-dos-goblins"
+   }
+  },
+  {
+   "name": {
+    "en": "Annoying Quest",
+    "pt": "Missão Irritante"
+   },
+   "ref": "quest:q10",
+   "slug": {
+    "en": "annoying-quest",
+    "pt": "missao-irritante"
+   }
+  },
+  {
+   "name": {
+    "en": "Devil's Ingot",
+    "pt": "Barra do Diabo"
+   },
+   "ref": "quest:q100",
+   "slug": {
+    "en": "devil-s-ingot",
+    "pt": "barra-do-diabo"
+   }
+  },
+  {
+   "name": {
+    "en": "Occultist Spy",
+    "pt": "Espião Ocultista"
+   },
+   "ref": "quest:q1001",
+   "slug": {
+    "en": "occultist-spy",
+    "pt": "espiao-ocultista"
+   }
+  },
+  {
+   "name": {
+    "en": "Delivery to Seraphina",
+    "pt": "Entrega para Seraphina"
+   },
+   "ref": "quest:q1002",
+   "slug": {
+    "en": "delivery-to-seraphina",
+    "pt": "entrega-para-seraphina"
+   }
+  },
+  {
+   "name": {
+    "en": "Love Letter Delivery",
+    "pt": "Entrega da Carta de Amor"
+   },
+   "ref": "quest:q1004",
+   "slug": {
+    "en": "love-letter-delivery",
+    "pt": "entrega-da-carta-de-amor"
+   }
+  },
+  {
+   "name": {
+    "en": "Digger Cave Ingot",
+    "pt": "Barra da Caverna dos Diggers"
+   },
+   "ref": "quest:q101",
+   "slug": {
+    "en": "digger-cave-ingot",
+    "pt": "barra-da-caverna-dos-diggers"
+   }
+  },
+  {
+   "name": {
+    "en": "Novel Hero",
+    "pt": "Herói do Romance"
+   },
+   "ref": "quest:q1010",
+   "slug": {
+    "en": "novel-hero",
+    "pt": "heroi-do-romance"
+   }
+  },
+  {
+   "name": {
+    "en": "Bad Ink Gatherer",
+    "pt": "Coletor de Tinta Ruim"
+   },
+   "ref": "quest:q1013",
+   "slug": {
+    "en": "bad-ink-gatherer",
+    "pt": "coletor-de-tinta-ruim"
+   }
+  },
+  {
+   "name": {
+    "en": "Letter for Dewey",
+    "pt": "Carta para Dewey"
+   },
+   "ref": "quest:q1014",
+   "slug": {
+    "en": "letter-for-dewey",
+    "pt": "carta-para-dewey"
+   }
+  },
+  {
+   "name": {
+    "en": "Bread Delivery",
+    "pt": "Entrega de Pão"
+   },
+   "ref": "quest:q1016",
+   "slug": {
+    "en": "bread-delivery",
+    "pt": "entrega-de-pao"
+   }
+  },
+  {
+   "name": {
+    "en": "Family Rebound",
+    "pt": "Reencontro Familiar"
+   },
+   "ref": "quest:q1018",
+   "slug": {
+    "en": "family-rebound",
+    "pt": "reencontro-familiar"
+   }
+  },
+  {
+   "name": {
+    "en": "Amphitere's Treasure",
+    "pt": "Tesouro do Amphitere"
+   },
+   "ref": "quest:q102",
+   "slug": {
+    "en": "amphitere-s-treasure",
+    "pt": "tesouro-do-amphitere"
+   }
+  },
+  {
+   "name": {
+    "en": "Potion Shipper",
+    "pt": "Entregador de Poções"
+   },
+   "ref": "quest:q1025",
+   "slug": {
+    "en": "potion-shipper",
+    "pt": "entregador-de-pocoes"
+   }
+  },
+  {
+   "name": {
+    "en": "Deep Cave Ingot",
+    "pt": "Lingote da Caverna Profunda"
+   },
+   "ref": "quest:q103",
+   "slug": {
+    "en": "deep-cave-ingot",
+    "pt": "lingote-da-caverna-profunda"
+   }
+  },
+  {
+   "name": {
+    "en": "Drystan's Letter",
+    "pt": "Carta de Drystan"
+   },
+   "ref": "quest:q1032",
+   "slug": {
+    "en": "drystan-s-letter",
+    "pt": "carta-de-drystan"
+   }
+  },
+  {
+   "name": {
+    "en": "Mountain Ingot",
+    "pt": "Lingote da Montanha"
+   },
+   "ref": "quest:q104",
+   "slug": {
+    "en": "mountain-ingot",
+    "pt": "lingote-da-montanha"
+   }
+  },
+  {
+   "name": {
+    "en": "Wilfred's Gift",
+    "pt": "Presente de Wilfred"
+   },
+   "ref": "quest:q1044",
+   "slug": {
+    "en": "wilfred-s-gift",
+    "pt": "presente-de-wilfred"
+   }
+  },
+  {
+   "name": {
+    "en": "Hero in Basile",
+    "pt": "Herói em Basile"
+   },
+   "ref": "quest:q1047",
+   "slug": {
+    "en": "hero-in-basile",
+    "pt": "heroi-em-basile"
+   }
+  },
+  {
+   "name": {
+    "en": "Package for Elsie",
+    "pt": "Pacote para Elsie"
+   },
+   "ref": "quest:q1048",
+   "slug": {
+    "en": "package-for-elsie",
+    "pt": "pacote-para-elsie"
+   }
+  },
+  {
+   "name": {
+    "en": "Eye Steel Ingot",
+    "pt": "Barra de Aço do Olho"
+   },
+   "ref": "quest:q105",
+   "slug": {
+    "en": "eye-steel-ingot",
+    "pt": "barra-de-aco-do-olho"
+   }
+  },
+  {
+   "name": {
+    "en": "Lunch Rescuer",
+    "pt": "Resgatador do Almoço"
+   },
+   "ref": "quest:q1054",
+   "slug": {
+    "en": "lunch-rescuer",
+    "pt": "resgatador-do-almoco"
+   }
+  },
+  {
+   "name": {
+    "en": "Yseult's Mission",
+    "pt": "Missão de Yseult"
+   },
+   "ref": "quest:q1057",
+   "slug": {
+    "en": "yseult-s-mission",
+    "pt": "missao-de-yseult"
+   }
+  },
+  {
+   "name": {
+    "en": "Blacksmith Assistant",
+    "pt": "Assistente do Ferreiro"
+   },
+   "ref": "quest:q1059",
+   "slug": {
+    "en": "blacksmith-assistant",
+    "pt": "assistente-do-ferreiro"
+   }
+  },
+  {
+   "name": {
+    "en": "Old House Ingot",
+    "pt": "Lingote da Casa Antiga"
+   },
+   "ref": "quest:q106",
+   "slug": {
+    "en": "old-house-ingot",
+    "pt": "lingote-da-casa-antiga"
+   }
+  },
+  {
+   "name": {
+    "en": "General's Ingot",
+    "pt": "Lingote do General"
+   },
+   "ref": "quest:q107",
+   "slug": {
+    "en": "general-s-ingot",
+    "pt": "lingote-do-general"
+   }
+  },
+  {
+   "name": {
+    "en": "The Hat Task",
+    "pt": "Tarefa do Chapéu"
+   },
+   "ref": "quest:q1077",
+   "slug": {
+    "en": "the-hat-task",
+    "pt": "tarefa-do-chapeu"
+   }
+  },
+  {
+   "name": {
+    "en": "Drystan's Grocery",
+    "pt": "Mantimentos de Drystan"
+   },
+   "ref": "quest:q1079",
+   "slug": {
+    "en": "drystan-s-grocery",
+    "pt": "mantimentos-de-drystan"
+   }
+  },
+  {
+   "name": {
+    "en": "The Grave Ingot",
+    "pt": "O Lingote da Tumba"
+   },
+   "ref": "quest:q108",
+   "slug": {
+    "en": "the-grave-ingot",
+    "pt": "o-lingote-da-tumba"
+   }
+  },
+  {
+   "name": {
+    "en": "Boat Tailor",
+    "pt": "Alfaiate do Barco"
+   },
+   "ref": "quest:q1080",
+   "slug": {
+    "en": "boat-tailor",
+    "pt": "alfaiate-do-barco"
+   }
+  },
+  {
+   "name": {
+    "en": "Toe Hunt",
+    "pt": "Caça aos Dedos"
+   },
+   "ref": "quest:q1081",
+   "slug": {
+    "en": "toe-hunt",
+    "pt": "caca-aos-dedos"
+   }
+  },
+  {
+   "name": {
+    "en": "Good Ink Gatherer",
+    "pt": "Bom Coletor de Tinta"
+   },
+   "ref": "quest:q1083",
+   "slug": {
+    "en": "good-ink-gatherer",
+    "pt": "bom-coletor-de-tinta"
+   }
+  },
+  {
+   "name": {
+    "en": "Buried Tin Ingot",
+    "pt": "Lingote de Estanho Enterrado"
+   },
+   "ref": "quest:q109",
+   "slug": {
+    "en": "buried-tin-ingot",
+    "pt": "lingote-de-estanho-enterrado"
+   }
+  },
+  {
+   "name": {
+    "en": "Old Lighthouse Quest",
+    "pt": "Missão do Farol Antigo"
+   },
+   "ref": "quest:q11",
+   "slug": {
+    "en": "old-lighthouse-quest",
+    "pt": "missao-do-farol-antigo"
+   }
+  },
+  {
+   "name": {
+    "en": "Frozen Ingot",
+    "pt": "Lingote Congelado"
+   },
+   "ref": "quest:q110",
+   "slug": {
+    "en": "frozen-ingot",
+    "pt": "lingote-congelado"
+   }
+  },
+  {
+   "name": {
+    "en": "A Grilled Cheese",
+    "pt": "Um Queijo Grelhado"
+   },
+   "ref": "quest:q1100",
+   "slug": {
+    "en": "a-grilled-cheese",
+    "pt": "um-queijo-grelhado"
+   }
+  },
+  {
+   "name": {
+    "en": "An Apple Pie",
+    "pt": "Uma Torta de Maçã"
+   },
+   "ref": "quest:q1101",
+   "slug": {
+    "en": "an-apple-pie",
+    "pt": "uma-torta-de-maca"
+   }
+  },
+  {
+   "name": {
+    "en": "A Fish Steak",
+    "pt": "Um Filé de Peixe"
+   },
+   "ref": "quest:q1102",
+   "slug": {
+    "en": "a-fish-steak",
+    "pt": "um-file-de-peixe"
+   }
+  },
+  {
+   "name": {
+    "en": "A Spicy Stew",
+    "pt": "Um Ensopado Picante"
+   },
+   "ref": "quest:q1103",
+   "slug": {
+    "en": "a-spicy-stew",
+    "pt": "um-ensopado-picante"
+   }
+  },
+  {
+   "name": {
+    "en": "Licensed Chef",
+    "pt": "Chef Licenciado"
+   },
+   "ref": "quest:q1104",
+   "slug": {
+    "en": "licensed-chef",
+    "pt": "chef-licenciado"
+   }
+  },
+  {
+   "name": {
+    "en": "Drunkard's Gift",
+    "pt": "Presente do Bêbado"
+   },
+   "ref": "quest:q1106",
+   "slug": {
+    "en": "drunkard-s-gift",
+    "pt": "presente-do-bebado"
+   }
+  },
+  {
+   "name": {
+    "en": "Stairs Ingot",
+    "pt": "Lingote das Escadas"
+   },
+   "ref": "quest:q111",
+   "slug": {
+    "en": "stairs-ingot",
+    "pt": "lingote-das-escadas"
+   }
+  },
+  {
+   "name": {
+    "en": "Lantern Rescued",
+    "pt": "Lanterna Resgatada"
+   },
+   "ref": "quest:q1112",
+   "slug": {
+    "en": "lantern-rescued",
+    "pt": "lanterna-resgatada"
+   }
+  },
+  {
+   "name": {
+    "en": "A Clue Found",
+    "pt": "Uma Pista Encontrada"
+   },
+   "ref": "quest:q1115",
+   "slug": {
+    "en": "a-clue-found",
+    "pt": "uma-pista-encontrada"
+   }
+  },
+  {
+   "name": {
+    "en": "Spellbook Hero",
+    "pt": "Herói do Grimório"
+   },
+   "ref": "quest:q1118",
+   "slug": {
+    "en": "spellbook-hero",
+    "pt": "heroi-do-grimorio"
+   }
+  },
+  {
+   "name": {
+    "en": "Waterfall Ingot",
+    "pt": "Lingote da Cachoeira"
+   },
+   "ref": "quest:q112",
+   "slug": {
+    "en": "waterfall-ingot",
+    "pt": "lingote-da-cachoeira"
+   }
+  },
+  {
+   "name": {
+    "en": "Gil and the Key",
+    "pt": "Gil e a Chave"
+   },
+   "ref": "quest:q1121",
+   "slug": {
+    "en": "gil-and-the-key",
+    "pt": "gil-e-a-chave"
+   }
+  },
+  {
+   "name": {
+    "en": "Food Sample",
+    "pt": "Amostra de Comida"
+   },
+   "ref": "quest:q1124",
+   "slug": {
+    "en": "food-sample",
+    "pt": "amostra-de-comida"
+   }
+  },
+  {
+   "name": {
+    "en": "Papaya Reward",
+    "pt": "Recompensa de Papaia"
+   },
+   "ref": "quest:q1128",
+   "slug": {
+    "en": "papaya-reward",
+    "pt": "recompensa-de-papaia"
+   }
+  },
+  {
+   "name": {
+    "en": "Smith Apprentice",
+    "pt": "Aprendiz de Ferreiro"
+   },
+   "ref": "quest:q1129",
+   "slug": {
+    "en": "smith-apprentice",
+    "pt": "aprendiz-de-ferreiro"
+   }
+  },
+  {
+   "name": {
+    "en": "General's Key",
+    "pt": "Chave do General"
+   },
+   "ref": "quest:q113",
+   "slug": {
+    "en": "general-s-key",
+    "pt": "chave-do-general"
+   }
+  },
+  {
+   "name": {
+    "en": "El Chad's Trust",
+    "pt": "Confiança do El Chad"
+   },
+   "ref": "quest:q1131",
+   "slug": {
+    "en": "el-chad-s-trust",
+    "pt": "confianca-do-el-chad"
+   }
+  },
+  {
+   "name": {
+    "en": "Nick's Ingot",
+    "pt": "Barra de Nick"
+   },
+   "ref": "quest:q114",
+   "slug": {
+    "en": "nick-s-ingot",
+    "pt": "barra-de-nick"
+   }
+  },
+  {
+   "name": {
+    "en": "Caravan Helper",
+    "pt": "Ajudante da Caravana"
+   },
+   "ref": "quest:q1143",
+   "slug": {
+    "en": "caravan-helper",
+    "pt": "ajudante-da-caravana"
+   }
+  },
+  {
+   "name": {
+    "en": "Farmer's Friend",
+    "pt": "Amigo do Fazendeiro"
+   },
+   "ref": "quest:q1146",
+   "slug": {
+    "en": "farmer-s-friend",
+    "pt": "amigo-do-fazendeiro"
+   }
+  },
+  {
+   "name": {
+    "en": "Trader's Ingot",
+    "pt": "Barra do Mercador"
+   },
+   "ref": "quest:q115",
+   "slug": {
+    "en": "trader-s-ingot",
+    "pt": "barra-do-mercador"
+   }
+  },
+  {
+   "name": {
+    "en": "Rock Delivery",
+    "pt": "Entrega de Pedras"
+   },
+   "ref": "quest:q1153",
+   "slug": {
+    "en": "rock-delivery",
+    "pt": "entrega-de-pedras"
+   }
+  },
+  {
+   "name": {
+    "en": "Wood for Outlaws",
+    "pt": "Madeira para Foras da Lei"
+   },
+   "ref": "quest:q1158",
+   "slug": {
+    "en": "wood-for-outlaws",
+    "pt": "madeira-para-foras-da-lei"
+   }
+  },
+  {
+   "name": {
+    "en": "El Chad's Ingot",
+    "pt": "Barra do El Chad"
+   },
+   "ref": "quest:q116",
+   "slug": {
+    "en": "el-chad-s-ingot",
+    "pt": "barra-do-el-chad"
+   }
+  },
+  {
+   "name": {
+    "en": "Papaya Reward",
+    "pt": "Recompensa de Papaia"
+   },
+   "ref": "quest:q1166",
+   "slug": {
+    "en": "papaya-reward-q1166",
+    "pt": "recompensa-de-papaia-q1166"
+   }
+  },
+  {
+   "name": {
+    "en": "Satisfied Fan",
+    "pt": "Fã Satisfeita"
+   },
+   "ref": "quest:q1169",
+   "slug": {
+    "en": "satisfied-fan",
+    "pt": "fa-satisfeita"
+   }
+  },
+  {
+   "name": {
+    "en": "Prison Ingot",
+    "pt": "Barra da Prisão"
+   },
+   "ref": "quest:q117",
+   "slug": {
+    "en": "prison-ingot",
+    "pt": "barra-da-prisao"
+   }
+  },
+  {
+   "name": {
+    "en": "Elmo's Gift",
+    "pt": "Presente de Elmo"
+   },
+   "ref": "quest:q118",
+   "slug": {
+    "en": "elmo-s-gift",
+    "pt": "presente-de-elmo"
+   }
+  },
+  {
+   "name": {
+    "en": "Tomb Ornate Chest",
+    "pt": "Baú Ornamentado da Tumba"
+   },
+   "ref": "quest:q119",
+   "slug": {
+    "en": "tomb-ornate-chest",
+    "pt": "bau-ornamentado-da-tumba"
+   }
+  },
+  {
+   "name": {
+    "en": "The Ghost Trapper",
+    "pt": "O Caçador de Fantasmas"
+   },
+   "ref": "quest:q1195",
+   "slug": {
+    "en": "the-ghost-trapper",
+    "pt": "o-cacador-de-fantasmas"
+   }
+  },
+  {
+   "name": {
+    "en": "Ghost Exchange",
+    "pt": "Troca de Fantasma"
+   },
+   "ref": "quest:q1198",
+   "slug": {
+    "en": "ghost-exchange",
+    "pt": "troca-de-fantasma"
+   }
+  },
+  {
+   "name": {
+    "en": "Thadeu's Clothes",
+    "pt": "Roupas de Thadeu"
+   },
+   "ref": "quest:q12",
+   "slug": {
+    "en": "thadeu-s-clothes",
+    "pt": "roupas-de-thadeu"
+   }
+  },
+  {
+   "name": {
+    "en": "Hidden Desert Ingot",
+    "pt": "Lingote Oculto do Deserto"
+   },
+   "ref": "quest:q120",
+   "slug": {
+    "en": "hidden-desert-ingot",
+    "pt": "lingote-oculto-do-deserto"
+   }
+  },
+  {
+   "name": {
+    "en": "Farm Saver",
+    "pt": "Salvador da Fazenda"
+   },
+   "ref": "quest:q1203",
+   "slug": {
+    "en": "farm-saver",
+    "pt": "salvador-da-fazenda"
+   }
+  },
+  {
+   "name": {
+    "en": "Friend of a Witch",
+    "pt": "Amigo de uma Bruxa"
+   },
+   "ref": "quest:q1205",
+   "slug": {
+    "en": "friend-of-a-witch",
+    "pt": "amigo-de-uma-bruxa"
+   }
+  },
+  {
+   "name": {
+    "en": "Church Investigated",
+    "pt": "Igreja Investigada"
+   },
+   "ref": "quest:q1206",
+   "slug": {
+    "en": "church-investigated",
+    "pt": "igreja-investigada"
+   }
+  },
+  {
+   "name": {
+    "en": "Loke Avenger",
+    "pt": "Vingador de Loke"
+   },
+   "ref": "quest:q1209",
+   "slug": {
+    "en": "loke-avenger",
+    "pt": "vingador-de-loke"
+   }
+  },
+  {
+   "name": {
+    "en": "Dead Man's Ingot",
+    "pt": "Lingote do Homem Morto"
+   },
+   "ref": "quest:q121",
+   "slug": {
+    "en": "dead-man-s-ingot-q121",
+    "pt": "lingote-do-homem-morto-q121"
+   }
+  },
+  {
+   "name": {
+    "en": "Balder Hunt",
+    "pt": "Caçada de Balder"
+   },
+   "ref": "quest:q1210",
+   "slug": {
+    "en": "balder-hunt",
+    "pt": "cacada-de-balder"
+   }
+  },
+  {
+   "name": {
+    "en": "A Blessed Reward",
+    "pt": "Uma Recompensa Abençoada"
+   },
+   "ref": "quest:q1219",
+   "slug": {
+    "en": "a-blessed-reward",
+    "pt": "uma-recompensa-abencoada"
+   }
+  },
+  {
+   "name": {
+    "en": "Tomb's Ingot",
+    "pt": "Lingote da Tumba"
+   },
+   "ref": "quest:q122",
+   "slug": {
+    "en": "tomb-s-ingot",
+    "pt": "lingote-da-tumba"
+   }
+  },
+  {
+   "name": {
+    "en": "A Ghost Meeting",
+    "pt": "Encontro com um Fantasma"
+   },
+   "ref": "quest:q1224",
+   "slug": {
+    "en": "a-ghost-meeting",
+    "pt": "encontro-com-um-fantasma"
+   }
+  },
+  {
+   "name": {
+    "en": "Terrible Service",
+    "pt": "Serviço Terrível"
+   },
+   "ref": "quest:q1226",
+   "slug": {
+    "en": "terrible-service",
+    "pt": "servico-terrivel"
+   }
+  },
+  {
+   "name": {
+    "en": "Perry's School Gift",
+    "pt": "Presente Escolar de Perry"
+   },
+   "ref": "quest:q1229",
+   "slug": {
+    "en": "perry-s-school-gift",
+    "pt": "presente-escolar-de-perry"
+   }
+  },
+  {
+   "name": {
+    "en": "Rock Core One",
+    "pt": "Núcleo de Pedra Um"
+   },
+   "ref": "quest:q123",
+   "slug": {
+    "en": "rock-core-one",
+    "pt": "nucleo-de-pedra-um"
+   }
+  },
+  {
+   "name": {
+    "en": "Vee's School Gift",
+    "pt": "Presente Escolar de Vee"
+   },
+   "ref": "quest:q1230",
+   "slug": {
+    "en": "vee-s-school-gift",
+    "pt": "presente-escolar-de-vee"
+   }
+  },
+  {
+   "name": {
+    "en": "Dee's School Gift",
+    "pt": "Presente Escolar de Dee"
+   },
+   "ref": "quest:q1231",
+   "slug": {
+    "en": "dee-s-school-gift",
+    "pt": "presente-escolar-de-dee"
+   }
+  },
+  {
+   "name": {
+    "en": "Teacher's Joy",
+    "pt": "Alegria da Professora"
+   },
+   "ref": "quest:q1235",
+   "slug": {
+    "en": "teacher-s-joy",
+    "pt": "alegria-da-professora"
+   }
+  },
+  {
+   "name": {
+    "en": "Tooth and Glory",
+    "pt": "Dente e Glória"
+   },
+   "ref": "quest:q1238",
+   "slug": {
+    "en": "tooth-and-glory",
+    "pt": "dente-e-gloria"
+   }
+  },
+  {
+   "name": {
+    "en": "Rock Core Key",
+    "pt": "Chave do Núcleo de Pedra"
+   },
+   "ref": "quest:q124",
+   "slug": {
+    "en": "rock-core-key",
+    "pt": "chave-do-nucleo-de-pedra"
+   }
+  },
+  {
+   "name": {
+    "en": "Journeymen",
+    "pt": "Jornaleiros"
+   },
+   "ref": "quest:q1244",
+   "slug": {
+    "en": "journeymen",
+    "pt": "jornaleiros"
+   }
+  },
+  {
+   "name": {
+    "en": "Rock Core Three",
+    "pt": "Núcleo de Pedra Três"
+   },
+   "ref": "quest:q125",
+   "slug": {
+    "en": "rock-core-three",
+    "pt": "nucleo-de-pedra-tres"
+   }
+  },
+  {
+   "name": {
+    "en": "Helped in Heat",
+    "pt": "Ajudou no Calor"
+   },
+   "ref": "quest:q1252",
+   "slug": {
+    "en": "helped-in-heat",
+    "pt": "ajudou-no-calor"
+   }
+  },
+  {
+   "name": {
+    "en": "Vecan's Hidden Ingot",
+    "pt": "Lingote Escondido de Vecan"
+   },
+   "ref": "quest:q126",
+   "slug": {
+    "en": "vecan-s-hidden-ingot",
+    "pt": "lingote-escondido-de-vecan"
+   }
+  },
+  {
+   "name": {
+    "en": "Tink's Reward",
+    "pt": "Recompensa de Tink"
+   },
+   "ref": "quest:q1269",
+   "slug": {
+    "en": "tink-s-reward",
+    "pt": "recompensa-de-tink"
+   }
+  },
+  {
+   "name": {
+    "en": "Rock Core Four",
+    "pt": "Núcleo de Pedra Quatro"
+   },
+   "ref": "quest:q127",
+   "slug": {
+    "en": "rock-core-four",
+    "pt": "nucleo-de-pedra-quatro"
+   }
+  },
+  {
+   "name": {
+    "en": "Sushi to Sushi",
+    "pt": "Sushi para Sushi"
+   },
+   "ref": "quest:q1274",
+   "slug": {
+    "en": "sushi-to-sushi",
+    "pt": "sushi-para-sushi"
+   }
+  },
+  {
+   "name": {
+    "en": "Gourmand's Cat",
+    "pt": "Gato do Gourmet"
+   },
+   "ref": "quest:q1276",
+   "slug": {
+    "en": "gourmand-s-cat",
+    "pt": "gato-do-gourmet"
+   }
+  },
+  {
+   "name": {
+    "en": "Aurora's Gift",
+    "pt": "Presente de Aurora"
+   },
+   "ref": "quest:q1277",
+   "slug": {
+    "en": "aurora-s-gift",
+    "pt": "presente-de-aurora"
+   }
+  },
+  {
+   "name": {
+    "en": "General's Cat",
+    "pt": "Gato do General"
+   },
+   "ref": "quest:q1279",
+   "slug": {
+    "en": "general-s-cat",
+    "pt": "gato-do-general"
+   }
+  },
+  {
+   "name": {
+    "en": "Rock Core Five",
+    "pt": "Núcleo de Pedra Cinco"
+   },
+   "ref": "quest:q128",
+   "slug": {
+    "en": "rock-core-five",
+    "pt": "nucleo-de-pedra-cinco"
+   }
+  },
+  {
+   "name": {
+    "en": "Baron's Cat",
+    "pt": "O Gato do Barão"
+   },
+   "ref": "quest:q1282",
+   "slug": {
+    "en": "baron-s-cat",
+    "pt": "o-gato-do-barao"
+   }
+  },
+  {
+   "name": {
+    "en": "Millen's Idea",
+    "pt": "Ideia de Millen"
+   },
+   "ref": "quest:q1283",
+   "slug": {
+    "en": "millen-s-idea",
+    "pt": "ideia-de-millen"
+   }
+  },
+  {
+   "name": {
+    "en": "Jon's Idea",
+    "pt": "Ideia de Jon"
+   },
+   "ref": "quest:q1286",
+   "slug": {
+    "en": "jon-s-idea",
+    "pt": "ideia-de-jon"
+   }
+  },
+  {
+   "name": {
+    "en": "Karmac's Idea",
+    "pt": "Ideia de Karmac"
+   },
+   "ref": "quest:q1289",
+   "slug": {
+    "en": "karmac-s-idea",
+    "pt": "ideia-de-karmac"
+   }
+  },
+  {
+   "name": {
+    "en": "Rock Core Six",
+    "pt": "Núcleo de Pedra Seis"
+   },
+   "ref": "quest:q129",
+   "slug": {
+    "en": "rock-core-six",
+    "pt": "nucleo-de-pedra-seis"
+   }
+  },
+  {
+   "name": {
+    "en": "Hagar Sample",
+    "pt": "Amostra de Hagar"
+   },
+   "ref": "quest:q1296",
+   "slug": {
+    "en": "hagar-sample",
+    "pt": "amostra-de-hagar"
+   }
+  },
+  {
+   "name": {
+    "en": "Arming Outlaws",
+    "pt": "Armando os Foras da Lei"
+   },
+   "ref": "quest:q1297",
+   "slug": {
+    "en": "arming-outlaws",
+    "pt": "armando-os-foras-da-lei"
+   }
+  },
+  {
+   "name": {
+    "en": "Lost Herbs",
+    "pt": "Ervas Perdidas"
+   },
+   "ref": "quest:q13",
+   "slug": {
+    "en": "lost-herbs",
+    "pt": "ervas-perdidas"
+   }
+  },
+  {
+   "name": {
+    "en": "Tower Gem",
+    "pt": "Gema da Torre"
+   },
+   "ref": "quest:q130",
+   "slug": {
+    "en": "tower-gem",
+    "pt": "gema-da-torre"
+   }
+  },
+  {
+   "name": {
+    "en": "Cooking for Outlaws",
+    "pt": "Cozinhando para Foras da Lei"
+   },
+   "ref": "quest:q1301",
+   "slug": {
+    "en": "cooking-for-outlaws",
+    "pt": "cozinhando-para-foras-da-lei"
+   }
+  },
+  {
+   "name": {
+    "en": "Feeding Outlaws",
+    "pt": "Alimentando Foras da Lei"
+   },
+   "ref": "quest:q1302",
+   "slug": {
+    "en": "feeding-outlaws",
+    "pt": "alimentando-foras-da-lei"
+   }
+  },
+  {
+   "name": {
+    "en": "Spider Iron Ingot",
+    "pt": "Barra de Ferro da Aranha"
+   },
+   "ref": "quest:q131",
+   "slug": {
+    "en": "spider-iron-ingot",
+    "pt": "barra-de-ferro-da-aranha"
+   }
+  },
+  {
+   "name": {
+    "en": "Monastery Cave Ingot",
+    "pt": "Lingote da Caverna do Monastério"
+   },
+   "ref": "quest:q132",
+   "slug": {
+    "en": "monastery-cave-ingot",
+    "pt": "lingote-da-caverna-do-monasterio"
+   }
+  },
+  {
+   "name": {
+    "en": "Constructing for Outlaws",
+    "pt": "Construindo para Foras da Lei"
+   },
+   "ref": "quest:q1321",
+   "slug": {
+    "en": "constructing-for-outlaws",
+    "pt": "construindo-para-foras-da-lei"
+   }
+  },
+  {
+   "name": {
+    "en": "Gear for Outlaws",
+    "pt": "Equipamento para Foras da Lei"
+   },
+   "ref": "quest:q1322",
+   "slug": {
+    "en": "gear-for-outlaws",
+    "pt": "equipamento-para-foras-da-lei"
+   }
+  },
+  {
+   "name": {
+    "en": "Smith's Iron Ingot",
+    "pt": "Lingote de Ferro do Ferreiro"
+   },
+   "ref": "quest:q133",
+   "slug": {
+    "en": "smith-s-iron-ingot",
+    "pt": "lingote-de-ferro-do-ferreiro"
+   }
+  },
+  {
+   "name": {
+    "en": "Smith's Knife Part One",
+    "pt": "Faca do Ferreiro Parte Um"
+   },
+   "ref": "quest:q134",
+   "slug": {
+    "en": "smith-s-knife-part-one",
+    "pt": "faca-do-ferreiro-parte-um"
+   }
+  },
+  {
+   "name": {
+    "en": "Smith's Knife Part One",
+    "pt": "Faca do Ferreiro Parte Um"
+   },
+   "ref": "quest:q135",
+   "slug": {
+    "en": "smith-s-knife-part-one-q135",
+    "pt": "faca-do-ferreiro-parte-um-q135"
+   }
+  },
+  {
+   "name": {
+    "en": "Spider Mound Ingot",
+    "pt": "Lingote do Monte das Aranhas"
+   },
+   "ref": "quest:q136",
+   "slug": {
+    "en": "spider-mound-ingot",
+    "pt": "lingote-do-monte-das-aranhas"
+   }
+  },
+  {
+   "name": {
+    "en": "Mausoleum Rat Chest",
+    "pt": "Baú do Rato do Mausoléu"
+   },
+   "ref": "quest:q137",
+   "slug": {
+    "en": "mausoleum-rat-chest",
+    "pt": "bau-do-rato-do-mausoleu"
+   }
+  },
+  {
+   "name": {
+    "en": "Labyrinth Chest",
+    "pt": "Baú do Labirinto"
+   },
+   "ref": "quest:q138",
+   "slug": {
+    "en": "labyrinth-chest",
+    "pt": "bau-do-labirinto"
+   }
+  },
+  {
+   "name": {
+    "en": "Church Tower Chest",
+    "pt": "Baú da Torre da Igreja"
+   },
+   "ref": "quest:q139",
+   "slug": {
+    "en": "church-tower-chest",
+    "pt": "bau-da-torre-da-igreja"
+   }
+  },
+  {
+   "name": {
+    "en": "Silver Dagger Chest",
+    "pt": "Baú da Adaga de Prata"
+   },
+   "ref": "quest:q14",
+   "slug": {
+    "en": "silver-dagger-chest",
+    "pt": "bau-da-adaga-de-prata"
+   }
+  },
+  {
+   "name": {
+    "en": "Occult Charm Chest",
+    "pt": "Baú do Amuleto Oculto"
+   },
+   "ref": "quest:q140",
+   "slug": {
+    "en": "occult-charm-chest",
+    "pt": "bau-do-amuleto-oculto"
+   }
+  },
+  {
+   "name": {
+    "en": "Church Final Chest 1",
+    "pt": "Baú Final da Igreja 1"
+   },
+   "ref": "quest:q141",
+   "slug": {
+    "en": "church-final-chest-1",
+    "pt": "bau-final-da-igreja-1"
+   }
+  },
+  {
+   "name": {
+    "en": "Church Final Chest 2",
+    "pt": "Baú Final da Igreja 2"
+   },
+   "ref": "quest:q142",
+   "slug": {
+    "en": "church-final-chest-2",
+    "pt": "bau-final-da-igreja-2"
+   }
+  },
+  {
+   "name": {
+    "en": "Ghost Tower Chest",
+    "pt": "Baú da Torre Fantasma"
+   },
+   "ref": "quest:q143",
+   "slug": {
+    "en": "ghost-tower-chest",
+    "pt": "bau-da-torre-fantasma"
+   }
+  },
+  {
+   "name": {
+    "en": "Ghost Cellar Chest",
+    "pt": "Baú da Adega Fantasma"
+   },
+   "ref": "quest:q144",
+   "slug": {
+    "en": "ghost-cellar-chest",
+    "pt": "bau-da-adega-fantasma"
+   }
+  },
+  {
+   "name": {
+    "en": "Ghost Ingot Chest",
+    "pt": "Baú do Lingote Fantasma"
+   },
+   "ref": "quest:q145",
+   "slug": {
+    "en": "ghost-ingot-chest",
+    "pt": "bau-do-lingote-fantasma"
+   }
+  },
+  {
+   "name": {
+    "en": "Heart of the Tree",
+    "pt": "Coração da Árvore"
+   },
+   "ref": "quest:q146",
+   "slug": {
+    "en": "heart-of-the-tree",
+    "pt": "coracao-da-arvore"
+   }
+  },
+  {
+   "name": {
+    "en": "Outlaw Chest",
+    "pt": "Baú dos Fora da Lei"
+   },
+   "ref": "quest:q147",
+   "slug": {
+    "en": "outlaw-chest",
+    "pt": "bau-dos-fora-da-lei"
+   }
+  },
+  {
+   "name": {
+    "en": "Ghost House Chest",
+    "pt": "Baú da Casa Fantasma"
+   },
+   "ref": "quest:q148",
+   "slug": {
+    "en": "ghost-house-chest",
+    "pt": "bau-da-casa-fantasma"
+   }
+  },
+  {
+   "name": {
+    "en": "Snow Bear Chest",
+    "pt": "Baú do Urso da Neve"
+   },
+   "ref": "quest:q149",
+   "slug": {
+    "en": "snow-bear-chest",
+    "pt": "bau-do-urso-da-neve"
+   }
+  },
+  {
+   "name": {
+    "en": "Hidden Black Bag",
+    "pt": "Bolsa Preta Escondida"
+   },
+   "ref": "quest:q15",
+   "slug": {
+    "en": "hidden-black-bag",
+    "pt": "bolsa-preta-escondida"
+   }
+  },
+  {
+   "name": {
+    "en": "Tomb Bandit Chest",
+    "pt": "Baú dos Bandidos da Tumba"
+   },
+   "ref": "quest:q150",
+   "slug": {
+    "en": "tomb-bandit-chest",
+    "pt": "bau-dos-bandidos-da-tumba"
+   }
+  },
+  {
+   "name": {
+    "en": "Tomb Top Chest",
+    "pt": "Baú do Topo da Tumba"
+   },
+   "ref": "quest:q151",
+   "slug": {
+    "en": "tomb-top-chest",
+    "pt": "bau-do-topo-da-tumba"
+   }
+  },
+  {
+   "name": {
+    "en": "Tomb Pit Ingot",
+    "pt": "Lingote do Poço da Tumba"
+   },
+   "ref": "quest:q152",
+   "slug": {
+    "en": "tomb-pit-ingot",
+    "pt": "lingote-do-poco-da-tumba"
+   }
+  },
+  {
+   "name": {
+    "en": "Mines Chest",
+    "pt": "Baú das Minas"
+   },
+   "ref": "quest:q153",
+   "slug": {
+    "en": "mines-chest",
+    "pt": "bau-das-minas"
+   }
+  },
+  {
+   "name": {
+    "en": "Mines Deep Reward",
+    "pt": "Recompensa das Profundezas das Minas"
+   },
+   "ref": "quest:q154",
+   "slug": {
+    "en": "mines-deep-reward",
+    "pt": "recompensa-das-profundezas-das-minas"
+   }
+  },
+  {
+   "name": {
+    "en": "Ritual Dagger Find",
+    "pt": "Descoberta da Adaga Ritual"
+   },
+   "ref": "quest:q155",
+   "slug": {
+    "en": "ritual-dagger-find",
+    "pt": "descoberta-da-adaga-ritual"
+   }
+  },
+  {
+   "name": {
+    "en": "Gavin Book Chest",
+    "pt": "Baú de Livros de Gavin"
+   },
+   "ref": "quest:q156",
+   "slug": {
+    "en": "gavin-book-chest",
+    "pt": "bau-de-livros-de-gavin"
+   }
+  },
+  {
+   "name": {
+    "en": "Ship Rat Chest",
+    "pt": "Baú do Rato do Navio"
+   },
+   "ref": "quest:q157",
+   "slug": {
+    "en": "ship-rat-chest",
+    "pt": "bau-do-rato-do-navio"
+   }
+  },
+  {
+   "name": {
+    "en": "Spire Pants",
+    "pt": "Calças da Agulha"
+   },
+   "ref": "quest:q158",
+   "slug": {
+    "en": "spire-pants",
+    "pt": "calcas-da-agulha"
+   }
+  },
+  {
+   "name": {
+    "en": "Longhouse Ingot",
+    "pt": "Lingote da Casa Longa"
+   },
+   "ref": "quest:q159",
+   "slug": {
+    "en": "longhouse-ingot",
+    "pt": "lingote-da-casa-longa"
+   }
+  },
+  {
+   "name": {
+    "en": "Crude Quest",
+    "pt": "Missão Rústica"
+   },
+   "ref": "quest:q16",
+   "slug": {
+    "en": "crude-quest",
+    "pt": "missao-rustica"
+   }
+  },
+  {
+   "name": {
+    "en": "Longhouse Prison Chest",
+    "pt": "Baú da Prisão da Casa Longa"
+   },
+   "ref": "quest:q160",
+   "slug": {
+    "en": "longhouse-prison-chest",
+    "pt": "bau-da-prisao-da-casa-longa"
+   }
+  },
+  {
+   "name": {
+    "en": "Spider Ring Chest",
+    "pt": "Baú do Anel da Aranha"
+   },
+   "ref": "quest:q161",
+   "slug": {
+    "en": "spider-ring-chest",
+    "pt": "bau-do-anel-da-aranha"
+   }
+  },
+  {
+   "name": {
+    "en": "Morrigan's Reward",
+    "pt": "Recompensa de Morrigan"
+   },
+   "ref": "quest:q162",
+   "slug": {
+    "en": "morrigan-s-reward",
+    "pt": "recompensa-de-morrigan"
+   }
+  },
+  {
+   "name": {
+    "en": "Frances Stashed Bread",
+    "pt": "Pão Escondido de Frances"
+   },
+   "ref": "quest:q163",
+   "slug": {
+    "en": "frances-stashed-bread",
+    "pt": "pao-escondido-de-frances"
+   }
+  },
+  {
+   "name": {
+    "en": "Nordha Farm Ingot",
+    "pt": "Barra da Fazenda de Nordha"
+   },
+   "ref": "quest:q164",
+   "slug": {
+    "en": "nordha-farm-ingot",
+    "pt": "barra-da-fazenda-de-nordha"
+   }
+  },
+  {
+   "name": {
+    "en": "Slime Chest",
+    "pt": "Baú de Limo"
+   },
+   "ref": "quest:q165",
+   "slug": {
+    "en": "slime-chest",
+    "pt": "bau-de-limo"
+   }
+  },
+  {
+   "name": {
+    "en": "Guri's Gear",
+    "pt": "Equipamento de Guri"
+   },
+   "ref": "quest:q166",
+   "slug": {
+    "en": "guri-s-gear",
+    "pt": "equipamento-de-guri"
+   }
+  },
+  {
+   "name": {
+    "en": "Reika's Kitchen Chest",
+    "pt": "Baú da Cozinha de Reika"
+   },
+   "ref": "quest:q167",
+   "slug": {
+    "en": "reika-s-kitchen-chest",
+    "pt": "bau-da-cozinha-de-reika"
+   }
+  },
+  {
+   "name": {
+    "en": "Reika's Reward",
+    "pt": "Recompensa de Reika"
+   },
+   "ref": "quest:q168",
+   "slug": {
+    "en": "reika-s-reward",
+    "pt": "recompensa-de-reika"
+   }
+  },
+  {
+   "name": {
+    "en": "Bedroom Quill Chest",
+    "pt": "Baú com Pena do Quarto"
+   },
+   "ref": "quest:q169",
+   "slug": {
+    "en": "bedroom-quill-chest",
+    "pt": "bau-com-pena-do-quarto"
+   }
+  },
+  {
+   "name": {
+    "en": "Trident Chest",
+    "pt": "Baú de Trident"
+   },
+   "ref": "quest:q17",
+   "slug": {
+    "en": "trident-chest",
+    "pt": "bau-de-trident"
+   }
+  },
+  {
+   "name": {
+    "en": "Lisa's Chest",
+    "pt": "Baú de Lisa"
+   },
+   "ref": "quest:q170",
+   "slug": {
+    "en": "lisa-s-chest",
+    "pt": "bau-de-lisa"
+   }
+  },
+  {
+   "name": {
+    "en": "Siege Quest",
+    "pt": "Missão do Cerco"
+   },
+   "ref": "quest:q171",
+   "slug": {
+    "en": "siege-quest",
+    "pt": "missao-do-cerco"
+   }
+  },
+  {
+   "name": {
+    "en": "Torch Quest",
+    "pt": "Missão da Tocha"
+   },
+   "ref": "quest:q172",
+   "slug": {
+    "en": "torch-quest-q172",
+    "pt": "missao-da-tocha-q172"
+   }
+  },
+  {
+   "name": {
+    "en": "Torch Quest",
+    "pt": "Missão da Tocha"
+   },
+   "ref": "quest:q173",
+   "slug": {
+    "en": "torch-quest-q173",
+    "pt": "missao-da-tocha-q173"
+   }
+  },
+  {
+   "name": {
+    "en": "Wooden Shield Quest",
+    "pt": "Missão do Escudo de Madeira"
+   },
+   "ref": "quest:q174",
+   "slug": {
+    "en": "wooden-shield-quest-q174",
+    "pt": "missao-do-escudo-de-madeira-q174"
+   }
+  },
+  {
+   "name": {
+    "en": "Wooden Shield Quest",
+    "pt": "Missão do Escudo de Madeira"
+   },
+   "ref": "quest:q175",
+   "slug": {
+    "en": "wooden-shield-quest-q175",
+    "pt": "missao-do-escudo-de-madeira-q175"
+   }
+  },
+  {
+   "name": {
+    "en": "Rope Quest",
+    "pt": "Missão da Corda"
+   },
+   "ref": "quest:q176",
+   "slug": {
+    "en": "rope-quest-q176",
+    "pt": "missao-da-corda-q176"
+   }
+  },
+  {
+   "name": {
+    "en": "Rope Quest",
+    "pt": "Missão da Corda"
+   },
+   "ref": "quest:q177",
+   "slug": {
+    "en": "rope-quest-q177",
+    "pt": "missao-da-corda-q177"
+   }
+  },
+  {
+   "name": {
+    "en": "Spire's Backpack",
+    "pt": "Mochila da Agulha"
+   },
+   "ref": "quest:q178",
+   "slug": {
+    "en": "spire-s-backpack",
+    "pt": "mochila-da-agulha"
+   }
+  },
+  {
+   "name": {
+    "en": "Bandit Stash",
+    "pt": "Esconderijo de Bandidos"
+   },
+   "ref": "quest:q179",
+   "slug": {
+    "en": "bandit-stash",
+    "pt": "esconderijo-de-bandidos"
+   }
+  },
+  {
+   "name": {
+    "en": "Violet's Reward",
+    "pt": "Recompensa de Violet"
+   },
+   "ref": "quest:q18",
+   "slug": {
+    "en": "violet-s-reward",
+    "pt": "recompensa-de-violet"
+   }
+  },
+  {
+   "name": {
+    "en": "Hoder Chest",
+    "pt": "Baú de Hoder"
+   },
+   "ref": "quest:q180",
+   "slug": {
+    "en": "hoder-chest",
+    "pt": "bau-de-hoder"
+   }
+  },
+  {
+   "name": {
+    "en": "Hidden Mushroom",
+    "pt": "Cogumelo Escondido"
+   },
+   "ref": "quest:q181",
+   "slug": {
+    "en": "hidden-mushroom",
+    "pt": "cogumelo-escondido"
+   }
+  },
+  {
+   "name": {
+    "en": "Repellent Chest",
+    "pt": "Baú do Repelente"
+   },
+   "ref": "quest:q182",
+   "slug": {
+    "en": "repellent-chest",
+    "pt": "bau-do-repelente"
+   }
+  },
+  {
+   "name": {
+    "en": "Capital Hidden Ingot",
+    "pt": "Lingote Oculto da Capital"
+   },
+   "ref": "quest:q183",
+   "slug": {
+    "en": "capital-hidden-ingot",
+    "pt": "lingote-oculto-da-capital"
+   }
+  },
+  {
+   "name": {
+    "en": "Boat Hidden Ingot",
+    "pt": "Barra Escondida do Barco"
+   },
+   "ref": "quest:q184",
+   "slug": {
+    "en": "boat-hidden-ingot",
+    "pt": "barra-escondida-do-barco"
+   }
+  },
+  {
+   "name": {
+    "en": "Tomb Robot Chest",
+    "pt": "Baú do Robô da Tumba"
+   },
+   "ref": "quest:q185",
+   "slug": {
+    "en": "tomb-robot-chest",
+    "pt": "bau-do-robo-da-tumba"
+   }
+  },
+  {
+   "name": {
+    "en": "Stone Hidden Ingot",
+    "pt": "Lingote Escondido na Pedra"
+   },
+   "ref": "quest:q186",
+   "slug": {
+    "en": "stone-hidden-ingot",
+    "pt": "lingote-escondido-na-pedra"
+   }
+  },
+  {
+   "name": {
+    "en": "Desert Outpost Chest",
+    "pt": "Baú do Posto do Deserto"
+   },
+   "ref": "quest:q187",
+   "slug": {
+    "en": "desert-outpost-chest",
+    "pt": "bau-do-posto-do-deserto"
+   }
+  },
+  {
+   "name": {
+    "en": "Maze Tower Chest",
+    "pt": "Baú da Torre do Labirinto"
+   },
+   "ref": "quest:q188",
+   "slug": {
+    "en": "maze-tower-chest",
+    "pt": "bau-da-torre-do-labirinto"
+   }
+  },
+  {
+   "name": {
+    "en": "Garlic Chest",
+    "pt": "Baú de Alho"
+   },
+   "ref": "quest:q189",
+   "slug": {
+    "en": "garlic-chest",
+    "pt": "bau-de-alho"
+   }
+  },
+  {
+   "name": {
+    "en": "Swamp Troll's Treasure",
+    "pt": "Tesouro do Troll do Pântano"
+   },
+   "ref": "quest:q19",
+   "slug": {
+    "en": "swamp-troll-s-treasure",
+    "pt": "tesouro-do-troll-do-pantano"
+   }
+  },
+  {
+   "name": {
+    "en": "Darkness Chest",
+    "pt": "Baú da Escuridão"
+   },
+   "ref": "quest:q190",
+   "slug": {
+    "en": "darkness-chest",
+    "pt": "bau-da-escuridao"
+   }
+  },
+  {
+   "name": {
+    "en": "Locked Ship Chest",
+    "pt": "Baú Trancado do Navio"
+   },
+   "ref": "quest:q191",
+   "slug": {
+    "en": "locked-ship-chest",
+    "pt": "bau-trancado-do-navio"
+   }
+  },
+  {
+   "name": {
+    "en": "Maze Tower Chest",
+    "pt": "Baú da Torre do Labirinto"
+   },
+   "ref": "quest:q192",
+   "slug": {
+    "en": "maze-tower-chest-q192",
+    "pt": "bau-da-torre-do-labirinto-q192"
+   }
+  },
+  {
+   "name": {
+    "en": "Rot Bone Chest",
+    "pt": "Baú de Ossos Podres"
+   },
+   "ref": "quest:q193",
+   "slug": {
+    "en": "rot-bone-chest",
+    "pt": "bau-de-ossos-podres"
+   }
+  },
+  {
+   "name": {
+    "en": "Terror River Chest",
+    "pt": "Baú do Rio do Terror"
+   },
+   "ref": "quest:q194",
+   "slug": {
+    "en": "terror-river-chest",
+    "pt": "bau-do-rio-do-terror"
+   }
+  },
+  {
+   "name": {
+    "en": "Draught Spider Chest",
+    "pt": "Baú da Aranha de Draughtwood"
+   },
+   "ref": "quest:q195",
+   "slug": {
+    "en": "draught-spider-chest",
+    "pt": "bau-da-aranha-de-draughtwood"
+   }
+  },
+  {
+   "name": {
+    "en": "Silver Ring Chest",
+    "pt": "Baú do Anel de Prata"
+   },
+   "ref": "quest:q196",
+   "slug": {
+    "en": "silver-ring-chest",
+    "pt": "bau-do-anel-de-prata"
+   }
+  },
+  {
+   "name": {
+    "en": "Amanita Chest",
+    "pt": "Baú do Amanita"
+   },
+   "ref": "quest:q197",
+   "slug": {
+    "en": "amanita-chest",
+    "pt": "bau-do-amanita"
+   }
+  },
+  {
+   "name": {
+    "en": "Bandit Mush Stash",
+    "pt": "Esconderijo de Cogumelos dos Bandidos"
+   },
+   "ref": "quest:q198",
+   "slug": {
+    "en": "bandit-mush-stash",
+    "pt": "esconderijo-de-cogumelos-dos-bandidos"
+   }
+  },
+  {
+   "name": {
+    "en": "Forest Final Chest",
+    "pt": "Baú Final da Floresta"
+   },
+   "ref": "quest:q199",
+   "slug": {
+    "en": "forest-final-chest",
+    "pt": "bau-final-da-floresta"
+   }
+  },
+  {
+   "name": {
+    "en": "Seymour Knife Chest",
+    "pt": "Baú da Faca de Seymour"
+   },
+   "ref": "quest:q2",
+   "slug": {
+    "en": "seymour-knife-chest",
+    "pt": "bau-da-faca-de-seymour"
+   }
+  },
+  {
+   "name": {
+    "en": "Lost Aqua Base",
+    "pt": "Base Aqua Perdida"
+   },
+   "ref": "quest:q20",
+   "slug": {
+    "en": "lost-aqua-base",
+    "pt": "base-aqua-perdida"
+   }
+  },
+  {
+   "name": {
+    "en": "Minerva's Stash",
+    "pt": "Esconderijo de Minerva"
+   },
+   "ref": "quest:q200",
+   "slug": {
+    "en": "minerva-s-stash",
+    "pt": "esconderijo-de-minerva"
+   }
+  },
+  {
+   "name": {
+    "en": "Trash Chest",
+    "pt": "Baú do Lixo"
+   },
+   "ref": "quest:q201",
+   "slug": {
+    "en": "trash-chest",
+    "pt": "bau-do-lixo"
+   }
+  },
+  {
+   "name": {
+    "en": "Pants Chest",
+    "pt": "Baú de Calças"
+   },
+   "ref": "quest:q202",
+   "slug": {
+    "en": "pants-chest",
+    "pt": "bau-de-calcas"
+   }
+  },
+  {
+   "name": {
+    "en": "Flagellant's Quest",
+    "pt": "Missão do Flagelante"
+   },
+   "ref": "quest:q203",
+   "slug": {
+    "en": "flagellant-s-quest",
+    "pt": "missao-do-flagelante"
+   }
+  },
+  {
+   "name": {
+    "en": "Blue Mage Chest",
+    "pt": "Baú do Mago Azul"
+   },
+   "ref": "quest:q204",
+   "slug": {
+    "en": "blue-mage-chest",
+    "pt": "bau-do-mago-azul"
+   }
+  },
+  {
+   "name": {
+    "en": "Hidden Manuscript",
+    "pt": "Manuscrito Escondido"
+   },
+   "ref": "quest:q205",
+   "slug": {
+    "en": "hidden-manuscript",
+    "pt": "manuscrito-escondido"
+   }
+  },
+  {
+   "name": {
+    "en": "Port Tower Chest",
+    "pt": "Baú da Torre do Porto"
+   },
+   "ref": "quest:q206",
+   "slug": {
+    "en": "port-tower-chest",
+    "pt": "bau-da-torre-do-porto"
+   }
+  },
+  {
+   "name": {
+    "en": "Temple Hidden Chest",
+    "pt": "Baú Escondido do Templo"
+   },
+   "ref": "quest:q207",
+   "slug": {
+    "en": "temple-hidden-chest",
+    "pt": "bau-escondido-do-templo"
+   }
+  },
+  {
+   "name": {
+    "en": "Habit's Quest",
+    "pt": "Missão do Hábito"
+   },
+   "ref": "quest:q208",
+   "slug": {
+    "en": "habit-s-quest",
+    "pt": "missao-do-habito"
+   }
+  },
+  {
+   "name": {
+    "en": "Skalish Quest",
+    "pt": "Missão Skalish"
+   },
+   "ref": "quest:q209",
+   "slug": {
+    "en": "skalish-quest",
+    "pt": "missao-skalish"
+   }
+  },
+  {
+   "name": {
+    "en": "Fish Chest",
+    "pt": "Baú de Peixes"
+   },
+   "ref": "quest:q21",
+   "slug": {
+    "en": "fish-chest",
+    "pt": "bau-de-peixes"
+   }
+  },
+  {
+   "name": {
+    "en": "Old Amulet Key",
+    "pt": "Chave do Amuleto Antigo"
+   },
+   "ref": "quest:q210",
+   "slug": {
+    "en": "old-amulet-key",
+    "pt": "chave-do-amuleto-antigo"
+   }
+  },
+  {
+   "name": {
+    "en": "Rune Book Chest",
+    "pt": "Baú do Livro de Runas"
+   },
+   "ref": "quest:q211",
+   "slug": {
+    "en": "rune-book-chest",
+    "pt": "bau-do-livro-de-runas"
+   }
+  },
+  {
+   "name": {
+    "en": "Magic Rune Chest",
+    "pt": "Baú da Runa Mágica"
+   },
+   "ref": "quest:q212",
+   "slug": {
+    "en": "magic-rune-chest",
+    "pt": "bau-da-runa-magica"
+   }
+  },
+  {
+   "name": {
+    "en": "Test Dagger Chest",
+    "pt": "Baú da Adaga de Teste"
+   },
+   "ref": "quest:q213",
+   "slug": {
+    "en": "test-dagger-chest",
+    "pt": "bau-da-adaga-de-teste"
+   }
+  },
+  {
+   "name": {
+    "en": "Gem Chest",
+    "pt": "Baú da Gema"
+   },
+   "ref": "quest:q214",
+   "slug": {
+    "en": "gem-chest",
+    "pt": "bau-da-gema"
+   }
+  },
+  {
+   "name": {
+    "en": "Lava Statue Chest",
+    "pt": "Baú da Estátua de Lava"
+   },
+   "ref": "quest:q215",
+   "slug": {
+    "en": "lava-statue-chest",
+    "pt": "bau-da-estatua-de-lava"
+   }
+  },
+  {
+   "name": {
+    "en": "Ghost Rune Chest",
+    "pt": "Baú da Runa Fantasma"
+   },
+   "ref": "quest:q216",
+   "slug": {
+    "en": "ghost-rune-chest",
+    "pt": "bau-da-runa-fantasma"
+   }
+  },
+  {
+   "name": {
+    "en": "Ghoul Chest",
+    "pt": "Baú do Carniçal"
+   },
+   "ref": "quest:q217",
+   "slug": {
+    "en": "ghoul-chest",
+    "pt": "bau-do-carnical"
+   }
+  },
+  {
+   "name": {
+    "en": "Lava Ingot Chest",
+    "pt": "Baú de Lingote de Lava"
+   },
+   "ref": "quest:q218",
+   "slug": {
+    "en": "lava-ingot-chest",
+    "pt": "bau-de-lingote-de-lava"
+   }
+  },
+  {
+   "name": {
+    "en": "Lava Ruby Chest",
+    "pt": "Baú de Rubi de Lava"
+   },
+   "ref": "quest:q219",
+   "slug": {
+    "en": "lava-ruby-chest",
+    "pt": "bau-de-rubi-de-lava"
+   }
+  },
+  {
+   "name": {
+    "en": "The Lost Ring",
+    "pt": "O Anel Perdido"
+   },
+   "ref": "quest:q22",
+   "slug": {
+    "en": "the-lost-ring",
+    "pt": "o-anel-perdido"
+   }
+  },
+  {
+   "name": {
+    "en": "Crystal Room Key",
+    "pt": "Chave da Sala de Cristal"
+   },
+   "ref": "quest:q220",
+   "slug": {
+    "en": "crystal-room-key",
+    "pt": "chave-da-sala-de-cristal"
+   }
+  },
+  {
+   "name": {
+    "en": "Bushes Chest",
+    "pt": "Baú dos Arbustos"
+   },
+   "ref": "quest:q221",
+   "slug": {
+    "en": "bushes-chest",
+    "pt": "bau-dos-arbustos"
+   }
+  },
+  {
+   "name": {
+    "en": "Bridge Bandit Chest",
+    "pt": "Baú dos Bandidos da Ponte"
+   },
+   "ref": "quest:q222",
+   "slug": {
+    "en": "bridge-bandit-chest",
+    "pt": "bau-dos-bandidos-da-ponte"
+   }
+  },
+  {
+   "name": {
+    "en": "Digger Deep Chest",
+    "pt": "Baú Profundo dos Diggers"
+   },
+   "ref": "quest:q223",
+   "slug": {
+    "en": "digger-deep-chest",
+    "pt": "bau-profundo-dos-diggers"
+   }
+  },
+  {
+   "name": {
+    "en": "Windmill Chest",
+    "pt": "Baú do Moinho"
+   },
+   "ref": "quest:q224",
+   "slug": {
+    "en": "windmill-chest",
+    "pt": "bau-do-moinho"
+   }
+  },
+  {
+   "name": {
+    "en": "Pirate Key",
+    "pt": "Chave Pirata"
+   },
+   "ref": "quest:q225",
+   "slug": {
+    "en": "pirate-key",
+    "pt": "chave-pirata"
+   }
+  },
+  {
+   "name": {
+    "en": "Pirate Mace Quest",
+    "pt": "Missão da Maça Pirata"
+   },
+   "ref": "quest:q226",
+   "slug": {
+    "en": "pirate-mace-quest",
+    "pt": "missao-da-maca-pirata"
+   }
+  },
+  {
+   "name": {
+    "en": "Felix Chest",
+    "pt": "Baú de Felix"
+   },
+   "ref": "quest:q227",
+   "slug": {
+    "en": "felix-chest",
+    "pt": "bau-de-felix"
+   }
+  },
+  {
+   "name": {
+    "en": "Skalsbane Chest",
+    "pt": "Baú de Skalsbane"
+   },
+   "ref": "quest:q228",
+   "slug": {
+    "en": "skalsbane-chest",
+    "pt": "bau-de-skalsbane"
+   }
+  },
+  {
+   "name": {
+    "en": "Zoe Toy",
+    "pt": "Brinquedo de Zoe"
+   },
+   "ref": "quest:q229",
+   "slug": {
+    "en": "zoe-toy",
+    "pt": "brinquedo-de-zoe"
+   }
+  },
+  {
+   "name": {
+    "en": "An Evil Book",
+    "pt": "Um Livro Maligno"
+   },
+   "ref": "quest:q23",
+   "slug": {
+    "en": "an-evil-book",
+    "pt": "um-livro-maligno"
+   }
+  },
+  {
+   "name": {
+    "en": "Royal Bridge Ingot",
+    "pt": "Lingote da Ponte Real"
+   },
+   "ref": "quest:q230",
+   "slug": {
+    "en": "royal-bridge-ingot",
+    "pt": "lingote-da-ponte-real"
+   }
+  },
+  {
+   "name": {
+    "en": "Ritual Chest",
+    "pt": "Baú do Ritual"
+   },
+   "ref": "quest:q231",
+   "slug": {
+    "en": "ritual-chest",
+    "pt": "bau-do-ritual"
+   }
+  },
+  {
+   "name": {
+    "en": "Ritual Chest",
+    "pt": "Baú do Ritual"
+   },
+   "ref": "quest:q232",
+   "slug": {
+    "en": "ritual-chest-q232",
+    "pt": "bau-do-ritual-q232"
+   }
+  },
+  {
+   "name": {
+    "en": "Aeikz Chest",
+    "pt": "Baú de Aeikz"
+   },
+   "ref": "quest:q233",
+   "slug": {
+    "en": "aeikz-chest",
+    "pt": "bau-de-aeikz"
+   }
+  },
+  {
+   "name": {
+    "en": "Jentes Chest",
+    "pt": "Baú de Jentes"
+   },
+   "ref": "quest:q234",
+   "slug": {
+    "en": "jentes-chest",
+    "pt": "bau-de-jentes"
+   }
+  },
+  {
+   "name": {
+    "en": "Ed Chest",
+    "pt": "Baú de Ed"
+   },
+   "ref": "quest:q235",
+   "slug": {
+    "en": "ed-chest",
+    "pt": "bau-de-ed"
+   }
+  },
+  {
+   "name": {
+    "en": "Worm Chest",
+    "pt": "Worm Chest"
+   },
+   "ref": "quest:q236",
+   "slug": {
+    "en": "worm-chest",
+    "pt": "worm-chest"
+   }
+  },
+  {
+   "name": {
+    "en": "Impossible Chest",
+    "pt": "Impossible Chest"
+   },
+   "ref": "quest:q237",
+   "slug": {
+    "en": "impossible-chest",
+    "pt": "impossible-chest"
+   }
+  },
+  {
+   "name": {
+    "en": "Big Bone Chest",
+    "pt": "Big Bone Chest"
+   },
+   "ref": "quest:q238",
+   "slug": {
+    "en": "big-bone-chest",
+    "pt": "big-bone-chest"
+   }
+  },
+  {
+   "name": {
+    "en": "Desert Bolt Chest",
+    "pt": "Desert Bolt Chest"
+   },
+   "ref": "quest:q239",
+   "slug": {
+    "en": "desert-bolt-chest",
+    "pt": "desert-bolt-chest"
+   }
+  },
+  {
+   "name": {
+    "en": "Wooden Shield Quest",
+    "pt": "Missão do Escudo de Madeira"
+   },
+   "ref": "quest:q24",
+   "slug": {
+    "en": "wooden-shield-quest",
+    "pt": "missao-do-escudo-de-madeira"
+   }
+  },
+  {
+   "name": {
+    "en": "Hell Arrow Chest",
+    "pt": "Hell Arrow Chest"
+   },
+   "ref": "quest:q240",
+   "slug": {
+    "en": "hell-arrow-chest",
+    "pt": "hell-arrow-chest"
+   }
+  },
+  {
+   "name": {
+    "en": "Marshes Chest",
+    "pt": "Baú dos Pântanos"
+   },
+   "ref": "quest:q25",
+   "slug": {
+    "en": "marshes-chest",
+    "pt": "bau-dos-pantanos"
+   }
+  },
+  {
+   "name": {
+    "en": "East Trolls Quest",
+    "pt": "Missão dos Trolls do Leste"
+   },
+   "ref": "quest:q26",
+   "slug": {
+    "en": "east-trolls-quest",
+    "pt": "missao-dos-trolls-do-leste"
+   }
+  },
+  {
+   "name": {
+    "en": "Regen Ring Quest",
+    "pt": "Missão do Anel de Regeneração"
+   },
+   "ref": "quest:q27",
+   "slug": {
+    "en": "regen-ring-quest",
+    "pt": "missao-do-anel-de-regeneracao"
+   }
+  },
+  {
+   "name": {
+    "en": "Cheese Chest",
+    "pt": "Baú de Queijo"
+   },
+   "ref": "quest:q28",
+   "slug": {
+    "en": "cheese-chest",
+    "pt": "bau-de-queijo"
+   }
+  },
+  {
+   "name": {
+    "en": "Occultist Tower Quest",
+    "pt": "Missão da Torre dos Ocultistas"
+   },
+   "ref": "quest:q29",
+   "slug": {
+    "en": "occultist-tower-quest",
+    "pt": "missao-da-torre-dos-ocultistas"
+   }
+  },
+  {
+   "name": {
+    "en": "Wounded Bag Chest",
+    "pt": "Baú da Bolsa do Ferido"
+   },
+   "ref": "quest:q3",
+   "slug": {
+    "en": "wounded-bag-chest",
+    "pt": "bau-da-bolsa-do-ferido"
+   }
+  },
+  {
+   "name": {
+    "en": "Bandit Mine Chest",
+    "pt": "Baú da Mina dos Bandidos"
+   },
+   "ref": "quest:q30",
+   "slug": {
+    "en": "bandit-mine-chest",
+    "pt": "bau-da-mina-dos-bandidos"
+   }
+  },
+  {
+   "name": {
+    "en": "Abandoned Outpost Quest",
+    "pt": "Missão do Posto Abandonado"
+   },
+   "ref": "quest:q31",
+   "slug": {
+    "en": "abandoned-outpost-quest",
+    "pt": "missao-do-posto-abandonado"
+   }
+  },
+  {
+   "name": {
+    "en": "Cloth Vest Chest",
+    "pt": "Baú do Colete de Pano"
+   },
+   "ref": "quest:q32",
+   "slug": {
+    "en": "cloth-vest-chest",
+    "pt": "bau-do-colete-de-pano"
+   }
+  },
+  {
+   "name": {
+    "en": "Branor's Bread",
+    "pt": "Pão de Branor"
+   },
+   "ref": "quest:q33",
+   "slug": {
+    "en": "branor-s-bread",
+    "pt": "pao-de-branor"
+   }
+  },
+  {
+   "name": {
+    "en": "Bascinet Quest",
+    "pt": "Missão do Bacinete"
+   },
+   "ref": "quest:q34",
+   "slug": {
+    "en": "bascinet-quest",
+    "pt": "missao-do-bacinete"
+   }
+  },
+  {
+   "name": {
+    "en": "Green Bandit Quest",
+    "pt": "Missão do Bandido Verde"
+   },
+   "ref": "quest:q35",
+   "slug": {
+    "en": "green-bandit-quest",
+    "pt": "missao-do-bandido-verde"
+   }
+  },
+  {
+   "name": {
+    "en": "Onion Chest",
+    "pt": "Baú de Cebolas"
+   },
+   "ref": "quest:q36",
+   "slug": {
+    "en": "onion-chest",
+    "pt": "bau-de-cebolas"
+   }
+  },
+  {
+   "name": {
+    "en": "Lantern Quest",
+    "pt": "Missão da Lanterna"
+   },
+   "ref": "quest:q37",
+   "slug": {
+    "en": "lantern-quest",
+    "pt": "missao-da-lanterna"
+   }
+  },
+  {
+   "name": {
+    "en": "Hidden Gold Chest",
+    "pt": "Baú de Ouro Oculto"
+   },
+   "ref": "quest:q38",
+   "slug": {
+    "en": "hidden-gold-chest",
+    "pt": "bau-de-ouro-oculto"
+   }
+  },
+  {
+   "name": {
+    "en": "Sewer Bloody Chest",
+    "pt": "Baú Sangrento do Esgoto"
+   },
+   "ref": "quest:q39",
+   "slug": {
+    "en": "sewer-bloody-chest",
+    "pt": "bau-sangrento-do-esgoto"
+   }
+  },
+  {
+   "name": {
+    "en": "Blue Ink Quest",
+    "pt": "Missão da Tinta Azul"
+   },
+   "ref": "quest:q4",
+   "slug": {
+    "en": "blue-ink-quest",
+    "pt": "missao-da-tinta-azul"
+   }
+  },
+  {
+   "name": {
+    "en": "Brass Plate Quest",
+    "pt": "Missão da Placa de Latão"
+   },
+   "ref": "quest:q40",
+   "slug": {
+    "en": "brass-plate-quest",
+    "pt": "missao-da-placa-de-latao"
+   }
+  },
+  {
+   "name": {
+    "en": "Dark Robe Quest",
+    "pt": "Missão da Túnica Sombria"
+   },
+   "ref": "quest:q41",
+   "slug": {
+    "en": "dark-robe-quest",
+    "pt": "missao-da-tunica-sombria"
+   }
+  },
+  {
+   "name": {
+    "en": "Dark Hood Quest",
+    "pt": "Missão do Capuz Sombrio"
+   },
+   "ref": "quest:q42",
+   "slug": {
+    "en": "dark-hood-quest",
+    "pt": "missao-do-capuz-sombrio"
+   }
+  },
+  {
+   "name": {
+    "en": "The Final Clue",
+    "pt": "A Pista Final"
+   },
+   "ref": "quest:q43",
+   "slug": {
+    "en": "the-final-clue",
+    "pt": "a-pista-final"
+   }
+  },
+  {
+   "name": {
+    "en": "Wooden Staff Quest",
+    "pt": "Missão do Cajado de Madeira"
+   },
+   "ref": "quest:q44",
+   "slug": {
+    "en": "wooden-staff-quest",
+    "pt": "missao-do-cajado-de-madeira"
+   }
+  },
+  {
+   "name": {
+    "en": "Amphitere Quest",
+    "pt": "Missão do Amphitere"
+   },
+   "ref": "quest:q45",
+   "slug": {
+    "en": "amphitere-quest",
+    "pt": "missao-do-amphitere"
+   }
+  },
+  {
+   "name": {
+    "en": "Orc Camp Quest",
+    "pt": "Missão do Acampamento Orc"
+   },
+   "ref": "quest:q46",
+   "slug": {
+    "en": "orc-camp-quest",
+    "pt": "missao-do-acampamento-orc"
+   }
+  },
+  {
+   "name": {
+    "en": "Torch Quest",
+    "pt": "Missão da Tocha"
+   },
+   "ref": "quest:q47",
+   "slug": {
+    "en": "torch-quest",
+    "pt": "missao-da-tocha"
+   }
+  },
+  {
+   "name": {
+    "en": "Old Shield Quest",
+    "pt": "Missão do Escudo Antigo"
+   },
+   "ref": "quest:q48",
+   "slug": {
+    "en": "old-shield-quest",
+    "pt": "missao-do-escudo-antigo"
+   }
+  },
+  {
+   "name": {
+    "en": "Minotaur Quest",
+    "pt": "Missão do Minotauro"
+   },
+   "ref": "quest:q49",
+   "slug": {
+    "en": "minotaur-quest",
+    "pt": "missao-do-minotauro"
+   }
+  },
+  {
+   "name": {
+    "en": "A Cross Clue",
+    "pt": "Uma Pista em Cruz"
+   },
+   "ref": "quest:q5",
+   "slug": {
+    "en": "a-cross-clue",
+    "pt": "uma-pista-em-cruz"
+   }
+  },
+  {
+   "name": {
+    "en": "Gloves Quest",
+    "pt": "Missão das Luvas"
+   },
+   "ref": "quest:q50",
+   "slug": {
+    "en": "gloves-quest",
+    "pt": "missao-das-luvas"
+   }
+  },
+  {
+   "name": {
+    "en": "Sentinel's Reward",
+    "pt": "Recompensa dos Sentinelas"
+   },
+   "ref": "quest:q51",
+   "slug": {
+    "en": "sentinel-s-reward",
+    "pt": "recompensa-dos-sentinelas"
+   }
+  },
+  {
+   "name": {
+    "en": "The Stolen Book",
+    "pt": "O Livro Roubado"
+   },
+   "ref": "quest:q52",
+   "slug": {
+    "en": "the-stolen-book",
+    "pt": "o-livro-roubado"
+   }
+  },
+  {
+   "name": {
+    "en": "Lost Flasks",
+    "pt": "Frascos Perdidos"
+   },
+   "ref": "quest:q53",
+   "slug": {
+    "en": "lost-flasks",
+    "pt": "frascos-perdidos"
+   }
+  },
+  {
+   "name": {
+    "en": "Whiterat Chest",
+    "pt": "Baú dos Whiterats"
+   },
+   "ref": "quest:q54",
+   "slug": {
+    "en": "whiterat-chest",
+    "pt": "bau-dos-whiterats"
+   }
+  },
+  {
+   "name": {
+    "en": "King's Dagger Reward",
+    "pt": "Recompensa: Adaga do Rei"
+   },
+   "ref": "quest:q55",
+   "slug": {
+    "en": "king-s-dagger-reward",
+    "pt": "recompensa-adaga-do-rei"
+   }
+  },
+  {
+   "name": {
+    "en": "King's Gold Reward",
+    "pt": "Recompensa: Ouro do Rei"
+   },
+   "ref": "quest:q56",
+   "slug": {
+    "en": "king-s-gold-reward",
+    "pt": "recompensa-ouro-do-rei"
+   }
+  },
+  {
+   "name": {
+    "en": "Jungle Almanac",
+    "pt": "Almanaque da Selva"
+   },
+   "ref": "quest:q57",
+   "slug": {
+    "en": "jungle-almanac",
+    "pt": "almanaque-da-selva"
+   }
+  },
+  {
+   "name": {
+    "en": "Barrel Pants",
+    "pt": "Calças do Barril"
+   },
+   "ref": "quest:q58",
+   "slug": {
+    "en": "barrel-pants",
+    "pt": "calcas-do-barril"
+   }
+  },
+  {
+   "name": {
+    "en": "Old Backpack Quest",
+    "pt": "Missão da Mochila Velha"
+   },
+   "ref": "quest:q59",
+   "slug": {
+    "en": "old-backpack-quest",
+    "pt": "missao-da-mochila-velha"
+   }
+  },
+  {
+   "name": {
+    "en": "Wheat in the Barrel",
+    "pt": "Trigo no Barril"
+   },
+   "ref": "quest:q6",
+   "slug": {
+    "en": "wheat-in-the-barrel",
+    "pt": "trigo-no-barril"
+   }
+  },
+  {
+   "name": {
+    "en": "Crystal Staff Quest",
+    "pt": "Missão do Cajado de Cristal"
+   },
+   "ref": "quest:q60",
+   "slug": {
+    "en": "crystal-staff-quest",
+    "pt": "missao-do-cajado-de-cristal"
+   }
+  },
+  {
+   "name": {
+    "en": "Rope Quest",
+    "pt": "Missão da Corda"
+   },
+   "ref": "quest:q61",
+   "slug": {
+    "en": "rope-quest",
+    "pt": "missao-da-corda"
+   }
+  },
+  {
+   "name": {
+    "en": "Moldy Chest",
+    "pt": "Baú Mofado"
+   },
+   "ref": "quest:q62",
+   "slug": {
+    "en": "moldy-chest",
+    "pt": "bau-mofado"
+   }
+  },
+  {
+   "name": {
+    "en": "The Challenge Reward",
+    "pt": "Recompensa do Desafio"
+   },
+   "ref": "quest:q63",
+   "slug": {
+    "en": "the-challenge-reward",
+    "pt": "recompensa-do-desafio"
+   }
+  },
+  {
+   "name": {
+    "en": "Magic Orb Quest",
+    "pt": "Missão do Orbe Mágico"
+   },
+   "ref": "quest:q64",
+   "slug": {
+    "en": "magic-orb-quest",
+    "pt": "missao-do-orbe-magico"
+   }
+  },
+  {
+   "name": {
+    "en": "Wreck Ship Chest",
+    "pt": "Baú do Navio Naufragado"
+   },
+   "ref": "quest:q65",
+   "slug": {
+    "en": "wreck-ship-chest",
+    "pt": "bau-do-navio-naufragado"
+   }
+  },
+  {
+   "name": {
+    "en": "Wreck Ship Key",
+    "pt": "Chave do Navio Naufragado"
+   },
+   "ref": "quest:q66",
+   "slug": {
+    "en": "wreck-ship-key",
+    "pt": "chave-do-navio-naufragado"
+   }
+  },
+  {
+   "name": {
+    "en": "Dragonfruit Quest",
+    "pt": "Missão da Fruta do Dragão"
+   },
+   "ref": "quest:q67",
+   "slug": {
+    "en": "dragonfruit-quest",
+    "pt": "missao-da-fruta-do-dragao"
+   }
+  },
+  {
+   "name": {
+    "en": "Arrow Chest",
+    "pt": "Baú de Flechas"
+   },
+   "ref": "quest:q68",
+   "slug": {
+    "en": "arrow-chest",
+    "pt": "bau-de-flechas"
+   }
+  },
+  {
+   "name": {
+    "en": "Secret Puzzle Reward",
+    "pt": "Recompensa do Enigma Secreto"
+   },
+   "ref": "quest:q69",
+   "slug": {
+    "en": "secret-puzzle-reward",
+    "pt": "recompensa-do-enigma-secreto"
+   }
+  },
+  {
+   "name": {
+    "en": "A Lunch Found",
+    "pt": "Um Almoço Encontrado"
+   },
+   "ref": "quest:q7",
+   "slug": {
+    "en": "a-lunch-found",
+    "pt": "um-almoco-encontrado"
+   }
+  },
+  {
+   "name": {
+    "en": "Apples Chest",
+    "pt": "Baú de Maçãs"
+   },
+   "ref": "quest:q70",
+   "slug": {
+    "en": "apples-chest",
+    "pt": "bau-de-macas"
+   }
+  },
+  {
+   "name": {
+    "en": "Brass Legs Quest",
+    "pt": "Missão das Pernas de Bronze"
+   },
+   "ref": "quest:q71",
+   "slug": {
+    "en": "brass-legs-quest",
+    "pt": "missao-das-pernas-de-bronze"
+   }
+  },
+  {
+   "name": {
+    "en": "Prison Key",
+    "pt": "Chave da Prisão"
+   },
+   "ref": "quest:q72",
+   "slug": {
+    "en": "prison-key",
+    "pt": "chave-da-prisao"
+   }
+  },
+  {
+   "name": {
+    "en": "Ghost Key",
+    "pt": "Chave Fantasma"
+   },
+   "ref": "quest:q73",
+   "slug": {
+    "en": "ghost-key",
+    "pt": "chave-fantasma"
+   }
+  },
+  {
+   "name": {
+    "en": "Eofor's Meat",
+    "pt": "Carne do Eofor"
+   },
+   "ref": "quest:q74",
+   "slug": {
+    "en": "eofor-s-meat",
+    "pt": "carne-do-eofor"
+   }
+  },
+  {
+   "name": {
+    "en": "Potato Key",
+    "pt": "Chave da Batata"
+   },
+   "ref": "quest:q75",
+   "slug": {
+    "en": "potato-key",
+    "pt": "chave-da-batata"
+   }
+  },
+  {
+   "name": {
+    "en": "Euler's Pants",
+    "pt": "Calças do Euler"
+   },
+   "ref": "quest:q76",
+   "slug": {
+    "en": "euler-s-pants",
+    "pt": "calcas-do-euler"
+   }
+  },
+  {
+   "name": {
+    "en": "The Discombobulator",
+    "pt": "O Descombubolador"
+   },
+   "ref": "quest:q77",
+   "slug": {
+    "en": "the-discombobulator",
+    "pt": "o-descombubolador"
+   }
+  },
+  {
+   "name": {
+    "en": "Blueberry Key",
+    "pt": "Chave de Mirtilo"
+   },
+   "ref": "quest:q78",
+   "slug": {
+    "en": "blueberry-key",
+    "pt": "chave-de-mirtilo"
+   }
+  },
+  {
+   "name": {
+    "en": "My First Quest",
+    "pt": "Minha Primeira Missão"
+   },
+   "ref": "quest:q79",
+   "slug": {
+    "en": "my-first-quest",
+    "pt": "minha-primeira-missao"
+   }
+  },
+  {
+   "name": {
+    "en": "Outlaw Tower Quest",
+    "pt": "Missão da Torre do Fora da Lei"
+   },
+   "ref": "quest:q8",
+   "slug": {
+    "en": "outlaw-tower-quest",
+    "pt": "missao-da-torre-do-fora-da-lei"
+   }
+  },
+  {
+   "name": {
+    "en": "Crystal Ring Quest",
+    "pt": "Missão do Anel de Cristal"
+   },
+   "ref": "quest:q80",
+   "slug": {
+    "en": "crystal-ring-quest",
+    "pt": "missao-do-anel-de-cristal"
+   }
+  },
+  {
+   "name": {
+    "en": "Edmund's Cottage",
+    "pt": "Cabana de Edmund"
+   },
+   "ref": "quest:q81",
+   "slug": {
+    "en": "edmund-s-cottage",
+    "pt": "cabana-de-edmund"
+   }
+  },
+  {
+   "name": {
+    "en": "The Ring of Fire",
+    "pt": "O Anel de Fogo"
+   },
+   "ref": "quest:q82",
+   "slug": {
+    "en": "the-ring-of-fire",
+    "pt": "o-anel-de-fogo"
+   }
+  },
+  {
+   "name": {
+    "en": "Pestilence Tower Chest",
+    "pt": "Baú da Torre de Pestilence"
+   },
+   "ref": "quest:q83",
+   "slug": {
+    "en": "pestilence-tower-chest",
+    "pt": "bau-da-torre-de-pestilence"
+   }
+  },
+  {
+   "name": {
+    "en": "Skull Ring Chest",
+    "pt": "Baú do Anel de Caveira"
+   },
+   "ref": "quest:q84",
+   "slug": {
+    "en": "skull-ring-chest",
+    "pt": "bau-do-anel-de-caveira"
+   }
+  },
+  {
+   "name": {
+    "en": "Candle Chest",
+    "pt": "Baú da Vela"
+   },
+   "ref": "quest:q85",
+   "slug": {
+    "en": "candle-chest",
+    "pt": "bau-da-vela"
+   }
+  },
+  {
+   "name": {
+    "en": "Ironsword Quest",
+    "pt": "Missão da Espada de Ferro"
+   },
+   "ref": "quest:q86",
+   "slug": {
+    "en": "ironsword-quest",
+    "pt": "missao-da-espada-de-ferro"
+   }
+  },
+  {
+   "name": {
+    "en": "Spider Key",
+    "pt": "Chave da Aranha"
+   },
+   "ref": "quest:q87",
+   "slug": {
+    "en": "spider-key",
+    "pt": "chave-da-aranha"
+   }
+  },
+  {
+   "name": {
+    "en": "Sailor Boots Quest",
+    "pt": "Missão das Botas de Marinheiro"
+   },
+   "ref": "quest:q88",
+   "slug": {
+    "en": "sailor-boots-quest",
+    "pt": "missao-das-botas-de-marinheiro"
+   }
+  },
+  {
+   "name": {
+    "en": "Maxwell's Backpack",
+    "pt": "Mochila de Maxwell"
+   },
+   "ref": "quest:q89",
+   "slug": {
+    "en": "maxwell-s-backpack",
+    "pt": "mochila-de-maxwell"
+   }
+  },
+  {
+   "name": {
+    "en": "Bread Chest",
+    "pt": "Baú de Pão"
+   },
+   "ref": "quest:q9",
+   "slug": {
+    "en": "bread-chest",
+    "pt": "bau-de-pao"
+   }
+  },
+  {
+   "name": {
+    "en": "Sewer Abandoned Chest",
+    "pt": "Baú Abandonado do Esgoto"
+   },
+   "ref": "quest:q90",
+   "slug": {
+    "en": "sewer-abandoned-chest",
+    "pt": "bau-abandonado-do-esgoto"
+   }
+  },
+  {
+   "name": {
+    "en": "Silver Ring Quest",
+    "pt": "Missão do Anel de Prata"
+   },
+   "ref": "quest:q91",
+   "slug": {
+    "en": "silver-ring-quest",
+    "pt": "missao-do-anel-de-prata"
+   }
+  },
+  {
+   "name": {
+    "en": "Smith Book Quest",
+    "pt": "Missão do Livro do Ferreiro"
+   },
+   "ref": "quest:q92",
+   "slug": {
+    "en": "smith-book-quest",
+    "pt": "missao-do-livro-do-ferreiro"
+   }
+  },
+  {
+   "name": {
+    "en": "Hidden Market Chest",
+    "pt": "Baú Oculto do Mercado"
+   },
+   "ref": "quest:q93",
+   "slug": {
+    "en": "hidden-market-chest",
+    "pt": "bau-oculto-do-mercado"
+   }
+  },
+  {
+   "name": {
+    "en": "Orc Ritual Ingot",
+    "pt": "Lingote do Ritual Orc"
+   },
+   "ref": "quest:q94",
+   "slug": {
+    "en": "orc-ritual-ingot",
+    "pt": "lingote-do-ritual-orc"
+   }
+  },
+  {
+   "name": {
+    "en": "Orc Ritual Potions",
+    "pt": "Poções do Ritual Orc"
+   },
+   "ref": "quest:q95",
+   "slug": {
+    "en": "orc-ritual-potions",
+    "pt": "pocoes-do-ritual-orc"
+   }
+  },
+  {
+   "name": {
+    "en": "Occultist Gloves",
+    "pt": "Luvas dos Ocultistas"
+   },
+   "ref": "quest:q96",
+   "slug": {
+    "en": "occultist-gloves",
+    "pt": "luvas-dos-ocultistas"
+   }
+  },
+  {
+   "name": {
+    "en": "Occultist Ritual Ingot",
+    "pt": "Lingote do Ritual Ocultista"
+   },
+   "ref": "quest:q97",
+   "slug": {
+    "en": "occultist-ritual-ingot",
+    "pt": "lingote-do-ritual-ocultista"
+   }
+  },
+  {
+   "name": {
+    "en": "Canyon Ingot",
+    "pt": "Lingote do Desfiladeiro"
+   },
+   "ref": "quest:q98",
+   "slug": {
+    "en": "canyon-ingot",
+    "pt": "lingote-do-desfiladeiro"
+   }
+  },
+  {
+   "name": {
+    "en": "Dead Man's Ingot",
+    "pt": "Lingote do Homem Morto"
+   },
+   "ref": "quest:q99",
+   "slug": {
+    "en": "dead-man-s-ingot",
+    "pt": "lingote-do-homem-morto"
+   }
+  },
+  {
+   "name": {
+    "en": "Light",
+    "pt": "Luz"
+   },
+   "ref": "spell:s1",
+   "slug": {
+    "en": "light",
+    "pt": "luz"
+   }
+  },
+  {
+   "name": {
+    "en": "Summon Death",
+    "pt": "Invocar Morte"
+   },
+   "ref": "spell:s101",
+   "slug": {
+    "en": "summon-death",
+    "pt": "invocar-morte"
+   }
+  },
+  {
+   "name": {
+    "en": "Summon Nature",
+    "pt": "Invocar Natureza"
+   },
+   "ref": "spell:s102",
+   "slug": {
+    "en": "summon-nature",
+    "pt": "invocar-natureza"
+   }
+  },
+  {
+   "name": {
+    "en": "Fire Gale",
+    "pt": "Vendaval de Fogo"
+   },
+   "ref": "spell:s103",
+   "slug": {
+    "en": "fire-gale",
+    "pt": "vendaval-de-fogo"
+   }
+  },
+  {
+   "name": {
+    "en": "Surge",
+    "pt": "Ímpeto"
+   },
+   "ref": "spell:s104",
+   "slug": {
+    "en": "surge",
+    "pt": "impeto"
+   }
+  },
+  {
+   "name": {
+    "en": "Water Wave",
+    "pt": "Onda d'Água"
+   },
+   "ref": "spell:s105",
+   "slug": {
+    "en": "water-wave",
+    "pt": "onda-d-agua"
+   }
+  },
+  {
+   "name": {
+    "en": "Cleanse",
+    "pt": "Purificar"
+   },
+   "ref": "spell:s106",
+   "slug": {
+    "en": "cleanse",
+    "pt": "purificar"
+   }
+  },
+  {
+   "name": {
+    "en": "Conjure Rope",
+    "pt": "Conjurar Corda"
+   },
+   "ref": "spell:s107",
+   "slug": {
+    "en": "conjure-rope",
+    "pt": "conjurar-corda"
+   }
+  },
+  {
+   "name": {
+    "en": "Blink",
+    "pt": "Piscar"
+   },
+   "ref": "spell:s108",
+   "slug": {
+    "en": "blink",
+    "pt": "piscar"
+   }
+  },
+  {
+   "name": {
+    "en": "Summon Rat",
+    "pt": "Invocar Rato"
+   },
+   "ref": "spell:s117",
+   "slug": {
+    "en": "summon-rat",
+    "pt": "invocar-rato"
+   }
+  },
+  {
+   "name": {
+    "en": "Summon Wisp",
+    "pt": "Summon Wisp"
+   },
+   "ref": "spell:s144",
+   "slug": {
+    "en": "summon-wisp",
+    "pt": "summon-wisp"
+   }
+  },
+  {
+   "name": {
+    "en": "Fierce Thrust",
+    "pt": "Estocada Feroz"
+   },
+   "ref": "spell:s15",
+   "slug": {
+    "en": "fierce-thrust",
+    "pt": "estocada-feroz"
+   }
+  },
+  {
+   "name": {
+    "en": "Conjure Fire",
+    "pt": "Conjurar Fogo"
+   },
+   "ref": "spell:s16",
+   "slug": {
+    "en": "conjure-fire",
+    "pt": "conjurar-fogo"
+   }
+  },
+  {
+   "name": {
+    "en": "Precise Shot",
+    "pt": "Tiro Preciso"
+   },
+   "ref": "spell:s17",
+   "slug": {
+    "en": "precise-shot",
+    "pt": "tiro-preciso"
+   }
+  },
+  {
+   "name": {
+    "en": "Energy Bolt",
+    "pt": "Raio de Energia"
+   },
+   "ref": "spell:s18",
+   "slug": {
+    "en": "energy-bolt",
+    "pt": "raio-de-energia"
+   }
+  },
+  {
+   "name": {
+    "en": "Berserk",
+    "pt": "Fúria"
+   },
+   "ref": "spell:s19",
+   "slug": {
+    "en": "berserk",
+    "pt": "furia"
+   }
+  },
+  {
+   "name": {
+    "en": "Fireball",
+    "pt": "Bola de Fogo"
+   },
+   "ref": "spell:s2",
+   "slug": {
+    "en": "fireball",
+    "pt": "bola-de-fogo"
+   }
+  },
+  {
+   "name": {
+    "en": "Crying Arrow",
+    "pt": "Flecha Chorosa"
+   },
+   "ref": "spell:s20",
+   "slug": {
+    "en": "crying-arrow",
+    "pt": "flecha-chorosa"
+   }
+  },
+  {
+   "name": {
+    "en": "Quick Attack",
+    "pt": "Ataque Rápido"
+   },
+   "ref": "spell:s21",
+   "slug": {
+    "en": "quick-attack",
+    "pt": "ataque-rapido"
+   }
+  },
+  {
+   "name": {
+    "en": "Lightning",
+    "pt": "Relâmpago"
+   },
+   "ref": "spell:s22",
+   "slug": {
+    "en": "lightning",
+    "pt": "relampago"
+   }
+  },
+  {
+   "name": {
+    "en": "Charge",
+    "pt": "Investida"
+   },
+   "ref": "spell:s23",
+   "slug": {
+    "en": "charge",
+    "pt": "investida"
+   }
+  },
+  {
+   "name": {
+    "en": "Starlight",
+    "pt": "Starlight"
+   },
+   "ref": "spell:s24",
+   "slug": {
+    "en": "starlight",
+    "pt": "starlight"
+   }
+  },
+  {
+   "name": {
+    "en": "Ground Stand",
+    "pt": "Posição Firme"
+   },
+   "ref": "spell:s25",
+   "slug": {
+    "en": "ground-stand",
+    "pt": "posicao-firme"
+   }
+  },
+  {
+   "name": {
+    "en": "Find Person",
+    "pt": "Encontrar Pessoa"
+   },
+   "ref": "spell:s26",
+   "slug": {
+    "en": "find-person",
+    "pt": "encontrar-pessoa"
+   }
+  },
+  {
+   "name": {
+    "en": "Adjure",
+    "pt": "Adjurar"
+   },
+   "ref": "spell:s27",
+   "slug": {
+    "en": "adjure",
+    "pt": "adjurar"
+   }
+  },
+  {
+   "name": {
+    "en": "Magic Wall",
+    "pt": "Parede Mágica"
+   },
+   "ref": "spell:s3",
+   "slug": {
+    "en": "magic-wall",
+    "pt": "parede-magica"
+   }
+  },
+  {
+   "name": {
+    "en": "Heal",
+    "pt": "Curar"
+   },
+   "ref": "spell:s4",
+   "slug": {
+    "en": "heal",
+    "pt": "curar"
+   }
+  },
+  {
+   "name": {
+    "en": "Haste",
+    "pt": "Pressa"
+   },
+   "ref": "spell:s43",
+   "slug": {
+    "en": "haste",
+    "pt": "pressa"
+   }
+  },
+  {
+   "name": {
+    "en": "Light Missile",
+    "pt": "Míssil de Luz"
+   },
+   "ref": "spell:s44",
+   "slug": {
+    "en": "light-missile",
+    "pt": "missil-de-luz"
+   }
+  },
+  {
+   "name": {
+    "en": "Slow",
+    "pt": "Lentidão"
+   },
+   "ref": "spell:s45",
+   "slug": {
+    "en": "slow",
+    "pt": "lentidao"
+   }
+  },
+  {
+   "name": {
+    "en": "Rock Throw",
+    "pt": "Arremesso de Pedra"
+   },
+   "ref": "spell:s46",
+   "slug": {
+    "en": "rock-throw",
+    "pt": "arremesso-de-pedra"
+   }
+  },
+  {
+   "name": {
+    "en": "Holy",
+    "pt": "Sagrado"
+   },
+   "ref": "spell:s48",
+   "slug": {
+    "en": "holy",
+    "pt": "sagrado"
+   }
+  },
+  {
+   "name": {
+    "en": "Taunt",
+    "pt": "Provocar"
+   },
+   "ref": "spell:s49",
+   "slug": {
+    "en": "taunt",
+    "pt": "provocar"
+   }
+  },
+  {
+   "name": {
+    "en": "Water Pillar",
+    "pt": "Pilar de Água"
+   },
+   "ref": "spell:s5",
+   "slug": {
+    "en": "water-pillar",
+    "pt": "pilar-de-agua"
+   }
+  },
+  {
+   "name": {
+    "en": "Conjure Arrow",
+    "pt": "Conjurar Flecha"
+   },
+   "ref": "spell:s50",
+   "slug": {
+    "en": "conjure-arrow",
+    "pt": "conjurar-flecha"
+   }
+  },
+  {
+   "name": {
+    "en": "Ice Berserk",
+    "pt": "Fúria Gélida"
+   },
+   "ref": "spell:s55",
+   "slug": {
+    "en": "ice-berserk",
+    "pt": "furia-gelida"
+   }
+  },
+  {
+   "name": {
+    "en": "Energy Hull",
+    "pt": "Casco de Energia"
+   },
+   "ref": "spell:s6",
+   "slug": {
+    "en": "energy-hull",
+    "pt": "casco-de-energia"
+   }
+  },
+  {
+   "name": {
+    "en": "Mana Shield",
+    "pt": "Escudo de Mana"
+   },
+   "ref": "spell:s61",
+   "slug": {
+    "en": "mana-shield",
+    "pt": "escudo-de-mana"
+   }
+  },
+  {
+   "name": {
+    "en": "Dash",
+    "pt": "Disparada"
+   },
+   "ref": "spell:s7",
+   "slug": {
+    "en": "dash",
+    "pt": "disparada"
+   }
+  },
+  {
+   "name": {
+    "en": "Thrash",
+    "pt": "Investida"
+   },
+   "ref": "spell:s70",
+   "slug": {
+    "en": "thrash",
+    "pt": "investida-s70"
+   }
+  },
+  {
+   "name": {
+    "en": "Conjure Death",
+    "pt": "Conjurar Morte"
+   },
+   "ref": "spell:s78",
+   "slug": {
+    "en": "conjure-death",
+    "pt": "conjurar-morte"
+   }
+  },
+  {
+   "name": {
+    "en": "Vampiric Bite",
+    "pt": "Mordida Vampírica"
+   },
+   "ref": "spell:s79",
+   "slug": {
+    "en": "vampiric-bite",
+    "pt": "mordida-vampirica"
+   }
+  },
+  {
+   "name": {
+    "en": "Magic Growth",
+    "pt": "Crescimento Mágico"
+   },
+   "ref": "spell:s8",
+   "slug": {
+    "en": "magic-growth",
+    "pt": "crescimento-magico"
+   }
+  },
+  {
+   "name": {
+    "en": "Dark Beam",
+    "pt": "Dark Beam"
+   },
+   "ref": "spell:s80",
+   "slug": {
+    "en": "dark-beam",
+    "pt": "dark-beam"
+   }
+  },
+  {
+   "name": {
+    "en": "Windfall",
+    "pt": "Dádiva"
+   },
+   "ref": "spell:s85",
+   "slug": {
+    "en": "windfall",
+    "pt": "dadiva"
+   }
+  },
+  {
+   "name": {
+    "en": "Shield Block",
+    "pt": "Bloqueio de Escudo"
+   },
+   "ref": "spell:s9",
+   "slug": {
+    "en": "shield-block",
+    "pt": "bloqueio-de-escudo"
+   }
+  }
+ ]
+}

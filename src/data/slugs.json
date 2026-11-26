@@ -1,0 +1,3854 @@
+{
+ "item:ale-mug": {
+  "en": "ale-mug",
+  "pt": "caneca-de-cerveja"
+ },
+ "item:amber-rune-algiz": {
+  "en": "amber-rune-algiz",
+  "pt": "runa-de-ambar-algiz"
+ },
+ "item:amber-rune-hagalaz": {
+  "en": "amber-rune-hagalaz",
+  "pt": "runa-de-ambar-hagalaz"
+ },
+ "item:amber-rune-kenaz": {
+  "en": "amber-rune-kenaz",
+  "pt": "runa-de-ambar-kenaz"
+ },
+ "item:amber-rune-laguz": {
+  "en": "amber-rune-laguz",
+  "pt": "runa-de-ambar-laguz"
+ },
+ "item:amber-rune-othila": {
+  "en": "amber-rune-othila",
+  "pt": "runa-de-ambar-othila"
+ },
+ "item:amber-rune-raido": {
+  "en": "amber-rune-raido",
+  "pt": "amber-rune-raido"
+ },
+ "item:amber-rune-uruz": {
+  "en": "amber-rune-uruz",
+  "pt": "amber-rune-uruz"
+ },
+ "item:ancient-gem": {
+  "en": "ancient-gem",
+  "pt": "gema-antiga"
+ },
+ "item:ancient-handle": {
+  "en": "ancient-handle",
+  "pt": "cabo-antigo"
+ },
+ "item:ancient-staff": {
+  "en": "ancient-staff",
+  "pt": "cajado-ancestral"
+ },
+ "item:ancient-stick": {
+  "en": "ancient-stick",
+  "pt": "bastao-antigo"
+ },
+ "item:ancient-sword": {
+  "en": "ancient-sword",
+  "pt": "espada-antiga"
+ },
+ "item:apple": {
+  "en": "apple",
+  "pt": "maca"
+ },
+ "item:apple-pie": {
+  "en": "apple-pie",
+  "pt": "torta-de-maca"
+ },
+ "item:arbalest": {
+  "en": "arbalest",
+  "pt": "arbalesta"
+ },
+ "item:arrow": {
+  "en": "arrow",
+  "pt": "flecha"
+ },
+ "item:aureous-armor": {
+  "en": "aureous-armor",
+  "pt": "armadura-aurea"
+ },
+ "item:aureous-legs": {
+  "en": "aureous-legs",
+  "pt": "pernas-aureas"
+ },
+ "item:bachall": {
+  "en": "bachall",
+  "pt": "bachall"
+ },
+ "item:bagnoff": {
+  "en": "bagnoff",
+  "pt": "bagnoff"
+ },
+ "item:baked-potato": {
+  "en": "baked-potato",
+  "pt": "batata-assada"
+ },
+ "item:battle-axe": {
+  "en": "battle-axe",
+  "pt": "machado-de-batalha"
+ },
+ "item:battle-cloak": {
+  "en": "battle-cloak",
+  "pt": "manto-de-batalha"
+ },
+ "item:bear-charm": {
+  "en": "bear-charm",
+  "pt": "amuleto-do-urso"
+ },
+ "item:big-almanac": {
+  "en": "big-almanac",
+  "pt": "grande-almanaque"
+ },
+ "item:big-bone": {
+  "en": "big-bone",
+  "pt": "osso-grande"
+ },
+ "item:big-empty-pot": {
+  "en": "big-empty-pot",
+  "pt": "pote-grande-vazio"
+ },
+ "item:big-evil-book": {
+  "en": "big-evil-book",
+  "pt": "grande-livro-maligno"
+ },
+ "item:big-health-potion": {
+  "en": "big-health-potion",
+  "pt": "pocao-de-vida-grande"
+ },
+ "item:big-mana-potion": {
+  "en": "big-mana-potion",
+  "pt": "grande-pocao-de-mana"
+ },
+ "item:big-old-book": {
+  "en": "big-old-book",
+  "pt": "grande-livro-antigo"
+ },
+ "item:black-bag": {
+  "en": "black-bag",
+  "pt": "bolsa-preta"
+ },
+ "item:black-wool": {
+  "en": "black-wool",
+  "pt": "la-preta"
+ },
+ "item:blessed-amulet": {
+  "en": "blessed-amulet",
+  "pt": "amuleto-abencoado"
+ },
+ "item:bloody-handkerchief": {
+  "en": "bloody-handkerchief",
+  "pt": "lenco-ensanguentado"
+ },
+ "item:blue-backpack": {
+  "en": "blue-backpack",
+  "pt": "mochila-azul"
+ },
+ "item:blue-book": {
+  "en": "blue-book",
+  "pt": "livro-azul"
+ },
+ "item:blue-gill": {
+  "en": "blue-gill",
+  "pt": "peixe-lua"
+ },
+ "item:blue-ink": {
+  "en": "blue-ink",
+  "pt": "tinta-azul"
+ },
+ "item:blue-rose": {
+  "en": "blue-rose",
+  "pt": "rosa-azul"
+ },
+ "item:blue-rune-algiz": {
+  "en": "blue-rune-algiz",
+  "pt": "blue-rune-algiz"
+ },
+ "item:blue-rune-hagalaz": {
+  "en": "blue-rune-hagalaz",
+  "pt": "blue-rune-hagalaz"
+ },
+ "item:blue-rune-kenaz": {
+  "en": "blue-rune-kenaz",
+  "pt": "blue-rune-kenaz"
+ },
+ "item:blue-rune-laguz": {
+  "en": "blue-rune-laguz",
+  "pt": "blue-rune-laguz"
+ },
+ "item:blue-rune-raido": {
+  "en": "blue-rune-raido",
+  "pt": "blue-rune-raido"
+ },
+ "item:blue-rune-uruz": {
+  "en": "blue-rune-uruz",
+  "pt": "blue-rune-uruz"
+ },
+ "item:blue-spellbook": {
+  "en": "blue-spellbook",
+  "pt": "blue-spellbook"
+ },
+ "item:blueberries": {
+  "en": "blueberries",
+  "pt": "mirtilos"
+ },
+ "item:blueberry-muffin": {
+  "en": "blueberry-muffin",
+  "pt": "muffin-de-mirtilo"
+ },
+ "item:boletus-piece": {
+  "en": "boletus-piece",
+  "pt": "pedaco-de-boletus"
+ },
+ "item:bolt": {
+  "en": "bolt",
+  "pt": "virote"
+ },
+ "item:bone-bow": {
+  "en": "bone-bow",
+  "pt": "arco-de-osso"
+ },
+ "item:bone-knife": {
+  "en": "bone-knife",
+  "pt": "faca-de-osso"
+ },
+ "item:bookcase": {
+  "en": "bookcase",
+  "pt": "estante-de-livros"
+ },
+ "item:bowl-of-water": {
+  "en": "bowl-of-water",
+  "pt": "tigela-de-agua"
+ },
+ "item:branigan-letter": {
+  "en": "branigan-letter",
+  "pt": "carta-de-branigan"
+ },
+ "item:branor-letter": {
+  "en": "branor-letter",
+  "pt": "carta-de-branor"
+ },
+ "item:brass-knuckles": {
+  "en": "brass-knuckles",
+  "pt": "soco-ingles"
+ },
+ "item:brass-legs": {
+  "en": "brass-legs",
+  "pt": "pernas-de-latao"
+ },
+ "item:brass-plate": {
+  "en": "brass-plate",
+  "pt": "placa-de-bronze"
+ },
+ "item:brass-shield": {
+  "en": "brass-shield",
+  "pt": "escudo-de-latao"
+ },
+ "item:bread-bowl-stew": {
+  "en": "bread-bowl-stew",
+  "pt": "ensopado-em-tigela-de-pao"
+ },
+ "item:bread-loaf": {
+  "en": "bread-loaf",
+  "pt": "pao"
+ },
+ "item:bread-piece": {
+  "en": "bread-piece",
+  "pt": "pedaco-de-pao"
+ },
+ "item:brigandine-legs": {
+  "en": "brigandine-legs",
+  "pt": "pernas-de-brigantina"
+ },
+ "item:brigandine-vest": {
+  "en": "brigandine-vest",
+  "pt": "colete-de-brigandina"
+ },
+ "item:broadsword": {
+  "en": "broadsword",
+  "pt": "espadao"
+ },
+ "item:brown-backpack": {
+  "en": "brown-backpack",
+  "pt": "mochila-marrom"
+ },
+ "item:buckler": {
+  "en": "buckler",
+  "pt": "broquel"
+ },
+ "item:bug-wings": {
+  "en": "bug-wings",
+  "pt": "asas-de-inseto"
+ },
+ "item:burlap-hat": {
+  "en": "burlap-hat",
+  "pt": "chapeu-de-aniagem"
+ },
+ "item:burlap-skirt": {
+  "en": "burlap-skirt",
+  "pt": "saia-de-estopa"
+ },
+ "item:burlap-wool": {
+  "en": "burlap-wool",
+  "pt": "la-de-aniagem"
+ },
+ "item:candle": {
+  "en": "candle",
+  "pt": "vela"
+ },
+ "item:candle-lit": {
+  "en": "candle-lit",
+  "pt": "vela-acesa"
+ },
+ "item:castle-ticket": {
+  "en": "castle-ticket",
+  "pt": "ingresso-do-castelo"
+ },
+ "item:cattail-flower": {
+  "en": "cattail-flower",
+  "pt": "flor-de-taboa"
+ },
+ "item:chain-mail": {
+  "en": "chain-mail",
+  "pt": "cota-de-malha"
+ },
+ "item:char-slot": {
+  "en": "char-slot",
+  "pt": "slot-de-personagem"
+ },
+ "item:cheese-slice": {
+  "en": "cheese-slice",
+  "pt": "fatia-de-queijo"
+ },
+ "item:cheese-wheel": {
+  "en": "cheese-wheel",
+  "pt": "roda-de-queijo"
+ },
+ "item:chess-piece": {
+  "en": "chess-piece",
+  "pt": "peca-de-xadrez"
+ },
+ "item:clear-gem": {
+  "en": "clear-gem",
+  "pt": "gema-limpa"
+ },
+ "item:cloth-pants": {
+  "en": "cloth-pants",
+  "pt": "calcas-de-pano"
+ },
+ "item:cloth-vest": {
+  "en": "cloth-vest",
+  "pt": "colete-de-pano"
+ },
+ "item:colocasia-seed": {
+  "en": "colocasia-seed",
+  "pt": "semente-de-colocasia"
+ },
+ "item:cookbook-apple-pie": {
+  "en": "cookbook-apple-pie",
+  "pt": "livro-de-receitas-torta-de-maca"
+ },
+ "item:cookbook-fish-steak": {
+  "en": "cookbook-fish-steak",
+  "pt": "livro-de-receitas-file-de-peixe"
+ },
+ "item:cookbook-grilled-cheese": {
+  "en": "cookbook-grilled-cheese",
+  "pt": "livro-de-receitas-queijo-grelhado"
+ },
+ "item:cookbook-spicy-stew": {
+  "en": "cookbook-spicy-stew",
+  "pt": "livro-de-receitas-ensopado-picante"
+ },
+ "item:cooked-fish-steak": {
+  "en": "cooked-fish-steak",
+  "pt": "file-de-peixe-cozido"
+ },
+ "item:cooked-game-meat": {
+  "en": "cooked-game-meat",
+  "pt": "carne-de-caca-cozida"
+ },
+ "item:cooked-lamb": {
+  "en": "cooked-lamb",
+  "pt": "cordeiro-cozido"
+ },
+ "item:cooked-snapper": {
+  "en": "cooked-snapper",
+  "pt": "pargo-cozido"
+ },
+ "item:cooked-white-mushroom": {
+  "en": "cooked-white-mushroom",
+  "pt": "cogumelo-branco-cozido"
+ },
+ "item:cooked-whole-fish": {
+  "en": "cooked-whole-fish",
+  "pt": "peixe-inteiro-cozido"
+ },
+ "item:copper-pan": {
+  "en": "copper-pan",
+  "pt": "panela-de-cobre"
+ },
+ "item:crooked-vest": {
+  "en": "crooked-vest",
+  "pt": "colete-torto"
+ },
+ "item:crossbow": {
+  "en": "crossbow",
+  "pt": "besta"
+ },
+ "item:crowbar": {
+  "en": "crowbar",
+  "pt": "pe-de-cabra"
+ },
+ "item:crystal-amulet": {
+  "en": "crystal-amulet",
+  "pt": "amuleto-de-cristal"
+ },
+ "item:crystal-ring": {
+  "en": "crystal-ring",
+  "pt": "anel-de-cristal"
+ },
+ "item:crystal-shard": {
+  "en": "crystal-shard",
+  "pt": "fragmento-de-cristal"
+ },
+ "item:crystal-staff": {
+  "en": "crystal-staff",
+  "pt": "cajado-de-cristal"
+ },
+ "item:cutlass": {
+  "en": "cutlass",
+  "pt": "alfanje"
+ },
+ "item:dark-armor": {
+  "en": "dark-armor",
+  "pt": "armadura-sombria"
+ },
+ "item:dark-beads": {
+  "en": "dark-beads",
+  "pt": "contas-sombrias"
+ },
+ "item:dark-hood": {
+  "en": "dark-hood",
+  "pt": "capuz-sombrio"
+ },
+ "item:dark-legs": {
+  "en": "dark-legs",
+  "pt": "pernas-sombrias"
+ },
+ "item:dark-orb": {
+  "en": "dark-orb",
+  "pt": "orbe-sombrio"
+ },
+ "item:dark-robe": {
+  "en": "dark-robe",
+  "pt": "manto-sombrio"
+ },
+ "item:dark-rune-kenaz": {
+  "en": "dark-rune-kenaz",
+  "pt": "dark-rune-kenaz"
+ },
+ "item:dark-rune-laguz": {
+  "en": "dark-rune-laguz",
+  "pt": "dark-rune-laguz"
+ },
+ "item:dark-rune-othila": {
+  "en": "dark-rune-othila",
+  "pt": "dark-rune-othila"
+ },
+ "item:dark-rune-raido": {
+  "en": "dark-rune-raido",
+  "pt": "dark-rune-raido"
+ },
+ "item:dark-rune-uruz": {
+  "en": "dark-rune-uruz",
+  "pt": "dark-rune-uruz"
+ },
+ "item:death-resist-potion": {
+  "en": "death-resist-potion",
+  "pt": "pocao-de-resistencia-a-morte"
+ },
+ "item:deer-charm": {
+  "en": "deer-charm",
+  "pt": "amuleto-de-cervo"
+ },
+ "item:depot-space": {
+  "en": "depot-space",
+  "pt": "espaco-de-deposito"
+ },
+ "item:diamond": {
+  "en": "diamond",
+  "pt": "diamante"
+ },
+ "item:diamond-ring": {
+  "en": "diamond-ring",
+  "pt": "anel-de-diamante"
+ },
+ "item:discombobulator": {
+  "en": "discombobulator",
+  "pt": "discombobulador"
+ },
+ "item:double-axe": {
+  "en": "double-axe",
+  "pt": "machado-duplo"
+ },
+ "item:dough": {
+  "en": "dough",
+  "pt": "massa"
+ },
+ "item:doughpot": {
+  "en": "doughpot",
+  "pt": "panela-de-massa"
+ },
+ "item:dragonfruit": {
+  "en": "dragonfruit",
+  "pt": "fruta-do-dragao"
+ },
+ "item:druid-cape": {
+  "en": "druid-cape",
+  "pt": "capa-de-druida"
+ },
+ "item:druid-hat": {
+  "en": "druid-hat",
+  "pt": "chapeu-de-druida"
+ },
+ "item:drystan-letter": {
+  "en": "drystan-letter",
+  "pt": "carta-de-drystan"
+ },
+ "item:egg": {
+  "en": "egg",
+  "pt": "ovo"
+ },
+ "item:eggplant": {
+  "en": "eggplant",
+  "pt": "berinjela"
+ },
+ "item:elixir-potion": {
+  "en": "elixir-potion",
+  "pt": "pocao-elixir"
+ },
+ "item:elvish-amanita": {
+  "en": "elvish-amanita",
+  "pt": "amanita-elfica"
+ },
+ "item:empty-flasks": {
+  "en": "empty-flasks",
+  "pt": "frascos-vazios"
+ },
+ "item:empty-pot": {
+  "en": "empty-pot",
+  "pt": "pote-vazio"
+ },
+ "item:empty-resist-potion": {
+  "en": "empty-resist-potion",
+  "pt": "pocao-de-resistencia-vazia"
+ },
+ "item:eofor-s-new-book": {
+  "en": "eofor-s-new-book",
+  "pt": "novo-livro-de-eofor"
+ },
+ "item:epee": {
+  "en": "epee",
+  "pt": "espada"
+ },
+ "item:euler-pants": {
+  "en": "euler-pants",
+  "pt": "calcas-euler"
+ },
+ "item:evil-charm": {
+  "en": "evil-charm",
+  "pt": "amuleto-maligno"
+ },
+ "item:evil-spellbook": {
+  "en": "evil-spellbook",
+  "pt": "evil-spellbook"
+ },
+ "item:fat-boy": {
+  "en": "fat-boy",
+  "pt": "fat-boy"
+ },
+ "item:fish-steak": {
+  "en": "fish-steak",
+  "pt": "file-de-peixe"
+ },
+ "item:forgebook-common-items": {
+  "en": "forgebook-common-items",
+  "pt": "livro-de-forja-itens-comuns"
+ },
+ "item:forsaken-cross": {
+  "en": "forsaken-cross",
+  "pt": "cruz-abandonada"
+ },
+ "item:fur": {
+  "en": "fur",
+  "pt": "pelo"
+ },
+ "item:fur-boots": {
+  "en": "fur-boots",
+  "pt": "botas-de-pele"
+ },
+ "item:gambeson": {
+  "en": "gambeson",
+  "pt": "gambeson"
+ },
+ "item:game-meat": {
+  "en": "game-meat",
+  "pt": "carne-de-caca"
+ },
+ "item:garlic": {
+  "en": "garlic",
+  "pt": "alho"
+ },
+ "item:garlic-bread": {
+  "en": "garlic-bread",
+  "pt": "pao-de-alho"
+ },
+ "item:garnet": {
+  "en": "garnet",
+  "pt": "granada"
+ },
+ "item:garnet-ring": {
+  "en": "garnet-ring",
+  "pt": "anel-de-granada"
+ },
+ "item:gold": {
+  "en": "gold",
+  "pt": "ouro"
+ },
+ "item:golden-button": {
+  "en": "golden-button",
+  "pt": "botao-dourado"
+ },
+ "item:golden-ring": {
+  "en": "golden-ring",
+  "pt": "anel-dourado"
+ },
+ "item:golden-torc": {
+  "en": "golden-torc",
+  "pt": "torque-dourado"
+ },
+ "item:gray-backpack": {
+  "en": "gray-backpack",
+  "pt": "mochila-cinza"
+ },
+ "item:great-axe": {
+  "en": "great-axe",
+  "pt": "machado-grande"
+ },
+ "item:greatsword": {
+  "en": "greatsword",
+  "pt": "espada-grande"
+ },
+ "item:green-backpack": {
+  "en": "green-backpack",
+  "pt": "mochila-verde"
+ },
+ "item:green-bag": {
+  "en": "green-bag",
+  "pt": "bolsa-verde"
+ },
+ "item:green-book": {
+  "en": "green-book",
+  "pt": "livro-verde"
+ },
+ "item:green-orb": {
+  "en": "green-orb",
+  "pt": "orbe-verde"
+ },
+ "item:green-pendant": {
+  "en": "green-pendant",
+  "pt": "pingente-verde"
+ },
+ "item:green-rune-algiz": {
+  "en": "green-rune-algiz",
+  "pt": "green-rune-algiz"
+ },
+ "item:green-rune-kenaz": {
+  "en": "green-rune-kenaz",
+  "pt": "green-rune-kenaz"
+ },
+ "item:green-rune-laguz": {
+  "en": "green-rune-laguz",
+  "pt": "green-rune-laguz"
+ },
+ "item:green-rune-othila": {
+  "en": "green-rune-othila",
+  "pt": "green-rune-othila"
+ },
+ "item:green-rune-raido": {
+  "en": "green-rune-raido",
+  "pt": "green-rune-raido"
+ },
+ "item:green-rune-uruz": {
+  "en": "green-rune-uruz",
+  "pt": "runa-verde-uruz"
+ },
+ "item:green-spellbook": {
+  "en": "green-spellbook",
+  "pt": "green-spellbook"
+ },
+ "item:grilled-cheese": {
+  "en": "grilled-cheese",
+  "pt": "queijo-grelhado"
+ },
+ "item:health-potion": {
+  "en": "health-potion",
+  "pt": "pocao-de-vida"
+ },
+ "item:heart-of-the-tree": {
+  "en": "heart-of-the-tree",
+  "pt": "coracao-da-arvore"
+ },
+ "item:herb-bag": {
+  "en": "herb-bag",
+  "pt": "bolsa-de-ervas"
+ },
+ "item:hero-flower": {
+  "en": "hero-flower",
+  "pt": "flor-do-heroi"
+ },
+ "item:holy-resist-potion": {
+  "en": "holy-resist-potion",
+  "pt": "pocao-de-resistencia-sagrada"
+ },
+ "item:hook-claw": {
+  "en": "hook-claw",
+  "pt": "garra-de-gancho"
+ },
+ "item:house-anvil": {
+  "en": "house-anvil",
+  "pt": "bigorna-de-casa"
+ },
+ "item:house-barrel": {
+  "en": "house-barrel",
+  "pt": "barril-de-casa"
+ },
+ "item:house-box": {
+  "en": "house-box",
+  "pt": "caixa-de-casa"
+ },
+ "item:house-chair": {
+  "en": "house-chair",
+  "pt": "cadeira-de-casa"
+ },
+ "item:house-chest": {
+  "en": "house-chest",
+  "pt": "bau-de-casa"
+ },
+ "item:house-counter": {
+  "en": "house-counter",
+  "pt": "balcao-de-casa"
+ },
+ "item:house-depot": {
+  "en": "house-depot",
+  "pt": "deposito-de-casa"
+ },
+ "item:house-rune-table": {
+  "en": "house-rune-table",
+  "pt": "mesa-de-runas-de-casa"
+ },
+ "item:house-seat": {
+  "en": "house-seat",
+  "pt": "assento-de-casa"
+ },
+ "item:house-torch": {
+  "en": "house-torch",
+  "pt": "tocha-de-casa"
+ },
+ "item:house-voucher": {
+  "en": "house-voucher",
+  "pt": "voucher-de-casa"
+ },
+ "item:invisibility-ring": {
+  "en": "invisibility-ring",
+  "pt": "anel-de-invisibilidade"
+ },
+ "item:iron-boots": {
+  "en": "iron-boots",
+  "pt": "botas-de-ferro"
+ },
+ "item:iron-crude": {
+  "en": "iron-crude",
+  "pt": "ferro-bruto"
+ },
+ "item:iron-gloves": {
+  "en": "iron-gloves",
+  "pt": "luvas-de-ferro"
+ },
+ "item:iron-ingot": {
+  "en": "iron-ingot",
+  "pt": "barra-de-ferro"
+ },
+ "item:iron-mace": {
+  "en": "iron-mace",
+  "pt": "maca-de-ferro"
+ },
+ "item:iron-pan": {
+  "en": "iron-pan",
+  "pt": "panela-de-ferro"
+ },
+ "item:ironsword": {
+  "en": "ironsword",
+  "pt": "espada-de-ferro"
+ },
+ "item:kettle-helmet": {
+  "en": "kettle-helmet",
+  "pt": "elmo-caldeirao"
+ },
+ "item:kings-nose": {
+  "en": "kings-nose",
+  "pt": "nariz-do-rei"
+ },
+ "item:knife": {
+  "en": "knife",
+  "pt": "faca"
+ },
+ "item:lamb-meat": {
+  "en": "lamb-meat",
+  "pt": "carne-de-cordeiro"
+ },
+ "item:lantern": {
+  "en": "lantern",
+  "pt": "lanterna"
+ },
+ "item:lantern-lit": {
+  "en": "lantern-lit",
+  "pt": "lanterna-acesa"
+ },
+ "item:leaf-blade": {
+  "en": "leaf-blade",
+  "pt": "lamina-folha"
+ },
+ "item:leather-bascinet": {
+  "en": "leather-bascinet",
+  "pt": "bacinete-de-couro"
+ },
+ "item:leather-boots": {
+  "en": "leather-boots",
+  "pt": "botas-de-couro"
+ },
+ "item:leather-cloak": {
+  "en": "leather-cloak",
+  "pt": "manto-de-couro"
+ },
+ "item:leather-coif": {
+  "en": "leather-coif",
+  "pt": "coifa-de-couro"
+ },
+ "item:leather-collar": {
+  "en": "leather-collar",
+  "pt": "colar-de-couro"
+ },
+ "item:leather-cuisse": {
+  "en": "leather-cuisse",
+  "pt": "coxal-de-couro"
+ },
+ "item:leather-gloves": {
+  "en": "leather-gloves",
+  "pt": "luvas-de-couro"
+ },
+ "item:light-wand": {
+  "en": "light-wand",
+  "pt": "varinha-da-luz"
+ },
+ "item:lineage-shield": {
+  "en": "lineage-shield",
+  "pt": "escudo-de-linhagem"
+ },
+ "item:longbow": {
+  "en": "longbow",
+  "pt": "arco-longo"
+ },
+ "item:longsword": {
+  "en": "longsword",
+  "pt": "espada-longa"
+ },
+ "item:magic-arrows": {
+  "en": "magic-arrows",
+  "pt": "flechas-magicas"
+ },
+ "item:magic-star-wand": {
+  "en": "magic-star-wand",
+  "pt": "varinha-estrela-magica"
+ },
+ "item:magic-wall": {
+  "en": "magic-wall",
+  "pt": "parede-magica"
+ },
+ "item:magician-hat": {
+  "en": "magician-hat",
+  "pt": "chapeu-de-mago"
+ },
+ "item:magician-shoes": {
+  "en": "magician-shoes",
+  "pt": "sapatos-de-mago"
+ },
+ "item:mana-potion": {
+  "en": "mana-potion",
+  "pt": "pocao-de-mana"
+ },
+ "item:manuscript": {
+  "en": "manuscript",
+  "pt": "manuscrito"
+ },
+ "item:marriage-ring": {
+  "en": "marriage-ring",
+  "pt": "anel-de-casamento"
+ },
+ "item:meaty-dish": {
+  "en": "meaty-dish",
+  "pt": "prato-de-carne"
+ },
+ "item:meaty-stew": {
+  "en": "meaty-stew",
+  "pt": "ensopado-de-carne"
+ },
+ "item:merchants-bag": {
+  "en": "merchants-bag",
+  "pt": "bolsa-de-mercador"
+ },
+ "item:mireling-armor": {
+  "en": "mireling-armor",
+  "pt": "armadura-mireling"
+ },
+ "item:mireling-helmet": {
+  "en": "mireling-helmet",
+  "pt": "elmo-de-mireling"
+ },
+ "item:monk-habit": {
+  "en": "monk-habit",
+  "pt": "habito-de-monge"
+ },
+ "item:moon-ingot": {
+  "en": "moon-ingot",
+  "pt": "barra-lunar"
+ },
+ "item:morning-star": {
+  "en": "morning-star",
+  "pt": "estrela-da-manha"
+ },
+ "item:mysterious-proof": {
+  "en": "mysterious-proof",
+  "pt": "prova-misteriosa"
+ },
+ "item:nightshade": {
+  "en": "nightshade",
+  "pt": "beladona"
+ },
+ "item:nightshade-kilt": {
+  "en": "nightshade-kilt",
+  "pt": "saiote-de-beladona"
+ },
+ "item:nightshade-robe": {
+  "en": "nightshade-robe",
+  "pt": "manto-da-beladona"
+ },
+ "item:nordhic-salmon": {
+  "en": "nordhic-salmon",
+  "pt": "salmao-nordico"
+ },
+ "item:novel-book": {
+  "en": "novel-book",
+  "pt": "livro-de-romance"
+ },
+ "item:occultist-book": {
+  "en": "occultist-book",
+  "pt": "livro-ocultista"
+ },
+ "item:old-amulet": {
+  "en": "old-amulet",
+  "pt": "amuleto-antigo"
+ },
+ "item:old-axe": {
+  "en": "old-axe",
+  "pt": "machado-velho"
+ },
+ "item:old-backpack": {
+  "en": "old-backpack",
+  "pt": "mochila-velha"
+ },
+ "item:old-gloves": {
+  "en": "old-gloves",
+  "pt": "luvas-velhas"
+ },
+ "item:old-letter": {
+  "en": "old-letter",
+  "pt": "carta-antiga"
+ },
+ "item:old-ring": {
+  "en": "old-ring",
+  "pt": "anel-velho"
+ },
+ "item:omen-shard": {
+  "en": "omen-shard",
+  "pt": "fragmento-do-pressagio"
+ },
+ "item:onion": {
+  "en": "onion",
+  "pt": "cebola"
+ },
+ "item:onion-rings": {
+  "en": "onion-rings",
+  "pt": "aneis-de-cebola"
+ },
+ "item:onyx-armor": {
+  "en": "onyx-armor",
+  "pt": "armadura-de-onix"
+ },
+ "item:onyx-boots": {
+  "en": "onyx-boots",
+  "pt": "botas-de-onix"
+ },
+ "item:onyx-dagger": {
+  "en": "onyx-dagger",
+  "pt": "adaga-de-onix"
+ },
+ "item:onyx-helmet": {
+  "en": "onyx-helmet",
+  "pt": "elmo-de-onix"
+ },
+ "item:onyx-legs": {
+  "en": "onyx-legs",
+  "pt": "pernas-de-onix"
+ },
+ "item:onyx-ring": {
+  "en": "onyx-ring",
+  "pt": "anel-de-onix"
+ },
+ "item:onyx-shield": {
+  "en": "onyx-shield",
+  "pt": "escudo-de-onix"
+ },
+ "item:orange": {
+  "en": "orange",
+  "pt": "laranja"
+ },
+ "item:orb": {
+  "en": "orb",
+  "pt": "orbe"
+ },
+ "item:outfit-change": {
+  "en": "outfit-change",
+  "pt": "mudanca-de-roupa"
+ },
+ "item:papaya": {
+  "en": "papaya",
+  "pt": "mamao"
+ },
+ "item:paper": {
+  "en": "paper",
+  "pt": "papel"
+ },
+ "item:pearl-necklace": {
+  "en": "pearl-necklace",
+  "pt": "colar-de-perolas"
+ },
+ "item:pestilence-sword": {
+  "en": "pestilence-sword",
+  "pt": "espada-de-pestilence"
+ },
+ "item:pewter-amulet": {
+  "en": "pewter-amulet",
+  "pt": "amuleto-de-estanho"
+ },
+ "item:pewter-ring": {
+  "en": "pewter-ring",
+  "pt": "anel-de-peltre"
+ },
+ "item:plagued-scale": {
+  "en": "plagued-scale",
+  "pt": "escama-pestilenta"
+ },
+ "item:plated-boots": {
+  "en": "plated-boots",
+  "pt": "botas-reforcadas"
+ },
+ "item:plated-cuirass": {
+  "en": "plated-cuirass",
+  "pt": "couraca-reforcada"
+ },
+ "item:plated-gauntlet": {
+  "en": "plated-gauntlet",
+  "pt": "manopla-reforcada"
+ },
+ "item:plated-helmet": {
+  "en": "plated-helmet",
+  "pt": "elmo-reforcado"
+ },
+ "item:plated-legs": {
+  "en": "plated-legs",
+  "pt": "pernas-reforcadas"
+ },
+ "item:plated-shield": {
+  "en": "plated-shield",
+  "pt": "escudo-reforcado"
+ },
+ "item:plea-effigy": {
+  "en": "plea-effigy",
+  "pt": "efigie-de-plea"
+ },
+ "item:plea-toe": {
+  "en": "plea-toe",
+  "pt": "dedo-de-plea"
+ },
+ "item:pocket-watch": {
+  "en": "pocket-watch",
+  "pt": "relogio-de-bolso"
+ },
+ "item:poison-resist-potion": {
+  "en": "poison-resist-potion",
+  "pt": "pocao-de-resistencia-ao-veneno"
+ },
+ "item:potato": {
+  "en": "potato",
+  "pt": "batata"
+ },
+ "item:potion-aqua-base": {
+  "en": "potion-aqua-base",
+  "pt": "base-de-pocao-aquatica"
+ },
+ "item:potion-shipment": {
+  "en": "potion-shipment",
+  "pt": "remessa-de-pocoes"
+ },
+ "item:power-bolt": {
+  "en": "power-bolt",
+  "pt": "virote-de-poder"
+ },
+ "item:prism": {
+  "en": "prism",
+  "pt": "prisma"
+ },
+ "item:pumpkin": {
+  "en": "pumpkin",
+  "pt": "abobora"
+ },
+ "item:pumpkin-pie": {
+  "en": "pumpkin-pie",
+  "pt": "torta-de-abobora"
+ },
+ "item:pumpkin-puree": {
+  "en": "pumpkin-puree",
+  "pt": "pure-de-abobora"
+ },
+ "item:pumpkin-slice": {
+  "en": "pumpkin-slice",
+  "pt": "fatia-de-abobora"
+ },
+ "item:purity-chausses": {
+  "en": "purity-chausses",
+  "pt": "calcoes-da-pureza"
+ },
+ "item:purity-handwraps": {
+  "en": "purity-handwraps",
+  "pt": "ataduras-da-pureza"
+ },
+ "item:purity-mail": {
+  "en": "purity-mail",
+  "pt": "cota-da-pureza"
+ },
+ "item:purple-rune-algiz": {
+  "en": "purple-rune-algiz",
+  "pt": "runa-roxa-algiz"
+ },
+ "item:purple-rune-hagalaz": {
+  "en": "purple-rune-hagalaz",
+  "pt": "runa-roxa-hagalaz"
+ },
+ "item:purple-rune-kenaz": {
+  "en": "purple-rune-kenaz",
+  "pt": "runa-roxa-kenaz"
+ },
+ "item:purple-rune-laguz": {
+  "en": "purple-rune-laguz",
+  "pt": "runa-roxa-laguz"
+ },
+ "item:purple-rune-raido": {
+  "en": "purple-rune-raido",
+  "pt": "runa-roxa-raido"
+ },
+ "item:purple-rune-uruz": {
+  "en": "purple-rune-uruz",
+  "pt": "runa-roxa-uruz"
+ },
+ "item:pvp-swap": {
+  "en": "pvp-swap",
+  "pt": "troca-de-pvp"
+ },
+ "item:quiche": {
+  "en": "quiche",
+  "pt": "quiche"
+ },
+ "item:quill": {
+  "en": "quill",
+  "pt": "pena"
+ },
+ "item:quoki-headgear": {
+  "en": "quoki-headgear",
+  "pt": "adorno-de-cabeca-quoki"
+ },
+ "item:quoki-shoes": {
+  "en": "quoki-shoes",
+  "pt": "sapatos-quoki"
+ },
+ "item:ragged-cloth": {
+  "en": "ragged-cloth",
+  "pt": "pano-rasgado"
+ },
+ "item:rat-charm": {
+  "en": "rat-charm",
+  "pt": "amuleto-de-rato"
+ },
+ "item:rat-tail": {
+  "en": "rat-tail",
+  "pt": "cauda-de-rato"
+ },
+ "item:rawhide": {
+  "en": "rawhide",
+  "pt": "couro-cru"
+ },
+ "item:red-breast": {
+  "en": "red-breast",
+  "pt": "peixe-peito-vermelho"
+ },
+ "item:red-notebook": {
+  "en": "red-notebook",
+  "pt": "caderno-vermelho"
+ },
+ "item:red-orb": {
+  "en": "red-orb",
+  "pt": "orbe-vermelho"
+ },
+ "item:red-rune-hagalaz": {
+  "en": "red-rune-hagalaz",
+  "pt": "runa-vermelha-hagalaz"
+ },
+ "item:red-rune-kenaz": {
+  "en": "red-rune-kenaz",
+  "pt": "runa-vermelha-kenaz"
+ },
+ "item:red-rune-laguz": {
+  "en": "red-rune-laguz",
+  "pt": "runa-vermelha-laguz"
+ },
+ "item:red-rune-othila": {
+  "en": "red-rune-othila",
+  "pt": "runa-vermelha-othila"
+ },
+ "item:red-rune-raido": {
+  "en": "red-rune-raido",
+  "pt": "runa-vermelha-raido"
+ },
+ "item:red-rune-uruz": {
+  "en": "red-rune-uruz",
+  "pt": "runa-vermelha-uruz"
+ },
+ "item:red-spellbook": {
+  "en": "red-spellbook",
+  "pt": "red-spellbook"
+ },
+ "item:regeneration-ring": {
+  "en": "regeneration-ring",
+  "pt": "anel-de-regeneracao"
+ },
+ "item:rice": {
+  "en": "rice",
+  "pt": "arroz"
+ },
+ "item:rice-dish": {
+  "en": "rice-dish",
+  "pt": "prato-de-arroz"
+ },
+ "item:ring-of-fire": {
+  "en": "ring-of-fire",
+  "pt": "anel-de-fogo"
+ },
+ "item:ritual-dagger": {
+  "en": "ritual-dagger",
+  "pt": "adaga-ritual"
+ },
+ "item:roasted-eggplant": {
+  "en": "roasted-eggplant",
+  "pt": "berinjela-assada"
+ },
+ "item:rock-core": {
+  "en": "rock-core",
+  "pt": "nucleo-de-rocha"
+ },
+ "item:rope": {
+  "en": "rope",
+  "pt": "corda"
+ },
+ "item:rose": {
+  "en": "rose",
+  "pt": "rosa"
+ },
+ "item:royal-armor": {
+  "en": "royal-armor",
+  "pt": "armadura-real"
+ },
+ "item:royal-dagger": {
+  "en": "royal-dagger",
+  "pt": "adaga-real"
+ },
+ "item:royal-helmet": {
+  "en": "royal-helmet",
+  "pt": "elmo-real"
+ },
+ "item:royal-legs": {
+  "en": "royal-legs",
+  "pt": "pernas-reais"
+ },
+ "item:ruby": {
+  "en": "ruby",
+  "pt": "rubi"
+ },
+ "item:ruby-amulet": {
+  "en": "ruby-amulet",
+  "pt": "amuleto-de-rubi"
+ },
+ "item:runebook-how-to-enchant-items": {
+  "en": "runebook-how-to-enchant-items",
+  "pt": "livro-de-runas-como-encantar-itens"
+ },
+ "item:rusty-sword": {
+  "en": "rusty-sword",
+  "pt": "espada-enferrujada"
+ },
+ "item:sailor-boots": {
+  "en": "sailor-boots",
+  "pt": "botas-de-marinheiro"
+ },
+ "item:salmon-rice-bowl": {
+  "en": "salmon-rice-bowl",
+  "pt": "tigela-de-arroz-com-salmao"
+ },
+ "item:salmon-steak": {
+  "en": "salmon-steak",
+  "pt": "file-de-salmao"
+ },
+ "item:sandwich": {
+  "en": "sandwich",
+  "pt": "sanduiche"
+ },
+ "item:sandworm": {
+  "en": "sandworm",
+  "pt": "verme-da-areia"
+ },
+ "item:sandworm-meal": {
+  "en": "sandworm-meal",
+  "pt": "refeicao-de-verme-da-areia"
+ },
+ "item:scale-armor": {
+  "en": "scale-armor",
+  "pt": "armadura-de-escamas"
+ },
+ "item:scale-kilt": {
+  "en": "scale-kilt",
+  "pt": "saiote-de-escamas"
+ },
+ "item:scarf": {
+  "en": "scarf",
+  "pt": "cachecol"
+ },
+ "item:serpent-sword": {
+  "en": "serpent-sword",
+  "pt": "espada-serpente"
+ },
+ "item:shovel": {
+  "en": "shovel",
+  "pt": "pa"
+ },
+ "item:silver-amulet": {
+  "en": "silver-amulet",
+  "pt": "amuleto-de-prata"
+ },
+ "item:silver-dagger": {
+  "en": "silver-dagger",
+  "pt": "adaga-de-prata"
+ },
+ "item:silver-mace": {
+  "en": "silver-mace",
+  "pt": "maca-de-prata"
+ },
+ "item:silver-mask": {
+  "en": "silver-mask",
+  "pt": "mascara-de-prata"
+ },
+ "item:silver-ring": {
+  "en": "silver-ring",
+  "pt": "anel-de-prata"
+ },
+ "item:silver-wand": {
+  "en": "silver-wand",
+  "pt": "varinha-de-prata"
+ },
+ "item:simple-bag": {
+  "en": "simple-bag",
+  "pt": "bolsa-simples"
+ },
+ "item:simple-garment": {
+  "en": "simple-garment",
+  "pt": "vestimenta-simples"
+ },
+ "item:simple-wand": {
+  "en": "simple-wand",
+  "pt": "varinha-simples"
+ },
+ "item:skal-tooth": {
+  "en": "skal-tooth",
+  "pt": "dente-de-skal"
+ },
+ "item:skalish-blade": {
+  "en": "skalish-blade",
+  "pt": "lamina-skalish"
+ },
+ "item:skalish-heavy-bow": {
+  "en": "skalish-heavy-bow",
+  "pt": "arco-pesado-skalish"
+ },
+ "item:skalish-knife": {
+  "en": "skalish-knife",
+  "pt": "faca-skalish"
+ },
+ "item:skalish-necklace": {
+  "en": "skalish-necklace",
+  "pt": "colar-skalish"
+ },
+ "item:skalish-ring": {
+  "en": "skalish-ring",
+  "pt": "anel-skalish"
+ },
+ "item:skull-ring": {
+  "en": "skull-ring",
+  "pt": "anel-de-caveira"
+ },
+ "item:slime-essence": {
+  "en": "slime-essence",
+  "pt": "essencia-de-lodo"
+ },
+ "item:small-bomb": {
+  "en": "small-bomb",
+  "pt": "bomba-pequena"
+ },
+ "item:small-bones": {
+  "en": "small-bones",
+  "pt": "ossos-pequenos"
+ },
+ "item:small-ribs": {
+  "en": "small-ribs",
+  "pt": "costelas-pequenas"
+ },
+ "item:small-skull": {
+  "en": "small-skull",
+  "pt": "cranio-pequeno"
+ },
+ "item:smoked-salmon": {
+  "en": "smoked-salmon",
+  "pt": "salmao-defumado"
+ },
+ "item:snake-orb": {
+  "en": "snake-orb",
+  "pt": "orbe-da-serpente"
+ },
+ "item:snapper": {
+  "en": "snapper",
+  "pt": "pargo"
+ },
+ "item:spangenhelm": {
+  "en": "spangenhelm",
+  "pt": "spangenhelm"
+ },
+ "item:spicy-rice": {
+  "en": "spicy-rice",
+  "pt": "arroz-picante"
+ },
+ "item:spicy-stew": {
+  "en": "spicy-stew",
+  "pt": "ensopado-picante"
+ },
+ "item:spider-repellent": {
+  "en": "spider-repellent",
+  "pt": "repelente-de-aranhas"
+ },
+ "item:spiked-club": {
+  "en": "spiked-club",
+  "pt": "clava-com-espinhos"
+ },
+ "item:spring-dish": {
+  "en": "spring-dish",
+  "pt": "prato-primaveril"
+ },
+ "item:spring-stew": {
+  "en": "spring-stew",
+  "pt": "ensopado-primaveril"
+ },
+ "item:square-bag": {
+  "en": "square-bag",
+  "pt": "bolsa-quadrada"
+ },
+ "item:stat-reset": {
+  "en": "stat-reset",
+  "pt": "restaurar-atributos"
+ },
+ "item:steel-bracelet": {
+  "en": "steel-bracelet",
+  "pt": "bracelete-de-aco"
+ },
+ "item:steel-ingot": {
+  "en": "steel-ingot",
+  "pt": "barra-de-aco"
+ },
+ "item:steel-knife": {
+  "en": "steel-knife",
+  "pt": "faca-de-aco"
+ },
+ "item:steelsword": {
+  "en": "steelsword",
+  "pt": "espada-de-aco"
+ },
+ "item:stone-staff": {
+  "en": "stone-staff",
+  "pt": "cajado-de-pedra"
+ },
+ "item:strawberries": {
+  "en": "strawberries",
+  "pt": "morangos"
+ },
+ "item:studded-shield": {
+  "en": "studded-shield",
+  "pt": "escudo-cravejado"
+ },
+ "item:stuffed-white-rat": {
+  "en": "stuffed-white-rat",
+  "pt": "rato-branco-de-pelucia"
+ },
+ "item:sushi": {
+  "en": "sushi",
+  "pt": "sushi"
+ },
+ "item:swamp-cod": {
+  "en": "swamp-cod",
+  "pt": "bacalhau-do-pantano"
+ },
+ "item:talisman-pouch": {
+  "en": "talisman-pouch",
+  "pt": "bolsa-de-talismas"
+ },
+ "item:tin-ingot": {
+  "en": "tin-ingot",
+  "pt": "barra-de-estanho"
+ },
+ "item:tofu-block": {
+  "en": "tofu-block",
+  "pt": "bloco-de-tofu"
+ },
+ "item:tomatoes": {
+  "en": "tomatoes",
+  "pt": "tomates"
+ },
+ "item:torch": {
+  "en": "torch",
+  "pt": "tocha"
+ },
+ "item:torch-lit": {
+  "en": "torch-lit",
+  "pt": "tocha-acesa"
+ },
+ "item:tower-shield": {
+  "en": "tower-shield",
+  "pt": "escudo-de-torre"
+ },
+ "item:trait-reset": {
+  "en": "trait-reset",
+  "pt": "restaurar-tracos"
+ },
+ "item:trident-token": {
+  "en": "trident-token",
+  "pt": "simbolo-do-trident"
+ },
+ "item:twisted-wand": {
+  "en": "twisted-wand",
+  "pt": "varinha-retorcida"
+ },
+ "item:unholy-staff": {
+  "en": "unholy-staff",
+  "pt": "cajado-profano"
+ },
+ "item:vanguard-shield": {
+  "en": "vanguard-shield",
+  "pt": "escudo-de-vanguarda"
+ },
+ "item:vecan-axe": {
+  "en": "vecan-axe",
+  "pt": "machado-vecan"
+ },
+ "item:velvet-pouch": {
+  "en": "velvet-pouch",
+  "pt": "bolsa-de-veludo"
+ },
+ "item:wand-of-green": {
+  "en": "wand-of-green",
+  "pt": "varinha-do-verde"
+ },
+ "item:war-foretoken": {
+  "en": "war-foretoken",
+  "pt": "pressagio-de-guerra"
+ },
+ "item:war-hammer": {
+  "en": "war-hammer",
+  "pt": "martelo-de-guerra"
+ },
+ "item:webcap-eye": {
+  "en": "webcap-eye",
+  "pt": "olho-de-webcap"
+ },
+ "item:wheat": {
+  "en": "wheat",
+  "pt": "trigo"
+ },
+ "item:white-mushroom": {
+  "en": "white-mushroom",
+  "pt": "cogumelo-branco"
+ },
+ "item:white-rune-hagalaz": {
+  "en": "white-rune-hagalaz",
+  "pt": "runa-branca-hagalaz"
+ },
+ "item:white-rune-kenaz": {
+  "en": "white-rune-kenaz",
+  "pt": "runa-branca-kenaz"
+ },
+ "item:white-rune-laguz": {
+  "en": "white-rune-laguz",
+  "pt": "runa-branca-laguz"
+ },
+ "item:white-rune-othila": {
+  "en": "white-rune-othila",
+  "pt": "runa-branca-othila"
+ },
+ "item:white-rune-raido": {
+  "en": "white-rune-raido",
+  "pt": "runa-branca-raido"
+ },
+ "item:white-rune-uruz": {
+  "en": "white-rune-uruz",
+  "pt": "runa-branca-uruz"
+ },
+ "item:wilfred-package": {
+  "en": "wilfred-package",
+  "pt": "pacote-de-wilfred"
+ },
+ "item:winged-boots": {
+  "en": "winged-boots",
+  "pt": "botas-aladas"
+ },
+ "item:wizard-hat": {
+  "en": "wizard-hat",
+  "pt": "chapeu-de-mago-wizard-hat"
+ },
+ "item:wizard-robe": {
+  "en": "wizard-robe",
+  "pt": "manto-de-mago"
+ },
+ "item:wolf-helmet": {
+  "en": "wolf-helmet",
+  "pt": "elmo-de-lobo"
+ },
+ "item:wood-twigs": {
+  "en": "wood-twigs",
+  "pt": "gravetos"
+ },
+ "item:wooden-bow": {
+  "en": "wooden-bow",
+  "pt": "arco-de-madeira"
+ },
+ "item:wooden-bowl": {
+  "en": "wooden-bowl",
+  "pt": "tigela-de-madeira"
+ },
+ "item:wooden-cup": {
+  "en": "wooden-cup",
+  "pt": "copo-de-madeira"
+ },
+ "item:wooden-mug": {
+  "en": "wooden-mug",
+  "pt": "caneca-de-madeira"
+ },
+ "item:wooden-shield": {
+  "en": "wooden-shield",
+  "pt": "escudo-de-madeira"
+ },
+ "item:wooden-spoon": {
+  "en": "wooden-spoon",
+  "pt": "colher-de-madeira"
+ },
+ "item:wooden-staff": {
+  "en": "wooden-staff",
+  "pt": "cajado-de-madeira"
+ },
+ "item:wool": {
+  "en": "wool",
+  "pt": "la"
+ },
+ "item:world-chat": {
+  "en": "world-chat",
+  "pt": "chat-mundial"
+ },
+ "item:worn-paper": {
+  "en": "worn-paper",
+  "pt": "papel-gasto"
+ },
+ "item:yellow-beauty": {
+  "en": "yellow-beauty",
+  "pt": "beleza-amarela"
+ },
+ "item:yellow-notebook": {
+  "en": "yellow-notebook",
+  "pt": "caderno-amarelo"
+ },
+ "item:yellow-rune-algiz": {
+  "en": "yellow-rune-algiz",
+  "pt": "runa-amarela-algiz"
+ },
+ "item:yellow-rune-hagalaz": {
+  "en": "yellow-rune-hagalaz",
+  "pt": "runa-amarela-hagalaz"
+ },
+ "item:yellow-rune-kenaz": {
+  "en": "yellow-rune-kenaz",
+  "pt": "runa-amarela-kenaz"
+ },
+ "item:yellow-rune-laguz": {
+  "en": "yellow-rune-laguz",
+  "pt": "runa-amarela-laguz"
+ },
+ "item:yellow-rune-raido": {
+  "en": "yellow-rune-raido",
+  "pt": "runa-amarela-raido"
+ },
+ "item:yellow-rune-uruz": {
+  "en": "yellow-rune-uruz",
+  "pt": "runa-amarela-uruz"
+ },
+ "item:yellow-spellbook": {
+  "en": "yellow-spellbook",
+  "pt": "yellow-spellbook"
+ },
+ "item:zircon-ring": {
+  "en": "zircon-ring",
+  "pt": "anel-de-zircao"
+ },
+ "monster:a113": {
+  "en": "monk",
+  "pt": "monge"
+ },
+ "monster:a123": {
+  "en": "rat-shipper",
+  "pt": "rato-transportador"
+ },
+ "monster:a124": {
+  "en": "pestilence-plague",
+  "pt": "praga-de-pestilence"
+ },
+ "monster:a125": {
+  "en": "rubellus",
+  "pt": "rubellus"
+ },
+ "monster:a138": {
+  "en": "sunskin",
+  "pt": "pele-solar"
+ },
+ "monster:a139": {
+  "en": "sunskin-enchanter",
+  "pt": "encantador-pele-solar"
+ },
+ "monster:a140": {
+  "en": "profaner",
+  "pt": "profanador"
+ },
+ "monster:a141": {
+  "en": "cave-spider",
+  "pt": "aranha-da-caverna"
+ },
+ "monster:a142": {
+  "en": "devil-spider",
+  "pt": "aranha-demoniaca"
+ },
+ "monster:a143": {
+  "en": "terror-spider",
+  "pt": "aranha-do-terror"
+ },
+ "monster:a146": {
+  "en": "the-blackhat",
+  "pt": "o-chapeu-negro"
+ },
+ "monster:a147": {
+  "en": "the-gardener",
+  "pt": "o-jardineiro"
+ },
+ "monster:a15": {
+  "en": "plea",
+  "pt": "plea"
+ },
+ "monster:a155": {
+  "en": "mateo-the-bandit",
+  "pt": "mateo-o-bandido"
+ },
+ "monster:a156": {
+  "en": "capozzi-the-bandit",
+  "pt": "capozzi-o-bandido"
+ },
+ "monster:a157": {
+  "en": "gaglio-the-bandit",
+  "pt": "gaglio-o-bandido"
+ },
+ "monster:a16": {
+  "en": "pestilence-spawn",
+  "pt": "cria-de-pestilence"
+ },
+ "monster:a17": {
+  "en": "ancient-snake",
+  "pt": "serpente-antiga"
+ },
+ "monster:a172": {
+  "en": "conquest-fowler",
+  "pt": "cacador-de-conquest"
+ },
+ "monster:a173": {
+  "en": "plea-occultist",
+  "pt": "ocultista-plea"
+ },
+ "monster:a174": {
+  "en": "conquest-priestess",
+  "pt": "sacerdotisa-de-conquest"
+ },
+ "monster:a175": {
+  "en": "crazed-occultist",
+  "pt": "ocultista-enlouquecido"
+ },
+ "monster:a19": {
+  "en": "skeleton",
+  "pt": "esqueleto"
+ },
+ "monster:a190": {
+  "en": "tomb-guardian",
+  "pt": "guardiao-da-tumba"
+ },
+ "monster:a191": {
+  "en": "tomb-diviner",
+  "pt": "adivinho-da-tumba"
+ },
+ "monster:a192": {
+  "en": "tomb-worker",
+  "pt": "trabalhador-da-tumba"
+ },
+ "monster:a194": {
+  "en": "conquest-crow",
+  "pt": "corvo-de-conquest"
+ },
+ "monster:a195": {
+  "en": "bone-eater",
+  "pt": "devorador-de-ossos"
+ },
+ "monster:a2": {
+  "en": "deadly-webcap",
+  "pt": "webcap-mortal"
+ },
+ "monster:a20": {
+  "en": "rat",
+  "pt": "rato"
+ },
+ "monster:a21": {
+  "en": "swamp-troll",
+  "pt": "troll-do-pantano"
+ },
+ "monster:a217": {
+  "en": "imp",
+  "pt": "diabrete"
+ },
+ "monster:a218": {
+  "en": "mireling",
+  "pt": "mireling"
+ },
+ "monster:a219": {
+  "en": "mireling-noble",
+  "pt": "mireling-nobre"
+ },
+ "monster:a22": {
+  "en": "cave-troll",
+  "pt": "troll-da-caverna"
+ },
+ "monster:a220": {
+  "en": "banshee",
+  "pt": "banshee"
+ },
+ "monster:a221": {
+  "en": "deer",
+  "pt": "veado"
+ },
+ "monster:a222": {
+  "en": "bear",
+  "pt": "urso"
+ },
+ "monster:a223": {
+  "en": "wolf",
+  "pt": "lobo"
+ },
+ "monster:a224": {
+  "en": "alpha-wolf",
+  "pt": "lobo-alfa"
+ },
+ "monster:a225": {
+  "en": "lintwurm",
+  "pt": "lintwurm"
+ },
+ "monster:a226": {
+  "en": "great-lintwurm",
+  "pt": "grande-lintwurm"
+ },
+ "monster:a23": {
+  "en": "giant-rat",
+  "pt": "rato-gigante"
+ },
+ "monster:a231": {
+  "en": "the-augur",
+  "pt": "o-augurio"
+ },
+ "monster:a235": {
+  "en": "great-lintwurm-a235",
+  "pt": "grande-lintwurm-a235"
+ },
+ "monster:a236": {
+  "en": "grizzly-bear",
+  "pt": "urso-pardo"
+ },
+ "monster:a24": {
+  "en": "tundra-rat",
+  "pt": "rato-da-tundra"
+ },
+ "monster:a25": {
+  "en": "goblin",
+  "pt": "goblin"
+ },
+ "monster:a254": {
+  "en": "swamp-tentacle",
+  "pt": "tentaculo-do-pantano"
+ },
+ "monster:a255": {
+  "en": "the-broodmother",
+  "pt": "a-mae-da-ninhada"
+ },
+ "monster:a259": {
+  "en": "frozen-chest",
+  "pt": "bau-congelado"
+ },
+ "monster:a26": {
+  "en": "viscid-goblin",
+  "pt": "goblin-viscoso"
+ },
+ "monster:a260": {
+  "en": "frozen-chest-a260",
+  "pt": "bau-congelado-a260"
+ },
+ "monster:a261": {
+  "en": "omen",
+  "pt": "pressagio"
+ },
+ "monster:a262": {
+  "en": "conquest-champion",
+  "pt": "campeao-de-conquest"
+ },
+ "monster:a264": {
+  "en": "rotwurm",
+  "pt": "rotwurm"
+ },
+ "monster:a265": {
+  "en": "faun",
+  "pt": "fauno"
+ },
+ "monster:a266": {
+  "en": "titan",
+  "pt": "tita"
+ },
+ "monster:a267": {
+  "en": "thug",
+  "pt": "bandido"
+ },
+ "monster:a268": {
+  "en": "smelt-ooze",
+  "pt": "lodo-fundido"
+ },
+ "monster:a27": {
+  "en": "bandit",
+  "pt": "bandido-a27"
+ },
+ "monster:a28": {
+  "en": "young-amphitere",
+  "pt": "amphitere-jovem"
+ },
+ "monster:a283": {
+  "en": "ghost",
+  "pt": "fantasma"
+ },
+ "monster:a29": {
+  "en": "amphitere",
+  "pt": "amphitere"
+ },
+ "monster:a3": {
+  "en": "walking-boletus",
+  "pt": "boleto-ambulante"
+ },
+ "monster:a307": {
+  "en": "ghoul",
+  "pt": "carnical"
+ },
+ "monster:a309": {
+  "en": "the-black-knight",
+  "pt": "o-cavaleiro-negro"
+ },
+ "monster:a313": {
+  "en": "unstable-quartz",
+  "pt": "quartzo-instavel"
+ },
+ "monster:a314": {
+  "en": "skal-traitor",
+  "pt": "skal-traidor"
+ },
+ "monster:a316": {
+  "en": "huntsman",
+  "pt": "cacador"
+ },
+ "monster:a32": {
+  "en": "minotaur",
+  "pt": "minotauro"
+ },
+ "monster:a321": {
+  "en": "brother-rossi",
+  "pt": "irmao-rossi"
+ },
+ "monster:a33": {
+  "en": "digger",
+  "pt": "escavador"
+ },
+ "monster:a333": {
+  "en": "wisp",
+  "pt": "wisp"
+ },
+ "monster:a34": {
+  "en": "sheep",
+  "pt": "ovelha"
+ },
+ "monster:a35": {
+  "en": "black-sheep",
+  "pt": "ovelha-negra"
+ },
+ "monster:a36": {
+  "en": "lamb",
+  "pt": "cordeiro"
+ },
+ "monster:a37": {
+  "en": "black-lamb",
+  "pt": "cordeiro-negro"
+ },
+ "monster:a38": {
+  "en": "necromancer",
+  "pt": "necromante"
+ },
+ "monster:a39": {
+  "en": "occultist-acolyte",
+  "pt": "acolito-ocultista"
+ },
+ "monster:a4": {
+  "en": "cube-of-doom",
+  "pt": "cubo-da-perdicao"
+ },
+ "monster:a40": {
+  "en": "occultist-scholar",
+  "pt": "erudito-ocultista"
+ },
+ "monster:a41": {
+  "en": "occultist-enforcer",
+  "pt": "executor-ocultista"
+ },
+ "monster:a42": {
+  "en": "occultist-apprentice",
+  "pt": "aprendiz-ocultista"
+ },
+ "monster:a43": {
+  "en": "orc-berserker",
+  "pt": "orc-berserker"
+ },
+ "monster:a44": {
+  "en": "orc-general",
+  "pt": "general-orc"
+ },
+ "monster:a45": {
+  "en": "orc-shaman",
+  "pt": "xama-orc"
+ },
+ "monster:a46": {
+  "en": "orc-infantry",
+  "pt": "infantaria-orc"
+ },
+ "monster:a47": {
+  "en": "pestilence-knight",
+  "pt": "cavaleiro-de-pestilence"
+ },
+ "monster:a5": {
+  "en": "eye-of-pestilence",
+  "pt": "olho-de-pestilence"
+ },
+ "monster:a7": {
+  "en": "pestilence-stinger",
+  "pt": "ferrao-de-pestilence"
+ },
+ "npc:a114": {
+  "en": "benedict",
+  "pt": "benedict"
+ },
+ "npc:a117": {
+  "en": "el-chad",
+  "pt": "el-chad"
+ },
+ "npc:a119": {
+  "en": "rubius",
+  "pt": "rubius"
+ },
+ "npc:a120": {
+  "en": "bresenham",
+  "pt": "bresenham"
+ },
+ "npc:a129": {
+  "en": "tim",
+  "pt": "tim"
+ },
+ "npc:a13": {
+  "en": "sal",
+  "pt": "sal"
+ },
+ "npc:a130": {
+  "en": "ozrid",
+  "pt": "ozrid"
+ },
+ "npc:a131": {
+  "en": "nick",
+  "pt": "nick"
+ },
+ "npc:a132": {
+  "en": "a-stressed-chef",
+  "pt": "um-chefe-estressado"
+ },
+ "npc:a134": {
+  "en": "maxwell",
+  "pt": "maxwell"
+ },
+ "npc:a14": {
+  "en": "mary",
+  "pt": "mary"
+ },
+ "npc:a149": {
+  "en": "margery-a149",
+  "pt": "margery-a149"
+ },
+ "npc:a150": {
+  "en": "yoz",
+  "pt": "yoz"
+ },
+ "npc:a152": {
+  "en": "matthew",
+  "pt": "matthew"
+ },
+ "npc:a158": {
+  "en": "newell",
+  "pt": "newell"
+ },
+ "npc:a159": {
+  "en": "gabe",
+  "pt": "gabe"
+ },
+ "npc:a162": {
+  "en": "amlon",
+  "pt": "amlon"
+ },
+ "npc:a164": {
+  "en": "amlon-a164",
+  "pt": "amlon-a164"
+ },
+ "npc:a166": {
+  "en": "amlon-a166",
+  "pt": "amlon-a166"
+ },
+ "npc:a178": {
+  "en": "martem",
+  "pt": "martem"
+ },
+ "npc:a18": {
+  "en": "edmund",
+  "pt": "edmund"
+ },
+ "npc:a182": {
+  "en": "constine",
+  "pt": "constine"
+ },
+ "npc:a184": {
+  "en": "joan",
+  "pt": "joan"
+ },
+ "npc:a185": {
+  "en": "odie",
+  "pt": "odie"
+ },
+ "npc:a186": {
+  "en": "gonlle",
+  "pt": "gonlle"
+ },
+ "npc:a187": {
+  "en": "nunie",
+  "pt": "nunie"
+ },
+ "npc:a204": {
+  "en": "hoder",
+  "pt": "hoder"
+ },
+ "npc:a206": {
+  "en": "reika",
+  "pt": "reika"
+ },
+ "npc:a213": {
+  "en": "dionel",
+  "pt": "dionel"
+ },
+ "npc:a214": {
+  "en": "rosel",
+  "pt": "rosel"
+ },
+ "npc:a215": {
+  "en": "petrus",
+  "pt": "petrus"
+ },
+ "npc:a229": {
+  "en": "morrigan",
+  "pt": "morrigan"
+ },
+ "npc:a241": {
+  "en": "colman",
+  "pt": "colman"
+ },
+ "npc:a242": {
+  "en": "brean",
+  "pt": "brean"
+ },
+ "npc:a243": {
+  "en": "salazar",
+  "pt": "salazar"
+ },
+ "npc:a244": {
+  "en": "logan",
+  "pt": "logan"
+ },
+ "npc:a247": {
+  "en": "tock",
+  "pt": "tock"
+ },
+ "npc:a248": {
+  "en": "loke",
+  "pt": "loke"
+ },
+ "npc:a253": {
+  "en": "a-blue-mage",
+  "pt": "um-mago-azul"
+ },
+ "npc:a269": {
+  "en": "a-ghoulish-secretary",
+  "pt": "uma-secretaria-macabra"
+ },
+ "npc:a282": {
+  "en": "a-blind-botanist",
+  "pt": "um-botanico-cego"
+ },
+ "npc:a290": {
+  "en": "egemen",
+  "pt": "egemen"
+ },
+ "npc:a293": {
+  "en": "nebil",
+  "pt": "nebil"
+ },
+ "npc:a298": {
+  "en": "tink",
+  "pt": "tink"
+ },
+ "npc:a300": {
+  "en": "hagar",
+  "pt": "hagar"
+ },
+ "npc:a301": {
+  "en": "kazim",
+  "pt": "kazim"
+ },
+ "npc:a303": {
+  "en": "isra",
+  "pt": "isra"
+ },
+ "npc:a304": {
+  "en": "ismet",
+  "pt": "ismet"
+ },
+ "npc:a306": {
+  "en": "yacht",
+  "pt": "yacht"
+ },
+ "npc:a331": {
+  "en": "hoder-a331",
+  "pt": "hoder-a331"
+ },
+ "npc:a49": {
+  "en": "seymour",
+  "pt": "seymour"
+ },
+ "npc:a51": {
+  "en": "gavin",
+  "pt": "gavin"
+ },
+ "npc:a54": {
+  "en": "guy",
+  "pt": "guy"
+ },
+ "npc:a56": {
+  "en": "rasobar",
+  "pt": "rasobar"
+ },
+ "npc:a59": {
+  "en": "sigurd",
+  "pt": "sigurd"
+ },
+ "npc:a6": {
+  "en": "violet",
+  "pt": "violet"
+ },
+ "npc:a60": {
+  "en": "wolfram",
+  "pt": "wolfram"
+ },
+ "npc:a61": {
+  "en": "jaques",
+  "pt": "jaques"
+ },
+ "npc:a72": {
+  "en": "maude",
+  "pt": "maude"
+ },
+ "npc:a73": {
+  "en": "benedict-a73",
+  "pt": "benedict-a73"
+ },
+ "npc:a75": {
+  "en": "roland",
+  "pt": "roland"
+ },
+ "npc:a78": {
+  "en": "meredith",
+  "pt": "meredith"
+ },
+ "npc:a80": {
+  "en": "wilfred",
+  "pt": "wilfred"
+ },
+ "npc:a81": {
+  "en": "mabel",
+  "pt": "mabel"
+ },
+ "npc:a82": {
+  "en": "reginald",
+  "pt": "reginald"
+ },
+ "npc:a83": {
+  "en": "margery",
+  "pt": "margery"
+ },
+ "npc:a85": {
+  "en": "zebulon",
+  "pt": "zebulon"
+ },
+ "npc:a86": {
+  "en": "lurleen",
+  "pt": "lurleen"
+ },
+ "npc:a87": {
+  "en": "erastus",
+  "pt": "erastus"
+ },
+ "npc:a88": {
+  "en": "otis",
+  "pt": "otis"
+ },
+ "npc:a89": {
+  "en": "hester",
+  "pt": "hester"
+ },
+ "npc:a90": {
+  "en": "dewey",
+  "pt": "dewey"
+ },
+ "npc:a91": {
+  "en": "opal",
+  "pt": "opal"
+ },
+ "npc:a92": {
+  "en": "burl",
+  "pt": "burl"
+ },
+ "npc:a95": {
+  "en": "bessie",
+  "pt": "bessie"
+ },
+ "npc:a96": {
+  "en": "hobart",
+  "pt": "hobart"
+ },
+ "npc:a98": {
+  "en": "jebidiah",
+  "pt": "jebidiah"
+ },
+ "quest:q1": {
+  "en": "goblin-cave-quest",
+  "pt": "missao-da-caverna-dos-goblins"
+ },
+ "quest:q10": {
+  "en": "annoying-quest",
+  "pt": "missao-irritante"
+ },
+ "quest:q100": {
+  "en": "devil-s-ingot",
+  "pt": "barra-do-diabo"
+ },
+ "quest:q1001": {
+  "en": "occultist-spy",
+  "pt": "espiao-ocultista"
+ },
+ "quest:q1002": {
+  "en": "delivery-to-seraphina",
+  "pt": "entrega-para-seraphina"
+ },
+ "quest:q1004": {
+  "en": "love-letter-delivery",
+  "pt": "entrega-da-carta-de-amor"
+ },
+ "quest:q101": {
+  "en": "digger-cave-ingot",
+  "pt": "barra-da-caverna-dos-diggers"
+ },
+ "quest:q1010": {
+  "en": "novel-hero",
+  "pt": "heroi-do-romance"
+ },
+ "quest:q1013": {
+  "en": "bad-ink-gatherer",
+  "pt": "coletor-de-tinta-ruim"
+ },
+ "quest:q1014": {
+  "en": "letter-for-dewey",
+  "pt": "carta-para-dewey"
+ },
+ "quest:q1016": {
+  "en": "bread-delivery",
+  "pt": "entrega-de-pao"
+ },
+ "quest:q1018": {
+  "en": "family-rebound",
+  "pt": "reencontro-familiar"
+ },
+ "quest:q102": {
+  "en": "amphitere-s-treasure",
+  "pt": "tesouro-do-amphitere"
+ },
+ "quest:q1025": {
+  "en": "potion-shipper",
+  "pt": "entregador-de-pocoes"
+ },
+ "quest:q103": {
+  "en": "deep-cave-ingot",
+  "pt": "lingote-da-caverna-profunda"
+ },
+ "quest:q1032": {
+  "en": "drystan-s-letter",
+  "pt": "carta-de-drystan"
+ },
+ "quest:q104": {
+  "en": "mountain-ingot",
+  "pt": "lingote-da-montanha"
+ },
+ "quest:q1044": {
+  "en": "wilfred-s-gift",
+  "pt": "presente-de-wilfred"
+ },
+ "quest:q1047": {
+  "en": "hero-in-basile",
+  "pt": "heroi-em-basile"
+ },
+ "quest:q1048": {
+  "en": "package-for-elsie",
+  "pt": "pacote-para-elsie"
+ },
+ "quest:q105": {
+  "en": "eye-steel-ingot",
+  "pt": "barra-de-aco-do-olho"
+ },
+ "quest:q1054": {
+  "en": "lunch-rescuer",
+  "pt": "resgatador-do-almoco"
+ },
+ "quest:q1057": {
+  "en": "yseult-s-mission",
+  "pt": "missao-de-yseult"
+ },
+ "quest:q1059": {
+  "en": "blacksmith-assistant",
+  "pt": "assistente-do-ferreiro"
+ },
+ "quest:q106": {
+  "en": "old-house-ingot",
+  "pt": "lingote-da-casa-antiga"
+ },
+ "quest:q107": {
+  "en": "general-s-ingot",
+  "pt": "lingote-do-general"
+ },
+ "quest:q1077": {
+  "en": "the-hat-task",
+  "pt": "tarefa-do-chapeu"
+ },
+ "quest:q1079": {
+  "en": "drystan-s-grocery",
+  "pt": "mantimentos-de-drystan"
+ },
+ "quest:q108": {
+  "en": "the-grave-ingot",
+  "pt": "o-lingote-da-tumba"
+ },
+ "quest:q1080": {
+  "en": "boat-tailor",
+  "pt": "alfaiate-do-barco"
+ },
+ "quest:q1081": {
+  "en": "toe-hunt",
+  "pt": "caca-aos-dedos"
+ },
+ "quest:q1083": {
+  "en": "good-ink-gatherer",
+  "pt": "bom-coletor-de-tinta"
+ },
+ "quest:q109": {
+  "en": "buried-tin-ingot",
+  "pt": "lingote-de-estanho-enterrado"
+ },
+ "quest:q11": {
+  "en": "old-lighthouse-quest",
+  "pt": "missao-do-farol-antigo"
+ },
+ "quest:q110": {
+  "en": "frozen-ingot",
+  "pt": "lingote-congelado"
+ },
+ "quest:q1100": {
+  "en": "a-grilled-cheese",
+  "pt": "um-queijo-grelhado"
+ },
+ "quest:q1101": {
+  "en": "an-apple-pie",
+  "pt": "uma-torta-de-maca"
+ },
+ "quest:q1102": {
+  "en": "a-fish-steak",
+  "pt": "um-file-de-peixe"
+ },
+ "quest:q1103": {
+  "en": "a-spicy-stew",
+  "pt": "um-ensopado-picante"
+ },
+ "quest:q1104": {
+  "en": "licensed-chef",
+  "pt": "chef-licenciado"
+ },
+ "quest:q1106": {
+  "en": "drunkard-s-gift",
+  "pt": "presente-do-bebado"
+ },
+ "quest:q111": {
+  "en": "stairs-ingot",
+  "pt": "lingote-das-escadas"
+ },
+ "quest:q1112": {
+  "en": "lantern-rescued",
+  "pt": "lanterna-resgatada"
+ },
+ "quest:q1115": {
+  "en": "a-clue-found",
+  "pt": "uma-pista-encontrada"
+ },
+ "quest:q1118": {
+  "en": "spellbook-hero",
+  "pt": "heroi-do-grimorio"
+ },
+ "quest:q112": {
+  "en": "waterfall-ingot",
+  "pt": "lingote-da-cachoeira"
+ },
+ "quest:q1121": {
+  "en": "gil-and-the-key",
+  "pt": "gil-e-a-chave"
+ },
+ "quest:q1124": {
+  "en": "food-sample",
+  "pt": "amostra-de-comida"
+ },
+ "quest:q1128": {
+  "en": "papaya-reward",
+  "pt": "recompensa-de-papaia"
+ },
+ "quest:q1129": {
+  "en": "smith-apprentice",
+  "pt": "aprendiz-de-ferreiro"
+ },
+ "quest:q113": {
+  "en": "general-s-key",
+  "pt": "chave-do-general"
+ },
+ "quest:q1131": {
+  "en": "el-chad-s-trust",
+  "pt": "confianca-do-el-chad"
+ },
+ "quest:q114": {
+  "en": "nick-s-ingot",
+  "pt": "barra-de-nick"
+ },
+ "quest:q1143": {
+  "en": "caravan-helper",
+  "pt": "ajudante-da-caravana"
+ },
+ "quest:q1146": {
+  "en": "farmer-s-friend",
+  "pt": "amigo-do-fazendeiro"
+ },
+ "quest:q115": {
+  "en": "trader-s-ingot",
+  "pt": "barra-do-mercador"
+ },
+ "quest:q1153": {
+  "en": "rock-delivery",
+  "pt": "entrega-de-pedras"
+ },
+ "quest:q1158": {
+  "en": "wood-for-outlaws",
+  "pt": "madeira-para-foras-da-lei"
+ },
+ "quest:q116": {
+  "en": "el-chad-s-ingot",
+  "pt": "barra-do-el-chad"
+ },
+ "quest:q1166": {
+  "en": "papaya-reward-q1166",
+  "pt": "recompensa-de-papaia-q1166"
+ },
+ "quest:q1169": {
+  "en": "satisfied-fan",
+  "pt": "fa-satisfeita"
+ },
+ "quest:q117": {
+  "en": "prison-ingot",
+  "pt": "barra-da-prisao"
+ },
+ "quest:q118": {
+  "en": "elmo-s-gift",
+  "pt": "presente-de-elmo"
+ },
+ "quest:q119": {
+  "en": "tomb-ornate-chest",
+  "pt": "bau-ornamentado-da-tumba"
+ },
+ "quest:q1195": {
+  "en": "the-ghost-trapper",
+  "pt": "o-cacador-de-fantasmas"
+ },
+ "quest:q1198": {
+  "en": "ghost-exchange",
+  "pt": "troca-de-fantasma"
+ },
+ "quest:q12": {
+  "en": "thadeu-s-clothes",
+  "pt": "roupas-de-thadeu"
+ },
+ "quest:q120": {
+  "en": "hidden-desert-ingot",
+  "pt": "lingote-oculto-do-deserto"
+ },
+ "quest:q1203": {
+  "en": "farm-saver",
+  "pt": "salvador-da-fazenda"
+ },
+ "quest:q1205": {
+  "en": "friend-of-a-witch",
+  "pt": "amigo-de-uma-bruxa"
+ },
+ "quest:q1206": {
+  "en": "church-investigated",
+  "pt": "igreja-investigada"
+ },
+ "quest:q1209": {
+  "en": "loke-avenger",
+  "pt": "vingador-de-loke"
+ },
+ "quest:q121": {
+  "en": "dead-man-s-ingot-q121",
+  "pt": "lingote-do-homem-morto-q121"
+ },
+ "quest:q1210": {
+  "en": "balder-hunt",
+  "pt": "cacada-de-balder"
+ },
+ "quest:q1219": {
+  "en": "a-blessed-reward",
+  "pt": "uma-recompensa-abencoada"
+ },
+ "quest:q122": {
+  "en": "tomb-s-ingot",
+  "pt": "lingote-da-tumba"
+ },
+ "quest:q1224": {
+  "en": "a-ghost-meeting",
+  "pt": "encontro-com-um-fantasma"
+ },
+ "quest:q1226": {
+  "en": "terrible-service",
+  "pt": "servico-terrivel"
+ },
+ "quest:q1229": {
+  "en": "perry-s-school-gift",
+  "pt": "presente-escolar-de-perry"
+ },
+ "quest:q123": {
+  "en": "rock-core-one",
+  "pt": "nucleo-de-pedra-um"
+ },
+ "quest:q1230": {
+  "en": "vee-s-school-gift",
+  "pt": "presente-escolar-de-vee"
+ },
+ "quest:q1231": {
+  "en": "dee-s-school-gift",
+  "pt": "presente-escolar-de-dee"
+ },
+ "quest:q1235": {
+  "en": "teacher-s-joy",
+  "pt": "alegria-da-professora"
+ },
+ "quest:q1238": {
+  "en": "tooth-and-glory",
+  "pt": "dente-e-gloria"
+ },
+ "quest:q124": {
+  "en": "rock-core-key",
+  "pt": "chave-do-nucleo-de-pedra"
+ },
+ "quest:q1244": {
+  "en": "journeymen",
+  "pt": "jornaleiros"
+ },
+ "quest:q125": {
+  "en": "rock-core-three",
+  "pt": "nucleo-de-pedra-tres"
+ },
+ "quest:q1252": {
+  "en": "helped-in-heat",
+  "pt": "ajudou-no-calor"
+ },
+ "quest:q126": {
+  "en": "vecan-s-hidden-ingot",
+  "pt": "lingote-escondido-de-vecan"
+ },
+ "quest:q1269": {
+  "en": "tink-s-reward",
+  "pt": "recompensa-de-tink"
+ },
+ "quest:q127": {
+  "en": "rock-core-four",
+  "pt": "nucleo-de-pedra-quatro"
+ },
+ "quest:q1274": {
+  "en": "sushi-to-sushi",
+  "pt": "sushi-para-sushi"
+ },
+ "quest:q1276": {
+  "en": "gourmand-s-cat",
+  "pt": "gato-do-gourmet"
+ },
+ "quest:q1277": {
+  "en": "aurora-s-gift",
+  "pt": "presente-de-aurora"
+ },
+ "quest:q1279": {
+  "en": "general-s-cat",
+  "pt": "gato-do-general"
+ },
+ "quest:q128": {
+  "en": "rock-core-five",
+  "pt": "nucleo-de-pedra-cinco"
+ },
+ "quest:q1282": {
+  "en": "baron-s-cat",
+  "pt": "o-gato-do-barao"
+ },
+ "quest:q1283": {
+  "en": "millen-s-idea",
+  "pt": "ideia-de-millen"
+ },
+ "quest:q1286": {
+  "en": "jon-s-idea",
+  "pt": "ideia-de-jon"
+ },
+ "quest:q1289": {
+  "en": "karmac-s-idea",
+  "pt": "ideia-de-karmac"
+ },
+ "quest:q129": {
+  "en": "rock-core-six",
+  "pt": "nucleo-de-pedra-seis"
+ },
+ "quest:q1296": {
+  "en": "hagar-sample",
+  "pt": "amostra-de-hagar"
+ },
+ "quest:q1297": {
+  "en": "arming-outlaws",
+  "pt": "armando-os-foras-da-lei"
+ },
+ "quest:q13": {
+  "en": "lost-herbs",
+  "pt": "ervas-perdidas"
+ },
+ "quest:q130": {
+  "en": "tower-gem",
+  "pt": "gema-da-torre"
+ },
+ "quest:q1301": {
+  "en": "cooking-for-outlaws",
+  "pt": "cozinhando-para-foras-da-lei"
+ },
+ "quest:q1302": {
+  "en": "feeding-outlaws",
+  "pt": "alimentando-foras-da-lei"
+ },
+ "quest:q131": {
+  "en": "spider-iron-ingot",
+  "pt": "barra-de-ferro-da-aranha"
+ },
+ "quest:q132": {
+  "en": "monastery-cave-ingot",
+  "pt": "lingote-da-caverna-do-monasterio"
+ },
+ "quest:q1321": {
+  "en": "constructing-for-outlaws",
+  "pt": "construindo-para-foras-da-lei"
+ },
+ "quest:q1322": {
+  "en": "gear-for-outlaws",
+  "pt": "equipamento-para-foras-da-lei"
+ },
+ "quest:q133": {
+  "en": "smith-s-iron-ingot",
+  "pt": "lingote-de-ferro-do-ferreiro"
+ },
+ "quest:q134": {
+  "en": "smith-s-knife-part-one",
+  "pt": "faca-do-ferreiro-parte-um"
+ },
+ "quest:q135": {
+  "en": "smith-s-knife-part-one-q135",
+  "pt": "faca-do-ferreiro-parte-um-q135"
+ },
+ "quest:q136": {
+  "en": "spider-mound-ingot",
+  "pt": "lingote-do-monte-das-aranhas"
+ },
+ "quest:q137": {
+  "en": "mausoleum-rat-chest",
+  "pt": "bau-do-rato-do-mausoleu"
+ },
+ "quest:q138": {
+  "en": "labyrinth-chest",
+  "pt": "bau-do-labirinto"
+ },
+ "quest:q139": {
+  "en": "church-tower-chest",
+  "pt": "bau-da-torre-da-igreja"
+ },
+ "quest:q14": {
+  "en": "silver-dagger-chest",
+  "pt": "bau-da-adaga-de-prata"
+ },
+ "quest:q140": {
+  "en": "occult-charm-chest",
+  "pt": "bau-do-amuleto-oculto"
+ },
+ "quest:q141": {
+  "en": "church-final-chest-1",
+  "pt": "bau-final-da-igreja-1"
+ },
+ "quest:q142": {
+  "en": "church-final-chest-2",
+  "pt": "bau-final-da-igreja-2"
+ },
+ "quest:q143": {
+  "en": "ghost-tower-chest",
+  "pt": "bau-da-torre-fantasma"
+ },
+ "quest:q144": {
+  "en": "ghost-cellar-chest",
+  "pt": "bau-da-adega-fantasma"
+ },
+ "quest:q145": {
+  "en": "ghost-ingot-chest",
+  "pt": "bau-do-lingote-fantasma"
+ },
+ "quest:q146": {
+  "en": "heart-of-the-tree",
+  "pt": "coracao-da-arvore"
+ },
+ "quest:q147": {
+  "en": "outlaw-chest",
+  "pt": "bau-dos-fora-da-lei"
+ },
+ "quest:q148": {
+  "en": "ghost-house-chest",
+  "pt": "bau-da-casa-fantasma"
+ },
+ "quest:q149": {
+  "en": "snow-bear-chest",
+  "pt": "bau-do-urso-da-neve"
+ },
+ "quest:q15": {
+  "en": "hidden-black-bag",
+  "pt": "bolsa-preta-escondida"
+ },
+ "quest:q150": {
+  "en": "tomb-bandit-chest",
+  "pt": "bau-dos-bandidos-da-tumba"
+ },
+ "quest:q151": {
+  "en": "tomb-top-chest",
+  "pt": "bau-do-topo-da-tumba"
+ },
+ "quest:q152": {
+  "en": "tomb-pit-ingot",
+  "pt": "lingote-do-poco-da-tumba"
+ },
+ "quest:q153": {
+  "en": "mines-chest",
+  "pt": "bau-das-minas"
+ },
+ "quest:q154": {
+  "en": "mines-deep-reward",
+  "pt": "recompensa-das-profundezas-das-minas"
+ },
+ "quest:q155": {
+  "en": "ritual-dagger-find",
+  "pt": "descoberta-da-adaga-ritual"
+ },
+ "quest:q156": {
+  "en": "gavin-book-chest",
+  "pt": "bau-de-livros-de-gavin"
+ },
+ "quest:q157": {
+  "en": "ship-rat-chest",
+  "pt": "bau-do-rato-do-navio"
+ },
+ "quest:q158": {
+  "en": "spire-pants",
+  "pt": "calcas-da-agulha"
+ },
+ "quest:q159": {
+  "en": "longhouse-ingot",
+  "pt": "lingote-da-casa-longa"
+ },
+ "quest:q16": {
+  "en": "crude-quest",
+  "pt": "missao-rustica"
+ },
+ "quest:q160": {
+  "en": "longhouse-prison-chest",
+  "pt": "bau-da-prisao-da-casa-longa"
+ },
+ "quest:q161": {
+  "en": "spider-ring-chest",
+  "pt": "bau-do-anel-da-aranha"
+ },
+ "quest:q162": {
+  "en": "morrigan-s-reward",
+  "pt": "recompensa-de-morrigan"
+ },
+ "quest:q163": {
+  "en": "frances-stashed-bread",
+  "pt": "pao-escondido-de-frances"
+ },
+ "quest:q164": {
+  "en": "nordha-farm-ingot",
+  "pt": "barra-da-fazenda-de-nordha"
+ },
+ "quest:q165": {
+  "en": "slime-chest",
+  "pt": "bau-de-limo"
+ },
+ "quest:q166": {
+  "en": "guri-s-gear",
+  "pt": "equipamento-de-guri"
+ },
+ "quest:q167": {
+  "en": "reika-s-kitchen-chest",
+  "pt": "bau-da-cozinha-de-reika"
+ },
+ "quest:q168": {
+  "en": "reika-s-reward",
+  "pt": "recompensa-de-reika"
+ },
+ "quest:q169": {
+  "en": "bedroom-quill-chest",
+  "pt": "bau-com-pena-do-quarto"
+ },
+ "quest:q17": {
+  "en": "trident-chest",
+  "pt": "bau-de-trident"
+ },
+ "quest:q170": {
+  "en": "lisa-s-chest",
+  "pt": "bau-de-lisa"
+ },
+ "quest:q171": {
+  "en": "siege-quest",
+  "pt": "missao-do-cerco"
+ },
+ "quest:q172": {
+  "en": "torch-quest-q172",
+  "pt": "missao-da-tocha-q172"
+ },
+ "quest:q173": {
+  "en": "torch-quest-q173",
+  "pt": "missao-da-tocha-q173"
+ },
+ "quest:q174": {
+  "en": "wooden-shield-quest-q174",
+  "pt": "missao-do-escudo-de-madeira-q174"
+ },
+ "quest:q175": {
+  "en": "wooden-shield-quest-q175",
+  "pt": "missao-do-escudo-de-madeira-q175"
+ },
+ "quest:q176": {
+  "en": "rope-quest-q176",
+  "pt": "missao-da-corda-q176"
+ },
+ "quest:q177": {
+  "en": "rope-quest-q177",
+  "pt": "missao-da-corda-q177"
+ },
+ "quest:q178": {
+  "en": "spire-s-backpack",
+  "pt": "mochila-da-agulha"
+ },
+ "quest:q179": {
+  "en": "bandit-stash",
+  "pt": "esconderijo-de-bandidos"
+ },
+ "quest:q18": {
+  "en": "violet-s-reward",
+  "pt": "recompensa-de-violet"
+ },
+ "quest:q180": {
+  "en": "hoder-chest",
+  "pt": "bau-de-hoder"
+ },
+ "quest:q181": {
+  "en": "hidden-mushroom",
+  "pt": "cogumelo-escondido"
+ },
+ "quest:q182": {
+  "en": "repellent-chest",
+  "pt": "bau-do-repelente"
+ },
+ "quest:q183": {
+  "en": "capital-hidden-ingot",
+  "pt": "lingote-oculto-da-capital"
+ },
+ "quest:q184": {
+  "en": "boat-hidden-ingot",
+  "pt": "barra-escondida-do-barco"
+ },
+ "quest:q185": {
+  "en": "tomb-robot-chest",
+  "pt": "bau-do-robo-da-tumba"
+ },
+ "quest:q186": {
+  "en": "stone-hidden-ingot",
+  "pt": "lingote-escondido-na-pedra"
+ },
+ "quest:q187": {
+  "en": "desert-outpost-chest",
+  "pt": "bau-do-posto-do-deserto"
+ },
+ "quest:q188": {
+  "en": "maze-tower-chest",
+  "pt": "bau-da-torre-do-labirinto"
+ },
+ "quest:q189": {
+  "en": "garlic-chest",
+  "pt": "bau-de-alho"
+ },
+ "quest:q19": {
+  "en": "swamp-troll-s-treasure",
+  "pt": "tesouro-do-troll-do-pantano"
+ },
+ "quest:q190": {
+  "en": "darkness-chest",
+  "pt": "bau-da-escuridao"
+ },
+ "quest:q191": {
+  "en": "locked-ship-chest",
+  "pt": "bau-trancado-do-navio"
+ },
+ "quest:q192": {
+  "en": "maze-tower-chest-q192",
+  "pt": "bau-da-torre-do-labirinto-q192"
+ },
+ "quest:q193": {
+  "en": "rot-bone-chest",
+  "pt": "bau-de-ossos-podres"
+ },
+ "quest:q194": {
+  "en": "terror-river-chest",
+  "pt": "bau-do-rio-do-terror"
+ },
+ "quest:q195": {
+  "en": "draught-spider-chest",
+  "pt": "bau-da-aranha-de-draughtwood"
+ },
+ "quest:q196": {
+  "en": "silver-ring-chest",
+  "pt": "bau-do-anel-de-prata"
+ },
+ "quest:q197": {
+  "en": "amanita-chest",
+  "pt": "bau-do-amanita"
+ },
+ "quest:q198": {
+  "en": "bandit-mush-stash",
+  "pt": "esconderijo-de-cogumelos-dos-bandidos"
+ },
+ "quest:q199": {
+  "en": "forest-final-chest",
+  "pt": "bau-final-da-floresta"
+ },
+ "quest:q2": {
+  "en": "seymour-knife-chest",
+  "pt": "bau-da-faca-de-seymour"
+ },
+ "quest:q20": {
+  "en": "lost-aqua-base",
+  "pt": "base-aqua-perdida"
+ },
+ "quest:q200": {
+  "en": "minerva-s-stash",
+  "pt": "esconderijo-de-minerva"
+ },
+ "quest:q201": {
+  "en": "trash-chest",
+  "pt": "bau-do-lixo"
+ },
+ "quest:q202": {
+  "en": "pants-chest",
+  "pt": "bau-de-calcas"
+ },
+ "quest:q203": {
+  "en": "flagellant-s-quest",
+  "pt": "missao-do-flagelante"
+ },
+ "quest:q204": {
+  "en": "blue-mage-chest",
+  "pt": "bau-do-mago-azul"
+ },
+ "quest:q205": {
+  "en": "hidden-manuscript",
+  "pt": "manuscrito-escondido"
+ },
+ "quest:q206": {
+  "en": "port-tower-chest",
+  "pt": "bau-da-torre-do-porto"
+ },
+ "quest:q207": {
+  "en": "temple-hidden-chest",
+  "pt": "bau-escondido-do-templo"
+ },
+ "quest:q208": {
+  "en": "habit-s-quest",
+  "pt": "missao-do-habito"
+ },
+ "quest:q209": {
+  "en": "skalish-quest",
+  "pt": "missao-skalish"
+ },
+ "quest:q21": {
+  "en": "fish-chest",
+  "pt": "bau-de-peixes"
+ },
+ "quest:q210": {
+  "en": "old-amulet-key",
+  "pt": "chave-do-amuleto-antigo"
+ },
+ "quest:q211": {
+  "en": "rune-book-chest",
+  "pt": "bau-do-livro-de-runas"
+ },
+ "quest:q212": {
+  "en": "magic-rune-chest",
+  "pt": "bau-da-runa-magica"
+ },
+ "quest:q213": {
+  "en": "test-dagger-chest",
+  "pt": "bau-da-adaga-de-teste"
+ },
+ "quest:q214": {
+  "en": "gem-chest",
+  "pt": "bau-da-gema"
+ },
+ "quest:q215": {
+  "en": "lava-statue-chest",
+  "pt": "bau-da-estatua-de-lava"
+ },
+ "quest:q216": {
+  "en": "ghost-rune-chest",
+  "pt": "bau-da-runa-fantasma"
+ },
+ "quest:q217": {
+  "en": "ghoul-chest",
+  "pt": "bau-do-carnical"
+ },
+ "quest:q218": {
+  "en": "lava-ingot-chest",
+  "pt": "bau-de-lingote-de-lava"
+ },
+ "quest:q219": {
+  "en": "lava-ruby-chest",
+  "pt": "bau-de-rubi-de-lava"
+ },
+ "quest:q22": {
+  "en": "the-lost-ring",
+  "pt": "o-anel-perdido"
+ },
+ "quest:q220": {
+  "en": "crystal-room-key",
+  "pt": "chave-da-sala-de-cristal"
+ },
+ "quest:q221": {
+  "en": "bushes-chest",
+  "pt": "bau-dos-arbustos"
+ },
+ "quest:q222": {
+  "en": "bridge-bandit-chest",
+  "pt": "bau-dos-bandidos-da-ponte"
+ },
+ "quest:q223": {
+  "en": "digger-deep-chest",
+  "pt": "bau-profundo-dos-diggers"
+ },
+ "quest:q224": {
+  "en": "windmill-chest",
+  "pt": "bau-do-moinho"
+ },
+ "quest:q225": {
+  "en": "pirate-key",
+  "pt": "chave-pirata"
+ },
+ "quest:q226": {
+  "en": "pirate-mace-quest",
+  "pt": "missao-da-maca-pirata"
+ },
+ "quest:q227": {
+  "en": "felix-chest",
+  "pt": "bau-de-felix"
+ },
+ "quest:q228": {
+  "en": "skalsbane-chest",
+  "pt": "bau-de-skalsbane"
+ },
+ "quest:q229": {
+  "en": "zoe-toy",
+  "pt": "brinquedo-de-zoe"
+ },
+ "quest:q23": {
+  "en": "an-evil-book",
+  "pt": "um-livro-maligno"
+ },
+ "quest:q230": {
+  "en": "royal-bridge-ingot",
+  "pt": "lingote-da-ponte-real"
+ },
+ "quest:q231": {
+  "en": "ritual-chest",
+  "pt": "bau-do-ritual"
+ },
+ "quest:q232": {
+  "en": "ritual-chest-q232",
+  "pt": "bau-do-ritual-q232"
+ },
+ "quest:q233": {
+  "en": "aeikz-chest",
+  "pt": "bau-de-aeikz"
+ },
+ "quest:q234": {
+  "en": "jentes-chest",
+  "pt": "bau-de-jentes"
+ },
+ "quest:q235": {
+  "en": "ed-chest",
+  "pt": "bau-de-ed"
+ },
+ "quest:q236": {
+  "en": "worm-chest",
+  "pt": "worm-chest"
+ },
+ "quest:q237": {
+  "en": "impossible-chest",
+  "pt": "impossible-chest"
+ },
+ "quest:q238": {
+  "en": "big-bone-chest",
+  "pt": "big-bone-chest"
+ },
+ "quest:q239": {
+  "en": "desert-bolt-chest",
+  "pt": "desert-bolt-chest"
+ },
+ "quest:q24": {
+  "en": "wooden-shield-quest",
+  "pt": "missao-do-escudo-de-madeira"
+ },
+ "quest:q240": {
+  "en": "hell-arrow-chest",
+  "pt": "hell-arrow-chest"
+ },
+ "quest:q25": {
+  "en": "marshes-chest",
+  "pt": "bau-dos-pantanos"
+ },
+ "quest:q26": {
+  "en": "east-trolls-quest",
+  "pt": "missao-dos-trolls-do-leste"
+ },
+ "quest:q27": {
+  "en": "regen-ring-quest",
+  "pt": "missao-do-anel-de-regeneracao"
+ },
+ "quest:q28": {
+  "en": "cheese-chest",
+  "pt": "bau-de-queijo"
+ },
+ "quest:q29": {
+  "en": "occultist-tower-quest",
+  "pt": "missao-da-torre-dos-ocultistas"
+ },
+ "quest:q3": {
+  "en": "wounded-bag-chest",
+  "pt": "bau-da-bolsa-do-ferido"
+ },
+ "quest:q30": {
+  "en": "bandit-mine-chest",
+  "pt": "bau-da-mina-dos-bandidos"
+ },
+ "quest:q31": {
+  "en": "abandoned-outpost-quest",
+  "pt": "missao-do-posto-abandonado"
+ },
+ "quest:q32": {
+  "en": "cloth-vest-chest",
+  "pt": "bau-do-colete-de-pano"
+ },
+ "quest:q33": {
+  "en": "branor-s-bread",
+  "pt": "pao-de-branor"
+ },
+ "quest:q34": {
+  "en": "bascinet-quest",
+  "pt": "missao-do-bacinete"
+ },
+ "quest:q35": {
+  "en": "green-bandit-quest",
+  "pt": "missao-do-bandido-verde"
+ },
+ "quest:q36": {
+  "en": "onion-chest",
+  "pt": "bau-de-cebolas"
+ },
+ "quest:q37": {
+  "en": "lantern-quest",
+  "pt": "missao-da-lanterna"
+ },
+ "quest:q38": {
+  "en": "hidden-gold-chest",
+  "pt": "bau-de-ouro-oculto"
+ },
+ "quest:q39": {
+  "en": "sewer-bloody-chest",
+  "pt": "bau-sangrento-do-esgoto"
+ },
+ "quest:q4": {
+  "en": "blue-ink-quest",
+  "pt": "missao-da-tinta-azul"
+ },
+ "quest:q40": {
+  "en": "brass-plate-quest",
+  "pt": "missao-da-placa-de-latao"
+ },
+ "quest:q41": {
+  "en": "dark-robe-quest",
+  "pt": "missao-da-tunica-sombria"
+ },
+ "quest:q42": {
+  "en": "dark-hood-quest",
+  "pt": "missao-do-capuz-sombrio"
+ },
+ "quest:q43": {
+  "en": "the-final-clue",
+  "pt": "a-pista-final"
+ },
+ "quest:q44": {
+  "en": "wooden-staff-quest",
+  "pt": "missao-do-cajado-de-madeira"
+ },
+ "quest:q45": {
+  "en": "amphitere-quest",
+  "pt": "missao-do-amphitere"
+ },
+ "quest:q46": {
+  "en": "orc-camp-quest",
+  "pt": "missao-do-acampamento-orc"
+ },
+ "quest:q47": {
+  "en": "torch-quest",
+  "pt": "missao-da-tocha"
+ },
+ "quest:q48": {
+  "en": "old-shield-quest",
+  "pt": "missao-do-escudo-antigo"
+ },
+ "quest:q49": {
+  "en": "minotaur-quest",
+  "pt": "missao-do-minotauro"
+ },
+ "quest:q5": {
+  "en": "a-cross-clue",
+  "pt": "uma-pista-em-cruz"
+ },
+ "quest:q50": {
+  "en": "gloves-quest",
+  "pt": "missao-das-luvas"
+ },
+ "quest:q51": {
+  "en": "sentinel-s-reward",
+  "pt": "recompensa-dos-sentinelas"
+ },
+ "quest:q52": {
+  "en": "the-stolen-book",
+  "pt": "o-livro-roubado"
+ },
+ "quest:q53": {
+  "en": "lost-flasks",
+  "pt": "frascos-perdidos"
+ },
+ "quest:q54": {
+  "en": "whiterat-chest",
+  "pt": "bau-dos-whiterats"
+ },
+ "quest:q55": {
+  "en": "king-s-dagger-reward",
+  "pt": "recompensa-adaga-do-rei"
+ },
+ "quest:q56": {
+  "en": "king-s-gold-reward",
+  "pt": "recompensa-ouro-do-rei"
+ },
+ "quest:q57": {
+  "en": "jungle-almanac",
+  "pt": "almanaque-da-selva"
+ },
+ "quest:q58": {
+  "en": "barrel-pants",
+  "pt": "calcas-do-barril"
+ },
+ "quest:q59": {
+  "en": "old-backpack-quest",
+  "pt": "missao-da-mochila-velha"
+ },
+ "quest:q6": {
+  "en": "wheat-in-the-barrel",
+  "pt": "trigo-no-barril"
+ },
+ "quest:q60": {
+  "en": "crystal-staff-quest",
+  "pt": "missao-do-cajado-de-cristal"
+ },
+ "quest:q61": {
+  "en": "rope-quest",
+  "pt": "missao-da-corda"
+ },
+ "quest:q62": {
+  "en": "moldy-chest",
+  "pt": "bau-mofado"
+ },
+ "quest:q63": {
+  "en": "the-challenge-reward",
+  "pt": "recompensa-do-desafio"
+ },
+ "quest:q64": {
+  "en": "magic-orb-quest",
+  "pt": "missao-do-orbe-magico"
+ },
+ "quest:q65": {
+  "en": "wreck-ship-chest",
+  "pt": "bau-do-navio-naufragado"
+ },
+ "quest:q66": {
+  "en": "wreck-ship-key",
+  "pt": "chave-do-navio-naufragado"
+ },
+ "quest:q67": {
+  "en": "dragonfruit-quest",
+  "pt": "missao-da-fruta-do-dragao"
+ },
+ "quest:q68": {
+  "en": "arrow-chest",
+  "pt": "bau-de-flechas"
+ },
+ "quest:q69": {
+  "en": "secret-puzzle-reward",
+  "pt": "recompensa-do-enigma-secreto"
+ },
+ "quest:q7": {
+  "en": "a-lunch-found",
+  "pt": "um-almoco-encontrado"
+ },
+ "quest:q70": {
+  "en": "apples-chest",
+  "pt": "bau-de-macas"
+ },
+ "quest:q71": {
+  "en": "brass-legs-quest",
+  "pt": "missao-das-pernas-de-bronze"
+ },
+ "quest:q72": {
+  "en": "prison-key",
+  "pt": "chave-da-prisao"
+ },
+ "quest:q73": {
+  "en": "ghost-key",
+  "pt": "chave-fantasma"
+ },
+ "quest:q74": {
+  "en": "eofor-s-meat",
+  "pt": "carne-do-eofor"
+ },
+ "quest:q75": {
+  "en": "potato-key",
+  "pt": "chave-da-batata"
+ },
+ "quest:q76": {
+  "en": "euler-s-pants",
+  "pt": "calcas-do-euler"
+ },
+ "quest:q77": {
+  "en": "the-discombobulator",
+  "pt": "o-descombubolador"
+ },
+ "quest:q78": {
+  "en": "blueberry-key",
+  "pt": "chave-de-mirtilo"
+ },
+ "quest:q79": {
+  "en": "my-first-quest",
+  "pt": "minha-primeira-missao"
+ },
+ "quest:q8": {
+  "en": "outlaw-tower-quest",
+  "pt": "missao-da-torre-do-fora-da-lei"
+ },
+ "quest:q80": {
+  "en": "crystal-ring-quest",
+  "pt": "missao-do-anel-de-cristal"
+ },
+ "quest:q81": {
+  "en": "edmund-s-cottage",
+  "pt": "cabana-de-edmund"
+ },
+ "quest:q82": {
+  "en": "the-ring-of-fire",
+  "pt": "o-anel-de-fogo"
+ },
+ "quest:q83": {
+  "en": "pestilence-tower-chest",
+  "pt": "bau-da-torre-de-pestilence"
+ },
+ "quest:q84": {
+  "en": "skull-ring-chest",
+  "pt": "bau-do-anel-de-caveira"
+ },
+ "quest:q85": {
+  "en": "candle-chest",
+  "pt": "bau-da-vela"
+ },
+ "quest:q86": {
+  "en": "ironsword-quest",
+  "pt": "missao-da-espada-de-ferro"
+ },
+ "quest:q87": {
+  "en": "spider-key",
+  "pt": "chave-da-aranha"
+ },
+ "quest:q88": {
+  "en": "sailor-boots-quest",
+  "pt": "missao-das-botas-de-marinheiro"
+ },
+ "quest:q89": {
+  "en": "maxwell-s-backpack",
+  "pt": "mochila-de-maxwell"
+ },
+ "quest:q9": {
+  "en": "bread-chest",
+  "pt": "bau-de-pao"
+ },
+ "quest:q90": {
+  "en": "sewer-abandoned-chest",
+  "pt": "bau-abandonado-do-esgoto"
+ },
+ "quest:q91": {
+  "en": "silver-ring-quest",
+  "pt": "missao-do-anel-de-prata"
+ },
+ "quest:q92": {
+  "en": "smith-book-quest",
+  "pt": "missao-do-livro-do-ferreiro"
+ },
+ "quest:q93": {
+  "en": "hidden-market-chest",
+  "pt": "bau-oculto-do-mercado"
+ },
+ "quest:q94": {
+  "en": "orc-ritual-ingot",
+  "pt": "lingote-do-ritual-orc"
+ },
+ "quest:q95": {
+  "en": "orc-ritual-potions",
+  "pt": "pocoes-do-ritual-orc"
+ },
+ "quest:q96": {
+  "en": "occultist-gloves",
+  "pt": "luvas-dos-ocultistas"
+ },
+ "quest:q97": {
+  "en": "occultist-ritual-ingot",
+  "pt": "lingote-do-ritual-ocultista"
+ },
+ "quest:q98": {
+  "en": "canyon-ingot",
+  "pt": "lingote-do-desfiladeiro"
+ },
+ "quest:q99": {
+  "en": "dead-man-s-ingot",
+  "pt": "lingote-do-homem-morto"
+ },
+ "spell:s1": {
+  "en": "light",
+  "pt": "luz"
+ },
+ "spell:s101": {
+  "en": "summon-death",
+  "pt": "invocar-morte"
+ },
+ "spell:s102": {
+  "en": "summon-nature",
+  "pt": "invocar-natureza"
+ },
+ "spell:s103": {
+  "en": "fire-gale",
+  "pt": "vendaval-de-fogo"
+ },
+ "spell:s104": {
+  "en": "surge",
+  "pt": "impeto"
+ },
+ "spell:s105": {
+  "en": "water-wave",
+  "pt": "onda-d-agua"
+ },
+ "spell:s106": {
+  "en": "cleanse",
+  "pt": "purificar"
+ },
+ "spell:s107": {
+  "en": "conjure-rope",
+  "pt": "conjurar-corda"
+ },
+ "spell:s108": {
+  "en": "blink",
+  "pt": "piscar"
+ },
+ "spell:s117": {
+  "en": "summon-rat",
+  "pt": "invocar-rato"
+ },
+ "spell:s144": {
+  "en": "summon-wisp",
+  "pt": "summon-wisp"
+ },
+ "spell:s15": {
+  "en": "fierce-thrust",
+  "pt": "estocada-feroz"
+ },
+ "spell:s16": {
+  "en": "conjure-fire",
+  "pt": "conjurar-fogo"
+ },
+ "spell:s17": {
+  "en": "precise-shot",
+  "pt": "tiro-preciso"
+ },
+ "spell:s18": {
+  "en": "energy-bolt",
+  "pt": "raio-de-energia"
+ },
+ "spell:s19": {
+  "en": "berserk",
+  "pt": "furia"
+ },
+ "spell:s2": {
+  "en": "fireball",
+  "pt": "bola-de-fogo"
+ },
+ "spell:s20": {
+  "en": "crying-arrow",
+  "pt": "flecha-chorosa"
+ },
+ "spell:s21": {
+  "en": "quick-attack",
+  "pt": "ataque-rapido"
+ },
+ "spell:s22": {
+  "en": "lightning",
+  "pt": "relampago"
+ },
+ "spell:s23": {
+  "en": "charge",
+  "pt": "investida"
+ },
+ "spell:s24": {
+  "en": "starlight",
+  "pt": "starlight"
+ },
+ "spell:s25": {
+  "en": "ground-stand",
+  "pt": "posicao-firme"
+ },
+ "spell:s26": {
+  "en": "find-person",
+  "pt": "encontrar-pessoa"
+ },
+ "spell:s27": {
+  "en": "adjure",
+  "pt": "adjurar"
+ },
+ "spell:s3": {
+  "en": "magic-wall",
+  "pt": "parede-magica"
+ },
+ "spell:s4": {
+  "en": "heal",
+  "pt": "curar"
+ },
+ "spell:s43": {
+  "en": "haste",
+  "pt": "pressa"
+ },
+ "spell:s44": {
+  "en": "light-missile",
+  "pt": "missil-de-luz"
+ },
+ "spell:s45": {
+  "en": "slow",
+  "pt": "lentidao"
+ },
+ "spell:s46": {
+  "en": "rock-throw",
+  "pt": "arremesso-de-pedra"
+ },
+ "spell:s48": {
+  "en": "holy",
+  "pt": "sagrado"
+ },
+ "spell:s49": {
+  "en": "taunt",
+  "pt": "provocar"
+ },
+ "spell:s5": {
+  "en": "water-pillar",
+  "pt": "pilar-de-agua"
+ },
+ "spell:s50": {
+  "en": "conjure-arrow",
+  "pt": "conjurar-flecha"
+ },
+ "spell:s55": {
+  "en": "ice-berserk",
+  "pt": "furia-gelida"
+ },
+ "spell:s6": {
+  "en": "energy-hull",
+  "pt": "casco-de-energia"
+ },
+ "spell:s61": {
+  "en": "mana-shield",
+  "pt": "escudo-de-mana"
+ },
+ "spell:s7": {
+  "en": "dash",
+  "pt": "disparada"
+ },
+ "spell:s70": {
+  "en": "thrash",
+  "pt": "investida-s70"
+ },
+ "spell:s78": {
+  "en": "conjure-death",
+  "pt": "conjurar-morte"
+ },
+ "spell:s79": {
+  "en": "vampiric-bite",
+  "pt": "mordida-vampirica"
+ },
+ "spell:s8": {
+  "en": "magic-growth",
+  "pt": "crescimento-magico"
+ },
+ "spell:s80": {
+  "en": "dark-beam",
+  "pt": "dark-beam"
+ },
+ "spell:s85": {
+  "en": "windfall",
+  "pt": "dadiva"
+ },
+ "spell:s9": {
+  "en": "shield-block",
+  "pt": "bloqueio-de-escudo"
+ }
+}
