@@ -38,6 +38,15 @@ const shipped = (k: EntityKind) => SHIPPED_KINDS.includes(k);
           <a href={alternates[l]} hreflang={HREFLANG[l]} lang={HREFLANG[l]} aria-current={l === lang ? "true" : undefined} title={ui(l).readIn}>{ui(l).langShort}</a>
         ))}
       </nav>
+      {/* phones: one button with the current language, opening the list of all of them (room for any number) */}
+      <details class="lang-pick">
+        <summary aria-label={t.langSwitchLabel}><span>{t.langShort}</span><Icon name="chevron" size={14} /></summary>
+        <ul>
+          {LANGS.map((l) => (
+            <li><a href={alternates[l]} hreflang={HREFLANG[l]} lang={HREFLANG[l]} aria-current={l === lang ? "true" : undefined}><b>{ui(l).langShort}</b>{ui(l).langName}</a></li>
+          ))}
+        </ul>
+      </details>
       <button class="icon-btn theme-toggle" type="button" data-theme-toggle data-to-dark={t.themeToDark} data-to-light={t.themeToLight} aria-label={t.themeToLight}>
         <span class="moon"><Icon name="moon" /></span><span class="sun"><Icon name="sun" /></span>
       </button>
@@ -124,6 +133,20 @@ const shipped = (k: EntityKind) => SHIPPED_KINDS.includes(k);
   .lang a { display: grid; place-items: center; padding: 0 8px; border-radius: var(--r-s); font: 800 0.75rem / 1 var(--font-body); letter-spacing: 0.05em; color: var(--text-muted); text-decoration: none; }
   .lang a:hover { color: var(--text); background: var(--hover-strong); }
   .lang a[aria-current="true"] { background: var(--accent); color: var(--on-accent); }
+  .lang-pick { display: none; position: relative; }
+  .lang-pick summary { list-style: none; display: flex; align-items: center; gap: 4px; height: 36px; padding: 0 8px; border: var(--bw) solid var(--border);
+    border-radius: var(--r-m); background: var(--surface); box-shadow: var(--shadow-1); cursor: pointer; font: 800 0.75rem / 1 var(--font-body); letter-spacing: 0.05em; color: var(--heading); }
+  .lang-pick summary::-webkit-details-marker { display: none; }
+  .lang-pick[open] summary { background: var(--surface-2); }
+  .lang-pick summary :global(.icon) { transform: rotate(90deg); transition: transform 0.15s; }
+  .lang-pick[open] summary :global(.icon) { transform: rotate(-90deg); }
+  @media (prefers-reduced-motion: reduce) { .lang-pick summary :global(.icon) { transition: none; } }
+  .lang-pick ul { position: absolute; right: 0; top: calc(100% + 6px); z-index: 60; min-width: 170px; list-style: none; margin: 0; padding: 6px;
+    background: var(--popover-bg); border: var(--bw) solid var(--hard); border-radius: var(--r-m); box-shadow: var(--shadow-2); }
+  .lang-pick a { display: flex; align-items: center; gap: 10px; padding: 10px; border-radius: var(--r-s); color: var(--text); text-decoration: none; font-weight: 600; }
+  .lang-pick a b { min-width: 2em; font-size: 0.75rem; letter-spacing: 0.05em; color: var(--text-muted); }
+  .lang-pick a[aria-current="true"] { background: var(--accent); color: var(--on-accent); }
+  .lang-pick a[aria-current="true"] b { color: var(--on-accent); }
 
   .theme-toggle .sun, :global(:root[data-theme="light"]) .theme-toggle .moon { display: none; }
   :global(:root[data-theme="light"]) .theme-toggle .sun { display: contents; }
@@ -146,8 +169,8 @@ const shipped = (k: EntityKind) => SHIPPED_KINDS.includes(k);
     .brand :global(.pixel-art) { --size: 28px !important; }
     .brand-name { font-size: 1.1875rem; }
     .search-trigger, .icon-btn { width: 36px; height: 36px; padding: 0; justify-content: center; }
-    .lang { height: 36px; }
-    .lang a { padding: 0 6px; }
+    .lang { display: none; }
+    .lang-pick { display: block; }
   }
   @media (max-width: 359px) { .brand-name small { display: none; } }
 </style>
