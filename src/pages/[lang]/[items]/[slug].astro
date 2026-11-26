@@ -581,6 +581,10 @@ const jsonLd = [{
   :global(#drops .end) { display: grid; grid-template-columns: 24px 2.5rem 7.75rem; align-items: center; justify-items: end; gap: 10px; flex-wrap: nowrap; }
   :global(#drops .end .tier) { justify-self: stretch; }
   .qslot { display: inline-grid; place-items: center; width: 24px; }
+  @media (max-width: 639px) {
+    :global(#drops .end) { display: flex; gap: 10px; }
+    .qslot:empty { display: none; }
+  }
 
   .dq, .forge { margin-top: var(--s-5); }
   .dq h3, .forge h3 { margin-bottom: var(--s-2); font: 700 var(--fs-md) / 1.2 var(--font-body); }
@@ -676,7 +680,7 @@ const jsonLd = [{
   .rfill { display: block; height: 100%; border-radius: 3px; background: var(--sky); }
   .rfill.best { background: var(--sun); }
   .smeta { grid-area: meta; display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; }
-  .rtext { font-size: var(--fs-xs); color: var(--text-muted); }
+  .rtext { display: inline-flex; align-items: center; gap: 4px; font-size: var(--fs-xs); color: var(--text-muted); }
   .rtext :global(.gicon) { vertical-align: -2px; }
   .takes { display: inline-flex; align-items: center; gap: 4px; padding: 1px 7px 1px 3px; border-radius: 999px; font-size: var(--fs-xs); font-weight: 700;
     color: var(--danger); border: 1px solid var(--danger); }

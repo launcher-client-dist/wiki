@@ -14,4 +14,12 @@
   .sub { font-size: var(--fs-xs); color: var(--text-muted); display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: center; }
   .end { display: inline-flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 8px; font-size: var(--fs-sm); color: var(--text-muted); }
   .end :global(.num) { color: var(--heading); font-weight: 700; }
+  /* one shape per list (layout rules): on a wide row the text wraps inside and the numbers stay at the right edge; on a
+     narrow one the numbers always take their own line, left-aligned (never right on one row and under on the next) */
+  @media (min-width: 640px) {
+    .lrow { flex-wrap: nowrap; }
+    .main { flex: 1 1 auto; }
+    .end { flex: none; }
+  }
+  @media (max-width: 639px) { .end { flex-basis: 100%; justify-content: flex-start; } }
 </style>
