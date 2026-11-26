@@ -17,17 +17,18 @@ interface Props {
 const { title, count, icon, gicon, note, id } = Astro.props;
 ---
 <section class="lpanel" id={id} data-section={id}>
-  <h3>{gicon ? <span class="gi"><GameIcon name={gicon} fit={24} /></span> : icon && <Icon name={icon} size={18} />}<span>{title}</span>{count !== undefined && <span class="n">{count}</span>}</h3>
+  <h3>{gicon ? <span class="gi"><GameIcon name={gicon} fit={27} /></span> : icon && <Icon name={icon} size={18} />}<span>{title}</span>{count !== undefined && <span class="n">{count}</span>}</h3>
   {note && <p class="note">{note}</p>}
   <ul><slot /></ul>
 </section>
 <style>
-  .lpanel { background: var(--card-bg); border: var(--bw) solid var(--hard); border-radius: var(--r-l); box-shadow: var(--shadow-1); overflow: hidden; }
-  h3 { display: flex; gap: 8px; align-items: center; margin: 0; padding: 12px 14px; font: 700 var(--fs-md) / 1.2 var(--font-body); color: var(--heading);
-    background: var(--surface-2); border-bottom: var(--bw) solid var(--hard); text-shadow: none; }
-  h3 :global(.icon) { color: var(--sun); }
-  .gi { display: inline-grid; place-items: center; width: 28px; height: 28px; border-radius: 6px; background: var(--hard); }
+  /* Codex: a section, not a box: a heading with a thin divider, the rows below */
+  .lpanel { min-width: 0; }
+  h3 { display: flex; gap: 10px; align-items: center; margin: 0; padding: 0 0 10px; font: 700 var(--fs-md) / 1.2 var(--font-body); color: var(--heading);
+    border-bottom: 1px solid var(--row-border); text-shadow: none; }
+  h3 :global(.icon) { color: var(--accent-text); }
+  .gi { display: inline-grid; place-items: center; width: 32px; height: 32px; border-radius: 8px; background: var(--well); }
   .n { font: 600 var(--fs-xs) / 1 var(--font-num); color: var(--text-muted); }
-  .note { margin: 0; padding: 10px 14px 0; font-size: var(--fs-sm); color: var(--text-muted); }
+  .note { margin: 0; padding: 10px 0 0; font-size: var(--fs-sm); color: var(--text-muted); }
   ul { list-style: none; margin: 0; padding: 4px 0; }
 </style>

@@ -21,11 +21,12 @@ const { title = t.spoilerDefault } = Astro.props;
   <div class="body"><slot /></div>
 </details>
 <style>
-  .spoiler { border-radius: var(--r-l); border: var(--bw) dashed var(--callout-warn); background: var(--surface); overflow: hidden; }
+  .spoiler { border-radius: var(--r-l); border: var(--bw) dashed color-mix(in srgb, var(--callout-warn) 55%, var(--border)); background: var(--surface); overflow: hidden; }
   summary { list-style: none; display: flex; align-items: center; gap: 10px; padding: 14px 16px; cursor: pointer; font-weight: 700; color: var(--heading); }
   summary::-webkit-details-marker { display: none; }
   summary :global(.icon) { color: var(--callout-warn); }
-  .hint { margin-left: auto; font-size: var(--fs-sm); font-weight: 500; color: var(--text-muted); }
+  .title { min-width: 0; }
+  .hint { margin-left: auto; flex-shrink: 0; white-space: nowrap; font-size: var(--fs-sm); font-weight: 500; color: var(--text-muted); }
   .spoiler:not([open]) :global(.open-icon), .spoiler[open] :global(.closed-icon),
   .spoiler:not([open]) .opened, .spoiler[open] .closed { display: none; }
   .spoiler[open] { border-style: solid; }

@@ -271,28 +271,28 @@ const strings = { count: t.tableCount, countAll: t.tableCountAll };
 
   .filters { display: grid; gap: 10px; margin-bottom: var(--s-3); }
   .fgroup { display: grid; grid-template-columns: 86px minmax(0, 1fr); gap: 10px; align-items: center; }
-  .flabel { font: 800 0.6875rem / 1.2 var(--font-body); letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-faint); }
+  .flabel { font: 700 0.6875rem / 1.2 var(--font-body); letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-faint); }
   .chips { display: flex; gap: 6px; flex-wrap: wrap; padding-bottom: 4px; }
   @media (max-width: 719px) { .chips { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; padding: 2px 2px 6px; } }
 
   .vnote { grid-column: 2; margin: -4px 0 0; font-size: var(--fs-xs); color: var(--text-muted); }
   .range { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
   .range select, .range input { height: 36px; border-radius: var(--r-m); border: var(--bw) solid var(--border); background: var(--input-bg); color: var(--text);
-    font: 500 var(--fs-sm) / 1 var(--font-body); padding: 0 10px; box-shadow: var(--shadow-1); }
+    font: 500 var(--fs-sm) / 1 var(--font-body); padding: 0 10px; }
   .range input { width: 84px; }
   .range select:focus, .range input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--focus-ring); }
   .seg .chip { display: inline-flex; align-items: center; gap: 6px; height: 32px; padding: 0 12px; border-radius: var(--r-pill); border: var(--bw) solid var(--border);
-    background: var(--surface); color: var(--text); font: 600 var(--fs-sm) / 1 var(--font-body); cursor: pointer; box-shadow: var(--shadow-1); white-space: nowrap; }
-  .seg .chip:hover { background: var(--surface-2); }
+    background: var(--surface); color: var(--text); font: 600 var(--fs-sm) / 1 var(--font-body); cursor: pointer; white-space: nowrap; transition: background var(--t-fast), border-color var(--t-fast); }
+  .seg .chip:hover { background: var(--surface-2); border-color: var(--border-strong); }
   tbody :global(.neg) { color: var(--danger); }
-  .seg :global(.chip[aria-pressed="true"]) { background: var(--sun); color: var(--on-sun); border-color: var(--hard); }
+  .seg :global(.chip[aria-pressed="true"]) { background: var(--accent); color: var(--on-accent); border-color: transparent; }
   .status { display: flex; justify-content: space-between; align-items: center; gap: 10px; min-height: 30px; margin-bottom: 8px; font-size: var(--fs-sm); color: var(--text-muted); }
   .clear, .empty-btn { background: none; border: 0; padding: 0; color: var(--link); font: inherit; font-weight: 600; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
 
-  .frame { border: var(--bw) solid var(--hard); border-radius: var(--r-l); background: var(--card-bg); box-shadow: var(--shadow-2); overflow: clip; }
+  .frame { border: var(--bw) solid var(--border); border-radius: var(--r-l); background: var(--card-bg); box-shadow: var(--shadow-1); overflow: clip; }
   table { width: 100%; border-collapse: collapse; font-size: 0.9375rem; }
   thead th { position: sticky; top: var(--header-h); z-index: 2; background: var(--surface-2); padding: 0; text-align: left;
-    font: 700 var(--fs-sm) / 1.15 var(--font-body); color: var(--text-muted); border-bottom: var(--bw) solid var(--hard); vertical-align: bottom; }
+    font: 700 var(--fs-sm) / 1.15 var(--font-body); color: var(--text-muted); border-bottom: 1px solid var(--border); vertical-align: bottom; }
   /* a header wraps its words (two lines at most in practice) rather than widen its column: the table fits its frame */
   .th { all: unset; box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: center; gap: 4px 6px; width: 100%; padding: 12px 10px; cursor: pointer; }
   span.th { cursor: default; }
@@ -312,9 +312,9 @@ const strings = { count: t.tableCount, countAll: t.tableCountAll };
   .dt[data-view="grid"] .frame { border: 0; background: none; box-shadow: none; overflow: visible; }
   .dt[data-view="grid"] table, .dt[data-view="grid"] tbody { display: block; }
   .dt[data-view="grid"] tbody { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr)); }
-  .dt[data-view="grid"] tbody :global(tr) { display: flex; flex-direction: column; gap: 8px; padding: 14px; background: var(--card-bg); border: var(--bw) solid var(--hard);
-    border-radius: var(--r-l); box-shadow: var(--shadow-2); transition: transform var(--t-fast) var(--ease), box-shadow var(--t-fast); }
-  .dt[data-view="grid"] tbody :global(tr:hover) { transform: translateY(var(--lift)); box-shadow: 0 7px 0 var(--hard); }
+  .dt[data-view="grid"] tbody :global(tr) { display: flex; flex-direction: column; gap: 8px; padding: 16px; background: var(--card-bg); border: var(--bw) solid var(--border);
+    border-radius: var(--r-l); box-shadow: var(--shadow-1); transition: transform var(--t-fast) var(--ease), box-shadow var(--t-fast), border-color var(--t-fast); }
+  .dt[data-view="grid"] tbody :global(tr:hover) { transform: translateY(var(--lift)); box-shadow: var(--shadow-2); border-color: var(--border-strong); }
   .dt[data-view="grid"] tbody :global(tr[hidden]) { display: none; }
   .dt[data-view="grid"] tbody :global(td) { display: flex; justify-content: space-between; gap: 8px; padding: 0; border: 0; text-align: left; font-size: var(--fs-sm); }
   .dt[data-view="grid"] tbody :global(td::before) { content: attr(data-label); color: var(--text-muted); font-size: var(--fs-xs); }
@@ -335,6 +335,6 @@ const strings = { count: t.tableCount, countAll: t.tableCountAll };
 
   .empty { text-align: center; padding: var(--s-7) var(--s-5); border: var(--bw) dashed var(--border-strong); border-radius: var(--r-l); color: var(--text-muted); }
   .empty :global(.icon) { color: var(--text-faint); margin: 0 auto 8px; display: block; }
-  .empty-title { margin: 0 0 4px; font: 600 1.375rem / 1.2 var(--font-display); color: var(--heading); }
+  .empty-title { margin: 0 0 4px; font: 700 1.25rem / 1.2 var(--font-body); color: var(--heading); }
   .empty p { margin: 0 0 12px; }
 </style>

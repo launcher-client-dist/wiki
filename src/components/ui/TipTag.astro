@@ -52,20 +52,20 @@ const id = stableId(Astro.request, `tip-${h.toString(36)}`);
 </script>
 <style>
   .tiptag { position: relative; display: inline-flex; }
-  .tt { display: inline-flex; align-items: center; gap: 8px; min-height: 36px; padding: 3px 10px 3px 4px; border-radius: var(--r-m);
-    border: var(--bw) solid var(--hard); background: var(--surface); color: var(--text); font: 700 var(--fs-sm) / 1.1 var(--font-body);
-    box-shadow: 0 2px 0 var(--hard); cursor: help; text-align: left; }
-  .tone-sun .tt { background: var(--sun); color: var(--on-sun); }
-  .small .tt { min-height: 28px; padding: 2px 8px 2px 3px; gap: 6px; font-size: var(--fs-xs); box-shadow: 0 1px 0 var(--hard); }
+  .tt { display: inline-flex; align-items: center; gap: 8px; min-height: 38px; padding: 4px 12px 4px 4px; border-radius: var(--r-m);
+    border: var(--bw) solid var(--border); background: var(--surface-2); color: var(--text); font: 600 var(--fs-sm) / 1.1 var(--font-body);
+    cursor: help; text-align: left; transition: border-color var(--t-fast), background var(--t-fast); }
+  /* Codex: no yellow tag ("sun" is for "the best"): the sun tone reads as the accent outline */
+  .tone-sun .tt { border-color: color-mix(in srgb, var(--accent) 55%, var(--border)); }
+  .small .tt { min-height: 30px; padding: 2px 9px 2px 3px; gap: 6px; font-size: var(--fs-xs); }
   .small .ti { min-width: 22px; min-height: 22px; }
   .small .q { width: 13px; height: 13px; font-size: 9px; }
-  .ti { display: inline-grid; place-items: center; min-width: 28px; min-height: 28px; border-radius: 6px; background: var(--hard); }
+  .ti { display: inline-grid; place-items: center; min-width: 30px; min-height: 30px; border-radius: 6px; background: var(--well); }
   .q { display: inline-grid; place-items: center; width: 16px; height: 16px; border-radius: 50%; font-size: 11px; color: var(--text-muted);
     border: 1px solid currentColor; opacity: 0.8; }
-  .tone-sun .q { color: var(--on-sun); }
-  .tt:hover, .tt:focus-visible, .open .tt { border-color: var(--focus); }
+  .tt:hover, .tt:focus-visible, .open .tt { border-color: var(--focus); background: var(--surface-3); }
   .tip { position: absolute; z-index: 30; left: 0; bottom: calc(100% + 8px); width: max-content; max-width: min(300px, calc(100vw - 32px)); padding: 10px 12px;
-    border-radius: var(--r-m); border: var(--bw) solid var(--hard); background: var(--popover-bg); color: var(--text);
+    border-radius: var(--r-m); border: var(--bw) solid var(--border); background: var(--popover-bg); color: var(--text);
     font: 500 var(--fs-sm) / 1.4 var(--font-body); box-shadow: var(--shadow-2); visibility: hidden; opacity: 0; transition: opacity 0.12s; pointer-events: none; }
   .tiptag:hover .tip, .tt:focus-visible + .tip, .open .tip { visibility: visible; opacity: 1; }
   @media (max-width: 640px) {

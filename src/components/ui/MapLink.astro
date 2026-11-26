@@ -23,7 +23,7 @@ if (url.hostname !== "map.opengea.tech" || url.protocol !== "https:") throw new 
     border: var(--bw) solid var(--hard); box-shadow: var(--shadow-1); transition: transform var(--t-fast) var(--ease), box-shadow var(--t-fast);
   }
   .maplink--button:hover { background: var(--accent-hover); color: var(--on-accent); }
-  .maplink--button:active { transform: translateY(2px); box-shadow: 0 1px 0 var(--hard); }
+  .maplink--button:active { transform: translateY(2px); box-shadow: var(--shadow-1); }
   .maplink--inline { color: var(--link); font-size: var(--fs-sm); }
   .maplink--inline:hover { color: var(--link-hover); text-decoration: underline; }
   .ext { opacity: 0.8; }

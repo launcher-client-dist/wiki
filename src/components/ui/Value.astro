@@ -40,8 +40,9 @@ const tip = { gold: t.goldTip, goldoz: t.goldozTip, weight: t.weightTip, amount:
   .val small { font-size: var(--fs-xs); color: var(--text-muted); font-weight: 600; }
   .val .x { color: var(--text-faint); font-weight: 700; }
   .val--stock, .val--stockUnlimited, .val--blackMarket { padding: 2px 8px 2px 4px; border-radius: var(--r-s); border: 1px solid var(--row-border); background: var(--surface-2); }
-  .val--blackMarket { background: var(--sun); border-color: var(--hard); }
-  .val--blackMarket small { color: var(--on-sun); }
+  /* the black market: rare, not "the best": the accent, dashed */
+  .val--blackMarket { background: color-mix(in srgb, var(--accent) 12%, var(--surface-2)); border: 1px dashed color-mix(in srgb, var(--accent) 60%, var(--border)); }
+  .val--blackMarket small { color: var(--text); }
   .val.best small { color: var(--text); }
   .val.best { padding: 2px 8px 2px 4px; border-radius: var(--r-s); background: color-mix(in srgb, var(--sun) 22%, transparent); box-shadow: inset 0 0 0 1px var(--sun); }
 </style>

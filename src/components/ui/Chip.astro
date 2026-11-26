@@ -25,12 +25,12 @@ const { pressed = false, count, href, filter, value, icon, gicon, plainBecause }
   .chip {
     display: inline-flex; align-items: center; gap: 6px; height: 32px; padding: 0 12px; border-radius: var(--r-pill);
     border: var(--bw) solid var(--border); background: var(--surface); color: var(--text); text-decoration: none;
-    font: 600 var(--fs-sm) / 1 var(--font-body); cursor: pointer; white-space: nowrap; box-shadow: var(--shadow-1);
+    font: 600 var(--fs-sm) / 1 var(--font-body); cursor: pointer; white-space: nowrap;
     transition: transform var(--t-fast) var(--ease), box-shadow var(--t-fast) var(--ease), background var(--t-fast);
   }
   .chip:hover { background: var(--surface-2); color: var(--text); }
-  .chip:active { transform: translateY(2px); box-shadow: 0 1px 0 var(--hard); }
-  .chip[aria-pressed="true"] { background: var(--chip-on-bg); color: var(--chip-on-text); border-color: var(--hard); }
+  .chip:active { transform: translateY(1px); }
+  .chip[aria-pressed="true"] { background: var(--chip-on-bg); color: var(--chip-on-text); border-color: transparent; }
   .count { font: 600 0.6875rem / 1 var(--font-num); color: var(--text-faint); }
   .chip[aria-pressed="true"] .count { color: inherit; opacity: 0.8; }
 </style>

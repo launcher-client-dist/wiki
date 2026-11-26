@@ -1,7 +1,7 @@
 ---
 /**
- * The entity hero of design C: a sky with the grass strip below, the entity's picture on the left (slot "media": a
- * big pixel icon, a render) and its names, text and tags on the right (default slot).
+ * The entity hero (Codex): a calm panel, the entity's picture on the left (slot "media": a big pixel icon, a render)
+ * and its names, text and tags on the right (default slot). No sky, clouds or grass strip.
  */
 interface Props {
   compact?: boolean;
@@ -9,25 +9,17 @@ interface Props {
 const { compact = false } = Astro.props;
 ---
 <header class:list={["banner", { compact }]}>
-  <span class="cloud c1" aria-hidden="true"></span><span class="cloud c2" aria-hidden="true"></span>
   {Astro.slots.has("media") && <div class="media"><slot name="media" /></div>}
   <div class="body"><slot /></div>
 </header>
 <style>
   .banner {
     position: relative; overflow: hidden; isolation: isolate; display: grid; grid-template-columns: 1fr; gap: var(--s-5); align-items: center;
-    padding: var(--s-5) var(--s-5) calc(var(--s-5) + 26px); border: var(--bw) solid var(--hard); border-radius: var(--r-xl); box-shadow: var(--shadow-3);
-    background: linear-gradient(180deg, var(--sky-top) 0%, var(--sky-mid) 60%, var(--sky-bottom) 100%); color: var(--banner-text);
+    padding: var(--s-5); border: var(--bw) solid var(--border); border-radius: var(--r-xl); box-shadow: var(--shadow-2);
+    background: linear-gradient(180deg, var(--sky-top) 0%, var(--sky-bottom) 100%); color: var(--banner-text);
   }
-  .banner::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 22px; z-index: -1;
-    background: repeating-linear-gradient(90deg, var(--grass-a) 0 22px, var(--grass-b) 22px 44px); border-top: var(--bw) solid var(--hard); }
-  @media (min-width: 760px) { .banner { grid-template-columns: auto 1fr; padding: var(--s-6) var(--s-6) calc(var(--s-6) + 22px); gap: var(--s-6); } }
-  .cloud { position: absolute; z-index: -1; width: 48px; height: 18px; background: var(--cloud);
-    box-shadow: 24px -12px 0 0 var(--cloud), 48px 0 0 0 var(--cloud), 24px 0 0 0 var(--cloud); }
-  .c1 { top: 18%; right: 14%; }
-  .c2 { top: 56%; right: 34%; transform: scale(0.7); opacity: 0.8; }
+  @media (min-width: 760px) { .banner { grid-template-columns: auto 1fr; padding: var(--s-6); gap: var(--s-6); } }
   .media { justify-self: center; }
   .body { min-width: 0; display: flex; flex-direction: column; gap: 10px; }
-  .body :global(h1) { color: var(--banner-text); text-shadow: 0 4px 0 var(--hard); }
-  :global(:root[data-theme="light"]) .body :global(h1) { text-shadow: 0 3px 0 #fff; }
+  .body :global(h1) { color: var(--banner-text); text-shadow: none; }
 </style>

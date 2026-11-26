@@ -17,12 +17,13 @@ const { tone = "default", icon, gicon, plainBecause, title } = Astro.props as Ba
 <span class:list={["tag", `tag--${tone}`]} title={title} data-plain={plainBecause}>{icon && <Icon name={icon} size={14} />}{gicon && <GameIcon name={gicon} fit={16} />}<slot /></span>
 <style>
   .tag {
-    display: inline-flex; align-items: center; gap: 6px; padding: 4px 9px; border-radius: var(--r-s);
+    display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: var(--r-pill);
     font: 600 var(--fs-xs) / 1.2 var(--font-body); white-space: nowrap;
     background: var(--tag-bg); color: var(--tag-text); border: var(--bw) solid var(--border);
   }
-  .tag--accent { background: var(--accent); color: var(--on-accent); border-color: var(--hard); }
-  .tag--sun { background: var(--sun); color: var(--on-sun); border-color: var(--hard); font-weight: 800; }
+  .tag--accent { background: var(--accent); color: var(--on-accent); border-color: transparent; }
+  /* Codex: "sun" tags read as the accent (yellow is for "the best" only) */
+  .tag--sun { background: color-mix(in srgb, var(--accent) 16%, var(--tag-bg)); color: var(--text); border-color: color-mix(in srgb, var(--accent) 45%, var(--border)); font-weight: 700; }
   .tag--danger { background: transparent; color: var(--danger); border-color: currentColor; text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.625rem; padding: 3px 6px; }
   .tag--placeholder { background: transparent; color: var(--text-faint); border-style: dashed; }
 </style>

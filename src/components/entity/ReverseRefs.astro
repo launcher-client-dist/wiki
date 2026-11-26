@@ -46,12 +46,13 @@ const amount = (a?: readonly [number, number]) => (a ? (a[0] === a[1] ? `× ${a[
   </div>
 )}
 <style>
-  .reverse { display: grid; gap: var(--s-4); grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); }
-  .group { background: var(--card-bg); border: var(--bw) solid var(--hard); border-radius: var(--r-l); box-shadow: var(--shadow-1); overflow: hidden; }
-  h3 { font: 700 var(--fs-md) / 1 var(--font-body); padding: 12px 14px; background: var(--surface-2); border-bottom: var(--bw) solid var(--hard); display: flex; gap: 8px; align-items: center; }
+  /* Codex: groups are sections (a heading and a thin divider), like ListPanel; no box */
+  .reverse { display: grid; gap: var(--s-6) var(--s-5); grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); }
+  .group { min-width: 0; }
+  h3 { font: 700 var(--fs-md) / 1 var(--font-body); padding: 0 0 10px; border-bottom: 1px solid var(--row-border); display: flex; gap: 8px; align-items: center; }
   .n { font: 600 var(--fs-xs) / 1 var(--font-num); color: var(--text-muted); }
   ul { list-style: none; margin: 0; padding: 4px 0; }
-  li { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 12px; padding: 8px 14px; }
+  li { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 12px; padding: 10px 0; }
   li + li { border-top: 1px solid var(--row-border); }
   .what { display: inline-flex; align-items: center; gap: 8px; }
   .qty { font-size: var(--fs-sm); color: var(--text-muted); font-weight: 600; }

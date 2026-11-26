@@ -29,14 +29,15 @@ const t = ui(lang);
 <style>
   .nf { text-align: center; padding-top: var(--s-8); padding-bottom: var(--s-6); }
   .art { display: flex; align-items: center; justify-content: center; gap: var(--s-4); margin-bottom: var(--s-5); }
-  .digit { font: 700 clamp(5rem, 14vw, 9rem) / 1 var(--font-display); color: var(--heading); text-shadow: 0 6px 0 var(--hard); }
-  .art :global(.pixel-art) { filter: drop-shadow(0 6px 0 var(--hard)); animation: bob 2.4s ease-in-out infinite; }
+  .digit { font: 700 clamp(5rem, 14vw, 9rem) / 1 var(--font-display); color: var(--heading); text-shadow: none; }
+  .art :global(.pixel-art) { filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.35)); animation: bob 2.4s ease-in-out infinite; }
   @keyframes bob { 50% { transform: translateY(-8px); } }
   @media (prefers-reduced-motion: reduce) { .art :global(.pixel-art) { animation: none; } }
   p { max-width: 34rem; margin: var(--s-3) auto var(--s-5); color: var(--text-muted); font-size: var(--fs-lg); }
   .actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
   .btn { display: inline-flex; align-items: center; gap: 8px; height: 46px; padding: 0 18px; border-radius: var(--r-m); font: 700 var(--fs-md) / 1 var(--font-body);
-    text-decoration: none; cursor: pointer; border: var(--bw) solid var(--hard); box-shadow: var(--shadow-1); background: var(--surface); color: var(--text); }
-  .btn.primary { background: var(--accent); color: var(--on-accent); }
-  .btn:active { transform: translateY(2px); box-shadow: 0 1px 0 var(--hard); }
+    text-decoration: none; cursor: pointer; border: var(--bw) solid var(--border-strong); background: var(--surface); color: var(--text); transition: border-color var(--t-fast), background var(--t-fast); }
+  .btn.primary { background: var(--accent); color: var(--on-accent); border-color: transparent; }
+  .btn:hover { border-color: var(--accent); }
+  .btn:active { transform: translateY(1px); }
 </style>

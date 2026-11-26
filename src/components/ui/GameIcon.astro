@@ -3,8 +3,11 @@
  * One of the game's own UI icons (public/ui/<name>.png: the stats, slots, classes, qualities, gold, time...), drawn at
  * an integer scale so its pixels stay sharp. Decorative by default (`alt=""`, next to a visible word); pass `alt` when
  * the icon stands alone.
- *   <GameIcon name="stat-damage" />            2x
+ *   <GameIcon name="stat-damage" />            3x (Codex: 2 asked, one step up)
  *   <GameIcon name="slot-hands" scale={1} />   the 24 px paper-doll slot
+ *
+ * Codex: the small sprites (10 px or less: stats, classes, time, minus...) are drawn one whole step bigger than asked,
+ * so the game's art reads at a glance; `exact` keeps the asked scale. `fit` (a box to fill) is never bumped.
  */
 import sizes from "../../data/ui-icons.json";
 
@@ -13,13 +16,16 @@ interface Props {
   scale?: number;
   /** Fit a box this many px wide and tall: the largest whole scale that fits (overrides `scale`). */
   fit?: number;
+  /** Draw at exactly `scale` (no Codex step up). */
+  exact?: boolean;
   alt?: string;
   class?: string;
 }
-const { name, scale: wanted = 2, fit, alt = "", class: cls } = Astro.props;
+const { name, scale: wanted = 2, fit, exact = false, alt = "", class: cls } = Astro.props;
 const size = (sizes as Record<string, number[]>)[name] as [number, number] | undefined;
 if (!size) throw new Error(`GameIcon: no icon named "${name}" (src/data/ui-icons.json)`);
-const scale = fit ? Math.max(1, Math.floor(fit / Math.max(size[0], size[1]))) : wanted;
+const small = Math.max(size[0], size[1]) <= 10;
+const scale = fit ? Math.max(1, Math.floor(fit / Math.max(size[0], size[1]))) : wanted + (small && !exact ? 1 : 0);
 ---
 <img class:list={["gicon", cls]} src={`/ui/${name}.png`} width={size[0] * scale} height={size[1] * scale} alt={alt} loading="lazy" decoding="async" />
 <style>
