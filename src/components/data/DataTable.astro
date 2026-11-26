@@ -292,18 +292,25 @@ const strings = { count: t.tableCount, countAll: t.tableCountAll };
   .frame { border: var(--bw) solid var(--border); border-radius: var(--r-l); background: var(--card-bg); box-shadow: var(--shadow-1); overflow: clip; }
   table { width: 100%; border-collapse: collapse; font-size: 0.9375rem; }
   thead th { position: sticky; top: var(--header-h); z-index: 2; background: var(--surface-2); padding: 0; text-align: left;
-    font: 700 var(--fs-sm) / 1.15 var(--font-body); color: var(--text-muted); border-bottom: 1px solid var(--border); vertical-align: bottom; }
-  /* a header wraps its words (two lines at most in practice) rather than widen its column: the table fits its frame */
-  .th { all: unset; box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: center; gap: 4px 6px; width: 100%; padding: 12px 10px; cursor: pointer; }
+    font: 700 var(--fs-xs) / 1.2 var(--font-body); color: var(--text-muted); border-bottom: 1px solid var(--border); vertical-align: middle; white-space: nowrap; }
+  /* one line per header (layout rules): the column icon inline before the word, the same side padding as the cells, so a
+     header's edge is its cells' edge (numbers right, text left) */
+  .th { all: unset; box-sizing: border-box; position: relative; display: flex; flex-wrap: nowrap; align-items: center; gap: 6px; width: 100%;
+    padding: 12px var(--cell-x); cursor: pointer; white-space: nowrap; }
   span.th { cursor: default; }
   .th:focus-visible { outline: 3px solid var(--focus); outline-offset: -3px; }
   .a-end .th { justify-content: flex-end; }
   th[aria-sort] { color: var(--heading); }
-  .arrow { font-size: 0.6875rem; opacity: 0.4; }
+  /* the sort arrow in a fixed box (its glyph's width differs by font); on a number column it sits in the side padding,
+     so the word keeps the cells' right edge */
+  .arrow { display: inline-block; flex: none; width: 10px; text-align: center; font-size: 0.6875rem; opacity: 0.4; }
+  .a-end .arrow { position: absolute; right: max(0px, calc((var(--cell-x) - 10px) / 2)); top: 50%; transform: translateY(-50%); }
   th[aria-sort] .arrow { opacity: 1; color: var(--accent-text); }
   tbody :global(tr) { transition: background var(--t-fast); }
   tbody :global(tr:hover) { background: var(--hover); }
-  tbody :global(td) { padding: 10px 14px; border-top: 1px solid var(--row-border); vertical-align: middle; }
+  .dt { --cell-x: 12px; }
+  @media (max-width: 1199px) { .dt { --cell-x: 10px; } }
+  tbody :global(td) { padding: 10px var(--cell-x); border-top: 1px solid var(--row-border); vertical-align: middle; }
   tbody :global(tr:first-child td) { border-top: 0; }
   tbody :global(td.a-end) { text-align: right; }
 
@@ -329,6 +336,8 @@ const strings = { count: t.tableCount, countAll: t.tableCountAll };
     tbody :global(td) { display: flex; justify-content: space-between; gap: 8px; padding: 0; border: 0; font-size: var(--fs-sm); }
     tbody :global(td::before) { content: attr(data-label); color: var(--text-muted); font-size: var(--fs-xs); }
     tbody :global(td.primary) { grid-column: 1 / -1; font-size: 1rem; }
+    /* the last cell takes the whole line: a card never ends on one half-empty cell */
+    tbody :global(td:last-child) { grid-column: 1 / -1; }
     tbody :global(td.primary::before), tbody :global(td.phone-hide) { display: none; }
     .dt[data-view="grid"] tbody { grid-template-columns: 1fr; }
   }

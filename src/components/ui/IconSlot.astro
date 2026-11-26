@@ -12,7 +12,8 @@ interface Props {
   framed?: boolean;
 }
 const { icon, kind, size = 44, framed = true } = Astro.props;
-const inner = Math.round(size * 0.78);
+// the sprite fills the slot up to a thin inset (a 16 px sprite at 2× in a 44 px slot), never a small icon in a big square
+const inner = size - 2 * Math.max(4, Math.round(size * 0.08));
 let w = inner;
 let h = inner;
 if (icon) {

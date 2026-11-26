@@ -84,8 +84,8 @@ const CLASSED: StatKey[] = ["armor", "defense", "attackSpeed", "health", "mana",
             filters={{ category: item.category, slot: item.slots, where: sourceKinds(item) }}>
             <DataCell label={ti.colItem} primary>
               <span class="name">
-                <IconSlot icon={icon} kind="item" size={40} />
-                <span><a href={href} lang={textLang(item.name, lang) === lang ? undefined : HREFLANG.en}>{item.name[lang]}</a>{item.name[altLang(lang)] !== item.name[lang] && <span class="alt">{item.name[altLang(lang)]}</span>}</span>
+                <IconSlot icon={icon} kind="item" size={44} />
+                <span class="ntext"><a href={href} title={item.name[lang]} lang={textLang(item.name, lang) === lang ? undefined : HREFLANG.en}>{item.name[lang]}</a>{item.name[altLang(lang)] !== item.name[lang] && <span class="alt" title={item.name[altLang(lang)]}>{item.name[altLang(lang)]}</span>}</span>
               </span>
             </DataCell>
             <DataCell label={ti.colType} hideOnPhone><span class="type">{item.subtype[lang]}</span></DataCell>
@@ -96,7 +96,7 @@ const CLASSED: StatKey[] = ["armor", "defense", "attackSpeed", "health", "mana",
             <DataCell label={ti.colWeight} align="end" hideOnPhone><span class="num v v-oz">{oz(v.weight, lang)}</span></DataCell>
             <DataCell label={ti.colValue} align="end">{item.value.npcPays ? <span class="num v v-gold">{num(item.value.npcPays, lang)}</span> : <span class="nil">—</span>}</DataCell>
             <DataCell label={ti.colGoldOz} align="end" hideOnPhone>{goldPerOz(item) ? <span class="num v v-gold">{num(goldPerOz(item)!, lang)}</span> : <span class="nil">—</span>}</DataCell>
-            <DataCell label={ti.colWhere}><span class="where">{sourceKinds(item).map((k) => <span class="srcb" title={ti.source[k]}><img src={`/ui/${SOURCE_ICON[k]}.png`} width={UI[SOURCE_ICON[k]!]![0]! * 2} height={UI[SOURCE_ICON[k]!]![1]! * 2} alt={ti.source[k]} class="px" /></span>)}</span></DataCell>
+            <DataCell label={ti.colWhere}><span class="where">{sourceKinds(item).map((k) => <span class="srcb" title={ti.source[k]}><img src={`/ui/${SOURCE_ICON[k]}.png`} width={UI[SOURCE_ICON[k]!]![0]! * 2} height={UI[SOURCE_ICON[k]!]![1]! * 2} alt={ti.source[k]} class="px" /></span>)}{sourceKinds(item).length > 4 && <span class="more" aria-hidden="true" title={sourceKinds(item).slice(3).map((k) => ti.source[k]).join(", ")}>+{sourceKinds(item).length - 3}</span>}</span></DataCell>
           </DataRow>
         );
       })}
@@ -108,13 +108,29 @@ const CLASSED: StatKey[] = ["armor", "defense", "attackSpeed", "health", "mana",
   /* global but under .items-page: no per-element scope attribute on 436 rows */
   .items-page .page-head { display: flex; gap: var(--s-5); align-items: center; margin-bottom: var(--s-6); }
   .items-page .page-head p { margin: 8px 0 0; color: var(--text-muted); max-width: 46rem; font-size: var(--fs-lg); }
-  .items-page .name { display: inline-flex; align-items: center; gap: 10px; min-width: 0; }
-  .items-page .name a { font-weight: 700; color: var(--heading); text-decoration: none; }
+  /* the name cell: the icon and the two names on one centre line; each name one line (a long one ends in "…", whole in
+     its title), so every row of the table has the same height */
+  .items-page .name { display: flex; align-items: center; gap: 12px; min-width: 0; }
+  .items-page .ntext { display: flex; flex-direction: column; justify-content: center; gap: 2px; min-width: 0; }
+  .items-page .name a, .items-page .alt { display: block; }
+  .items-page .name a { font-weight: 700; line-height: 1.25; color: var(--heading); text-decoration: none; }
   .items-page .name a:hover { color: var(--link); text-decoration: underline; }
-  .items-page .alt { display: block; font-size: var(--fs-xs); color: var(--text-faint); }
-  .items-page .type { font-size: var(--fs-sm); color: var(--text-muted); }
+  .items-page .alt { font-size: var(--fs-xs); line-height: 1.25; color: var(--text-faint); }
+  .items-page .type { display: block; max-width: 11.5rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: var(--fs-sm); color: var(--text-muted); }
   .items-page .nil { color: var(--text-faint); }
-  .items-page .where { display: inline-flex; flex-wrap: wrap; gap: 4px; }
+  /* where it comes from: one line, four badges at most; five show three and "+2" (the rest stay for screen readers) */
+  .items-page .where { display: inline-flex; flex-wrap: nowrap; gap: 4px; align-items: center; }
+  .items-page .where:has(.more) .srcb:nth-child(n+4) { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .items-page .more { display: inline-flex; align-items: center; justify-content: center; height: 26px; min-width: 26px; padding: 0 4px; border-radius: 6px;
+    font: 700 var(--fs-xs) / 1 var(--font-num); color: var(--text-muted); border: 1px dashed var(--border-strong); }
+  /* the table view: the name column takes the room left, every other column is as wide as its header or its values */
+  @media (min-width: 720px) {
+    .items-page .dt[data-view="table"] td.primary { width: 100%; max-width: 0; }
+    .items-page .dt[data-view="table"] td:not(.primary) { white-space: nowrap; }
+    .items-page .dt[data-view="table"] .name a, .items-page .dt[data-view="table"] .alt { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    /* the header carries the column's icon: a cell repeats it only in the grid cards (they have no header) */
+    .items-page .dt[data-view="table"] .v::before { display: none; }
+  }
   .items-page .srcb { display: inline-flex; align-items: center; justify-content: center; gap: 4px; height: 26px; min-width: 26px; padding: 0 3px; border-radius: 6px; font-size: var(--fs-xs);
     font-weight: 700; color: var(--text-muted); background: var(--surface-2); border: 1px solid var(--row-border); white-space: nowrap; }
   .items-page .srcb .px { image-rendering: pixelated; }
@@ -125,6 +141,11 @@ const CLASSED: StatKey[] = ["armor", "defense", "attackSpeed", "health", "mana",
   .items-page .v-oz::before { width: 18px; height: 18px; background-image: url(/ui/stat-weight.png); }
   .items-page .count-note { margin-top: var(--s-4); font-size: var(--fs-sm); color: var(--text-faint); }
   /* narrow desktops (1024-1199): the type column goes (its filter chips stay), so every column fits without scrolling */
-  @media (min-width: 720px) and (max-width: 1199px) { .items-page th[data-col="type"], .items-page tbody td:nth-child(2) { display: none; } }
+  /* the list is the one wide page: its own measure, so nine one-line headers and the names fit */
+  .items-page.container { max-width: 1400px; }
+  /* narrower desktops: the type column goes below 1360, gold per oz below 1200 (their filters and sort stay, the grid
+     view and the item pages keep them), so the names stay readable and every header stays on one line */
+  @media (min-width: 720px) and (max-width: 1359px) { .items-page th[data-col="type"], .items-page tbody td:nth-child(2) { display: none; } }
+  @media (min-width: 720px) and (max-width: 1199px) { .items-page th[data-col="goldoz"], .items-page tbody td:nth-child(9) { display: none; } }
   @media (max-width: 520px) { .items-page .page-head { flex-direction: column; align-items: flex-start; gap: var(--s-3); } }
 </style>
