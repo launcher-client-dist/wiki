@@ -150,7 +150,9 @@ const strings = { count: t.tableCount, countAll: t.tableCountAll };
     for (const b of root.querySelectorAll<HTMLButtonElement>("[data-sort]")) {
       b.addEventListener("click", () => {
         const k = b.dataset.sort!;
-        if (k === sortKey) dir = -dir; else { sortKey = k; dir = k === "name" ? 1 : -1; }
+        // a new column starts A→Z for text, largest first for numbers
+        const numeric = rows.every((r) => value(r, k) !== "" && !Number.isNaN(Number(value(r, k))));
+        if (k === sortKey) dir = -dir; else { sortKey = k; dir = numeric ? -1 : 1; }
         apply();
       });
     }
@@ -163,6 +165,7 @@ const strings = { count: t.tableCount, countAll: t.tableCountAll };
         for (const x of root.querySelectorAll("[data-view-btn]")) x.setAttribute("aria-pressed", String(x === b));
       });
     }
+    apply(); // the initial sort (the server renders rows in data order)
   }
 </script>
 

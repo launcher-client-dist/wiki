@@ -116,7 +116,7 @@ const scene = `data:image/svg+xml,${encodeURIComponent('<svg xmlns="http://www.w
           const info = registry.link(e.ref, lang);
           const n = registry.reverse(e.ref).length;
           return (
-            <DataRow search={`${e.name.pt} ${e.name.en}`} sort={{ name: info.name, kind: info.kind, refs: n }} filters={{ kind: info.kind }}>
+            <DataRow search={`${e.name.pt} ${e.name.en}`} sort={{ name: info.name, kind: t.kindSingular[info.kind], refs: n }} filters={{ kind: info.kind }}>
               <DataCell label={L("Nome", "Name")} primary><span class="name-cell"><IconSlot icon={info.icon} kind={info.kind} size={36} /><EntityLink to={e.ref} icon={false} /></span></DataCell>
               <DataCell label={L("Tipo", "Kind")}>{t.kindSingular[info.kind]}</DataCell>
               <DataCell label={L("Citado por", "Referenced by")} align="end"><span class="num">{n}</span></DataCell>

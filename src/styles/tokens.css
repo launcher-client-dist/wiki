@@ -143,7 +143,7 @@
 
   --text: #19213b;
   --text-muted: #46507a;
-  --text-faint: #5d678f;
+  --text-faint: #4a5478;
   --heading: #0f1530;
 
   --accent: #2f7d12;
@@ -195,10 +195,10 @@
   --banner-chip-bg: rgba(255, 255, 255, 0.85);
 
   --tier-sempre: #4a5275;
-  --tier-comum: #2f7d12;
-  --tier-incomum: #0b63b6;
-  --tier-raro: #7a2fc0;
-  --tier-muito-raro: #b85a00;
+  --tier-comum: #286b0f;
+  --tier-incomum: #09559c;
+  --tier-raro: #6a27a8;
+  --tier-muito-raro: #984a00;
 
   --shadow-1: 0 3px 0 var(--hard);
   --shadow-2: 0 4px 0 var(--hard);

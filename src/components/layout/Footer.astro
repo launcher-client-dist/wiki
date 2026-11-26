@@ -32,12 +32,12 @@ const year = 2026;
         <li><button type="button" class="linkish" data-open-search>{t.footerSearch} <kbd>Ctrl K</kbd></button></li>
       </ul>
     </nav>
-    <nav aria-label={t.footerLanguage}>
+    <div>
       <h2>{t.footerLanguage}</h2>
       <ul>
         {LANGS.map((l) => <li><a href={alternates[l]} hreflang={HREFLANG[l]} lang={HREFLANG[l]} aria-current={l === lang ? "true" : undefined}>{ui(l).langName}</a></li>)}
       </ul>
-    </nav>
+    </div>
   </div>
   <div class="container legal">
     <span>© {year} Opengea Wiki</span>

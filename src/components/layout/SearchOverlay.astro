@@ -95,14 +95,16 @@ const strings = {
     return pagefind;
   }
 
+  let rendered = ""; // the query whose results the list shows
   function options(): HTMLElement[] {
-    const root = list.hidden ? shortcuts : list;
+    const root = input.value.trim() ? list : shortcuts;
     return [...root.querySelectorAll<HTMLElement>('[role="option"]:not([aria-disabled="true"])')];
   }
 
   function setActive(i: number) {
     const opts = options();
-    if (!opts.length) { active = -1; input.removeAttribute("aria-activedescendant"); return; }
+    for (const o of dialog.querySelectorAll('[role="option"][aria-selected="true"]')) o.setAttribute("aria-selected", "false");
+    if (!opts.length || i < 0) { active = -1; input.removeAttribute("aria-activedescendant"); return; }
     active = (i + opts.length) % opts.length;
     opts.forEach((o, k) => {
       o.id ||= `wiki-search-opt-${Math.random().toString(36).slice(2, 8)}`;
@@ -153,6 +155,7 @@ const strings = {
       }
     }
     list.innerHTML = html;
+    rendered = q;
     shortcuts.hidden = true;
     list.hidden = data.length === 0;
     status.textContent = data.length ? "" : `${S.empty.replace("{q}", q)} ${S.emptyHint}`;
@@ -182,8 +185,16 @@ const strings = {
     if (e.key === "ArrowDown") { e.preventDefault(); setActive(active + 1); }
     else if (e.key === "ArrowUp") { e.preventDefault(); setActive(active - 1); }
     else if (e.key === "Enter") {
-      const link = options()[active]?.querySelector("a");
-      if (link) { e.preventDefault(); link.click(); }
+      e.preventDefault();
+      const q = input.value.trim();
+      // results for this query not shown yet (first search loads the index): wait for them, then open the first
+      if (q && rendered !== q) void run();
+      const t0 = Date.now();
+      const go = () => {
+        if (q && rendered !== q && Date.now() - t0 < 4000) { setTimeout(go, 40); return; }
+        options()[Math.max(active, 0)]?.querySelector("a")?.click();
+      };
+      go();
     }
   });
   // (document-level listeners check their element is still in the page: the 404 swaps its whole document)

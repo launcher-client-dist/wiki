@@ -103,7 +103,11 @@
       el.focus();
     }
   });
-  window.addEventListener("scroll", () => { if (!card.isConnected) return; if (owner && !pinned) hide(true); else if (owner) place(owner); }, { passive: true });
+  window.addEventListener("scroll", () => {
+    if (!card.isConnected || !owner) return;
+    // a card opened by keyboard focus or a tap follows its link; a mouse-hover card closes
+    if (pinned || owner === document.activeElement) place(owner); else hide(true);
+  }, { passive: true });
   window.addEventListener("resize", () => owner && place(owner));
 </script>
 <style is:global>
