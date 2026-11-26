@@ -273,13 +273,15 @@ const strings = { count: t.tableCount, countAll: t.tableCountAll };
   .fgroup { display: grid; grid-template-columns: 86px minmax(0, 1fr); gap: 10px; align-items: center; }
   .flabel { font: 700 0.6875rem / 1.2 var(--font-body); letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-faint); }
   .chips { display: flex; gap: 6px; flex-wrap: wrap; padding-bottom: 4px; }
-  @media (max-width: 719px) { .chips { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; padding: 2px 2px 6px; } }
+  @media (max-width: 899px) { .chips { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; padding: 2px 2px 6px; } }
 
   .vnote { grid-column: 2; margin: -4px 0 0; font-size: var(--fs-xs); color: var(--text-muted); }
-  .range { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+  /* the stat, min and max on one line at any width (never three and one): the stat's select gives way */
+  .range { display: grid; grid-template-columns: minmax(0, 12rem) 5.25rem auto 5.25rem; gap: 8px; align-items: center; }
+  .range select { width: 100%; }
   .range select, .range input { height: 36px; border-radius: var(--r-m); border: var(--bw) solid var(--border); background: var(--input-bg); color: var(--text);
     font: 500 var(--fs-sm) / 1 var(--font-body); padding: 0 10px; }
-  .range input { width: 84px; }
+  .range input { width: 100%; }
   .range select:focus, .range input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--focus-ring); }
   .seg .chip { display: inline-flex; align-items: center; gap: 6px; height: 32px; padding: 0 12px; border-radius: var(--r-pill); border: var(--bw) solid var(--border);
     background: var(--surface); color: var(--text); font: 600 var(--fs-sm) / 1 var(--font-body); cursor: pointer; white-space: nowrap; transition: background var(--t-fast), border-color var(--t-fast); }
@@ -314,7 +316,7 @@ const strings = { count: t.tableCount, countAll: t.tableCountAll };
   tbody :global(tr:first-child td) { border-top: 0; }
   tbody :global(td.a-end) { text-align: right; }
 
-  /* grid view and phone width: the same rows as cards */
+  /* grid view and narrow widths (phones and small tablets, below 900 px: the table would not fit): the same rows as cards */
   .dt[data-view="grid"] thead { display: none; }
   .dt[data-view="grid"] .frame { border: 0; background: none; box-shadow: none; overflow: visible; }
   .dt[data-view="grid"] table, .dt[data-view="grid"] tbody { display: block; }
@@ -327,7 +329,7 @@ const strings = { count: t.tableCount, countAll: t.tableCountAll };
   .dt[data-view="grid"] tbody :global(td::before) { content: attr(data-label); color: var(--text-muted); font-size: var(--fs-xs); }
   .dt[data-view="grid"] tbody :global(td.primary) { order: -1; margin-bottom: 4px; font-size: 1rem; }
   .dt[data-view="grid"] tbody :global(td.primary::before) { display: none; }
-  @media (max-width: 719px) {
+  @media (max-width: 899px) {
     thead { display: none; }
     table, tbody { display: block; }
     tbody :global(tr) { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 14px; padding: 12px 14px; border-top: 1px solid var(--row-border); }

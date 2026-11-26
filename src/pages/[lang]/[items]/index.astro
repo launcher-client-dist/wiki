@@ -124,7 +124,7 @@ const CLASSED: StatKey[] = ["armor", "defense", "attackSpeed", "health", "mana",
   .items-page .more { display: inline-flex; align-items: center; justify-content: center; height: 26px; min-width: 26px; padding: 0 4px; border-radius: 6px;
     font: 700 var(--fs-xs) / 1 var(--font-num); color: var(--text-muted); border: 1px dashed var(--border-strong); }
   /* the table view: the name column takes the room left, every other column is as wide as its header or its values */
-  @media (min-width: 720px) {
+  @media (min-width: 900px) {
     .items-page .dt[data-view="table"] td.primary { width: 100%; max-width: 0; }
     .items-page .dt[data-view="table"] td:not(.primary) { white-space: nowrap; }
     .items-page .dt[data-view="table"] .name a, .items-page .dt[data-view="table"] .alt { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
@@ -145,7 +145,7 @@ const CLASSED: StatKey[] = ["armor", "defense", "attackSpeed", "health", "mana",
   .items-page.container { max-width: 1400px; }
   /* narrower desktops: the type column goes below 1360, gold per oz below 1200 (their filters and sort stay, the grid
      view and the item pages keep them), so the names stay readable and every header stays on one line */
-  @media (min-width: 720px) and (max-width: 1359px) { .items-page th[data-col="type"], .items-page tbody td:nth-child(2) { display: none; } }
-  @media (min-width: 720px) and (max-width: 1199px) { .items-page th[data-col="goldoz"], .items-page tbody td:nth-child(9) { display: none; } }
+  @media (min-width: 900px) and (max-width: 1359px) { .items-page th[data-col="type"], .items-page tbody td:nth-child(2) { display: none; } }
+  @media (min-width: 900px) and (max-width: 1199px) { .items-page th[data-col="goldoz"], .items-page tbody td:nth-child(9) { display: none; } }
   @media (max-width: 520px) { .items-page .page-head { flex-direction: column; align-items: flex-start; gap: var(--s-3); } }
 </style>
