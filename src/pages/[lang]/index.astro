@@ -17,7 +17,7 @@ const lang = Astro.params.lang as Lang;
 const t = ui(lang);
 const { guides } = await siteData();
 const myGuides = guides.filter((g) => g.lang === lang);
-const counts: Partial<Record<string, number>> = { guide: myGuides.length, item: (await siteData()).items.length };
+const counts: Partial<Record<string, number>> = { guide: myGuides.length, item: (await siteData()).items.length, monster: (await siteData()).monsters.length };
 const jsonLd = [{
   "@context": "https://schema.org",
   "@type": "WebSite",

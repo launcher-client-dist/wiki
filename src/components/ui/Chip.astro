@@ -6,19 +6,22 @@
 import Icon from "./Icon.astro";
 import GameIcon from "./GameIcon.astro";
 type Base = { pressed?: boolean; count?: number; href?: string; filter?: string; value?: string };
-/** Never plain text: `icon`, `gicon` (the game's), or `plainBecause` (rare; listed by the site check). */
+type Img = { src: string; width: number; height: number };
+/** Never plain text: `icon`, `gicon` (the game's), `img` (an entity's own icon: a monster family's face), or
+ * `plainBecause` (rare; listed by the site check). */
 type Props = Base & (
-  | { icon: Parameters<typeof Icon>[0]["name"]; gicon?: never; plainBecause?: never }
-  | { gicon: string; icon?: never; plainBecause?: never }
-  | { plainBecause: string; icon?: never; gicon?: never }
+  | { icon: Parameters<typeof Icon>[0]["name"]; gicon?: never; img?: never; plainBecause?: never }
+  | { gicon: string; icon?: never; img?: never; plainBecause?: never }
+  | { img: Img; icon?: never; gicon?: never; plainBecause?: never }
+  | { plainBecause: string; icon?: never; gicon?: never; img?: never }
 );
-const { pressed = false, count, href, filter, value, icon, gicon, plainBecause } = Astro.props as Base & { icon?: Parameters<typeof Icon>[0]["name"]; gicon?: string; plainBecause?: string };
+const { pressed = false, count, href, filter, value, icon, gicon, img, plainBecause } = Astro.props as Base & { icon?: Parameters<typeof Icon>[0]["name"]; gicon?: string; img?: Img; plainBecause?: string };
 ---
 {href ? (
-  <a class="chip" href={href} data-plain={plainBecause}>{icon && <Icon name={icon} size={14} />}{gicon && <GameIcon name={gicon} fit={18} />}<slot />{count !== undefined && <span class="count">{count}</span>}</a>
+  <a class="chip" href={href} data-plain={plainBecause}>{icon && <Icon name={icon} size={14} />}{gicon && <GameIcon name={gicon} fit={18} />}{img && <img class="cimg" src={img.src} width={22} height={22} alt="" loading="lazy" decoding="async" />}<slot />{count !== undefined && <span class="count">{count}</span>}</a>
 ) : (
   <button class="chip" type="button" aria-pressed={pressed ? "true" : "false"} data-filter={filter} data-value={value} data-plain={plainBecause}>
-    {icon && <Icon name={icon} size={14} />}{gicon && <GameIcon name={gicon} fit={18} />}<slot />{count !== undefined && <span class="count">{count}</span>}
+    {icon && <Icon name={icon} size={14} />}{gicon && <GameIcon name={gicon} fit={18} />}{img && <img class="cimg" src={img.src} width={22} height={22} alt="" loading="lazy" decoding="async" />}<slot />{count !== undefined && <span class="count">{count}</span>}
   </button>
 )}
 <style>
@@ -31,6 +34,7 @@ const { pressed = false, count, href, filter, value, icon, gicon, plainBecause }
   .chip:hover { background: var(--surface-2); color: var(--text); }
   .chip:active { transform: translateY(1px); }
   .chip[aria-pressed="true"] { background: var(--chip-on-bg); color: var(--chip-on-text); border-color: transparent; }
+  .cimg { flex: none; margin-left: -4px; object-fit: contain; }
   .count { font: 600 0.6875rem / 1 var(--font-num); color: var(--text-faint); }
   .chip[aria-pressed="true"] .count { color: inherit; opacity: 0.8; }
 </style>

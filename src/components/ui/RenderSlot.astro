@@ -18,7 +18,7 @@ const { src, alt, width = 512, height = 512, size = 280, eager = false } = Astro
 ---
 <div class="render" style={`--size:${size}px`}>
   {src ? (
-    <img src={src} alt={alt} width={width} height={height} loading={eager ? "eager" : "lazy"} decoding="async" />
+    <img src={src} alt={alt} width={width} height={height} loading={eager ? "eager" : "lazy"} fetchpriority={eager ? "high" : undefined} decoding={eager ? "sync" : "async"} />
   ) : (
     <div class="placeholder" role="img" aria-label={`${alt} (${t.renderPlaceholder})`}>
       <svg viewBox="0 0 120 120" aria-hidden="true">

@@ -9,7 +9,7 @@
 //   overflow    no horizontal page overflow; no element clips its content (hidden/clip with content wider than it)
 //   expect      every page answers its status and has the parts the rules measure (a rule that matches nothing fails)
 //
-//   node scripts/check-layout.mjs [--dist DIR] [--only home,list,item-rune] [--langs pt,es,en] [--sweep]
+//   node scripts/check-layout.mjs [--dist DIR] [--only home,list,item-rune,monsters,monster-boss] [--langs pt,es,en] [--sweep]
 // Chrome: CHROME_PATH, else the usual install paths (Windows, macOS, Linux).
 import http from "node:http";
 import fs from "node:fs";
@@ -26,8 +26,17 @@ const SWEEP = process.argv.includes("--sweep");
 const LANGS = (arg("--langs") ?? "pt,es,en").split(",");
 const VIEWPORTS = [{ name: "1440", width: 1440, height: 900 }, { name: "1024", width: 1024, height: 800 }, { name: "390", width: 390, height: 844, mobile: true }];
 
-// ---- the page set: home, list, a guide, 404 and one item of every kind (picked from the data, the fullest page)
+// ---- the page set: home, list, a guide, 404, one item of every kind and one monster of every kind (picked from the
+// data, the fullest page), the monster list in its grid and its table
 const data = JSON.parse(fs.readFileSync(path.join(ROOT, "src/data/items.json"), "utf8"));
+const mdata = JSON.parse(fs.readFileSync(path.join(ROOT, "src/data/monsters.json"), "utf8")).monsters;
+const slugs = JSON.parse(fs.readFileSync(path.join(ROOT, "src/data/slugs.json"), "utf8"));
+const mRich = (m) => m.drops.length + m.spells.length * 2 + m.places.length + m.windows.length * 3 + (m.behaviour.summons?.length ?? 0) * 3;
+const mPick = (fn) => [...mdata].filter(fn).sort((a, b) => mRich(b) - mRich(a) || a.id.localeCompare(b.id))[0];
+const MONSTER_KINDS = {
+  common: (m) => !m.boss && !m.windows.length && m.how === "spawn", boss: (m) => m.boss && m.windows.length > 0,
+  summoner: (m) => m.behaviour.summons?.length > 0, variants: (m) => m.variants.length > 0,
+};
 const richness = (i) => Object.values(i.sources).reduce((n, v) => n + (Array.isArray(v) ? v.length : 0), 0) + i.versions.length + (i.forgeable ? 3 : 0);
 const pick = (fn) => [...data.items].filter(fn).sort((a, b) => richness(b) - richness(a) || a.id.localeCompare(b.id))[0];
 const KINDS = {
@@ -51,6 +60,12 @@ for (const lang of LANGS) {
   for (const [kind, fn] of Object.entries(KINDS)) {
     const it = pick(fn);
     PAGES.push({ id: `item-${kind}`, lang, url: it ? `/${lang}/${SECTIONS.item.slug[lang]}/${it.slug[lang]}/` : null, type: "item" });
+  }
+  PAGES.push({ id: "monsters", lang, url: `/${lang}/${SECTIONS.monster.slug[lang]}/`, type: "mlist" });
+  for (const [kind, fn] of Object.entries(MONSTER_KINDS)) {
+    const m = mPick(fn);
+    const slug = m && slugs[`monster:${m.id}`]?.[lang];
+    PAGES.push({ id: `monster-${kind}`, lang, url: slug ? `/${lang}/${SECTIONS.monster.slug[lang]}/${slug}/` : null, type: "monster" });
   }
 }
 
@@ -232,12 +247,23 @@ for (const vp of viewports) {
     if (resp.status() !== want) { failures.push({ rule: "expect", where, detail: `${p.url} answered ${resp.status()}, expected ${want}` }); continue; }
     await page.evaluate(() => document.fonts.ready);
     const { out, seen, scrollers, flows } = await page.evaluate(measure);
+    // the monster list opens as a grid of cards: measured so, then switched to its table and measured again
+    if (p.type === "mlist") {
+      await page.click('[data-view-btn="table"]').catch(() => {});
+      await page.waitForTimeout(50);
+      const t = await page.evaluate(measure);
+      for (const f of t.out) out.push({ ...f, detail: `${f.detail} [table view]` });
+      seen.tables += t.seen.tables;
+      flows.push(...t.flows);
+      scrollers.push(...t.scrollers);
+      await page.click('[data-view-btn="grid"]').catch(() => {}); // back as it was (a remembered view must not leak)
+    }
     for (const f of flows) flowRows.set(f, (flowRows.get(f) ?? 0) + 1);
     for (const f of out) if (!SWEEP || f.rule === "orphan" || f.rule === "overflow") failures.push({ ...f, where });
     for (const s of scrollers) scrollRows.set(s, (scrollRows.get(s) ?? 0) + 1);
     if (!SWEEP) {
-      if (p.type === "list" && vp.name !== "390" && !seen.tables) failures.push({ rule: "expect", where, detail: "the item table's header was not found" });
-      if (p.type === "item" && !seen.iconBoxes) failures.push({ rule: "expect", where, detail: "the stats box was not found" });
+      if ((p.type === "list" || p.type === "mlist") && vp.name !== "390" && !seen.tables) failures.push({ rule: "expect", where, detail: "the table's header was not found" });
+      if ((p.type === "item" || p.type === "monster") && !seen.iconBoxes) failures.push({ rule: "expect", where, detail: "the stats box was not found" });
     }
   }
   await ctx.close();

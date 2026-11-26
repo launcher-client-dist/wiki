@@ -624,6 +624,7 @@
      "steel-bracelet",
      "steel-knife",
      "steelsword",
+     "stone-shortbow",
      "stone-staff",
      "trident-token",
      "twisted-wand",
@@ -1102,6 +1103,7 @@
      "spiked-club",
      "steel-knife",
      "steelsword",
+     "stone-shortbow",
      "studded-shield",
      "tower-shield",
      "vanguard-shield",
@@ -1697,6 +1699,7 @@
      "spangenhelm",
      "spiked-club",
      "steelsword",
+     "stone-shortbow",
      "vecan-axe",
      "war-hammer",
      "wolf-helmet",
@@ -1901,6 +1904,7 @@
      "spiked-club",
      "steel-knife",
      "steelsword",
+     "stone-shortbow",
      "studded-shield",
      "tower-shield",
      "vanguard-shield",
@@ -11263,6 +11267,7 @@
      "steel-bracelet",
      "steel-knife",
      "steelsword",
+     "stone-shortbow",
      "stone-staff",
      "trident-token",
      "twisted-wand",
@@ -11730,6 +11735,7 @@
      "steel-bracelet",
      "steel-knife",
      "steelsword",
+     "stone-shortbow",
      "stone-staff",
      "trident-token",
      "twisted-wand",
@@ -12107,6 +12113,7 @@
      "skalish-heavy-bow",
      "spiked-club",
      "steelsword",
+     "stone-shortbow",
      "stone-staff",
      "twisted-wand",
      "unholy-staff",
@@ -12336,6 +12343,7 @@
      "snake-orb",
      "spiked-club",
      "steelsword",
+     "stone-shortbow",
      "stone-staff",
      "trident-token",
      "twisted-wand",
@@ -39047,6 +39055,7 @@
      "steel-bracelet",
      "steel-knife",
      "steelsword",
+     "stone-shortbow",
      "stone-staff",
      "trident-token",
      "twisted-wand",
@@ -39546,6 +39555,7 @@
      "skalish-heavy-bow",
      "spiked-club",
      "steelsword",
+     "stone-shortbow",
      "stone-staff",
      "twisted-wand",
      "unholy-staff",
@@ -39744,6 +39754,7 @@
      "snake-orb",
      "spiked-club",
      "steelsword",
+     "stone-shortbow",
      "stone-staff",
      "trident-token",
      "twisted-wand",
@@ -53793,6 +53804,7 @@
      "steel-bracelet",
      "steel-knife",
      "steelsword",
+     "stone-shortbow",
      "stone-staff",
      "trident-token",
      "twisted-wand",
@@ -54390,6 +54402,7 @@
      "skalish-heavy-bow",
      "skalish-knife",
      "steel-knife",
+     "stone-shortbow",
      "wooden-bow"
     ],
     "subtypes": [
@@ -54565,6 +54578,7 @@
      "spiked-club",
      "steel-knife",
      "steelsword",
+     "stone-shortbow",
      "war-hammer",
      "wooden-bow"
     ],
@@ -93871,6 +93885,7 @@
      "steel-bracelet",
      "steel-knife",
      "steelsword",
+     "stone-shortbow",
      "stone-staff",
      "trident-token",
      "twisted-wand",
@@ -94332,6 +94347,7 @@
      "steel-bracelet",
      "steel-knife",
      "steelsword",
+     "stone-shortbow",
      "stone-staff",
      "trident-token",
      "twisted-wand",
@@ -94729,6 +94745,7 @@
      "skalish-heavy-bow",
      "spiked-club",
      "steelsword",
+     "stone-shortbow",
      "stone-staff",
      "twisted-wand",
      "unholy-staff",
@@ -94918,6 +94935,7 @@
      "snake-orb",
      "spiked-club",
      "steelsword",
+     "stone-shortbow",
      "stone-staff",
      "trident-token",
      "twisted-wand",
@@ -99606,6 +99624,7 @@
      "steel-bracelet",
      "steel-knife",
      "steelsword",
+     "stone-shortbow",
      "stone-staff",
      "trident-token",
      "twisted-wand",
@@ -100232,6 +100251,7 @@
      "skalish-heavy-bow",
      "spiked-club",
      "steelsword",
+     "stone-shortbow",
      "stone-staff",
      "twisted-wand",
      "unholy-staff",
@@ -100444,6 +100464,7 @@
      "snake-orb",
      "spiked-club",
      "steelsword",
+     "stone-shortbow",
      "stone-staff",
      "trident-token",
      "twisted-wand",
@@ -128962,6 +128983,208 @@
   {
    "category": "weapon",
    "forgeable": true,
+   "icon": "/icons/items/254.png",
+   "id": "stone-shortbow",
+   "name": {
+    "en": "Stone Shortbow",
+    "es": "Arco Corto de Piedra",
+    "pt": "Arco Curto de Pedra"
+   },
+   "primary": 254,
+   "slots": [
+    "hands"
+   ],
+   "slug": {
+    "en": "stone-shortbow",
+    "es": "arco-corto-de-piedra",
+    "pt": "arco-curto-de-pedra"
+   },
+   "sources": {
+    "buyers": [],
+    "conjured": [],
+    "drops": [
+     {
+      "amount": [
+       1,
+       1
+      ],
+      "monster": "monster:swamp-troll",
+      "quality": true,
+      "tier": "muito-raro"
+     }
+    ],
+    "leftover": [],
+    "map": [],
+    "quests": [],
+    "recipes": [],
+    "shops": []
+   },
+   "subtype": {
+    "en": "Distance Weapons",
+    "es": "Armas a Distancia",
+    "key": "DistanceWeapon",
+    "pt": "Armas de Distância"
+   },
+   "types": [
+    254
+   ],
+   "uses": {
+    "leavesEmpty": [],
+    "questsRequire": [],
+    "recipes": []
+   },
+   "value": {
+    "npcPays": null,
+    "npcSells": null
+   },
+   "versions": [
+    {
+     "classes": {
+      "knight": {
+       "attackSpeed": -1
+      },
+      "mage": {
+       "attackSpeed": -1
+      },
+      "rogue": {
+       "attackSpeed": -1
+      },
+      "squire": {
+       "attackSpeed": -1
+      }
+     },
+     "icon": "/icons/items/254.png",
+     "iconSize": [
+      28,
+      29
+     ],
+     "qualities": [
+      {
+       "classes": {
+        "knight": {
+         "attackSpeed": -1
+        },
+        "mage": {
+         "attackSpeed": -1
+        },
+        "rogue": {
+         "attackSpeed": -1
+        },
+        "squire": {
+         "attackSpeed": -1
+        }
+       },
+       "rarity": 0,
+       "stats": {
+        "attackSpeed": -1,
+        "damage": 25,
+        "range": 50
+       },
+       "weight": 33.0
+      },
+      {
+       "classes": {
+        "knight": {
+         "attackSpeed": -1
+        },
+        "mage": {
+         "attackSpeed": -1
+        },
+        "rogue": {
+         "attackSpeed": -1
+        },
+        "squire": {
+         "attackSpeed": -1
+        }
+       },
+       "rarity": 1,
+       "stats": {
+        "attackSpeed": -1,
+        "damage": 30,
+        "range": 55
+       },
+       "weight": 26.4
+      },
+      {
+       "classes": {
+        "knight": {},
+        "mage": {},
+        "rogue": {},
+        "squire": {}
+       },
+       "rarity": 2,
+       "stats": {
+        "damage": 32,
+        "range": 57
+       },
+       "weight": 23.1
+      },
+      {
+       "classes": {
+        "knight": {
+         "attackSpeed": 1
+        },
+        "mage": {
+         "attackSpeed": 1
+        },
+        "rogue": {
+         "attackSpeed": 2
+        },
+        "squire": {
+         "attackSpeed": 1
+        }
+       },
+       "rarity": 3,
+       "stats": {
+        "attackSpeed": 1,
+        "damage": 35,
+        "range": 60
+       },
+       "weight": 19.8
+      },
+      {
+       "classes": {
+        "knight": {
+         "attackSpeed": 2
+        },
+        "mage": {
+         "attackSpeed": 2
+        },
+        "rogue": {
+         "attackSpeed": 3
+        },
+        "squire": {
+         "attackSpeed": 2
+        }
+       },
+       "rarity": 4,
+       "stats": {
+        "attackSpeed": 2,
+        "damage": 37,
+        "range": 62
+       },
+       "weight": 16.5
+      }
+     ],
+     "stack": 1,
+     "stats": {
+      "attackSpeed": -1,
+      "damage": 25,
+      "range": 50
+     },
+     "text": {
+      "en": "A sturdy, small bow.",
+      "es": "Un arco pequeño y robusto.",
+      "pt": "Um arco pequeno e robusto."
+     },
+     "type": 254,
+     "weight": 33.0
+    }
+   ]
+  },
+  {
+   "category": "weapon",
+   "forgeable": true,
    "icon": "/icons/items/253.png",
    "id": "stone-staff",
    "name": {
@@ -137300,6 +137523,7 @@
      "steel-bracelet",
      "steel-knife",
      "steelsword",
+     "stone-shortbow",
      "studded-shield",
      "tower-shield",
      "vanguard-shield",
@@ -137824,6 +138048,7 @@
      "spangenhelm",
      "spiked-club",
      "steelsword",
+     "stone-shortbow",
      "vecan-axe",
      "war-hammer",
      "wolf-helmet",
@@ -138028,6 +138253,7 @@
      "spiked-club",
      "steel-knife",
      "steelsword",
+     "stone-shortbow",
      "studded-shield",
      "tower-shield",
      "vanguard-shield",
@@ -147185,6 +147411,7 @@
      "skalish-heavy-bow",
      "spiked-club",
      "steelsword",
+     "stone-shortbow",
      "stone-staff",
      "twisted-wand",
      "unholy-staff",
@@ -147374,6 +147601,7 @@
      "snake-orb",
      "spiked-club",
      "steelsword",
+     "stone-shortbow",
      "stone-staff",
      "trident-token",
      "twisted-wand",

@@ -1909,6 +1909,11 @@
   "es": "espada-de-acero",
   "pt": "espada-de-aco"
  },
+ "item:stone-shortbow": {
+  "en": "stone-shortbow",
+  "es": "arco-corto-de-piedra",
+  "pt": "arco-curto-de-pedra"
+ },
  "item:stone-staff": {
   "en": "stone-staff",
   "es": "baston-de-piedra",
@@ -2389,6 +2394,11 @@
   "es": "cordero",
   "pt": "cordeiro"
  },
+ "monster:lava-snoop": {
+  "en": "lava-snoop",
+  "es": "lava-snoop",
+  "pt": "lava-snoop"
+ },
  "monster:lintwurm": {
   "en": "lintwurm",
   "es": "lintwurm",
@@ -2428,6 +2438,11 @@
   "en": "necromancer",
   "es": "nigromante",
   "pt": "necromante"
+ },
+ "monster:obelisk": {
+  "en": "obelisk",
+  "es": "obelisco",
+  "pt": "obelisco"
  },
  "monster:occultist-acolyte": {
   "en": "occultist-acolyte",

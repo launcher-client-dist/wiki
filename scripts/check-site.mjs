@@ -253,6 +253,44 @@ for (const l of LANG_CODES.filter((c) => c !== LANG_TABLE.default)) if (!pages.g
   console.log(`checked ${itemPages.length} item pages for percentages${pages.has(kitHome) ? " and the builds wiring" : ""}`);
 }
 
+// -------------------------------------------------------------------------------------------- monster pages
+// Every monster has its page in each language; no percentage anywhere on it (drops are tiers, odds "1 in N"); its stats
+// box shows each stat with the game's icon; each drop links to the item's page, and that item's "dropped by" links back.
+{
+  const monsters = JSON.parse(readFileSync(new URL("../src/data/monsters.json", import.meta.url), "utf8")).monsters;
+  const slugs = JSON.parse(readFileSync(new URL("../src/data/slugs.json", import.meta.url), "utf8"));
+  const itemsById = new Map(JSON.parse(readFileSync(new URL("../src/data/items.json", import.meta.url), "utf8")).items.map((i) => [i.id, i]));
+  // a drop's hover card carries the item's own game text (a rune's "+5% magic"): the game's words, not a rate
+  const escT = (t) => t.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  const itemTexts = [...new Set([...itemsById.values()].flatMap((i) => i.versions.flatMap((v) => LANG_CODES.map((l) => v.text[l]))).filter((t) => t && t.includes("%")))]
+    .flatMap((t) => [t, escT(t), JSON.stringify(t).slice(1, -1)]);
+  const MON_DIR = Object.fromEntries(LANG_CODES.map((l) => [l, `/${l}/${SECTIONS.monster.slug[l]}/`]));
+  const monUrls = (m) => LANG_CODES.map((l) => `${MON_DIR[l]}${slugs[`monster:${m.id}`][l]}/`);
+  const monPages = [...pages.values()].filter((p) => Object.values(MON_DIR).some((d) => p.url.startsWith(d) && /^[^/]+\/$/.test(p.url.slice(d.length))));
+  if (monPages.length !== monsters.length * LANG_CODES.length) fail("monsters", `${monPages.length} monster pages for ${monsters.length} monsters (want ${LANG_CODES.length} each)`);
+  for (const p of [...monPages, ...Object.values(MON_DIR).map((u) => pages.get(u)).filter(Boolean)]) {
+    let html = p.html.replace(/<style[\s\S]*?<\/style>/gi, "").replace(/\sstyle="[^"]*"/gi, "");
+    for (const t of itemTexts) html = html.split(t).join("");
+    const hit = html.match(/.{0,40}\d\s?%.{0,20}/);
+    if (hit) fail(p.url, `a percentage on a monster page: "${hit[0]}"`);
+  }
+  for (const m of monsters) {
+    monUrls(m).forEach((url, k) => {
+      const html = pages.get(url)?.html;
+      if (!html) return fail(url, "missing monster page");
+      if (!html.includes('data-section="statlist"') || !html.includes('src="/ui/stat-health.png"')) fail(url, "no stat list with the game's icons");
+      for (const d of m.drops) {
+        const item = itemsById.get(d.item);
+        const itemUrl = item && itemUrls(item)[k];
+        if (!itemUrl || !html.includes(`href="${itemUrl}"`)) fail(url, `drop ${d.item} without a link to its page`);
+        else if (!pages.get(itemUrl)?.html.includes(`href="${url}"`)) fail(itemUrl, `"dropped by" doesn't link back to ${url}`);
+      }
+      if (m.windows.length && !html.includes("data-win-start")) fail(url, "a timed monster without its schedule");
+    });
+  }
+  console.log(`checked ${monPages.length} monster pages: percentages, stats, drops linked both ways`);
+}
+
 console.log(`checked ${pages.size} pages (${indexable.length} indexable), sitemap, robots.txt, CNAME`);
 if (problems.length) {
   console.error(`\n${problems.length} problem(s):\n  ${problems.join("\n  ")}`);

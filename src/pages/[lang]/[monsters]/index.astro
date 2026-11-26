@@ -1,0 +1,179 @@
+---
+import PageShell from "../../../components/layout/PageShell.astro";
+import PixelArt from "../../../components/ui/PixelArt.astro";
+import IconSlot from "../../../components/ui/IconSlot.astro";
+import DataTable from "../../../components/data/DataTable.astro";
+import DataRow from "../../../components/data/DataRow.astro";
+import DataCell from "../../../components/data/DataCell.astro";
+import { ui, fill } from "../../../i18n/index.ts";
+import { HREFLANG, LANGS, LOCALE, type Lang } from "../../../lib/i18n.ts";
+import { homePath, SECTIONS, sectionAlternates, sectionPath } from "../../../lib/routes.ts";
+import { siteData } from "../../../lib/site-registry.ts";
+import { statLabel } from "../../../lib/items/data.ts";
+import { BEHAVIOUR_KEYS, MONSTER_STAT_KEYS, behaviourKeys, monsterRef, towns, type MonsterData } from "../../../lib/monsters/data.ts";
+import { displayName } from "../../../lib/names.ts";
+
+export function getStaticPaths() {
+  return LANGS.map((lang) => ({ params: { lang, monsters: SECTIONS.monster.slug[lang] } }));
+}
+const lang = Astro.params.lang as Lang;
+const t = ui(lang);
+const tm = t.monster;
+const { registry, monsters } = await siteData();
+const NAMES = new Map(monsters.map((m) => [m.id, displayName(registry.require(monsterRef(m.id)).name, "monster", lang)]));
+const rows = [...monsters].sort((a, b) => NAMES.get(a.id)!.name.localeCompare(NAMES.get(b.id)!.name, lang));
+const num = (n: number) => n.toLocaleString(LOCALE[lang]);
+/** Level bands as filter values: the band a monster's suggested levels start in. */
+const BANDS = [[1, 9], [10, 19], [20, 34], [35, 49], [50, 999]] as const;
+const bandOf = (m: MonsterData) => (m.level ? BANDS.filter(([lo, hi]) => m.level!.min <= hi && m.level!.max >= lo).map(([lo]) => String(lo)) : []);
+const bandLabel = ([lo, hi]: readonly [number, number]) => (hi >= 999 ? `${lo}+` : `${lo}–${hi}`);
+/** The towns, by how many monsters live there (the commonest first). */
+const TOWN = new Map<string, { label: string; n: number }>();
+for (const m of monsters) {
+  for (const p of [...m.places.map((x) => x.place), ...m.windows.map((w) => w.place)]) {
+    const cur = TOWN.get(p.town.en) ?? { label: p.town[lang], n: 0 };
+    TOWN.set(p.town.en, cur);
+  }
+  for (const town of towns(m)) TOWN.get(town)!.n++;
+}
+const townOpts = [...TOWN.entries()].sort((a, b) => b[1].n - a[1].n || a[1].label.localeCompare(b[1].label, lang));
+const FAMILY = new Map<string, MonsterData[]>();
+for (const m of monsters) if (m.family) (FAMILY.get(m.family) ?? FAMILY.set(m.family, []).get(m.family)!).push(m);
+const familyOpts = [...FAMILY.entries()].sort((a, b) => b[1].length - a[1].length || a[0].localeCompare(b[0]));
+const kinds = (m: MonsterData) => [m.boss && "boss", m.windows.length && "timed", m.how === "summon" && "summon"].filter(Boolean) as string[];
+const BEHAVIOUR_ICON: Record<string, string> = { jumpsFloors: "jump-floors", leaps: "leap", flees: "stat-moveSpeed", seesInvisible: "see-invisible", summons: "summon", spellsOnly: "stat-magic", onDeath: "src-drop" };
+const STAT_ICON: Record<string, string> = { health: "stat-health", exp: "xp", damage: "stat-damage", armor: "stat-armor", defense: "stat-defense", magic: "stat-magic", attackSpeed: "stat-attackSpeed", moveSpeed: "stat-moveSpeed", range: "stat-range" };
+const label = (k: string) => (k === "exp" ? tm.exp : statLabel(k as "health")[lang]);
+---
+<PageShell lang={lang} title={tm.listTitle} description={tm.listDescription} alternates={sectionAlternates("monster")} current="monster"
+  searchable={{ kind: "monster" }}
+  crumbs={[{ label: t.home, href: homePath(lang) }, { label: tm.listTitle, href: sectionPath("monster", lang) }]}>
+  <div class="container monsters-page">
+    <header class="page-head">
+      <PixelArt kind="monster" size={64} />
+      <div>
+        <h1>{tm.listTitle}</h1>
+        <p>{tm.listIntro}</p>
+      </div>
+    </header>
+    <DataTable id="monsters" lang={lang} caption={tm.listTitle} total={monsters.length} sort={{ key: "sortname", dir: "asc" }} defaultView="grid"
+      columns={[
+        { key: "sortname", label: tm.colMonster },
+        { key: "level", label: tm.colLevel, align: "end", icon: "xp" },
+        { key: "health", label: label("health"), align: "end", icon: "stat-health" },
+        { key: "exp", label: tm.exp, align: "end", icon: "xp" },
+        { key: "damage", label: label("damage"), align: "end", icon: "stat-damage", hideOnPhone: true },
+        { key: "armor", label: label("armor"), align: "end", icon: "stat-armor", hideOnPhone: true },
+        { key: "defense", label: label("defense"), align: "end", icon: "stat-defense", hideOnPhone: true },
+        { key: "loot", label: tm.loot, align: "end", icon: "gold" },
+        { key: "where", label: tm.colWhere, hideOnPhone: true },
+      ]}
+      filters={[
+        { key: "level", label: tm.filterLevel, options: BANDS.map((b) => ({ value: String(b[0]), label: bandLabel(b), count: monsters.filter((m) => bandOf(m).includes(String(b[0]))).length, icon: "xp" })) },
+        { key: "kind", label: tm.filterKind, options: (["boss", "timed", "summon"] as const).map((k) => ({ value: k, label: tm.kind[k], count: monsters.filter((m) => kinds(m).includes(k)).length, icon: k === "boss" ? "boss" : k === "timed" ? "time" : "summon" })).filter((o) => o.count) },
+        { key: "region", label: tm.filterRegion, options: townOpts.map(([en, o]) => ({ value: en.toLowerCase().replace(/[^a-z0-9]+/g, "-"), label: o.label, count: o.n, icon: "src-map" })) },
+        { key: "family", label: tm.filterFamily, options: familyOpts.map(([f, ms]) => {
+          const e = registry.require(monsterRef(ms[0]!.id));
+          return e.icon ? { value: f.toLowerCase(), label: f, count: ms.length, img: e.icon } : { value: f.toLowerCase(), label: f, count: ms.length, icon: "src-drop" };
+        }) },
+        { key: "behaviour", label: tm.filterBehaviour, options: BEHAVIOUR_KEYS.map((k) => ({ value: k, label: tm.behaviour[k], count: monsters.filter((m) => behaviourKeys(m).includes(k)).length, icon: BEHAVIOUR_ICON[k]! })).filter((o) => o.count) },
+      ]}
+      ranges={MONSTER_STAT_KEYS.map((k) => ({ key: k, label: label(k) }))} rangeLabel={tm.filterStat}>
+      {rows.map((m) => {
+        const e = registry.require(monsterRef(m.id));
+        const dn = NAMES.get(m.id)!;
+        const href = registry.url(monsterRef(m.id), lang)!;
+        const sort: Record<string, string | number> = { sortname: dn.name, level: m.level?.min ?? 0, loot: m.loot ?? 0 };
+        for (const k of MONSTER_STAT_KEYS) if (m.stats[k]) sort[k] = m.stats[k];
+        const where = towns(m);
+        const townLabel = where.map((w) => TOWN.get(w)!.label);
+        return (
+          <DataRow search={[...LANGS.map((l) => e.name[l]), m.family ?? ""].join(" ")} sort={sort}
+            filters={{ level: bandOf(m), kind: kinds(m), region: where.map((w) => w.toLowerCase().replace(/[^a-z0-9]+/g, "-")), family: m.family ? m.family.toLowerCase() : [], behaviour: behaviourKeys(m) }}>
+            <DataCell label={tm.colMonster} primary>
+              <span class="name">
+                {m.grid ? <span class="render"><img src={m.grid} width="128" height="128" alt="" loading="lazy" decoding="async" /></span> : null}
+                <span class="small-icon"><IconSlot icon={e.icon ?? null} kind="monster" size={44} /></span>
+                <span class="ntext">
+                  <a href={href} title={dn.name} lang={dn.nameLang !== lang ? HREFLANG[dn.nameLang] : undefined}>{dn.name}</a>
+                  {dn.aid && <span class="alt" title={dn.aid} lang={dn.aidLang && dn.aidLang !== lang ? HREFLANG[dn.aidLang] : undefined}>{dn.aid}</span>}
+                  {kinds(m).length > 0 && <span class="mk">{kinds(m).map((k) => <span class="kb" title={tm.kindTip[k as "boss"]}><img src={`/ui/${k === "boss" ? "boss" : k === "timed" ? "time" : "summon"}.png`} width="18" height="18" alt="" class="px" />{tm.kind[k as "boss"]}</span>)}</span>}
+                </span>
+              </span>
+            </DataCell>
+            <DataCell label={tm.colLevel} align="end">{m.level ? <span class="num v v-xp">{m.level.min}–{m.level.max}</span> : <span class="nil">—</span>}</DataCell>
+            <DataCell label={label("health")} align="end"><span class="num v v-hp">{num(m.stats.health)}</span></DataCell>
+            <DataCell label={tm.exp} align="end">{m.stats.exp ? <span class="num v v-xp">{num(m.stats.exp)}</span> : <span class="nil">—</span>}</DataCell>
+            <DataCell label={label("damage")} align="end" hideOnPhone>{m.stats.damage ? <span class="num v v-dmg">{num(m.stats.damage)}</span> : <span class="nil">—</span>}</DataCell>
+            <DataCell label={label("armor")} align="end" hideOnPhone>{m.stats.armor ? <span class="num v v-arm">{num(m.stats.armor)}</span> : <span class="nil">—</span>}</DataCell>
+            <DataCell label={label("defense")} align="end" hideOnPhone>{m.stats.defense ? <span class="num v v-def">{num(m.stats.defense)}</span> : <span class="nil">—</span>}</DataCell>
+            <DataCell label={tm.loot} align="end">{m.loot !== null ? <span class="num v v-gold">{num(m.loot)}</span> : <span class="nil">—</span>}</DataCell>
+            <DataCell label={tm.colWhere} hideOnPhone><span class="where" title={townLabel.join(", ")}>{townLabel.length ? <><span class="v v-map"></span><span class="wt">{townLabel[0]}</span>{townLabel.length > 1 && <span class="more">+{townLabel.length - 1}</span>}</> : <span class="nil">—</span>}</span></DataCell>
+          </DataRow>
+        );
+      })}
+    </DataTable>
+    <p class="count-note">{fill(tm.count, { n: num(monsters.length) })}</p>
+  </div>
+</PageShell>
+<style is:global>
+  .monsters-page.container { max-width: 1400px; }
+  .monsters-page .page-head { display: flex; gap: var(--s-5); align-items: center; margin-bottom: var(--s-6); }
+  .monsters-page .page-head p { margin: 8px 0 0; color: var(--text-muted); max-width: 46rem; font-size: var(--fs-lg); }
+  .monsters-page .name { display: flex; align-items: center; gap: 12px; min-width: 0; }
+  .monsters-page .ntext { display: flex; flex-direction: column; justify-content: center; gap: 2px; min-width: 0; }
+  .monsters-page .name a, .monsters-page .alt { display: block; }
+  .monsters-page .name a { font-weight: 700; line-height: 1.25; color: var(--heading); text-decoration: none; }
+  .monsters-page .name a::after { content: ""; position: absolute; inset: 0; }
+  .monsters-page tr { position: relative; }
+  .monsters-page .name a:hover { color: var(--link); text-decoration: underline; }
+  .monsters-page .alt { font-size: var(--fs-xs); line-height: 1.25; color: var(--text-faint); }
+  .monsters-page .nil { color: var(--text-faint); }
+  .monsters-page .mk { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 3px; }
+  .monsters-page .kb { display: inline-flex; align-items: center; gap: 4px; height: 22px; padding: 0 7px 0 3px; border-radius: 999px; font-size: var(--fs-xs); font-weight: 700;
+    color: var(--text-muted); background: var(--surface-2); border: 1px solid var(--row-border); white-space: nowrap; }
+  .monsters-page .px { image-rendering: pixelated; }
+  .monsters-page .where { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; font-size: var(--fs-sm); color: var(--text-muted); }
+  .monsters-page .more { display: inline-flex; align-items: center; height: 20px; padding: 0 5px; border-radius: 6px; font: 700 var(--fs-xs) / 1 var(--font-num); color: var(--text-muted); border: 1px dashed var(--border-strong); }
+  /* the value cells: the game's icon before the number (CSS, so 97 rows carry no extra tags) */
+  .monsters-page .v { display: inline-flex; align-items: center; gap: 5px; white-space: nowrap; }
+  .monsters-page .v::before { content: ""; flex: none; width: 18px; height: 18px; image-rendering: pixelated; background: center / contain no-repeat; }
+  .monsters-page .v-hp::before { background-image: url(/ui/stat-health.png); }
+  .monsters-page .v-xp::before { background-image: url(/ui/xp.png); }
+  .monsters-page .v-dmg::before { background-image: url(/ui/stat-damage.png); }
+  .monsters-page .v-arm::before { background-image: url(/ui/stat-armor.png); }
+  .monsters-page .v-def::before { background-image: url(/ui/stat-defense.png); }
+  .monsters-page .v-map::before { background-image: url(/ui/src-map.png); }
+  .monsters-page .v-gold::before { width: 16px; height: 16px; background-image: url(/ui/gold.png); }
+  .monsters-page .count-note { margin-top: var(--s-4); font-size: var(--fs-sm); color: var(--text-faint); }
+  /* the table: the 44 px icon, no render; the grid cards: the render is the card's picture */
+  .monsters-page .render { display: none; }
+  .monsters-page .dt[data-view="grid"] .name { flex-direction: column; align-items: stretch; gap: 10px; width: 100%; }
+  .monsters-page .dt[data-view="grid"] .ntext { min-height: 66px; justify-content: flex-start; }
+  /* the grid card: the picture, the names, the level, health, exp and loot, where it lives; the rest in the table */
+  .monsters-page .dt[data-view="grid"] tbody td:nth-child(5), .monsters-page .dt[data-view="grid"] tbody td:nth-child(6),
+  .monsters-page .dt[data-view="grid"] tbody td:nth-child(7) { display: none; }
+  .monsters-page .dt[data-view="grid"] tbody td:last-child { align-items: center; }
+  .monsters-page .dt[data-view="grid"] tbody td:last-child::before { white-space: nowrap; }
+  .monsters-page .dt[data-view="grid"] .where { min-width: 0; }
+  .monsters-page .wt { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  /* 96 cards: four across on a desktop (three on a narrow one), never one alone on the last line */
+  @media (min-width: 1024px) {
+    .monsters-page.container .dt[data-view="grid"] table tbody { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .monsters-page.container .dt[data-view="grid"] table tbody > tr:last-child:nth-child(4n+1) { grid-column: 1 / -1; }
+  }
+  .monsters-page .dt[data-view="grid"] .render { display: grid; place-items: center; height: 136px; border-radius: var(--r-m); background: var(--render-bg); }
+  .monsters-page .dt[data-view="grid"] .render img { width: 128px; height: 128px; object-fit: contain; filter: drop-shadow(0 6px 8px rgba(0, 0, 0, 0.35)); }
+  .monsters-page .dt[data-view="grid"] .small-icon { display: none; }
+  .monsters-page .dt[data-view="grid"] .name a, .monsters-page .dt[data-view="grid"] .alt { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .monsters-page .dt[data-view="grid"] .mk { min-height: 25px; }
+  @media (min-width: 1024px) {
+    .monsters-page .dt[data-view="table"] td.primary { width: 100%; max-width: 0; }
+    .monsters-page .dt[data-view="table"] td:not(.primary) { white-space: nowrap; }
+    .monsters-page .dt[data-view="table"] .name a, .monsters-page .dt[data-view="table"] .alt { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .monsters-page .dt[data-view="table"] .v:not(.v-map)::before { display: none; }
+    .monsters-page .dt[data-view="table"] .mk { display: none; }
+  }
+  @media (min-width: 1024px) and (max-width: 1199px) { .monsters-page th[data-col="where"], .monsters-page tbody td:nth-child(9) { display: none; } }
+  @media (max-width: 520px) { .monsters-page .page-head { flex-direction: column; align-items: flex-start; gap: var(--s-3); } }
+</style>

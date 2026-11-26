@@ -1082,6 +1082,34 @@
    "facts": [
     {
      "key": "health",
+     "value": "235"
+    },
+    {
+     "key": "exp",
+     "value": "345"
+    }
+   ],
+   "icon": "/icons/monsters/lava-snoop.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Lava Snoop",
+    "es": "Lava Snoop",
+    "pt": "Lava Snoop"
+   },
+   "ref": "monster:lava-snoop",
+   "slug": {
+    "en": "lava-snoop",
+    "es": "lava-snoop",
+    "pt": "lava-snoop"
+   }
+  },
+  {
+   "facts": [
+    {
+     "key": "health",
      "value": "200"
     },
     {
@@ -1324,6 +1352,34 @@
     "en": "necromancer",
     "es": "nigromante",
     "pt": "necromante"
+   }
+  },
+  {
+   "facts": [
+    {
+     "key": "health",
+     "value": "5.000"
+    },
+    {
+     "key": "exp",
+     "value": "250"
+    }
+   ],
+   "icon": "/icons/monsters/obelisk.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Obelisk",
+    "es": "Obelisco",
+    "pt": "Obelisco"
+   },
+   "ref": "monster:obelisk",
+   "slug": {
+    "en": "obelisk",
+    "es": "obelisco",
+    "pt": "obelisco"
    }
   },
   {

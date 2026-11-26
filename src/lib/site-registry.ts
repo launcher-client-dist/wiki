@@ -10,6 +10,7 @@ import { getCollection, type CollectionEntry, type CollectionKey } from "astro:c
 import { collections } from "../content.config.ts";
 import itemsJson from "../data/items.json";
 import entitiesJson from "../data/entities.json";
+import monstersJson from "../data/monsters.json";
 import { FIXTURE_ENTITIES } from "../../tests/fixtures/entities.ts";
 import { isLang, LANGS, type Lang } from "./i18n.ts";
 import { createRegistry, EntityError, type Registry } from "./entities/registry.ts";
@@ -17,6 +18,7 @@ import { refsInMdx } from "./entities/appears.ts";
 import type { Entity, EntityKind, EntityRef, Relation } from "./entities/types.ts";
 import { entitiesFromData, type ItemData, type ItemsFile, type StubEntity } from "./items/data.ts";
 import { SHIPPED_KINDS } from "./routes.ts";
+import type { MonsterData, MonstersFile } from "./monsters/data.ts";
 
 export const KIT_ENABLED = process.env.WIKI_KIT === "1";
 
@@ -24,6 +26,7 @@ export const KIT_ENABLED = process.env.WIKI_KIT === "1";
 export const CONTENT_KINDS: Record<string, EntityKind> = { guides: "guide", builds: "build", classes: "class", places: "place", spells: "spell" };
 
 export const ITEMS = itemsJson as unknown as ItemsFile;
+export const MONSTERS = (monstersJson as unknown as MonstersFile).monsters;
 const STUBS = (entitiesJson as unknown as { entities: StubEntity[] }).entities;
 /** A stub by its ref (a monster's `appears`, a lever place): for what the item pages show beside a link. */
 export const STUB_BY_REF: ReadonlyMap<string, StubEntity> = new Map(STUBS.map((e) => [e.ref, e]));
@@ -81,10 +84,14 @@ async function contentOf(name: string, kind: EntityKind) {
   return { entities, pages };
 }
 
-let cache: Promise<{ registry: Registry; guides: GuidePage[]; items: ItemData[] }> | undefined;
+let cache: Promise<{ registry: Registry; guides: GuidePage[]; items: ItemData[]; monsters: MonsterData[] }> | undefined;
 
 async function build() {
   const entities: Entity[] = entitiesFromData(ITEMS, STUBS);
+  // a monster stub with no monster page (none today: every monster an item names is one the game brings out) keeps
+  // its icon and hover card, without a dead link
+  const withPage = new Set(MONSTERS.map((m) => `monster:${m.id}`));
+  for (const e of entities) if (e.ref.startsWith("monster:") && !withPage.has(e.ref)) e.noPage = true;
   let guides: GuidePage[] = [];
   for (const name of Object.keys(collections).sort()) {
     const kind = CONTENT_KINDS[name];
@@ -96,10 +103,10 @@ async function build() {
   if (KIT_ENABLED) entities.push(...FIXTURE_ENTITIES.map((e) => ({ ...e, noPage: true })));
   const registry = createRegistry(entities, { shippedKinds: SHIPPED_KINDS });
   guides.sort((a, b) => a.entry.data.order - b.entry.data.order || a.slug.localeCompare(b.slug));
-  return { registry, guides, items: ITEMS.items };
+  return { registry, guides, items: ITEMS.items, monsters: MONSTERS };
 }
 
-/** The registry, the guide pages and the items (cached: built once per build). */
+/** The registry, the guide pages, the items and the monsters (cached: built once per build). */
 export function siteData() {
   cache ??= build();
   return cache;

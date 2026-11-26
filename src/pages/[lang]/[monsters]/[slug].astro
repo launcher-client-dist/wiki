@@ -1,0 +1,498 @@
+---
+import PageShell from "../../../components/layout/PageShell.astro";
+import Banner from "../../../components/ui/Banner.astro";
+import RenderSlot from "../../../components/ui/RenderSlot.astro";
+import InfoBox from "../../../components/ui/InfoBox.astro";
+import ListPanel from "../../../components/ui/ListPanel.astro";
+import ListRow from "../../../components/ui/ListRow.astro";
+import TierBadge from "../../../components/ui/TierBadge.astro";
+import Spoiler from "../../../components/ui/Spoiler.astro";
+import MapLink from "../../../components/ui/MapLink.astro";
+import Card from "../../../components/ui/Card.astro";
+import IconSlot from "../../../components/ui/IconSlot.astro";
+import EntityLink from "../../../components/entity/EntityLink.astro";
+import GameIcon from "../../../components/ui/GameIcon.astro";
+import TipTag from "../../../components/ui/TipTag.astro";
+import Value from "../../../components/ui/Value.astro";
+import { ui, fill } from "../../../i18n/index.ts";
+import { HREFLANG, LANGS, LOCALE, type Lang } from "../../../lib/i18n.ts";
+import { absoluteUrl, homePath, SECTIONS, sectionPath } from "../../../lib/routes.ts";
+import { siteData, STUB_BY_REF } from "../../../lib/site-registry.ts";
+import { appearsIn } from "../../../lib/entities/appears.ts";
+import { statLabel } from "../../../lib/items/data.ts";
+import { oneInText } from "../../../lib/items/view.ts";
+import { MONSTER_STAT_KEYS, expPerHealth, gameHour, monsterRank, monsterRef, placeLine, realOffset, respawnText, similarMonsters, type MonsterData, type MonsterStatKey, type MonsterVersion } from "../../../lib/monsters/data.ts";
+import { spellWords } from "../../../lib/monsters/spells.ts";
+import { monsterMeta } from "../../../lib/monsters/view.ts";
+import { allNames, displayName, nameWithAid } from "../../../lib/names.ts";
+
+export async function getStaticPaths() {
+  const { monsters } = await siteData();
+  return monsters.flatMap((m) => {
+    const slug = STUB_BY_REF.get(`monster:${m.id}`)!.slug;
+    return LANGS.map((lang) => ({ params: { lang, monsters: SECTIONS.monster.slug[lang], slug: slug[lang] }, props: { id: m.id } }));
+  });
+}
+const lang = Astro.params.lang as Lang;
+const t = ui(lang);
+const tm = t.monster;
+const ti = t.item;
+const { registry, monsters } = await siteData();
+const m = monsters.find((x) => x.id === Astro.props.id)! as MonsterData;
+const ref = monsterRef(m.id);
+const ent = registry.require(ref);
+const dn = displayName(ent.name, "monster", lang);
+const stub = STUB_BY_REF.get(ref)!;
+const alternates = Object.fromEntries(LANGS.map((l) => [l, registry.url(ref, l)!])) as Record<Lang, string>;
+const num = (n: number) => n.toLocaleString(LOCALE[lang]);
+const STAT_ICON: Record<MonsterStatKey, string> = { health: "stat-health", exp: "xp", damage: "stat-damage", armor: "stat-armor", defense: "stat-defense",
+  magic: "stat-magic", attackSpeed: "stat-attackSpeed", moveSpeed: "stat-moveSpeed", range: "stat-range" };
+const label = (k: MonsterStatKey) => (k === "exp" ? tm.exp : statLabel(k)[lang]);
+const statKeys = MONSTER_STAT_KEYS.filter((k) => m.stats[k]);
+const ePH = expPerHealth(m);
+const monsterOf = (id: string) => monsters.find((o) => o.id === id);
+const nameOf = (id: string) => displayName(registry.require(monsterRef(id)).name, "monster", lang).name;
+const similar = similarMonsters(monsters, m);
+const appears = appearsIn(registry, ref);
+const quests = appears.filter((s) => s.kind === "quest");
+const otherAppears = appears.filter((s) => s.kind !== "quest");
+const ap = stub.appears;
+const versions: MonsterVersion[] = m.versions ?? [];
+const description = monsterMeta(m, nameWithAid(dn), lang);
+const sec = (s: number) => num(Math.round(s * 10) / 10);
+const b = m.behaviour;
+/** A short summary from the data: where it lives (or comes out), its level band and how many drops. */
+const townNames = [...new Map([...m.places.map((p) => p.place.town), ...m.windows.map((w) => w.place.town)].map((tw) => [tw.en, tw[lang]])).values()];
+const townList = townNames.length > 1 ? `${townNames.slice(0, 3).slice(0, -1).join(", ")} ${tm.and} ${townNames.slice(0, 3).at(-1)}` : townNames[0];
+const summary = [
+  townList ? fill(m.places.length ? tm.summaryLives : tm.summaryTimed, { towns: townList }) : null,
+  m.level ? fill(m.drops.length ? tm.summaryNumbers : tm.summaryNumbersNoDrops, { min: m.level.min, max: m.level.max, n: m.drops.length }) : null,
+].filter(Boolean).join(" ");
+const hasBehaviour = b.jumpsFloors || b.flees || b.seesInvisible || b.spellsOnly || !!b.leaps || !!b.summons?.length || !!b.onDeath;
+const jsonLd = [{
+  "@context": "https://schema.org",
+  "@type": "Thing",
+  name: dn.name,
+  alternateName: allNames(ent.name).filter((n) => n !== dn.name),
+  description,
+  url: absoluteUrl(alternates[lang]),
+  inLanguage: HREFLANG[lang],
+  ...(m.render ? { image: absoluteUrl(m.render.src) } : {}),
+  additionalProperty: statKeys.map((k) => ({ "@type": "PropertyValue", name: label(k), value: m.stats[k] })),
+}];
+/** The window's script needs only numbers and the page's words: the start and end real second of the hour. */
+const winAttrs = (h: [number, number]) => ({ "data-win-start": String((h[0] % 24) * 150), "data-win-end": String((h[1] % 24) * 150 + (h[1] <= h[0] ? 3600 : 0)) });
+const spellRows = (spells: MonsterData["spells"]) => spells;
+---
+<PageShell lang={lang} title={nameWithAid(dn)} description={description} alternates={alternates} current="monster"
+  searchable={{ kind: "monster", image: ent.icon?.src }} jsonLd={jsonLd} ogImage={`/og/monsters/${stub.slug.en}.png`}
+  crumbs={[{ label: t.home, href: homePath(lang) }, { label: tm.listTitle, href: sectionPath("monster", lang) }, { label: dn.name }]}>
+  <div class="container" id="monster-page">
+    <div class="layout">
+      <div class="hero-area">
+        <Banner>
+          <div slot="media" class="hero-render">
+            <RenderSlot src={m.render?.src} alt={dn.name} width={m.render?.size[0]} height={m.render?.size[1]} size={300} eager />
+          </div>
+          <p class="kicker" data-pagefind-ignore>{m.boss ? tm.kind.boss : t.kindSingular.monster}{m.family && <> · {m.family}</>}</p>
+          <h1 lang={dn.nameLang !== lang ? HREFLANG[dn.nameLang] : undefined}>{dn.name}</h1>
+          {dn.aid && <p class="alt" lang={dn.aidLang && dn.aidLang !== lang ? HREFLANG[dn.aidLang] : undefined} data-pagefind-meta="alt">{dn.aid}</p>}
+          {summary && <p class="summary">{summary}</p>}
+          {m.how === "summon" && m.summonedBy?.length && (
+            <p class="summoned" data-section="summoned-by"><GameIcon name="summon" scale={2} />{tm.onlySummoned} {m.summonedBy.map((s, i) => <>{i > 0 && ", "}<EntityLink to={monsterRef(s)} iconSize={28} /></>)}</p>
+          )}
+          <div class="tags" slot="foot" data-pagefind-ignore>
+            {m.level && <TipTag icon="xp" tip={tm.levelNote}>{`${tm.level} ${fill(tm.levelValue, m.level)}`}</TipTag>}
+            {m.boss && <TipTag icon="boss" tip={tm.kindTip.boss}>{tm.kind.boss}</TipTag>}
+            {m.windows.length > 0 && <TipTag icon="time" tip={tm.kindTip.timed}>{tm.kind.timed}</TipTag>}
+            {m.how === "summon" && <TipTag icon="summon" tip={tm.kindTip.summon}>{tm.kind.summon}</TipTag>}
+            {(m.how === "lever" || m.how === "travel" || m.how === "placed") && <TipTag icon="src-map" tip={tm.kindTip[m.how]}>{tm.kind[m.how]}</TipTag>}
+            {m.family && <TipTag icon="src-drop" tip={fill(tm.familyTip, { f: m.family })}>{fill(tm.familyTag, { f: m.family })}</TipTag>}
+          </div>
+        </Banner>
+      </div>
+
+      <div class="main">
+        {m.windows.length > 0 && (
+          <section class="block" aria-labelledby="h-window" data-section="windows">
+            <h2 id="h-window">{tm.windowTitle}</h2>
+            <p class="muted">{tm.windowIntro}</p>
+            <ul class="windows">
+              {m.windows.map((w) => (
+                <li class="window" {...winAttrs(w.hours)}>
+                  <div class="wtimes">
+                    <span class="wgame"><span class="wicon"><GameIcon name="time" fit={26} /></span><span><small>{tm.windowGame}</small><b class="num">{gameHour(w.hours[0])}–{gameHour(w.hours[1])}</b></span></span>
+                    <span class="wreal"><small>{tm.windowReal}</small><span>{fill(tm.windowRealText, { a: realOffset(w.hours[0]), b: realOffset(w.hours[1]) })}</span></span>
+                  </div>
+                  <p class="wnext" data-win-next data-t-next={tm.windowNext} data-t-now={tm.windowNow} data-t-clock={tm.yourClock} aria-live="polite"></p>
+                  <p class="wwhere">
+                    {w.invasion && <span class="inv"><GameIcon name="summon" scale={1} />{tm.windowInvasion}{w.oneNightIn && <> · {fill(tm.windowNights, { n: w.oneNightIn })}</>}</span>}
+                    <span>{placeLine(w.place, lang, ti.near, ti.underground)}</span>
+                    <MapLink variant="inline" href={w.link} label={ti.mapLink} />
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+
+        {m.spells.length > 0 && (
+          <section class="block" aria-labelledby="h-spells" data-section="spells">
+            <h2 id="h-spells">{tm.spellsTitle}</h2>
+            <p class="muted">{tm.spellsIntro}</p>
+            <ul class="spells">
+              {spellRows(m.spells).map((sp) => (
+                <li class="spell">
+                  <span class="spicon">{sp.icon ? <img src={sp.icon} width={44} height={46} alt="" class="px" loading="lazy" decoding="async" /> : <GameIcon name={sp.kind === "heal" ? "stat-hpRegen" : sp.kind === "summon" ? "summon" : sp.kind === "leap" ? "leap" : "stat-magic"} fit={30} />}</span>
+                  <span class="sptext">
+                    <span class="spname">{sp.spell ? <span title={tm.gameSpellTip}><EntityLink to={sp.spell} icon={false} /></span> : spellWords(sp, lang)}</span>
+                    <span class="speffect">
+                      {sp.damage !== undefined && <span class="sval"><GameIcon name="stat-damage" scale={1} /><b class="num">{num(sp.damage)}</b> {tm.spellDamage} <small>{tm.perHit}</small></span>}
+                      {sp.heal !== undefined && <span class="sval"><GameIcon name="stat-health" scale={1} /><b class="num">{num(sp.heal)}</b> {tm.spellHeal}</span>}
+                      {sp.debuff && <span class="sval"><GameIcon name={`stat-${sp.debuff.stat}`} scale={1} />{fill(tm.debuff[sp.debuff.stat], { v: sp.debuff.value, s: sp.debuff.seconds })}</span>}
+                      {sp.buff && <span class="sval"><GameIcon name="stat-moveSpeed" scale={1} />{fill(tm.buff, { v: sp.buff.value, s: sp.buff.seconds })}</span>}
+                      {sp.push && <span class="sval"><GameIcon name="leap" scale={1} />{fill(tm.push, { n: sp.push })}</span>}
+                      {sp.kind === "summon" && b.summons?.filter((x) => x.kind === "boss").map((x) => <span class="sval"><GameIcon name="summon" scale={1} />{tm.behaviourText.summonBoss} <EntityLink to={monsterRef(x.monster)} iconSize={22} /></span>)}
+                    </span>
+                  </span>
+                  <span class="spcad">
+                    <span class="sval"><GameIcon name="time" scale={1} />{fill(tm.spellTries, { s: sec(sp.cooldown) })}</span>
+                    <span class="odds">{sp.oneIn.oneIn === 1 && !sp.oneIn.approx ? tm.spellAlways : fill(tm.spellOdds, { odds: oneInText(sp.oneIn, ti, lang) })}</span>
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+
+        <section class="block" aria-labelledby="h-behaviour" data-section="behaviour">
+          <h2 id="h-behaviour">{tm.behaviourTitle}</h2>
+          <ul class="behave">
+            {!hasBehaviour && <li><span class="bicon"><GameIcon name="stat-moveSpeed" fit={28} /></span><span>{tm.behaviourNone}</span></li>}
+            {b.jumpsFloors && <li><span class="bicon"><GameIcon name="jump-floors" fit={28} /></span><span>{tm.behaviourText.jumpsFloors}</span></li>}
+            {b.leaps && <li><span class="bicon"><GameIcon name="leap" fit={28} /></span><span>{b.leaps.oneIn ? fill(tm.behaviourText.leapsOdds, { s: sec(b.leaps.every), odds: oneInText(b.leaps.oneIn, ti, lang) }) : fill(tm.behaviourText.leaps, { s: sec(b.leaps.every) })}</span></li>}
+            {b.summons?.map((s) => (
+              <li>
+                <span class="bicon"><GameIcon name="summon" fit={28} /></span>
+                <span class="bline" data-flow>
+                  <span>{s.kind === "waves" ? tm.behaviourText.summonWaves : s.kind === "copies" ? tm.behaviourText.summonCopies : tm.behaviourText.summonBoss}</span>
+                  {s.kind !== "copies" || s.monster !== m.id ? <EntityLink to={monsterRef(s.monster)} iconSize={28} /> : null}
+                  {[s.perCast && fill(tm.behaviourText.perCast, { n: s.perCast }), s.cap && fill(tm.behaviourText.cap, { n: s.cap }), s.every && fill(tm.behaviourText.every, { s: sec(s.every) })].filter(Boolean).length > 0 && (
+                    <span class="bmeta">{[s.perCast && fill(tm.behaviourText.perCast, { n: s.perCast }), s.cap && fill(tm.behaviourText.cap, { n: s.cap }), s.every && fill(tm.behaviourText.every, { s: sec(s.every) })].filter(Boolean).join(" · ")}</span>
+                  )}
+                </span>
+              </li>
+            ))}
+            {b.onDeath && <li><span class="bicon"><GameIcon name="src-drop" fit={28} /></span><span class="bline" data-flow><span>{tm.behaviourText.onDeath}</span><EntityLink to={monsterRef(b.onDeath)} iconSize={28} /></span></li>}
+            {b.flees && <li><span class="bicon"><GameIcon name="stat-moveSpeed" fit={28} /></span><span>{tm.behaviourText.flees}</span></li>}
+            {b.seesInvisible && <li><span class="bicon"><GameIcon name="see-invisible" fit={28} /></span><span>{tm.behaviourText.seesInvisible}</span></li>}
+            {b.spellsOnly && <li><span class="bicon"><GameIcon name="stat-magic" fit={28} /></span><span>{tm.behaviourText.spellsOnly}</span></li>}
+          </ul>
+        </section>
+
+        {m.drops.length > 0 && (
+          <section class="block" aria-labelledby="h-drops" data-section="drops">
+            <h2 id="h-drops" class="hcount">{tm.dropsTitle}<span class="n">{m.drops.length}</span></h2>
+            {m.drops.some((d) => d.quality) && <p class="muted">{ti.qualityNote}</p>}
+            <ul class="rows" id="drops">
+              {m.drops.map((d) => (
+                <ListRow>
+                  <EntityLink to={`item:${d.item}`} iconSize={40} />
+                  {d.unique && <Fragment slot="sub"><span class="uniq" title={tm.uniqueTip}><GameIcon name="src-drop" scale={1} />{tm.unique}<span class="sr-only"> · {tm.uniqueTip}</span></span></Fragment>}
+                  <Fragment slot="end">
+                    <span class="qslot">{d.quality && <span class="qchip" title={ti.qualityYes}><GameIcon name="quality-any" /><span class="sr-only">{ti.qualityYes}</span></span>}</span>
+                    <Value kind="amount" n={d.amount[0] === d.amount[1] ? d.amount[0] : `${d.amount[0]}–${d.amount[1]}`} lang={lang} noIcon />
+                    <TierBadge tier={d.tier} />
+                  </Fragment>
+                </ListRow>
+              ))}
+            </ul>
+          </section>
+        )}
+
+        {(m.places.length > 0 || (ap && ap.how !== "timed")) && (
+          <section class="block" aria-labelledby="h-where" data-section="where">
+            <h2 id="h-where" class="hcount">{tm.whereTitle}{m.places.length > 0 && <span class="n">{m.places.length}</span>}</h2>
+            {m.places.length > 0 && (
+              <ul class="rows" id="places">
+                {m.places.map((p) => (
+                  <ListRow>
+                    <span class="pline">{placeLine(p.place, lang, ti.near, ti.underground)}</span>
+                    <Fragment slot="end">
+                      <span class="spawns" title={tm.spawnTip}><GameIcon name="stack" scale={1} /><b class="num">{p.count === 1 ? tm.spawnPoint : fill(tm.spawnPoints, { n: p.count })}</b></span>
+                      <MapLink variant="inline" href={p.link} label={ti.mapLink} />
+                    </Fragment>
+                  </ListRow>
+                ))}
+              </ul>
+            )}
+            {ap && ap.how !== "timed" && (
+              <p class="how" data-section="how">
+                {ap.how === "placed" && <><span class="bicon"><GameIcon name="src-map" fit={28} /></span><span>{tm.howPlaced}: {placeLine(ap.where.place, lang, ti.near, ti.underground)}</span><MapLink variant="inline" href={ap.where.link} label={ti.mapLink} /></>}
+                {ap.how === "lever" && <><span class="bicon"><GameIcon name="src-map" fit={28} /></span><span>{tm.howLever}:</span><EntityLink to={ap.place} icon={false} /><MapLink variant="inline" href={ap.where.link} label={ti.mapLink} /></>}
+                {ap.how === "travel" && <><span class="bicon"><GameIcon name="src-map" fit={28} /></span><span>{tm.howTravel}:</span><EntityLink to={ap.via} iconSize={28} /></>}
+              </p>
+            )}
+          </section>
+        )}
+
+        {versions.length > 1 && (
+          <section class="block" aria-labelledby="h-versions" data-section="versions">
+            <h2 id="h-versions">{tm.versionsTitle}</h2>
+            <p class="muted">{fill(tm.versionsIntro, { n: versions.length })}</p>
+            <ul class="versions">
+              {versions.map((v, i) => (
+                <li class="version">
+                  <strong>{fill(tm.versionN, { n: i + 1 })}</strong>
+                  <span class="vstats">{MONSTER_STAT_KEYS.filter((k) => v.stats[k]).slice(0, 5).map((k) => <span class="sval"><GameIcon name={STAT_ICON[k]} scale={1} /><span class="sr-only">{label(k)}</span><b class="num">{num(v.stats[k])}</b></span>)}</span>
+                  {v.spells.length > 0 && <span class="vspells">{v.spells.map((sp) => sp.spell ? registry.link(sp.spell, lang).name : spellWords(sp, lang)).join(" · ")}</span>}
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+
+        {m.variants.length > 0 && (
+          <section class="block" aria-labelledby="h-variants" data-pagefind-ignore data-section="variants">
+            <h2 id="h-variants">{tm.variantsTitle}</h2>
+            <div class="similar">
+              {m.variants.map((id) => {
+                const o = monsterOf(id)!;
+                const e = registry.require(monsterRef(id));
+                return (
+                  <Card href={registry.url(monsterRef(id), lang)!} title={nameOf(id)} kicker={o.level ? `${tm.colLevel} ${fill(tm.levelValue, o.level)}` : t.kindSingular.monster} layout="row">
+                    <IconSlot slot="emblem" icon={e.icon ?? null} kind="monster" size={56} />
+                    <span class="cstats"><span class="sval"><GameIcon name="stat-health" scale={1} /><b class="num">{num(o.stats.health)}</b></span><span class="sval"><GameIcon name="xp" scale={1} /><b class="num">{num(o.stats.exp)}</b></span></span>
+                  </Card>
+                );
+              })}
+            </div>
+          </section>
+        )}
+
+        {quests.length > 0 && (
+          <section class="block" aria-labelledby="h-quests" data-section="quests">
+            <h2 id="h-quests">{t.kindPlural.quest}</h2>
+            <Spoiler title={tm.questsSpoiler}>
+              <ul class="plain">{quests.flatMap((s) => s.refs).map((r) => <li><EntityLink to={r} /></li>)}</ul>
+            </Spoiler>
+          </section>
+        )}
+
+        {otherAppears.length > 0 && (
+          <section class="block" aria-labelledby="h-appears" data-section="appears">
+            <h2 id="h-appears">{t.appearsHeading}</h2>
+            <div class="panels">
+              {otherAppears.map((s) => (
+                <ListPanel title={t.appearsTitle[s.kind] ?? t.kindPlural[s.kind]} count={s.refs.length} id={`appears-${s.kind}`}>
+                  {s.refs.map((r) => <ListRow><EntityLink to={r} /></ListRow>)}
+                </ListPanel>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {similar.length > 0 && (
+          <section class="block" aria-labelledby="h-similar" data-pagefind-ignore data-section="similar">
+            <h2 id="h-similar">{tm.similarTitle}</h2>
+            <div class="similar">
+              {similar.map((o) => {
+                const e = registry.require(monsterRef(o.id));
+                return (
+                  <Card href={registry.url(monsterRef(o.id), lang)!} title={nameOf(o.id)} kicker={o.level ? `${tm.colLevel} ${fill(tm.levelValue, o.level)}` : t.kindSingular.monster} layout="row">
+                    <IconSlot slot="emblem" icon={e.icon ?? null} kind="monster" size={56} />
+                    <span class="cstats"><span class="sval"><GameIcon name="stat-health" scale={1} /><b class="num">{num(o.stats.health)}</b></span><span class="sval"><GameIcon name="xp" scale={1} /><b class="num">{num(o.stats.exp)}</b></span></span>
+                  </Card>
+                );
+              })}
+            </div>
+          </section>
+        )}
+      </div>
+
+      <aside class="side">
+        <InfoBox title={tm.stats}>
+          <ul class="statlist" data-section="statlist">
+            {statKeys.map((k) => {
+              const n = m.stats[k];
+              const r = monsterRank(monsters, m, k);
+              return (
+                <li class="stat">
+                  <span class="sicon"><GameIcon name={STAT_ICON[k]} fit={30} /></span>
+                  <span class="sname">{label(k)}</span>
+                  <span class="sv num big">{num(n)}</span>
+                  {r && <span class="rbar" aria-hidden="true"><span class:list={["rfill", { best: r.rank === 1 }]} style={`width:${Math.max(4, Math.round(r.share * 100))}%`}></span></span>}
+                  {r && <span class="smeta" data-pagefind-ignore><span class="rtext">{fill(r.rank === 1 ? tm.rankBest : tm.rankOf, { n: r.rank, of: r.of })}</span></span>}
+                </li>
+              );
+            })}
+          </ul>
+          <ul class="facts">
+            {m.level && <li><span class="sicon"><GameIcon name="xp" fit={28} /></span><span>{tm.level}</span><b class="num">{fill(tm.levelValue, m.level)}</b></li>}
+            {m.how !== "summon" && <li><span class="sicon"><GameIcon name="time" fit={28} /></span><span>{tm.respawn}</span><b class="num">{respawnText(m.respawn, lang)}</b></li>}
+            {ePH !== null && <li><span class="sicon"><GameIcon name="xp" fit={28} /></span><span>{tm.expPerHealth}</span><b class="num">{num(ePH)}</b></li>}
+            {m.loot !== null && <li><span class="sicon"><GameIcon name="gold" fit={28} /></span><span>{tm.loot}</span><b class="loot"><small>{fill(tm.lootAbout, { n: "" }).trim()}</small><Value kind="gold" n={m.loot} lang={lang} size="big" noIcon /></b></li>}
+          </ul>
+          <p slot="footer">{fill(tm.rankNote, { n: monsters.length })}</p>
+          {m.level && <p slot="footer">{tm.levelNote}</p>}
+          {m.loot !== null && <p slot="footer">{tm.lootNote}</p>}
+        </InfoBox>
+      </aside>
+    </div>
+  </div>
+</PageShell>
+<script>
+  // the next window in the reader's own clock: game hour H starts at real second H x 150 of every hour, the same in
+  // every time zone of whole hours (the page holds the seconds; nothing is fetched)
+  function paint() {
+    const fmt = new Intl.DateTimeFormat(document.documentElement.lang || undefined, { hour: "2-digit", minute: "2-digit" });
+    for (const li of document.querySelectorAll<HTMLElement>("[data-win-start]")) {
+      const out = li.querySelector<HTMLElement>("[data-win-next]");
+      if (!out) continue;
+      const start = Number(li.dataset.winStart), end = Number(li.dataset.winEnd);
+      const now = Date.now() / 1000;
+      const hour0 = now - (now % 3600);
+      let text = "";
+      for (const base of [hour0 - 3600, hour0, hour0 + 3600]) {
+        const s = base + start, e = base + end;
+        if (now < e) {
+          text = now >= s ? (out.dataset.tNow ?? "").replace("{t}", fmt.format(e * 1000)) : (out.dataset.tNext ?? "").replace("{t}", fmt.format(s * 1000));
+          break;
+        }
+      }
+      out.textContent = text ? `${text} (${out.dataset.tClock})` : "";
+    }
+  }
+  paint();
+  setInterval(paint, 30000);
+</script>
+<style>
+  /* the hero (Codex): the render is the star, on a soft green glow; no frame */
+  .hero-render { position: relative; isolation: isolate; width: 300px; margin: -12px 0; }
+  .hero-render::before { content: ""; position: absolute; inset: -24px; z-index: -1; border-radius: 50%; background: var(--hero-glow); }
+  .hero-render :global(img) { filter: drop-shadow(0 10px 14px rgba(0, 0, 0, 0.45)); }
+  @media (max-width: 759px) { .hero-render { width: 240px; margin: 0; } }
+  .kicker { margin: 0; font: 700 var(--fs-xs) / 1 var(--font-body); letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent-text); }
+  .alt { margin: 0; color: var(--banner-muted); font-size: var(--fs-lg); }
+  .summary { margin: 2px 0 0; max-width: 34rem; color: var(--banner-text); font-size: var(--fs-md); line-height: 1.5; }
+  .summoned { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; margin: 4px 0 0; color: var(--banner-text); }
+  .tags { position: relative; display: flex; flex-wrap: wrap; gap: 8px; }
+  @container foot (max-width: 679px) {
+    .tags { display: inline-grid; grid-template-columns: minmax(0, max-content); }
+    .tags :global(.tiptag) { display: block; }
+    .tags :global(.tt) { width: 100%; }
+  }
+  .tags :global(.tag) { background: var(--banner-chip-bg); color: var(--banner-text); white-space: normal; }
+
+  .layout { display: grid; gap: var(--s-6); grid-template-columns: minmax(0, 1fr); grid-template-areas: "hero" "side" "main"; }
+  .hero-area { grid-area: hero; min-width: 0; }
+  .main { grid-area: main; min-width: 0; container: main / inline-size; }
+  .side { grid-area: side; min-width: 0; }
+  @media (min-width: 1000px) {
+    .layout { grid-template-columns: minmax(0, 1fr) 330px; grid-template-areas: "hero side" "main side"; align-items: start; column-gap: var(--s-6); row-gap: var(--s-7); }
+  }
+  @media (min-width: 1000px) and (max-width: 1199px) { .layout { grid-template-areas: "hero hero" "main side"; } }
+  .block + .block { margin-top: var(--s-7); }
+  .block > h2 { margin-bottom: var(--s-4); }
+  .block > .muted { margin: calc(-1 * var(--s-2)) 0 var(--s-4); }
+  .hcount { display: flex; align-items: center; gap: 10px; }
+  .hcount .n { display: inline-grid; place-items: center; min-width: 26px; height: 24px; padding: 0 8px; border-radius: var(--r-pill);
+    font: 700 var(--fs-xs) / 1 var(--font-num); color: var(--text); background: var(--surface-3); }
+  .rows { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--row-border); }
+  .muted { color: var(--text-muted); }
+  .panels { display: grid; gap: var(--s-5); }
+  .num { font-family: var(--font-num); }
+  .sval { display: inline-flex; align-items: center; gap: 5px; white-space: nowrap; }
+  .sval b { color: var(--heading); }
+  .sval small { color: var(--text-muted); font-size: var(--fs-xs); }
+
+  /* the schedule: one card per window, the game time and the real time side by side, the next one in your clock */
+  .windows { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+  .window { display: grid; gap: 10px; padding: 16px 18px; background: var(--card-bg); border: var(--bw) solid var(--border); border-left: 4px solid var(--sun); border-radius: var(--r-l); }
+  .wtimes { display: grid; gap: 12px; grid-template-columns: minmax(0, 1fr); }
+  @container main (min-width: 520px) { .wtimes { grid-template-columns: auto minmax(0, 1fr); align-items: center; column-gap: 28px; } }
+  .wgame { display: flex; align-items: center; gap: 12px; }
+  .wgame > span:last-child, .wreal { display: grid; gap: 2px; }
+  .wtimes small { font-size: var(--fs-xs); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); }
+  .wgame b { font-size: 1.375rem; color: var(--heading); }
+  .wicon, .bicon, .spicon { display: inline-grid; place-items: center; width: 44px; height: 44px; flex: none; border-radius: 10px; background: var(--well); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06); }
+  .wnext { margin: 0; font-weight: 700; color: var(--accent-text); }
+  .wnext:empty { display: none; }
+  .wwhere { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px; margin: 0; font-size: var(--fs-sm); color: var(--text-muted); }
+  .inv { display: inline-flex; align-items: center; gap: 5px; padding: 1px 8px 1px 4px; border-radius: 999px; font-weight: 700; color: var(--text); background: var(--surface-2); border: 1px solid var(--row-border); }
+
+  /* the spells: one row each, the game's icon in its well, the name and what it does, then how often */
+  .spells { list-style: none; margin: 0; padding: 0; display: grid; border: var(--bw) solid var(--border); border-radius: var(--r-l); background: var(--card-bg); }
+  .spell { display: grid; grid-template-columns: 44px minmax(0, 1fr); grid-template-areas: "icon text" "icon cad"; column-gap: 14px; row-gap: 6px; align-items: center; padding: 12px 16px; }
+  .spell + .spell { border-top: 1px solid var(--row-border); }
+  @container main (min-width: 620px) { .spell { grid-template-columns: 44px minmax(0, 1fr) auto; grid-template-areas: "icon text cad"; } }
+  .spicon { grid-area: icon; align-self: start; }
+  .spicon .px { image-rendering: pixelated; }
+  .sptext { grid-area: text; display: grid; gap: 4px; min-width: 0; }
+  .spname { font-weight: 700; color: var(--heading); }
+  .speffect { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: var(--fs-sm); color: var(--text-muted); }
+  .spcad { grid-area: cad; display: grid; gap: 2px; justify-items: start; font-size: var(--fs-sm); color: var(--text-muted); }
+  @container main (min-width: 620px) { .spcad { justify-items: end; text-align: right; } }
+  .odds { font-weight: 700; color: var(--text); }
+
+  /* behaviour: a sentence each, its icon in a well */
+  .behave { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+  .behave li { display: grid; grid-template-columns: 44px minmax(0, 1fr); column-gap: 14px; align-items: center; }
+  .bline { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; }
+  .bmeta { font-size: var(--fs-sm); color: var(--text-muted); }
+
+  .uniq { display: inline-flex; align-items: center; gap: 5px; padding: 1px 8px 1px 4px; border-radius: 999px; font-size: var(--fs-xs); font-weight: 700;
+    color: var(--sun-text, var(--text)); background: color-mix(in srgb, var(--sun) 18%, transparent); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--sun) 60%, transparent); }
+  .qchip { color: var(--magic); display: inline-flex; }
+  :global(#drops .end) { display: grid; grid-template-columns: 24px 2.5rem 7.75rem; align-items: center; justify-items: end; gap: 10px; flex-wrap: nowrap; }
+  :global(#drops .end .tier) { justify-self: stretch; }
+  .qslot { display: inline-grid; place-items: center; width: 24px; }
+  /* a phone: the numbers go under the name, still in their columns (the quality mark's slot stays, empty or not) */
+  @media (max-width: 639px) {
+    :global(#drops .end) { grid-template-columns: 24px 3.5rem 7.75rem; justify-items: start; gap: 8px; }
+  }
+  .pline { min-width: 0; }
+  :global(#places .end) { display: flex; align-items: center; gap: 14px; flex-wrap: nowrap; }
+  .spawns { display: inline-flex; align-items: center; gap: 5px; white-space: nowrap; font-size: var(--fs-sm); color: var(--text-muted); }
+  .spawns b { font-weight: 700; color: var(--text); font-family: var(--font-body); }
+  .how { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; margin: var(--s-4) 0 0; }
+
+  .versions { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+  .version { display: grid; gap: 6px; padding: 14px 0; border-bottom: 1px solid var(--row-border); }
+  .vstats { display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: var(--fs-sm); }
+  .vspells { font-size: var(--fs-sm); color: var(--text-muted); }
+
+  .plain { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+  .similar { display: grid; gap: 12px; grid-template-columns: minmax(0, 1fr); }
+  @container main (min-width: 520px) {
+    .similar { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .similar > :global(:last-child:nth-child(odd)) { grid-column: 1 / -1; }
+  }
+  @container main (min-width: 780px) {
+    .similar:not(:has(> :nth-child(4):last-child)) { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .similar:not(:has(> :nth-child(4):last-child)) > :global(:last-child:nth-child(odd)) { grid-column: auto; }
+  }
+  .cstats { display: inline-flex; flex-wrap: wrap; gap: 4px 14px; }
+
+  /* the stats box (layout rules): one grid per row, a 44 px icon well at one x, the label left, the value right; a
+     stat's bar and its rank under its label */
+  .statlist { list-style: none; margin: 0; padding: 4px 0; display: grid; }
+  .stat, .facts li { display: grid; grid-template-columns: 44px minmax(0, 1fr) auto; column-gap: 14px; align-items: center; padding: 10px 18px; }
+  .stat { grid-template-areas: "icon name value" "icon bar bar" "icon meta meta"; row-gap: 4px; }
+  .stat + .stat { border-top: 1px solid var(--row-border); }
+  .sicon { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 10px; background: var(--well); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06); }
+  .stat .sicon { grid-area: icon; align-self: start; }
+  .sname { grid-area: name; color: var(--text); font-weight: 700; font-size: var(--fs-sm); }
+  .stat .sv { grid-area: value; justify-self: end; color: var(--heading); font: 700 1.375rem / 1 var(--font-num); white-space: nowrap; }
+  .rbar { grid-area: bar; height: 6px; border-radius: 3px; background: var(--surface-3); overflow: hidden; box-shadow: inset 0 0 0 1px var(--row-border); }
+  .rfill { display: block; height: 100%; border-radius: 3px; background: var(--sky); }
+  .rfill.best { background: var(--sun); }
+  .smeta { grid-area: meta; display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; }
+  .rtext { display: inline-flex; align-items: center; gap: 4px; font-size: var(--fs-xs); color: var(--text-muted); }
+  .facts { list-style: none; margin: 0; padding: 4px 0; display: grid; border-top: 1px solid var(--row-border); background: var(--surface-2); }
+  .facts li + li { border-top: 1px solid var(--row-border); }
+  .facts span:not(.sicon) { color: var(--text-muted); font-size: var(--fs-sm); }
+  .facts b { color: var(--heading); font-size: 1.0625rem; white-space: nowrap; }
+  .facts .loot { display: inline-flex; align-items: baseline; gap: 6px; }
+  .facts .loot small { font-size: var(--fs-xs); font-weight: 600; color: var(--text-muted); }
+</style>

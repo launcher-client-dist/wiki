@@ -38,8 +38,8 @@ export interface Variant {
 export interface FilterGroup {
   key: string;
   label: string;
-  /** Every option shows its game icon (a filter chip is never plain text). */
-  options: { value: string; label: string; count?: number; icon: string }[];
+  /** Every option shows its game icon, or an entity's own icon (`img`): a filter chip is never plain text. */
+  options: ({ value: string; label: string; count?: number } & ({ icon: string; img?: never } | { img: { src: string; width: number; height: number }; icon?: never }))[];
 }
 interface Props {
   id: string;
@@ -78,7 +78,7 @@ const strings = { count: t.tableCount, countAll: t.tableCountAll };
       {filters.map((g) => (
         <div class="fgroup" role="group" aria-label={g.label}>
           <span class="flabel">{g.label}</span>
-          <div class="chips">{g.options.map((o) => <Chip filter={g.key} value={o.value} count={o.count} gicon={o.icon}>{o.label}</Chip>)}</div>
+          <div class="chips">{g.options.map((o) => o.img ? <Chip filter={g.key} value={o.value} count={o.count} img={o.img}>{o.label}</Chip> : <Chip filter={g.key} value={o.value} count={o.count} gicon={o.icon!}>{o.label}</Chip>)}</div>
         </div>
       ))}
     </div>
