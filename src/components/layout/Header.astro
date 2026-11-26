@@ -18,9 +18,9 @@ const shipped = (k: EntityKind) => SHIPPED_KINDS.includes(k);
 ---
 <header class="site-header">
   <div class="container bar">
-    <a class="brand" href={homePath(lang)} aria-label={`${t.siteName}, ${t.home.toLowerCase()}`}>
+    <a class="brand" href={homePath(lang)}>
       <PixelArt logo size={34} />
-      <span class="brand-name">Opengea<small>Wiki</small></span>
+      <span class="brand-name">Opengea <small>Wiki</small></span>
     </a>
     <nav class="main-nav" aria-label={t.navLabel}>
       {NAV_KINDS.map((k) => shipped(k) ? (
@@ -30,7 +30,7 @@ const shipped = (k: EntityKind) => SHIPPED_KINDS.includes(k);
       ))}
     </nav>
     <div class="tools">
-      <button class="search-trigger" type="button" data-open-search aria-label={`${t.searchOpen} (Ctrl+K)`}>
+      <button class="search-trigger" type="button" data-open-search aria-keyshortcuts="Control+K /">
         <Icon name="search" /><span class="label">{t.searchShort}</span><kbd>Ctrl K</kbd>
       </button>
       <nav class="lang" aria-label={t.langSwitchLabel}>
@@ -112,10 +112,11 @@ const shipped = (k: EntityKind) => SHIPPED_KINDS.includes(k);
   }
   .search-trigger { display: flex; align-items: center; gap: 10px; padding: 0 10px; font: 500 var(--fs-sm) / 1 var(--font-body); }
   .search-trigger:hover, .icon-btn:hover { color: var(--text); background: var(--surface-2); }
-  .search-trigger .label, .search-trigger kbd { display: none; }
+  .search-trigger kbd { display: none; }
+  .search-trigger .label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
   @media (min-width: 720px) {
     .search-trigger { min-width: 220px; padding: 0 8px 0 12px; }
-    .search-trigger .label { display: inline; }
+    .search-trigger .label { position: static; width: auto; height: auto; overflow: visible; clip: auto; }
     .search-trigger kbd { display: inline-block; margin-left: auto; }
   }
   .icon-btn { width: 40px; display: grid; place-items: center; }
