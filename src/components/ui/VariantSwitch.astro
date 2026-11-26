@@ -6,19 +6,22 @@
  * a short flash, none with reduced motion). Each variant can carry an icon (a GameIcon name), always beside its word.
  * Without JavaScript the base values stay.
  *   <VariantSwitch scope="item-stats" label="Classe" variants={[{ key: "base", label: "Base" }, { key: "knight", label: "Cavaleiro", icon: "class-knight" }]} />
+ * `compact`: icon tabs in one row (every variant needs an icon); the words stay for screen readers and in the tooltip,
+ * and the picked one's name shows in any element with data-vcap="<scope>" (a caption the page places).
  */
 import GameIcon from "./GameIcon.astro";
 interface Props {
   scope: string;
   label: string;
   variants: { key: string; label: string; icon?: string }[];
+  compact?: boolean;
 }
-const { scope, label, variants } = Astro.props;
+const { scope, label, variants, compact = false } = Astro.props;
 ---
-<div class="vswitch" role="radiogroup" aria-label={label} data-vswitch={scope}>
+<div class:list={["vswitch", { compact }]} role="radiogroup" aria-label={label} data-vswitch={scope} style={compact ? `--n:${variants.length}` : undefined}>
   {variants.map((v, i) => (
-    <button type="button" role="radio" aria-checked={i === 0 ? "true" : "false"} tabindex={i === 0 ? 0 : -1} data-v={v.key}>
-      {v.icon && <span class="vicon"><GameIcon name={v.icon} scale={2} /></span>}<span>{v.label}</span>
+    <button type="button" role="radio" aria-checked={i === 0 ? "true" : "false"} tabindex={i === 0 ? 0 : -1} data-v={v.key} data-label={v.label} title={compact ? v.label : undefined}>
+      {v.icon && <span class="vicon"><GameIcon name={v.icon} scale={2} /></span>}<span class:list={{ "sr-only": compact }}>{v.label}</span>
     </button>
   ))}
 </div>
@@ -30,6 +33,7 @@ const { scope, label, variants } = Astro.props;
     const pick = (b: HTMLButtonElement, focus = false) => {
       const v = b.dataset.v!;
       for (const x of buttons) { const on = x === b; x.setAttribute("aria-checked", String(on)); x.tabIndex = on ? 0 : -1; }
+      for (const cap of document.querySelectorAll<HTMLElement>(`[data-vcap="${sw.dataset.vswitch}"]`)) cap.textContent = b.dataset.label ?? "";
       for (const el of scope?.querySelectorAll<HTMLElement>("[data-v-base]") ?? []) {
         const base = el.getAttribute("data-v-base") ?? "";
         const text = el.getAttribute(`data-v-${v}`) ?? base;
@@ -62,5 +66,8 @@ const { scope, label, variants } = Astro.props;
   button:hover { color: var(--text); background: var(--hover-strong); }
   /* Codex: the selected class in the one accent (yellow is kept for "the best") */
   button[aria-checked="true"] { background: var(--accent); color: var(--on-accent); box-shadow: var(--shadow-1); }
+  /* compact: one row of equal icon tabs, never wrapping (no tab left alone on a line) */
+  .compact { display: grid; grid-template-columns: repeat(var(--n), minmax(0, 1fr)); flex-wrap: nowrap; }
+  .compact button { padding: 4px; min-height: 46px; }
   .vicon { display: inline-grid; place-items: center; width: 34px; height: 34px; border-radius: 8px; background: var(--well); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1); }
 </style>

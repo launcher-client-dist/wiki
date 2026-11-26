@@ -1,7 +1,8 @@
 ---
 /**
  * The entity hero (Codex): a calm panel, the entity's picture on the left (slot "media": a big pixel icon, a render)
- * and its names, text and tags on the right (default slot). No sky, clouds or grass strip.
+ * and its names and text on the right (default slot); slot "foot" (its tags) runs under both, the hero's full width.
+ * No sky, clouds or grass strip.
  */
 interface Props {
   compact?: boolean;
@@ -11,6 +12,7 @@ const { compact = false } = Astro.props;
 <header class:list={["banner", { compact }]}>
   {Astro.slots.has("media") && <div class="media"><slot name="media" /></div>}
   <div class="body"><slot /></div>
+  {Astro.slots.has("foot") && <div class="foot"><slot name="foot" /></div>}
 </header>
 <style>
   .banner {
@@ -18,8 +20,9 @@ const { compact = false } = Astro.props;
     padding: var(--s-5); border: var(--bw) solid var(--border); border-radius: var(--r-xl); box-shadow: var(--shadow-2);
     background: linear-gradient(180deg, var(--sky-top) 0%, var(--sky-bottom) 100%); color: var(--banner-text);
   }
-  @media (min-width: 760px) { .banner { grid-template-columns: auto 1fr; padding: var(--s-6); gap: var(--s-6); } }
+  @media (min-width: 760px) { .banner { grid-template-columns: auto 1fr; padding: var(--s-5) var(--s-6) var(--s-5) var(--s-5); gap: var(--s-5); } }
   .media { justify-self: center; }
   .body { min-width: 0; display: flex; flex-direction: column; gap: 10px; }
   .body :global(h1) { color: var(--banner-text); text-shadow: none; }
+  .foot { grid-column: 1 / -1; min-width: 0; container: foot / inline-size; }
 </style>

@@ -5,6 +5,7 @@
  *   <Value kind="gold" n={25} lang="pt" />            🪙 25 ouro
  *   <Value kind="amount" n="1–2" lang="pt" />         × 1–2
  *   <Value kind="stock" n={10} lang="pt" />           10 por reposição
+ * `noIcon`: the row it sits in already shows the icon in its icon column (the stats box): the number and unit only.
  */
 import GameIcon from "./GameIcon.astro";
 import { ui, fill } from "../../i18n/index.ts";
@@ -15,8 +16,9 @@ interface Props {
   lang: Lang;
   best?: boolean;
   size?: "normal" | "big";
+  noIcon?: boolean;
 }
-const { kind, n, lang, best = false, size = "normal" } = Astro.props;
+const { kind, n, lang, best = false, size = "normal", noIcon = false } = Astro.props;
 const t = ui(lang).value;
 const text = typeof n === "number" ? n.toLocaleString(LOCALE[lang]) : (n ?? "");
 const ICON: Record<Props["kind"], string> = { gold: "gold", goldoz: "gold", weight: "stat-weight", amount: "stack", time: "time", stock: "stack",
@@ -26,8 +28,8 @@ const tip = { gold: t.goldTip, goldoz: t.goldozTip, weight: t.weightTip, amount:
   blackMarket: t.blackMarketTip }[kind];
 ---
 <span class:list={["val", `val--${kind}`, { best, big: size === "big" }]} title={tip}>
-  <GameIcon name={ICON[kind]} fit={kind === "gold" || kind === "goldoz" || kind === "blackMarket" ? 16 : 18} />
-  {kind === "goldoz" && <GameIcon name="stat-weight" scale={2} />}
+  {!noIcon && <GameIcon name={ICON[kind]} fit={kind === "gold" || kind === "goldoz" || kind === "blackMarket" ? 16 : 18} />}
+  {!noIcon && kind === "goldoz" && <GameIcon name="stat-weight" scale={2} />}
   {kind === "amount" && <span class="x" aria-hidden="true">×</span>}
   {kind !== "stockUnlimited" && kind !== "blackMarket" && <b class="num">{text}</b>}
   {unit && <small>{unit}</small>}

@@ -2,7 +2,6 @@
 import PageShell from "../../../components/layout/PageShell.astro";
 import Banner from "../../../components/ui/Banner.astro";
 import IconSlot from "../../../components/ui/IconSlot.astro";
-import Tag from "../../../components/ui/Tag.astro";
 import InfoBox from "../../../components/ui/InfoBox.astro";
 import StatValue from "../../../components/ui/StatValue.astro";
 import VariantSwitch from "../../../components/ui/VariantSwitch.astro";
@@ -62,6 +61,14 @@ const ingotSteps = ITEMS.forging.filter((f) => f.ingot === item.id);
 const similar = similarItems(items, item);
 /** A game subtype's wiki category (a rune's "fits" tags take that category's icon). */
 const CAT_OF_SUB = new Map(items.map((i) => [i.subtype.key, i.category]));
+/** One item's sprite per subtype (the first by id): a rune's "fits" chips show what each type looks like. */
+const SUB_ICON = new Map<string, { src: string; width: number; height: number; pixel: true }>();
+for (const o of [...items].sort((a, b) => a.id.localeCompare(b.id))) {
+  const ov = primaryVersion(o);
+  if (!SUB_ICON.has(o.subtype.key) && ov.icon && ov.iconSize) SUB_ICON.set(o.subtype.key, { src: ov.icon, width: ov.iconSize[0], height: ov.iconSize[1], pixel: true });
+}
+/** A potion's or a food's effect is told once: in the stats box when the item has no stats, else in "Efeito". */
+const effectInBox = statKeys.length === 0 && !!(v.potion || v.food);
 const appears = appearsIn(registry, ref, ["droppedBy", "soldBy", "boughtBy", "rewardOf", "requiredBy", "usedIn", "conjuredBy", "taughtBy", "leftBy"]);
 const description = metaDescription(item, lang);
 const placeText = (p: Place) => `${p.town[lang]}${p.near ? ` · ${ti.near} ${p.near[lang]}` : ""}${p.underground ? ` · ${ti.underground}` : ""}`;
@@ -82,25 +89,26 @@ const jsonLd = [{
   searchable={{ kind: "item", image: icon?.src }} jsonLd={jsonLd} ogImage={`/og/items/${item.slug.en}.png`}
   crumbs={[{ label: t.home, href: homePath(lang) }, { label: ti.listTitle, href: sectionPath("item", lang) }, { label: item.name[lang] }]}>
   <div class="container" id="item-page">
-    <Banner>
-      <div slot="media" class="hero-icon"><IconSlot icon={icon} kind="item" size={152} /></div>
-      <p class="kicker" data-pagefind-ignore>{ti.category[item.category]}</p>
-      <h1 lang={fbLang(item.name)}>{item.name[lang]}</h1>
-      {item.name[other] !== item.name[lang] && <p class="alt" lang={HREFLANG[other]}>{item.name[other]}</p>}
-      {v.text[lang] && <blockquote class="game-text" lang={fbLang(v.text)}>{v.text[lang]}</blockquote>}
-      <div class="tags" data-pagefind-ignore>
-        <TipTag icon={`cat-${item.category}`} tip={ti.tipType}>{fill(ti.tagType, { v: item.subtype[lang] })}</TipTag>
-        {item.slots.map((s) => {
-          const word = ti.slot[s as keyof typeof ti.slot];
-          return <TipTag icon={`slot-${s}`} iconScale={1} tip={fill(ti.tipSlot, { v: word })}>{fill(ti.tagSlot, { v: word })}</TipTag>;
-        })}
-        {item.armourClass && <TipTag icon="stat-armor" tip={item.armourClass === "heavy" ? ti.tipHeavy : ti.tipLight}>{item.armourClass === "heavy" ? ti.heavy : ti.light}</TipTag>}
-        {item.twoHanded && <TipTag icon="stat-damage" tip={ti.tipLarge}>{ti.twoHanded}</TipTag>}
-        {item.versions.length > 1 && <TipTag tone="sun" tip={fill(ti.tipVersions, { n: item.versions.length })}>{fill(ti.versionsTag, { n: item.versions.length })}</TipTag>}
-      </div>
-    </Banner>
-
     <div class="layout">
+      <div class="hero-area">
+        <Banner>
+          <div slot="media" class="hero-icon"><IconSlot icon={icon} kind="item" size={160} /></div>
+          <p class="kicker" data-pagefind-ignore>{ti.category[item.category]}</p>
+          <h1 lang={fbLang(item.name)}>{item.name[lang]}</h1>
+          {item.name[other] !== item.name[lang] && <p class="alt" lang={HREFLANG[other]}>{item.name[other]}</p>}
+          {v.text[lang] && <blockquote class="game-text" lang={fbLang(v.text)}>{v.text[lang]}</blockquote>}
+          <div class="tags" slot="foot" data-pagefind-ignore>
+            <TipTag icon={`cat-${item.category}`} tip={ti.tipType}>{fill(ti.tagType, { v: item.subtype[lang] })}</TipTag>
+            {item.slots.map((s) => {
+              const word = ti.slot[s as keyof typeof ti.slot];
+              return <TipTag icon={`slot-${s}`} iconScale={1} tip={fill(ti.tipSlot, { v: word })}>{fill(ti.tagSlot, { v: word })}</TipTag>;
+            })}
+            {item.armourClass && <TipTag icon="stat-armor" tip={item.armourClass === "heavy" ? ti.tipHeavy : ti.tipLight}>{item.armourClass === "heavy" ? ti.heavy : ti.light}</TipTag>}
+            {item.twoHanded && <TipTag icon="stat-damage" tip={ti.tipLarge}>{ti.twoHanded}</TipTag>}
+            {item.versions.length > 1 && <TipTag tone="sun" tip={fill(ti.tipVersions, { n: item.versions.length })}>{fill(ti.versionsTag, { n: item.versions.length })}</TipTag>}
+          </div>
+        </Banner>
+      </div>
       <div class="main">
         {item.versions.length > 1 && (
           <section class="block" aria-labelledby="h-versions" data-pagefind-ignore>
@@ -123,12 +131,12 @@ const jsonLd = [{
           </section>
         )}
 
-        {(v.food || v.potion || v.lifetime || v.drinkSeconds || v.resistSeconds) && (
+        {((!effectInBox && (v.food || v.potion)) || v.lifetime || v.drinkSeconds || v.resistSeconds) && (
           <section class="block" aria-labelledby="h-effect">
             <h2 id="h-effect">{ti.effectTitle}</h2>
             <div class="effects">
-              {v.potion && <p class="effect"><span class="eicon"><GameIcon name={v.potion.stat === "health" ? "stat-health" : "stat-mana"} scale={3} /></span> {fill(ti.potion, { min: v.potion.min, max: v.potion.max, stat: v.potion.stat === "health" ? ti.potionHealth : ti.potionMana, s: v.potion.seconds })}</p>}
-              {v.food && (
+              {v.potion && !effectInBox && <p class="effect"><span class="eicon"><GameIcon name={v.potion.stat === "health" ? "stat-health" : "stat-mana"} scale={3} /></span> {fill(ti.potion, { min: v.potion.min, max: v.potion.max, stat: v.potion.stat === "health" ? ti.potionHealth : ti.potionMana, s: v.potion.seconds })}</p>}
+              {v.food && !effectInBox && (
                 <div class="effect">
                   <p class="erow"><span class="eicon"><GameIcon name="food" scale={3} /></span> {fill(ti.food, { n: v.food.seconds })}</p>
                   {Object.keys(v.food.buff).length > 0 && <p class="buffs">{ti.foodBuff}: {(Object.entries(v.food.buff) as [StatKey, number][]).map(([k, n]) => <span class="buff"><GameIcon name={`stat-${k}`} />{statLabel(k)[lang]} <StatValue value={n} /></span>)}</p>}
@@ -203,8 +211,8 @@ const jsonLd = [{
                         );
                       })()}
                       <Fragment slot="end">
-                        {d.quality && <span class="qchip" title={ti.qualityYes}><GameIcon name="quality-any" /><span class="sr-only">{ti.qualityYes}</span></span>}
-                        <Value kind="amount" n={d.amount[0] === d.amount[1] ? d.amount[0] : `${d.amount[0]}–${d.amount[1]}`} lang={lang} />
+                        <span class="qslot">{d.quality && <span class="qchip" title={ti.qualityYes}><GameIcon name="quality-any" /><span class="sr-only">{ti.qualityYes}</span></span>}</span>
+                        <Value kind="amount" n={d.amount[0] === d.amount[1] ? d.amount[0] : `${d.amount[0]}–${d.amount[1]}`} lang={lang} noIcon />
                         <TierBadge tier={d.tier} />
                       </Fragment>
                     </ListRow>
@@ -295,9 +303,8 @@ const jsonLd = [{
             <h2 id="h-use">{ti.useTitle}</h2>
             <div class="panels">
               {item.rune && (
-                <ListPanel title={ti.runeEffect} gicon="rune" id="rune">
-                  <ListRow><span>{v.text[lang]}</span></ListRow>
-                  <ListRow><span class="muted">{ti.runeFits}:</span>{item.rune.fits.map((f) => <Tag gicon={`cat-${CAT_OF_SUB.get(f.key) ?? "other"}`}>{f[lang]}</Tag>)}</ListRow>
+                <ListPanel title={ti.runeFits} gicon="rune" id="rune">
+                  <ListRow><span class="fits">{item.rune.fits.map((f) => <span class="fit"><IconSlot icon={SUB_ICON.get(f.key) ?? null} kind="item" size={32} framed={false} /><span>{f[lang]}</span></span>)}</span></ListRow>
                   {item.rune.fitsItems.length > 0 && <ListRow><span class="links">{item.rune.fitsItems.map((id) => <EntityLink to={`item:${id}`} />)}</span></ListRow>}
                 </ListPanel>
               )}
@@ -357,7 +364,7 @@ const jsonLd = [{
                 <p class="muted">{ti.forgingIntro}</p>
                 <div class="table-wrap">
                   <table class="qtable">
-                    <thead><tr><th scope="col">{ti.qualityCol}</th><th scope="col"><span class="hcell"><GameIcon name="anvil" fit={20} />{ti.forgingTakes}</span></th><th scope="col" class="r"><span class="hcell"><GameIcon name="plus" scale={2} />{ti.forgingUpgrade}</span></th><th scope="col" class="r"><span class="hcell"><GameIcon name="minus" scale={2} />{ti.forgingBreak}</span></th></tr></thead>
+                    <thead><tr><th scope="col">{ti.qualityCol}</th><th scope="col"><span class="hcell"><GameIcon name="anvil" fit={18} />{ti.forgingTakes}</span></th><th scope="col" class="r"><span class="hcell"><GameIcon name="plus" fit={18} />{ti.forgingUpgrade}</span></th><th scope="col" class="r"><span class="hcell"><GameIcon name="minus" fit={18} />{ti.forgingBreak}</span></th></tr></thead>
                     <tbody>
                       {ITEMS.forging.map((f) => (
                         <tr>
@@ -403,7 +410,7 @@ const jsonLd = [{
                 return (
                   <Card href={registry.url(`item:${o.id}`, lang)!} title={o.name[lang]} kicker={o.subtype[lang]} layout="row">
                     <IconSlot slot="emblem" icon={ov.icon && ov.iconSize ? { src: ov.icon, width: ov.iconSize[0], height: ov.iconSize[1], pixel: true } : null} kind="item" size={56} />
-                    {Object.values(ov.stats).some(Boolean) ? <StatChips stats={ov.stats} lang={lang} max={3} /> : o.value.npcPays ? <span class="paysline">{ti.sellValue} <Value kind="gold" n={o.value.npcPays} lang={lang} /></span> : ti.noStats}
+                    {Object.values(ov.stats).some(Boolean) ? <StatChips stats={ov.stats} lang={lang} max={2} /> : o.value.npcPays ? <span class="paysline">{ti.sellValue} <Value kind="gold" n={o.value.npcPays} lang={lang} /></span> : ti.noStats}
                   </Card>
                 );
               })}
@@ -416,8 +423,8 @@ const jsonLd = [{
         <InfoBox title={ti.stats}>
           {hasClasses && (
             <div class="switch">
-              <span class="label"><GameIcon name="class" />{ti.classSwitch}</span>
-              <VariantSwitch scope="item-page" label={ti.classSwitch} variants={[{ key: "base", label: ti.classBase, icon: "class" }, ...CLASS_KEYS.map((k) => ({ key: k, label: ti.classes[k], icon: `class-${k}` }))]} />
+              <span class="label"><GameIcon name="class" />{ti.classSwitch}<b class="vcap" data-vcap="item-page" aria-hidden="true">{ti.classBase}</b></span>
+              <VariantSwitch scope="item-page" compact label={ti.classSwitch} variants={[{ key: "base", label: ti.classBase, icon: "class" }, ...CLASS_KEYS.map((k) => ({ key: k, label: ti.classes[k], icon: `class-${k}` }))]} />
               <p class="traits-note" data-section="traits-note">{ti.traitsNote}</p>
             </div>
           )}
@@ -428,16 +435,14 @@ const jsonLd = [{
                 const r = statRank(items, item, k);
                 return (
                   <li class:list={["stat", { negative: n < 0 }]}>
-                    <span class="sicon"><GameIcon name={`stat-${k}`} scale={3} /></span>
-                    <span class="sname">
-                      {statLabel(k)[lang]}
-                      {n < 0 && <span class="takes"><GameIcon name="minus" scale={1} />{ti.takesAway}</span>}
-                    </span>
+                    <span class="sicon"><GameIcon name={`stat-${k}`} fit={30} /></span>
+                    <span class="sname">{statLabel(k)[lang]}</span>
                     <StatValue value={n} variants={v.classes ? classVariants(k, v) : undefined} size="big" />
-                    {r && (
-                      <span class="rank" data-pagefind-ignore>
-                        <span class="rbar" aria-hidden="true"><span class:list={["rfill", { best: r.rank === 1 }]} style={`width:${Math.max(6, Math.round(r.share * 100))}%`}></span></span>
-                        <span class="rtext">{fill(r.rank === 1 ? ti.rankBest : ti.rankOf, { n: r.rank, of: r.of, group: item.subtype[lang] })}</span>
+                    {r && <span class="rbar" aria-hidden="true"><span class:list={["rfill", { best: r.rank === 1 }]} style={`width:${Math.max(6, Math.round(r.share * 100))}%`}></span></span>}
+                    {(r || n < 0) && (
+                      <span class="smeta" data-pagefind-ignore>
+                        {n < 0 && <span class="takes"><GameIcon name="minus" scale={1} />{ti.takesAway}</span>}
+                        {r && <span class="rtext">{fill(r.rank === 1 ? ti.rankBest : ti.rankOf, { n: r.rank, of: r.of, group: item.subtype[lang] })}</span>}
                       </span>
                     )}
                   </li>
@@ -448,35 +453,35 @@ const jsonLd = [{
             <ul class="statlist" data-section="effect-stats">
               {v.potion && (
                 <li class="stat">
-                  <span class="sicon"><GameIcon name={v.potion.stat === "health" ? "stat-health" : "stat-mana"} scale={3} /></span>
+                  <span class="sicon"><GameIcon name={v.potion.stat === "health" ? "stat-health" : "stat-mana"} fit={30} /></span>
                   <span class="sname">{v.potion.stat === "health" ? ti.healLabel : ti.manaLabel}</span>
                   <span class="sv num big">{v.potion.min}–{v.potion.max}</span>
-                  <span class="rank"><span class="rtext"><GameIcon name="time" scale={1} /> {fill(ti.overSeconds, { n: v.potion.seconds })}</span></span>
+                  <span class="smeta"><span class="rtext"><GameIcon name="time" scale={1} /> {fill(ti.overSeconds, { n: v.potion.seconds })}</span></span>
                 </li>
               )}
               {v.food && (
                 <li class="stat">
-                  <span class="sicon"><GameIcon name="food" scale={3} /></span>
+                  <span class="sicon"><GameIcon name="food" fit={30} /></span>
                   <span class="sname">{ti.feedsLabel}</span>
                   <span class="sv num big">{v.food.seconds} s</span>
                 </li>
               )}
               {v.food && (Object.entries(v.food.buff) as [StatKey, number][]).map(([k, n]) => (
                 <li class="stat">
-                  <span class="sicon"><GameIcon name={`stat-${k}`} scale={3} /></span>
+                  <span class="sicon"><GameIcon name={`stat-${k}`} fit={30} /></span>
                   <span class="sname">{statLabel(k)[lang]}</span>
                   <StatValue value={n} size="big" />
-                  <span class="rank"><span class="rtext">{ti.buffWhile}</span></span>
+                  <span class="smeta"><span class="rtext">{ti.buffWhile}</span></span>
                 </li>
               ))}
             </ul>
-          ) : <p class="nostats"><GameIcon name={`cat-${item.category}`} scale={3} /><span>{ti.noStatsWhy}</span></p>}
+          ) : <ul class="statlist" data-section="no-stats"><li class="stat nostats"><span class="sicon"><GameIcon name={`cat-${item.category}`} fit={30} /></span><span class="sname plain">{ti.noStatsWhy}</span></li></ul>}
           <ul class="facts">
-            <li><GameIcon name="stat-weight" /><span>{ti.weight}</span><b class="num">{oz(v.weight, lang)}</b></li>
-            {v.stack > 1 && <li><GameIcon name="stack" /><span>{ti.stack}</span><b class="num">{v.stack}</b></li>}
-            {v.slots && <li><GameIcon name="slot-back" scale={1} /><span>{ti.slots}</span><b class="num">{v.slots}</b></li>}
-            <li><span aria-hidden="true">{!item.value.npcPays && <GameIcon name="gold" scale={1} />}</span><span>{ti.sellValue}</span><b>{item.value.npcPays ? <Value kind="gold" n={item.value.npcPays} lang={lang} size="big" /> : "—"}</b></li>
-            {goldPerOz(item) && <li><span aria-hidden="true"></span><span>{ti.goldPerOz}</span><b><Value kind="goldoz" n={goldPerOz(item)!} lang={lang} size="big" /></b></li>}
+            <li><span class="sicon"><GameIcon name="stat-weight" fit={28} /></span><span>{ti.weight}</span><b class="num">{oz(v.weight, lang)}</b></li>
+            {v.stack > 1 && <li><span class="sicon"><GameIcon name="stack" fit={28} /></span><span>{ti.stack}</span><b class="num">{v.stack}</b></li>}
+            {v.slots && <li><span class="sicon"><GameIcon name="slot-back" fit={28} /></span><span>{ti.slots}</span><b class="num">{v.slots}</b></li>}
+            <li><span class="sicon"><GameIcon name="gold" fit={28} /></span><span>{ti.sellValue}</span><b>{item.value.npcPays ? <Value kind="gold" n={item.value.npcPays} lang={lang} size="big" noIcon /> : <span class="nil">—</span>}</b></li>
+            {goldPerOz(item) && <li><span class="sicon"><GameIcon name="gold" fit={28} /></span><span>{ti.goldPerOz}</span><b><Value kind="goldoz" n={goldPerOz(item)!} lang={lang} size="big" noIcon /></b></li>}
           </ul>
           {statKeys.some((k) => statRank(items, item, k)) && <p slot="footer">{fill(ti.rankNote, { group: item.subtype[lang] })}</p>}
           {statKeys.some((k) => (v.stats[k] ?? 0) < 0) && <p slot="footer">{ti.negativeNote}</p>}
@@ -496,21 +501,29 @@ const jsonLd = [{
   @media (max-width: 640px) { .hero-icon::before { inset: -14px; } }
   .kicker { margin: 0; font: 700 var(--fs-xs) / 1 var(--font-body); letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent-text); }
   .alt { margin: 0; color: var(--banner-muted); font-size: var(--fs-lg); }
-  .game-text { margin: 4px 0 0; padding: 10px 14px; border-left: 3px solid var(--accent); background: var(--surface-2); border-radius: 0 var(--r-m) var(--r-m) 0;
-    color: var(--banner-text); font-style: italic; max-width: 42rem; }
-  .tags { position: relative; display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+  .game-text { align-self: flex-start; margin: 4px 0 0; padding: 10px 14px; border-left: 3px solid var(--accent); background: var(--surface-2); border-radius: 0 var(--r-m) var(--r-m) 0;
+    color: var(--banner-text); font-style: italic; max-width: 38rem; }
+  .tags { position: relative; display: flex; flex-wrap: wrap; gap: 8px; }
+  /* where three or four tags can't share one line, one per line (never two and one) */
+  @container foot (max-width: 679px) { .tags { flex-direction: column; align-items: flex-start; } }
   .tags :global(.tag) { background: var(--banner-chip-bg); color: var(--banner-text); white-space: normal; }
 
-  .layout { display: grid; gap: var(--s-6); margin-top: var(--s-6); grid-template-columns: minmax(0, 1fr); }
-  @media (min-width: 1000px) { .layout { grid-template-columns: minmax(0, 1fr) 330px; align-items: start; } .side { position: sticky; top: calc(var(--header-h) + var(--s-4)); } }
-  .side { order: -1; }
-  @media (min-width: 1000px) { .side { order: 0; } }
+  .layout { display: grid; gap: var(--s-6); grid-template-columns: minmax(0, 1fr); grid-template-areas: "hero" "side" "main"; }
+  .hero-area { grid-area: hero; min-width: 0; }
+  .main { grid-area: main; min-width: 0; container: main / inline-size; }
+  .side { grid-area: side; min-width: 0; }
+  @media (min-width: 1000px) {
+    .layout { grid-template-columns: minmax(0, 1fr) 330px; grid-template-areas: "hero side" "main side"; align-items: start; column-gap: var(--s-6); row-gap: var(--s-7); }
+    .side { position: sticky; top: calc(var(--header-h) + var(--s-4)); }
+  }
+  /* one rhythm (layout rules): 56 px between sections, 16 px from a section title to its content, 32 px between the
+     groups of a section, 12 px from a group's title to its rows */
   .block + .block { margin-top: var(--s-7); }
-  .block > h2 { margin-bottom: var(--s-3); }
-  .block > .muted { margin-bottom: var(--s-4); }
+  .block > h2 { margin-bottom: var(--s-4); }
+  .block > .muted { margin: calc(-1 * var(--s-2)) 0 var(--s-4); }
   .muted { color: var(--text-muted); }
   .small { font-size: var(--fs-sm); }
-  .panels { display: grid; gap: var(--s-6); }
+  .panels { display: grid; gap: var(--s-5); }
 
   .versions { display: grid; gap: 0; }
   .version { display: flex; gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--row-border); }
@@ -527,7 +540,7 @@ const jsonLd = [{
   .eicon { display: inline-grid; place-items: center; width: 52px; height: 52px; flex: none; border-radius: 12px; background: var(--well); }
   .erow { display: flex; align-items: center; gap: 12px; }
   .buff { display: inline-flex; align-items: center; gap: 6px; }
-  .fstep { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; }
+  .fstep { display: inline-flex; flex-wrap: nowrap; align-items: center; gap: 6px 10px; white-space: nowrap; }
   .fq { display: inline-flex; align-items: center; gap: 6px; }
   .farrow { color: var(--text-faint); }
   .hcell { display: inline-flex; align-items: center; gap: 6px; }
@@ -541,8 +554,11 @@ const jsonLd = [{
   .qtable .r { text-align: right; }
   /* a phone: each row a two-by-two grid (the step and the ingot, then the two odds), the header in the same grid above,
      so every column stays in view and keeps its label; no side-scroll */
-  @media (max-width: 600px) {
+  @container main (max-width: 759px) {
     .table-wrap { overflow: visible; }
+    /* the step on two lines in every row (from, then "→ to"): every row the same height */
+    .fstep { display: grid; grid-template-columns: auto 1fr; grid-template-areas: "from from" "arrow to"; justify-items: start; gap: 4px 6px; }
+    .fstep > :first-child { grid-area: from; } .fstep > .farrow { grid-area: arrow; } .fstep > :last-child { grid-area: to; }
     .qtable, .qtable thead, .qtable tbody { display: block; }
     .qtable tr { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: 4px; }
     .qtable th, .qtable td { white-space: normal; }
@@ -562,10 +578,17 @@ const jsonLd = [{
   .q3 { color: var(--quality-3); }
   .q4 { color: var(--quality-4); }
   .qchip { color: var(--magic); display: inline-flex; }
+  :global(#drops .end) { display: grid; grid-template-columns: 24px 2.5rem 7.75rem; align-items: center; justify-items: end; gap: 10px; flex-wrap: nowrap; }
+  :global(#drops .end .tier) { justify-self: stretch; }
+  .qslot { display: inline-grid; place-items: center; width: 24px; }
 
   .dq, .forge { margin-top: var(--s-5); }
-  .dq h3, .forge h3 { margin-bottom: 6px; font: 700 var(--fs-lg) / 1.3 var(--font-body); }
-  .odds { list-style: none; margin: 0 0 6px; padding: 0; display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 190px), 1fr)); }
+  .dq h3, .forge h3 { margin-bottom: var(--s-2); font: 700 var(--fs-md) / 1.2 var(--font-body); }
+  .dq > .muted, .forge > .muted { margin: 0 0 var(--s-3); }
+  /* four odds: one column, two by two, or four in a row (never three and one) */
+  .odds { list-style: none; margin: 0 0 6px; padding: 0; display: grid; gap: 10px; grid-template-columns: minmax(0, 1fr); }
+  @container main (min-width: 440px) { .odds { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @container main (min-width: 800px) { .odds { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
   .odd { display: flex; align-items: center; gap: 12px; padding: 12px 16px; background: var(--card-bg); border: var(--bw) solid var(--border);
     border-left: 4px solid currentColor; border-radius: var(--r-m); }
   .otext { display: grid; gap: 3px; min-width: 0; flex: 1; }
@@ -575,7 +598,11 @@ const jsonLd = [{
 
   /* the qualities: one card each, framed in the quality's colour, the item outlined as the game highlights it */
   /* the cards wrap (five across when there is room, two on a phone): every quality in view, no hidden side-scroll */
-  .qcards { list-style: none; margin: 0; padding: 4px 0 10px; display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 148px), 1fr)); }
+  /* five cards: five in a row, three and two, or two by two with the last across (never one alone in a half row) */
+  .qcards { list-style: none; margin: 0; padding: 4px 0 10px; display: grid; gap: 12px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .qcards > :last-child:nth-child(odd) { grid-column: 1 / -1; }
+  @container main (min-width: 500px) { .qcards { grid-template-columns: repeat(3, minmax(0, 1fr)); } .qcards > :last-child:nth-child(odd) { grid-column: auto; } }
+  @container main (min-width: 790px) { .qcards { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
   .qcard { --qc: var(--quality-0); color: var(--text); position: relative; display: grid; align-content: start; gap: 10px; padding: 12px;
     background: linear-gradient(180deg, color-mix(in srgb, var(--qc) 16%, var(--card-bg)), var(--card-bg) 55%);
     border: var(--bw) solid var(--border); border-top: 3px solid var(--qc); border-radius: var(--r-l); box-shadow: var(--shadow-1); }
@@ -600,11 +627,28 @@ const jsonLd = [{
   .plain { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
   .plus { color: var(--text-faint); font-weight: 700; }
   .links { display: flex; flex-wrap: wrap; gap: 6px 14px; }
+  .fits { display: flex; flex-wrap: wrap; gap: 8px; }
+  .fit { display: inline-flex; align-items: center; gap: 8px; padding: 4px 12px 4px 4px; border-radius: var(--r-m); background: var(--surface-2);
+    border: 1px solid var(--row-border); font-size: var(--fs-sm); font-weight: 600; color: var(--text); }
+  .fit :global(.slot) { border-radius: 6px; background: var(--well); }
 
-  .similar { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); }
+  /* one, two or three columns by the room; a count that would leave one card alone changes the columns or spans it */
+  .similar { display: grid; gap: 12px; grid-template-columns: minmax(0, 1fr); }
+  @container main (min-width: 520px) {
+    .similar { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .similar > :global(:last-child:nth-child(odd)) { grid-column: 1 / -1; }
+  }
+  @container main (min-width: 780px) {
+    .similar:not(:has(> :nth-child(4):last-child)) { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .similar:not(:has(> :nth-child(4):last-child)) > :global(:last-child:nth-child(odd)) { grid-column: auto; }
+  }
+  /* a recipe reads like a sentence: it wraps like text, not as a row of boxes */
+  :global(#recipes .what), :global(#used-in .what) { display: block; line-height: 2.2; }
+  :global(#recipes .what > *), :global(#used-in .what > *) { vertical-align: middle; margin-right: 6px; }
 
   .switch { padding: 14px 18px; border-bottom: 1px solid var(--row-border); display: grid; gap: 10px; }
   .switch .label { display: flex; align-items: center; gap: 6px; font-size: var(--fs-xs); font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; }
+  .vcap { margin-left: auto; font-size: var(--fs-sm); text-transform: none; letter-spacing: 0; color: var(--heading); }
   .switch .traits-note { margin: 0; font-size: var(--fs-xs); color: var(--text-muted); }
   .gated li { padding: 4px 0; }
   .paysline { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 6px; }
@@ -612,33 +656,33 @@ const jsonLd = [{
   .appears { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 4px 6px; font-size: var(--fs-sm); color: var(--text-muted); }
   .gated .q { display: block; font-size: var(--fs-sm); color: var(--text-muted); }
 
-  /* the stats box: the game's icon in a slot, the number big, where it stands among its type */
-  .statlist { list-style: none; margin: 0; padding: 6px 0; display: grid; }
-  .stat { display: grid; grid-template-columns: 52px minmax(0, 1fr) auto; grid-template-areas: "icon name value" "icon rank rank"; column-gap: 14px; row-gap: 6px;
-    align-items: center; padding: 12px 18px; }
+  /* the stats box (layout rules): every row is one grid, a 44 px icon well at one x, the label on one edge, the value on
+     the other; a stat's bar and its rank text sit under its label, left-aligned */
+  .statlist { list-style: none; margin: 0; padding: 4px 0; display: grid; }
+  .stat, .facts li { display: grid; grid-template-columns: 44px minmax(0, 1fr) auto; column-gap: 14px; align-items: center; padding: 10px 18px; }
+  .stat { grid-template-areas: "icon name value" "icon bar bar" "icon meta meta"; row-gap: 4px; }
   .stat + .stat { border-top: 1px solid var(--row-border); }
-  .sicon { grid-area: icon; display: grid; place-items: center; width: 52px; height: 52px; border-radius: 12px; background: var(--well);
+  .sicon { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 10px; background: var(--well);
     box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06); }
-  .sname { grid-area: name; display: flex; flex-wrap: wrap; align-items: center; gap: 6px; color: var(--text); font-weight: 700; font-size: var(--fs-sm); }
+  .stat .sicon { grid-area: icon; align-self: start; }
+  .sname { grid-area: name; color: var(--text); font-weight: 700; font-size: var(--fs-sm); }
+  .sname.plain { font-weight: 500; color: var(--text-muted); }
+  .stat.nostats { grid-template-areas: "icon name name"; }
   .stat :global(.sv) { grid-area: value; justify-self: end; color: var(--heading); }
   .stat.negative :global(.sv) { color: var(--danger); }
   .stat > .sv.big { font: 700 1.375rem / 1 var(--font-num); white-space: nowrap; }
-  .rtext :global(.gicon) { vertical-align: -2px; }
-  .takes { display: inline-flex; align-items: center; gap: 4px; padding: 1px 6px 1px 3px; border-radius: 999px; font-size: var(--fs-xs); font-weight: 700;
-    color: var(--danger); border: 1px solid var(--danger); }
   .stat.negative .sicon { box-shadow: inset 0 0 0 2px var(--danger); }
-  .rank { grid-area: rank; display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 10px; }
-  .rbar { height: 6px; border-radius: 3px; background: var(--surface-3); overflow: hidden; box-shadow: inset 0 0 0 1px var(--row-border); }
+  .rbar { grid-area: bar; height: 6px; border-radius: 3px; background: var(--surface-3); overflow: hidden; box-shadow: inset 0 0 0 1px var(--row-border); }
   .rfill { display: block; height: 100%; border-radius: 3px; background: var(--sky); }
   .rfill.best { background: var(--sun); }
-  .rtext { font-size: var(--fs-xs); color: var(--text-muted); white-space: nowrap; }
-  .facts { list-style: none; margin: 0; padding: 6px 0; display: grid; border-top: 1px solid var(--row-border); background: var(--surface-2); }
-  .facts li { display: grid; grid-template-columns: 52px minmax(0, 1fr) auto; align-items: center; gap: 14px; padding: 9px 18px; }
+  .smeta { grid-area: meta; display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; }
+  .rtext { font-size: var(--fs-xs); color: var(--text-muted); }
+  .rtext :global(.gicon) { vertical-align: -2px; }
+  .takes { display: inline-flex; align-items: center; gap: 4px; padding: 1px 7px 1px 3px; border-radius: 999px; font-size: var(--fs-xs); font-weight: 700;
+    color: var(--danger); border: 1px solid var(--danger); }
+  .facts { list-style: none; margin: 0; padding: 4px 0; display: grid; border-top: 1px solid var(--row-border); background: var(--surface-2); }
   .facts li + li { border-top: 1px solid var(--row-border); }
-  .facts li > :global(.gicon), .facts .pair { justify-self: center; }
-  .facts .pair { display: inline-flex; align-items: center; gap: 1px; }
-  .facts span { color: var(--text-muted); font-size: var(--fs-sm); white-space: nowrap; }
-  .facts b { color: var(--heading); font-size: 1.0625rem; }
-  .nostats { margin: 0; padding: 16px 18px; color: var(--text-muted); display: flex; align-items: center; gap: 12px; font-size: var(--fs-sm); }
-  .nostats :global(.gicon) { padding: 6px; border-radius: 8px; background: var(--well); box-sizing: content-box; }
+  .facts span:not(.sicon) { color: var(--text-muted); font-size: var(--fs-sm); }
+  .facts b { color: var(--heading); font-size: 1.0625rem; white-space: nowrap; }
+  .facts .nil { color: var(--text-faint); }
 </style>
