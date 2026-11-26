@@ -122,6 +122,13 @@
   --tier-raro: #d18cff;
   --tier-muito-raro: #ffa44e;
 
+  /* item qualities (Comum .. Lendário) */
+  --quality-0: var(--text);
+  --quality-1: #86d957;
+  --quality-2: #5cc8ff;
+  --quality-3: #d18cff;
+  --quality-4: #ffa44e;
+
   --shadow-1: 0 3px 0 var(--hard);
   --shadow-2: 0 5px 0 var(--hard);
   --shadow-3: 0 8px 0 var(--hard), 0 20px 40px rgba(0, 0, 0, 0.45);
@@ -199,6 +206,12 @@
   --tier-incomum: #09559c;
   --tier-raro: #6a27a8;
   --tier-muito-raro: #984a00;
+
+  --quality-0: var(--text);
+  --quality-1: #286b0f;
+  --quality-2: #09559c;
+  --quality-3: #6a27a8;
+  --quality-4: #984a00;
 
   --shadow-1: 0 3px 0 var(--hard);
   --shadow-2: 0 4px 0 var(--hard);

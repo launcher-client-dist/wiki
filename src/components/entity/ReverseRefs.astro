@@ -20,7 +20,7 @@ const t = ui(lang);
 const registry = await getRegistry();
 registry.require(Astro.props.of);
 const groups = groupReverse(registry.reverse(Astro.props.of));
-const ORDER: InverseType[] = ["droppedBy", "soldBy", "boughtBy", "rewardOf", "usedIn", "taughtBy", "openedBy", "related"];
+const ORDER: InverseType[] = ["droppedBy", "soldBy", "boughtBy", "rewardOf", "requiredBy", "usedIn", "taughtBy", "conjuredBy", "openedBy", "mentionedIn", "related"];
 const order = (Astro.props.only ?? ORDER).filter((g) => groups[g]?.length);
 const amount = (a?: readonly [number, number]) => (a ? (a[0] === a[1] ? `× ${a[0]}` : `× ${a[0]}–${a[1]}`) : null);
 ---

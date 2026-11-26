@@ -1,0 +1,25 @@
+---
+/**
+ * A stat number with its sign: negative ones in the danger colour AND with a "−" (never colour alone). With
+ * `variants` ({ base: 5, knight: 8 ... }) a VariantSwitch or a DataTable switch swaps it in place.
+ */
+import { signed } from "../../lib/items/data.ts";
+interface Props {
+  value: number;
+  variants?: Record<string, number | undefined>;
+  plain?: boolean;
+}
+const { value, variants, plain = false } = Astro.props;
+const fmt = (n: number) => (plain ? String(n) : signed(n));
+const attrs: Record<string, string> = {};
+if (variants) {
+  attrs["data-v-base"] = fmt(value);
+  for (const [k, v] of Object.entries(variants)) if (v !== undefined) attrs[`data-v-${k}`] = fmt(v);
+}
+---
+<span class:list={["sv", "num", { neg: value < 0 }]} {...attrs}>{fmt(value)}</span>
+<style>
+  .sv { font-weight: 700; white-space: nowrap; }
+  .neg { color: var(--danger); }
+  :global(.sv.changed) { text-decoration: underline dotted var(--sun); text-underline-offset: 4px; }
+</style>

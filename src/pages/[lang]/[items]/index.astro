@@ -1,0 +1,118 @@
+---
+import PageShell from "../../../components/layout/PageShell.astro";
+import PixelArt from "../../../components/ui/PixelArt.astro";
+import IconSlot from "../../../components/ui/IconSlot.astro";
+import StatValue from "../../../components/ui/StatValue.astro";
+import Badge from "../../../components/ui/Badge.astro";
+import DataTable from "../../../components/data/DataTable.astro";
+import DataRow from "../../../components/data/DataRow.astro";
+import DataCell from "../../../components/data/DataCell.astro";
+import { ui, fill } from "../../../i18n/index.ts";
+import { LANGS, otherLang, type Lang } from "../../../lib/i18n.ts";
+import { homePath, SECTIONS, sectionAlternates, sectionPath } from "../../../lib/routes.ts";
+import { siteData } from "../../../lib/site-registry.ts";
+import { CATEGORIES, CLASS_KEYS, SOURCE_KINDS, STAT_KEYS, goldPerOz, primaryVersion, sourceKinds, statLabel, type StatKey } from "../../../lib/items/data.ts";
+import { num, oz } from "../../../lib/items/view.ts";
+
+export function getStaticPaths() {
+  return LANGS.map((lang) => ({ params: { lang, items: SECTIONS.item.slug[lang] } }));
+}
+const lang = Astro.params.lang as Lang;
+const t = ui(lang);
+const ti = t.item;
+const { registry, items } = await siteData();
+const rows = [...items].sort((a, b) => a.name[lang].localeCompare(b.name[lang], lang));
+const SLOT_ORDER = ["head", "neck", "body", "legs", "feet", "hands", "ring", "back", "ammo"];
+const count = <T extends string>(key: T, fn: (i: (typeof items)[number]) => T[]) => items.filter((i) => fn(i).includes(key)).length;
+const CLASSED: StatKey[] = ["armor", "defense", "attackSpeed", "health", "mana", "hpRegen", "mpRegen"];
+---
+<PageShell lang={lang} title={ti.listTitle} description={ti.listDescription} alternates={sectionAlternates("item")} current="item"
+  searchable={{ kind: "item" }}
+  crumbs={[{ label: t.home, href: homePath(lang) }, { label: ti.listTitle, href: sectionPath("item", lang) }]}>
+  <div class="container items-page">
+    <header class="page-head">
+      <PixelArt kind="item" size={64} />
+      <div>
+        <h1>{ti.listTitle}</h1>
+        <p>{ti.listIntro}</p>
+      </div>
+    </header>
+    <DataTable id="items" lang={lang} caption={ti.listTitle} total={items.length} sort={{ key: "sortname", dir: "asc" }}
+      columns={[
+        { key: "sortname", label: ti.colItem },
+        { key: "type", label: ti.colType, hideOnPhone: true },
+        { key: "damage", label: statLabel("damage")[lang], align: "end" },
+        { key: "armor", label: statLabel("armor")[lang], align: "end" },
+        { key: "defense", label: statLabel("defense")[lang], align: "end" },
+        { key: "magic", label: statLabel("magic")[lang], align: "end", hideOnPhone: true },
+        { key: "weight", label: ti.colWeight, align: "end", hideOnPhone: true },
+        { key: "value", label: ti.colValue, align: "end" },
+        { key: "goldoz", label: ti.colGoldOz, align: "end", hideOnPhone: true },
+        { key: "where", label: ti.colWhere, sortable: false },
+      ]}
+      filters={[
+        { key: "category", label: ti.filterCategory, options: CATEGORIES.filter((c) => items.some((i) => i.category === c)).map((c) => ({ value: c, label: ti.category[c], count: items.filter((i) => i.category === c).length })) },
+        { key: "slot", label: ti.filterSlot, options: SLOT_ORDER.filter((s) => items.some((i) => i.slots.includes(s))).map((s) => ({ value: s, label: ti.slot[s as keyof typeof ti.slot], count: count(s, (i) => i.slots) })) },
+        { key: "where", label: ti.filterWhere, options: SOURCE_KINDS.map((k) => ({ value: k, label: ti.source[k], count: count(k, sourceKinds) })).filter((o) => o.count) },
+      ]}
+      variants={[{ key: "base", label: ti.classBase }, ...CLASS_KEYS.map((k) => ({ key: k, label: ti.classes[k] }))]} variantLabel={ti.filterClass}
+      ranges={STAT_KEYS.map((k) => ({ key: k, label: statLabel(k)[lang] }))} rangeLabel={ti.filterStat}>
+      {rows.map((item) => {
+        const v = primaryVersion(item);
+        const st = v.stats;
+        const sort: Record<string, string | number> = {
+          sortname: item.name[lang], type: item.subtype[lang], weight: v.weight,
+          value: item.value.npcPays ?? 0, goldoz: goldPerOz(item) ?? 0,
+        };
+        // only what an item has: a missing sort value reads as 0 (keeps 436 rows light)
+        for (const k of STAT_KEYS) {
+          if (!st[k]) continue;
+          sort[k] = st[k]!;
+          if (CLASSED.includes(k) && v.classes && CLASS_KEYS.some((c) => (v.classes?.[c]?.[k] ?? st[k]) !== st[k])) {
+            sort[`${k}__base`] = st[k]!;
+            for (const c of CLASS_KEYS) sort[`${k}__${c}`] = v.classes?.[c]?.[k] ?? st[k]!;
+          }
+        }
+        const cls = (k: StatKey) => (v.classes && CLASS_KEYS.some((c) => (v.classes?.[c]?.[k] ?? st[k]) !== st[k])
+          ? Object.fromEntries(CLASS_KEYS.map((c) => [c, v.classes?.[c]?.[k] ?? st[k]])) : undefined);
+        const href = registry.url(`item:${item.id}`, lang)!;
+        const icon = v.icon && v.iconSize ? { src: v.icon, width: v.iconSize[0], height: v.iconSize[1], pixel: true } : null;
+        return (
+          <DataRow search={`${item.name.pt} ${item.name.en} ${item.subtype.pt} ${item.subtype.en}`} sort={sort}
+            filters={{ category: item.category, slot: item.slots, where: sourceKinds(item) }}>
+            <DataCell label={ti.colItem} primary>
+              <span class="name">
+                <IconSlot icon={icon} kind="item" size={40} />
+                <span><a href={href}>{item.name[lang]}</a>{item.name[otherLang(lang)] !== item.name[lang] && <span class="alt">{item.name[otherLang(lang)]}</span>}</span>
+              </span>
+            </DataCell>
+            <DataCell label={ti.colType} hideOnPhone><span class="type">{item.subtype[lang]}</span></DataCell>
+            <DataCell label={statLabel("damage")[lang]} align="end">{st.damage ? <StatValue value={st.damage} /> : <span class="nil">—</span>}</DataCell>
+            <DataCell label={statLabel("armor")[lang]} align="end">{st.armor ? <StatValue value={st.armor} variants={cls("armor")} /> : <span class="nil">—</span>}</DataCell>
+            <DataCell label={statLabel("defense")[lang]} align="end">{st.defense ? <StatValue value={st.defense} variants={cls("defense")} /> : <span class="nil">—</span>}</DataCell>
+            <DataCell label={statLabel("magic")[lang]} align="end" hideOnPhone>{st.magic ? <StatValue value={st.magic} /> : <span class="nil">—</span>}</DataCell>
+            <DataCell label={ti.colWeight} align="end" hideOnPhone><span class="num">{oz(v.weight, lang)}</span></DataCell>
+            <DataCell label={ti.colValue} align="end">{item.value.npcPays ? <span class="num">{num(item.value.npcPays, lang)}</span> : <span class="nil">—</span>}</DataCell>
+            <DataCell label={ti.colGoldOz} align="end" hideOnPhone>{goldPerOz(item) ? <span class="num">{num(goldPerOz(item)!, lang)}</span> : <span class="nil">—</span>}</DataCell>
+            <DataCell label={ti.colWhere}><span class="where">{sourceKinds(item).map((k) => <Badge tone="count">{ti.source[k]}</Badge>)}</span></DataCell>
+          </DataRow>
+        );
+      })}
+    </DataTable>
+    <p class="count-note">{fill(ti.count, { n: num(items.length, lang) })}</p>
+  </div>
+</PageShell>
+<style is:global>
+  /* global but under .items-page: no per-element scope attribute on 436 rows */
+  .items-page .page-head { display: flex; gap: var(--s-5); align-items: center; margin-bottom: var(--s-6); }
+  .items-page .page-head p { margin: 8px 0 0; color: var(--text-muted); max-width: 46rem; font-size: var(--fs-lg); }
+  .items-page .name { display: inline-flex; align-items: center; gap: 10px; min-width: 0; }
+  .items-page .name a { font-weight: 700; color: var(--heading); text-decoration: none; }
+  .items-page .name a:hover { color: var(--link); text-decoration: underline; }
+  .items-page .alt { display: block; font-size: var(--fs-xs); color: var(--text-faint); }
+  .items-page .type { font-size: var(--fs-sm); color: var(--text-muted); }
+  .items-page .nil { color: var(--text-faint); }
+  .items-page .where { display: inline-flex; flex-wrap: wrap; gap: 4px; }
+  .items-page .count-note { margin-top: var(--s-4); font-size: var(--fs-sm); color: var(--text-faint); }
+  @media (max-width: 520px) { .items-page .page-head { flex-direction: column; align-items: flex-start; gap: var(--s-3); } }
+</style>

@@ -1,29 +1,78 @@
 {
+ "dropQuality": [
+  {
+   "approx": false,
+   "oneIn": 1000,
+   "rarity": 4
+  },
+  {
+   "approx": false,
+   "oneIn": 100,
+   "rarity": 3
+  },
+  {
+   "approx": false,
+   "oneIn": 50,
+   "rarity": 2
+  },
+  {
+   "approx": true,
+   "oneIn": 12,
+   "rarity": 1
+  }
+ ],
+ "forging": [
+  {
+   "bothBreak": {
+    "approx": false,
+    "oneIn": 4
+   },
+   "count": 1,
+   "from": 0,
+   "ingot": "iron-ingot",
+   "upgrade": {
+    "approx": false,
+    "oneIn": 4
+   }
+  },
+  {
+   "bothBreak": {
+    "approx": false,
+    "oneIn": 20
+   },
+   "count": 2,
+   "from": 1,
+   "ingot": "tin-ingot",
+   "upgrade": {
+    "approx": true,
+    "oneIn": 7
+   }
+  },
+  {
+   "bothBreak": null,
+   "count": 3,
+   "from": 2,
+   "ingot": "steel-ingot",
+   "upgrade": {
+    "approx": false,
+    "oneIn": 20
+   }
+  },
+  {
+   "bothBreak": null,
+   "count": 5,
+   "from": 3,
+   "ingot": "moon-ingot",
+   "upgrade": {
+    "approx": false,
+    "oneIn": 100
+   }
+  }
+ ],
  "items": [
   {
    "category": "drink",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/178.png",
    "id": "ale-mug",
    "name": {
@@ -346,6 +395,10 @@
     {
      "drinkSeconds": 30,
      "icon": "/icons/items/178.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "qualities": [
       {
        "rarity": 0,
@@ -623,6 +676,10 @@
    "versions": [
     {
      "icon": "/icons/items/417.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -827,6 +884,10 @@
    "versions": [
     {
      "icon": "/icons/items/416.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -1050,6 +1111,10 @@
    "versions": [
     {
      "icon": "/icons/items/415.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -1254,6 +1319,10 @@
    "versions": [
     {
      "icon": "/icons/items/414.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -1368,6 +1437,10 @@
    "versions": [
     {
      "icon": "/icons/items/418.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -1540,6 +1613,10 @@
    "versions": [
     {
      "icon": "/icons/items/411.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -1738,6 +1815,10 @@
    "versions": [
     {
      "icon": "/icons/items/412.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -1751,28 +1832,7 @@
   },
   {
    "category": "other",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/355.png",
    "id": "ancient-gem",
    "name": {
@@ -1828,6 +1888,10 @@
    "versions": [
     {
      "icon": "/icons/items/355.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "qualities": [
       {
        "rarity": 0,
@@ -1913,6 +1977,10 @@
    "versions": [
     {
      "icon": "/icons/items/356.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -1926,28 +1994,7 @@
   },
   {
    "category": "weapon",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/353.png",
    "id": "ancient-staff",
    "name": {
@@ -2009,6 +2056,10 @@
       }
      },
      "icon": "/icons/items/353.png",
+     "iconSize": [
+      24,
+      31
+     ],
      "qualities": [
       {
        "classes": {
@@ -2199,6 +2250,10 @@
    "versions": [
     {
      "icon": "/icons/items/358.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -2212,28 +2267,7 @@
   },
   {
    "category": "weapon",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/352.png",
    "id": "ancient-sword",
    "name": {
@@ -2300,6 +2334,10 @@
       }
      },
      "icon": "/icons/items/352.png",
+     "iconSize": [
+      31,
+      31
+     ],
      "qualities": [
       {
        "classes": {
@@ -2895,6 +2933,10 @@
       "seconds": 100
      },
      "icon": "/icons/items/232.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 75,
      "stats": {
       "hpRegen": 3,
@@ -3166,6 +3208,10 @@
       "seconds": 440
      },
      "icon": "/icons/items/245.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 3,
      "stats": {
       "damage": 1,
@@ -3184,28 +3230,7 @@
   },
   {
    "category": "weapon",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/529.png",
    "id": "arbalest",
    "name": {
@@ -3285,6 +3310,10 @@
       }
      },
      "icon": "/icons/items/529.png",
+     "iconSize": [
+      32,
+      29
+     ],
      "qualities": [
       {
        "classes": {
@@ -3634,6 +3663,10 @@
       "squire": {}
      },
      "icon": "/icons/items/44.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1000,
      "stats": {},
      "text": {
@@ -3648,28 +3681,7 @@
   {
    "armourClass": "heavy",
    "category": "armour",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/511.png",
    "id": "aureous-armor",
    "name": {
@@ -3744,6 +3756,10 @@
       }
      },
      "icon": "/icons/items/511.png",
+     "iconSize": [
+      32,
+      32
+     ],
      "qualities": [
       {
        "classes": {
@@ -3919,28 +3935,7 @@
   {
    "armourClass": "heavy",
    "category": "armour",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/510.png",
    "id": "aureous-legs",
    "name": {
@@ -4011,6 +4006,10 @@
       }
      },
      "icon": "/icons/items/510.png",
+     "iconSize": [
+      26,
+      31
+     ],
      "qualities": [
       {
        "classes": {
@@ -4165,28 +4164,7 @@
   },
   {
    "category": "weapon",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/461.png",
    "id": "bachall",
    "name": {
@@ -4271,6 +4249,10 @@
       }
      },
      "icon": "/icons/items/461.png",
+     "iconSize": [
+      32,
+      30
+     ],
      "qualities": [
       {
        "classes": {
@@ -4405,28 +4387,7 @@
   },
   {
    "category": "container",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/213.png",
    "id": "bagnoff",
    "name": {
@@ -4558,6 +4519,10 @@
       }
      },
      "icon": "/icons/items/213.png",
+     "iconSize": [
+      27,
+      29
+     ],
      "qualities": [
       {
        "classes": {
@@ -4853,6 +4818,10 @@
       "seconds": 170
      },
      "icon": "/icons/items/182.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 15,
      "stats": {
       "hpRegen": 10,
@@ -4869,28 +4838,7 @@
   },
   {
    "category": "weapon",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/452.png",
    "id": "battle-axe",
    "name": {
@@ -5014,6 +4962,10 @@
       }
      },
      "icon": "/icons/items/452.png",
+     "iconSize": [
+      32,
+      29
+     ],
      "qualities": [
       {
        "classes": {
@@ -5170,28 +5122,7 @@
   {
    "armourClass": "light",
    "category": "armour",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/460.png",
    "id": "battle-cloak",
    "name": {
@@ -5267,6 +5198,10 @@
       }
      },
      "icon": "/icons/items/460.png",
+     "iconSize": [
+      30,
+      32
+     ],
      "qualities": [
       {
        "classes": {
@@ -5401,28 +5336,7 @@
   },
   {
    "category": "jewellery",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/475.png",
    "id": "bear-charm",
    "name": {
@@ -5488,6 +5402,10 @@
       }
      },
      "icon": "/icons/items/475.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "qualities": [
       {
        "classes": {
@@ -5725,6 +5643,10 @@
    "versions": [
     {
      "icon": "/icons/items/206.png",
+     "iconSize": [
+      28,
+      27
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -5738,28 +5660,7 @@
   },
   {
    "category": "weapon",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/577.png",
    "id": "big-bone",
    "name": {
@@ -5844,6 +5745,10 @@
       }
      },
      "icon": "/icons/items/577.png",
+     "iconSize": [
+      21,
+      31
+     ],
      "qualities": [
       {
        "classes": {
@@ -6256,6 +6161,10 @@
    "versions": [
     {
      "icon": "/icons/items/4.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 20,
      "stats": {},
      "text": {
@@ -6324,6 +6233,10 @@
    "versions": [
     {
      "icon": "/icons/items/171.png",
+     "iconSize": [
+      24,
+      23
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -6548,6 +6461,10 @@
    "versions": [
     {
      "icon": "/icons/items/5.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "potion": {
       "max": 200,
       "min": 175,
@@ -6774,6 +6691,10 @@
    "versions": [
     {
      "icon": "/icons/items/6.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "potion": {
       "max": 200,
       "min": 150,
@@ -8040,6 +7961,10 @@
    "versions": [
     {
      "icon": "/icons/items/170.png",
+     "iconSize": [
+      25,
+      24
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -8053,28 +7978,7 @@
   },
   {
    "category": "container",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/10.png",
    "id": "black-bag",
    "name": {
@@ -8279,6 +8183,10 @@
       }
      },
      "icon": "/icons/items/10.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "qualities": [
       {
        "classes": {
@@ -8613,6 +8521,10 @@
    "versions": [
     {
      "icon": "/icons/items/105.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 100,
      "stats": {},
      "text": {
@@ -8790,6 +8702,10 @@
       "squire": {}
      },
      "icon": "/icons/items/43.png",
+     "iconSize": [
+      18,
+      25
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -8808,6 +8724,10 @@
       "squire": {}
      },
      "icon": "/icons/items/453.png",
+     "iconSize": [
+      18,
+      26
+     ],
      "lifetime": 1800,
      "stack": 1,
      "stats": {},
@@ -8934,6 +8854,10 @@
    "versions": [
     {
      "icon": "/icons/items/326.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -8947,28 +8871,7 @@
   },
   {
    "category": "container",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/325.png",
    "id": "blue-backpack",
    "name": {
@@ -9138,6 +9041,10 @@
       }
      },
      "icon": "/icons/items/325.png",
+     "iconSize": [
+      24,
+      27
+     ],
      "qualities": [
       {
        "classes": {
@@ -9686,6 +9593,10 @@
    "versions": [
     {
      "icon": "/icons/items/169.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -10137,6 +10048,10 @@
    "versions": [
     {
      "icon": "/icons/items/15.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 15,
      "stats": {},
      "text": {
@@ -10239,6 +10154,10 @@
    "versions": [
     {
      "icon": "/icons/items/195.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -10317,6 +10236,10 @@
    "versions": [
     {
      "icon": "/icons/items/201.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 25,
      "stats": {},
      "text": {
@@ -10542,6 +10465,10 @@
    "versions": [
     {
      "icon": "/icons/items/377.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -10739,6 +10666,10 @@
    "versions": [
     {
      "icon": "/icons/items/376.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -10920,6 +10851,10 @@
    "versions": [
     {
      "icon": "/icons/items/375.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -11091,6 +11026,10 @@
    "versions": [
     {
      "icon": "/icons/items/374.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -11291,6 +11230,10 @@
    "versions": [
     {
      "icon": "/icons/items/371.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -11498,6 +11441,10 @@
    "versions": [
     {
      "icon": "/icons/items/372.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -12159,6 +12106,10 @@
    "versions": [
     {
      "icon": "/icons/items/117.png",
+     "iconSize": [
+      26,
+      24
+     ],
      "spell": "spell:s3",
      "stack": 1,
      "stats": {},
@@ -12171,6 +12122,10 @@
     },
     {
      "icon": "/icons/items/118.png",
+     "iconSize": [
+      26,
+      24
+     ],
      "spell": "spell:s1",
      "stack": 1,
      "stats": {},
@@ -12183,6 +12138,10 @@
     },
     {
      "icon": "/icons/items/149.png",
+     "iconSize": [
+      26,
+      24
+     ],
      "spell": "spell:s4",
      "stack": 1,
      "stats": {},
@@ -12195,6 +12154,10 @@
     },
     {
      "icon": "/icons/items/172.png",
+     "iconSize": [
+      26,
+      24
+     ],
      "spell": "spell:s44",
      "stack": 1,
      "stats": {},
@@ -12207,6 +12170,10 @@
     },
     {
      "icon": "/icons/items/291.png",
+     "iconSize": [
+      26,
+      24
+     ],
      "spell": "spell:s55",
      "stack": 1,
      "stats": {},
@@ -12219,6 +12186,10 @@
     },
     {
      "icon": "/icons/items/298.png",
+     "iconSize": [
+      26,
+      24
+     ],
      "spell": "spell:s61",
      "stack": 1,
      "stats": {},
@@ -12231,6 +12202,10 @@
     },
     {
      "icon": "/icons/items/320.png",
+     "iconSize": [
+      26,
+      24
+     ],
      "spell": "spell:s27",
      "stack": 1,
      "stats": {},
@@ -12243,6 +12218,10 @@
     },
     {
      "icon": "/icons/items/446.png",
+     "iconSize": [
+      26,
+      24
+     ],
      "spell": "spell:s85",
      "stack": 1,
      "stats": {},
@@ -12255,6 +12234,10 @@
     },
     {
      "icon": "/icons/items/491.png",
+     "iconSize": [
+      26,
+      24
+     ],
      "spell": "spell:s105",
      "stack": 1,
      "stats": {},
@@ -12267,6 +12250,10 @@
     },
     {
      "icon": "/icons/items/494.png",
+     "iconSize": [
+      26,
+      24
+     ],
      "spell": "spell:s106",
      "stack": 1,
      "stats": {},
@@ -12279,6 +12266,10 @@
     },
     {
      "icon": "/icons/items/495.png",
+     "iconSize": [
+      26,
+      24
+     ],
      "spell": "spell:s107",
      "stack": 1,
      "stats": {},
@@ -12471,6 +12462,10 @@
       "seconds": 80
      },
      "icon": "/icons/items/234.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 100,
      "stats": {
       "hpRegen": 3,
@@ -12677,6 +12672,10 @@
       "seconds": 440
      },
      "icon": "/icons/items/242.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 3,
      "stats": {
       "damage": 2,
@@ -12950,6 +12949,10 @@
    "versions": [
     {
      "icon": "/icons/items/7.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 100,
      "stats": {},
      "text": {
@@ -13077,6 +13080,10 @@
       "squire": {}
      },
      "icon": "/icons/items/466.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1000,
      "stats": {},
      "text": {
@@ -13090,28 +13097,7 @@
   },
   {
    "category": "weapon",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/344.png",
    "id": "bone-bow",
    "name": {
@@ -13253,6 +13239,10 @@
       }
      },
      "icon": "/icons/items/344.png",
+     "iconSize": [
+      17,
+      32
+     ],
      "qualities": [
       {
        "classes": {
@@ -13387,28 +13377,7 @@
   },
   {
    "category": "weapon",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/351.png",
    "id": "bone-knife",
    "name": {
@@ -13586,6 +13555,10 @@
       }
      },
      "icon": "/icons/items/351.png",
+     "iconSize": [
+      22,
+      23
+     ],
      "qualities": [
       {
        "classes": {
@@ -19401,6 +19374,10 @@
    "versions": [
     {
      "icon": "/icons/items/69.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 3,
      "stats": {},
      "text": {
@@ -19526,6 +19503,10 @@
    "versions": [
     {
      "icon": "/icons/items/198.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -19651,6 +19632,10 @@
    "versions": [
     {
      "icon": "/icons/items/204.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -19664,28 +19649,7 @@
   },
   {
    "category": "armour",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/504.png",
    "id": "brass-knuckles",
    "name": {
@@ -19749,6 +19713,10 @@
       "squire": {}
      },
      "icon": "/icons/items/504.png",
+     "iconSize": [
+      24,
+      24
+     ],
      "qualities": [
       {
        "classes": {
@@ -19832,28 +19800,7 @@
   {
    "armourClass": "heavy",
    "category": "armour",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/146.png",
    "id": "brass-legs",
    "name": {
@@ -20065,6 +20012,10 @@
       }
      },
      "icon": "/icons/items/146.png",
+     "iconSize": [
+      24,
+      25
+     ],
      "qualities": [
       {
        "classes": {
@@ -20214,28 +20165,7 @@
   {
    "armourClass": "heavy",
    "category": "armour",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/295.png",
    "id": "brass-plate",
    "name": {
@@ -20399,6 +20329,10 @@
       }
      },
      "icon": "/icons/items/295.png",
+     "iconSize": [
+      25,
+      27
+     ],
      "qualities": [
       {
        "classes": {
@@ -20547,28 +20481,7 @@
   },
   {
    "category": "shield",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/339.png",
    "id": "brass-shield",
    "name": {
@@ -20759,6 +20672,10 @@
       }
      },
      "icon": "/icons/items/339.png",
+     "iconSize": [
+      19,
+      23
+     ],
      "qualities": [
       {
        "classes": {
@@ -21157,6 +21074,10 @@
       "seconds": 640
      },
      "icon": "/icons/items/187.png",
+     "iconSize": [
+      23,
+      19
+     ],
      "stack": 3,
      "stats": {
       "hpRegen": 12,
@@ -21762,6 +21683,10 @@
    "versions": [
     {
      "icon": "/icons/items/102.png",
+     "iconSize": [
+      23,
+      24
+     ],
      "stack": 15,
      "stats": {},
      "text": {
@@ -22420,6 +22345,10 @@
       "seconds": 100
      },
      "icon": "/icons/items/148.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 50,
      "stats": {
       "hpRegen": 6,
@@ -22437,28 +22366,7 @@
   {
    "armourClass": "light",
    "category": "armour",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/63.png",
    "id": "brigandine-legs",
    "name": {
@@ -22577,6 +22485,10 @@
       }
      },
      "icon": "/icons/items/63.png",
+     "iconSize": [
+      22,
+      28
+     ],
      "qualities": [
       {
        "classes": {
@@ -22732,28 +22644,7 @@
   {
    "armourClass": "light",
    "category": "armour",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/62.png",
    "id": "brigandine-vest",
    "name": {
@@ -22909,6 +22800,10 @@
       }
      },
      "icon": "/icons/items/62.png",
+     "iconSize": [
+      28,
+      27
+     ],
      "qualities": [
       {
        "classes": {
@@ -23063,28 +22958,7 @@
   },
   {
    "category": "weapon",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/3.png",
    "id": "broadsword",
    "name": {
@@ -23246,6 +23120,10 @@
       }
      },
      "icon": "/icons/items/3.png",
+     "iconSize": [
+      29,
+      29
+     ],
      "qualities": [
       {
        "classes": {
@@ -23401,28 +23279,7 @@
   },
   {
    "category": "container",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/9.png",
    "id": "brown-backpack",
    "name": {
@@ -23678,6 +23535,10 @@
       }
      },
      "icon": "/icons/items/9.png",
+     "iconSize": [
+      24,
+      24
+     ],
      "qualities": [
       {
        "classes": {
@@ -23827,28 +23688,7 @@
   },
   {
    "category": "shield",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/90.png",
    "id": "buckler",
    "name": {
@@ -24061,6 +23901,10 @@
       }
      },
      "icon": "/icons/items/90.png",
+     "iconSize": [
+      22,
+      20
+     ],
      "qualities": [
       {
        "classes": {
@@ -24305,6 +24149,10 @@
    "versions": [
     {
      "icon": "/icons/items/122.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 100,
      "stats": {},
      "text": {
@@ -24319,28 +24167,7 @@
   {
    "armourClass": "light",
    "category": "armour",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/346.png",
    "id": "burlap-hat",
    "name": {
@@ -24431,6 +24258,10 @@
       }
      },
      "icon": "/icons/items/346.png",
+     "iconSize": [
+      28,
+      25
+     ],
      "qualities": [
       {
        "classes": {
@@ -24590,28 +24421,7 @@
   {
    "armourClass": "light",
    "category": "armour",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/347.png",
    "id": "burlap-skirt",
    "name": {
@@ -24702,6 +24512,10 @@
       }
      },
      "icon": "/icons/items/347.png",
+     "iconSize": [
+      27,
+      30
+     ],
      "qualities": [
       {
        "classes": {
@@ -24974,6 +24788,10 @@
    "versions": [
     {
      "icon": "/icons/items/349.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 25,
      "stats": {},
      "text": {
@@ -25333,6 +25151,10 @@
    "versions": [
     {
      "icon": "/icons/items/160.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -26050,6 +25872,10 @@
    "versions": [
     {
      "icon": "/icons/items/161.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "lifetime": 600,
      "light": true,
      "stack": 1,
@@ -26154,6 +25980,10 @@
    "versions": [
     {
      "icon": "/icons/items/584.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -26310,6 +26140,10 @@
    "versions": [
     {
      "icon": "/icons/items/11.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 100,
      "stats": {},
      "text": {
@@ -26324,28 +26158,7 @@
   {
    "armourClass": "heavy",
    "category": "armour",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/84.png",
    "id": "chain-mail",
    "name": {
@@ -26545,6 +26358,10 @@
       }
      },
      "icon": "/icons/items/84.png",
+     "iconSize": [
+      26,
+      29
+     ],
      "qualities": [
       {
        "classes": {
@@ -26877,6 +26694,10 @@
    "versions": [
     {
      "icon": "/icons/items/304.png",
+     "iconSize": [
+      19,
+      20
+     ],
      "stack": 100,
      "stats": {},
      "text": {
@@ -27109,6 +26930,10 @@
       "seconds": 100
      },
      "icon": "/icons/items/100.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 50,
      "stats": {
       "hpRegen": 5,
@@ -27311,6 +27136,10 @@
    "versions": [
     {
      "icon": "/icons/items/142.png",
+     "iconSize": [
+      22,
+      21
+     ],
      "stack": 5,
      "stats": {},
      "text": {
@@ -27920,6 +27749,10 @@
    "versions": [
     {
      "icon": "/icons/items/428.png",
+     "iconSize": [
+      24,
+      24
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -27931,6 +27764,10 @@
     },
     {
      "icon": "/icons/items/429.png",
+     "iconSize": [
+      24,
+      24
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -27942,6 +27779,10 @@
     },
     {
      "icon": "/icons/items/430.png",
+     "iconSize": [
+      24,
+      24
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -27953,6 +27794,10 @@
     },
     {
      "icon": "/icons/items/431.png",
+     "iconSize": [
+      24,
+      24
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -27964,6 +27809,10 @@
     },
     {
      "icon": "/icons/items/432.png",
+     "iconSize": [
+      24,
+      24
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -27975,6 +27824,10 @@
     },
     {
      "icon": "/icons/items/433.png",
+     "iconSize": [
+      24,
+      24
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -27986,6 +27839,10 @@
     },
     {
      "icon": "/icons/items/434.png",
+     "iconSize": [
+      24,
+      24
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -27997,6 +27854,10 @@
     },
     {
      "icon": "/icons/items/435.png",
+     "iconSize": [
+      24,
+      24
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -28008,6 +27869,10 @@
     },
     {
      "icon": "/icons/items/436.png",
+     "iconSize": [
+      24,
+      24
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -28019,6 +27884,10 @@
     },
     {
      "icon": "/icons/items/437.png",
+     "iconSize": [
+      24,
+      24
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -28030,6 +27899,10 @@
     },
     {
      "icon": "/icons/items/438.png",
+     "iconSize": [
+      24,
+      24
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -28041,6 +27914,10 @@
     },
     {
      "icon": "/icons/items/439.png",
+     "iconSize": [
+      24,
+      24
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -28145,6 +28022,10 @@
    "versions": [
     {
      "icon": "/icons/items/459.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -28159,28 +28040,7 @@
   {
    "armourClass": "light",
    "category": "armour",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/51.png",
    "id": "cloth-pants",
    "name": {
@@ -28584,6 +28444,10 @@
       }
      },
      "icon": "/icons/items/51.png",
+     "iconSize": [
+      20,
+      25
+     ],
      "qualities": [
       {
        "classes": {
@@ -28733,28 +28597,7 @@
   {
    "armourClass": "light",
    "category": "armour",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/1.png",
    "id": "cloth-vest",
    "name": {
@@ -29189,6 +29032,10 @@
       }
      },
      "icon": "/icons/items/1.png",
+     "iconSize": [
+      25,
+      27
+     ],
      "qualities": [
       {
        "classes": {
@@ -29563,6 +29410,10 @@
    "versions": [
     {
      "icon": "/icons/items/12.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 100,
      "stats": {},
      "text": {
@@ -29621,6 +29472,10 @@
    "versions": [
     {
      "icon": "/icons/items/287.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -29697,6 +29552,10 @@
    "versions": [
     {
      "icon": "/icons/items/288.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -29759,6 +29618,10 @@
    "versions": [
     {
      "icon": "/icons/items/286.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -29817,6 +29680,10 @@
    "versions": [
     {
      "icon": "/icons/items/289.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -30133,6 +30000,10 @@
       "seconds": 170
      },
      "icon": "/icons/items/68.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 40,
      "stats": {
       "hpRegen": 11,
@@ -30285,6 +30156,10 @@
       "seconds": 190
      },
      "icon": "/icons/items/468.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 20,
      "stats": {
       "hpRegen": 12
@@ -30531,6 +30406,10 @@
       "seconds": 210
      },
      "icon": "/icons/items/128.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 15,
      "stats": {
       "hpRegen": 12,
@@ -30812,6 +30691,10 @@
       "seconds": 170
      },
      "icon": "/icons/items/361.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 25,
      "stats": {
       "hpRegen": 9,
@@ -31121,6 +31004,10 @@
       "seconds": 150
      },
      "icon": "/icons/items/65.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 75,
      "stats": {
       "hpRegen": 10,
@@ -31429,6 +31316,10 @@
       "seconds": 100
      },
      "icon": "/icons/items/66.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 15,
      "stats": {
       "hpRegen": 6
@@ -31444,28 +31335,7 @@
   },
   {
    "category": "tool",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/535.png",
    "id": "copper-pan",
    "name": {
@@ -31516,6 +31386,10 @@
    "versions": [
     {
      "icon": "/icons/items/535.png",
+     "iconSize": [
+      26,
+      30
+     ],
      "qualities": [
       {
        "rarity": 0,
@@ -31557,28 +31431,7 @@
   {
    "armourClass": "light",
    "category": "armour",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/131.png",
    "id": "crooked-vest",
    "name": {
@@ -31691,6 +31544,10 @@
       }
      },
      "icon": "/icons/items/131.png",
+     "iconSize": [
+      29,
+      27
+     ],
      "light": true,
      "qualities": [
       {
@@ -31866,28 +31723,7 @@
   },
   {
    "category": "weapon",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/467.png",
    "id": "crossbow",
    "name": {
@@ -32086,6 +31922,10 @@
       }
      },
      "icon": "/icons/items/467.png",
+     "iconSize": [
+      30,
+      25
+     ],
      "qualities": [
       {
        "classes": {
@@ -32246,28 +32086,7 @@
   },
   {
    "category": "tool",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/262.png",
    "id": "crowbar",
    "name": {
@@ -32560,6 +32379,10 @@
       "squire": {}
      },
      "icon": "/icons/items/262.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "qualities": [
       {
        "classes": {
@@ -32642,28 +32465,7 @@
   },
   {
    "category": "jewellery",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/469.png",
    "id": "crystal-amulet",
    "name": {
@@ -32748,6 +32550,10 @@
       }
      },
      "icon": "/icons/items/469.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "qualities": [
       {
        "classes": {
@@ -32876,28 +32682,7 @@
   },
   {
    "category": "jewellery",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/45.png",
    "id": "crystal-ring",
    "name": {
@@ -33118,6 +32903,10 @@
       "squire": {}
      },
      "icon": "/icons/items/45.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "qualities": [
       {
        "classes": {
@@ -33297,6 +33086,10 @@
    "versions": [
     {
      "icon": "/icons/items/134.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 100,
      "stats": {},
      "text": {
@@ -33310,28 +33103,7 @@
   },
   {
    "category": "weapon",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/39.png",
    "id": "crystal-staff",
    "name": {
@@ -33546,6 +33318,10 @@
       "squire": {}
      },
      "icon": "/icons/items/39.png",
+     "iconSize": [
+      23,
+      32
+     ],
      "qualities": [
       {
        "classes": {
@@ -33634,28 +33410,7 @@
   },
   {
    "category": "weapon",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/190.png",
    "id": "cutlass",
    "name": {
@@ -33769,6 +33524,10 @@
       }
      },
      "icon": "/icons/items/190.png",
+     "iconSize": [
+      27,
+      31
+     ],
      "qualities": [
       {
        "classes": {
@@ -33930,28 +33689,7 @@
   {
    "armourClass": "light",
    "category": "armour",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/227.png",
    "id": "dark-armor",
    "name": {
@@ -34035,6 +33773,10 @@
       }
      },
      "icon": "/icons/items/227.png",
+     "iconSize": [
+      32,
+      31
+     ],
      "qualities": [
       {
        "classes": {
@@ -34215,28 +33957,7 @@
   },
   {
    "category": "jewellery",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/561.png",
    "id": "dark-beads",
    "name": {
@@ -34360,6 +34081,10 @@
       }
      },
      "icon": "/icons/items/561.png",
+     "iconSize": [
+      23,
+      23
+     ],
      "qualities": [
       {
        "classes": {
@@ -34567,28 +34292,7 @@
   {
    "armourClass": "light",
    "category": "armour",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/141.png",
    "id": "dark-hood",
    "name": {
@@ -34733,6 +34437,10 @@
       }
      },
      "icon": "/icons/items/141.png",
+     "iconSize": [
+      22,
+      24
+     ],
      "qualities": [
       {
        "classes": {
@@ -34888,28 +34596,7 @@
   {
    "armourClass": "light",
    "category": "armour",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/226.png",
    "id": "dark-legs",
    "name": {
@@ -34984,6 +34671,10 @@
       }
      },
      "icon": "/icons/items/226.png",
+     "iconSize": [
+      29,
+      32
+     ],
      "qualities": [
       {
        "classes": {
@@ -35164,28 +34855,7 @@
   },
   {
    "category": "shield",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/506.png",
    "id": "dark-orb",
    "name": {
@@ -35269,6 +34939,10 @@
       }
      },
      "icon": "/icons/items/506.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "qualities": [
       {
        "classes": {
@@ -35451,28 +35125,7 @@
   {
    "armourClass": "light",
    "category": "armour",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/96.png",
    "id": "dark-robe",
    "name": {
@@ -35617,6 +35270,10 @@
       }
      },
      "icon": "/icons/items/96.png",
+     "iconSize": [
+      25,
+      32
+     ],
      "qualities": [
       {
        "classes": {
@@ -35963,6 +35620,10 @@
    "versions": [
     {
      "icon": "/icons/items/391.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -36109,6 +35770,10 @@
    "versions": [
     {
      "icon": "/icons/items/390.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -36221,6 +35886,10 @@
    "versions": [
     {
      "icon": "/icons/items/394.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -36396,6 +36065,10 @@
    "versions": [
     {
      "icon": "/icons/items/387.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -36593,6 +36266,10 @@
    "versions": [
     {
      "icon": "/icons/items/388.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -36705,6 +36382,10 @@
    "versions": [
     {
      "icon": "/icons/items/483.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "resist": {
       "amount": 15,
       "type": 4
@@ -36723,28 +36404,7 @@
   },
   {
    "category": "jewellery",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/476.png",
    "id": "deer-charm",
    "name": {
@@ -36810,6 +36470,10 @@
       }
      },
      "icon": "/icons/items/476.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "qualities": [
       {
        "classes": {
@@ -37168,6 +36832,10 @@
    "versions": [
     {
      "icon": "/icons/items/302.png",
+     "iconSize": [
+      23,
+      20
+     ],
      "stack": 100,
      "stats": {},
      "text": {
@@ -37374,6 +37042,10 @@
    "versions": [
     {
      "icon": "/icons/items/568.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 100,
      "stats": {},
      "text": {
@@ -37387,28 +37059,7 @@
   },
   {
    "category": "jewellery",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/276.png",
    "id": "diamond-ring",
    "name": {
@@ -37631,6 +37282,10 @@
       }
      },
      "icon": "/icons/items/276.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "qualities": [
       {
        "classes": {
@@ -37842,6 +37497,10 @@
    "versions": [
     {
      "icon": "/icons/items/284.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -37855,28 +37514,7 @@
   },
   {
    "category": "weapon",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/517.png",
    "id": "double-axe",
    "name": {
@@ -37948,6 +37586,10 @@
       }
      },
      "icon": "/icons/items/517.png",
+     "iconSize": [
+      32,
+      32
+     ],
      "qualities": [
       {
        "classes": {
@@ -38260,6 +37902,10 @@
    "versions": [
     {
      "icon": "/icons/items/181.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 15,
      "stats": {},
      "text": {
@@ -38431,6 +38077,10 @@
    "versions": [
     {
      "icon": "/icons/items/243.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 3,
      "stats": {},
      "text": {
@@ -38598,6 +38248,10 @@
       "seconds": 400
      },
      "icon": "/icons/items/235.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 15,
      "stats": {
       "hpRegen": 12,
@@ -38616,28 +38270,7 @@
   {
    "armourClass": "light",
    "category": "armour",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/224.png",
    "id": "druid-cape",
    "name": {
@@ -38741,6 +38374,10 @@
       }
      },
      "icon": "/icons/items/224.png",
+     "iconSize": [
+      32,
+      32
+     ],
      "qualities": [
       {
        "classes": {
@@ -38916,28 +38553,7 @@
   {
    "armourClass": "light",
    "category": "armour",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/225.png",
    "id": "druid-hat",
    "name": {
@@ -39032,6 +38648,10 @@
       }
      },
      "icon": "/icons/items/225.png",
+     "iconSize": [
+      27,
+      23
+     ],
      "qualities": [
       {
        "classes": {
@@ -39295,6 +38915,10 @@
    "versions": [
     {
      "icon": "/icons/items/212.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -39366,6 +38990,10 @@
    "versions": [
     {
      "icon": "/icons/items/575.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 12,
      "stats": {},
      "text": {
@@ -39725,6 +39353,10 @@
       "seconds": 100
      },
      "icon": "/icons/items/236.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 25,
      "stats": {
       "hpRegen": 5,
@@ -39815,6 +39447,10 @@
    "versions": [
     {
      "icon": "/icons/items/501.png",
+     "iconSize": [
+      20,
+      28
+     ],
      "potion": {
       "max": 300,
       "min": 250,
@@ -39916,6 +39552,10 @@
       "seconds": 320
      },
      "icon": "/icons/items/580.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 25,
      "stats": {
       "magic": 1,
@@ -40049,6 +39689,10 @@
    "versions": [
     {
      "icon": "/icons/items/200.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -40408,6 +40052,10 @@
    "versions": [
     {
      "icon": "/icons/items/13.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 35,
      "stats": {},
      "text": {
@@ -40479,6 +40127,10 @@
    "versions": [
     {
      "icon": "/icons/items/487.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 5,
      "stats": {},
      "text": {
@@ -40561,6 +40213,10 @@
    "versions": [
     {
      "icon": "/icons/items/427.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -40574,28 +40230,7 @@
   },
   {
    "category": "weapon",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/290.png",
    "id": "epee",
    "name": {
@@ -40760,6 +40395,10 @@
       }
      },
      "icon": "/icons/items/290.png",
+     "iconSize": [
+      32,
+      32
+     ],
      "qualities": [
       {
        "classes": {
@@ -40921,28 +40560,7 @@
   {
    "armourClass": "light",
    "category": "armour",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/273.png",
    "id": "euler-pants",
    "name": {
@@ -41008,6 +40626,10 @@
       }
      },
      "icon": "/icons/items/273.png",
+     "iconSize": [
+      22,
+      28
+     ],
      "qualities": [
       {
        "classes": {
@@ -41162,28 +40784,7 @@
   },
   {
    "category": "jewellery",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/480.png",
    "id": "evil-charm",
    "name": {
@@ -41279,6 +40880,10 @@
       }
      },
      "icon": "/icons/items/480.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "qualities": [
       {
        "classes": {
@@ -41585,6 +41190,10 @@
    "versions": [
     {
      "icon": "/icons/items/440.png",
+     "iconSize": [
+      24,
+      23
+     ],
      "spell": "spell:s80",
      "stack": 1,
      "stats": {},
@@ -41597,6 +41206,10 @@
     },
     {
      "icon": "/icons/items/441.png",
+     "iconSize": [
+      24,
+      23
+     ],
      "spell": "spell:s78",
      "stack": 1,
      "stats": {},
@@ -41609,6 +41222,10 @@
     },
     {
      "icon": "/icons/items/442.png",
+     "iconSize": [
+      24,
+      23
+     ],
      "spell": "spell:s79",
      "stack": 1,
      "stats": {},
@@ -41621,6 +41238,10 @@
     },
     {
      "icon": "/icons/items/488.png",
+     "iconSize": [
+      24,
+      23
+     ],
      "spell": "spell:s101",
      "stack": 1,
      "stats": {},
@@ -41635,28 +41256,7 @@
   },
   {
    "category": "ammo",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/508.png",
    "id": "fat-boy",
    "name": {
@@ -41752,6 +41352,10 @@
    "versions": [
     {
      "icon": "/icons/items/508.png",
+     "iconSize": [
+      25,
+      25
+     ],
      "qualities": [
       {
        "rarity": 0,
@@ -41802,6 +41406,10 @@
     },
     {
      "icon": "/icons/items/572.png",
+     "iconSize": [
+      25,
+      25
+     ],
      "qualities": [
       {
        "rarity": 0,
@@ -42394,6 +42002,10 @@
       "seconds": 100
      },
      "icon": "/icons/items/67.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 40,
      "stats": {
       "hpRegen": 6,
@@ -42500,6 +42112,10 @@
    "versions": [
     {
      "icon": "/icons/items/334.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -42698,6 +42314,10 @@
    "versions": [
     {
      "icon": "/icons/items/107.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 100,
      "stats": {},
      "text": {
@@ -42879,6 +42499,10 @@
    "versions": [
     {
      "icon": "/icons/items/454.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 100,
      "stats": {},
      "text": {
@@ -42893,28 +42517,7 @@
   {
    "armourClass": "light",
    "category": "armour",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/503.png",
    "id": "fur-boots",
    "name": {
@@ -42985,6 +42588,10 @@
       }
      },
      "icon": "/icons/items/503.png",
+     "iconSize": [
+      25,
+      28
+     ],
      "qualities": [
       {
        "classes": {
@@ -43134,28 +42741,7 @@
   {
    "armourClass": "light",
    "category": "armour",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/83.png",
    "id": "gambeson",
    "name": {
@@ -43494,6 +43080,10 @@
       }
      },
      "icon": "/icons/items/83.png",
+     "iconSize": [
+      29,
+      29
+     ],
      "qualities": [
       {
        "classes": {
@@ -43885,6 +43475,10 @@
    "versions": [
     {
      "icon": "/icons/items/456.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 20,
      "stats": {},
      "text": {
@@ -44189,6 +43783,10 @@
    "versions": [
     {
      "icon": "/icons/items/145.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 50,
      "stats": {},
      "text": {
@@ -44366,6 +43964,10 @@
       "seconds": 300
      },
      "icon": "/icons/items/184.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 15,
      "stats": {
       "hpRegen": 10,
@@ -44504,6 +44106,10 @@
    "versions": [
     {
      "icon": "/icons/items/570.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 100,
      "stats": {},
      "text": {
@@ -44517,28 +44123,7 @@
   },
   {
    "category": "jewellery",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/124.png",
    "id": "garnet-ring",
    "name": {
@@ -44692,6 +44277,10 @@
       "squire": {}
      },
      "icon": "/icons/items/124.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "qualities": [
       {
        "classes": {
@@ -45566,6 +45155,10 @@
    "versions": [
     {
      "icon": "/icons/items/76.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 10000,
      "stats": {},
      "text": {
@@ -45739,6 +45332,10 @@
    "versions": [
     {
      "icon": "/icons/items/159.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -45752,28 +45349,7 @@
   },
   {
    "category": "jewellery",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/47.png",
    "id": "golden-ring",
    "name": {
@@ -45995,6 +45571,10 @@
       }
      },
      "icon": "/icons/items/47.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "qualities": [
       {
        "classes": {
@@ -46143,28 +45723,7 @@
   },
   {
    "category": "jewellery",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/463.png",
    "id": "golden-torc",
    "name": {
@@ -46268,6 +45827,10 @@
       }
      },
      "icon": "/icons/items/463.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "qualities": [
       {
        "classes": {
@@ -46442,28 +46005,7 @@
   },
   {
    "category": "container",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/340.png",
    "id": "gray-backpack",
    "name": {
@@ -46761,6 +46303,10 @@
       }
      },
      "icon": "/icons/items/340.png",
+     "iconSize": [
+      26,
+      26
+     ],
      "qualities": [
       {
        "classes": {
@@ -46910,28 +46456,7 @@
   },
   {
    "category": "weapon",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/450.png",
    "id": "great-axe",
    "name": {
@@ -47027,6 +46552,10 @@
       }
      },
      "icon": "/icons/items/450.png",
+     "iconSize": [
+      32,
+      32
+     ],
      "qualities": [
       {
        "classes": {
@@ -47214,28 +46743,7 @@
   },
   {
    "category": "weapon",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/133.png",
    "id": "greatsword",
    "name": {
@@ -47327,6 +46835,10 @@
       }
      },
      "icon": "/icons/items/133.png",
+     "iconSize": [
+      32,
+      32
+     ],
      "qualities": [
       {
        "classes": {
@@ -47487,28 +46999,7 @@
   },
   {
    "category": "container",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/465.png",
    "id": "green-backpack",
    "name": {
@@ -47686,6 +47177,10 @@
       }
      },
      "icon": "/icons/items/465.png",
+     "iconSize": [
+      23,
+      26
+     ],
      "qualities": [
       {
        "classes": {
@@ -47861,28 +47356,7 @@
   },
   {
    "category": "container",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/214.png",
    "id": "green-bag",
    "name": {
@@ -48143,6 +47617,10 @@
       "squire": {}
      },
      "icon": "/icons/items/214.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "qualities": [
       {
        "classes": {
@@ -48714,6 +48192,10 @@
    "versions": [
     {
      "icon": "/icons/items/168.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -48727,28 +48209,7 @@
   },
   {
    "category": "shield",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/252.png",
    "id": "green-orb",
    "name": {
@@ -48917,6 +48378,10 @@
       }
      },
      "icon": "/icons/items/252.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "qualities": [
       {
        "classes": {
@@ -49155,28 +48620,7 @@
   },
   {
    "category": "jewellery",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/560.png",
    "id": "green-pendant",
    "name": {
@@ -49295,6 +48739,10 @@
       }
      },
      "icon": "/icons/items/560.png",
+     "iconSize": [
+      26,
+      27
+     ],
      "qualities": [
       {
        "classes": {
@@ -49553,6 +49001,10 @@
    "versions": [
     {
      "icon": "/icons/items/369.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -49773,6 +49225,10 @@
    "versions": [
     {
      "icon": "/icons/items/367.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -49944,6 +49400,10 @@
    "versions": [
     {
      "icon": "/icons/items/366.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -50090,6 +49550,10 @@
    "versions": [
     {
      "icon": "/icons/items/370.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -50252,6 +49716,10 @@
    "versions": [
     {
      "icon": "/icons/items/363.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -50410,6 +49878,10 @@
    "versions": [
     {
      "icon": "/icons/items/364.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -51043,6 +50515,10 @@
    "versions": [
     {
      "icon": "/icons/items/114.png",
+     "iconSize": [
+      25,
+      24
+     ],
      "spell": "spell:s7",
      "stack": 1,
      "stats": {},
@@ -51055,6 +50531,10 @@
     },
     {
      "icon": "/icons/items/115.png",
+     "iconSize": [
+      25,
+      24
+     ],
      "spell": "spell:s49",
      "stack": 1,
      "stats": {},
@@ -51067,6 +50547,10 @@
     },
     {
      "icon": "/icons/items/116.png",
+     "iconSize": [
+      25,
+      24
+     ],
      "spell": "spell:s25",
      "stack": 1,
      "stats": {},
@@ -51079,6 +50563,10 @@
     },
     {
      "icon": "/icons/items/173.png",
+     "iconSize": [
+      25,
+      24
+     ],
      "spell": "spell:s43",
      "stack": 1,
      "stats": {},
@@ -51091,6 +50579,10 @@
     },
     {
      "icon": "/icons/items/285.png",
+     "iconSize": [
+      25,
+      24
+     ],
      "spell": "spell:s50",
      "stack": 1,
      "stats": {},
@@ -51103,6 +50595,10 @@
     },
     {
      "icon": "/icons/items/489.png",
+     "iconSize": [
+      25,
+      24
+     ],
      "spell": "spell:s102",
      "stack": 1,
      "stats": {},
@@ -51115,6 +50611,10 @@
     },
     {
      "icon": "/icons/items/583.png",
+     "iconSize": [
+      25,
+      24
+     ],
      "spell": "spell:s117",
      "stack": 1,
      "stats": {},
@@ -51280,6 +50780,10 @@
       "seconds": 290
      },
      "icon": "/icons/items/186.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 15,
      "stats": {
       "hpRegen": 11,
@@ -51669,6 +51173,10 @@
    "versions": [
     {
      "icon": "/icons/items/17.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "potion": {
       "max": 75,
       "min": 50,
@@ -51733,6 +51241,10 @@
    "versions": [
     {
      "icon": "/icons/items/478.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "light": true,
      "stack": 1,
      "stats": {},
@@ -51869,6 +51381,10 @@
       "squire": {}
      },
      "icon": "/icons/items/203.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -52020,6 +51536,10 @@
    "versions": [
     {
      "icon": "/icons/items/158.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 100,
      "stats": {},
      "text": {
@@ -52115,6 +51635,10 @@
    "versions": [
     {
      "icon": "/icons/items/484.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "resist": {
       "amount": 15,
       "type": 6
@@ -52230,6 +51754,10 @@
    "versions": [
     {
      "icon": "/icons/items/126.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 100,
      "stats": {},
      "text": {
@@ -52414,6 +51942,10 @@
    "versions": [
     {
      "icon": "/icons/items/335.png",
+     "iconSize": [
+      28,
+      23
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -52425,6 +51957,10 @@
     },
     {
      "icon": "/icons/items/336.png",
+     "iconSize": [
+      28,
+      23
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -52436,6 +51972,10 @@
     },
     {
      "icon": "/icons/items/337.png",
+     "iconSize": [
+      28,
+      23
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -52447,6 +51987,10 @@
     },
     {
      "icon": "/icons/items/338.png",
+     "iconSize": [
+      28,
+      23
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -52628,6 +52172,10 @@
    "versions": [
     {
      "icon": "/icons/items/282.png",
+     "iconSize": [
+      28,
+      23
+     ],
      "slots": 12,
      "stack": 1,
      "stats": {},
@@ -52810,6 +52358,10 @@
    "versions": [
     {
      "icon": "/icons/items/280.png",
+     "iconSize": [
+      28,
+      23
+     ],
      "slots": 4,
      "stack": 1,
      "stats": {},
@@ -53005,6 +52557,10 @@
    "versions": [
     {
      "icon": "/icons/items/308.png",
+     "iconSize": [
+      28,
+      23
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -53016,6 +52572,10 @@
     },
     {
      "icon": "/icons/items/313.png",
+     "iconSize": [
+      28,
+      23
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -53027,6 +52587,10 @@
     },
     {
      "icon": "/icons/items/314.png",
+     "iconSize": [
+      28,
+      23
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -53038,6 +52602,10 @@
     },
     {
      "icon": "/icons/items/315.png",
+     "iconSize": [
+      28,
+      23
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -53222,6 +52790,10 @@
    "versions": [
     {
      "icon": "/icons/items/307.png",
+     "iconSize": [
+      28,
+      23
+     ],
      "slots": 10,
      "stack": 1,
      "stats": {},
@@ -53234,6 +52806,10 @@
     },
     {
      "icon": "/icons/items/310.png",
+     "iconSize": [
+      28,
+      23
+     ],
      "slots": 10,
      "stack": 1,
      "stats": {},
@@ -53246,6 +52822,10 @@
     },
     {
      "icon": "/icons/items/311.png",
+     "iconSize": [
+      28,
+      23
+     ],
      "slots": 10,
      "stack": 1,
      "stats": {},
@@ -53258,6 +52838,10 @@
     },
     {
      "icon": "/icons/items/312.png",
+     "iconSize": [
+      28,
+      23
+     ],
      "slots": 10,
      "stack": 1,
      "stats": {},
@@ -53440,6 +53024,10 @@
    "versions": [
     {
      "icon": "/icons/items/275.png",
+     "iconSize": [
+      28,
+      23
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -53601,6 +53189,10 @@
    "versions": [
     {
      "icon": "/icons/items/309.png",
+     "iconSize": [
+      28,
+      23
+     ],
      "slots": 20,
      "stack": 1,
      "stats": {},
@@ -53613,6 +53205,10 @@
     },
     {
      "icon": "/icons/items/316.png",
+     "iconSize": [
+      28,
+      23
+     ],
      "slots": 20,
      "stack": 1,
      "stats": {},
@@ -53625,6 +53221,10 @@
     },
     {
      "icon": "/icons/items/317.png",
+     "iconSize": [
+      28,
+      23
+     ],
      "slots": 20,
      "stack": 1,
      "stats": {},
@@ -53637,6 +53237,10 @@
     },
     {
      "icon": "/icons/items/318.png",
+     "iconSize": [
+      28,
+      23
+     ],
      "slots": 20,
      "stack": 1,
      "stats": {},
@@ -53699,6 +53303,10 @@
    "versions": [
     {
      "icon": "/icons/items/496.png",
+     "iconSize": [
+      28,
+      23
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -53710,6 +53318,10 @@
     },
     {
      "icon": "/icons/items/497.png",
+     "iconSize": [
+      28,
+      23
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -53721,6 +53333,10 @@
     },
     {
      "icon": "/icons/items/498.png",
+     "iconSize": [
+      28,
+      23
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -53732,6 +53348,10 @@
     },
     {
      "icon": "/icons/items/499.png",
+     "iconSize": [
+      28,
+      23
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -53913,6 +53533,10 @@
    "versions": [
     {
      "icon": "/icons/items/281.png",
+     "iconSize": [
+      28,
+      23
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -54095,6 +53719,10 @@
    "versions": [
     {
      "icon": "/icons/items/283.png",
+     "iconSize": [
+      28,
+      23
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -54106,6 +53734,10 @@
     },
     {
      "icon": "/icons/items/293.png",
+     "iconSize": [
+      28,
+      23
+     ],
      "light": true,
      "stack": 1,
      "stats": {},
@@ -54330,6 +53962,10 @@
    "versions": [
     {
      "icon": "/icons/items/299.png",
+     "iconSize": [
+      21,
+      22
+     ],
      "stack": 100,
      "stats": {},
      "text": {
@@ -54343,28 +53979,7 @@
   },
   {
    "category": "jewellery",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/581.png",
    "id": "invisibility-ring",
    "name": {
@@ -54430,6 +54045,10 @@
       "squire": {}
      },
      "icon": "/icons/items/581.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "qualities": [
       {
        "classes": {
@@ -54505,6 +54124,10 @@
       "squire": {}
      },
      "icon": "/icons/items/582.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "lifetime": 300,
      "stack": 1,
      "stats": {},
@@ -54520,28 +54143,7 @@
   {
    "armourClass": "heavy",
    "category": "armour",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/530.png",
    "id": "iron-boots",
    "name": {
@@ -54630,6 +54232,10 @@
       }
      },
      "icon": "/icons/items/530.png",
+     "iconSize": [
+      25,
+      28
+     ],
      "qualities": [
       {
        "classes": {
@@ -54828,6 +54434,10 @@
    "versions": [
     {
      "icon": "/icons/items/205.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -54842,28 +54452,7 @@
   {
    "armourClass": "heavy",
    "category": "armour",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/525.png",
    "id": "iron-gloves",
    "name": {
@@ -54956,6 +54545,10 @@
       }
      },
      "icon": "/icons/items/525.png",
+     "iconSize": [
+      22,
+      27
+     ],
      "qualities": [
       {
        "classes": {
@@ -55581,6 +55174,10 @@
    "versions": [
     {
      "icon": "/icons/items/330.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 100,
      "stats": {},
      "text": {
@@ -55594,28 +55191,7 @@
   },
   {
    "category": "weapon",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/514.png",
    "id": "iron-mace",
    "name": {
@@ -55749,6 +55325,10 @@
       }
      },
      "icon": "/icons/items/514.png",
+     "iconSize": [
+      29,
+      30
+     ],
      "qualities": [
       {
        "classes": {
@@ -55883,28 +55463,7 @@
   },
   {
    "category": "tool",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/18.png",
    "id": "iron-pan",
    "name": {
@@ -56601,6 +56160,10 @@
    "versions": [
     {
      "icon": "/icons/items/18.png",
+     "iconSize": [
+      22,
+      22
+     ],
      "qualities": [
       {
        "rarity": 0,
@@ -56641,28 +56204,7 @@
   },
   {
    "category": "weapon",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/88.png",
    "id": "ironsword",
    "name": {
@@ -56990,6 +56532,10 @@
       }
      },
      "icon": "/icons/items/88.png",
+     "iconSize": [
+      28,
+      29
+     ],
      "qualities": [
       {
        "classes": {
@@ -57151,28 +56697,7 @@
   {
    "armourClass": "heavy",
    "category": "armour",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/82.png",
    "id": "kettle-helmet",
    "name": {
@@ -57428,6 +56953,10 @@
       }
      },
      "icon": "/icons/items/82.png",
+     "iconSize": [
+      28,
+      24
+     ],
      "qualities": [
       {
        "classes": {
@@ -57700,6 +57229,10 @@
    "versions": [
     {
      "icon": "/icons/items/155.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 50,
      "stats": {},
      "text": {
@@ -57713,28 +57246,7 @@
   },
   {
    "category": "weapon",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/77.png",
    "id": "knife",
    "name": {
@@ -58496,6 +58008,10 @@
       }
      },
      "icon": "/icons/items/77.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "qualities": [
       {
        "classes": {
@@ -59223,6 +58739,10 @@
    "versions": [
     {
      "icon": "/icons/items/101.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 15,
      "stats": {},
      "text": {
@@ -59236,28 +58756,7 @@
   },
   {
    "category": "light",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/164.png",
    "id": "lantern",
    "name": {
@@ -59537,6 +59036,10 @@
       }
      },
      "icon": "/icons/items/164.png",
+     "iconSize": [
+      17,
+      25
+     ],
      "qualities": [
       {
        "classes": {
@@ -59900,6 +59403,10 @@
       }
      },
      "icon": "/icons/items/165.png",
+     "iconSize": [
+      17,
+      25
+     ],
      "lifetime": 600,
      "light": true,
      "stack": 1,
@@ -59917,28 +59424,7 @@
   },
   {
    "category": "weapon",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/462.png",
    "id": "leaf-blade",
    "name": {
@@ -60025,6 +59511,10 @@
       }
      },
      "icon": "/icons/items/462.png",
+     "iconSize": [
+      31,
+      31
+     ],
      "qualities": [
       {
        "classes": {
@@ -60160,28 +59650,7 @@
   {
    "armourClass": "light",
    "category": "armour",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/52.png",
    "id": "leather-bascinet",
    "name": {
@@ -60361,6 +59830,10 @@
       }
      },
      "icon": "/icons/items/52.png",
+     "iconSize": [
+      20,
+      24
+     ],
      "qualities": [
       {
        "classes": {
@@ -60510,28 +59983,7 @@
   {
    "armourClass": "light",
    "category": "armour",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/57.png",
    "id": "leather-boots",
    "name": {
@@ -60922,6 +60374,10 @@
       }
      },
      "icon": "/icons/items/57.png",
+     "iconSize": [
+      24,
+      21
+     ],
      "qualities": [
       {
        "classes": {
@@ -61071,28 +60527,7 @@
   {
    "armourClass": "light",
    "category": "armour",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/193.png",
    "id": "leather-cloak",
    "name": {
@@ -61572,6 +61007,10 @@
       }
      },
      "icon": "/icons/items/193.png",
+     "iconSize": [
+      29,
+      28
+     ],
      "qualities": [
       {
        "classes": {
@@ -61721,28 +61160,7 @@
   {
    "armourClass": "light",
    "category": "armour",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/64.png",
    "id": "leather-coif",
    "name": {
@@ -61890,6 +61308,10 @@
       }
      },
      "icon": "/icons/items/64.png",
+     "iconSize": [
+      22,
+      24
+     ],
      "qualities": [
       {
        "classes": {
@@ -62019,28 +61441,7 @@
   {
    "armourClass": "light",
    "category": "jewellery",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/60.png",
    "id": "leather-collar",
    "name": {
@@ -62182,6 +61583,10 @@
       }
      },
      "icon": "/icons/items/60.png",
+     "iconSize": [
+      27,
+      20
+     ],
      "qualities": [
       {
        "classes": {
@@ -62305,28 +61710,7 @@
   {
    "armourClass": "light",
    "category": "armour",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/87.png",
    "id": "leather-cuisse",
    "name": {
@@ -62638,6 +62022,10 @@
       }
      },
      "icon": "/icons/items/87.png",
+     "iconSize": [
+      25,
+      30
+     ],
      "qualities": [
       {
        "classes": {
@@ -62760,28 +62148,7 @@
   },
   {
    "category": "armour",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/61.png",
    "id": "leather-gloves",
    "name": {
@@ -62977,6 +62344,10 @@
       }
      },
      "icon": "/icons/items/61.png",
+     "iconSize": [
+      21,
+      22
+     ],
      "qualities": [
       {
        "classes": {
@@ -63111,28 +62482,7 @@
   },
   {
    "category": "weapon",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/548.png",
    "id": "light-wand",
    "name": {
@@ -63237,6 +62587,10 @@
       "squire": {}
      },
      "icon": "/icons/items/542.png",
+     "iconSize": [
+      19,
+      28
+     ],
      "qualities": [
       {
        "classes": {
@@ -63324,6 +62678,10 @@
       }
      },
      "icon": "/icons/items/548.png",
+     "iconSize": [
+      20,
+      29
+     ],
      "lifetime": 600,
      "light": true,
      "qualities": [
@@ -63503,28 +62861,7 @@
   },
   {
    "category": "shield",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/58.png",
    "id": "lineage-shield",
    "name": {
@@ -63627,6 +62964,10 @@
       }
      },
      "icon": "/icons/items/58.png",
+     "iconSize": [
+      20,
+      29
+     ],
      "qualities": [
       {
        "classes": {
@@ -63853,28 +63194,7 @@
   },
   {
    "category": "weapon",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/91.png",
    "id": "longbow",
    "name": {
@@ -63989,6 +63309,10 @@
       }
      },
      "icon": "/icons/items/91.png",
+     "iconSize": [
+      31,
+      31
+     ],
      "qualities": [
       {
        "classes": {
@@ -64114,28 +63438,7 @@
   },
   {
    "category": "weapon",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/92.png",
    "id": "longsword",
    "name": {
@@ -64263,6 +63566,10 @@
       }
      },
      "icon": "/icons/items/92.png",
+     "iconSize": [
+      32,
+      32
+     ],
      "qualities": [
       {
        "classes": {
@@ -64471,6 +63778,10 @@
       "squire": {}
      },
      "icon": "/icons/items/362.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "lifetime": 120,
      "stack": 1,
      "stats": {},
@@ -64485,28 +63796,7 @@
   },
   {
    "category": "weapon",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/547.png",
    "id": "magic-star-wand",
    "name": {
@@ -64592,6 +63882,10 @@
       "squire": {}
      },
      "icon": "/icons/items/541.png",
+     "iconSize": [
+      20,
+      29
+     ],
      "qualities": [
       {
        "classes": {
@@ -64675,6 +63969,10 @@
       }
      },
      "icon": "/icons/items/547.png",
+     "iconSize": [
+      21,
+      30
+     ],
      "lifetime": 600,
      "light": true,
      "qualities": [
@@ -69493,28 +68791,7 @@
   {
    "armourClass": "light",
    "category": "armour",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/56.png",
    "id": "magician-hat",
    "name": {
@@ -69596,6 +68873,10 @@
       }
      },
      "icon": "/icons/items/56.png",
+     "iconSize": [
+      24,
+      22
+     ],
      "qualities": [
       {
        "classes": {
@@ -69725,28 +69006,7 @@
   {
    "armourClass": "light",
    "category": "armour",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/55.png",
    "id": "magician-shoes",
    "name": {
@@ -69833,6 +69093,10 @@
       }
      },
      "icon": "/icons/items/55.png",
+     "iconSize": [
+      24,
+      20
+     ],
      "qualities": [
       {
        "classes": {
@@ -70293,6 +69557,10 @@
    "versions": [
     {
      "icon": "/icons/items/19.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "potion": {
       "max": 75,
       "min": 60,
@@ -70357,6 +69625,10 @@
    "versions": [
     {
      "icon": "/icons/items/589.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -70467,6 +69739,10 @@
       "squire": {}
      },
      "icon": "/icons/items/207.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -70792,6 +70068,10 @@
       "seconds": 570
      },
      "icon": "/icons/items/129.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 3,
      "stats": {
       "damage": 2,
@@ -71214,6 +70494,10 @@
       "seconds": 470
      },
      "icon": "/icons/items/130.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 3,
      "stats": {
       "damage": 1,
@@ -71232,28 +70516,7 @@
   },
   {
    "category": "container",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/217.png",
    "id": "merchants-bag",
    "name": {
@@ -71514,6 +70777,10 @@
       }
      },
      "icon": "/icons/items/217.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "qualities": [
       {
        "classes": {
@@ -71638,28 +70905,7 @@
   {
    "armourClass": "heavy",
    "category": "armour",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/522.png",
    "id": "mireling-armor",
    "name": {
@@ -71730,6 +70976,10 @@
       }
      },
      "icon": "/icons/items/522.png",
+     "iconSize": [
+      31,
+      29
+     ],
      "qualities": [
       {
        "classes": {
@@ -71879,28 +71129,7 @@
   {
    "armourClass": "heavy",
    "category": "armour",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/521.png",
    "id": "mireling-helmet",
    "name": {
@@ -71984,6 +71213,10 @@
       }
      },
      "icon": "/icons/items/521.png",
+     "iconSize": [
+      21,
+      30
+     ],
      "qualities": [
       {
        "classes": {
@@ -72159,28 +71392,7 @@
   {
    "armourClass": "light",
    "category": "armour",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/590.png",
    "id": "monk-habit",
    "name": {
@@ -72256,6 +71468,10 @@
       }
      },
      "icon": "/icons/items/590.png",
+     "iconSize": [
+      25,
+      28
+     ],
      "qualities": [
       {
        "classes": {
@@ -72643,6 +71859,10 @@
    "versions": [
     {
      "icon": "/icons/items/333.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 100,
      "stats": {},
      "text": {
@@ -72656,28 +71876,7 @@
   },
   {
    "category": "weapon",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/518.png",
    "id": "morning-star",
    "name": {
@@ -72743,6 +71942,10 @@
       }
      },
      "icon": "/icons/items/518.png",
+     "iconSize": [
+      28,
+      29
+     ],
      "qualities": [
       {
        "classes": {
@@ -72953,6 +72156,10 @@
    "versions": [
     {
      "icon": "/icons/items/592.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -73129,6 +72336,10 @@
    "versions": [
     {
      "icon": "/icons/items/157.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 50,
      "stats": {},
      "text": {
@@ -73143,28 +72354,7 @@
   {
    "armourClass": "light",
    "category": "armour",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/54.png",
    "id": "nightshade-kilt",
    "name": {
@@ -73251,6 +72441,10 @@
       }
      },
      "icon": "/icons/items/54.png",
+     "iconSize": [
+      23,
+      25
+     ],
      "qualities": [
       {
        "classes": {
@@ -73380,28 +72574,7 @@
   {
    "armourClass": "light",
    "category": "armour",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/53.png",
    "id": "nightshade-robe",
    "name": {
@@ -73497,6 +72670,10 @@
       }
      },
      "icon": "/icons/items/53.png",
+     "iconSize": [
+      27,
+      28
+     ],
      "qualities": [
       {
        "classes": {
@@ -73692,6 +72869,10 @@
    "versions": [
     {
      "icon": "/icons/items/562.png",
+     "iconSize": [
+      29,
+      32
+     ],
      "stack": 15,
      "stats": {},
      "text": {
@@ -73804,6 +72985,10 @@
    "versions": [
     {
      "icon": "/icons/items/197.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -73929,6 +73114,10 @@
    "versions": [
     {
      "icon": "/icons/items/196.png",
+     "iconSize": [
+      25,
+      23
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -73942,28 +73131,7 @@
   },
   {
    "category": "quest",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/591.png",
    "id": "old-amulet",
    "name": {
@@ -74037,6 +73205,10 @@
       }
      },
      "icon": "/icons/items/591.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "qualities": [
       {
        "classes": {
@@ -74237,28 +73409,7 @@
   },
   {
    "category": "weapon",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/472.png",
    "id": "old-axe",
    "name": {
@@ -74379,6 +73530,10 @@
       }
      },
      "icon": "/icons/items/472.png",
+     "iconSize": [
+      32,
+      28
+     ],
      "qualities": [
       {
        "classes": {
@@ -74534,28 +73689,7 @@
   },
   {
    "category": "container",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/209.png",
    "id": "old-backpack",
    "name": {
@@ -74816,6 +73950,10 @@
       }
      },
      "icon": "/icons/items/209.png",
+     "iconSize": [
+      28,
+      25
+     ],
      "qualities": [
       {
        "classes": {
@@ -74965,28 +74103,7 @@
   },
   {
    "category": "armour",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/192.png",
    "id": "old-gloves",
    "name": {
@@ -75286,6 +74403,10 @@
       "squire": {}
      },
      "icon": "/icons/items/192.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "qualities": [
       {
        "classes": {
@@ -75439,6 +74560,10 @@
    "versions": [
     {
      "icon": "/icons/items/292.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -75591,6 +74716,10 @@
    "versions": [
     {
      "icon": "/icons/items/94.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 100,
      "stats": {},
      "text": {
@@ -75604,28 +74733,7 @@
   },
   {
    "category": "shield",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/556.png",
    "id": "omen-shard",
    "name": {
@@ -75725,6 +74833,10 @@
       "squire": {}
      },
      "icon": "/icons/items/552.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -75751,6 +74863,10 @@
       }
      },
      "icon": "/icons/items/556.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "lifetime": 600,
      "light": true,
      "qualities": [
@@ -76122,6 +75238,10 @@
    "versions": [
     {
      "icon": "/icons/items/143.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 35,
      "stats": {},
      "text": {
@@ -76290,6 +75410,10 @@
       "seconds": 190
      },
      "icon": "/icons/items/183.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 25,
      "stats": {
       "mpRegen": 10
@@ -76306,28 +75430,7 @@
   {
    "armourClass": "heavy",
    "category": "armour",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/228.png",
    "id": "onyx-armor",
    "name": {
@@ -76394,6 +75497,10 @@
       }
      },
      "icon": "/icons/items/228.png",
+     "iconSize": [
+      32,
+      32
+     ],
      "qualities": [
       {
        "classes": {
@@ -76522,28 +75629,7 @@
   {
    "armourClass": "heavy",
    "category": "armour",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/230.png",
    "id": "onyx-boots",
    "name": {
@@ -76610,6 +75696,10 @@
       }
      },
      "icon": "/icons/items/230.png",
+     "iconSize": [
+      28,
+      26
+     ],
      "qualities": [
       {
        "classes": {
@@ -76737,28 +75827,7 @@
   },
   {
    "category": "weapon",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/251.png",
    "id": "onyx-dagger",
    "name": {
@@ -76829,6 +75898,10 @@
       }
      },
      "icon": "/icons/items/251.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "qualities": [
       {
        "classes": {
@@ -76996,28 +76069,7 @@
   {
    "armourClass": "heavy",
    "category": "armour",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/229.png",
    "id": "onyx-helmet",
    "name": {
@@ -77084,6 +76136,10 @@
       }
      },
      "icon": "/icons/items/229.png",
+     "iconSize": [
+      22,
+      24
+     ],
      "qualities": [
       {
        "classes": {
@@ -77212,28 +76268,7 @@
   {
    "armourClass": "heavy",
    "category": "armour",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/297.png",
    "id": "onyx-legs",
    "name": {
@@ -77318,6 +76353,10 @@
       }
      },
      "icon": "/icons/items/297.png",
+     "iconSize": [
+      27,
+      32
+     ],
      "qualities": [
       {
        "classes": {
@@ -77445,28 +76484,7 @@
   },
   {
    "category": "jewellery",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/277.png",
    "id": "onyx-ring",
    "name": {
@@ -77576,6 +76594,10 @@
       }
      },
      "icon": "/icons/items/277.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "qualities": [
       {
        "classes": {
@@ -77730,28 +76752,7 @@
   },
   {
    "category": "shield",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/249.png",
    "id": "onyx-shield",
    "name": {
@@ -77818,6 +76819,10 @@
       }
      },
      "icon": "/icons/items/249.png",
+     "iconSize": [
+      28,
+      32
+     ],
      "qualities": [
       {
        "classes": {
@@ -78273,6 +77278,10 @@
       "seconds": 80
      },
      "icon": "/icons/items/233.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 15,
      "stats": {
       "hpRegen": 3,
@@ -78289,28 +77298,7 @@
   },
   {
    "category": "shield",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/191.png",
    "id": "orb",
    "name": {
@@ -78587,6 +77575,10 @@
       }
      },
      "icon": "/icons/items/191.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "qualities": [
       {
        "classes": {
@@ -78951,6 +77943,10 @@
    "versions": [
     {
      "icon": "/icons/items/301.png",
+     "iconSize": [
+      21,
+      21
+     ],
      "stack": 100,
      "stats": {},
      "text": {
@@ -79059,6 +78055,10 @@
       "seconds": 320
      },
      "icon": "/icons/items/323.png",
+     "iconSize": [
+      22,
+      21
+     ],
      "stack": 2,
      "stats": {
       "hpRegen": 29,
@@ -80433,6 +79433,10 @@
    "versions": [
     {
      "icon": "/icons/items/163.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 100,
      "stats": {},
      "text": {
@@ -80446,28 +79450,7 @@
   },
   {
    "category": "jewellery",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/559.png",
    "id": "pearl-necklace",
    "name": {
@@ -80578,6 +79561,10 @@
       "squire": {}
      },
      "icon": "/icons/items/559.png",
+     "iconSize": [
+      25,
+      27
+     ],
      "qualities": [
       {
        "classes": {
@@ -80660,28 +79647,7 @@
   },
   {
    "category": "weapon",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/247.png",
    "id": "pestilence-sword",
    "name": {
@@ -80757,6 +79723,10 @@
       }
      },
      "icon": "/icons/items/247.png",
+     "iconSize": [
+      32,
+      32
+     ],
      "qualities": [
       {
        "classes": {
@@ -80950,28 +79920,7 @@
   },
   {
    "category": "jewellery",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/588.png",
    "id": "pewter-amulet",
    "name": {
@@ -81033,6 +79982,10 @@
       }
      },
      "icon": "/icons/items/588.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "qualities": [
       {
        "classes": {
@@ -81155,28 +80108,7 @@
   },
   {
    "category": "jewellery",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/587.png",
    "id": "pewter-ring",
    "name": {
@@ -81292,6 +80224,10 @@
       }
      },
      "icon": "/icons/items/587.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "qualities": [
       {
        "classes": {
@@ -81598,6 +80534,10 @@
    "versions": [
     {
      "icon": "/icons/items/125.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 100,
      "stats": {},
      "text": {
@@ -81612,28 +80552,7 @@
   {
    "armourClass": "heavy",
    "category": "armour",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/49.png",
    "id": "plated-boots",
    "name": {
@@ -81758,6 +80677,10 @@
       }
      },
      "icon": "/icons/items/49.png",
+     "iconSize": [
+      24,
+      22
+     ],
      "qualities": [
       {
        "classes": {
@@ -81881,28 +80804,7 @@
   {
    "armourClass": "heavy",
    "category": "armour",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/40.png",
    "id": "plated-cuirass",
    "name": {
@@ -82012,6 +80914,10 @@
       }
      },
      "icon": "/icons/items/40.png",
+     "iconSize": [
+      30,
+      28
+     ],
      "qualities": [
       {
        "classes": {
@@ -82135,28 +81041,7 @@
   {
    "armourClass": "heavy",
    "category": "armour",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/98.png",
    "id": "plated-gauntlet",
    "name": {
@@ -82294,6 +81179,10 @@
       }
      },
      "icon": "/icons/items/98.png",
+     "iconSize": [
+      24,
+      22
+     ],
      "qualities": [
       {
        "classes": {
@@ -82449,28 +81338,7 @@
   {
    "armourClass": "heavy",
    "category": "armour",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/50.png",
    "id": "plated-helmet",
    "name": {
@@ -82670,6 +81538,10 @@
       }
      },
      "icon": "/icons/items/50.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "qualities": [
       {
        "classes": {
@@ -82793,28 +81665,7 @@
   {
    "armourClass": "heavy",
    "category": "armour",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/41.png",
    "id": "plated-legs",
    "name": {
@@ -82976,6 +81827,10 @@
       }
      },
      "icon": "/icons/items/41.png",
+     "iconSize": [
+      21,
+      26
+     ],
      "qualities": [
       {
        "classes": {
@@ -83098,28 +81953,7 @@
   },
   {
    "category": "shield",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/150.png",
    "id": "plated-shield",
    "name": {
@@ -83286,6 +82120,10 @@
       }
      },
      "icon": "/icons/items/150.png",
+     "iconSize": [
+      22,
+      29
+     ],
      "qualities": [
       {
        "classes": {
@@ -83408,28 +82246,7 @@
   },
   {
    "category": "shield",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/555.png",
    "id": "plea-effigy",
    "name": {
@@ -83543,6 +82360,10 @@
       "squire": {}
      },
      "icon": "/icons/items/551.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "qualities": [
       {
        "classes": {
@@ -83634,6 +82455,10 @@
       }
      },
      "icon": "/icons/items/555.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "lifetime": 600,
      "light": true,
      "qualities": [
@@ -83925,6 +82750,10 @@
    "versions": [
     {
      "icon": "/icons/items/208.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 100,
      "stats": {},
      "text": {
@@ -84253,6 +83082,10 @@
    "versions": [
     {
      "icon": "/icons/items/189.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -84340,6 +83173,10 @@
    "versions": [
     {
      "icon": "/icons/items/482.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "resist": {
       "amount": 15,
       "type": 3
@@ -84583,6 +83420,10 @@
    "versions": [
     {
      "icon": "/icons/items/144.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 30,
      "stats": {},
      "text": {
@@ -84685,6 +83526,10 @@
    "versions": [
     {
      "icon": "/icons/items/202.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -84787,6 +83632,10 @@
    "versions": [
     {
      "icon": "/icons/items/211.png",
+     "iconSize": [
+      26,
+      25
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -84863,6 +83712,10 @@
       "squire": {}
      },
      "icon": "/icons/items/557.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1000,
      "stats": {},
      "text": {
@@ -84876,28 +83729,7 @@
   },
   {
    "category": "shield",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/554.png",
    "id": "prism",
    "name": {
@@ -84978,6 +83810,10 @@
       "squire": {}
      },
      "icon": "/icons/items/550.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "qualities": [
       {
        "classes": {
@@ -85081,6 +83917,10 @@
       }
      },
      "icon": "/icons/items/554.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "lifetime": 600,
      "light": true,
      "qualities": [
@@ -85461,6 +84301,10 @@
    "versions": [
     {
      "icon": "/icons/items/239.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 5,
      "stats": {},
      "text": {
@@ -85668,6 +84512,10 @@
       "seconds": 440
      },
      "icon": "/icons/items/244.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 3,
      "stats": {
       "hpRegen": 12,
@@ -85791,6 +84639,10 @@
       "seconds": 380
      },
      "icon": "/icons/items/246.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 3,
      "stats": {
       "hpRegen": 10,
@@ -85969,6 +84821,10 @@
       "seconds": 100
      },
      "icon": "/icons/items/240.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 50,
      "stats": {
       "hpRegen": 5,
@@ -85986,28 +84842,7 @@
   {
    "armourClass": "light",
    "category": "armour",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/532.png",
    "id": "purity-chausses",
    "name": {
@@ -86082,6 +84917,10 @@
       }
      },
      "icon": "/icons/items/532.png",
+     "iconSize": [
+      32,
+      32
+     ],
      "qualities": [
       {
        "classes": {
@@ -86262,28 +85101,7 @@
   },
   {
    "category": "armour",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/533.png",
    "id": "purity-handwraps",
    "name": {
@@ -86362,6 +85180,10 @@
       }
      },
      "icon": "/icons/items/533.png",
+     "iconSize": [
+      27,
+      23
+     ],
      "qualities": [
       {
        "classes": {
@@ -86563,28 +85385,7 @@
   {
    "armourClass": "light",
    "category": "armour",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/531.png",
    "id": "purity-mail",
    "name": {
@@ -86659,6 +85460,10 @@
       }
      },
      "icon": "/icons/items/531.png",
+     "iconSize": [
+      32,
+      32
+     ],
      "qualities": [
       {
        "classes": {
@@ -87088,6 +85893,10 @@
    "versions": [
     {
      "icon": "/icons/items/425.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -87225,6 +86034,10 @@
    "versions": [
     {
      "icon": "/icons/items/424.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -87462,6 +86275,10 @@
    "versions": [
     {
      "icon": "/icons/items/423.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -87599,6 +86416,10 @@
    "versions": [
     {
      "icon": "/icons/items/422.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -87765,6 +86586,10 @@
    "versions": [
     {
      "icon": "/icons/items/419.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -88014,6 +86839,10 @@
    "versions": [
     {
      "icon": "/icons/items/420.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -88237,6 +87066,10 @@
    "versions": [
     {
      "icon": "/icons/items/300.png",
+     "iconSize": [
+      22,
+      22
+     ],
      "stack": 100,
      "stats": {},
      "text": {
@@ -88488,6 +87321,10 @@
       "seconds": 440
      },
      "icon": "/icons/items/241.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 3,
      "stats": {
       "hpRegen": 12,
@@ -89107,6 +87944,10 @@
    "versions": [
     {
      "icon": "/icons/items/162.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -89121,28 +87962,7 @@
   {
    "armourClass": "light",
    "category": "armour",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/343.png",
    "id": "quoki-headgear",
    "name": {
@@ -89260,6 +88080,10 @@
       }
      },
      "icon": "/icons/items/343.png",
+     "iconSize": [
+      22,
+      26
+     ],
      "qualities": [
       {
        "classes": {
@@ -89409,28 +88233,7 @@
   {
    "armourClass": "light",
    "category": "armour",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/350.png",
    "id": "quoki-shoes",
    "name": {
@@ -89526,6 +88329,10 @@
       }
      },
      "icon": "/icons/items/350.png",
+     "iconSize": [
+      21,
+      20
+     ],
      "qualities": [
       {
        "classes": {
@@ -90187,6 +88994,10 @@
    "versions": [
     {
      "icon": "/icons/items/95.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 100,
      "stats": {},
      "text": {
@@ -90200,28 +89011,7 @@
   },
   {
    "category": "jewellery",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/477.png",
    "id": "rat-charm",
    "name": {
@@ -90311,6 +89101,10 @@
       }
      },
      "icon": "/icons/items/477.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "qualities": [
       {
        "classes": {
@@ -90676,6 +89470,10 @@
    "versions": [
     {
      "icon": "/icons/items/121.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 100,
      "stats": {},
      "text": {
@@ -90818,6 +89616,10 @@
    "versions": [
     {
      "icon": "/icons/items/455.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 20,
      "stats": {},
      "text": {
@@ -91101,6 +89903,10 @@
    "versions": [
     {
      "icon": "/icons/items/14.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 15,
      "stats": {},
      "text": {
@@ -91483,6 +90289,10 @@
    "versions": [
     {
      "icon": "/icons/items/166.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -91496,28 +90306,7 @@
   },
   {
    "category": "shield",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/218.png",
    "id": "red-orb",
    "name": {
@@ -91747,6 +90536,10 @@
       }
      },
      "icon": "/icons/items/218.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "qualities": [
       {
        "classes": {
@@ -92041,6 +90834,10 @@
    "versions": [
     {
      "icon": "/icons/items/408.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -92287,6 +91084,10 @@
    "versions": [
     {
      "icon": "/icons/items/407.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -92447,6 +91248,10 @@
    "versions": [
     {
      "icon": "/icons/items/406.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -92624,6 +91429,10 @@
    "versions": [
     {
      "icon": "/icons/items/410.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -92810,6 +91619,10 @@
    "versions": [
     {
      "icon": "/icons/items/403.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -93027,6 +91840,10 @@
    "versions": [
     {
      "icon": "/icons/items/404.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -94016,6 +92833,10 @@
    "versions": [
     {
      "icon": "/icons/items/108.png",
+     "iconSize": [
+      27,
+      26
+     ],
      "spell": "spell:s17",
      "stack": 1,
      "stats": {},
@@ -94028,6 +92849,10 @@
     },
     {
      "icon": "/icons/items/109.png",
+     "iconSize": [
+      27,
+      26
+     ],
      "spell": "spell:s15",
      "stack": 1,
      "stats": {},
@@ -94040,6 +92865,10 @@
     },
     {
      "icon": "/icons/items/110.png",
+     "iconSize": [
+      27,
+      26
+     ],
      "spell": "spell:s18",
      "stack": 1,
      "stats": {},
@@ -94052,6 +92881,10 @@
     },
     {
      "icon": "/icons/items/111.png",
+     "iconSize": [
+      27,
+      26
+     ],
      "qualities": [
       {
        "rarity": 0,
@@ -94091,6 +92924,10 @@
     },
     {
      "icon": "/icons/items/135.png",
+     "iconSize": [
+      27,
+      26
+     ],
      "spell": "spell:s6",
      "stack": 1,
      "stats": {},
@@ -94103,6 +92940,10 @@
     },
     {
      "icon": "/icons/items/136.png",
+     "iconSize": [
+      27,
+      26
+     ],
      "spell": "spell:s19",
      "stack": 1,
      "stats": {},
@@ -94115,6 +92956,10 @@
     },
     {
      "icon": "/icons/items/137.png",
+     "iconSize": [
+      27,
+      26
+     ],
      "spell": "spell:s20",
      "stack": 1,
      "stats": {},
@@ -94127,6 +92972,10 @@
     },
     {
      "icon": "/icons/items/138.png",
+     "iconSize": [
+      27,
+      26
+     ],
      "spell": "spell:s21",
      "stack": 1,
      "stats": {},
@@ -94139,6 +92988,10 @@
     },
     {
      "icon": "/icons/items/139.png",
+     "iconSize": [
+      27,
+      26
+     ],
      "spell": "spell:s22",
      "stack": 1,
      "stats": {},
@@ -94151,6 +93004,10 @@
     },
     {
      "icon": "/icons/items/140.png",
+     "iconSize": [
+      27,
+      26
+     ],
      "spell": "spell:s23",
      "stack": 1,
      "stats": {},
@@ -94163,6 +93020,10 @@
     },
     {
      "icon": "/icons/items/151.png",
+     "iconSize": [
+      27,
+      26
+     ],
      "spell": "spell:s16",
      "stack": 1,
      "stats": {},
@@ -94175,6 +93036,10 @@
     },
     {
      "icon": "/icons/items/152.png",
+     "iconSize": [
+      27,
+      26
+     ],
      "spell": "spell:s5",
      "stack": 1,
      "stats": {},
@@ -94187,6 +93052,10 @@
     },
     {
      "icon": "/icons/items/174.png",
+     "iconSize": [
+      27,
+      26
+     ],
      "spell": "spell:s45",
      "stack": 1,
      "stats": {},
@@ -94199,6 +93068,10 @@
     },
     {
      "icon": "/icons/items/175.png",
+     "iconSize": [
+      27,
+      26
+     ],
      "spell": "spell:s46",
      "stack": 1,
      "stats": {},
@@ -94211,6 +93084,10 @@
     },
     {
      "icon": "/icons/items/329.png",
+     "iconSize": [
+      27,
+      26
+     ],
      "spell": "spell:s70",
      "stack": 1,
      "stats": {},
@@ -94223,6 +93100,10 @@
     },
     {
      "icon": "/icons/items/490.png",
+     "iconSize": [
+      27,
+      26
+     ],
      "spell": "spell:s103",
      "stack": 1,
      "stats": {},
@@ -94237,28 +93118,7 @@
   },
   {
    "category": "jewellery",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/46.png",
    "id": "regeneration-ring",
    "name": {
@@ -94465,6 +93325,10 @@
       "squire": {}
      },
      "icon": "/icons/items/46.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "qualities": [
       {
        "classes": {
@@ -94540,6 +93404,10 @@
       "squire": {}
      },
      "icon": "/icons/items/75.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "lifetime": 300,
      "stack": 1,
      "stats": {},
@@ -94751,6 +93619,10 @@
    "versions": [
     {
      "icon": "/icons/items/20.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 100,
      "stats": {},
      "text": {
@@ -95069,6 +93941,10 @@
       "seconds": 210
      },
      "icon": "/icons/items/72.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 3,
      "stats": {
       "hpRegen": 9,
@@ -95085,28 +93961,7 @@
   },
   {
    "category": "jewellery",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/279.png",
    "id": "ring-of-fire",
    "name": {
@@ -95211,6 +94066,10 @@
       }
      },
      "icon": "/icons/items/279.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "light": true,
      "qualities": [
       {
@@ -95378,28 +94237,7 @@
   },
   {
    "category": "weapon",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/481.png",
    "id": "ritual-dagger",
    "name": {
@@ -95473,6 +94311,10 @@
       }
      },
      "icon": "/icons/items/481.png",
+     "iconSize": [
+      19,
+      23
+     ],
      "qualities": [
       {
        "classes": {
@@ -95914,6 +94756,10 @@
       "seconds": 170
      },
      "icon": "/icons/items/237.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 25,
      "stats": {
       "hpRegen": 11,
@@ -96041,6 +94887,10 @@
    "versions": [
     {
      "icon": "/icons/items/348.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 15,
      "stats": {},
      "text": {
@@ -96054,28 +94904,7 @@
   },
   {
    "category": "tool",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/261.png",
    "id": "rope",
    "name": {
@@ -96593,6 +95422,10 @@
    "versions": [
     {
      "icon": "/icons/items/261.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "qualities": [
       {
        "rarity": 0,
@@ -96800,6 +95633,10 @@
    "versions": [
     {
      "icon": "/icons/items/154.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 25,
      "stats": {},
      "text": {
@@ -96814,28 +95651,7 @@
   {
    "armourClass": "heavy",
    "category": "armour",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/219.png",
    "id": "royal-armor",
    "name": {
@@ -96987,6 +95803,10 @@
       }
      },
      "icon": "/icons/items/219.png",
+     "iconSize": [
+      32,
+      32
+     ],
      "qualities": [
       {
        "classes": {
@@ -97109,28 +95929,7 @@
   },
   {
    "category": "weapon",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/250.png",
    "id": "royal-dagger",
    "name": {
@@ -97211,6 +96010,10 @@
       }
      },
      "icon": "/icons/items/250.png",
+     "iconSize": [
+      21,
+      29
+     ],
      "qualities": [
       {
        "classes": {
@@ -97352,28 +96155,7 @@
   {
    "armourClass": "heavy",
    "category": "armour",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/220.png",
    "id": "royal-helmet",
    "name": {
@@ -97503,6 +96285,10 @@
       }
      },
      "icon": "/icons/items/220.png",
+     "iconSize": [
+      21,
+      26
+     ],
      "qualities": [
       {
        "classes": {
@@ -97626,28 +96412,7 @@
   {
    "armourClass": "heavy",
    "category": "armour",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/221.png",
    "id": "royal-legs",
    "name": {
@@ -97753,6 +96518,10 @@
       }
      },
      "icon": "/icons/items/221.png",
+     "iconSize": [
+      26,
+      30
+     ],
      "qualities": [
       {
        "classes": {
@@ -98064,6 +96833,10 @@
    "versions": [
     {
      "icon": "/icons/items/569.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 100,
      "stats": {},
      "text": {
@@ -98077,28 +96850,7 @@
   },
   {
    "category": "jewellery",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/93.png",
    "id": "ruby-amulet",
    "name": {
@@ -98288,6 +97040,10 @@
       "squire": {}
      },
      "icon": "/icons/items/93.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "qualities": [
       {
        "classes": {
@@ -98421,6 +97177,10 @@
    "versions": [
     {
      "icon": "/icons/items/585.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -98434,28 +97194,7 @@
   },
   {
    "category": "weapon",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/188.png",
    "id": "rusty-sword",
    "name": {
@@ -98607,6 +97346,10 @@
       }
      },
      "icon": "/icons/items/188.png",
+     "iconSize": [
+      28,
+      29
+     ],
      "qualities": [
       {
        "classes": {
@@ -98768,28 +97511,7 @@
   {
    "armourClass": "light",
    "category": "armour",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/321.png",
    "id": "sailor-boots",
    "name": {
@@ -98914,6 +97636,10 @@
       }
      },
      "icon": "/icons/items/321.png",
+     "iconSize": [
+      24,
+      25
+     ],
      "qualities": [
       {
        "classes": {
@@ -99131,6 +97857,10 @@
       "seconds": 550
      },
      "icon": "/icons/items/564.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 3,
      "stats": {
       "attackSpeed": 2,
@@ -99246,6 +97976,10 @@
       "seconds": 150
      },
      "icon": "/icons/items/566.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 10,
      "stats": {
       "hpRegen": 6,
@@ -99469,6 +98203,10 @@
       "seconds": 320
      },
      "icon": "/icons/items/185.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 10,
      "stats": {
       "hpRegen": 7,
@@ -99678,6 +98416,10 @@
       "seconds": 120
      },
      "icon": "/icons/items/345.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 35,
      "stats": {
       "hpRegen": 11,
@@ -99898,6 +98640,10 @@
       "seconds": 380
      },
      "icon": "/icons/items/359.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 3,
      "stats": {
       "hpRegen": 14,
@@ -99917,28 +98663,7 @@
   {
    "armourClass": "heavy",
    "category": "armour",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/470.png",
    "id": "scale-armor",
    "name": {
@@ -100056,6 +98781,10 @@
       }
      },
      "icon": "/icons/items/470.png",
+     "iconSize": [
+      30,
+      28
+     ],
      "qualities": [
       {
        "classes": {
@@ -100205,28 +98934,7 @@
   {
    "armourClass": "heavy",
    "category": "armour",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/471.png",
    "id": "scale-kilt",
    "name": {
@@ -100326,6 +99034,10 @@
       }
      },
      "icon": "/icons/items/471.png",
+     "iconSize": [
+      27,
+      27
+     ],
      "qualities": [
       {
        "classes": {
@@ -100475,28 +99187,7 @@
   {
    "armourClass": "light",
    "category": "jewellery",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/296.png",
    "id": "scarf",
    "name": {
@@ -100787,6 +99478,10 @@
       }
      },
      "icon": "/icons/items/296.png",
+     "iconSize": [
+      25,
+      28
+     ],
      "qualities": [
       {
        "classes": {
@@ -100935,28 +99630,7 @@
   },
   {
    "category": "weapon",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/248.png",
    "id": "serpent-sword",
    "name": {
@@ -101028,6 +99702,10 @@
       }
      },
      "icon": "/icons/items/248.png",
+     "iconSize": [
+      32,
+      32
+     ],
      "qualities": [
       {
        "classes": {
@@ -101200,28 +99878,7 @@
   },
   {
    "category": "tool",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/260.png",
    "id": "shovel",
    "name": {
@@ -101727,6 +100384,10 @@
       }
      },
      "icon": "/icons/items/260.png",
+     "iconSize": [
+      28,
+      27
+     ],
      "qualities": [
       {
        "classes": {
@@ -101855,28 +100516,7 @@
   },
   {
    "category": "jewellery",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/59.png",
    "id": "silver-amulet",
    "name": {
@@ -102033,6 +100673,10 @@
       }
      },
      "icon": "/icons/items/59.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "qualities": [
       {
        "classes": {
@@ -102155,28 +100799,7 @@
   },
   {
    "category": "weapon",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/97.png",
    "id": "silver-dagger",
    "name": {
@@ -102416,6 +101039,10 @@
       }
      },
      "icon": "/icons/items/97.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "qualities": [
       {
        "classes": {
@@ -102550,28 +101177,7 @@
   },
   {
    "category": "weapon",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/515.png",
    "id": "silver-mace",
    "name": {
@@ -102633,6 +101239,10 @@
       }
      },
      "icon": "/icons/items/515.png",
+     "iconSize": [
+      30,
+      29
+     ],
      "qualities": [
       {
        "classes": {
@@ -102768,28 +101378,7 @@
   {
    "armourClass": "light",
    "category": "armour",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/231.png",
    "id": "silver-mask",
    "name": {
@@ -102968,6 +101557,10 @@
       }
      },
      "icon": "/icons/items/231.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "qualities": [
       {
        "classes": {
@@ -103142,28 +101735,7 @@
   },
   {
    "category": "jewellery",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/274.png",
    "id": "silver-ring",
    "name": {
@@ -103447,6 +102019,10 @@
       }
      },
      "icon": "/icons/items/274.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "qualities": [
       {
        "classes": {
@@ -103569,28 +102145,7 @@
   },
   {
    "category": "weapon",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/544.png",
    "id": "silver-wand",
    "name": {
@@ -103651,6 +102206,10 @@
       "squire": {}
      },
      "icon": "/icons/items/538.png",
+     "iconSize": [
+      19,
+      27
+     ],
      "qualities": [
       {
        "classes": {
@@ -103738,6 +102297,10 @@
       }
      },
      "icon": "/icons/items/544.png",
+     "iconSize": [
+      20,
+      28
+     ],
      "lifetime": 600,
      "light": true,
      "qualities": [
@@ -103911,28 +102474,7 @@
   },
   {
    "category": "container",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/99.png",
    "id": "simple-bag",
    "name": {
@@ -104382,6 +102924,10 @@
       "squire": {}
      },
      "icon": "/icons/items/99.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "qualities": [
       {
        "classes": {
@@ -104454,28 +103000,7 @@
   {
    "armourClass": "light",
    "category": "armour",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/86.png",
    "id": "simple-garment",
    "name": {
@@ -104824,6 +103349,10 @@
       }
      },
      "icon": "/icons/items/86.png",
+     "iconSize": [
+      23,
+      28
+     ],
      "qualities": [
       {
        "classes": {
@@ -104972,28 +103501,7 @@
   },
   {
    "category": "weapon",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/543.png",
    "id": "simple-wand",
    "name": {
@@ -105112,6 +103620,10 @@
       "squire": {}
      },
      "icon": "/icons/items/537.png",
+     "iconSize": [
+      17,
+      26
+     ],
      "qualities": [
       {
        "classes": {
@@ -105199,6 +103711,10 @@
       }
      },
      "icon": "/icons/items/543.png",
+     "iconSize": [
+      18,
+      27
+     ],
      "lifetime": 600,
      "light": true,
      "qualities": [
@@ -105416,6 +103932,10 @@
    "versions": [
     {
      "icon": "/icons/items/586.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -105429,28 +103949,7 @@
   },
   {
    "category": "weapon",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/526.png",
    "id": "skalish-blade",
    "name": {
@@ -105573,6 +104072,10 @@
       }
      },
      "icon": "/icons/items/526.png",
+     "iconSize": [
+      32,
+      32
+     ],
      "qualities": [
       {
        "classes": {
@@ -105733,28 +104236,7 @@
   },
   {
    "category": "weapon",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/528.png",
    "id": "skalish-heavy-bow",
    "name": {
@@ -105887,6 +104369,10 @@
       }
      },
      "icon": "/icons/items/528.png",
+     "iconSize": [
+      32,
+      28
+     ],
      "qualities": [
       {
        "classes": {
@@ -106047,28 +104533,7 @@
   },
   {
    "category": "weapon",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/527.png",
    "id": "skalish-knife",
    "name": {
@@ -106179,6 +104644,10 @@
       }
      },
      "icon": "/icons/items/527.png",
+     "iconSize": [
+      16,
+      29
+     ],
      "qualities": [
       {
        "classes": {
@@ -106313,28 +104782,7 @@
   },
   {
    "category": "jewellery",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/558.png",
    "id": "skalish-necklace",
    "name": {
@@ -106453,6 +104901,10 @@
       }
      },
      "icon": "/icons/items/558.png",
+     "iconSize": [
+      23,
+      25
+     ],
      "qualities": [
       {
        "classes": {
@@ -106575,28 +105027,7 @@
   },
   {
    "category": "jewellery",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/505.png",
    "id": "skalish-ring",
    "name": {
@@ -106719,6 +105150,10 @@
       }
      },
      "icon": "/icons/items/505.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "qualities": [
       {
        "classes": {
@@ -106847,28 +105282,7 @@
   },
   {
    "category": "jewellery",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/127.png",
    "id": "skull-ring",
    "name": {
@@ -106988,6 +105402,10 @@
       }
      },
      "icon": "/icons/items/127.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "qualities": [
       {
        "classes": {
@@ -107279,6 +105697,10 @@
    "versions": [
     {
      "icon": "/icons/items/21.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 100,
      "stats": {},
      "text": {
@@ -107292,28 +105714,7 @@
   },
   {
    "category": "ammo",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/507.png",
    "id": "small-bomb",
    "name": {
@@ -107403,6 +105804,10 @@
    "versions": [
     {
      "icon": "/icons/items/507.png",
+     "iconSize": [
+      24,
+      21
+     ],
      "qualities": [
       {
        "rarity": 0,
@@ -107453,6 +105858,10 @@
     },
     {
      "icon": "/icons/items/571.png",
+     "iconSize": [
+      24,
+      21
+     ],
      "qualities": [
       {
        "rarity": 0,
@@ -111873,6 +110282,10 @@
    "versions": [
     {
      "icon": "/icons/items/8.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 10,
      "stats": {},
      "text": {
@@ -112575,6 +110988,10 @@
    "versions": [
     {
      "icon": "/icons/items/579.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 10,
      "stats": {},
      "text": {
@@ -115245,6 +113662,10 @@
    "versions": [
     {
      "icon": "/icons/items/29.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 10,
      "stats": {},
      "text": {
@@ -115344,6 +113765,10 @@
       "seconds": 270
      },
      "icon": "/icons/items/567.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 10,
      "stats": {
       "hpRegen": 9,
@@ -115360,28 +113785,7 @@
   },
   {
    "category": "shield",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/354.png",
    "id": "snake-orb",
    "name": {
@@ -115490,6 +113894,10 @@
       }
      },
      "icon": "/icons/items/354.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "qualities": [
       {
        "classes": {
@@ -115980,6 +114388,10 @@
    "versions": [
     {
      "icon": "/icons/items/360.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 25,
      "stats": {},
      "text": {
@@ -115994,28 +114406,7 @@
   {
    "armourClass": "heavy",
    "category": "armour",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/85.png",
    "id": "spangenhelm",
    "name": {
@@ -116256,6 +114647,10 @@
       }
      },
      "icon": "/icons/items/85.png",
+     "iconSize": [
+      20,
+      26
+     ],
      "qualities": [
       {
        "classes": {
@@ -116652,6 +115047,10 @@
       "seconds": 510
      },
      "icon": "/icons/items/73.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 3,
      "stats": {
       "attackSpeed": 1,
@@ -117025,6 +115424,10 @@
       "seconds": 440
      },
      "icon": "/icons/items/70.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 3,
      "stats": {
       "attackSpeed": 1,
@@ -117122,6 +115525,10 @@
    "versions": [
     {
      "icon": "/icons/items/473.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -117135,28 +115542,7 @@
   },
   {
    "category": "weapon",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/519.png",
    "id": "spiked-club",
    "name": {
@@ -117259,6 +115645,10 @@
       }
      },
      "icon": "/icons/items/519.png",
+     "iconSize": [
+      29,
+      29
+     ],
      "qualities": [
       {
        "classes": {
@@ -117721,6 +116111,10 @@
       "seconds": 470
      },
      "icon": "/icons/items/74.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 3,
      "stats": {
       "hpRegen": 9,
@@ -118067,6 +116461,10 @@
       "seconds": 420
      },
      "icon": "/icons/items/71.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 3,
      "stats": {
       "hpRegen": 6,
@@ -118085,28 +116483,7 @@
   },
   {
    "category": "container",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/216.png",
    "id": "square-bag",
    "name": {
@@ -118284,6 +116661,10 @@
       "squire": {}
      },
      "icon": "/icons/items/216.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "qualities": [
       {
        "classes": {
@@ -118577,6 +116958,10 @@
    "versions": [
     {
      "icon": "/icons/items/305.png",
+     "iconSize": [
+      20,
+      20
+     ],
      "stack": 100,
      "stats": {},
      "text": {
@@ -118590,28 +116975,7 @@
   },
   {
    "category": "jewellery",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/278.png",
    "id": "steel-bracelet",
    "name": {
@@ -118735,6 +117099,10 @@
       }
      },
      "icon": "/icons/items/278.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "qualities": [
       {
        "classes": {
@@ -119136,6 +117504,10 @@
    "versions": [
     {
      "icon": "/icons/items/332.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 100,
      "stats": {},
      "text": {
@@ -119149,28 +117521,7 @@
   },
   {
    "category": "weapon",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/536.png",
    "id": "steel-knife",
    "name": {
@@ -119232,6 +117583,10 @@
       }
      },
      "icon": "/icons/items/536.png",
+     "iconSize": [
+      28,
+      24
+     ],
      "qualities": [
       {
        "classes": {
@@ -119366,28 +117721,7 @@
   },
   {
    "category": "weapon",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/123.png",
    "id": "steelsword",
    "name": {
@@ -119516,6 +117850,10 @@
       }
      },
      "icon": "/icons/items/123.png",
+     "iconSize": [
+      32,
+      32
+     ],
      "qualities": [
       {
        "classes": {
@@ -119676,28 +118014,7 @@
   },
   {
    "category": "weapon",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/253.png",
    "id": "stone-staff",
    "name": {
@@ -119821,6 +118138,10 @@
       }
      },
      "icon": "/icons/items/253.png",
+     "iconSize": [
+      30,
+      30
+     ],
      "qualities": [
       {
        "classes": {
@@ -120099,6 +118420,10 @@
       "seconds": 140
      },
      "icon": "/icons/items/457.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 50,
      "stats": {
       "hpRegen": 7,
@@ -120116,28 +118441,7 @@
   },
   {
    "category": "shield",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/2.png",
    "id": "studded-shield",
    "name": {
@@ -120399,6 +118703,10 @@
       }
      },
      "icon": "/icons/items/2.png",
+     "iconSize": [
+      22,
+      26
+     ],
      "qualities": [
       {
        "classes": {
@@ -120610,6 +118918,10 @@
    "versions": [
     {
      "icon": "/icons/items/199.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -120693,6 +119005,10 @@
       "seconds": 320
      },
      "icon": "/icons/items/565.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 12,
      "stats": {
       "attackSpeed": 1,
@@ -121119,6 +119435,10 @@
    "versions": [
     {
      "icon": "/icons/items/16.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 15,
      "stats": {},
      "text": {
@@ -121132,28 +119452,7 @@
   },
   {
    "category": "container",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/464.png",
    "id": "talisman-pouch",
    "name": {
@@ -121328,6 +119627,10 @@
       }
      },
      "icon": "/icons/items/464.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "qualities": [
       {
        "classes": {
@@ -121929,6 +120232,10 @@
    "versions": [
     {
      "icon": "/icons/items/331.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 100,
      "stats": {},
      "text": {
@@ -122079,6 +120386,10 @@
       "seconds": 100
      },
      "icon": "/icons/items/22.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 50,
      "stats": {
       "hpRegen": 3,
@@ -122252,6 +120563,10 @@
       "seconds": 100
      },
      "icon": "/icons/items/238.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 35,
      "stats": {
       "hpRegen": 4,
@@ -122268,28 +120583,7 @@
   },
   {
    "category": "light",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/119.png",
    "id": "torch",
    "name": {
@@ -122786,6 +121080,10 @@
       "squire": {}
      },
      "icon": "/icons/items/119.png",
+     "iconSize": [
+      15,
+      22
+     ],
      "qualities": [
       {
        "classes": {
@@ -122868,28 +121166,7 @@
   },
   {
    "category": "other",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/120.png",
    "id": "torch-lit",
    "name": {
@@ -122956,6 +121233,10 @@
       "squire": {}
      },
      "icon": "/icons/items/120.png",
+     "iconSize": [
+      17,
+      29
+     ],
      "lifetime": 600,
      "light": true,
      "qualities": [
@@ -123045,28 +121326,7 @@
   },
   {
    "category": "shield",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/147.png",
    "id": "tower-shield",
    "name": {
@@ -123153,6 +121413,10 @@
       }
      },
      "icon": "/icons/items/147.png",
+     "iconSize": [
+      22,
+      29
+     ],
      "qualities": [
       {
        "classes": {
@@ -123485,6 +121749,10 @@
    "versions": [
     {
      "icon": "/icons/items/306.png",
+     "iconSize": [
+      21,
+      20
+     ],
      "stack": 100,
      "stats": {},
      "text": {
@@ -123498,28 +121766,7 @@
   },
   {
    "category": "shield",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/553.png",
    "id": "trident-token",
    "name": {
@@ -123605,6 +121852,10 @@
       "squire": {}
      },
      "icon": "/icons/items/549.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "qualities": [
       {
        "classes": {
@@ -123708,6 +121959,10 @@
       }
      },
      "icon": "/icons/items/553.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "lifetime": 600,
      "light": true,
      "qualities": [
@@ -123973,28 +122228,7 @@
   },
   {
    "category": "weapon",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/546.png",
    "id": "twisted-wand",
    "name": {
@@ -124080,6 +122314,10 @@
       "squire": {}
      },
      "icon": "/icons/items/540.png",
+     "iconSize": [
+      20,
+      29
+     ],
      "qualities": [
       {
        "classes": {
@@ -124171,6 +122409,10 @@
       }
      },
      "icon": "/icons/items/546.png",
+     "iconSize": [
+      21,
+      30
+     ],
      "lifetime": 600,
      "light": true,
      "qualities": [
@@ -124376,28 +122618,7 @@
   },
   {
    "category": "weapon",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/132.png",
    "id": "unholy-staff",
    "name": {
@@ -124465,6 +122686,10 @@
       "squire": {}
      },
      "icon": "/icons/items/132.png",
+     "iconSize": [
+      23,
+      32
+     ],
      "qualities": [
       {
        "classes": {
@@ -124553,28 +122778,7 @@
   },
   {
    "category": "shield",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/458.png",
    "id": "vanguard-shield",
    "name": {
@@ -124692,6 +122896,10 @@
       }
      },
      "icon": "/icons/items/458.png",
+     "iconSize": [
+      27,
+      27
+     ],
      "qualities": [
       {
        "classes": {
@@ -124866,28 +123074,7 @@
   },
   {
    "category": "weapon",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/451.png",
    "id": "vecan-axe",
    "name": {
@@ -124997,6 +123184,10 @@
       }
      },
      "icon": "/icons/items/451.png",
+     "iconSize": [
+      32,
+      32
+     ],
      "qualities": [
       {
        "classes": {
@@ -125163,28 +123354,7 @@
   },
   {
    "category": "container",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/215.png",
    "id": "velvet-pouch",
    "name": {
@@ -125387,6 +123557,10 @@
       }
      },
      "icon": "/icons/items/215.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "qualities": [
       {
        "classes": {
@@ -125536,28 +123710,7 @@
   },
   {
    "category": "weapon",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/545.png",
    "id": "wand-of-green",
    "name": {
@@ -125643,6 +123796,10 @@
       "squire": {}
      },
      "icon": "/icons/items/539.png",
+     "iconSize": [
+      20,
+      29
+     ],
      "qualities": [
       {
        "classes": {
@@ -125734,6 +123891,10 @@
       }
      },
      "icon": "/icons/items/545.png",
+     "iconSize": [
+      21,
+      30
+     ],
      "lifetime": 600,
      "light": true,
      "qualities": [
@@ -126027,6 +124188,10 @@
    "versions": [
     {
      "icon": "/icons/items/593.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 10,
      "stats": {},
      "text": {
@@ -126040,28 +124205,7 @@
   },
   {
    "category": "weapon",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/520.png",
    "id": "war-hammer",
    "name": {
@@ -126141,6 +124285,10 @@
       }
      },
      "icon": "/icons/items/520.png",
+     "iconSize": [
+      31,
+      29
+     ],
      "qualities": [
       {
        "classes": {
@@ -126423,6 +124571,10 @@
    "versions": [
     {
      "icon": "/icons/items/23.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 100,
      "stats": {},
      "text": {
@@ -126778,6 +124930,10 @@
    "versions": [
     {
      "icon": "/icons/items/103.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 100,
      "stats": {},
      "text": {
@@ -127325,6 +125481,10 @@
       "seconds": 100
      },
      "icon": "/icons/items/24.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 75,
      "stats": {
       "hpRegen": 6,
@@ -127511,6 +125671,10 @@
    "versions": [
     {
      "icon": "/icons/items/400.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -127711,6 +125875,10 @@
    "versions": [
     {
      "icon": "/icons/items/399.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -127867,6 +126035,10 @@
    "versions": [
     {
      "icon": "/icons/items/398.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -127997,6 +126169,10 @@
    "versions": [
     {
      "icon": "/icons/items/402.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -128169,6 +126345,10 @@
    "versions": [
     {
      "icon": "/icons/items/395.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -128434,6 +126614,10 @@
    "versions": [
     {
      "icon": "/icons/items/396.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -128546,6 +126730,10 @@
    "versions": [
     {
      "icon": "/icons/items/210.png",
+     "iconSize": [
+      28,
+      23
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -128560,28 +126748,7 @@
   {
    "armourClass": "light",
    "category": "armour",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/48.png",
    "id": "winged-boots",
    "name": {
@@ -128677,6 +126844,10 @@
       }
      },
      "icon": "/icons/items/48.png",
+     "iconSize": [
+      24,
+      26
+     ],
      "qualities": [
       {
        "classes": {
@@ -128806,28 +126977,7 @@
   {
    "armourClass": "light",
    "category": "armour",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/223.png",
    "id": "wizard-hat",
    "name": {
@@ -128946,6 +127096,10 @@
       }
      },
      "icon": "/icons/items/223.png",
+     "iconSize": [
+      26,
+      27
+     ],
      "qualities": [
       {
        "classes": {
@@ -129127,28 +127281,7 @@
   {
    "armourClass": "light",
    "category": "armour",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/222.png",
    "id": "wizard-robe",
    "name": {
@@ -129243,6 +127376,10 @@
       }
      },
      "icon": "/icons/items/222.png",
+     "iconSize": [
+      30,
+      31
+     ],
      "qualities": [
       {
        "classes": {
@@ -129424,28 +127561,7 @@
   {
    "armourClass": "light",
    "category": "armour",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/479.png",
    "id": "wolf-helmet",
    "name": {
@@ -129519,6 +127635,10 @@
       }
      },
      "icon": "/icons/items/479.png",
+     "iconSize": [
+      25,
+      28
+     ],
      "qualities": [
       {
        "classes": {
@@ -130165,6 +128285,10 @@
    "versions": [
     {
      "icon": "/icons/items/28.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 100,
      "stats": {},
      "text": {
@@ -130178,28 +128302,7 @@
   },
   {
    "category": "weapon",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/42.png",
    "id": "wooden-bow",
    "name": {
@@ -130410,6 +128513,10 @@
       }
      },
      "icon": "/icons/items/42.png",
+     "iconSize": [
+      26,
+      26
+     ],
      "qualities": [
       {
        "classes": {
@@ -131571,6 +129678,10 @@
    "versions": [
     {
      "icon": "/icons/items/25.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 3,
      "stats": {},
      "text": {
@@ -132212,6 +130323,10 @@
    "versions": [
     {
      "icon": "/icons/items/26.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -132904,6 +131019,10 @@
    "versions": [
     {
      "icon": "/icons/items/179.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -132917,28 +131036,7 @@
   },
   {
    "category": "shield",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/294.png",
    "id": "wooden-shield",
    "name": {
@@ -133074,6 +131172,10 @@
       }
      },
      "icon": "/icons/items/294.png",
+     "iconSize": [
+      22,
+      25
+     ],
      "qualities": [
       {
        "classes": {
@@ -133811,6 +131913,10 @@
    "versions": [
     {
      "icon": "/icons/items/27.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -133824,28 +131930,7 @@
   },
   {
    "category": "weapon",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/89.png",
    "id": "wooden-staff",
    "name": {
@@ -134125,6 +132210,10 @@
       }
      },
      "icon": "/icons/items/89.png",
+     "iconSize": [
+      20,
+      31
+     ],
      "qualities": [
       {
        "classes": {
@@ -134472,6 +132561,10 @@
    "versions": [
     {
      "icon": "/icons/items/104.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 100,
      "stats": {},
      "text": {
@@ -134695,6 +132788,10 @@
    "versions": [
     {
      "icon": "/icons/items/303.png",
+     "iconSize": [
+      23,
+      18
+     ],
      "stack": 100,
      "stats": {},
      "text": {
@@ -135175,6 +133272,10 @@
    "versions": [
     {
      "icon": "/icons/items/106.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 100,
      "stats": {},
      "text": {
@@ -135378,6 +133479,10 @@
    "versions": [
     {
      "icon": "/icons/items/156.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 100,
      "stats": {},
      "text": {
@@ -135785,6 +133890,10 @@
    "versions": [
     {
      "icon": "/icons/items/167.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -135927,6 +134036,10 @@
    "versions": [
     {
      "icon": "/icons/items/385.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -136134,6 +134247,10 @@
    "versions": [
     {
      "icon": "/icons/items/384.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -136315,6 +134432,10 @@
    "versions": [
     {
      "icon": "/icons/items/383.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -136461,6 +134582,10 @@
    "versions": [
     {
      "icon": "/icons/items/382.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -136627,6 +134752,10 @@
    "versions": [
     {
      "icon": "/icons/items/379.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -136839,6 +134968,10 @@
    "versions": [
     {
      "icon": "/icons/items/380.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "stack": 1,
      "stats": {},
      "text": {
@@ -137455,6 +135588,10 @@
    "versions": [
     {
      "icon": "/icons/items/112.png",
+     "iconSize": [
+      25,
+      24
+     ],
      "spell": "spell:s9",
      "stack": 1,
      "stats": {},
@@ -137467,6 +135604,10 @@
     },
     {
      "icon": "/icons/items/113.png",
+     "iconSize": [
+      25,
+      24
+     ],
      "spell": "spell:s48",
      "stack": 1,
      "stats": {},
@@ -137479,6 +135620,10 @@
     },
     {
      "icon": "/icons/items/153.png",
+     "iconSize": [
+      25,
+      24
+     ],
      "spell": "spell:s8",
      "stack": 1,
      "stats": {},
@@ -137491,6 +135636,10 @@
     },
     {
      "icon": "/icons/items/258.png",
+     "iconSize": [
+      25,
+      24
+     ],
      "spell": "spell:s26",
      "stack": 1,
      "stats": {},
@@ -137503,6 +135652,10 @@
     },
     {
      "icon": "/icons/items/319.png",
+     "iconSize": [
+      25,
+      24
+     ],
      "spell": "spell:s24",
      "stack": 1,
      "stats": {},
@@ -137515,6 +135668,10 @@
     },
     {
      "icon": "/icons/items/492.png",
+     "iconSize": [
+      25,
+      24
+     ],
      "spell": "spell:s108",
      "stack": 1,
      "stats": {},
@@ -137527,6 +135684,10 @@
     },
     {
      "icon": "/icons/items/493.png",
+     "iconSize": [
+      25,
+      24
+     ],
      "spell": "spell:s104",
      "stack": 1,
      "stats": {},
@@ -137539,6 +135700,10 @@
     },
     {
      "icon": "/icons/items/594.png",
+     "iconSize": [
+      25,
+      24
+     ],
      "spell": "spell:s144",
      "stack": 1,
      "stats": {},
@@ -137553,28 +135718,7 @@
   },
   {
    "category": "jewellery",
-   "forging": [
-    {
-     "count": 1,
-     "from": 0,
-     "ingot": "iron-ingot"
-    },
-    {
-     "count": 2,
-     "from": 1,
-     "ingot": "tin-ingot"
-    },
-    {
-     "count": 3,
-     "from": 2,
-     "ingot": "steel-ingot"
-    },
-    {
-     "count": 5,
-     "from": 3,
-     "ingot": "moon-ingot"
-    }
-   ],
+   "forgeable": true,
    "icon": "/icons/items/322.png",
    "id": "zircon-ring",
    "name": {
@@ -137742,6 +135886,10 @@
       }
      },
      "icon": "/icons/items/322.png",
+     "iconSize": [
+      16,
+      16
+     ],
      "qualities": [
       {
        "classes": {

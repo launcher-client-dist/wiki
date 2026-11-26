@@ -17,13 +17,15 @@ export const SECTIONS: Record<EntityKind, { slug: Record<Lang, string>; nav: boo
   guide: { slug: { pt: "guias", en: "guides" }, nav: true },
   spell: { slug: { pt: "magias", en: "spells" }, nav: false },
   trait: { slug: { pt: "talentos", en: "traits" }, nav: false },
+  build: { slug: { pt: "builds", en: "builds" }, nav: false },
+  class: { slug: { pt: "classes", en: "classes" }, nav: false },
 };
 
 /**
  * The kinds whose pages exist. A kind joins this list when its page type ships; from then on every link to an
  * entity of that kind becomes a real link (before that it renders as text with its icon and hover card).
  */
-export const SHIPPED_KINDS: readonly EntityKind[] = ["guide"];
+export const SHIPPED_KINDS: readonly EntityKind[] = ["guide", "item"];
 
 /** The kinds in the main navigation, in order. */
 export const NAV_KINDS: readonly EntityKind[] = (Object.keys(SECTIONS) as EntityKind[]).filter((k) => SECTIONS[k].nav);

@@ -10,9 +10,12 @@ export const INVERSE = {
   sells: "soldBy",
   buys: "boughtBy",
   rewards: "rewardOf",
+  requires: "requiredBy",
   madeFrom: "usedIn",
   teaches: "taughtBy",
+  conjures: "conjuredBy",
   opens: "openedBy",
+  mentions: "mentionedIn",
   related: "related",
 } as const satisfies Record<RelationType, string>;
 export type InverseType = (typeof INVERSE)[RelationType];

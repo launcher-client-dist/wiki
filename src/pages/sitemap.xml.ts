@@ -8,7 +8,7 @@ import { absoluteUrl, homeAlternates, sectionAlternates, SHIPPED_KINDS, type Alt
 import { siteData } from "../lib/site-registry.ts";
 
 export const GET: APIRoute = async () => {
-  const { registry, guides } = await siteData();
+  const { registry, guides, items } = await siteData();
   const pages: { alternates: Alternates; lastmod?: string }[] = [{ alternates: homeAlternates() }];
   for (const kind of SHIPPED_KINDS) pages.push({ alternates: sectionAlternates(kind) });
   const seen = new Set<string>();
@@ -18,6 +18,9 @@ export const GET: APIRoute = async () => {
     const alternates = Object.fromEntries(LANGS.map((l) => [l, registry.url(g.ref, l)!])) as Record<Lang, string>;
     const updated = LANGS.map((l) => g.twins[l].data.updated.getTime()).reduce((a, b) => Math.max(a, b));
     pages.push({ alternates, lastmod: new Date(updated).toISOString().slice(0, 10) });
+  }
+  for (const item of items) {
+    pages.push({ alternates: Object.fromEntries(LANGS.map((l) => [l, registry.url(`item:${item.id}`, l)!])) as Record<Lang, string> });
   }
   const urls = pages.flatMap((p) => LANGS.map((lang) => {
     const links = LANGS.map((l) => `    <xhtml:link rel="alternate" hreflang="${HREFLANG[l]}" href="${absoluteUrl(p.alternates[l])}"/>`).join("\n");

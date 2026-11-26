@@ -26,17 +26,20 @@ interface Props {
   alternates: Alternates;
   crumbs?: Crumb[];
   noindex?: boolean;
-  searchable?: { kind: EntityKind } | false;
+  /** In search under its kind; `image`: the result's own icon (an item's sprite). */
+  searchable?: { kind: EntityKind; image?: string } | false;
   ogType?: "website" | "article";
   jsonLd?: object[];
   current?: EntityKind;
   mainClass?: string;
+  /** The social card (an absolute path on the site); the default card otherwise. */
+  ogImage?: string;
 }
-const { lang, title, bareTitle = false, description, alternates, crumbs, noindex = false, searchable = false, ogType = "website", jsonLd = [], current, mainClass } = Astro.props;
+const { lang, title, bareTitle = false, description, alternates, crumbs, noindex = false, searchable = false, ogType = "website", jsonLd = [], current, mainClass, ogImage: ogPath = "/og/default.png" } = Astro.props;
 const t = ui(lang);
 const fullTitle = bareTitle ? title : `${title} · ${t.siteName}`;
 const canonical = absoluteUrl(alternates[lang]);
-const ogImage = absoluteUrl("/og/default.png");
+const ogImage = absoluteUrl(ogPath);
 const breadcrumbLd = crumbs && crumbs.length > 1 ? {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -93,7 +96,8 @@ const ld = [...jsonLd, ...(breadcrumbLd ? [breadcrumbLd] : [])];
   <Header lang={lang} alternates={alternates} current={current} />
   <main id="wiki-main" tabindex="-1" class={mainClass}
     data-pagefind-body={searchable ? "" : undefined}
-    data-pagefind-filter={searchable ? `kind:${searchable.kind}` : undefined}>
+    data-pagefind-filter={searchable ? `kind:${searchable.kind}` : undefined}
+    data-pagefind-meta={searchable && searchable.image ? `image:${searchable.image}` : undefined}>
     {crumbs && crumbs.length > 1 && <div class="container"><Breadcrumbs items={crumbs} label={t.breadcrumbsLabel} /></div>}
     <slot />
   </main>

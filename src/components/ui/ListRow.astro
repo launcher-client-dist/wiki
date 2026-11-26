@@ -1,0 +1,17 @@
+---
+/** One row of a ListPanel: what (default slot) on the left, its numbers and badges (slot "end") on the right, an
+ * optional second line (slot "sub"). */
+---
+<li class="lrow">
+  <span class="main"><span class="what"><slot /></span>{Astro.slots.has("sub") && <span class="sub"><slot name="sub" /></span>}</span>
+  {Astro.slots.has("end") && <span class="end"><slot name="end" /></span>}
+</li>
+<style>
+  .lrow { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 14px; padding: 9px 14px; }
+  .lrow + .lrow { border-top: 1px solid var(--row-border); }
+  .main { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+  .what { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; }
+  .sub { font-size: var(--fs-xs); color: var(--text-muted); display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: center; }
+  .end { display: inline-flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 8px; font-size: var(--fs-sm); color: var(--text-muted); }
+  .end :global(.num) { color: var(--heading); font-weight: 700; }
+</style>

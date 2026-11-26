@@ -136,6 +136,39 @@ export const KIND_ART: Record<EntityKind, PixelArt> = {
     ],
     palette: { k: K, g: "#86d957", b: "#8a5a2b" },
   },
+  build: {
+    rows: [
+      "....kkkk....",
+      "...kssssk...",
+      "..kskkkksk..",
+      "..kskyyksk..",
+      "..kskyyksk..",
+      "..kskkkksk..",
+      "...kssssk...",
+      ".kkkkkkkkkk.",
+      "kbbbbbbbbbbk",
+      "kbbybbbbybbk",
+      "kbbbbbbbbbbk",
+      ".kkkkkkkkkk.",
+    ],
+    palette: { k: K, s: "#a9b6d6", y: "#ffd34e", b: "#8a5a2b" },
+  },
+  class: {
+    rows: [
+      ".kkk....kkk.",
+      "kyyyk..kyyyk",
+      "kyrykkkkyryk",
+      "kyyykrrkyyyk",
+      ".kk.krrk.kk.",
+      "....krrk....",
+      "...kwwwwk...",
+      "..kwwwwwwk..",
+      "..kwwkkwwk..",
+      "..kwk..kwk..",
+      "..kk....kk..",
+    ],
+    palette: { k: K, y: "#ffd34e", r: "#d9534f", w: "#a9b6d6" },
+  },
 };
 
 /** The logo: a grass block. */

@@ -1,0 +1,441 @@
+---
+import PageShell from "../../../components/layout/PageShell.astro";
+import Banner from "../../../components/ui/Banner.astro";
+import IconSlot from "../../../components/ui/IconSlot.astro";
+import Icon from "../../../components/ui/Icon.astro";
+import Tag from "../../../components/ui/Tag.astro";
+import Badge from "../../../components/ui/Badge.astro";
+import InfoBox from "../../../components/ui/InfoBox.astro";
+import StatValue from "../../../components/ui/StatValue.astro";
+import VariantSwitch from "../../../components/ui/VariantSwitch.astro";
+import ListPanel from "../../../components/ui/ListPanel.astro";
+import ListRow from "../../../components/ui/ListRow.astro";
+import TierBadge from "../../../components/ui/TierBadge.astro";
+import Spoiler from "../../../components/ui/Spoiler.astro";
+import Callout from "../../../components/ui/Callout.astro";
+import MapLink from "../../../components/ui/MapLink.astro";
+import Card from "../../../components/ui/Card.astro";
+import EntityLink from "../../../components/entity/EntityLink.astro";
+import { ui, fill } from "../../../i18n/index.ts";
+import { HREFLANG, LANGS, otherLang, type Lang } from "../../../lib/i18n.ts";
+import { absoluteUrl, homePath, SECTIONS, sectionPath } from "../../../lib/routes.ts";
+import { ITEMS, siteData } from "../../../lib/site-registry.ts";
+import { appearsIn } from "../../../lib/entities/appears.ts";
+import { CLASS_KEYS, STAT_KEYS, goldPerOz, primaryVersion, statLabel, type ItemData, type Place, type Recipe, type StatKey } from "../../../lib/items/data.ts";
+import { metaDescription, num, oneInText, oz, similarItems, topStats } from "../../../lib/items/view.ts";
+
+export async function getStaticPaths() {
+  const { items } = await siteData();
+  return items.flatMap((item) => LANGS.map((lang) => ({ params: { lang, items: SECTIONS.item.slug[lang], slug: item.slug[lang] }, props: { id: item.id } })));
+}
+const lang = Astro.params.lang as Lang;
+const t = ui(lang);
+const ti = t.item;
+const { registry, items } = await siteData();
+const item = items.find((i) => i.id === Astro.props.id)!;
+const ref = `item:${item.id}`;
+const v = primaryVersion(item);
+const other = otherLang(lang);
+const alternates = Object.fromEntries(LANGS.map((l) => [l, registry.url(ref, l)!])) as Record<Lang, string>;
+const icon = v.icon && v.iconSize ? { src: v.icon, width: v.iconSize[0], height: v.iconSize[1], pixel: true } : null;
+const statKeys = STAT_KEYS.filter((k) => v.stats[k]);
+const classVariants = (k: StatKey, src: { classes?: Partial<Record<string, Partial<Record<StatKey, number>>>>; stats: Partial<Record<StatKey, number>> }) =>
+  Object.fromEntries(CLASS_KEYS.map((c) => [c, src.classes?.[c]?.[k] ?? src.stats[k]]));
+const hasClasses = !!v.classes && statKeys.some((k) => CLASS_KEYS.some((c) => (v.classes?.[c]?.[k] ?? v.stats[k]) !== v.stats[k]));
+const qualities = v.qualities && (statKeys.length || v.lifetime) ? v.qualities : null;
+const qualityKeys = qualities ? STAT_KEYS.filter((k) => qualities.some((q) => q.stats[k])) : [];
+const src = item.sources;
+const shopsOpen = src.shops.filter((s) => !s.spoiler);
+const shopsGated = src.shops.filter((s) => s.spoiler);
+const buyersOpen = src.buyers.filter((s) => !s.spoiler);
+const anyQualityDrop = src.drops.some((d) => d.quality);
+const runesForThis = items.filter((o) => o.rune?.fitsItems.includes(item.id));
+const spells = [...new Set(item.versions.map((x) => x.spell).filter(Boolean))] as string[];
+const ingotSteps = ITEMS.forging.filter((f) => f.ingot === item.id);
+const similar = similarItems(items, item);
+const appears = appearsIn(registry, ref, ["droppedBy", "soldBy", "boughtBy", "rewardOf", "requiredBy", "usedIn", "conjuredBy", "taughtBy"]);
+const description = metaDescription(item, lang);
+const placeText = (p: Place) => `${p.town[lang]}${p.near ? ` · ${ti.near} ${p.near[lang]}` : ""}${p.underground ? ` · ${ti.underground}` : ""}`;
+const versionLabel = (i: number) => fill(ti.versionN, { n: i + 1 });
+const jsonLd = [{
+  "@context": "https://schema.org",
+  "@type": "Thing",
+  name: item.name[lang],
+  alternateName: item.name[other],
+  description,
+  url: absoluteUrl(alternates[lang]),
+  inLanguage: HREFLANG[lang],
+  ...(icon ? { image: absoluteUrl(icon.src) } : {}),
+  additionalProperty: statKeys.map((k) => ({ "@type": "PropertyValue", name: statLabel(k)[lang], value: v.stats[k] })),
+}];
+---
+<PageShell lang={lang} title={item.name[lang]} description={description} alternates={alternates} current="item"
+  searchable={{ kind: "item", image: icon?.src }} jsonLd={jsonLd} ogImage={`/og/items/${item.slug.en}.png`}
+  crumbs={[{ label: t.home, href: homePath(lang) }, { label: ti.listTitle, href: sectionPath("item", lang) }, { label: item.name[lang] }]}>
+  <div class="container" id="item-page">
+    <Banner>
+      <div slot="media" class="hero-icon"><IconSlot icon={icon} kind="item" size={152} /></div>
+      <p class="kicker">{ti.category[item.category]}</p>
+      <h1>{item.name[lang]}</h1>
+      {item.name[other] !== item.name[lang] && <p class="alt" lang={HREFLANG[other]}>{item.name[other]}</p>}
+      {v.text[lang] && <blockquote class="game-text">{v.text[lang]}</blockquote>}
+      <div class="tags">
+        <Tag>{item.subtype[lang]}</Tag>
+        {item.slots.map((s) => <Tag icon="layers">{ti.slot[s as keyof typeof ti.slot]}</Tag>)}
+        {item.armourClass && <Tag>{item.armourClass === "heavy" ? ti.heavy : ti.light}</Tag>}
+        {item.twoHanded && <Tag>{ti.twoHanded}</Tag>}
+        {item.versions.length > 1 && <Tag tone="sun">{fill(ti.versionsIntro.split(":")[0]!, { n: item.versions.length })}</Tag>}
+      </div>
+    </Banner>
+
+    <div class="layout">
+      <div class="main">
+        {item.versions.length > 1 && (
+          <section class="block" aria-labelledby="h-versions">
+            <h2 id="h-versions">{ti.versionsTitle}</h2>
+            <p class="muted">{fill(ti.versionsIntro, { n: item.versions.length })}</p>
+            <div class="versions">
+              {item.versions.map((x, i) => (
+                <div class="version">
+                  <IconSlot icon={x.icon && x.iconSize ? { src: x.icon, width: x.iconSize[0], height: x.iconSize[1], pixel: true } : null} kind="item" size={48} />
+                  <div>
+                    <strong>{versionLabel(i)}{x.type === v.type ? " ★" : ""}</strong>
+                    {x.text[lang] && <p class="vt">{x.text[lang]}</p>}
+                    <p class="vs">{(Object.entries(x.stats) as [StatKey, number][]).map(([k, n]) => <span>{statLabel(k)[lang]} <StatValue value={n} /></span>)}</p>
+                    {x.becomesWhenEquipped && <p class="muted small">{ti.versionEquip}</p>}
+                    {x.spell && <p class="small">{ti.spellTitle}: <EntityLink to={x.spell} /></p>}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {(v.food || v.potion || v.lifetime || v.drinkSeconds || v.resistSeconds) && (
+          <section class="block" aria-labelledby="h-effect">
+            <h2 id="h-effect">{ti.useTitle}</h2>
+            <div class="effects">
+              {v.potion && <p class="effect"><Icon name="heart" /> {fill(ti.potion, { min: v.potion.min, max: v.potion.max, stat: v.potion.stat === "health" ? ti.potionHealth : ti.potionMana, s: v.potion.seconds })}</p>}
+              {v.food && (
+                <div class="effect">
+                  <p><Icon name="clock" /> {fill(ti.food, { n: v.food.seconds })}</p>
+                  {Object.keys(v.food.buff).length > 0 && <p class="buffs">{ti.foodBuff}: {(Object.entries(v.food.buff) as [StatKey, number][]).map(([k, n]) => <span>{statLabel(k)[lang]} <StatValue value={n} /></span>)}</p>}
+                </div>
+              )}
+              {v.drinkSeconds && <p class="effect"><Icon name="clock" /> {fill(ti.drink, { n: v.drinkSeconds })}</p>}
+              {v.resistSeconds && <p class="effect"><Icon name="shield" /> {fill(ti.resist, { n: v.resistSeconds })}</p>}
+              {v.lifetime && <p class="effect"><Icon name="clock" /> {fill(ti.lifetime, { n: v.lifetime })}</p>}
+            </div>
+          </section>
+        )}
+
+        {qualities && (
+          <section class="block" aria-labelledby="h-qualities">
+            <h2 id="h-qualities">{ti.qualities}</h2>
+            <p class="muted">{ti.qualitiesIntro}</p>
+            <div class="table-wrap">
+              <table class="qtable">
+                <thead><tr><th scope="col">{ti.qualityCol}</th>{qualityKeys.map((k) => <th scope="col" class="r">{statLabel(k)[lang]}</th>)}<th scope="col" class="r">{ti.weight}</th>{v.lifetime && <th scope="col" class="r">s</th>}</tr></thead>
+                <tbody>
+                  {qualities.map((q) => (
+                    <tr class={`q${q.rarity}`}>
+                      <th scope="row"><span class="qname">{ti.quality[`q${q.rarity}` as keyof typeof ti.quality]}</span></th>
+                      {qualityKeys.map((k) => <td class="r">{q.stats[k] ? <StatValue value={q.stats[k]!} variants={classVariants(k, q)} /> : "—"}</td>)}
+                      <td class="r num">{oz(q.weight, lang)}</td>
+                      {v.lifetime && <td class="r num">{q.lifetime ?? "—"}</td>}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </section>
+        )}
+
+        {(src.drops.length > 0 || src.shops.length > 0 || src.quests.length > 0 || src.map.length > 0 || src.recipes.length > 0 || src.conjured.length > 0) && (
+          <section class="block" aria-labelledby="h-where">
+            <h2 id="h-where">{ti.whereTitle}</h2>
+            <div class="panels">
+              {src.drops.length > 0 && (
+                <ListPanel title={ti.dropsTitle} count={src.drops.length} icon="sword" id="drops">
+                  {src.drops.map((d) => (
+                    <ListRow>
+                      <EntityLink to={d.monster} />
+                      <Fragment slot="end">
+                        {d.quality && <span class="qchip" title={ti.qualityYes}><Icon name="gem" size={14} /></span>}
+                        <span class="num">× {d.amount[0] === d.amount[1] ? d.amount[0] : `${d.amount[0]}–${d.amount[1]}`}</span>
+                        <TierBadge tier={d.tier} />
+                      </Fragment>
+                    </ListRow>
+                  ))}
+                </ListPanel>
+              )}
+              {shopsOpen.length > 0 && (
+                <ListPanel title={ti.shopsTitle} count={shopsOpen.length} icon="pin" id="shops">
+                  {shopsOpen.map((s) => (
+                    <ListRow>
+                      <EntityLink to={s.npc} />
+                      {s.where && <Fragment slot="sub"><span>{placeText(s.where.place)}</span><MapLink variant="inline" href={s.where.link} label={ti.mapLink} /></Fragment>}
+                      <Fragment slot="end">
+                        <span><span class="num">{num(s.price, lang)}</span> {ti.gold}</span>
+                        <Badge tone="count">{s.stock.kind === "unlimited" ? ti.stockUnlimited : s.stock.kind === "limited" ? fill(ti.stockLimited, { n: s.stock.n ?? 0 }) : fill(ti.stockBlack, { n: s.stock.n ?? 0 })}</Badge>
+                      </Fragment>
+                    </ListRow>
+                  ))}
+                </ListPanel>
+              )}
+              {shopsGated.length > 0 && (
+                <Spoiler title={ti.spoilerShop}>
+                  <ul class="plain">
+                    {shopsGated.map((s) => <li><EntityLink to={s.npc} /> · <span class="num">{num(s.price, lang)}</span> {ti.gold}{s.where && <> · <MapLink variant="inline" href={s.where.link} label={ti.mapLink} /></>}</li>)}
+                  </ul>
+                </Spoiler>
+              )}
+              {src.quests.length > 0 && (
+                <Spoiler title={ti.spoilerQuests}>
+                  <ul class="plain">{src.quests.map((q) => <li><EntityLink to={q.quest} />{q.amount > 1 && <span class="num"> × {q.amount}</span>}</li>)}</ul>
+                </Spoiler>
+              )}
+              {src.recipes.length > 0 && (
+                <ListPanel title={ti.recipesTitle} count={src.recipes.length} icon="tip" id="recipes">
+                  {src.recipes.map((r: Recipe) => (
+                    <ListRow>
+                      <Badge tone="new">{ti.method[r.method]}</Badge>
+                      {r.ingredients.map((ing, i) => <>{i > 0 && <span class="plus">+</span>}<EntityLink to={`item:${ing.item}`} />{ing.tool && <span class="muted small">({ti.tool})</span>}</>)}
+                    </ListRow>
+                  ))}
+                </ListPanel>
+              )}
+              {src.map.length > 0 && (
+                <ListPanel title={ti.mapTitle} count={src.map.length} icon="map" id="map">
+                  {src.map.map((m) => (
+                    <ListRow>
+                      <span>{placeText(m.place)}</span>
+                      <Fragment slot="end"><MapLink variant="inline" href={m.link} label={ti.mapLink} /></Fragment>
+                    </ListRow>
+                  ))}
+                </ListPanel>
+              )}
+              {src.conjured.length > 0 && (
+                <ListPanel title={ti.conjuredTitle} icon="star" id="conjured">
+                  {src.conjured.map((c) => <ListRow><EntityLink to={c.spell} /><Fragment slot="end">{fill(ti.conjuredNote, { n: c.seconds })}</Fragment></ListRow>)}
+                </ListPanel>
+              )}
+            </div>
+            {anyQualityDrop && (
+              <div class="dq">
+                <h3>{ti.dropQualityTitle}</h3>
+                <p class="muted">{ti.dropQualityIntro}</p>
+                <ul class="odds">
+                  {ITEMS.dropQuality.map((q) => <li><span class={`qname q${q.rarity}`}>{ti.quality[`q${q.rarity}` as keyof typeof ti.quality]}</span> <span class="num">{oneInText(q, ti, lang)}</span></li>)}
+                </ul>
+              </div>
+            )}
+          </section>
+        )}
+
+        {(buyersOpen.length > 0 || item.uses.recipes.length > 0 || item.uses.questsRequire.length > 0 || item.rune || runesForThis.length > 0 || item.forgeable || ingotSteps.length > 0 || spells.length > 0) && (
+          <section class="block" aria-labelledby="h-use">
+            <h2 id="h-use">{ti.useTitle}</h2>
+            <div class="panels">
+              {item.rune && (
+                <ListPanel title={ti.runeEffect} icon="gem" id="rune">
+                  <ListRow><span>{v.text[lang]}</span></ListRow>
+                  <ListRow><span class="muted">{ti.runeFits}:</span>{item.rune.fits.map((f) => <Tag>{f[lang]}</Tag>)}</ListRow>
+                  {item.rune.fitsItems.length > 0 && <ListRow><span class="links">{item.rune.fitsItems.map((id) => <EntityLink to={`item:${id}`} />)}</span></ListRow>}
+                </ListPanel>
+              )}
+              {runesForThis.length > 0 && (
+                <ListPanel title={ti.runesForThis} count={runesForThis.length} icon="gem" id="runes">
+                  <ListRow><span class="links">{runesForThis.map((r) => <EntityLink to={`item:${r.id}`} />)}</span></ListRow>
+                </ListPanel>
+              )}
+              {spells.length > 0 && (
+                <ListPanel title={ti.spellTitle} icon="star" id="spell">
+                  {spells.map((s) => <ListRow><EntityLink to={s} /></ListRow>)}
+                </ListPanel>
+              )}
+              {item.uses.recipes.length > 0 && (
+                <ListPanel title={ti.usedInTitle} count={item.uses.recipes.length} icon="tip" id="used-in">
+                  {item.uses.recipes.map((r) => (
+                    <ListRow>
+                      <Badge tone="new">{ti.method[r.method]}</Badge>
+                      {r.ingredients.map((ing, i) => <>{i > 0 && <span class="plus">+</span>}<EntityLink to={`item:${ing.item}`} />{ing.tool && <span class="muted small">({ti.tool})</span>}</>)}
+                      <span class="plus">→</span><EntityLink to={`item:${r.result}`} />
+                    </ListRow>
+                  ))}
+                </ListPanel>
+              )}
+              {buyersOpen.length > 0 && (
+                <ListPanel title={ti.buyersTitle} count={buyersOpen.length} icon="pin" id="buyers">
+                  {buyersOpen.map((b) => (
+                    <ListRow>
+                      <EntityLink to={b.npc} />
+                      {b.where && <Fragment slot="sub"><span>{placeText(b.where.place)}</span><MapLink variant="inline" href={b.where.link} label={ti.mapLink} /></Fragment>}
+                      <Fragment slot="end"><span><span class="num">{num(b.price, lang)}</span> {ti.gold}</span></Fragment>
+                    </ListRow>
+                  ))}
+                </ListPanel>
+              )}
+              {item.uses.questsRequire.length > 0 && (
+                <Spoiler title={ti.spoilerQuestNeed}>
+                  <ul class="plain">{item.uses.questsRequire.map((q) => <li><EntityLink to={q.quest} /></li>)}</ul>
+                </Spoiler>
+              )}
+            </div>
+            {item.forgeable && (
+              <div class="forge" id="forging" data-section="forging">
+                <h3>{ti.forging}</h3>
+                <p class="muted">{ti.forgingIntro}</p>
+                <div class="table-wrap">
+                  <table class="qtable">
+                    <thead><tr><th scope="col">{ti.qualityCol}</th><th scope="col">{ti.forgingTakes}</th><th scope="col" class="r">{ti.forgingUpgrade}</th><th scope="col" class="r">{ti.forgingBreak}</th></tr></thead>
+                    <tbody>
+                      {ITEMS.forging.map((f) => (
+                        <tr>
+                          <th scope="row"><span class={`qname q${f.from}`}>{ti.quality[`q${f.from}` as keyof typeof ti.quality]}</span> → <span class={`qname q${f.from + 1}`}>{ti.quality[`q${f.from + 1}` as keyof typeof ti.quality]}</span></th>
+                          <td><span class="num">{f.count} ×</span> <EntityLink to={`item:${f.ingot}`} /></td>
+                          <td class="r num">{oneInText(f.upgrade, ti, lang)}</td>
+                          <td class="r num">{oneInText(f.bothBreak, ti, lang)}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+                <p class="muted small">{ti.forgingElse} {ti.forgingPoints}</p>
+              </div>
+            )}
+            {ingotSteps.length > 0 && (
+              <Callout type="tip" title={ti.forging}>
+                <p>{ti.ingotFor}: {ingotSteps.map((f) => `${ti.quality[`q${f.from}` as keyof typeof ti.quality]} (${f.count}×)`).join(", ")}.</p>
+              </Callout>
+            )}
+          </section>
+        )}
+
+        {appears.length > 0 && (
+          <section class="block" aria-labelledby="h-appears" data-section="appears">
+            <h2 id="h-appears">{t.appearsHeading}</h2>
+            <div class="panels">
+              {appears.map((s) => (
+                <ListPanel title={t.appearsTitle[s.kind] ?? t.kindPlural[s.kind]} count={s.refs.length} id={`appears-${s.kind}`}>
+                  {s.refs.map((r) => <ListRow><EntityLink to={r} /></ListRow>)}
+                </ListPanel>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {similar.length > 0 && (
+          <section class="block" aria-labelledby="h-similar">
+            <h2 id="h-similar">{ti.similarTitle}</h2>
+            <div class="similar">
+              {similar.map((o) => {
+                const ov = primaryVersion(o);
+                return (
+                  <Card href={registry.url(`item:${o.id}`, lang)!} title={o.name[lang]} kicker={o.subtype[lang]} layout="row">
+                    <IconSlot slot="emblem" icon={ov.icon && ov.iconSize ? { src: ov.icon, width: ov.iconSize[0], height: ov.iconSize[1], pixel: true } : null} kind="item" size={48} framed={false} />
+                    {topStats(o, lang) || ti.noStats}
+                  </Card>
+                );
+              })}
+            </div>
+          </section>
+        )}
+      </div>
+
+      <aside class="side">
+        <InfoBox title={ti.stats}>
+          {hasClasses && (
+            <div class="switch">
+              <span class="label">{ti.classSwitch}</span>
+              <VariantSwitch scope="item-page" label={ti.classSwitch} variants={[{ key: "base", label: ti.classBase }, ...CLASS_KEYS.map((k) => ({ key: k, label: ti.classes[k] }))]} />
+            </div>
+          )}
+          {statKeys.length > 0 ? (
+            <dl class="stats">
+              {statKeys.map((k) => <div><dt>{statLabel(k)[lang]}</dt><dd><StatValue value={v.stats[k]!} variants={v.classes ? classVariants(k, v) : undefined} /></dd></div>)}
+            </dl>
+          ) : <p class="nostats">{ti.noStats}</p>}
+          <dl class="facts">
+            <div><dt>{ti.weight}</dt><dd class="num">{oz(v.weight, lang)}</dd></div>
+            {v.stack > 1 && <div><dt>{ti.stack}</dt><dd class="num">{v.stack}</dd></div>}
+            {v.slots && <div><dt>{ti.slots}</dt><dd class="num">{v.slots}</dd></div>}
+            <div><dt>{ti.sellValue}</dt><dd class="num">{item.value.npcPays ? `${num(item.value.npcPays, lang)} ${ti.gold}` : "—"}</dd></div>
+            {goldPerOz(item) && <div><dt>{ti.goldPerOz}</dt><dd class="num">{num(goldPerOz(item)!, lang)}</dd></div>}
+          </dl>
+          {statKeys.some((k) => (v.stats[k] ?? 0) < 0) && <p slot="footer">{ti.negativeNote}</p>}
+          {hasClasses && <p slot="footer">{ti.classNote}</p>}
+        </InfoBox>
+      </aside>
+    </div>
+  </div>
+</PageShell>
+<style>
+  .hero-icon :global(.slot) { box-shadow: 0 8px 0 var(--hard), inset 0 -10px 0 rgba(0, 0, 0, 0.25); }
+  .kicker { margin: 0; font: 800 var(--fs-xs) / 1 var(--font-body); letter-spacing: 0.14em; text-transform: uppercase; color: var(--sun); text-shadow: 0 2px 0 var(--hard); }
+  :global(:root[data-theme="light"]) .kicker { color: #7a4a00; text-shadow: none; }
+  .alt { margin: 0; color: var(--banner-muted); font-size: var(--fs-lg); }
+  .game-text { margin: 4px 0 0; padding: 8px 12px; border-left: 4px solid var(--sun); background: var(--banner-chip-bg); border-radius: 0 var(--r-m) var(--r-m) 0;
+    color: var(--banner-text); font-style: italic; max-width: 42rem; }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+  .tags :global(.tag) { background: var(--banner-chip-bg); color: var(--banner-text); }
+
+  .layout { display: grid; gap: var(--s-6); margin-top: var(--s-6); grid-template-columns: minmax(0, 1fr); }
+  @media (min-width: 1000px) { .layout { grid-template-columns: minmax(0, 1fr) 330px; align-items: start; } .side { position: sticky; top: calc(var(--header-h) + var(--s-4)); } }
+  .side { order: -1; }
+  @media (min-width: 1000px) { .side { order: 0; } }
+  .block + .block { margin-top: var(--s-7); }
+  .block > h2 { margin-bottom: var(--s-3); }
+  .block > .muted { margin-bottom: var(--s-4); }
+  .muted { color: var(--text-muted); }
+  .small { font-size: var(--fs-sm); }
+  .panels { display: grid; gap: var(--s-4); }
+
+  .versions { display: grid; gap: 12px; }
+  .version { display: flex; gap: 14px; padding: 12px; background: var(--card-bg); border: var(--bw) solid var(--hard); border-radius: var(--r-l); box-shadow: var(--shadow-1); }
+  .version p { margin: 4px 0 0; }
+  .vt { font-style: italic; color: var(--text-muted); }
+  .vs { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: var(--fs-sm); }
+
+  .effects { display: grid; gap: 10px; }
+  .effect { display: flex; flex-direction: column; gap: 6px; margin: 0; padding: 12px 14px; background: var(--card-bg); border: var(--bw) solid var(--hard); border-radius: var(--r-l); box-shadow: var(--shadow-1); }
+  .effect p { margin: 0; }
+  p.effect { flex-direction: row; align-items: center; gap: 8px; }
+  .effect :global(.icon) { color: var(--sun); }
+  .buffs { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: var(--fs-sm); color: var(--text-muted); }
+
+  .table-wrap { overflow-x: auto; border: var(--bw) solid var(--hard); border-radius: var(--r-l); box-shadow: var(--shadow-1); background: var(--card-bg); }
+  .qtable { width: 100%; border-collapse: collapse; font-size: var(--fs-sm); }
+  .qtable th, .qtable td { padding: 9px 12px; text-align: left; white-space: nowrap; }
+  .qtable thead th { background: var(--surface-2); font-weight: 700; border-bottom: var(--bw) solid var(--hard); }
+  .qtable tbody tr + tr > * { border-top: 1px solid var(--row-border); }
+  .qtable .r { text-align: right; }
+  .qname { font-weight: 800; }
+  .q0 { color: var(--quality-0); }
+  .q1 { color: var(--quality-1); }
+  .q2 { color: var(--quality-2); }
+  .q3 { color: var(--quality-3); }
+  .q4 { color: var(--quality-4); }
+  .qchip { color: var(--magic); display: inline-flex; }
+
+  .dq, .forge { margin-top: var(--s-5); }
+  .dq h3, .forge h3 { margin-bottom: 6px; font: 700 var(--fs-lg) / 1.3 var(--font-body); }
+  .odds { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+  .odds li { padding: 6px 12px; background: var(--card-bg); border: var(--bw) solid var(--border); border-radius: var(--r-m); font-size: var(--fs-sm); }
+
+  .plain { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+  .plus { color: var(--text-faint); font-weight: 700; }
+  .links { display: flex; flex-wrap: wrap; gap: 6px 14px; }
+
+  .similar { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); }
+
+  .switch { padding: 12px 14px; border-bottom: var(--bw) solid var(--hard); display: grid; gap: 8px; }
+  .switch .label { font-size: var(--fs-xs); font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; }
+  .stats, .facts { margin: 0; display: grid; }
+  .stats div, .facts div { display: flex; justify-content: space-between; gap: 12px; padding: 9px 16px; }
+  .stats div + div, .facts div + div { border-top: 1px solid var(--row-border); }
+  .stats dt, .facts dt { color: var(--text-muted); font-size: var(--fs-sm); }
+  .stats dd, .facts dd { margin: 0; font-size: 1.0625rem; color: var(--heading); font-weight: 700; }
+  .facts { border-top: var(--bw) solid var(--hard); background: var(--surface-2); }
+  .nostats { margin: 0; padding: 12px 16px; color: var(--text-muted); }
+</style>

@@ -1,0 +1,29 @@
+---
+/**
+ * A titled block of rows (ListRow children): the "dropped by", "sold by", "recipes" lists of an entity page. An icon
+ * and a count beside the title; `note` under it.
+ */
+import Icon from "./Icon.astro";
+interface Props {
+  title: string;
+  count?: number;
+  icon?: Parameters<typeof Icon>[0]["name"];
+  note?: string;
+  id?: string;
+}
+const { title, count, icon, note, id } = Astro.props;
+---
+<section class="lpanel" id={id} data-section={id}>
+  <h3>{icon && <Icon name={icon} size={18} />}<span>{title}</span>{count !== undefined && <span class="n">{count}</span>}</h3>
+  {note && <p class="note">{note}</p>}
+  <ul><slot /></ul>
+</section>
+<style>
+  .lpanel { background: var(--card-bg); border: var(--bw) solid var(--hard); border-radius: var(--r-l); box-shadow: var(--shadow-1); overflow: hidden; }
+  h3 { display: flex; gap: 8px; align-items: center; margin: 0; padding: 12px 14px; font: 700 var(--fs-md) / 1.2 var(--font-body); color: var(--heading);
+    background: var(--surface-2); border-bottom: var(--bw) solid var(--hard); text-shadow: none; }
+  h3 :global(.icon) { color: var(--sun); }
+  .n { font: 600 var(--fs-xs) / 1 var(--font-num); color: var(--text-faint); }
+  .note { margin: 0; padding: 10px 14px 0; font-size: var(--fs-sm); color: var(--text-muted); }
+  ul { list-style: none; margin: 0; padding: 4px 0; }
+</style>

@@ -18,6 +18,10 @@
     }
    ],
    "icon": "/icons/monsters/monk.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Monk",
     "pt": "Monge"
@@ -46,6 +50,10 @@
     }
    ],
    "icon": "/icons/monsters/rat-shipper.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Rat Shipper",
     "pt": "Rato Transportador"
@@ -74,6 +82,10 @@
     }
    ],
    "icon": "/icons/monsters/pestilence-plague.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Pestilence Plague",
     "pt": "Praga de Pestilence"
@@ -102,6 +114,10 @@
     }
    ],
    "icon": "/icons/monsters/rubellus.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Rubellus",
     "pt": "Rubellus"
@@ -130,6 +146,10 @@
     }
    ],
    "icon": "/icons/monsters/sunskin.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Sunskin",
     "pt": "Pele Solar"
@@ -158,6 +178,10 @@
     }
    ],
    "icon": "/icons/monsters/sunskin-enchanter.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Sunskin Enchanter",
     "pt": "Encantador Pele Solar"
@@ -186,6 +210,10 @@
     }
    ],
    "icon": "/icons/monsters/profaner.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Profaner",
     "pt": "Profanador"
@@ -214,6 +242,10 @@
     }
    ],
    "icon": "/icons/monsters/cave-spider.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Cave Spider",
     "pt": "Aranha da Caverna"
@@ -242,6 +274,10 @@
     }
    ],
    "icon": "/icons/monsters/devil-spider.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Devil Spider",
     "pt": "Aranha Demoníaca"
@@ -270,6 +306,10 @@
     }
    ],
    "icon": "/icons/monsters/terror-spider.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Terror Spider",
     "pt": "Aranha do Terror"
@@ -299,6 +339,10 @@
     }
    ],
    "icon": "/icons/monsters/the-blackhat.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "The Blackhat",
     "pt": "O Chapéu Negro"
@@ -328,6 +372,10 @@
     }
    ],
    "icon": "/icons/monsters/the-gardener.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "The Gardener",
     "pt": "O Jardineiro"
@@ -356,6 +404,10 @@
     }
    ],
    "icon": "/icons/monsters/plea.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Plea",
     "pt": "Plea"
@@ -385,6 +437,10 @@
     }
    ],
    "icon": "/icons/monsters/mateo-the-bandit.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Mateo The Bandit",
     "pt": "Mateo, o Bandido"
@@ -414,6 +470,10 @@
     }
    ],
    "icon": "/icons/monsters/capozzi-the-bandit.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Capozzi The Bandit",
     "pt": "Capozzi, o Bandido"
@@ -443,6 +503,10 @@
     }
    ],
    "icon": "/icons/monsters/gaglio-the-bandit.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Gaglio The Bandit",
     "pt": "Gaglio, o Bandido"
@@ -471,6 +535,10 @@
     }
    ],
    "icon": "/icons/monsters/pestilence-spawn.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Pestilence Spawn",
     "pt": "Cria de Pestilence"
@@ -499,6 +567,10 @@
     }
    ],
    "icon": "/icons/monsters/ancient-snake.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Ancient Snake",
     "pt": "Serpente Antiga"
@@ -527,6 +599,10 @@
     }
    ],
    "icon": "/icons/monsters/conquest-fowler.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Conquest Fowler",
     "pt": "Caçador de Conquest"
@@ -555,6 +631,10 @@
     }
    ],
    "icon": "/icons/monsters/plea-occultist.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Plea Occultist",
     "pt": "Ocultista Plea"
@@ -583,6 +663,10 @@
     }
    ],
    "icon": "/icons/monsters/conquest-priestess.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Conquest Priestess",
     "pt": "Sacerdotisa de Conquest"
@@ -611,6 +695,10 @@
     }
    ],
    "icon": "/icons/monsters/crazed-occultist.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Crazed Occultist",
     "pt": "Ocultista Enlouquecido"
@@ -639,6 +727,10 @@
     }
    ],
    "icon": "/icons/monsters/skeleton.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Skeleton",
     "pt": "Esqueleto"
@@ -667,6 +759,10 @@
     }
    ],
    "icon": "/icons/monsters/tomb-guardian.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Tomb Guardian",
     "pt": "Guardião da Tumba"
@@ -695,6 +791,10 @@
     }
    ],
    "icon": "/icons/monsters/tomb-diviner.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Tomb Diviner",
     "pt": "Adivinho da Tumba"
@@ -723,6 +823,10 @@
     }
    ],
    "icon": "/icons/monsters/tomb-worker.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Tomb Worker",
     "pt": "Trabalhador da Tumba"
@@ -751,6 +855,10 @@
     }
    ],
    "icon": "/icons/monsters/conquest-crow.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Conquest Crow",
     "pt": "Corvo de Conquest"
@@ -779,6 +887,10 @@
     }
    ],
    "icon": "/icons/monsters/bone-eater.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Bone Eater",
     "pt": "Devorador de Ossos"
@@ -807,6 +919,10 @@
     }
    ],
    "icon": "/icons/monsters/deadly-webcap.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Deadly Webcap",
     "pt": "Webcap Mortal"
@@ -835,6 +951,10 @@
     }
    ],
    "icon": "/icons/monsters/rat.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Rat",
     "pt": "Rato"
@@ -863,6 +983,10 @@
     }
    ],
    "icon": "/icons/monsters/swamp-troll.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Swamp Troll",
     "pt": "Troll do Pântano"
@@ -891,6 +1015,10 @@
     }
    ],
    "icon": "/icons/monsters/imp.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Imp",
     "pt": "Diabrete"
@@ -919,6 +1047,10 @@
     }
    ],
    "icon": "/icons/monsters/mireling.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Mireling",
     "pt": "Mireling"
@@ -947,6 +1079,10 @@
     }
    ],
    "icon": "/icons/monsters/mireling-noble.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Mireling Noble",
     "pt": "Mireling Nobre"
@@ -975,6 +1111,10 @@
     }
    ],
    "icon": "/icons/monsters/cave-troll.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Cave Troll",
     "pt": "Troll da Caverna"
@@ -1003,6 +1143,10 @@
     }
    ],
    "icon": "/icons/monsters/banshee.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Banshee",
     "pt": "Banshee"
@@ -1031,6 +1175,10 @@
     }
    ],
    "icon": "/icons/monsters/deer.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Deer",
     "pt": "Veado"
@@ -1059,6 +1207,10 @@
     }
    ],
    "icon": "/icons/monsters/bear.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Bear",
     "pt": "Urso"
@@ -1087,6 +1239,10 @@
     }
    ],
    "icon": "/icons/monsters/wolf.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Wolf",
     "pt": "Lobo"
@@ -1116,6 +1272,10 @@
     }
    ],
    "icon": "/icons/monsters/alpha-wolf.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Alpha Wolf",
     "pt": "Lobo Alfa"
@@ -1144,6 +1304,10 @@
     }
    ],
    "icon": "/icons/monsters/lintwurm.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Lintwurm",
     "pt": "Lintwurm"
@@ -1173,6 +1337,10 @@
     }
    ],
    "icon": "/icons/monsters/great-lintwurm.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Great Lintwurm",
     "pt": "Grande Lintwurm"
@@ -1201,6 +1369,10 @@
     }
    ],
    "icon": "/icons/monsters/giant-rat.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Giant Rat",
     "pt": "Rato Gigante"
@@ -1230,6 +1402,10 @@
     }
    ],
    "icon": "/icons/monsters/the-augur.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "The Augur",
     "pt": "O Augúrio"
@@ -1259,6 +1435,10 @@
     }
    ],
    "icon": "/icons/monsters/great-lintwurm-a235.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Great Lintwurm",
     "pt": "Grande Lintwurm"
@@ -1287,6 +1467,10 @@
     }
    ],
    "icon": "/icons/monsters/grizzly-bear.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Grizzly Bear",
     "pt": "Urso Pardo"
@@ -1315,6 +1499,10 @@
     }
    ],
    "icon": "/icons/monsters/tundra-rat.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Tundra Rat",
     "pt": "Rato da Tundra"
@@ -1343,6 +1531,10 @@
     }
    ],
    "icon": "/icons/monsters/goblin.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Goblin",
     "pt": "Goblin"
@@ -1371,6 +1563,10 @@
     }
    ],
    "icon": "/icons/monsters/swamp-tentacle.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Swamp Tentacle",
     "pt": "Tentáculo do Pântano"
@@ -1400,6 +1596,10 @@
     }
    ],
    "icon": "/icons/monsters/the-broodmother.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "The Broodmother",
     "pt": "A Mãe da Ninhada"
@@ -1428,6 +1628,10 @@
     }
    ],
    "icon": "/icons/monsters/frozen-chest.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Frozen Chest",
     "pt": "Baú Congelado"
@@ -1456,6 +1660,10 @@
     }
    ],
    "icon": "/icons/monsters/viscid-goblin.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Viscid Goblin",
     "pt": "Goblin Viscoso"
@@ -1484,6 +1692,10 @@
     }
    ],
    "icon": "/icons/monsters/frozen-chest-a260.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Frozen Chest",
     "pt": "Baú Congelado"
@@ -1512,6 +1724,10 @@
     }
    ],
    "icon": "/icons/monsters/omen.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Omen",
     "pt": "Presságio"
@@ -1541,6 +1757,10 @@
     }
    ],
    "icon": "/icons/monsters/conquest-champion.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Conquest Champion",
     "pt": "Campeão de Conquest"
@@ -1569,6 +1789,10 @@
     }
    ],
    "icon": "/icons/monsters/rotwurm.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Rotwurm",
     "pt": "Rotwurm"
@@ -1597,6 +1821,10 @@
     }
    ],
    "icon": "/icons/monsters/faun.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Faun",
     "pt": "Fauno"
@@ -1625,6 +1853,10 @@
     }
    ],
    "icon": "/icons/monsters/titan.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Titan",
     "pt": "Titã"
@@ -1653,6 +1885,10 @@
     }
    ],
    "icon": "/icons/monsters/thug.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Thug",
     "pt": "Bandido"
@@ -1681,6 +1917,10 @@
     }
    ],
    "icon": "/icons/monsters/smelt-ooze.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Smelt Ooze",
     "pt": "Lodo Fundido"
@@ -1709,6 +1949,10 @@
     }
    ],
    "icon": "/icons/monsters/bandit.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Bandit",
     "pt": "Bandido"
@@ -1737,6 +1981,10 @@
     }
    ],
    "icon": "/icons/monsters/young-amphitere.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Young Amphitere",
     "pt": "Amphitere Jovem"
@@ -1765,6 +2013,10 @@
     }
    ],
    "icon": "/icons/monsters/ghost.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Ghost",
     "pt": "Fantasma"
@@ -1793,6 +2045,10 @@
     }
    ],
    "icon": "/icons/monsters/amphitere.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Amphitere",
     "pt": "Amphitere"
@@ -1821,6 +2077,10 @@
     }
    ],
    "icon": "/icons/monsters/walking-boletus.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Walking Boletus",
     "pt": "Boleto Ambulante"
@@ -1849,6 +2109,10 @@
     }
    ],
    "icon": "/icons/monsters/ghoul.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Ghoul",
     "pt": "Carniçal"
@@ -1878,6 +2142,10 @@
     }
    ],
    "icon": "/icons/monsters/the-black-knight.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "The Black Knight",
     "pt": "O Cavaleiro Negro"
@@ -1906,6 +2174,10 @@
     }
    ],
    "icon": "/icons/monsters/unstable-quartz.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Unstable Quartz",
     "pt": "Quartzo Instável"
@@ -1934,6 +2206,10 @@
     }
    ],
    "icon": "/icons/monsters/skal-traitor.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Skal Traitor",
     "pt": "Skal Traidor"
@@ -1962,6 +2238,10 @@
     }
    ],
    "icon": "/icons/monsters/huntsman.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Huntsman",
     "pt": "Caçador"
@@ -1990,6 +2270,10 @@
     }
    ],
    "icon": "/icons/monsters/minotaur.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Minotaur",
     "pt": "Minotauro"
@@ -2019,6 +2303,10 @@
     }
    ],
    "icon": "/icons/monsters/brother-rossi.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Brother Rossi",
     "pt": "Irmão Rossi"
@@ -2047,6 +2335,10 @@
     }
    ],
    "icon": "/icons/monsters/digger.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Digger",
     "pt": "Escavador"
@@ -2075,6 +2367,10 @@
     }
    ],
    "icon": "/icons/monsters/wisp.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Wisp",
     "pt": "Wisp"
@@ -2103,6 +2399,10 @@
     }
    ],
    "icon": "/icons/monsters/sheep.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Sheep",
     "pt": "Ovelha"
@@ -2131,6 +2431,10 @@
     }
    ],
    "icon": "/icons/monsters/black-sheep.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Black Sheep",
     "pt": "Ovelha Negra"
@@ -2159,6 +2463,10 @@
     }
    ],
    "icon": "/icons/monsters/lamb.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Lamb",
     "pt": "Cordeiro"
@@ -2187,6 +2495,10 @@
     }
    ],
    "icon": "/icons/monsters/black-lamb.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Black Lamb",
     "pt": "Cordeiro Negro"
@@ -2215,6 +2527,10 @@
     }
    ],
    "icon": "/icons/monsters/necromancer.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Necromancer",
     "pt": "Necromante"
@@ -2243,6 +2559,10 @@
     }
    ],
    "icon": "/icons/monsters/occultist-acolyte.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Occultist Acolyte",
     "pt": "Acólito Ocultista"
@@ -2271,6 +2591,10 @@
     }
    ],
    "icon": "/icons/monsters/cube-of-doom.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Cube Of Doom",
     "pt": "Cubo da Perdição"
@@ -2299,6 +2623,10 @@
     }
    ],
    "icon": "/icons/monsters/occultist-scholar.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Occultist Scholar",
     "pt": "Erudito Ocultista"
@@ -2327,6 +2655,10 @@
     }
    ],
    "icon": "/icons/monsters/occultist-enforcer.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Occultist Enforcer",
     "pt": "Executor Ocultista"
@@ -2355,6 +2687,10 @@
     }
    ],
    "icon": "/icons/monsters/occultist-apprentice.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Occultist Apprentice",
     "pt": "Aprendiz Ocultista"
@@ -2383,6 +2719,10 @@
     }
    ],
    "icon": "/icons/monsters/orc-berserker.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Orc Berserker",
     "pt": "Orc Berserker"
@@ -2411,6 +2751,10 @@
     }
    ],
    "icon": "/icons/monsters/orc-general.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Orc General",
     "pt": "General Orc"
@@ -2439,6 +2783,10 @@
     }
    ],
    "icon": "/icons/monsters/orc-shaman.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Orc Shaman",
     "pt": "Xamã Orc"
@@ -2467,6 +2815,10 @@
     }
    ],
    "icon": "/icons/monsters/orc-infantry.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Orc Infantry",
     "pt": "Infantaria Orc"
@@ -2496,6 +2848,10 @@
     }
    ],
    "icon": "/icons/monsters/pestilence-knight.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Pestilence Knight",
     "pt": "Cavaleiro de Pestilence"
@@ -2524,6 +2880,10 @@
     }
    ],
    "icon": "/icons/monsters/eye-of-pestilence.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Eye Of Pestilence",
     "pt": "Olho de Pestilence"
@@ -2552,6 +2912,10 @@
     }
    ],
    "icon": "/icons/monsters/pestilence-stinger.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Pestilence Stinger",
     "pt": "Ferrão de Pestilence"
@@ -2564,6 +2928,10 @@
   },
   {
    "icon": "/icons/npcs/benedict.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Benedict",
     "pt": "Benedict"
@@ -2576,6 +2944,10 @@
   },
   {
    "icon": "/icons/npcs/el-chad.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "El Chad",
     "pt": "El Chad"
@@ -2588,6 +2960,10 @@
   },
   {
    "icon": "/icons/npcs/rubius.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Rubius",
     "pt": "Rubius"
@@ -2600,6 +2976,10 @@
   },
   {
    "icon": "/icons/npcs/bresenham.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Bresenham",
     "pt": "Bresenham"
@@ -2612,6 +2992,10 @@
   },
   {
    "icon": "/icons/npcs/tim.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Tim",
     "pt": "Tim"
@@ -2624,6 +3008,10 @@
   },
   {
    "icon": "/icons/npcs/sal.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Sal",
     "pt": "Sal"
@@ -2636,6 +3024,10 @@
   },
   {
    "icon": "/icons/npcs/ozrid.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Ozrid",
     "pt": "Ozrid"
@@ -2648,6 +3040,10 @@
   },
   {
    "icon": "/icons/npcs/nick.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Nick",
     "pt": "Nick"
@@ -2660,6 +3056,10 @@
   },
   {
    "icon": "/icons/npcs/a-stressed-chef.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "A Stressed Chef",
     "pt": "Um Chefe Estressado"
@@ -2672,6 +3072,10 @@
   },
   {
    "icon": "/icons/npcs/maxwell.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Maxwell",
     "pt": "Maxwell"
@@ -2684,6 +3088,10 @@
   },
   {
    "icon": "/icons/npcs/mary.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Mary",
     "pt": "Mary"
@@ -2696,6 +3104,10 @@
   },
   {
    "icon": "/icons/npcs/margery-a149.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Margery",
     "pt": "Margery"
@@ -2708,6 +3120,10 @@
   },
   {
    "icon": "/icons/npcs/yoz.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Yoz",
     "pt": "Yoz"
@@ -2720,6 +3136,10 @@
   },
   {
    "icon": "/icons/npcs/matthew.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Matthew",
     "pt": "Matthew"
@@ -2732,6 +3152,10 @@
   },
   {
    "icon": "/icons/npcs/newell.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Newell",
     "pt": "Newell"
@@ -2744,6 +3168,10 @@
   },
   {
    "icon": "/icons/npcs/gabe.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Gabe",
     "pt": "Gabe"
@@ -2756,6 +3184,10 @@
   },
   {
    "icon": "/icons/npcs/amlon.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Amlon",
     "pt": "Amlon"
@@ -2768,6 +3200,10 @@
   },
   {
    "icon": "/icons/npcs/amlon-a164.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Amlon",
     "pt": "Amlon"
@@ -2780,6 +3216,10 @@
   },
   {
    "icon": "/icons/npcs/amlon-a166.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Amlon",
     "pt": "Amlon"
@@ -2792,6 +3232,10 @@
   },
   {
    "icon": "/icons/npcs/martem.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Martem",
     "pt": "Martem"
@@ -2804,6 +3248,10 @@
   },
   {
    "icon": "/icons/npcs/edmund.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Edmund",
     "pt": "Edmund"
@@ -2816,6 +3264,10 @@
   },
   {
    "icon": "/icons/npcs/constine.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Constine",
     "pt": "Constine"
@@ -2828,6 +3280,10 @@
   },
   {
    "icon": "/icons/npcs/joan.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Joan",
     "pt": "Joan"
@@ -2840,6 +3296,10 @@
   },
   {
    "icon": "/icons/npcs/odie.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Odie",
     "pt": "Odie"
@@ -2852,6 +3312,10 @@
   },
   {
    "icon": "/icons/npcs/gonlle.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Gonlle",
     "pt": "Gonlle"
@@ -2864,6 +3328,10 @@
   },
   {
    "icon": "/icons/npcs/nunie.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Nunie",
     "pt": "Nunie"
@@ -2876,6 +3344,10 @@
   },
   {
    "icon": "/icons/npcs/hoder.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Hoder",
     "pt": "Hoder"
@@ -2888,6 +3360,10 @@
   },
   {
    "icon": "/icons/npcs/reika.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Reika",
     "pt": "Reika"
@@ -2900,6 +3376,10 @@
   },
   {
    "icon": "/icons/npcs/dionel.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Dionel",
     "pt": "Dionel"
@@ -2912,6 +3392,10 @@
   },
   {
    "icon": "/icons/npcs/rosel.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Rosel",
     "pt": "Rosel"
@@ -2924,6 +3408,10 @@
   },
   {
    "icon": "/icons/npcs/petrus.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Petrus",
     "pt": "Petrus"
@@ -2936,6 +3424,10 @@
   },
   {
    "icon": "/icons/npcs/morrigan.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Morrigan",
     "pt": "Morrigan"
@@ -2948,6 +3440,10 @@
   },
   {
    "icon": "/icons/npcs/colman.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Colman",
     "pt": "Colman"
@@ -2960,6 +3456,10 @@
   },
   {
    "icon": "/icons/npcs/brean.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Brean",
     "pt": "Brean"
@@ -2972,6 +3472,10 @@
   },
   {
    "icon": "/icons/npcs/salazar.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Salazar",
     "pt": "Salazar"
@@ -2984,6 +3488,10 @@
   },
   {
    "icon": "/icons/npcs/logan.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Logan",
     "pt": "Logan"
@@ -2996,6 +3504,10 @@
   },
   {
    "icon": "/icons/npcs/tock.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Tock",
     "pt": "Tock"
@@ -3008,6 +3520,10 @@
   },
   {
    "icon": "/icons/npcs/loke.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Loke",
     "pt": "Loke"
@@ -3020,6 +3536,10 @@
   },
   {
    "icon": "/icons/npcs/a-blue-mage.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "A Blue Mage",
     "pt": "Um Mago Azul"
@@ -3032,6 +3552,10 @@
   },
   {
    "icon": "/icons/npcs/a-ghoulish-secretary.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "A Ghoulish Secretary",
     "pt": "Uma Secretária Macabra"
@@ -3044,6 +3568,10 @@
   },
   {
    "icon": "/icons/npcs/a-blind-botanist.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "A Blind Botanist",
     "pt": "Um Botânico Cego"
@@ -3056,6 +3584,10 @@
   },
   {
    "icon": "/icons/npcs/egemen.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Egemen",
     "pt": "Egemen"
@@ -3068,6 +3600,10 @@
   },
   {
    "icon": "/icons/npcs/nebil.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Nebil",
     "pt": "Nebil"
@@ -3080,6 +3616,10 @@
   },
   {
    "icon": "/icons/npcs/tink.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Tink",
     "pt": "Tink"
@@ -3092,6 +3632,10 @@
   },
   {
    "icon": "/icons/npcs/hagar.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Hagar",
     "pt": "Hagar"
@@ -3104,6 +3648,10 @@
   },
   {
    "icon": "/icons/npcs/kazim.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Kazim",
     "pt": "Kazim"
@@ -3116,6 +3664,10 @@
   },
   {
    "icon": "/icons/npcs/isra.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Isra",
     "pt": "Isra"
@@ -3128,6 +3680,10 @@
   },
   {
    "icon": "/icons/npcs/ismet.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Ismet",
     "pt": "Ismet"
@@ -3140,6 +3696,10 @@
   },
   {
    "icon": "/icons/npcs/yacht.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Yacht",
     "pt": "Yacht"
@@ -3152,6 +3712,10 @@
   },
   {
    "icon": "/icons/npcs/hoder-a331.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Hoder",
     "pt": "Hoder"
@@ -3164,6 +3728,10 @@
   },
   {
    "icon": "/icons/npcs/seymour.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Seymour",
     "pt": "Seymour"
@@ -3176,6 +3744,10 @@
   },
   {
    "icon": "/icons/npcs/gavin.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Gavin",
     "pt": "Gavin"
@@ -3188,6 +3760,10 @@
   },
   {
    "icon": "/icons/npcs/guy.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Guy",
     "pt": "Guy"
@@ -3200,6 +3776,10 @@
   },
   {
    "icon": "/icons/npcs/rasobar.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Rasobar",
     "pt": "Rasobar"
@@ -3212,6 +3792,10 @@
   },
   {
    "icon": "/icons/npcs/sigurd.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Sigurd",
     "pt": "Sigurd"
@@ -3224,6 +3808,10 @@
   },
   {
    "icon": "/icons/npcs/violet.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Violet",
     "pt": "Violet"
@@ -3236,6 +3824,10 @@
   },
   {
    "icon": "/icons/npcs/wolfram.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Wolfram",
     "pt": "Wolfram"
@@ -3248,6 +3840,10 @@
   },
   {
    "icon": "/icons/npcs/jaques.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Jaques",
     "pt": "Jaques"
@@ -3260,6 +3856,10 @@
   },
   {
    "icon": "/icons/npcs/maude.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Maude",
     "pt": "Maude"
@@ -3272,6 +3872,10 @@
   },
   {
    "icon": "/icons/npcs/benedict-a73.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Benedict",
     "pt": "Benedict"
@@ -3284,6 +3888,10 @@
   },
   {
    "icon": "/icons/npcs/roland.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Roland",
     "pt": "Roland"
@@ -3296,6 +3904,10 @@
   },
   {
    "icon": "/icons/npcs/meredith.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Meredith",
     "pt": "Meredith"
@@ -3308,6 +3920,10 @@
   },
   {
    "icon": "/icons/npcs/wilfred.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Wilfred",
     "pt": "Wilfred"
@@ -3320,6 +3936,10 @@
   },
   {
    "icon": "/icons/npcs/mabel.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Mabel",
     "pt": "Mabel"
@@ -3332,6 +3952,10 @@
   },
   {
    "icon": "/icons/npcs/reginald.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Reginald",
     "pt": "Reginald"
@@ -3344,6 +3968,10 @@
   },
   {
    "icon": "/icons/npcs/margery.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Margery",
     "pt": "Margery"
@@ -3356,6 +3984,10 @@
   },
   {
    "icon": "/icons/npcs/zebulon.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Zebulon",
     "pt": "Zebulon"
@@ -3368,6 +4000,10 @@
   },
   {
    "icon": "/icons/npcs/lurleen.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Lurleen",
     "pt": "Lurleen"
@@ -3380,6 +4016,10 @@
   },
   {
    "icon": "/icons/npcs/erastus.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Erastus",
     "pt": "Erastus"
@@ -3392,6 +4032,10 @@
   },
   {
    "icon": "/icons/npcs/otis.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Otis",
     "pt": "Otis"
@@ -3404,6 +4048,10 @@
   },
   {
    "icon": "/icons/npcs/hester.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Hester",
     "pt": "Hester"
@@ -3416,6 +4064,10 @@
   },
   {
    "icon": "/icons/npcs/dewey.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Dewey",
     "pt": "Dewey"
@@ -3428,6 +4080,10 @@
   },
   {
    "icon": "/icons/npcs/opal.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Opal",
     "pt": "Opal"
@@ -3440,6 +4096,10 @@
   },
   {
    "icon": "/icons/npcs/burl.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Burl",
     "pt": "Burl"
@@ -3452,6 +4112,10 @@
   },
   {
    "icon": "/icons/npcs/bessie.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Bessie",
     "pt": "Bessie"
@@ -3464,6 +4128,10 @@
   },
   {
    "icon": "/icons/npcs/hobart.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Hobart",
     "pt": "Hobart"
@@ -3476,6 +4144,10 @@
   },
   {
    "icon": "/icons/npcs/jebidiah.png",
+   "iconSize": [
+    64,
+    64
+   ],
    "name": {
     "en": "Jebidiah",
     "pt": "Jebidiah"

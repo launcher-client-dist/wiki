@@ -1,0 +1,52 @@
+---
+/**
+ * A segmented switch that swaps values in place inside a scope (a class switcher, say): every element in the scope
+ * with data-v-<variant> shows that text when the variant is picked (data-v-base by default); one whose text starts
+ * with "−" gets the negative style. Without JavaScript the base values stay.
+ *   <VariantSwitch scope="item-stats" label="Classe" variants={[{ key: "base", label: "Base" }, ...]} />
+ */
+interface Props {
+  scope: string;
+  label: string;
+  variants: { key: string; label: string }[];
+}
+const { scope, label, variants } = Astro.props;
+---
+<div class="vswitch" role="radiogroup" aria-label={label} data-vswitch={scope}>
+  {variants.map((v, i) => (
+    <button type="button" role="radio" aria-checked={i === 0 ? "true" : "false"} tabindex={i === 0 ? 0 : -1} data-v={v.key}>{v.label}</button>
+  ))}
+</div>
+<script>
+  for (const sw of document.querySelectorAll<HTMLElement>("[data-vswitch]")) {
+    const scope = document.getElementById(sw.dataset.vswitch!);
+    const buttons = [...sw.querySelectorAll<HTMLButtonElement>("[data-v]")];
+    const pick = (b: HTMLButtonElement, focus = false) => {
+      const v = b.dataset.v!;
+      for (const x of buttons) { const on = x === b; x.setAttribute("aria-checked", String(on)); x.tabIndex = on ? 0 : -1; }
+      for (const el of scope?.querySelectorAll<HTMLElement>("[data-v-base]") ?? []) {
+        const text = el.getAttribute(`data-v-${v}`) ?? el.getAttribute("data-v-base") ?? "";
+        el.textContent = text;
+        el.classList.toggle("neg", text.startsWith("−"));
+        el.classList.toggle("changed", text !== el.getAttribute("data-v-base"));
+      }
+      if (focus) b.focus();
+    };
+    buttons.forEach((b, i) => {
+      b.addEventListener("click", () => pick(b));
+      b.addEventListener("keydown", (e) => {
+        const d = e.key === "ArrowRight" || e.key === "ArrowDown" ? 1 : e.key === "ArrowLeft" || e.key === "ArrowUp" ? -1 : 0;
+        if (!d) return;
+        e.preventDefault();
+        pick(buttons[(i + d + buttons.length) % buttons.length]!, true);
+      });
+    });
+  }
+</script>
+<style>
+  .vswitch { display: flex; flex-wrap: wrap; gap: 4px; padding: 4px; border: var(--bw) solid var(--hard); border-radius: var(--r-m); background: var(--surface-2); }
+  button { flex: 1 1 auto; height: 32px; padding: 0 10px; border: 0; border-radius: var(--r-s); background: none; color: var(--text-muted);
+    font: 700 var(--fs-sm) / 1 var(--font-body); cursor: pointer; white-space: nowrap; }
+  button:hover { color: var(--text); background: var(--hover-strong); }
+  button[aria-checked="true"] { background: var(--sun); color: var(--on-sun); box-shadow: 0 2px 0 var(--hard); }
+</style>

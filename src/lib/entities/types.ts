@@ -5,7 +5,7 @@
 import type { Lang, Localized } from "../i18n.ts";
 import type { TierKey } from "./tiers.ts";
 
-export const ENTITY_KINDS = ["item", "monster", "npc", "place", "spell", "trait", "quest", "guide"] as const;
+export const ENTITY_KINDS = ["item", "monster", "npc", "place", "spell", "trait", "quest", "guide", "build", "class"] as const;
 export type EntityKind = (typeof ENTITY_KINDS)[number];
 
 /** "kind:id", e.g. "item:arbalest". The id is lowercase, digits and dashes. */
@@ -28,7 +28,8 @@ export interface EntityFact {
  * A relation from this entity to another. Only one side is written in the data; the other side ("dropped by",
  * "sold by", "used in") comes from the reverse index (reverse.ts).
  */
-export const RELATION_TYPES = ["drops", "sells", "buys", "rewards", "madeFrom", "teaches", "opens", "related"] as const;
+/** mentions: a content page (guide, build, class...) links to the entity: its EntityLinks and frontmatter. */
+export const RELATION_TYPES = ["drops", "sells", "buys", "rewards", "requires", "madeFrom", "teaches", "conjures", "opens", "mentions", "related"] as const;
 export type RelationType = (typeof RELATION_TYPES)[number];
 
 export interface Relation {

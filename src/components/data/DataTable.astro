@@ -8,6 +8,11 @@
  *       <DataCell col="name" primary>...</DataCell> ...
  *     </DataRow>
  *   </DataTable>
+ *
+ * Optional:
+ * - `ranges`: a "stat between min and max" filter over any sort key (the rows' data-s_<key>);
+ * - `variants`: a switch (a class, say) that swaps values in place: a row's data-s_<key>__<variant> becomes its sort
+ *   value, and any element with data-v-<variant> inside the table shows that text (data-v-base the default).
  */
 import { ui, fill } from "../../i18n/index.ts";
 import type { Lang } from "../../lib/i18n.ts";
@@ -21,6 +26,10 @@ export interface Column {
   sortable?: boolean;
   /** Left out of the phone cards (the column stays in the table and grid). */
   hideOnPhone?: boolean;
+}
+export interface Variant {
+  key: string;
+  label: string;
 }
 export interface FilterGroup {
   key: string;
@@ -36,8 +45,12 @@ interface Props {
   defaultView?: "table" | "grid";
   sort?: { key: string; dir: "asc" | "desc" };
   total: number;
+  ranges?: { key: string; label: string }[];
+  rangeLabel?: string;
+  variants?: Variant[];
+  variantLabel?: string;
 }
-const { id, lang, caption, columns, filters = [], defaultView = "table", sort, total } = Astro.props;
+const { id, lang, caption, columns, filters = [], defaultView = "table", sort, total, ranges = [], rangeLabel = "", variants = [], variantLabel = "" } = Astro.props;
 const t = ui(lang);
 const strings = { count: t.tableCount, countAll: t.tableCountAll };
 ---
@@ -61,6 +74,30 @@ const strings = { count: t.tableCount, countAll: t.tableCountAll };
           <div class="chips">{g.options.map((o) => <Chip filter={g.key} value={o.value} count={o.count}>{o.label}</Chip>)}</div>
         </div>
       ))}
+    </div>
+  )}
+  {(ranges.length > 0 || variants.length > 0) && (
+    <div class="filters extra">
+      {variants.length > 0 && (
+        <div class="fgroup" role="group" aria-label={variantLabel}>
+          <span class="flabel">{variantLabel}</span>
+          <div class="chips seg">{variants.map((v, i) => <button type="button" class="chip" data-variant={v.key} aria-pressed={i === 0 ? "true" : "false"}>{v.label}</button>)}</div>
+        </div>
+      )}
+      {ranges.length > 0 && (
+        <div class="fgroup">
+          <span class="flabel">{rangeLabel}</span>
+          <div class="range">
+            <label><span class="sr-only">{rangeLabel}</span><select data-range-key>
+              <option value="">—</option>
+              {ranges.map((r) => <option value={r.key}>{r.label}</option>)}
+            </select></label>
+            <label><span class="sr-only">min</span><input type="number" data-range-min placeholder="min" inputmode="numeric" /></label>
+            <span aria-hidden="true">–</span>
+            <label><span class="sr-only">max</span><input type="number" data-range-max placeholder="max" inputmode="numeric" /></label>
+          </div>
+        </div>
+      )}
     </div>
   )}
   <div class="status">
@@ -108,7 +145,12 @@ const strings = { count: t.tableCount, countAll: t.tableCountAll };
     let dir = root.dataset.sortDir === "asc" ? 1 : -1;
 
     const value = (r: HTMLElement, k: string) => r.dataset[`s_${k}`] ?? "";
+    const rangeKey = root.querySelector<HTMLSelectElement>("[data-range-key]");
+    const rangeMin = root.querySelector<HTMLInputElement>("[data-range-min]");
+    const rangeMax = root.querySelector<HTMLInputElement>("[data-range-max]");
+    let variant = root.querySelector<HTMLElement>("[data-variant][aria-pressed='true']")?.dataset.variant ?? "base";
     const chips = () => [...root.querySelectorAll<HTMLButtonElement>(".chip[data-filter]")];
+    void variant;
 
     function apply() {
       const text = fold(q.value.trim());
@@ -124,8 +166,15 @@ const strings = { count: t.tableCount, countAll: t.tableCountAll };
         tbody.append(...rows);
       }
       let shown = 0;
+      const rk = rangeKey?.value ?? "";
+      const lo = rangeMin?.value === "" || !rangeMin ? -Infinity : Number(rangeMin.value);
+      const hi = rangeMax?.value === "" || !rangeMax ? Infinity : Number(rangeMax.value);
       for (const r of rows) {
         let ok = !text || (r.dataset.search ?? "").includes(text);
+        if (rk && (lo !== -Infinity || hi !== Infinity)) {
+          const v = Number(value(r, rk) || 0);
+          if (!(v >= lo && v <= hi)) ok = false;
+        }
         for (const [key, values] of active) {
           const have = (r.dataset[`f_${key}`] ?? "").split("|");
           if (!values.some((v) => have.includes(v))) ok = false;
@@ -136,7 +185,7 @@ const strings = { count: t.tableCount, countAll: t.tableCountAll };
       count.textContent = shown === rows.length ? S.countAll.replace("{total}", String(rows.length)) : S.count.replace("{n}", String(shown)).replace("{total}", String(rows.length));
       empty.hidden = shown > 0;
       frame.hidden = shown === 0;
-      clearTop.hidden = !text && active.size === 0;
+      clearTop.hidden = !text && active.size === 0 && !(rk && (rangeMin?.value || rangeMax?.value));
       for (const th of root.querySelectorAll<HTMLElement>("th[data-col]")) {
         const on = th.dataset.col === sortKey;
         if (on) th.setAttribute("aria-sort", dir > 0 ? "ascending" : "descending"); else th.removeAttribute("aria-sort");
@@ -146,6 +195,24 @@ const strings = { count: t.tableCount, countAll: t.tableCountAll };
     }
 
     q.addEventListener("input", apply);
+    for (const el of [rangeKey, rangeMin, rangeMax]) el?.addEventListener("input", apply);
+    function setVariant(v: string) {
+      variant = v;
+      for (const r of rows) {
+        for (const [k, val] of Object.entries(r.dataset)) {
+          const m = k.match(/^s_(\w+?)__base$/);
+          if (m) r.dataset[`s_${m[1]}`] = r.dataset[`s_${m[1]}__${v}`] ?? val;
+        }
+      }
+      for (const el of root.querySelectorAll<HTMLElement>("[data-v-base]")) {
+        const text = el.getAttribute(`data-v-${v}`) ?? el.getAttribute("data-v-base") ?? "";
+        el.textContent = text;
+        el.classList.toggle("neg", text.startsWith("−"));
+      }
+      for (const b of root.querySelectorAll<HTMLElement>("[data-variant]")) b.setAttribute("aria-pressed", String(b.dataset.variant === v));
+      apply();
+    }
+    for (const b of root.querySelectorAll<HTMLButtonElement>("[data-variant]")) b.addEventListener("click", () => setVariant(b.dataset.variant!));
     for (const c of chips()) c.addEventListener("click", () => { c.setAttribute("aria-pressed", String(c.getAttribute("aria-pressed") !== "true")); apply(); });
     for (const b of root.querySelectorAll<HTMLButtonElement>("[data-sort]")) {
       b.addEventListener("click", () => {
@@ -157,7 +224,14 @@ const strings = { count: t.tableCount, countAll: t.tableCountAll };
       });
     }
     for (const b of root.querySelectorAll<HTMLButtonElement>("[data-clear]")) {
-      b.addEventListener("click", () => { q.value = ""; for (const c of chips()) c.setAttribute("aria-pressed", "false"); apply(); q.focus(); });
+      b.addEventListener("click", () => {
+        q.value = "";
+        for (const c of chips()) c.setAttribute("aria-pressed", "false");
+        if (rangeMin) rangeMin.value = "";
+        if (rangeMax) rangeMax.value = "";
+        apply();
+        q.focus();
+      });
     }
     for (const b of root.querySelectorAll<HTMLButtonElement>("[data-view-btn]")) {
       b.addEventListener("click", () => {
@@ -187,6 +261,16 @@ const strings = { count: t.tableCount, countAll: t.tableCountAll };
   .chips { display: flex; gap: 6px; flex-wrap: wrap; padding-bottom: 4px; }
   @media (max-width: 719px) { .chips { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; padding: 2px 2px 6px; } }
 
+  .range { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+  .range select, .range input { height: 36px; border-radius: var(--r-m); border: var(--bw) solid var(--border); background: var(--input-bg); color: var(--text);
+    font: 500 var(--fs-sm) / 1 var(--font-body); padding: 0 10px; box-shadow: var(--shadow-1); }
+  .range input { width: 84px; }
+  .range select:focus, .range input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--focus-ring); }
+  .seg .chip { display: inline-flex; align-items: center; height: 32px; padding: 0 12px; border-radius: var(--r-pill); border: var(--bw) solid var(--border);
+    background: var(--surface); color: var(--text); font: 600 var(--fs-sm) / 1 var(--font-body); cursor: pointer; box-shadow: var(--shadow-1); white-space: nowrap; }
+  .seg .chip:hover { background: var(--surface-2); }
+  tbody :global(.neg) { color: var(--danger); }
+  .seg :global(.chip[aria-pressed="true"]) { background: var(--sun); color: var(--on-sun); border-color: var(--hard); }
   .status { display: flex; justify-content: space-between; align-items: center; gap: 10px; min-height: 30px; margin-bottom: 8px; font-size: var(--fs-sm); color: var(--text-muted); }
   .clear, .empty-btn { background: none; border: 0; padding: 0; color: var(--link); font: inherit; font-weight: 600; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
 
