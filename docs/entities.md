@@ -1,7 +1,7 @@
 # Entities and links
 
 Everything the wiki can link to is an **entity**. Each entity has:
-- a **kind**: `item`, `monster`, `npc`, `place`, `spell`, `trait`, `quest` or `guide`;
+- a **kind**: `item`, `monster`, `npc`, `place`, `spell`, `trait`, `quest`, `guide`, `build` or `class`;
 - an **id**: lowercase letters, digits and dashes;
 - a **ref** joining the two: `item:example-blade`;
 - a name and a URL slug in each language;
@@ -40,6 +40,9 @@ Write a relation once, on one side. The `relations` of the monster below produce
 | madeFrom | Usado em |
 | teaches | Ensinado por |
 | opens | Aberto por |
+| requires | Pedido por |
+| conjures | Conjurado por |
+| mentions | Citado em |
 | related | Relacionado |
 
 The registry exposes the same data with `registry.reverse(ref)`, and `groupReverse()` groups it.
@@ -61,9 +64,10 @@ Drop rarity is always a **tier**: sempre, comum, incomum, raro or muito-raro. A 
 | `registry.reverse(ref)` | the other side of every relation pointing here |
 | `parseRef(ref)`, `isEntityRef(x)` | splits and checks refs |
 
-`src/lib/site-registry.ts` fills the registry for the site from the content collections. Today that is guides only;
-each page type adds its own data collection there. `npm test` runs the registry's tests against the made-up entities
-in `tests/fixtures/`.
+`src/lib/site-registry.ts` fills the registry for the site: the exported game data (`src/data/items.json` and the
+monster, NPC, quest and spell stubs in `src/data/entities.json`) and every content collection in `CONTENT_KINDS`. An
+entity with `noPage: true` never gets a URL, even when its kind has shipped. `npm test` runs the registry's tests
+against the made-up entities in `tests/fixtures/`.
 
 ## Adding a page type (for example, items)
 
