@@ -40,7 +40,7 @@ const shipped = (k: EntityKind) => SHIPPED_KINDS.includes(k);
       </nav>
       {/* phones: one button with the current language, opening the list of all of them (room for any number) */}
       <details class="lang-pick">
-        <summary aria-label={t.langSwitchLabel}><span>{t.langShort}</span><Icon name="chevron" size={14} /></summary>
+        <summary aria-label={`${t.langShort}, ${t.langSwitchLabel}`}><span>{t.langShort}</span><Icon name="chevron" size={14} /></summary>
         <ul>
           {LANGS.map((l) => (
             <li><a href={alternates[l]} hreflang={HREFLANG[l]} lang={HREFLANG[l]} aria-current={l === lang ? "true" : undefined}><b>{ui(l).langShort}</b>{ui(l).langName}</a></li>
