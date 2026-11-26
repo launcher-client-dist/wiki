@@ -62,6 +62,7 @@
   }
 
   document.addEventListener("pointerover", (e) => {
+    if (!card.isConnected) return;
     if (!finePointer.matches) return;
     const el = (e.target as Element).closest<HTMLElement>("[data-hc]");
     if (el && el !== owner) {
@@ -70,6 +71,7 @@
     } else if (el === owner) clearTimeout(hideTimer);
   });
   document.addEventListener("pointerout", (e) => {
+    if (!card.isConnected) return;
     const el = (e.target as Element).closest<HTMLElement>("[data-hc]");
     if (!el) return;
     clearTimeout(showTimer);
@@ -78,11 +80,13 @@
   card.addEventListener("pointerover", () => clearTimeout(hideTimer));
   card.addEventListener("pointerleave", () => { if (!pinned) hide(); });
   document.addEventListener("focusin", (e) => {
+    if (!card.isConnected) return;
     const el = (e.target as Element).closest<HTMLElement>("[data-hc]");
     if (el) show(el);
     else if (owner && !card.contains(e.target as Node)) hide(true);
   });
   document.addEventListener("click", (e) => {
+    if (!card.isConnected) return;
     const el = (e.target as Element).closest<HTMLElement>("[data-hc]");
     if (el && el.tagName === "BUTTON") {
       if (owner === el && pinned) hide(true);
@@ -92,13 +96,14 @@
     if (owner && !card.contains(e.target as Node)) hide(true);
   });
   document.addEventListener("keydown", (e) => {
+    if (!card.isConnected) return;
     if (e.key === "Escape" && owner) {
       const el = owner;
       hide(true);
       el.focus();
     }
   });
-  window.addEventListener("scroll", () => { if (owner && !pinned) hide(true); else if (owner) place(owner); }, { passive: true });
+  window.addEventListener("scroll", () => { if (!card.isConnected) return; if (owner && !pinned) hide(true); else if (owner) place(owner); }, { passive: true });
   window.addEventListener("resize", () => owner && place(owner));
 </script>
 <style is:global>

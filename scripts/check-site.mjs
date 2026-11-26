@@ -141,6 +141,8 @@ if (!existsSync(join(DIST, "og", "default.png"))) fail("og/default.png", "missin
 if (readFileSync(join(DIST, "CNAME"), "utf8").trim() !== "wiki.opengea.tech") fail("CNAME", "not wiki.opengea.tech");
 if (!pages.has("/404.html")) fail("404.html", "missing");
 else if (!pages.get("/404.html").noindex) fail("404.html", "should be noindex");
+else if (!pages.get("/404.html").html.includes('fetch("/en/404/")')) fail("404.html", "lost its swap to the English 404");
+if (!pages.get("/en/404/")?.noindex) fail("/en/404/", "missing or not noindex");
 
 console.log(`checked ${pages.size} pages (${indexable.length} indexable), sitemap, robots.txt, CNAME`);
 if (problems.length) {

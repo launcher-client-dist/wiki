@@ -85,7 +85,7 @@ const shipped = (k: EntityKind) => SHIPPED_KINDS.includes(k);
     menuBtn.setAttribute("aria-label", (open ? menuBtn.dataset.closeLabel : menuBtn.dataset.openLabel) ?? "");
   };
   menuBtn?.addEventListener("click", () => setMenu(menu?.hidden === true));
-  document.addEventListener("keydown", (e) => { if (e.key === "Escape" && menu && !menu.hidden) { setMenu(false); menuBtn?.focus(); } });
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape" && menu?.isConnected && !menu.hidden) { setMenu(false); menuBtn?.focus(); } });
   matchMedia("(min-width: 1100px)").addEventListener("change", (e) => e.matches && setMenu(false));
 </script>
 <style>

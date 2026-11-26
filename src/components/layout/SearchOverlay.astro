@@ -186,7 +186,9 @@ const strings = {
       if (link) { e.preventDefault(); link.click(); }
     }
   });
+  // (document-level listeners check their element is still in the page: the 404 swaps its whole document)
   document.addEventListener("keydown", (e) => {
+    if (!dialog.isConnected) return;
     const typing = e.target instanceof HTMLElement && (e.target.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName));
     if ((e.key === "k" || e.key === "K") && (e.ctrlKey || e.metaKey)) {
       e.preventDefault();
@@ -197,6 +199,7 @@ const strings = {
     }
   });
   document.addEventListener("click", (e) => {
+    if (!dialog.isConnected) return;
     const trigger = (e.target as Element).closest("[data-open-search]");
     if (trigger) { e.preventDefault(); open(trigger.getAttribute("data-q") ?? ""); }
   });
@@ -216,7 +219,7 @@ const strings = {
   .close { background: none; border: 0; padding: 4px; cursor: pointer; }
   .results { max-height: min(60vh, 520px); overflow: auto; padding: 8px; overscroll-behavior: contain; }
   .list { list-style: none; margin: 0; padding: 0; }
-  .group { padding: 10px 10px 6px; margin: 0; font: 800 0.6875rem / 1 var(--font-body); letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-faint); }
+  .group, .list :global(.group) { padding: 10px 10px 6px; margin: 0; font: 800 0.6875rem / 1 var(--font-body); letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-faint); }
   .list :global([role="option"] > a), .row { display: flex; align-items: center; gap: 12px; padding: 9px 10px; border-radius: var(--r-m); color: var(--text); text-decoration: none; }
   .list :global([role="option"][aria-selected="true"] > a), .list :global([role="option"] > a:hover) { background: var(--hover-strong); }
   .list :global(.title) { font-weight: 700; color: var(--heading); white-space: nowrap; }

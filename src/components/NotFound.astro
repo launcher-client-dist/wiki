@@ -1,0 +1,42 @@
+---
+/** The 404 page's content in one language (pages: src/pages/404.astro for pt, src/pages/en/404.astro for en). */
+import PageShell from "./layout/PageShell.astro";
+import PixelArt from "./ui/PixelArt.astro";
+import Icon from "./ui/Icon.astro";
+import { ui } from "../i18n/index.ts";
+import type { Lang } from "../lib/i18n.ts";
+import { homeAlternates, homePath } from "../lib/routes.ts";
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = ui(lang);
+---
+<PageShell lang={lang} title={`404 · ${t.notFoundTitle}`} description={t.notFoundText} alternates={homeAlternates()} noindex>
+  <slot name="head" slot="head" />
+  <div class="container nf">
+    <div class="art" aria-hidden="true">
+      <span class="digit">4</span><PixelArt kind="monster" size={112} /><span class="digit">4</span>
+    </div>
+    <h1>{t.notFoundTitle}</h1>
+    <p>{t.notFoundText}</p>
+    <div class="actions">
+      <a class="btn primary" href={homePath(lang)}><Icon name="arrowRight" /> {t.notFoundHome}</a>
+      <button class="btn" type="button" data-open-search><Icon name="search" /> {t.searchOpen}</button>
+    </div>
+  </div>
+</PageShell>
+<style>
+  .nf { text-align: center; padding-top: var(--s-8); padding-bottom: var(--s-6); }
+  .art { display: flex; align-items: center; justify-content: center; gap: var(--s-4); margin-bottom: var(--s-5); }
+  .digit { font: 700 clamp(5rem, 14vw, 9rem) / 1 var(--font-display); color: var(--heading); text-shadow: 0 6px 0 var(--hard); }
+  .art :global(.pixel-art) { filter: drop-shadow(0 6px 0 var(--hard)); animation: bob 2.4s ease-in-out infinite; }
+  @keyframes bob { 50% { transform: translateY(-8px); } }
+  @media (prefers-reduced-motion: reduce) { .art :global(.pixel-art) { animation: none; } }
+  p { max-width: 34rem; margin: var(--s-3) auto var(--s-5); color: var(--text-muted); font-size: var(--fs-lg); }
+  .actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; height: 46px; padding: 0 18px; border-radius: var(--r-m); font: 700 var(--fs-md) / 1 var(--font-body);
+    text-decoration: none; cursor: pointer; border: var(--bw) solid var(--hard); box-shadow: var(--shadow-1); background: var(--surface); color: var(--text); }
+  .btn.primary { background: var(--accent); color: var(--on-accent); }
+  .btn:active { transform: translateY(2px); box-shadow: 0 1px 0 var(--hard); }
+</style>

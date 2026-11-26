@@ -3,7 +3,7 @@
  * Every page's frame: <head> (title, description, canonical, hreflang, Open Graph, Twitter, JSON-LD, fonts, theme),
  * the skip link, Header, <main>, Footer, the search dialog and the hover card.
  *
- * `searchable` puts the page in the search index (data-pagefind-body on <main>), under its kind. Pages left out:
+ * Slot "head": extra <head> content (the 404's language swap). `searchable` puts the page in the search index (data-pagefind-body on <main>), under its kind. Pages left out:
  * the 404, the language picker, the component gallery.
  */
 import "../../styles/global.css";
@@ -57,6 +57,7 @@ const ld = [...jsonLd, ...(breadcrumbLd ? [breadcrumbLd] : [])];
       d.dataset.theme = s === "light" || s === "dark" ? s : matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
     })();
   </script>
+  <slot name="head" />
   <title>{fullTitle}</title>
   <meta name="description" content={description} />
   {!noindex && <link rel="canonical" href={canonical} />}

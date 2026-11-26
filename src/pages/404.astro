@@ -1,54 +1,28 @@
 ---
 /**
- * The one 404 page GitHub Pages serves for any missing path. It is written in both languages: the language of the
- * missing path (/en/... or /pt/...) is shown, Portuguese by default. Not indexed, not in the sitemap or search.
+ * The one 404 page GitHub Pages serves, for any missing path (with a real 404 status). It is the Portuguese one;
+ * on a missing /en/... path it swaps itself for the English 404 (/en/404/) in place, keeping the URL and the status.
+ * Not indexed, not in the sitemap or search.
  */
-import PageShell from "../components/layout/PageShell.astro";
-import PixelArt from "../components/ui/PixelArt.astro";
-import Icon from "../components/ui/Icon.astro";
-import { ui } from "../i18n/index.ts";
-import { LANGS, HREFLANG } from "../lib/i18n.ts";
-import { homeAlternates, homePath } from "../lib/routes.ts";
-const t = ui("pt");
+import NotFound from "../components/NotFound.astro";
 ---
-<PageShell lang="pt" title={`404 · ${t.notFoundTitle}`} description={t.notFoundText} alternates={homeAlternates()} noindex mainClass="nf-main">
-  <script is:inline>
-    if (/^\/en(\/|$)/.test(location.pathname)) document.documentElement.classList.add("nf-en");
+<NotFound lang="pt">
+  <script is:inline slot="head">
+    (function () {
+      if (!/^\/en(\/|$)/.test(location.pathname)) return;
+      var root = document.documentElement;
+      root.style.visibility = "hidden";
+      fetch("/en/404/").then(function (r) { if (!r.ok) throw r; return r.text(); }).then(function (html) {
+        var next = new DOMParser().parseFromString(html, "text/html").documentElement;
+        document.replaceChild(document.importNode(next, true), document.documentElement);
+        // scripts moved in this way don't run: re-create them so they do
+        document.querySelectorAll("script:not([type='application/ld+json'])").forEach(function (old) {
+          var s = document.createElement("script");
+          for (var i = 0; i < old.attributes.length; i++) s.setAttribute(old.attributes[i].name, old.attributes[i].value);
+          s.textContent = old.textContent;
+          old.replaceWith(s);
+        });
+      }).catch(function () { root.style.visibility = ""; });
+    })();
   </script>
-  <div class="container nf">
-    <div class="art" aria-hidden="true">
-      <span class="digit">4</span><PixelArt kind="monster" size={112} /><span class="digit">4</span>
-    </div>
-    {LANGS.map((l) => {
-      const s = ui(l);
-      return (
-        <section class:list={["msg", `msg-${l}`]} lang={HREFLANG[l]}>
-          {l === "pt" ? <h1>{s.notFoundTitle}</h1> : <h2 class="h1-like">{s.notFoundTitle}</h2>}
-          <p>{s.notFoundText}</p>
-          <div class="actions">
-            <a class="btn primary" href={homePath(l)}><Icon name="arrowRight" /> {s.notFoundHome}</a>
-            <button class="btn" type="button" data-open-search><Icon name="search" /> {s.searchOpen}</button>
-          </div>
-        </section>
-      );
-    })}
-  </div>
-</PageShell>
-<style>
-  .nf { text-align: center; padding-top: var(--s-8); padding-bottom: var(--s-6); }
-  .art { display: flex; align-items: center; justify-content: center; gap: var(--s-4); margin-bottom: var(--s-5); }
-  .digit { font: 700 clamp(5rem, 14vw, 9rem) / 1 var(--font-display); color: var(--heading); text-shadow: 0 6px 0 var(--hard); }
-  .art :global(.pixel-art) { filter: drop-shadow(0 6px 0 var(--hard)); animation: bob 2.4s ease-in-out infinite; }
-  @keyframes bob { 50% { transform: translateY(-8px); } }
-  @media (prefers-reduced-motion: reduce) { .art :global(.pixel-art) { animation: none; } }
-  .msg p { max-width: 34rem; margin: var(--s-3) auto var(--s-5); color: var(--text-muted); font-size: var(--fs-lg); }
-  .h1-like { font-size: var(--fs-h1); }
-  .msg-en { display: none; }
-  :global(html.nf-en) .msg-en { display: block; }
-  :global(html.nf-en) .msg-pt { display: none; }
-  .actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-  .btn { display: inline-flex; align-items: center; gap: 8px; height: 46px; padding: 0 18px; border-radius: var(--r-m); font: 700 var(--fs-md) / 1 var(--font-body);
-    text-decoration: none; cursor: pointer; border: var(--bw) solid var(--hard); box-shadow: var(--shadow-1); background: var(--surface); color: var(--text); }
-  .btn.primary { background: var(--accent); color: var(--on-accent); }
-  .btn:active { transform: translateY(2px); box-shadow: 0 1px 0 var(--hard); }
-</style>
+</NotFound>
