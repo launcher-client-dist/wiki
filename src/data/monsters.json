@@ -1102,6 +1102,19 @@
      }
     },
     {
+     "count": 6,
+     "link": "https://map.opengea.tech/#2.AgDjA2wGAQABAQEAAJQiAmNzSsxLySwBAA",
+     "place": {
+      "near": null,
+      "town": {
+       "en": "Plains Cathedral",
+       "es": "Catedral de la Llanura",
+       "pt": "Catedral da Planície"
+      },
+      "underground": false
+     }
+    },
+    {
      "count": 5,
      "link": "https://map.opengea.tech/#2.AgDbAq8DBgEHAQEBAAAUhIhjc0rMS8ksAQA",
      "place": {
@@ -1276,36 +1289,6 @@
        "en": "Nordha",
        "es": "Nordha",
        "pt": "Nordha"
-      },
-      "underground": false
-     }
-    },
-    {
-     "count": 3,
-     "link": "https://map.opengea.tech/#2.AgDjA2wGAQABAQEAAJQiAmNzSsxLySwBAA",
-     "place": {
-      "near": null,
-      "town": {
-       "en": "Plains Cathedral",
-       "es": "Catedral de la Llanura",
-       "pt": "Catedral da Planície"
-      },
-      "underground": false
-     }
-    },
-    {
-     "count": 3,
-     "link": "https://map.opengea.tech/#2.AgDFA6IBBgEAAQEBAACUIgJjc0rMS8ksAQA",
-     "place": {
-      "near": {
-       "en": "Basile's Market",
-       "es": "Mercado de Basile",
-       "pt": "Mercado de Basile"
-      },
-      "town": {
-       "en": "Plains Cathedral",
-       "es": "Catedral de la Llanura",
-       "pt": "Catedral da Planície"
       },
       "underground": false
      }
@@ -6886,6 +6869,19 @@
     },
     {
      "count": 3,
+     "link": "https://map.opengea.tech/#2.AgDZA2oGASABAQEAABRQiAjjcS5NSlXwT1Nwyc_PBQA",
+     "place": {
+      "near": null,
+      "town": {
+       "en": "Plains Cathedral",
+       "es": "Catedral de la Llanura",
+       "pt": "Catedral da Planície"
+      },
+      "underground": true
+     }
+    },
+    {
+     "count": 3,
      "link": "https://map.opengea.tech/#2.AgBUjQEGAQABAQEAAJQiAuNxLk1KVfBPU3DJz88FAA",
      "place": {
       "near": {
@@ -6956,23 +6952,6 @@
        "en": "West Garden",
        "es": "Jardín Oeste",
        "pt": "Jardim Oeste"
-      },
-      "town": {
-       "en": "Plains Cathedral",
-       "es": "Catedral de la Llanura",
-       "pt": "Catedral da Planície"
-      },
-      "underground": true
-     }
-    },
-    {
-     "count": 2,
-     "link": "https://map.opengea.tech/#2.AgDLA6IBBgEgAQEBAAAUUIgI43EuTUpV8E9TcMnPzwUA",
-     "place": {
-      "near": {
-       "en": "Basile's Market",
-       "es": "Mercado de Basile",
-       "pt": "Mercado de Basile"
       },
       "town": {
        "en": "Plains Cathedral",
@@ -7080,19 +7059,6 @@
        "en": "Nordha",
        "es": "Nordha",
        "pt": "Nordha"
-      },
-      "underground": true
-     }
-    },
-    {
-     "count": 1,
-     "link": "https://map.opengea.tech/#2.AgDZA2oGASABAQEAABRQiAjjcS5NSlXwT1Nwyc_PBQA",
-     "place": {
-      "near": null,
-      "town": {
-       "en": "Plains Cathedral",
-       "es": "Catedral de la Llanura",
-       "pt": "Catedral da Planície"
       },
       "underground": true
      }

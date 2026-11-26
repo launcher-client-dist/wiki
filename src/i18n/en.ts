@@ -290,6 +290,8 @@ export const en: UiStrings = {
     statesIntro: "This item changes when you equip it. Its stats only count while it is equipped.",
     stored: "Stored",
     equipped: "Equipped",
+    statesIntroEffect: "This item changes when you equip it. Its effect only counts while it is equipped.",
+    storedNoEffect: "No effect while stored.",
     storedNoStats: "No stats while stored.",
     lasts: "lasts {t}",
     lastsTip: "The clock starts when you equip it.",

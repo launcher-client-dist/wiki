@@ -288,6 +288,8 @@ export const pt = {
     statesIntro: "Este item muda quando você o equipa. Os atributos valem só no estado equipado.",
     stored: "Guardado",
     equipped: "Equipado",
+    statesIntroEffect: "Este item muda quando você o equipa. O efeito vale só no estado equipado.",
+    storedNoEffect: "Sem efeito enquanto guardado.",
     storedNoStats: "Sem atributos enquanto guardado.",
     lasts: "dura {t}",
     lastsTip: "O relógio começa quando você equipa.",

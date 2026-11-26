@@ -42,7 +42,7 @@ const pick = (fn) => [...data.items].filter(fn).sort((a, b) => richness(b) - ric
 const KINDS = {
   weapon: (i) => i.category === "weapon", armour: (i) => i.category === "armour", jewel: (i) => i.category === "jewellery",
   food: (i) => i.category === "food", potion: (i) => i.category === "potion", material: (i) => i.category === "material",
-  rune: (i) => i.category === "rune" && i.rune?.fits?.length > 0, states: (i) => !!i.states, spellbook: (i) => i.category === "spellbook" && !!i.group,
+  rune: (i) => i.category === "rune" && i.rune?.fits?.length > 0, states: (i) => !!i.states, "states-effect": (i) => !!i.states && i.versions.every((v) => !Object.values(v.stats).some(Boolean)), spellbook: (i) => i.category === "spellbook" && !!i.group,
   chess: (i) => i.group === "chess-piece", container: (i) => i.category === "container",
   leftover: (i) => i.sources.leftover?.length > 0,
 };

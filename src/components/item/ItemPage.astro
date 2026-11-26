@@ -41,6 +41,9 @@ const ref = `item:${item.id}`;
 /** An item that changes when equipped leads with its equipped state (its stats live there: the page says so). */
 const states = item.states ? { stored: item.versions.find((x) => x.type === item.states!.stored)!, equipped: item.versions.find((x) => x.type === item.states!.equipped)! } : null;
 const v = states?.equipped ?? primaryVersion(item);
+/** A pair whose equipped state has no stats (the rings, the amulet): its effect is in its text, so the page says "effect". */
+const statesIntro = states && Object.values(states.equipped.stats).some(Boolean) ? ti.statesIntro : ti.statesIntroEffect;
+const sameText = !!states && states.stored.text.en === states.equipped.text.en;
 const duration = (s: number) => (s >= 120 && s % 60 === 0 ? fill(ti.minutes, { n: s / 60 }) : `${s} s`);
 const vIcon = (x: { icon?: string; iconSize?: [number, number] }) => (x.icon && x.iconSize ? { src: x.icon, width: x.iconSize[0], height: x.iconSize[1], pixel: true } : null);
 /** The title is the in-game name (English today); the page language's translation is the subtitle (src/lib/names.ts). */
@@ -119,12 +122,12 @@ const jsonLd = [{
         {states && (
           <section class="block" aria-labelledby="h-states" data-section="states">
             <h2 id="h-states">{ti.statesTitle}</h2>
-            <p class="muted">{ti.statesIntro}</p>
+            <p class="muted">{statesIntro}</p>
             <div class="states">
               <div class="state">
                 <p class="slabel">{ti.stored}</p>
-                <div class="shead"><IconSlot icon={vIcon(states.stored)} kind="item" size={56} />{states.stored.text[lang] && <p class="vt" lang={fbLang(states.stored.text)}>{states.stored.text[lang]}</p>}</div>
-                {Object.values(states.stored.stats).some(Boolean) ? <div class="vs"><StatChips stats={states.stored.stats} lang={lang} /></div> : <p class="nostat"><GameIcon name="minus" scale={1} />{ti.storedNoStats}</p>}
+                <div class="shead"><IconSlot icon={vIcon(states.stored)} kind="item" size={56} />{states.stored.text[lang] && !sameText && <p class="vt" lang={fbLang(states.stored.text)}>{states.stored.text[lang]}</p>}</div>
+                {Object.values(states.stored.stats).some(Boolean) ? <div class="vs"><StatChips stats={states.stored.stats} lang={lang} /></div> : <p class="nostat"><GameIcon name="minus" scale={1} />{statesIntro === ti.statesIntro ? ti.storedNoStats : ti.storedNoEffect}</p>}
               </div>
               <span class="sarrow" aria-hidden="true">➜</span>
               <div class="state on">
@@ -532,7 +535,7 @@ const jsonLd = [{
             <li><span class="sicon"><GameIcon name="gold" fit={28} /></span><span>{ti.sellValue}</span><b>{item.value.npcPays ? <Value kind="gold" n={item.value.npcPays} lang={lang} size="big" noIcon /> : <span class="nil">—</span>}</b></li>
             {goldPerOz(item) && <li><span class="sicon"><GameIcon name="gold" fit={28} /></span><span>{ti.goldPerOz}</span><b><Value kind="goldoz" n={goldPerOz(item)!} lang={lang} size="big" noIcon /></b></li>}
           </ul>
-          {states && <p slot="footer">{ti.statesIntro}</p>}
+          {states && <p slot="footer">{statesIntro}</p>}
           {statKeys.some((k) => statRank(items, item, k)) && <p slot="footer">{fill(ti.rankNote, { group: item.subtype[lang] })}</p>}
           {statKeys.some((k) => (v.stats[k] ?? 0) < 0) && <p slot="footer">{ti.negativeNote}</p>}
           {hasClasses && <p slot="footer">{ti.classNote}</p>}

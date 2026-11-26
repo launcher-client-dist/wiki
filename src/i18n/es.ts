@@ -294,6 +294,8 @@ export const es: UiStrings = {
     statesIntro: "Este objeto cambia cuando lo equipas. Sus atributos solo cuentan mientras está equipado.",
     stored: "Guardado",
     equipped: "Equipado",
+    statesIntroEffect: "Este objeto cambia cuando lo equipas. Su efecto solo cuenta mientras está equipado.",
+    storedNoEffect: "Sin efecto mientras está guardado.",
     storedNoStats: "Sin atributos mientras está guardado.",
     lasts: "dura {t}",
     lastsTip: "El reloj empieza cuando lo equipas.",
