@@ -4,7 +4,7 @@
  * entities and relations are made here, so tests can build them without Astro.
  */
 import { LANGS, type Lang, type Localized } from "../i18n.ts";
-import { ui } from "../../i18n/index.ts";
+import { ui, fill } from "../../i18n/index.ts";
 
 /** Which languages of a text are the English, standing in where the game has no translation (the export marks them). */
 export interface Fallback {
@@ -117,6 +117,23 @@ export interface ItemData {
   };
   /** `leavesEmpty`: what drinking it leaves in the bag (item ids). */
   uses: { recipes: Recipe[]; questsRequire: { quest: EntityRef }[]; leavesEmpty: { item: string }[] };
+  /** The group (a split name: a spellbook colour, the chess pieces) whose list page names this item. */
+  group?: string;
+  /** An item that changes when equipped: its two numbers (the page shows both states; the stats are the equipped one's). */
+  states?: { stored: number; equipped: number };
+}
+
+/**
+ * A name the game gives to several different items (the five spellbook colours, Chess Piece): one page per item, and
+ * at the name's old address the list of them.
+ */
+export interface ItemGroup {
+  id: string;
+  kind: "spellbook" | "chess";
+  name: Localized & Fallback;
+  slug: Localized;
+  icon: string;
+  members: string[];
 }
 
 export interface ForgingStep {
@@ -129,6 +146,7 @@ export interface ForgingStep {
 
 export interface ItemsFile {
   items: ItemData[];
+  groups: ItemGroup[];
   forging: ForgingStep[];
   dropQuality: ({ rarity: number } & OneIn)[];
 }
@@ -242,6 +260,19 @@ export function entitiesFromData(file: ItemsFile, stubs: readonly StubEntity[]):
       relations: dedupe(rel.get(me) ?? []),
     };
   });
+  // a group's list page is an item entity too (its old address, its name in search and links); it holds no relations
+  const iconOf = new Map(out.map((e) => [e.ref, e.icon]));
+  for (const g of file.groups ?? []) {
+    const first = iconOf.get(itemRef(g.members[0]!));
+    out.push({
+      ref: itemRef(g.id),
+      name: g.name,
+      slug: g.slug,
+      ...(first ? { icon: first } : {}),
+      summary: perLang((l) => fill(ui(l).item.groupSummary[g.kind], { n: g.members.length })),
+      relations: [],
+    });
+  }
   for (const s of stubs) {
     out.push({
       ref: s.ref,

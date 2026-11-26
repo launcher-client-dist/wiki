@@ -165,8 +165,14 @@ for (const l of LANG_CODES.filter((c) => c !== LANG_TABLE.default)) if (!pages.g
   const esc = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
   const gameTexts = [...new Set(itemsFile.items.flatMap((i) => i.versions.flatMap((v) => LANG_CODES.map((l) => v.text[l]))).filter((t) => t && t.includes("%")))]
     .flatMap((t) => [t, esc(t), JSON.stringify(t).slice(1, -1)]);
-  const itemPages = [...pages.values()].filter((p) => Object.values(ITEM_DIR).some((d) => p.url.startsWith(d) && /^[^/]+\/$/.test(p.url.slice(d.length))));
+  // one page per game item, plus a split name's list page at its old address (a spellbook colour, the chess pieces)
+  const groupUrls = new Set((itemsFile.groups ?? []).flatMap((g) => LANG_CODES.map((l) => `${ITEM_DIR[l]}${g.slug[l]}/`)));
+  const itemPages = [...pages.values()].filter((p) => !groupUrls.has(p.url) && Object.values(ITEM_DIR).some((d) => p.url.startsWith(d) && /^[^/]+\/$/.test(p.url.slice(d.length))));
   if (itemPages.length !== itemsFile.items.length * LANG_CODES.length) fail("items", `${itemPages.length} item pages for ${itemsFile.items.length} items (want ${LANG_CODES.length} each)`);
+  for (const u of groupUrls) if (!pages.has(u)) fail(u, "a split name's old address answers no list page");
+  // never two game items on one page again: only an item's two states (an equip pair) share one
+  for (const i of itemsFile.items) if (i.versions.length > 1 && !i.states) fail(itemUrls(i)[0], `${i.versions.length} game items on one page (not an equip pair)`);
+  for (const i of itemsFile.items.filter((x) => x.states)) for (const url of itemUrls(i)) if (!pages.get(url)?.html.includes('data-section="states"')) fail(url, "an equip pair without its states block");
   for (const p of itemPages) {
     // the page's text, meta and JSON-LD: CSS (style blocks and attributes) left out
     let html = p.html.replace(/<style[\s\S]*?<\/style>/gi, "").replace(/\sstyle="[^"]*"/gi, "");

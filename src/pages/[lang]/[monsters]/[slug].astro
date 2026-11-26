@@ -369,8 +369,8 @@ const spellRows = (spells: MonsterData["spells"]) => spells;
 <style>
   /* the hero (Codex): the render is the star, on a soft green glow; no frame */
   .hero-render { position: relative; isolation: isolate; width: 300px; margin: -12px 0; }
-  .hero-render::before { content: ""; position: absolute; inset: -24px; z-index: -1; border-radius: 50%; background: var(--hero-glow); }
-  .hero-render :global(img) { filter: drop-shadow(0 10px 14px rgba(0, 0, 0, 0.45)); }
+  .hero-render::before { content: ""; position: absolute; inset: -24px; z-index: -1; border-radius: 50%; background: var(--render-halo), var(--hero-glow); }
+  .hero-render :global(img) { filter: var(--render-rim); }
   @media (max-width: 759px) { .hero-render { width: 240px; margin: 0; } }
   .kicker { margin: 0; font: 700 var(--fs-xs) / 1 var(--font-body); letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent-text); }
   .alt { margin: 0; color: var(--banner-muted); font-size: var(--fs-lg); }

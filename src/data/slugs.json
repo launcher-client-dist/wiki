@@ -239,6 +239,56 @@
   "es": "blue-spellbook",
   "pt": "blue-spellbook"
  },
+ "item:blue-spellbook-adjure": {
+  "en": "blue-spellbook-adjure",
+  "es": "libro-de-hechizos-azul-adjure",
+  "pt": "grimorio-azul-adjure"
+ },
+ "item:blue-spellbook-cleanse": {
+  "en": "blue-spellbook-cleanse",
+  "es": "libro-de-hechizos-azul-cleanse",
+  "pt": "grimorio-azul-cleanse"
+ },
+ "item:blue-spellbook-heal": {
+  "en": "blue-spellbook-heal",
+  "es": "grimorio-azul-curacion",
+  "pt": "grimorio-azul-cura"
+ },
+ "item:blue-spellbook-ice-berserk": {
+  "en": "blue-spellbook-ice-berserk",
+  "es": "grimorio-azul-furia-helada",
+  "pt": "grimorio-azul-furia-gelida"
+ },
+ "item:blue-spellbook-light": {
+  "en": "blue-spellbook-light",
+  "es": "grimorio-azul-luz",
+  "pt": "grimorio-azul-luz"
+ },
+ "item:blue-spellbook-light-missile": {
+  "en": "blue-spellbook-light-missile",
+  "es": "grimorio-azul-misil-de-luz",
+  "pt": "grimorio-azul-missil-de-luz"
+ },
+ "item:blue-spellbook-magic-wall": {
+  "en": "blue-spellbook-magic-wall",
+  "es": "grimorio-azul-muro-magico",
+  "pt": "grimorio-azul-muralha-magica"
+ },
+ "item:blue-spellbook-mana-shield": {
+  "en": "blue-spellbook-mana-shield",
+  "es": "grimorio-azul-escudo-de-mana",
+  "pt": "grimorio-azul-escudo-de-mana"
+ },
+ "item:blue-spellbook-water-wave": {
+  "en": "blue-spellbook-water-wave",
+  "es": "grimorio-azul-ola-de-agua",
+  "pt": "grimorio-azul-onda-de-agua"
+ },
+ "item:blue-spellbook-windfall": {
+  "en": "blue-spellbook-windfall",
+  "es": "grimorio-azul-vendaval",
+  "pt": "grimorio-azul-ventania"
+ },
  "item:blueberries": {
   "en": "blueberries",
   "es": "arandanos",
@@ -413,6 +463,66 @@
   "en": "chess-piece",
   "es": "pieza-de-ajedrez",
   "pt": "peca-de-xadrez"
+ },
+ "item:chess-piece-black-bishop": {
+  "en": "chess-piece-black-bishop",
+  "es": "pieza-de-ajedrez-alfil-negro",
+  "pt": "peca-de-xadrez-bispo-preto"
+ },
+ "item:chess-piece-black-king": {
+  "en": "chess-piece-black-king",
+  "es": "pieza-de-ajedrez-rey-negro",
+  "pt": "peca-de-xadrez-rei-preto"
+ },
+ "item:chess-piece-black-knight": {
+  "en": "chess-piece-black-knight",
+  "es": "pieza-de-ajedrez-caballo-negro",
+  "pt": "peca-de-xadrez-cavalo-preto"
+ },
+ "item:chess-piece-black-pawn": {
+  "en": "chess-piece-black-pawn",
+  "es": "pieza-de-ajedrez-peon-negro",
+  "pt": "peca-de-xadrez-peao-preto"
+ },
+ "item:chess-piece-black-queen": {
+  "en": "chess-piece-black-queen",
+  "es": "pieza-de-ajedrez-reina-negra",
+  "pt": "peca-de-xadrez-rainha-preta"
+ },
+ "item:chess-piece-black-rook": {
+  "en": "chess-piece-black-rook",
+  "es": "pieza-de-ajedrez-torre-negra",
+  "pt": "peca-de-xadrez-torre-preta"
+ },
+ "item:chess-piece-white-bishop": {
+  "en": "chess-piece-white-bishop",
+  "es": "pieza-de-ajedrez-alfil-blanco",
+  "pt": "peca-de-xadrez-bispo-branco"
+ },
+ "item:chess-piece-white-king": {
+  "en": "chess-piece-white-king",
+  "es": "pieza-de-ajedrez-rey-blanco",
+  "pt": "peca-de-xadrez-rei-branco"
+ },
+ "item:chess-piece-white-knight": {
+  "en": "chess-piece-white-knight",
+  "es": "pieza-de-ajedrez-caballo-blanco",
+  "pt": "peca-de-xadrez-cavalo-branco"
+ },
+ "item:chess-piece-white-pawn": {
+  "en": "chess-piece-white-pawn",
+  "es": "pieza-de-ajedrez-peon-blanco",
+  "pt": "peca-de-xadrez-peao-branco"
+ },
+ "item:chess-piece-white-queen": {
+  "en": "chess-piece-white-queen",
+  "es": "pieza-de-ajedrez-reina-blanca",
+  "pt": "peca-de-xadrez-rainha-branca"
+ },
+ "item:chess-piece-white-rook": {
+  "en": "chess-piece-white-rook",
+  "es": "pieza-de-ajedrez-torre-blanca",
+  "pt": "peca-de-xadrez-torre-branca"
  },
  "item:clear-gem": {
   "en": "clear-gem",
@@ -719,6 +829,26 @@
   "es": "evil-spellbook",
   "pt": "evil-spellbook"
  },
+ "item:evil-spellbook-conjure-death": {
+  "en": "evil-spellbook-conjure-death",
+  "es": "grimorio-maligno-invocar-muerte",
+  "pt": "grimorio-maligno-invocar-morte"
+ },
+ "item:evil-spellbook-dark-beam": {
+  "en": "evil-spellbook-dark-beam",
+  "es": "grimorio-maligno-dark-beam",
+  "pt": "grimorio-maligno-dark-beam"
+ },
+ "item:evil-spellbook-summon-death": {
+  "en": "evil-spellbook-summon-death",
+  "es": "grimorio-maligno-convocar-muerte",
+  "pt": "grimorio-maligno-convocar-morte"
+ },
+ "item:evil-spellbook-vampiric-bite": {
+  "en": "evil-spellbook-vampiric-bite",
+  "es": "grimorio-maligno-mordisco-vampirico",
+  "pt": "grimorio-maligno-mordida-vampirica"
+ },
  "item:fat-boy": {
   "en": "fat-boy",
   "es": "fat-boy",
@@ -873,6 +1003,36 @@
   "en": "green-spellbook",
   "es": "green-spellbook",
   "pt": "green-spellbook"
+ },
+ "item:green-spellbook-conjure-arrow": {
+  "en": "green-spellbook-conjure-arrow",
+  "es": "grimorio-verde-invocar-flecha",
+  "pt": "grimorio-verde-invocar-flecha"
+ },
+ "item:green-spellbook-dash": {
+  "en": "green-spellbook-dash",
+  "es": "grimorio-verde-embestida",
+  "pt": "grimorio-verde-investida"
+ },
+ "item:green-spellbook-haste": {
+  "en": "green-spellbook-haste",
+  "es": "grimorio-verde-prisa",
+  "pt": "grimorio-verde-pressa"
+ },
+ "item:green-spellbook-summon-nature": {
+  "en": "green-spellbook-summon-nature",
+  "es": "grimorio-verde-convocar-naturaleza",
+  "pt": "grimorio-verde-convocar-natureza"
+ },
+ "item:green-spellbook-summon-rat": {
+  "en": "green-spellbook-summon-rat",
+  "es": "grimorio-verde-convocar-rata",
+  "pt": "grimorio-verde-convocar-rato"
+ },
+ "item:green-spellbook-taunt": {
+  "en": "green-spellbook-taunt",
+  "es": "grimorio-verde-provocar",
+  "pt": "grimorio-verde-provocar"
  },
  "item:grilled-cheese": {
   "en": "grilled-cheese",
@@ -1584,6 +1744,86 @@
   "es": "red-spellbook",
   "pt": "red-spellbook"
  },
+ "item:red-spellbook-berserk": {
+  "en": "red-spellbook-berserk",
+  "es": "grimorio-rojo-furia",
+  "pt": "grimorio-vermelho-furia"
+ },
+ "item:red-spellbook-charge": {
+  "en": "red-spellbook-charge",
+  "es": "grimorio-rojo-carga",
+  "pt": "grimorio-vermelho-investida"
+ },
+ "item:red-spellbook-conjure-fire": {
+  "en": "red-spellbook-conjure-fire",
+  "es": "grimorio-rojo-invocar-fuego",
+  "pt": "grimorio-vermelho-invocar-fogo"
+ },
+ "item:red-spellbook-crying-arrow": {
+  "en": "red-spellbook-crying-arrow",
+  "es": "grimorio-rojo-flecha-llorosa",
+  "pt": "grimorio-vermelho-flecha-cortante"
+ },
+ "item:red-spellbook-energy-bolt": {
+  "en": "red-spellbook-energy-bolt",
+  "es": "grimorio-rojo-rayo-de-energia",
+  "pt": "grimorio-vermelho-raio-de-energia"
+ },
+ "item:red-spellbook-energy-hull": {
+  "en": "red-spellbook-energy-hull",
+  "es": "grimorio-rojo-coraza-de-energia",
+  "pt": "grimorio-vermelho-involucro-de-energia"
+ },
+ "item:red-spellbook-fierce-thrust": {
+  "en": "red-spellbook-fierce-thrust",
+  "es": "grimorio-rojo-embestida-feroz",
+  "pt": "grimorio-vermelho-investida-feroz"
+ },
+ "item:red-spellbook-fire-gale": {
+  "en": "red-spellbook-fire-gale",
+  "es": "grimorio-rojo-vendaval-de-fuego",
+  "pt": "grimorio-vermelho-vendaval-de-fogo"
+ },
+ "item:red-spellbook-fireball": {
+  "en": "red-spellbook-fireball",
+  "es": "grimorio-rojo-bola-de-fuego",
+  "pt": "grimorio-vermelho-bola-de-fogo"
+ },
+ "item:red-spellbook-lightning": {
+  "en": "red-spellbook-lightning",
+  "es": "grimorio-rojo-relampago",
+  "pt": "grimorio-vermelho-relampago"
+ },
+ "item:red-spellbook-precise-shot": {
+  "en": "red-spellbook-precise-shot",
+  "es": "grimorio-rojo-tiro-preciso",
+  "pt": "grimorio-vermelho-tiro-preciso"
+ },
+ "item:red-spellbook-quick-attack": {
+  "en": "red-spellbook-quick-attack",
+  "es": "grimorio-rojo-ataque-rapido",
+  "pt": "grimorio-vermelho-ataque-rapido"
+ },
+ "item:red-spellbook-rock-throw": {
+  "en": "red-spellbook-rock-throw",
+  "es": "grimorio-rojo-lanzamiento-de-roca",
+  "pt": "grimorio-vermelho-arremesso-de-pedra"
+ },
+ "item:red-spellbook-slow": {
+  "en": "red-spellbook-slow",
+  "es": "grimorio-rojo-lentitud",
+  "pt": "grimorio-vermelho-lentidao"
+ },
+ "item:red-spellbook-thrash": {
+  "en": "red-spellbook-thrash",
+  "es": "grimorio-rojo-azotar",
+  "pt": "grimorio-vermelho-debulhar"
+ },
+ "item:red-spellbook-water-pillar": {
+  "en": "red-spellbook-water-pillar",
+  "es": "grimorio-rojo-pilar-de-agua",
+  "pt": "grimorio-vermelho-pilar-de-agua"
+ },
  "item:regeneration-ring": {
   "en": "regeneration-ring",
   "es": "anillo-de-regeneracion",
@@ -2203,6 +2443,46 @@
   "en": "yellow-spellbook",
   "es": "yellow-spellbook",
   "pt": "yellow-spellbook"
+ },
+ "item:yellow-spellbook-blink": {
+  "en": "yellow-spellbook-blink",
+  "es": "grimorio-amarillo-parpadeo",
+  "pt": "grimorio-amarelo-piscar"
+ },
+ "item:yellow-spellbook-find-person": {
+  "en": "yellow-spellbook-find-person",
+  "es": "grimorio-amarillo-encontrar-persona",
+  "pt": "grimorio-amarelo-encontrar-pessoa"
+ },
+ "item:yellow-spellbook-holy": {
+  "en": "yellow-spellbook-holy",
+  "es": "grimorio-amarillo-sagrado",
+  "pt": "grimorio-amarelo-sagrado"
+ },
+ "item:yellow-spellbook-magic-growth": {
+  "en": "yellow-spellbook-magic-growth",
+  "es": "grimorio-amarillo-crecimiento-magico",
+  "pt": "grimorio-amarelo-crescimento-magico"
+ },
+ "item:yellow-spellbook-shield-block": {
+  "en": "yellow-spellbook-shield-block",
+  "es": "grimorio-amarillo-bloqueo-con-escudo",
+  "pt": "grimorio-amarelo-bloqueio-com-escudo"
+ },
+ "item:yellow-spellbook-starlight": {
+  "en": "yellow-spellbook-starlight",
+  "es": "grimorio-amarillo-luz-estelar",
+  "pt": "grimorio-amarelo-luz-estelar"
+ },
+ "item:yellow-spellbook-summon-wisp": {
+  "en": "yellow-spellbook-summon-wisp",
+  "es": "grimorio-amarillo-summon-wisp",
+  "pt": "grimorio-amarelo-summon-wisp"
+ },
+ "item:yellow-spellbook-surge": {
+  "en": "yellow-spellbook-surge",
+  "es": "grimorio-amarillo-oleada",
+  "pt": "grimorio-amarelo-surto"
  },
  "item:zircon-ring": {
   "en": "zircon-ring",

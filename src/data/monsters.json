@@ -321,7 +321,7 @@
       1,
       1
      ],
-     "item": "red-spellbook",
+     "item": "red-spellbook-fireball",
      "quality": false,
      "tier": "incomum",
      "unique": false
@@ -425,7 +425,7 @@
     "max": 83,
     "min": 58
    },
-   "loot": 180,
+   "loot": 190,
    "places": [
     {
      "count": 1,
@@ -640,7 +640,7 @@
       1,
       1
      ],
-     "item": "red-spellbook",
+     "item": "red-spellbook-precise-shot",
      "quality": false,
      "tier": "raro",
      "unique": false
@@ -684,7 +684,7 @@
     "max": 27,
     "min": 20
    },
-   "loot": 8.6,
+   "loot": 6.0,
    "places": [
     {
      "count": 3,
@@ -1186,11 +1186,7 @@
      "count": 4,
      "link": "https://map.opengea.tech/#2.AgCjAroBBgEQAQEBAAAUKCICY3NKzEvJLAEA",
      "place": {
-      "near": {
-       "en": "Road To Basile",
-       "es": "Camino a Basile",
-       "pt": "Estrada para Basile"
-      },
+      "near": null,
       "town": {
        "en": "Plains Cathedral",
        "es": "Catedral de la Llanura",
@@ -1569,11 +1565,7 @@
      "count": 2,
      "link": "https://map.opengea.tech/#2.AgBgiAEGAQABAQEAAJQiAmNzSsxLySwBAA",
      "place": {
-      "near": {
-       "en": "Dorosam Hidden Passage",
-       "es": "Pasaje Oculto de Dorosam",
-       "pt": "Passagem Oculta de Dorosam"
-      },
+      "near": null,
       "town": {
        "en": "Nordha",
        "es": "Nordha",
@@ -1756,11 +1748,7 @@
      "count": 1,
      "link": "https://map.opengea.tech/#2.AgDcAYgCBgEAAQEBAACUIgJjc0rMS8ksAQA",
      "place": {
-      "near": {
-       "en": "Nordha Labirynth",
-       "es": "Laberinto de Nordha",
-       "pt": "Labirinto de Nordha"
-      },
+      "near": null,
       "town": {
        "en": "Dorosam",
        "es": "Dorosam",
@@ -1790,11 +1778,7 @@
      "count": 1,
      "link": "https://map.opengea.tech/#2.AgA2ggEGARIBAQEAABRoIgJjc0rMS8ksAQA",
      "place": {
-      "near": {
-       "en": "Dorosam Hidden Passage",
-       "es": "Pasaje Oculto de Dorosam",
-       "pt": "Passagem Oculta de Dorosam"
-      },
+      "near": null,
       "town": {
        "en": "Nordha",
        "es": "Nordha",
@@ -1962,7 +1946,7 @@
       1,
       1
      ],
-     "item": "red-spellbook",
+     "item": "red-spellbook-slow",
      "quality": false,
      "tier": "incomum",
      "unique": false
@@ -2515,7 +2499,7 @@
       1,
       1
      ],
-     "item": "evil-spellbook",
+     "item": "evil-spellbook-dark-beam",
      "quality": false,
      "tier": "muito-raro",
      "unique": false
@@ -2661,7 +2645,7 @@
       1,
       1
      ],
-     "item": "evil-spellbook",
+     "item": "evil-spellbook-conjure-death",
      "quality": false,
      "tier": "raro",
      "unique": false
@@ -2864,7 +2848,7 @@
       1,
       1
      ],
-     "item": "green-spellbook",
+     "item": "green-spellbook-conjure-arrow",
      "quality": false,
      "tier": "raro",
      "unique": false
@@ -2888,7 +2872,7 @@
     "max": 22,
     "min": 17
    },
-   "loot": 12,
+   "loot": 10,
    "places": [
     {
      "count": 10,
@@ -3484,7 +3468,7 @@
       1,
       1
      ],
-     "item": "yellow-spellbook",
+     "item": "yellow-spellbook-summon-wisp",
      "quality": false,
      "tier": "incomum",
      "unique": false
@@ -3498,7 +3482,7 @@
     "max": 70,
     "min": 49
    },
-   "loot": 38,
+   "loot": 30,
    "places": [],
    "render": {
     "size": [
@@ -3629,7 +3613,7 @@
       1,
       1
      ],
-     "item": "green-spellbook",
+     "item": "green-spellbook-taunt",
      "quality": false,
      "tier": "comum",
      "unique": false
@@ -3679,7 +3663,7 @@
       1,
       1
      ],
-     "item": "evil-spellbook",
+     "item": "evil-spellbook-vampiric-bite",
      "quality": false,
      "tier": "incomum",
      "unique": false
@@ -3713,7 +3697,7 @@
     "max": 58,
     "min": 41
    },
-   "loot": 240,
+   "loot": 210,
    "places": [],
    "render": {
     "size": [
@@ -3883,8 +3867,8 @@
    "loot": 2.4,
    "places": [
     {
-     "count": 58,
-     "link": "https://map.opengea.tech/#2.AgCaBOEBBgEAAQEBAACUIgLjdk4sS1UILshMSS0CAA",
+     "count": 59,
+     "link": "https://map.opengea.tech/#2.AgC4ArQCBgEAAQEBAACUIgLjdk4sS1UILshMSS0CAA",
      "place": {
       "near": null,
       "town": {
@@ -4199,6 +4183,19 @@
     },
     {
      "count": 3,
+     "link": "https://map.opengea.tech/#2.AgDDArYBBgECAQEBAAAUjQjjdk4sS1UILshMSS0CAA",
+     "place": {
+      "near": null,
+      "town": {
+       "en": "Plains Cathedral",
+       "es": "Catedral de la Llanura",
+       "pt": "Catedral da Planície"
+      },
+      "underground": false
+     }
+    },
+    {
+     "count": 3,
      "link": "https://map.opengea.tech/#2.AgBPWAYBFAEBAQAAFKgiAuN2TixLVQguyExJLQIA",
      "place": {
       "near": {
@@ -4270,9 +4267,9 @@
      "link": "https://map.opengea.tech/#2.AgCcAwEGAQABAQEAAJQiAuN2TixLVQguyExJLQIA",
      "place": {
       "near": {
-       "en": "Jebidiah Ambush 2",
-       "es": "Emboscada de Jebidiah 2",
-       "pt": "Emboscada de Jebidiah 2"
+       "en": "Jebidiah Ambush",
+       "es": "Emboscada de Jebidiah",
+       "pt": "Emboscada de Jebidiah"
       },
       "town": {
        "en": "Dorosam",
@@ -4369,19 +4366,6 @@
     },
     {
      "count": 2,
-     "link": "https://map.opengea.tech/#2.AgCjAbsBBgEAAQEBAACUIgLjdk4sS1UILshMSS0CAA",
-     "place": {
-      "near": null,
-      "town": {
-       "en": "Plains Cathedral",
-       "es": "Catedral de la Llanura",
-       "pt": "Catedral da Planície"
-      },
-      "underground": false
-     }
-    },
-    {
-     "count": 2,
      "link": "https://map.opengea.tech/#2.AgB_2wEGAQABAQEAAJQiAuN2TixLVQguyExJLQIA",
      "place": {
       "near": {
@@ -4450,46 +4434,12 @@
     },
     {
      "count": 1,
-     "link": "https://map.opengea.tech/#2.AgC4ArQCBgEAAQEBAACUIgLjdk4sS1UILshMSS0CAA",
-     "place": {
-      "near": {
-       "en": "East Nordha Mines",
-       "es": "Minas de Nordha Este",
-       "pt": "Minas de Nordha Oriental"
-      },
-      "town": {
-       "en": "Dorosam",
-       "es": "Dorosam",
-       "pt": "Dorosam"
-      },
-      "underground": false
-     }
-    },
-    {
-     "count": 1,
      "link": "https://map.opengea.tech/#2.AgC3AxMGAQgBAQEAABSUiON2TixLVQguyExJLQIA",
      "place": {
       "near": {
        "en": "West Garden",
        "es": "Jardín Oeste",
        "pt": "Jardim Oeste"
-      },
-      "town": {
-       "en": "Plains Cathedral",
-       "es": "Catedral de la Llanura",
-       "pt": "Catedral da Planície"
-      },
-      "underground": false
-     }
-    },
-    {
-     "count": 1,
-     "link": "https://map.opengea.tech/#2.AgDDArYBBgECAQEBAAAUjQjjdk4sS1UILshMSS0CAA",
-     "place": {
-      "near": {
-       "en": "Road To Basile",
-       "es": "Camino a Basile",
-       "pt": "Estrada para Basile"
       },
       "town": {
        "en": "Plains Cathedral",
@@ -4777,7 +4727,7 @@
       1,
       1
      ],
-     "item": "red-spellbook",
+     "item": "red-spellbook-rock-throw",
      "quality": false,
      "tier": "raro",
      "unique": false
@@ -4863,6 +4813,19 @@
     },
     {
      "count": 2,
+     "link": "https://map.opengea.tech/#2.AgDgAdgBBgEcAQEBAAAUqCMC43JOLEtVCCnKz8kBAA",
+     "place": {
+      "near": null,
+      "town": {
+       "en": "Dorosam",
+       "es": "Dorosam",
+       "pt": "Dorosam"
+      },
+      "underground": true
+     }
+    },
+    {
+     "count": 2,
      "link": "https://map.opengea.tech/#2.AgCkAqIBBgEeAQEBAAAU6CMC43JOLEtVCCnKz8kBAA",
      "place": {
       "near": {
@@ -4939,39 +4902,9 @@
      "link": "https://map.opengea.tech/#2.AgDeAbIBBgEeAQEBAAAU6CMC43JOLEtVCCnKz8kBAA",
      "place": {
       "near": {
-       "en": "Jebidiah Ambush 1",
-       "es": "Emboscada de Jebidiah 1",
-       "pt": "Emboscada de Jebidiah 1"
-      },
-      "town": {
-       "en": "Dorosam",
-       "es": "Dorosam",
-       "pt": "Dorosam"
-      },
-      "underground": true
-     }
-    },
-    {
-     "count": 1,
-     "link": "https://map.opengea.tech/#2.AgDgAdgBBgEcAQEBAAAUqCMC43JOLEtVCCnKz8kBAA",
-     "place": {
-      "near": null,
-      "town": {
-       "en": "Dorosam",
-       "es": "Dorosam",
-       "pt": "Dorosam"
-      },
-      "underground": true
-     }
-    },
-    {
-     "count": 1,
-     "link": "https://map.opengea.tech/#2.AgCUAqgCBgEWAQEBAAAU6CIC43JOLEtVCCnKz8kBAA",
-     "place": {
-      "near": {
-       "en": "East Nordha Mines",
-       "es": "Minas de Nordha Este",
-       "pt": "Minas de Nordha Oriental"
+       "en": "Jebidiah Ambush",
+       "es": "Emboscada de Jebidiah",
+       "pt": "Emboscada de Jebidiah"
       },
       "town": {
        "en": "Dorosam",
@@ -5391,7 +5324,7 @@
       1,
       1
      ],
-     "item": "evil-spellbook",
+     "item": "evil-spellbook-dark-beam",
      "quality": false,
      "tier": "raro",
      "unique": false
@@ -5699,7 +5632,7 @@
       1,
       1
      ],
-     "item": "red-spellbook",
+     "item": "red-spellbook-precise-shot",
      "quality": false,
      "tier": "raro",
      "unique": false
@@ -5733,7 +5666,7 @@
     "max": 20,
     "min": 15
    },
-   "loot": 20,
+   "loot": 16,
    "places": [
     {
      "count": 14,
@@ -6103,7 +6036,7 @@
       1,
       1
      ],
-     "item": "evil-spellbook",
+     "item": "evil-spellbook-summon-death",
      "quality": false,
      "tier": "raro",
      "unique": false
@@ -6471,7 +6404,7 @@
       1,
       1
      ],
-     "item": "red-spellbook",
+     "item": "red-spellbook-berserk",
      "quality": false,
      "tier": "raro",
      "unique": false
@@ -6505,6 +6438,16 @@
      "quality": true,
      "tier": "muito-raro",
      "unique": false
+    },
+    {
+     "amount": [
+      1,
+      1
+     ],
+     "item": "red-spellbook-fireball",
+     "quality": false,
+     "tier": "muito-raro",
+     "unique": false
     }
    ],
    "family": "Occultist",
@@ -6515,7 +6458,7 @@
     "max": 21,
     "min": 16
    },
-   "loot": 20,
+   "loot": 18,
    "places": [
     {
      "count": 4,
@@ -7251,7 +7194,7 @@
       1,
       1
      ],
-     "item": "red-spellbook",
+     "item": "red-spellbook-crying-arrow",
      "quality": false,
      "tier": "incomum",
      "unique": false
@@ -7325,7 +7268,7 @@
     "max": 70,
     "min": 49
    },
-   "loot": 78,
+   "loot": 81,
    "places": [
     {
      "count": 3,
@@ -7853,7 +7796,7 @@
       1,
       1
      ],
-     "item": "red-spellbook",
+     "item": "red-spellbook-conjure-fire",
      "quality": false,
      "tier": "incomum",
      "unique": false
@@ -7923,7 +7866,7 @@
       1,
       1
      ],
-     "item": "evil-spellbook",
+     "item": "evil-spellbook-vampiric-bite",
      "quality": false,
      "tier": "raro",
      "unique": false
@@ -7967,7 +7910,7 @@
     "max": 33,
     "min": 23
    },
-   "loot": 40,
+   "loot": 29,
    "places": [
     {
      "count": 7,
@@ -8101,11 +8044,7 @@
      "count": 1,
      "link": "https://map.opengea.tech/#2.AgCiAs4BBgEWAQEBAAAU6CIC43FJLcvMUQguyExJLQIA",
      "place": {
-      "near": {
-       "en": "East Nordha Mines",
-       "es": "Minas de Nordha Este",
-       "pt": "Minas de Nordha Oriental"
-      },
+      "near": null,
       "town": {
        "en": "Dorosam",
        "es": "Dorosam",
@@ -8445,11 +8384,7 @@
      "count": 7,
      "link": "https://map.opengea.tech/#2.AgD2AYICBgEaAQEBAAAUaCMCY3PJTE9PLQIA",
      "place": {
-      "near": {
-       "en": "East Nordha Mines",
-       "es": "Minas de Nordha Este",
-       "pt": "Minas de Nordha Oriental"
-      },
+      "near": null,
       "town": {
        "en": "Dorosam",
        "es": "Dorosam",
@@ -8780,7 +8715,17 @@
       1,
       1
      ],
-     "item": "blue-spellbook",
+     "item": "blue-spellbook-magic-wall",
+     "quality": false,
+     "tier": "incomum",
+     "unique": false
+    },
+    {
+     "amount": [
+      1,
+      1
+     ],
+     "item": "blue-spellbook-mana-shield",
      "quality": false,
      "tier": "incomum",
      "unique": false
@@ -9863,7 +9808,7 @@
       1,
       1
      ],
-     "item": "red-spellbook",
+     "item": "red-spellbook-rock-throw",
      "quality": false,
      "tier": "incomum",
      "unique": false
@@ -9877,7 +9822,7 @@
     "max": 58,
     "min": 41
    },
-   "loot": 150,
+   "loot": 140,
    "places": [],
    "render": {
     "size": [
@@ -10012,7 +9957,7 @@
       1,
       1
      ],
-     "item": "blue-spellbook",
+     "item": "blue-spellbook-light",
      "quality": false,
      "tier": "raro",
      "unique": false
@@ -10066,7 +10011,7 @@
     "max": 19,
     "min": 14
    },
-   "loot": 9.1,
+   "loot": 4.4,
    "places": [
     {
      "count": 22,
@@ -10221,11 +10166,7 @@
      "count": 1,
      "link": "https://map.opengea.tech/#2.AgDLArwBBgEJAQEBAAAUpIhjdc_ILy4BAA",
      "place": {
-      "near": {
-       "en": "Road To Basile",
-       "es": "Camino a Basile",
-       "pt": "Estrada para Basile"
-      },
+      "near": null,
       "town": {
        "en": "Plains Cathedral",
        "es": "Catedral de la Llanura",
@@ -10894,7 +10835,7 @@
       1,
       1
      ],
-     "item": "green-spellbook",
+     "item": "green-spellbook-summon-rat",
      "quality": false,
      "tier": "raro",
      "unique": false
@@ -10928,7 +10869,7 @@
     "max": 18,
     "min": 13
    },
-   "loot": 11,
+   "loot": 9.1,
    "places": [
     {
      "count": 13,
@@ -11313,11 +11254,7 @@
      "count": 1,
      "link": "https://map.opengea.tech/#2.AgDsAoQCBgEQAQEBAAAUKCIC43TPTMwrUQhKLAEA",
      "place": {
-      "near": {
-       "en": "East Nordha Port",
-       "es": "Puerto de Nordha Este",
-       "pt": "Porto de Nordha Oriental"
-      },
+      "near": null,
       "town": {
        "en": "Dorosam",
        "es": "Dorosam",
@@ -11398,11 +11335,7 @@
      "count": 1,
      "link": "https://map.opengea.tech/#2.AgCfA5wBBgEAAQEBAACUIgLjdM9MzCtRCEosAQA",
      "place": {
-      "near": {
-       "en": "Road To Basile",
-       "es": "Camino a Basile",
-       "pt": "Estrada para Basile"
-      },
+      "near": null,
       "town": {
        "en": "Plains Cathedral",
        "es": "Catedral de la Llanura",
@@ -11619,11 +11552,7 @@
      "count": 7,
      "link": "https://map.opengea.tech/#2.AgAqoAEGAQABAQEAAJQiAmNzz0_KycwDAA",
      "place": {
-      "near": {
-       "en": "Dorosam Hidden Passage",
-       "es": "Pasaje Oculto de Dorosam",
-       "pt": "Passagem Oculta de Dorosam"
-      },
+      "near": null,
       "town": {
        "en": "Nordha",
        "es": "Nordha",
@@ -12032,11 +11961,7 @@
      "count": 1,
      "link": "https://map.opengea.tech/#2.AgBKXAYBGAEBAQAAFCgjAmNzz0_KycwDAA",
      "place": {
-      "near": {
-       "en": "Dorosam Hidden Passage",
-       "es": "Pasaje Oculto de Dorosam",
-       "pt": "Passagem Oculta de Dorosam"
-      },
+      "near": null,
       "town": {
        "en": "Nordha",
        "es": "Nordha",
@@ -12212,7 +12137,7 @@
       1,
       1
      ],
-     "item": "red-spellbook",
+     "item": "red-spellbook-quick-attack",
      "quality": false,
      "tier": "incomum",
      "unique": false
@@ -12256,7 +12181,7 @@
     "max": 95,
     "min": 67
    },
-   "loot": 280,
+   "loot": 270,
    "places": [],
    "render": {
     "size": [
@@ -12922,7 +12847,7 @@
       1,
       1
      ],
-     "item": "green-spellbook",
+     "item": "green-spellbook-conjure-arrow",
      "quality": false,
      "tier": "muito-raro",
      "unique": false
@@ -12946,7 +12871,7 @@
     "max": 19,
     "min": 15
    },
-   "loot": 7.8,
+   "loot": 7.7,
    "places": [
     {
      "count": 5,
@@ -13131,11 +13056,7 @@
      "count": 1,
      "link": "https://map.opengea.tech/#2.AgCHA6ABBgEAAQEBAACUIgLj8CjNKynOTcwDAA",
      "place": {
-      "near": {
-       "en": "Road To Basile",
-       "es": "Camino a Basile",
-       "pt": "Estrada para Basile"
-      },
+      "near": null,
       "town": {
        "en": "Plains Cathedral",
        "es": "Catedral de la Llanura",
@@ -13625,11 +13546,7 @@
      "count": 3,
      "link": "https://map.opengea.tech/#2.AgCXA4QBBgEAAQEBAACUIgJj8UnMTQIA",
      "place": {
-      "near": {
-       "en": "Road To Basile",
-       "es": "Camino a Basile",
-       "pt": "Estrada para Basile"
-      },
+      "near": null,
       "town": {
        "en": "Plains Cathedral",
        "es": "Catedral de la Llanura",
@@ -14432,7 +14349,7 @@
       1,
       1
      ],
-     "item": "red-spellbook",
+     "item": "red-spellbook-fierce-thrust",
      "quality": false,
      "tier": "incomum",
      "unique": false
@@ -14466,7 +14383,7 @@
     "max": 58,
     "min": 41
    },
-   "loot": 89,
+   "loot": 66,
    "places": [],
    "render": {
     "size": [
@@ -14619,7 +14536,7 @@
       1,
       1
      ],
-     "item": "red-spellbook",
+     "item": "red-spellbook-slow",
      "quality": false,
      "tier": "incomum",
      "unique": false
@@ -14981,9 +14898,9 @@
      "link": "https://map.opengea.tech/#2.AgCQAsABBgEeAQEBAAAU6CMC4_DNzMsvSSwtAgA",
      "place": {
       "near": {
-       "en": "Jebidiah Ambush 1",
-       "es": "Emboscada de Jebidiah 1",
-       "pt": "Emboscada de Jebidiah 1"
+       "en": "Jebidiah Ambush",
+       "es": "Emboscada de Jebidiah",
+       "pt": "Emboscada de Jebidiah"
       },
       "town": {
        "en": "Dorosam",
@@ -14997,11 +14914,7 @@
      "count": 1,
      "link": "https://map.opengea.tech/#2.AgCgAtIBBgEeAQEBAAAU6CMC4_DNzMsvSSwtAgA",
      "place": {
-      "near": {
-       "en": "East Nordha Mines",
-       "es": "Minas de Nordha Este",
-       "pt": "Minas de Nordha Oriental"
-      },
+      "near": null,
       "town": {
        "en": "Dorosam",
        "es": "Dorosam",
@@ -15212,7 +15125,7 @@
       1,
       1
      ],
-     "item": "green-spellbook",
+     "item": "green-spellbook-haste",
      "quality": false,
      "tier": "raro",
      "unique": false
@@ -15246,7 +15159,7 @@
     "max": 19,
     "min": 14
    },
-   "loot": 7.9,
+   "loot": 6.9,
    "places": [
     {
      "count": 7,
@@ -15856,9 +15769,9 @@
      "link": "https://map.opengea.tech/#2.AgCKAoABBgEAAQEBAACUIgLj8M0sSs3JzEsHAA",
      "place": {
       "near": {
-       "en": "Jebidiah Ambush 1",
-       "es": "Emboscada de Jebidiah 1",
-       "pt": "Emboscada de Jebidiah 1"
+       "en": "Jebidiah Ambush",
+       "es": "Emboscada de Jebidiah",
+       "pt": "Emboscada de Jebidiah"
       },
       "town": {
        "en": "Dorosam",
@@ -15897,7 +15810,7 @@
       1,
       1
      ],
-     "item": "green-spellbook",
+     "item": "green-spellbook-conjure-arrow",
      "quality": false,
      "tier": "incomum",
      "unique": false
@@ -15971,7 +15884,7 @@
     "max": 28,
     "min": 20
    },
-   "loot": 22,
+   "loot": 17,
    "places": [
     {
      "count": 5,
@@ -16133,9 +16046,9 @@
      "link": "https://map.opengea.tech/#2.AgCMAmoGAQABAQEAAJQiAuPzzSxKzcnMS1fwy0_KSQUA",
      "place": {
       "near": {
-       "en": "Jebidiah Ambush 1",
-       "es": "Emboscada de Jebidiah 1",
-       "pt": "Emboscada de Jebidiah 1"
+       "en": "Jebidiah Ambush",
+       "es": "Emboscada de Jebidiah",
+       "pt": "Emboscada de Jebidiah"
       },
       "town": {
        "en": "Dorosam",
@@ -16322,7 +16235,7 @@
       1,
       1
      ],
-     "item": "blue-spellbook",
+     "item": "blue-spellbook-heal",
      "quality": false,
      "tier": "raro",
      "unique": false
@@ -16356,7 +16269,7 @@
     "max": 19,
     "min": 15
    },
-   "loot": 22,
+   "loot": 13,
    "places": [
     {
      "count": 21,
@@ -16708,7 +16621,7 @@
       1,
       1
      ],
-     "item": "evil-spellbook",
+     "item": "evil-spellbook-conjure-death",
      "quality": false,
      "tier": "incomum",
      "unique": false
@@ -16748,6 +16661,16 @@
       1,
       1
      ],
+     "item": "evil-spellbook-summon-death",
+     "quality": false,
+     "tier": "raro",
+     "unique": false
+    },
+    {
+     "amount": [
+      1,
+      1
+     ],
      "item": "skull-ring",
      "quality": true,
      "tier": "raro",
@@ -16758,7 +16681,7 @@
       1,
       1
      ],
-     "item": "yellow-spellbook",
+     "item": "yellow-spellbook-magic-growth",
      "quality": false,
      "tier": "raro",
      "unique": false
@@ -16868,11 +16791,7 @@
      "count": 1,
      "link": "https://map.opengea.tech/#2.AgCiA74BBgEcAQEBAAAUqCMC4_ZLTS7Kz03MS04tAgA",
      "place": {
-      "near": {
-       "en": "East Nordha Port",
-       "es": "Puerto de Nordha Este",
-       "pt": "Porto de Nordha Oriental"
-      },
+      "near": null,
       "town": {
        "en": "Dorosam",
        "es": "Dorosam",
@@ -17226,7 +17145,7 @@
       1,
       1
      ],
-     "item": "evil-spellbook",
+     "item": "evil-spellbook-dark-beam",
      "quality": false,
      "tier": "raro",
      "unique": false
@@ -17246,7 +17165,7 @@
       1,
       1
      ],
-     "item": "red-spellbook",
+     "item": "red-spellbook-energy-bolt",
      "quality": false,
      "tier": "raro",
      "unique": false
@@ -17280,7 +17199,7 @@
     "max": 17,
     "min": 13
    },
-   "loot": 14,
+   "loot": 12,
    "places": [
     {
      "count": 6,
@@ -17787,7 +17706,7 @@
       1,
       1
      ],
-     "item": "red-spellbook",
+     "item": "red-spellbook-conjure-fire",
      "quality": false,
      "tier": "raro",
      "unique": false
@@ -17821,7 +17740,7 @@
     "max": 14,
     "min": 10
    },
-   "loot": 9.3,
+   "loot": 6.3,
    "places": [
     {
      "count": 5,
@@ -17981,9 +17900,9 @@
      "link": "https://map.opengea.tech/#2.AgC2AywGAQABAQEAAJQiAhPxT04uzSnJLC5RcCwoKErNK8lMTgUA",
      "place": {
       "near": {
-       "en": "Jebidiah Ambush 2",
-       "es": "Emboscada de Jebidiah 2",
-       "pt": "Emboscada de Jebidiah 2"
+       "en": "Jebidiah Ambush",
+       "es": "Emboscada de Jebidiah",
+       "pt": "Emboscada de Jebidiah"
       },
       "town": {
        "en": "Dorosam",
@@ -18473,7 +18392,7 @@
       1,
       1
      ],
-     "item": "yellow-spellbook",
+     "item": "yellow-spellbook-shield-block",
      "quality": false,
      "tier": "raro",
      "unique": false
@@ -18487,7 +18406,7 @@
     "max": 22,
     "min": 17
    },
-   "loot": 23,
+   "loot": 22,
    "places": [
     {
      "count": 5,
@@ -18557,11 +18476,7 @@
      "count": 3,
      "link": "https://map.opengea.tech/#2.AgCSA9wBBgEcAQEBAAAUqCMCE_JPTi7NKcksLlFwzUvLL0pOLQIA",
      "place": {
-      "near": {
-       "en": "East Nordha Port",
-       "es": "Puerto de Nordha Este",
-       "pt": "Porto de Nordha Oriental"
-      },
+      "near": null,
       "town": {
        "en": "Dorosam",
        "es": "Dorosam",
@@ -18888,7 +18803,7 @@
       1,
       1
      ],
-     "item": "evil-spellbook",
+     "item": "evil-spellbook-vampiric-bite",
      "quality": false,
      "tier": "incomum",
      "unique": false
@@ -18938,7 +18853,7 @@
       1,
       1
      ],
-     "item": "red-spellbook",
+     "item": "red-spellbook-lightning",
      "quality": false,
      "tier": "raro",
      "unique": false
@@ -19103,11 +19018,7 @@
      "count": 1,
      "link": "https://map.opengea.tech/#2.AgCKA-gBBgEeAQEBAAAU6CMCE_RPTi7NKcksLlEITs7Iz0ksAgA",
      "place": {
-      "near": {
-       "en": "East Nordha Port",
-       "es": "Puerto de Nordha Este",
-       "pt": "Porto de Nordha Oriental"
-      },
+      "near": null,
       "town": {
        "en": "Dorosam",
        "es": "Dorosam",
@@ -19308,7 +19219,7 @@
       1,
       1
      ],
-     "item": "red-spellbook",
+     "item": "red-spellbook-conjure-fire",
      "quality": false,
      "tier": "incomum",
      "unique": false
@@ -19378,6 +19289,16 @@
       1,
       1
      ],
+     "item": "red-spellbook-energy-hull",
+     "quality": false,
+     "tier": "raro",
+     "unique": false
+    },
+    {
+     "amount": [
+      1,
+      1
+     ],
      "item": "war-foretoken",
      "quality": false,
      "tier": "raro",
@@ -19412,7 +19333,7 @@
     "max": 36,
     "min": 26
    },
-   "loot": 36,
+   "loot": 31,
    "places": [
     {
      "count": 27,
@@ -19631,7 +19552,7 @@
       1,
       1
      ],
-     "item": "red-spellbook",
+     "item": "red-spellbook-berserk",
      "quality": false,
      "tier": "raro",
      "unique": false
@@ -19665,7 +19586,7 @@
     "max": 41,
     "min": 29
    },
-   "loot": 20,
+   "loot": 17,
    "places": [
     {
      "count": 5,
@@ -19942,7 +19863,7 @@
       1,
       1
      ],
-     "item": "blue-spellbook",
+     "item": "blue-spellbook-adjure",
      "quality": false,
      "tier": "raro",
      "unique": false
@@ -20704,7 +20625,7 @@
       1,
       1
      ],
-     "item": "green-spellbook",
+     "item": "green-spellbook-summon-nature",
      "quality": false,
      "tier": "raro",
      "unique": false
@@ -20748,7 +20669,7 @@
     "max": 42,
     "min": 30
    },
-   "loot": 24,
+   "loot": 22,
    "places": [
     {
      "count": 3,
@@ -21280,7 +21201,7 @@
       1,
       1
      ],
-     "item": "green-spellbook",
+     "item": "green-spellbook-summon-rat",
      "quality": false,
      "tier": "raro",
      "unique": false
@@ -21314,7 +21235,7 @@
     "max": 43,
     "min": 30
    },
-   "loot": 18,
+   "loot": 15,
    "places": [
     {
      "count": 3,
@@ -21354,11 +21275,7 @@
      "count": 1,
      "link": "https://map.opengea.tech/#2.AgDmAugBBgEeAQEBAAAU6CMCEwxILS7JzEnNS05VCMhJTC9NBQA",
      "place": {
-      "near": {
-       "en": "East Nordha Port",
-       "es": "Puerto de Nordha Este",
-       "pt": "Porto de Nordha Oriental"
-      },
+      "near": null,
       "town": {
        "en": "Dorosam",
        "es": "Dorosam",
@@ -21496,7 +21413,7 @@
       1,
       1
      ],
-     "item": "green-spellbook",
+     "item": "green-spellbook-dash",
      "quality": false,
      "tier": "raro",
      "unique": false
@@ -21540,7 +21457,7 @@
     "max": 20,
     "min": 16
    },
-   "loot": 6.8,
+   "loot": 5.6,
    "places": [
     {
      "count": 15,
@@ -21841,7 +21758,7 @@
       1,
       1
      ],
-     "item": "red-spellbook",
+     "item": "red-spellbook-fierce-thrust",
      "quality": false,
      "tier": "raro",
      "unique": false
@@ -21875,7 +21792,7 @@
     "max": 22,
     "min": 17
    },
-   "loot": 28,
+   "loot": 24,
    "places": [
     {
      "count": 5,
@@ -22013,11 +21930,7 @@
      "count": 2,
      "link": "https://map.opengea.tech/#2.AgDgAtgBBgEcAQEBAAAUqCMCEwpILS7JzEnNS05VCC7JzEtPLQIA",
      "place": {
-      "near": {
-       "en": "East Nordha Port",
-       "es": "Puerto de Nordha Este",
-       "pt": "Porto de Nordha Oriental"
-      },
+      "near": null,
       "town": {
        "en": "Dorosam",
        "es": "Dorosam",
@@ -22064,11 +21977,7 @@
      "count": 2,
      "link": "https://map.opengea.tech/#2.AgBqWgYBGAEBAQAAFCgjAhMKSC0uycxJzUtOVQguycxLTy0CAA",
      "place": {
-      "near": {
-       "en": "Dorosam Hidden Passage",
-       "es": "Pasaje Oculto de Dorosam",
-       "pt": "Passagem Oculta de Dorosam"
-      },
+      "near": null,
       "town": {
        "en": "Nordha",
        "es": "Nordha",
@@ -22326,7 +22235,7 @@
       1,
       1
      ],
-     "item": "red-spellbook",
+     "item": "red-spellbook-thrash",
      "quality": false,
      "tier": "raro",
      "unique": false
@@ -22350,7 +22259,7 @@
     "max": 17,
     "min": 13
    },
-   "loot": 17,
+   "loot": 12,
    "places": [
     {
      "count": 8,
@@ -22540,9 +22449,9 @@
      "link": "https://map.opengea.tech/#2.AgDiAWoGAQABAQEAAJQiAmMJyElNBAA",
      "place": {
       "near": {
-       "en": "Jebidiah Ambush 1",
-       "es": "Emboscada de Jebidiah 1",
-       "pt": "Emboscada de Jebidiah 1"
+       "en": "Jebidiah Ambush",
+       "es": "Emboscada de Jebidiah",
+       "pt": "Emboscada de Jebidiah"
       },
       "town": {
        "en": "Dorosam",
@@ -23060,7 +22969,7 @@
       1,
       1
      ],
-     "item": "red-spellbook",
+     "item": "red-spellbook-conjure-fire",
      "quality": false,
      "tier": "incomum",
      "unique": false
@@ -23080,7 +22989,7 @@
       1,
       1
      ],
-     "item": "evil-spellbook",
+     "item": "evil-spellbook-conjure-death",
      "quality": false,
      "tier": "raro",
      "unique": false
@@ -23104,7 +23013,7 @@
     "max": 19,
     "min": 15
    },
-   "loot": 21,
+   "loot": 14,
    "places": [
     {
      "count": 7,
@@ -23425,7 +23334,7 @@
       1,
       1
      ],
-     "item": "evil-spellbook",
+     "item": "evil-spellbook-summon-death",
      "quality": false,
      "tier": "raro",
      "unique": false
@@ -23475,7 +23384,7 @@
       1,
       1
      ],
-     "item": "red-spellbook",
+     "item": "red-spellbook-slow",
      "quality": false,
      "tier": "muito-raro",
      "unique": false
@@ -23541,14 +23450,10 @@
      }
     },
     {
-     "count": 2,
-     "link": "https://map.opengea.tech/#2.AgD2At4BBgEeAQEBAAAU6CMC4wgoyk9LzEstAgA",
+     "count": 3,
+     "link": "https://map.opengea.tech/#2.AgCUAtYBBgEWAQEBAAAU6CIC4wgoyk9LzEstAgA",
      "place": {
-      "near": {
-       "en": "East Nordha Port",
-       "es": "Puerto de Nordha Este",
-       "pt": "Porto de Nordha Oriental"
-      },
+      "near": null,
       "town": {
        "en": "Dorosam",
        "es": "Dorosam",
@@ -23582,23 +23487,6 @@
        "en": "Dorosam Port",
        "es": "Puerto de Dorosam",
        "pt": "Porto de Dorosam"
-      },
-      "town": {
-       "en": "Dorosam",
-       "es": "Dorosam",
-       "pt": "Dorosam"
-      },
-      "underground": true
-     }
-    },
-    {
-     "count": 1,
-     "link": "https://map.opengea.tech/#2.AgCUAtYBBgEWAQEBAAAU6CIC4wgoyk9LzEstAgA",
-     "place": {
-      "near": {
-       "en": "East Nordha Mines",
-       "es": "Minas de Nordha Este",
-       "pt": "Minas de Nordha Oriental"
       },
       "town": {
        "en": "Dorosam",
@@ -23798,7 +23686,7 @@
       1,
       1
      ],
-     "item": "evil-spellbook",
+     "item": "evil-spellbook-conjure-death",
      "quality": false,
      "tier": "incomum",
      "unique": false
@@ -24115,6 +24003,19 @@
      }
     },
     {
+     "count": 13,
+     "link": "https://map.opengea.tech/#2.AgChA6ABBgEAAQEBAACUIgJjDkosAQA",
+     "place": {
+      "near": null,
+      "town": {
+       "en": "Plains Cathedral",
+       "es": "Catedral de la Llanura",
+       "pt": "Catedral da Planície"
+      },
+      "underground": false
+     }
+    },
+    {
      "count": 12,
      "link": "https://map.opengea.tech/#2.AgCDArUBBgEAAQEBAACUIgJjDkosAQA",
      "place": {
@@ -24316,23 +24217,6 @@
     },
     {
      "count": 7,
-     "link": "https://map.opengea.tech/#2.AgChA6ABBgEAAQEBAACUIgJjDkosAQA",
-     "place": {
-      "near": {
-       "en": "Road To Basile",
-       "es": "Camino a Basile",
-       "pt": "Estrada para Basile"
-      },
-      "town": {
-       "en": "Plains Cathedral",
-       "es": "Catedral de la Llanura",
-       "pt": "Catedral da Planície"
-      },
-      "underground": false
-     }
-    },
-    {
-     "count": 7,
      "link": "https://map.opengea.tech/#2.AgCBAn8GAQoBAQEAABS0iGMOSiwBAA",
      "place": {
       "near": {
@@ -24397,19 +24281,6 @@
        "pt": "Catedral da Planície"
       },
       "underground": true
-     }
-    },
-    {
-     "count": 6,
-     "link": "https://map.opengea.tech/#2.AgDJAZ8BBgEAAQEBAACUIgJjDkosAQA",
-     "place": {
-      "near": null,
-      "town": {
-       "en": "Plains Cathedral",
-       "es": "Catedral de la Llanura",
-       "pt": "Catedral da Planície"
-      },
-      "underground": false
      }
     },
     {
@@ -24552,11 +24423,7 @@
      "count": 5,
      "link": "https://map.opengea.tech/#2.AgC9A5QBBgEeAQEBAAAU6CMCYw5KLAEA",
      "place": {
-      "near": {
-       "en": "Road To Basile",
-       "es": "Camino a Basile",
-       "pt": "Estrada para Basile"
-      },
+      "near": null,
       "town": {
        "en": "Plains Cathedral",
        "es": "Catedral de la Llanura",
@@ -25011,11 +24878,7 @@
      "count": 3,
      "link": "https://map.opengea.tech/#2.AgAyZAYBGAEBAQAAFCgjAmMOSiwBAA",
      "place": {
-      "near": {
-       "en": "Dorosam Hidden Passage",
-       "es": "Pasaje Oculto de Dorosam",
-       "pt": "Passagem Oculta de Dorosam"
-      },
+      "near": null,
       "town": {
        "en": "Nordha",
        "es": "Nordha",
@@ -25263,9 +25126,9 @@
      "link": "https://map.opengea.tech/#2.AgDKAjoGAQABAQEAAJQiAmMOSiwBAA",
      "place": {
       "near": {
-       "en": "Jebidiah Ambush 3",
-       "es": "Emboscada de Jebidiah 3",
-       "pt": "Emboscada de Jebidiah 3"
+       "en": "Jebidiah Ambush",
+       "es": "Emboscada de Jebidiah",
+       "pt": "Emboscada de Jebidiah"
       },
       "town": {
        "en": "Dorosam",
@@ -25296,11 +25159,7 @@
      "count": 2,
      "link": "https://map.opengea.tech/#2.AgD0AoYCBgEQAQEBAAAUKCICYw5KLAEA",
      "place": {
-      "near": {
-       "en": "East Nordha Port",
-       "es": "Puerto de Nordha Este",
-       "pt": "Porto de Nordha Oriental"
-      },
+      "near": null,
       "town": {
        "en": "Dorosam",
        "es": "Dorosam",
@@ -25500,11 +25359,7 @@
      "count": 2,
      "link": "https://map.opengea.tech/#2.AgBSjgEGAQABAQEAAJQiAmMOSiwBAA",
      "place": {
-      "near": {
-       "en": "Dorosam Hidden Passage",
-       "es": "Pasaje Oculto de Dorosam",
-       "pt": "Passagem Oculta de Dorosam"
-      },
+      "near": null,
       "town": {
        "en": "Nordha",
        "es": "Nordha",
@@ -25683,11 +25538,7 @@
      "count": 1,
      "link": "https://map.opengea.tech/#2.AgDyAaACBgEIAQEBAAAUlIhjDkosAQA",
      "place": {
-      "near": {
-       "en": "East Nordha Mines",
-       "es": "Minas de Nordha Este",
-       "pt": "Minas de Nordha Oriental"
-      },
+      "near": null,
       "town": {
        "en": "Dorosam",
        "es": "Dorosam",
@@ -25735,9 +25586,9 @@
      "link": "https://map.opengea.tech/#2.AgD4AhAGARIBAQEAABRoIgJjDkosAQA",
      "place": {
       "near": {
-       "en": "Jebidiah Ambush 2",
-       "es": "Emboscada de Jebidiah 2",
-       "pt": "Emboscada de Jebidiah 2"
+       "en": "Jebidiah Ambush",
+       "es": "Emboscada de Jebidiah",
+       "pt": "Emboscada de Jebidiah"
       },
       "town": {
        "en": "Dorosam",
@@ -26917,11 +26768,7 @@
      "count": 8,
      "link": "https://map.opengea.tech/#2.AgDJArwBBgEQAQEBAAAUKCIC4wgqTUrNySktBgA",
      "place": {
-      "near": {
-       "en": "Road To Basile",
-       "es": "Camino a Basile",
-       "pt": "Estrada para Basile"
-      },
+      "near": null,
       "town": {
        "en": "Plains Cathedral",
        "es": "Catedral de la Llanura",
@@ -27138,11 +26985,7 @@
      "count": 1,
      "link": "https://map.opengea.tech/#2.AgCrA3QGAQABAQEAAJQiAuMIKk1KzckpLQYA",
      "place": {
-      "near": {
-       "en": "Road To Basile",
-       "es": "Camino a Basile",
-       "pt": "Estrada para Basile"
-      },
+      "near": null,
       "town": {
        "en": "Plains Cathedral",
        "es": "Catedral de la Llanura",
@@ -27366,11 +27209,7 @@
      "count": 2,
      "link": "https://map.opengea.tech/#2.AgCNA5IBBgEAAQEBAACUIgJjDc5ITS0AAA",
      "place": {
-      "near": {
-       "en": "Road To Basile",
-       "es": "Camino a Basile",
-       "pt": "Estrada para Basile"
-      },
+      "near": null,
       "town": {
        "en": "Plains Cathedral",
        "es": "Catedral de la Llanura",
@@ -28096,6 +27935,19 @@
      }
     },
     {
+     "count": 9,
+     "link": "https://map.opengea.tech/#2.AgC7AaQEBgEYAQEBAAAUKCMC4wjOTs1JLcnPAwA",
+     "place": {
+      "near": null,
+      "town": {
+       "en": "Nordha",
+       "es": "Nordha",
+       "pt": "Nordha"
+      },
+      "underground": true
+     }
+    },
+    {
      "count": 8,
      "link": "https://map.opengea.tech/#2.AgDrBaABBgEeAQEBAAAU6CMC4wjOTs1JLcnPAwA",
      "place": {
@@ -28297,6 +28149,23 @@
     },
     {
      "count": 5,
+     "link": "https://map.opengea.tech/#2.AgCCAlgGAQABAQEAAJQiAuMIzk7NSS3JzwMA",
+     "place": {
+      "near": {
+       "en": "Jebidiah Ambush",
+       "es": "Emboscada de Jebidiah",
+       "pt": "Emboscada de Jebidiah"
+      },
+      "town": {
+       "en": "Dorosam",
+       "es": "Dorosam",
+       "pt": "Dorosam"
+      },
+      "underground": false
+     }
+    },
+    {
+     "count": 5,
      "link": "https://map.opengea.tech/#2.AgDiAoEBBgEWAQEBAAAU6CIC4wjOTs1JLcnPAwA",
      "place": {
       "near": {
@@ -28325,23 +28194,6 @@
        "en": "Dorosam",
        "es": "Dorosam",
        "pt": "Dorosam"
-      },
-      "underground": true
-     }
-    },
-    {
-     "count": 5,
-     "link": "https://map.opengea.tech/#2.AgAyagYBGAEBAQAAFCgjAuMIzk7NSS3JzwMA",
-     "place": {
-      "near": {
-       "en": "Dorosam Hidden Passage",
-       "es": "Pasaje Oculto de Dorosam",
-       "pt": "Passagem Oculta de Dorosam"
-      },
-      "town": {
-       "en": "Nordha",
-       "es": "Nordha",
-       "pt": "Nordha"
       },
       "underground": true
      }
@@ -28416,23 +28268,6 @@
     },
     {
      "count": 4,
-     "link": "https://map.opengea.tech/#2.AgCcAx4GAQABAQEAAJQiAuMIzk7NSS3JzwMA",
-     "place": {
-      "near": {
-       "en": "Jebidiah Ambush 2",
-       "es": "Emboscada de Jebidiah 2",
-       "pt": "Emboscada de Jebidiah 2"
-      },
-      "town": {
-       "en": "Dorosam",
-       "es": "Dorosam",
-       "pt": "Dorosam"
-      },
-      "underground": false
-     }
-    },
-    {
-     "count": 4,
      "link": "https://map.opengea.tech/#2.AgD0BMQCBgEQAQEBAAAUKCIC4wjOTs1JLcnPAwA",
      "place": {
       "near": {
@@ -28444,19 +28279,6 @@
        "en": "East Nordha",
        "es": "Nordha Este",
        "pt": "Nordha Oriental"
-      },
-      "underground": true
-     }
-    },
-    {
-     "count": 4,
-     "link": "https://map.opengea.tech/#2.AgC7AaQEBgEYAQEBAAAUKCMC4wjOTs1JLcnPAwA",
-     "place": {
-      "near": null,
-      "town": {
-       "en": "Nordha",
-       "es": "Nordha",
-       "pt": "Nordha"
       },
       "underground": true
      }
@@ -28629,6 +28451,23 @@
        "pt": "Dorosam"
       },
       "underground": false
+     }
+    },
+    {
+     "count": 3,
+     "link": "https://map.opengea.tech/#2.AgD0ASwGAQ4BAQEAABT0iOMIzk7NSS3JzwMA",
+     "place": {
+      "near": {
+       "en": "Jebidiah Ambush",
+       "es": "Emboscada de Jebidiah",
+       "pt": "Emboscada de Jebidiah"
+      },
+      "town": {
+       "en": "Dorosam",
+       "es": "Dorosam",
+       "pt": "Dorosam"
+      },
+      "underground": true
      }
     },
     {
@@ -29246,23 +29085,6 @@
     },
     {
      "count": 1,
-     "link": "https://map.opengea.tech/#2.AgD0ASwGAQ4BAQEAABT0iOMIzk7NSS3JzwMA",
-     "place": {
-      "near": {
-       "en": "Jebidiah Ambush 1",
-       "es": "Emboscada de Jebidiah 1",
-       "pt": "Emboscada de Jebidiah 1"
-      },
-      "town": {
-       "en": "Dorosam",
-       "es": "Dorosam",
-       "pt": "Dorosam"
-      },
-      "underground": true
-     }
-    },
-    {
-     "count": 1,
      "link": "https://map.opengea.tech/#2.AgCCAggGARIBAQEAABRoIgLjCM5OzUktyc8DAA",
      "place": {
       "near": {
@@ -29276,23 +29098,6 @@
        "pt": "Dorosam"
       },
       "underground": true
-     }
-    },
-    {
-     "count": 1,
-     "link": "https://map.opengea.tech/#2.AgCCAlgGAQABAQEAAJQiAuMIzk7NSS3JzwMA",
-     "place": {
-      "near": {
-       "en": "Jebidiah Ambush 1",
-       "es": "Emboscada de Jebidiah 1",
-       "pt": "Emboscada de Jebidiah 1"
-      },
-      "town": {
-       "en": "Dorosam",
-       "es": "Dorosam",
-       "pt": "Dorosam"
-      },
-      "underground": false
      }
     },
     {
@@ -29331,23 +29136,6 @@
     },
     {
      "count": 1,
-     "link": "https://map.opengea.tech/#2.AgC0AhgGAQ4BAQEAABT0iOMIzk7NSS3JzwMA",
-     "place": {
-      "near": {
-       "en": "Jebidiah Ambush 3",
-       "es": "Emboscada de Jebidiah 3",
-       "pt": "Emboscada de Jebidiah 3"
-      },
-      "town": {
-       "en": "Dorosam",
-       "es": "Dorosam",
-       "pt": "Dorosam"
-      },
-      "underground": true
-     }
-    },
-    {
-     "count": 1,
      "link": "https://map.opengea.tech/#2.AgC-AkMGAQABAQEAAJQiAuMIzk7NSS3JzwMA",
      "place": {
       "near": {
@@ -29361,23 +29149,6 @@
        "pt": "Dorosam"
       },
       "underground": false
-     }
-    },
-    {
-     "count": 1,
-     "link": "https://map.opengea.tech/#2.AgD6AhIGARIBAQEAABRoIgLjCM5OzUktyc8DAA",
-     "place": {
-      "near": {
-       "en": "Jebidiah Ambush 2",
-       "es": "Emboscada de Jebidiah 2",
-       "pt": "Emboscada de Jebidiah 2"
-      },
-      "town": {
-       "en": "Dorosam",
-       "es": "Dorosam",
-       "pt": "Dorosam"
-      },
-      "underground": true
      }
     },
     {
@@ -29486,11 +29257,7 @@
      "count": 1,
      "link": "https://map.opengea.tech/#2.AgDlArwBBgEgAQEBAAAUUIgI4wjOTs1JLcnPAwA",
      "place": {
-      "near": {
-       "en": "Road To Basile",
-       "es": "Camino a Basile",
-       "pt": "Estrada para Basile"
-      },
+      "near": null,
       "town": {
        "en": "Plains Cathedral",
        "es": "Catedral de la Llanura",
@@ -30130,7 +29897,7 @@
       1,
       1
      ],
-     "item": "blue-spellbook",
+     "item": "blue-spellbook-heal",
      "quality": false,
      "tier": "incomum",
      "unique": false
@@ -30150,7 +29917,7 @@
       1,
       1
      ],
-     "item": "red-spellbook",
+     "item": "red-spellbook-energy-bolt",
      "quality": false,
      "tier": "incomum",
      "unique": false
@@ -30234,7 +30001,7 @@
     "max": 31,
     "min": 22
    },
-   "loot": 40,
+   "loot": 23,
    "places": [
     {
      "count": 3,
@@ -30525,9 +30292,9 @@
      "link": "https://map.opengea.tech/#2.AgD4AgkGARQBAQEAABSoIgLjCy5PzC1QCEnNK0lMzkkFAA",
      "place": {
       "near": {
-       "en": "Jebidiah Ambush 2",
-       "es": "Emboscada de Jebidiah 2",
-       "pt": "Emboscada de Jebidiah 2"
+       "en": "Jebidiah Ambush",
+       "es": "Emboscada de Jebidiah",
+       "pt": "Emboscada de Jebidiah"
       },
       "town": {
        "en": "Dorosam",
@@ -30622,7 +30389,7 @@
       1,
       1
      ],
-     "item": "green-spellbook",
+     "item": "green-spellbook-conjure-arrow",
      "quality": false,
      "tier": "incomum",
      "unique": false
@@ -30736,7 +30503,7 @@
     "max": 70,
     "min": 49
    },
-   "loot": 47,
+   "loot": 42,
    "places": [
     {
      "count": 3,
@@ -30760,9 +30527,9 @@
      "link": "https://map.opengea.tech/#2.AgDeAZ4BBgEcAQEBAAAUqCMC4w4uT8wtUAgpys_JAQA",
      "place": {
       "near": {
-       "en": "Jebidiah Ambush 1",
-       "es": "Emboscada de Jebidiah 1",
-       "pt": "Emboscada de Jebidiah 1"
+       "en": "Jebidiah Ambush",
+       "es": "Emboscada de Jebidiah",
+       "pt": "Emboscada de Jebidiah"
       },
       "town": {
        "en": "Dorosam",
@@ -30789,11 +30556,7 @@
      "count": 1,
      "link": "https://map.opengea.tech/#2.AgDUAdgBBgEcAQEBAAAUqCMC4w4uT8wtUAgpys_JAQA",
      "place": {
-      "near": {
-       "en": "Nordha Outlaws",
-       "es": "Forajidos de Nordha",
-       "pt": "Fora-da-Lei de Nordha"
-      },
+      "near": null,
       "town": {
        "en": "Dorosam",
        "es": "Dorosam",
@@ -31037,7 +30800,7 @@
       1,
       1
      ],
-     "item": "yellow-spellbook",
+     "item": "yellow-spellbook-starlight",
      "quality": false,
      "tier": "raro",
      "unique": false
@@ -31370,7 +31133,7 @@
       1,
       1
      ],
-     "item": "green-spellbook",
+     "item": "green-spellbook-summon-nature",
      "quality": false,
      "tier": "raro",
      "unique": false
@@ -31500,7 +31263,7 @@
       1,
       1
      ],
-     "item": "evil-spellbook",
+     "item": "evil-spellbook-vampiric-bite",
      "quality": false,
      "tier": "comum",
      "unique": false
@@ -31760,7 +31523,7 @@
       1,
       1
      ],
-     "item": "red-spellbook",
+     "item": "red-spellbook-energy-bolt",
      "quality": false,
      "tier": "comum",
      "unique": false
@@ -31800,7 +31563,7 @@
       1,
       1
      ],
-     "item": "evil-spellbook",
+     "item": "evil-spellbook-conjure-death",
      "quality": false,
      "tier": "incomum",
      "unique": false
@@ -31844,7 +31607,7 @@
     "max": 75,
     "min": 53
    },
-   "loot": 330,
+   "loot": 270,
    "places": [],
    "render": {
     "size": [
@@ -31987,7 +31750,7 @@
       1,
       1
      ],
-     "item": "green-spellbook",
+     "item": "green-spellbook-summon-rat",
      "quality": false,
      "tier": "comum",
      "unique": false
@@ -32081,7 +31844,7 @@
     "max": 70,
     "min": 49
    },
-   "loot": 140,
+   "loot": 110,
    "places": [],
    "render": {
     "size": [
@@ -32229,7 +31992,7 @@
       1,
       1
      ],
-     "item": "blue-spellbook",
+     "item": "blue-spellbook-light-missile",
      "quality": false,
      "tier": "comum",
      "unique": false
@@ -32289,7 +32052,7 @@
       1,
       1
      ],
-     "item": "green-spellbook",
+     "item": "green-spellbook-summon-nature",
      "quality": false,
      "tier": "incomum",
      "unique": false
@@ -32313,7 +32076,7 @@
     "max": 66,
     "min": 46
    },
-   "loot": 230,
+   "loot": 170,
    "places": [],
    "render": {
     "size": [
@@ -32823,11 +32586,7 @@
      "count": 1,
      "link": "https://map.opengea.tech/#2.AgAwggEGARIBAQEAABRoIgJjCckoTQcA",
      "place": {
-      "near": {
-       "en": "Dorosam Hidden Passage",
-       "es": "Pasaje Oculto de Dorosam",
-       "pt": "Passagem Oculta de Dorosam"
-      },
+      "near": null,
       "town": {
        "en": "Nordha",
        "es": "Nordha",
@@ -32874,11 +32633,7 @@
      "count": 1,
      "link": "https://map.opengea.tech/#2.AgDrArQBBgEAAQEBAACUIgJjCckoTQcA",
      "place": {
-      "near": {
-       "en": "Road To Basile",
-       "es": "Camino a Basile",
-       "pt": "Estrada para Basile"
-      },
+      "near": null,
       "town": {
        "en": "Plains Cathedral",
        "es": "Catedral de la Llanura",
@@ -33077,7 +32832,7 @@
       1,
       1
      ],
-     "item": "red-spellbook",
+     "item": "red-spellbook-fireball",
      "quality": true,
      "tier": "raro",
      "unique": false
@@ -33418,7 +33173,7 @@
       1,
       1
      ],
-     "item": "yellow-spellbook",
+     "item": "yellow-spellbook-summon-wisp",
      "quality": false,
      "tier": "incomum",
      "unique": false
@@ -33428,7 +33183,7 @@
       1,
       1
      ],
-     "item": "red-spellbook",
+     "item": "red-spellbook-water-pillar",
      "quality": false,
      "tier": "raro",
      "unique": false
@@ -33448,7 +33203,17 @@
       1,
       1
      ],
-     "item": "blue-spellbook",
+     "item": "yellow-spellbook-blink",
+     "quality": false,
+     "tier": "raro",
+     "unique": true
+    },
+    {
+     "amount": [
+      1,
+      1
+     ],
+     "item": "blue-spellbook-mana-shield",
      "quality": false,
      "tier": "muito-raro",
      "unique": false
@@ -33502,7 +33267,7 @@
     "max": 41,
     "min": 29
    },
-   "loot": 29,
+   "loot": 18,
    "places": [
     {
      "count": 5,
@@ -34176,10 +33941,10 @@
       1,
       1
      ],
-     "item": "blue-spellbook",
+     "item": "blue-spellbook-ice-berserk",
      "quality": false,
      "tier": "muito-raro",
-     "unique": false
+     "unique": true
     }
    ],
    "family": null,
@@ -34190,7 +33955,7 @@
     "max": 25,
     "min": 19
    },
-   "loot": 17,
+   "loot": 16,
    "places": [
     {
      "count": 12,
@@ -35015,6 +34780,19 @@
      }
     },
     {
+     "count": 3,
+     "link": "https://map.opengea.tech/#2.AgDFA34GASABAQEAABRQiAjjDcssTs5MUXDPT8rJzAMA",
+     "place": {
+      "near": null,
+      "town": {
+       "en": "Plains Cathedral",
+       "es": "Catedral de la Llanura",
+       "pt": "Catedral da Planície"
+      },
+      "underground": true
+     }
+    },
+    {
      "count": 2,
      "link": "https://map.opengea.tech/#2.AgCrBZ4BBgEYAQEBAAAUKCMC4w3LLE7OTFFwz0_KycwDAA",
      "place": {
@@ -35076,23 +34854,6 @@
     },
     {
      "count": 2,
-     "link": "https://map.opengea.tech/#2.AgC_A34GASABAQEAABRQiAjjDcssTs5MUXDPT8rJzAMA",
-     "place": {
-      "near": {
-       "en": "Road To Basile",
-       "es": "Camino a Basile",
-       "pt": "Estrada para Basile"
-      },
-      "town": {
-       "en": "Plains Cathedral",
-       "es": "Catedral de la Llanura",
-       "pt": "Catedral da Planície"
-      },
-      "underground": true
-     }
-    },
-    {
-     "count": 2,
      "link": "https://map.opengea.tech/#2.AgBCLwYBAAEBAQAAlCIC4w3LLE7OTFFwz0_KycwDAA",
      "place": {
       "near": {
@@ -35130,9 +34891,9 @@
      "link": "https://map.opengea.tech/#2.AgCCAioGAQABAQEAAJQiAuMNyyxOzkxRcM9PysnMAwA",
      "place": {
       "near": {
-       "en": "Jebidiah Ambush 1",
-       "es": "Emboscada de Jebidiah 1",
-       "pt": "Emboscada de Jebidiah 1"
+       "en": "Jebidiah Ambush",
+       "es": "Emboscada de Jebidiah",
+       "pt": "Emboscada de Jebidiah"
       },
       "town": {
        "en": "Dorosam",
@@ -35238,19 +34999,6 @@
        "pt": "Nordha"
       },
       "underground": false
-     }
-    },
-    {
-     "count": 1,
-     "link": "https://map.opengea.tech/#2.AgDFA34GASABAQEAABRQiAjjDcssTs5MUXDPT8rJzAMA",
-     "place": {
-      "near": null,
-      "town": {
-       "en": "Plains Cathedral",
-       "es": "Catedral de la Llanura",
-       "pt": "Catedral da Planície"
-      },
-      "underground": true
      }
     }
    ],
@@ -35458,6 +35206,19 @@
      }
     },
     {
+     "count": 5,
+     "link": "https://map.opengea.tech/#2.AgCxA3IGAQABAQEAAJQiAuMPT8zJzsxLV3DKz0ktKS0GAA",
+     "place": {
+      "near": null,
+      "town": {
+       "en": "Plains Cathedral",
+       "es": "Catedral de la Llanura",
+       "pt": "Catedral da Planície"
+      },
+      "underground": false
+     }
+    },
+    {
      "count": 4,
      "link": "https://map.opengea.tech/#2.AgCGAQQGAQABAQEAAJQiAuMPT8zJzsxLV3DKz0ktKS0GAA",
      "place": {
@@ -35560,23 +35321,6 @@
      }
     },
     {
-     "count": 3,
-     "link": "https://map.opengea.tech/#2.AgCxA3IGAQABAQEAAJQiAuMPT8zJzsxLV3DKz0ktKS0GAA",
-     "place": {
-      "near": {
-       "en": "Road To Basile",
-       "es": "Camino a Basile",
-       "pt": "Estrada para Basile"
-      },
-      "town": {
-       "en": "Plains Cathedral",
-       "es": "Catedral de la Llanura",
-       "pt": "Catedral da Planície"
-      },
-      "underground": false
-     }
-    },
-    {
      "count": 2,
      "link": "https://map.opengea.tech/#2.AgCmAYcBBgEAAQEBAACUIgLjD0_Myc7MS1dwys9JLSktBgA",
      "place": {
@@ -35589,19 +35333,6 @@
        "en": "Dorosam",
        "es": "Dorosam",
        "pt": "Dorosam"
-      },
-      "underground": false
-     }
-    },
-    {
-     "count": 2,
-     "link": "https://map.opengea.tech/#2.AgDVAasBBgEIAQEBAAAUlIjjD0_Myc7MS1dwys9JLSktBgA",
-     "place": {
-      "near": null,
-      "town": {
-       "en": "Plains Cathedral",
-       "es": "Catedral de la Llanura",
-       "pt": "Catedral da Planície"
       },
       "underground": false
      }
@@ -35679,9 +35410,9 @@
      "link": "https://map.opengea.tech/#2.AgC0Ah4GAQABAQEAAJQiAuMPT8zJzsxLV3DKz0ktKS0GAA",
      "place": {
       "near": {
-       "en": "Jebidiah Ambush 3",
-       "es": "Emboscada de Jebidiah 3",
-       "pt": "Emboscada de Jebidiah 3"
+       "en": "Jebidiah Ambush",
+       "es": "Emboscada de Jebidiah",
+       "pt": "Emboscada de Jebidiah"
       },
       "town": {
        "en": "Dorosam",
@@ -35746,11 +35477,7 @@
      "count": 1,
      "link": "https://map.opengea.tech/#2.AgCfA5QBBgEeAQEBAAAU6CMC4w9PzMnOzEtXcMrPSS0pLQYA",
      "place": {
-      "near": {
-       "en": "Road To Basile",
-       "es": "Camino a Basile",
-       "pt": "Estrada para Basile"
-      },
+      "near": null,
       "town": {
        "en": "Plains Cathedral",
        "es": "Catedral de la Llanura",
@@ -35924,7 +35651,7 @@
       1,
       1
      ],
-     "item": "yellow-spellbook",
+     "item": "yellow-spellbook-summon-wisp",
      "quality": false,
      "tier": "incomum",
      "unique": false
@@ -35948,7 +35675,7 @@
     "max": 25,
     "min": 19
    },
-   "loot": 13,
+   "loot": null,
    "places": [],
    "render": {
     "size": [
@@ -36427,7 +36154,7 @@
       1,
       1
      ],
-     "item": "blue-spellbook",
+     "item": "blue-spellbook-windfall",
      "quality": false,
      "tier": "raro",
      "unique": false
@@ -36491,7 +36218,7 @@
     "max": 46,
     "min": 33
    },
-   "loot": 69,
+   "loot": 61,
    "places": [
     {
      "count": 3,

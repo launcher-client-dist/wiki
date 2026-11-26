@@ -164,8 +164,8 @@ const label = (k: string) => (k === "exp" ? tm.exp : statLabel(k as "health")[la
     .monsters-page.container .dt[data-view="grid"] table tbody { grid-template-columns: repeat(4, minmax(0, 1fr)); }
     .monsters-page.container .dt[data-view="grid"] table tbody > tr:last-child:nth-child(4n+1) { grid-column: 1 / -1; }
   }
-  .monsters-page .dt[data-view="grid"] .render { display: grid; place-items: center; height: 136px; border-radius: var(--r-m); background: var(--render-bg); }
-  .monsters-page .dt[data-view="grid"] .render img { width: 128px; height: 128px; object-fit: contain; filter: drop-shadow(0 6px 8px rgba(0, 0, 0, 0.35)); }
+  .monsters-page .dt[data-view="grid"] .render { display: grid; place-items: center; height: 136px; border-radius: var(--r-m); background: var(--render-halo), var(--render-bg); }
+  .monsters-page .dt[data-view="grid"] .render img { width: 128px; height: 128px; object-fit: contain; filter: var(--render-rim); }
   .monsters-page .dt[data-view="grid"] .small-icon { display: none; }
   .monsters-page .dt[data-view="grid"] .name a, .monsters-page .dt[data-view="grid"] .alt { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .monsters-page .dt[data-view="grid"] .mk { min-height: 25px; }

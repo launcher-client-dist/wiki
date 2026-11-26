@@ -10,7 +10,7 @@ import DataCell from "../../../components/data/DataCell.astro";
 import { ui, fill } from "../../../i18n/index.ts";
 import { HREFLANG, LANGS, type Lang } from "../../../lib/i18n.ts";
 import { homePath, SECTIONS, sectionAlternates, sectionPath } from "../../../lib/routes.ts";
-import { siteData } from "../../../lib/site-registry.ts";
+import { ITEMS, siteData } from "../../../lib/site-registry.ts";
 import { CATEGORIES, CLASS_KEYS, SOURCE_KINDS, STAT_KEYS, goldPerOz, primaryVersion, sourceKinds, statLabel, type StatKey } from "../../../lib/items/data.ts";
 import { num, oz } from "../../../lib/items/view.ts";
 import { displayName } from "../../../lib/names.ts";
@@ -29,6 +29,8 @@ const SLOT_ORDER = ["head", "neck", "body", "legs", "feet", "hands", "ring", "ba
 const UI = uiSizes as Record<string, number[]>;
 const SOURCE_ICON: Record<string, string> = { drop: "src-drop", shop: "src-shop", quest: "src-quest", craft: "src-craft", map: "src-map", conjure: "src-conjure", leftover: "src-leftover" };
 const count = <T extends string>(key: T, fn: (i: (typeof items)[number]) => T[]) => items.filter((i) => fn(i).includes(key)).length;
+/** The spellbook colours (the Evil books' game type is "book", not "spellbook": the group says it). */
+const BOOK_GROUPS = new Set(ITEMS.groups.filter((g) => g.kind === "spellbook").map((g) => g.id));
 const CLASSED: StatKey[] = ["armor", "defense", "attackSpeed", "health", "mana", "hpRegen", "mpRegen"];
 ---
 <PageShell lang={lang} title={ti.listTitle} description={ti.listDescription} alternates={sectionAlternates("item")} current="item"
@@ -58,6 +60,11 @@ const CLASSED: StatKey[] = ["armor", "defense", "attackSpeed", "health", "mana",
       filters={[
         { key: "category", label: ti.filterCategory, options: CATEGORIES.filter((c) => items.some((i) => i.category === c)).map((c) => ({ value: c, label: ti.category[c], count: items.filter((i) => i.category === c).length, icon: `cat-${c}` })) },
         { key: "slot", label: ti.filterSlot, options: SLOT_ORDER.filter((s) => items.some((i) => i.slots.includes(s))).map((s) => ({ value: s, label: ti.slot[s as keyof typeof ti.slot], count: count(s, (i) => i.slots), icon: `slot-${s}` })) },
+        // a spellbook's colour (its old page, now the list of the colour's books): one chip per colour, with its face
+        { key: "book", label: ti.filterBook, options: ITEMS.groups.filter((g) => g.kind === "spellbook").map((g) => {
+          const e = registry.require(`item:${g.id}`);
+          return e.icon ? { value: g.id, label: g.name[lang], count: g.members.length, img: e.icon } : { value: g.id, label: g.name[lang], count: g.members.length, icon: "cat-spellbook" };
+        }) },
         { key: "where", label: ti.filterWhere, options: SOURCE_KINDS.map((k) => ({ value: k, label: ti.source[k], count: count(k, sourceKinds), icon: SOURCE_ICON[k] })).filter((o) => o.count) },
       ]}
       variants={[{ key: "base", label: ti.classBase, icon: "class" }, ...CLASS_KEYS.map((k) => ({ key: k, label: ti.classes[k], icon: `class-${k}` }))]} variantLabel={ti.filterClass} variantNote={ti.traitsNote}
@@ -84,7 +91,7 @@ const CLASSED: StatKey[] = ["armor", "defense", "attackSpeed", "health", "mana",
         const icon = v.icon && v.iconSize ? { src: v.icon, width: v.iconSize[0], height: v.iconSize[1], pixel: true } : null;
         return (
           <DataRow search={[...LANGS.map((l) => item.name[l]), ...LANGS.map((l) => item.subtype[l])].join(" ")} sort={sort}
-            filters={{ category: item.category, slot: item.slots, where: sourceKinds(item) }}>
+            filters={{ category: item.category, slot: item.slots, where: sourceKinds(item), book: item.group && BOOK_GROUPS.has(item.group) ? item.group : [] }}>
             <DataCell label={ti.colItem} primary>
               <span class="name">
                 <IconSlot icon={icon} kind="item" size={44} />

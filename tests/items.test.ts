@@ -28,7 +28,7 @@ function fixture(): { file: ItemsFile; stubs: StubEntity[] } {
     { ref: "npc:n1", name: { pt: "Vendedor", en: "Vendor", es: "Vendor" }, slug: { pt: "vendedor", en: "vendor", es: "vendor" } },
     { ref: "quest:q1", name: { pt: "Missão", en: "Quest", es: "Quest" }, slug: { pt: "missao", en: "quest", es: "quest" } },
   ];
-  return { file: { items: [ore, bar], forging: [], dropQuality: [] }, stubs };
+  return { file: { items: [ore, bar], forging: [], dropQuality: [], groups: [] }, stubs };
 }
 
 describe("item data -> registry", () => {

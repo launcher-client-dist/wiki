@@ -1,0 +1,97 @@
+---
+/**
+ * A split name's old address (a spellbook colour, Chess Piece): the list of its items, each with its icon, its link,
+ * what it teaches and where it comes from. Old links and search still land here; every item has its own page.
+ */
+import uiSizes from "../../data/ui-icons.json";
+import PageShell from "../layout/PageShell.astro";
+import Banner from "../ui/Banner.astro";
+import IconSlot from "../ui/IconSlot.astro";
+import ListRow from "../ui/ListRow.astro";
+import EntityLink from "../entity/EntityLink.astro";
+import GameIcon from "../ui/GameIcon.astro";
+import { ui, fill } from "../../i18n/index.ts";
+import { HREFLANG, LANGS, type Lang } from "../../lib/i18n.ts";
+import { absoluteUrl, homePath, sectionPath } from "../../lib/routes.ts";
+import { ITEMS, siteData } from "../../lib/site-registry.ts";
+import { primaryVersion, sourceKinds } from "../../lib/items/data.ts";
+import { displayName, nameWithAid } from "../../lib/names.ts";
+
+interface Props {
+  id: string;
+}
+const lang = Astro.params.lang as Lang;
+const t = ui(lang);
+const ti = t.item;
+const { registry, items } = await siteData();
+const group = ITEMS.groups.find((g) => g.id === Astro.props.id)!;
+const ref = `item:${group.id}`;
+const dn = displayName(group.name, "item", lang);
+const alternates = Object.fromEntries(LANGS.map((l) => [l, registry.url(ref, l)!])) as Record<Lang, string>;
+const members = group.members.map((id) => items.find((i) => i.id === id)!);
+const icon = registry.require(ref).icon ?? null;
+const UI = uiSizes as Record<string, number[]>;
+const SOURCE_ICON: Record<string, string> = { drop: "src-drop", shop: "src-shop", quest: "src-quest", craft: "src-craft", map: "src-map", conjure: "src-conjure", leftover: "src-leftover" };
+const summary = registry.require(ref).summary?.[lang] ?? "";
+const full = `${nameWithAid(dn)}: ${summary} ${ti.groupIntro[group.kind]}`;
+const description = full.length > 160 ? `${full.slice(0, 157).replace(/[ ,.:]+\S*$/, "")}…` : full;
+const jsonLd = [{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: dn.name,
+  url: absoluteUrl(alternates[lang]),
+  inLanguage: HREFLANG[lang],
+  itemListElement: members.map((m, i) => ({ "@type": "ListItem", position: i + 1, url: absoluteUrl(registry.url(`item:${m.id}`, lang)!), name: displayName(m.name, "item", lang).name })),
+}];
+---
+<PageShell lang={lang} title={nameWithAid(dn)} description={description} alternates={alternates} current="item"
+  searchable={{ kind: "item", image: icon?.src }} jsonLd={jsonLd}
+  crumbs={[{ label: t.home, href: homePath(lang) }, { label: ti.listTitle, href: sectionPath("item", lang) }, { label: dn.name }]}>
+  <div class="container group-page">
+    <Banner>
+      <div slot="media" class="hero-icon"><IconSlot icon={icon} kind="item" size={120} /></div>
+      <p class="kicker" data-pagefind-ignore>{ti.groupKicker[group.kind]}</p>
+      <h1 lang={dn.nameLang !== lang ? HREFLANG[dn.nameLang] : undefined}>{dn.name}</h1>
+      {dn.aid && <p class="alt" lang={dn.aidLang && dn.aidLang !== lang ? HREFLANG[dn.aidLang] : undefined}>{dn.aid}</p>}
+      <p class="intro">{summary} {ti.groupIntro[group.kind]}</p>
+    </Banner>
+    <section class="block" aria-labelledby="h-members" data-section="group-members">
+      <h2 id="h-members" class="hcount">{ti.groupKicker[group.kind]}<span class="n">{members.length}</span></h2>
+      <ul class="rows">
+        {members.map((m) => {
+          const v = primaryVersion(m);
+          const kinds = sourceKinds(m);
+          return (
+            <ListRow>
+              <EntityLink to={`item:${m.id}`} iconSize={44} />
+              {v.spell && <Fragment slot="sub"><span class="teaches"><GameIcon name="stat-magic" scale={1} />{ti.groupTeaches} <EntityLink to={v.spell} icon={false} /></span></Fragment>}
+              <Fragment slot="end">
+                <span class="where">{kinds.map((k) => <span class="srcb" title={ti.source[k]}><img src={`/ui/${SOURCE_ICON[k]}.png`} width={UI[SOURCE_ICON[k]!]![0]! * 2} height={UI[SOURCE_ICON[k]!]![1]! * 2} alt={ti.source[k]} class="px" /></span>)}</span>
+              </Fragment>
+            </ListRow>
+          );
+        })}
+      </ul>
+    </section>
+  </div>
+</PageShell>
+<style>
+  .group-page { max-width: 960px; }
+  .hero-icon { position: relative; isolation: isolate; padding: 6px; }
+  .hero-icon::before { content: ""; position: absolute; inset: -24px; z-index: -1; border-radius: 50%; background: var(--hero-glow); }
+  .hero-icon :global(.slot) { border-radius: 16px; background: var(--hero-slot); box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1), 0 14px 32px rgba(0, 0, 0, 0.4); }
+  .kicker { margin: 0; font: 700 var(--fs-xs) / 1 var(--font-body); letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent-text); }
+  .alt { margin: 0; color: var(--banner-muted); font-size: var(--fs-lg); }
+  .intro { margin: 0; max-width: 38rem; color: var(--banner-text); line-height: 1.5; }
+  .block { margin-top: var(--s-7); }
+  .block > h2 { margin-bottom: var(--s-4); }
+  .hcount { display: flex; align-items: center; gap: 10px; }
+  .hcount .n { display: inline-grid; place-items: center; min-width: 26px; height: 24px; padding: 0 8px; border-radius: var(--r-pill);
+    font: 700 var(--fs-xs) / 1 var(--font-num); color: var(--text); background: var(--surface-3); }
+  .rows { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--row-border); }
+  .teaches { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 4px 6px; font-size: var(--fs-sm); color: var(--text-muted); }
+  .where { display: inline-flex; flex-wrap: nowrap; gap: 4px; align-items: center; }
+  .srcb { display: inline-flex; align-items: center; justify-content: center; height: 26px; min-width: 26px; padding: 0 3px; border-radius: 6px;
+    background: var(--surface-2); border: 1px solid var(--row-border); }
+  .px { image-rendering: pixelated; }
+</style>

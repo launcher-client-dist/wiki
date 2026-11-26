@@ -5,7 +5,7 @@
 import type { APIRoute } from "astro";
 import { DEFAULT_LANG, HREFLANG, LANGS, type Lang } from "../lib/i18n.ts";
 import { absoluteUrl, homeAlternates, sectionAlternates, SHIPPED_KINDS, type Alternates } from "../lib/routes.ts";
-import { siteData } from "../lib/site-registry.ts";
+import { ITEMS, siteData } from "../lib/site-registry.ts";
 
 export const GET: APIRoute = async () => {
   const { registry, guides, items, monsters } = await siteData();
@@ -21,6 +21,9 @@ export const GET: APIRoute = async () => {
   }
   for (const item of items) {
     pages.push({ alternates: Object.fromEntries(LANGS.map((l) => [l, registry.url(`item:${item.id}`, l)!])) as Record<Lang, string> });
+  }
+  for (const g of ITEMS.groups) {
+    pages.push({ alternates: Object.fromEntries(LANGS.map((l) => [l, registry.url(`item:${g.id}`, l)!])) as Record<Lang, string> });
   }
   for (const m of monsters) {
     pages.push({ alternates: Object.fromEntries(LANGS.map((l) => [l, registry.url(`monster:${m.id}`, l)!])) as Record<Lang, string> });

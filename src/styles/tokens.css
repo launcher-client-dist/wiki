@@ -121,6 +121,10 @@
   --banner-chip-bg: rgba(0, 0, 0, 0.3);
   --hero-slot: radial-gradient(circle at 50% 42%, #2b3139 0%, #15181c 62%, #0b0c0f 100%);
   --hero-glow: radial-gradient(circle, rgba(134, 217, 87, 0.18) 0%, transparent 65%);
+  /* a soft light behind a creature's render, so a dark one (Black Sheep, Bear) keeps its outline on the dark hero */
+  --render-halo: radial-gradient(closest-side, rgba(214, 222, 235, 0.4) 0%, rgba(214, 222, 235, 0.16) 55%, transparent 100%);
+  /* a thin light rim and a soft lift: a dark creature's outline stays readable on the dark hero */
+  --render-rim: drop-shadow(0 0 1px rgba(255, 255, 255, 0.55)) drop-shadow(0 0 10px rgba(214, 222, 235, 0.3));
 
   /* item qualities (Comum .. Lendário) */
   --quality-0: var(--text);
@@ -203,6 +207,8 @@
   --banner-chip-bg: #ffffff;
   --hero-slot: radial-gradient(circle at 50% 42%, #2b3139 0%, #1a1d22 70%);
   --hero-glow: radial-gradient(circle, rgba(47, 125, 18, 0.12) 0%, transparent 65%);
+  --render-halo: radial-gradient(closest-side, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.3) 55%, transparent 100%);
+  --render-rim: drop-shadow(0 10px 14px rgba(0, 0, 0, 0.25));
 
   --quality-0: var(--text);
   --quality-1: #286b0f;

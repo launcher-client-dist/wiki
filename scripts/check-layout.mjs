@@ -42,7 +42,8 @@ const pick = (fn) => [...data.items].filter(fn).sort((a, b) => richness(b) - ric
 const KINDS = {
   weapon: (i) => i.category === "weapon", armour: (i) => i.category === "armour", jewel: (i) => i.category === "jewellery",
   food: (i) => i.category === "food", potion: (i) => i.category === "potion", material: (i) => i.category === "material",
-  rune: (i) => i.category === "rune" && i.rune?.fits?.length > 0, versions: (i) => i.versions.length > 1, spellbook: (i) => i.category === "spellbook", container: (i) => i.category === "container",
+  rune: (i) => i.category === "rune" && i.rune?.fits?.length > 0, states: (i) => !!i.states, spellbook: (i) => i.category === "spellbook" && !!i.group,
+  chess: (i) => i.group === "chess-piece", container: (i) => i.category === "container",
   leftover: (i) => i.sources.leftover?.length > 0,
 };
 const guideSlug = (lang) => {
@@ -61,6 +62,9 @@ for (const lang of LANGS) {
     const it = pick(fn);
     PAGES.push({ id: `item-${kind}`, lang, url: it ? `/${lang}/${SECTIONS.item.slug[lang]}/${it.slug[lang]}/` : null, type: "item" });
   }
+  // a split name's old address: the list of its items (the biggest spellbook colour)
+  const grp = [...(data.groups ?? [])].filter((x) => x.kind === "spellbook").sort((a, b) => b.members.length - a.members.length)[0];
+  PAGES.push({ id: "item-group", lang, url: grp ? `/${lang}/${SECTIONS.item.slug[lang]}/${grp.slug[lang]}/` : null, type: "group" });
   PAGES.push({ id: "monsters", lang, url: `/${lang}/${SECTIONS.monster.slug[lang]}/`, type: "mlist" });
   for (const [kind, fn] of Object.entries(MONSTER_KINDS)) {
     const m = mPick(fn);
