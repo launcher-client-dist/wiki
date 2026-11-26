@@ -137,7 +137,7 @@ export function createRegistry(entities: readonly Entity[], options: RegistryOpt
         href: url(ref, lang),
         icon: e.icon ?? null,
         summary: e.summary?.[lang] ?? null,
-        facts: (e.facts ?? []).map((f) => ({ label: f.label[lang], value: typeof f.value === "string" ? f.value : f.value[lang] })),
+        facts: (e.facts ?? []).map((f) => ({ label: f.label[lang], value: typeof f.value === "string" ? f.value : f.value[lang], ...(f.icon ? { icon: f.icon } : {}) })),
         lang,
       };
     },

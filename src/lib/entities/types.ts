@@ -22,6 +22,8 @@ export interface EntityIcon {
 export interface EntityFact {
   label: Localized;
   value: string | Localized;
+  /** One of the game's UI icons (a GameIcon name) shown beside it. */
+  icon?: string;
 }
 
 /**
@@ -68,6 +70,6 @@ export interface EntityLinkInfo {
   href: string | null;
   icon: EntityIcon | null;
   summary: string | null;
-  facts: { label: string; value: string }[];
+  facts: { label: string; value: string; icon?: string }[];
   lang: Lang;
 }

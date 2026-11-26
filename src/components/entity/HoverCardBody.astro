@@ -4,6 +4,7 @@ import { ui } from "../../i18n/index.ts";
 import type { EntityLinkInfo } from "../../lib/entities/types.ts";
 import IconSlot from "../ui/IconSlot.astro";
 import Icon from "../ui/Icon.astro";
+import GameIcon from "../ui/GameIcon.astro";
 interface Props {
   info: EntityLinkInfo;
 }
@@ -22,7 +23,7 @@ const t = ui(info.lang);
   {info.summary && <p class="hc-summary">{info.summary}</p>}
   {info.facts.length > 0 && (
     <dl class="hc-facts">
-      {info.facts.map((f) => <div><dt>{f.label}</dt><dd class="num">{f.value}</dd></div>)}
+      {info.facts.map((f) => <div><dt>{f.icon && <GameIcon name={f.icon} fit={18} />}{f.label}</dt><dd class="num">{f.value}</dd></div>)}
     </dl>
   )}
   <div class="hc-foot">

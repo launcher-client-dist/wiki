@@ -177,6 +177,9 @@ export function signed(n: number): string {
  * drops, an NPC sells and buys, a quest rewards or requires, a recipe's result is made from its ingredients, a spell
  * conjures, a spellbook teaches, a potion leaves its empty). The reverse index turns them around for the item pages.
  */
+/** The stubs' facts (a monster's health and exp) and the game icon each one shows with. */
+const STUB_FACT_ICON: Record<string, string> = { Health: "stat-health", Exp: "xp" };
+
 export function entitiesFromData(file: ItemsFile, stubs: readonly StubEntity[]): Entity[] {
   const rel = new Map<EntityRef, Relation[]>();
   const add = (from: EntityRef, r: Relation) => (rel.get(from) ?? rel.set(from, []).get(from)!).push(r);
@@ -204,8 +207,8 @@ export function entitiesFromData(file: ItemsFile, stubs: readonly StubEntity[]):
       slug: item.slug,
       ...(icon ? { icon } : {}),
       summary: { pt: v.text.pt || item.subtype.pt, en: v.text.en || item.subtype.en },
-      facts: [{ label: { pt: "Tipo", en: "Type" }, value: { pt: item.subtype.pt, en: item.subtype.en } },
-        ...stats.map(([k, n]) => ({ label: statLabel(k), value: signed(n) }))],
+      facts: [{ label: { pt: "Tipo", en: "Type" }, value: { pt: item.subtype.pt, en: item.subtype.en }, icon: `cat-${item.category}` },
+        ...stats.map(([k, n]) => ({ label: statLabel(k), value: signed(n), icon: `stat-${k}` }))],
       relations: dedupe(rel.get(me) ?? []),
     };
   });
@@ -215,7 +218,7 @@ export function entitiesFromData(file: ItemsFile, stubs: readonly StubEntity[]):
       name: s.name,
       slug: s.slug,
       ...(s.icon && s.iconSize ? { icon: { src: s.icon, width: s.iconSize[0], height: s.iconSize[1] } } : {}),
-      ...(s.facts ? { facts: s.facts } : {}),
+      ...(s.facts ? { facts: s.facts.map((f) => (STUB_FACT_ICON[f.label.en] ? { ...f, icon: STUB_FACT_ICON[f.label.en] } : f)) } : {}),
       relations: dedupe(rel.get(s.ref) ?? []),
     });
   }

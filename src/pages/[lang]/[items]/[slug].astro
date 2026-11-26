@@ -426,10 +426,36 @@ const jsonLd = [{
                 );
               })}
             </ul>
-          ) : <p class="nostats">{ti.noStats}</p>}
+          ) : v.potion || v.food ? (
+            <ul class="statlist" data-section="effect-stats">
+              {v.potion && (
+                <li class="stat">
+                  <span class="sicon"><GameIcon name={v.potion.stat === "health" ? "stat-health" : "stat-mana"} scale={3} /></span>
+                  <span class="sname">{v.potion.stat === "health" ? ti.healLabel : ti.manaLabel}</span>
+                  <span class="sv num big">{v.potion.min}–{v.potion.max}</span>
+                  <span class="rank"><span class="rtext"><GameIcon name="time" scale={1} /> {fill(ti.overSeconds, { n: v.potion.seconds })}</span></span>
+                </li>
+              )}
+              {v.food && (
+                <li class="stat">
+                  <span class="sicon"><GameIcon name="food" scale={3} /></span>
+                  <span class="sname">{ti.feedsLabel}</span>
+                  <span class="sv num big">{v.food.seconds} s</span>
+                </li>
+              )}
+              {v.food && (Object.entries(v.food.buff) as [StatKey, number][]).map(([k, n]) => (
+                <li class="stat">
+                  <span class="sicon"><GameIcon name={`stat-${k}`} scale={3} /></span>
+                  <span class="sname">{statLabel(k)[lang]}</span>
+                  <StatValue value={n} size="big" />
+                  <span class="rank"><span class="rtext">{ti.buffWhile}</span></span>
+                </li>
+              ))}
+            </ul>
+          ) : <p class="nostats"><GameIcon name={`cat-${item.category}`} scale={3} /><span>{ti.noStatsWhy}</span></p>}
           <ul class="facts">
             <li><GameIcon name="stat-weight" /><span>{ti.weight}</span><b class="num">{oz(v.weight, lang)}</b></li>
-            {v.stack > 1 && <li><GameIcon name="cat-container" /><span>{ti.stack}</span><b class="num">{v.stack}</b></li>}
+            {v.stack > 1 && <li><GameIcon name="stack" /><span>{ti.stack}</span><b class="num">{v.stack}</b></li>}
             {v.slots && <li><GameIcon name="slot-back" scale={1} /><span>{ti.slots}</span><b class="num">{v.slots}</b></li>}
             <li><GameIcon name="gold" scale={1} /><span>{ti.sellValue}</span><b class="num">{item.value.npcPays ? `${num(item.value.npcPays, lang)} ${ti.gold}` : "—"}</b></li>
             {goldPerOz(item) && <li><span class="pair"><GameIcon name="gold" scale={1} /><GameIcon name="stat-weight" /></span><span>{ti.goldPerOz}</span><b class="num">{num(goldPerOz(item)!, lang)}</b></li>}
@@ -564,6 +590,8 @@ const jsonLd = [{
   .sname { grid-area: name; display: flex; flex-wrap: wrap; align-items: center; gap: 6px; color: var(--text); font-weight: 700; font-size: var(--fs-sm); }
   .stat :global(.sv) { grid-area: value; justify-self: end; color: var(--heading); }
   .stat.negative :global(.sv) { color: var(--danger); }
+  .stat > .sv.big { font: 700 1.375rem / 1 var(--font-num); white-space: nowrap; }
+  .rtext :global(.gicon) { vertical-align: -2px; }
   .takes { display: inline-flex; align-items: center; gap: 4px; padding: 1px 6px 1px 3px; border-radius: 999px; font-size: var(--fs-xs); font-weight: 700;
     color: var(--danger); background: color-mix(in srgb, var(--danger) 14%, transparent); }
   .stat.negative .sicon { box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.35), inset 0 0 0 2px var(--danger); }
@@ -579,5 +607,6 @@ const jsonLd = [{
   .facts .pair { display: inline-flex; align-items: center; gap: 1px; }
   .facts span { color: var(--text-muted); font-size: var(--fs-sm); }
   .facts b { color: var(--heading); font-size: 1.0625rem; }
-  .nostats { margin: 0; padding: 12px 16px; color: var(--text-muted); }
+  .nostats { margin: 0; padding: 14px 16px; color: var(--text-muted); display: flex; align-items: center; gap: 12px; font-size: var(--fs-sm); }
+  .nostats :global(.gicon) { padding: 6px; border-radius: 8px; background: var(--hard); box-sizing: content-box; }
 </style>
