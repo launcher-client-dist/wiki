@@ -3,7 +3,7 @@
 The design lives in two places. Pages and content never carry styles of their own.
 
 1. **`src/styles/tokens.css`: the whole palette and feel.** Colours for dark (the default) and light, fonts, type
-   scale, spacing, radii, the 2 px outline (`--bw`), the block shadows (`--shadow-1..3`, `--hard`), the sky and grass
+   scale, spacing, radii, the outline width (`--bw`), the soft shadows (`--shadow-1..3`, `--hard`), the sky and grass
    of the banners, the five item-quality colours and motion. Change a value here and every component follows. (Drop
    tiers have no colour of their own: a word and pips, so they never look like a quality.)
 2. **The components' own `<style>` blocks: the shapes.** `src/components/ui/` (Tag, Chip, Badge, TierBadge, Callout,
@@ -31,6 +31,37 @@ Notes:
   reads as an "O".
 - **Small text:** headings below h3, labels and numbers use the body font, because the pixel face only reads well
   large.
+
+## Layout rules
+
+Lighthouse and axe don't see these; `npm run check:layout` does (part of `npm run verify`). It serves the build in a
+headless Chrome and measures every page kind (home, the list, an item of every kind, a guide, the 404) at 1440, 1024
+and 390 px, in Portuguese and Spanish. Chrome comes from `CHROME_PATH` or the usual install paths.
+
+- **One icon rule per component.** An icon column has one size and one x; labels align on one edge, values on the
+  other. Never an icon on the left in one row and on the right in the next. In the stats box every row (a stat, the
+  weight, the price) is one grid: a 44 px icon well, the label, the value. *Checked (icon-column).*
+- **Tables.** A header label aligns like its cells (numbers right, text left); a column's icon lives in the header only,
+  inline before the word; no header wraps at 1024 px and up; every row has the same height (a cell that could wrap gets
+  a fixed shape: one line with "…", source icons in one row with "+N"). The sort arrow sits in a fixed box, in the side
+  padding of a number column. *Checked (header, row-height).*
+- **One spacing rhythm.** 56 px between sections, 16 px from a section title to its content, 32 px between the groups
+  of a section, 12 px from a group's title to its rows. Counts are readable pills.
+- **No orphans.** A wrapping group of 3 to 6 controls never leaves one alone on its last line: choose the columns by
+  the room (quality cards 5 / 3 / 2 with the last across, drop odds 4 / 2 / 1, similar items by count), or stack them
+  all (the hero's tags), or make the last one take the whole line. *Checked (orphan).*
+- **No duplicate content.** A fact is told once: a potion's effect in the stats box, not again in "Efeito"; a rune's
+  effect is its hero text.
+- **The hero.** The icon sized to the hero, no dead area (the tags run under icon and text), the description at its own
+  width up to a readable measure. On a wide screen the stats box sits beside the hero from the top.
+- **Dense rows.** One right-side group with consistent spacing (a drop row: quality mark, amount, tier in fixed
+  slots). On a wide row the text wraps and the group stays at the right edge; on a narrow one the group always takes its
+  own line.
+- **No overflow.** No horizontal page scroll; nothing clipped. A row that scrolls sideways on purpose (the filter chips
+  on a phone) is listed by the check, not failed. *Checked (overflow).*
+
+`node scripts/check-layout.mjs --sweep` runs the orphan and overflow rules at every 40 px from 360 to 1440 px;
+`--only list,item-rune` limits the pages, `--dist DIR` measures another build.
 
 ## Seeing every component
 

@@ -59,8 +59,6 @@ const runesForThis = items.filter((o) => o.rune?.fitsItems.includes(item.id));
 const spells = [...new Set(item.versions.map((x) => x.spell).filter(Boolean))] as string[];
 const ingotSteps = ITEMS.forging.filter((f) => f.ingot === item.id);
 const similar = similarItems(items, item);
-/** A game subtype's wiki category (a rune's "fits" tags take that category's icon). */
-const CAT_OF_SUB = new Map(items.map((i) => [i.subtype.key, i.category]));
 /** One item's sprite per subtype (the first by id): a rune's "fits" chips show what each type looks like. */
 const SUB_ICON = new Map<string, { src: string; width: number; height: number; pixel: true }>();
 for (const o of [...items].sort((a, b) => a.id.localeCompare(b.id))) {

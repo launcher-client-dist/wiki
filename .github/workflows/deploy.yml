@@ -33,6 +33,10 @@ jobs:
         run: npm run build
       - name: Site check (titles, canonical, hreflang pairs, links, sitemap)
         run: npm run check:site
+      - name: Layout check (header edges, equal rows, icon columns, orphans, overflow; Chrome on the runner)
+        run: npm run check:layout
+        env:
+          CHROME_PATH: /usr/bin/google-chrome
       - if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v5
         with:

@@ -73,7 +73,7 @@ const chromePath = () => {
 };
 
 // ---- the measurements, run in the page
-function measure(opts) {
+function measure() {
   const out = [];
   const fail = (rule, detail) => out.push({ rule, detail });
   const vis = (el) => { const r = el.getBoundingClientRect(); const s = getComputedStyle(el); return r.width > 0 && r.height > 0 && s.visibility !== "hidden" && s.display !== "none"; };
@@ -223,7 +223,7 @@ for (const vp of viewports) {
     const want = p.status ?? 200;
     if (resp.status() !== want) { failures.push({ rule: "expect", where, detail: `${p.url} answered ${resp.status()}, expected ${want}` }); continue; }
     await page.evaluate(() => document.fonts.ready);
-    const { out, seen, scrollers } = await page.evaluate(measure, {});
+    const { out, seen, scrollers } = await page.evaluate(measure);
     for (const f of out) if (!SWEEP || f.rule === "orphan" || f.rule === "overflow") failures.push({ ...f, where });
     for (const s of scrollers) scrollRows.set(s, (scrollRows.get(s) ?? 0) + 1);
     if (!SWEEP) {
