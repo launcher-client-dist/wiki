@@ -18,7 +18,7 @@ function fixture(): { file: ItemsFile; stubs: StubEntity[] } {
   });
   const ore = base("test-ore", "Test Ore");
   ore.sources.drops.push({ monster: "monster:m1", tier: "raro", amount: [1, 2], quality: false });
-  ore.sources.shops.push({ npc: "npc:n1", price: 50, stock: { kind: "unlimited" }, spoiler: false, where: null });
+  ore.sources.shops.push({ npc: "npc:n1", price: 50, stock: { kind: "unlimited" }, spoiler: false, afterQuests: [], where: null });
   const bar = base("test-bar", "Test Bar");
   bar.sources.recipes.push({ method: "join", result: "test-bar", ingredients: [{ item: "test-ore", n: 1, tool: false }] });
   bar.sources.quests.push({ quest: "quest:q1", amount: 1 });
@@ -99,5 +99,20 @@ describe("the exported data never carries a drop rate", () => {
     for (const i of data.items) for (const d of i.sources.drops) {
       assert.deepEqual(Object.keys(d).sort(), ["amount", "monster", "quality", "tier"], `${i.id}: ${JSON.stringify(d)}`);
     }
+  });
+});
+
+describe("NPCs that appear after a quest", () => {
+  test("only a spoilered shop or buyer names quests, and every one it names is a known quest", () => {
+    const data = JSON.parse(readFileSync(new URL("../src/data/items.json", import.meta.url), "utf8")) as ItemsFile;
+    const known = new Set((JSON.parse(readFileSync(new URL("../src/data/entities.json", import.meta.url), "utf8")) as { entities: { ref: string }[] }).entities.map((e) => e.ref));
+    let gated = 0;
+    for (const i of data.items) for (const s of [...i.sources.shops, ...i.sources.buyers]) {
+      assert.ok(Array.isArray(s.afterQuests), `${i.id}: ${s.npc} has no afterQuests`);
+      if (!s.spoiler) assert.deepEqual(s.afterQuests, [], `${i.id}: ${s.npc} names a quest but isn't behind a spoiler`);
+      for (const q of s.afterQuests) assert.ok(q.startsWith("quest:") && known.has(q), `${i.id}: ${q}`);
+      if (s.spoiler) gated++;
+    }
+    assert.ok(gated > 0, "no quest-opened NPC at all: the export lost them");
   });
 });

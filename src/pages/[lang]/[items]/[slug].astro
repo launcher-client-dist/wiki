@@ -21,7 +21,7 @@ import { HREFLANG, LANGS, otherLang, type Lang } from "../../../lib/i18n.ts";
 import { absoluteUrl, homePath, SECTIONS, sectionPath } from "../../../lib/routes.ts";
 import { ITEMS, siteData } from "../../../lib/site-registry.ts";
 import { appearsIn } from "../../../lib/entities/appears.ts";
-import { CLASS_KEYS, STAT_KEYS, goldPerOz, primaryVersion, statLabel, type ItemData, type Place, type Recipe, type StatKey } from "../../../lib/items/data.ts";
+import { CLASS_KEYS, STAT_KEYS, goldPerOz, primaryVersion, statLabel, type Place, type Recipe, type StatKey } from "../../../lib/items/data.ts";
 import { metaDescription, num, oneInText, oz, similarItems, topStats } from "../../../lib/items/view.ts";
 
 export async function getStaticPaths() {
@@ -48,6 +48,7 @@ const src = item.sources;
 const shopsOpen = src.shops.filter((s) => !s.spoiler);
 const shopsGated = src.shops.filter((s) => s.spoiler);
 const buyersOpen = src.buyers.filter((s) => !s.spoiler);
+const buyersGated = src.buyers.filter((s) => s.spoiler);
 const anyQualityDrop = src.drops.some((d) => d.quality);
 const runesForThis = items.filter((o) => o.rune?.fitsItems.includes(item.id));
 const spells = [...new Set(item.versions.map((x) => x.spell).filter(Boolean))] as string[];
@@ -185,8 +186,8 @@ const jsonLd = [{
               )}
               {shopsGated.length > 0 && (
                 <Spoiler title={ti.spoilerShop}>
-                  <ul class="plain">
-                    {shopsGated.map((s) => <li><EntityLink to={s.npc} /> · <span class="num">{num(s.price, lang)}</span> {ti.gold}{s.where && <> · <MapLink variant="inline" href={s.where.link} label={ti.mapLink} /></>}</li>)}
+                  <ul class="plain gated" data-section="shops-after-quest">
+                    {shopsGated.map((s) => <li><EntityLink to={s.npc} /> · <span class="num">{num(s.price, lang)}</span> {ti.gold}{s.where && <> · <MapLink variant="inline" href={s.where.link} label={ti.mapLink} /></>}{s.afterQuests.length > 0 && <span class="q">{ti.afterQuest}: {s.afterQuests.map((q, i) => <>{i > 0 && ` ${ti.or} `}<EntityLink to={q} /></>)}</span>}</li>)}
                   </ul>
                 </Spoiler>
               )}
@@ -233,7 +234,7 @@ const jsonLd = [{
           </section>
         )}
 
-        {(buyersOpen.length > 0 || item.uses.recipes.length > 0 || item.uses.questsRequire.length > 0 || item.rune || runesForThis.length > 0 || item.forgeable || ingotSteps.length > 0 || spells.length > 0) && (
+        {(src.buyers.length > 0 || item.uses.recipes.length > 0 || item.uses.questsRequire.length > 0 || item.rune || runesForThis.length > 0 || item.forgeable || ingotSteps.length > 0 || spells.length > 0) && (
           <section class="block" aria-labelledby="h-use">
             <h2 id="h-use">{ti.useTitle}</h2>
             <div class="panels">
@@ -275,6 +276,13 @@ const jsonLd = [{
                     </ListRow>
                   ))}
                 </ListPanel>
+              )}
+              {buyersGated.length > 0 && (
+                <Spoiler title={ti.spoilerBuyer}>
+                  <ul class="plain gated" data-section="buyers-after-quest">
+                    {buyersGated.map((b) => <li><EntityLink to={b.npc} /> · <span class="num">{num(b.price, lang)}</span> {ti.gold}{b.where && <> · <MapLink variant="inline" href={b.where.link} label={ti.mapLink} /></>}{b.afterQuests.length > 0 && <span class="q">{ti.afterQuest}: {b.afterQuests.map((q, i) => <>{i > 0 && ` ${ti.or} `}<EntityLink to={q} /></>)}</span>}</li>)}
+                  </ul>
+                </Spoiler>
               )}
               {item.uses.questsRequire.length > 0 && (
                 <Spoiler title={ti.spoilerQuestNeed}>
@@ -349,6 +357,7 @@ const jsonLd = [{
             <div class="switch">
               <span class="label">{ti.classSwitch}</span>
               <VariantSwitch scope="item-page" label={ti.classSwitch} variants={[{ key: "base", label: ti.classBase }, ...CLASS_KEYS.map((k) => ({ key: k, label: ti.classes[k] }))]} />
+              <p class="traits-note" data-section="traits-note">{ti.traitsNote}</p>
             </div>
           )}
           {statKeys.length > 0 ? (
@@ -431,6 +440,9 @@ const jsonLd = [{
 
   .switch { padding: 12px 14px; border-bottom: var(--bw) solid var(--hard); display: grid; gap: 8px; }
   .switch .label { font-size: var(--fs-xs); font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; }
+  .switch .traits-note { margin: 0; font-size: var(--fs-xs); color: var(--text-muted); }
+  .gated li { padding: 4px 0; }
+  .gated .q { display: block; font-size: var(--fs-sm); color: var(--text-muted); }
   .stats, .facts { margin: 0; display: grid; }
   .stats div, .facts div { display: flex; justify-content: space-between; gap: 12px; padding: 9px 16px; }
   .stats div + div, .facts div + div { border-top: 1px solid var(--row-border); }

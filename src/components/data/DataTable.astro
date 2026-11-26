@@ -49,8 +49,10 @@ interface Props {
   rangeLabel?: string;
   variants?: Variant[];
   variantLabel?: string;
+  /** One short line under the switch (what it leaves out). */
+  variantNote?: string;
 }
-const { id, lang, caption, columns, filters = [], defaultView = "table", sort, total, ranges = [], rangeLabel = "", variants = [], variantLabel = "" } = Astro.props;
+const { id, lang, caption, columns, filters = [], defaultView = "table", sort, total, ranges = [], rangeLabel = "", variants = [], variantLabel = "", variantNote = "" } = Astro.props;
 const t = ui(lang);
 const strings = { count: t.tableCount, countAll: t.tableCountAll };
 ---
@@ -82,6 +84,7 @@ const strings = { count: t.tableCount, countAll: t.tableCountAll };
         <div class="fgroup" role="group" aria-label={variantLabel}>
           <span class="flabel">{variantLabel}</span>
           <div class="chips seg">{variants.map((v, i) => <button type="button" class="chip" data-variant={v.key} aria-pressed={i === 0 ? "true" : "false"}>{v.label}</button>)}</div>
+          {variantNote && <p class="vnote">{variantNote}</p>}
         </div>
       )}
       {ranges.length > 0 && (
@@ -267,6 +270,7 @@ const strings = { count: t.tableCount, countAll: t.tableCountAll };
   .chips { display: flex; gap: 6px; flex-wrap: wrap; padding-bottom: 4px; }
   @media (max-width: 719px) { .chips { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; padding: 2px 2px 6px; } }
 
+  .vnote { grid-column: 2; margin: -4px 0 0; font-size: var(--fs-xs); color: var(--text-muted); }
   .range { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
   .range select, .range input { height: 36px; border-radius: var(--r-m); border: var(--bw) solid var(--border); background: var(--input-bg); color: var(--text);
     font: 500 var(--fs-sm) / 1 var(--font-body); padding: 0 10px; box-shadow: var(--shadow-1); }

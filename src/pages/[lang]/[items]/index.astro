@@ -55,7 +55,7 @@ const CLASSED: StatKey[] = ["armor", "defense", "attackSpeed", "health", "mana",
         { key: "slot", label: ti.filterSlot, options: SLOT_ORDER.filter((s) => items.some((i) => i.slots.includes(s))).map((s) => ({ value: s, label: ti.slot[s as keyof typeof ti.slot], count: count(s, (i) => i.slots) })) },
         { key: "where", label: ti.filterWhere, options: SOURCE_KINDS.map((k) => ({ value: k, label: ti.source[k], count: count(k, sourceKinds) })).filter((o) => o.count) },
       ]}
-      variants={[{ key: "base", label: ti.classBase }, ...CLASS_KEYS.map((k) => ({ key: k, label: ti.classes[k] }))]} variantLabel={ti.filterClass}
+      variants={[{ key: "base", label: ti.classBase }, ...CLASS_KEYS.map((k) => ({ key: k, label: ti.classes[k] }))]} variantLabel={ti.filterClass} variantNote={ti.traitsNote}
       ranges={STAT_KEYS.map((k) => ({ key: k, label: statLabel(k)[lang] }))} rangeLabel={ti.filterStat}>
       {rows.map((item) => {
         const v = primaryVersion(item);

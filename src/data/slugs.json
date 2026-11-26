@@ -2431,6 +2431,10 @@
   "en": "love-letter-delivery",
   "pt": "entrega-da-carta-de-amor"
  },
+ "quest:q1008": {
+  "en": "a-new-rat",
+  "pt": "um-novo-rato"
+ },
  "quest:q101": {
   "en": "digger-cave-ingot",
   "pt": "barra-da-caverna-dos-diggers"
@@ -2691,6 +2695,10 @@
   "en": "church-investigated",
   "pt": "igreja-investigada"
  },
+ "quest:q1208": {
+  "en": "champion-defeated",
+  "pt": "campeao-derrotado"
+ },
  "quest:q1209": {
   "en": "loke-avenger",
   "pt": "vingador-de-loke"
@@ -2702,6 +2710,14 @@
  "quest:q1210": {
   "en": "balder-hunt",
   "pt": "cacada-de-balder"
+ },
+ "quest:q1212": {
+  "en": "brean-s-worries",
+  "pt": "preocupacoes-de-brean"
+ },
+ "quest:q1216": {
+  "en": "morrigan-s-gift",
+  "pt": "presente-de-morrigan"
  },
  "quest:q1219": {
   "en": "a-blessed-reward",

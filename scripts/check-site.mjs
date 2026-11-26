@@ -161,6 +161,17 @@ if (!pages.get("/en/404/")?.noindex) fail("/en/404/", "missing or not noindex");
     for (const t of gameTexts) html = html.split(t).join("");
     const hit = html.match(/.{0,40}\d\s?%.{0,20}/);
     if (hit) fail(p.url, `a percentage outside the game's own text: "${hit[0]}"`);
+    // a class switch always carries its "no trait effects" line
+    if (p.html.includes("data-vswitch") && !p.html.includes('data-section="traits-note"')) fail(p.url, "a class switch without the traits line");
+  }
+  // an NPC that appears after a quest shows behind its spoiler, on both languages' pages
+  for (const i of itemsFile.items) {
+    for (const [list, section] of [[i.sources.shops, "shops-after-quest"], [i.sources.buyers, "buyers-after-quest"]]) {
+      if (!list.some((s) => s.spoiler)) continue;
+      for (const url of [`/pt/itens/${i.slug.pt}/`, `/en/items/${i.slug.en}/`]) {
+        if (!pages.get(url)?.html.includes(`data-section="${section}"`)) fail(url, `a quest-opened NPC but no ${section} spoiler`);
+      }
+    }
   }
   if (pages.has("/pt/kit/")) {
     const ingot = itemsFile.items.find((i) => i.id === "iron-ingot");

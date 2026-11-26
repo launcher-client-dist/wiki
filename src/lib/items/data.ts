@@ -87,8 +87,9 @@ export interface ItemData {
   versions: Version[];
   sources: {
     drops: { monster: EntityRef; tier: TierKey; amount: [number, number]; quality: boolean }[];
-    shops: { npc: EntityRef; price: number; stock: { kind: "unlimited" | "limited" | "blackMarket"; n?: number }; spoiler: boolean; where: Where | null }[];
-    buyers: { npc: EntityRef; price: number; spoiler: boolean; where: Where | null }[];
+    /** `spoiler`: the NPC appears (or trades) only after a quest; `afterQuests` names it where it is known. */
+    shops: { npc: EntityRef; price: number; stock: { kind: "unlimited" | "limited" | "blackMarket"; n?: number }; spoiler: boolean; afterQuests: EntityRef[]; where: Where | null }[];
+    buyers: { npc: EntityRef; price: number; spoiler: boolean; afterQuests: EntityRef[]; where: Where | null }[];
     quests: { quest: EntityRef; amount: number }[];
     map: { x: number; y: number; z: number; place: Place; link: string }[];
     recipes: Recipe[];

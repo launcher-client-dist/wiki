@@ -4161,6 +4161,17 @@
   },
   {
    "name": {
+    "en": "A New Rat",
+    "pt": "Um Novo Rato"
+   },
+   "ref": "quest:q1008",
+   "slug": {
+    "en": "a-new-rat",
+    "pt": "um-novo-rato"
+   }
+  },
+  {
+   "name": {
     "en": "Digger Cave Ingot",
     "pt": "Barra da Caverna dos Diggers"
    },
@@ -4876,6 +4887,17 @@
   },
   {
    "name": {
+    "en": "Champion Defeated",
+    "pt": "Campeão Derrotado"
+   },
+   "ref": "quest:q1208",
+   "slug": {
+    "en": "champion-defeated",
+    "pt": "campeao-derrotado"
+   }
+  },
+  {
+   "name": {
     "en": "Loke Avenger",
     "pt": "Vingador de Loke"
    },
@@ -4905,6 +4927,28 @@
    "slug": {
     "en": "balder-hunt",
     "pt": "cacada-de-balder"
+   }
+  },
+  {
+   "name": {
+    "en": "Brean's Worries",
+    "pt": "Preocupações de Brean"
+   },
+   "ref": "quest:q1212",
+   "slug": {
+    "en": "brean-s-worries",
+    "pt": "preocupacoes-de-brean"
+   }
+  },
+  {
+   "name": {
+    "en": "Morrigan's Gift",
+    "pt": "Presente de Morrigan"
+   },
+   "ref": "quest:q1216",
+   "slug": {
+    "en": "morrigan-s-gift",
+    "pt": "presente-de-morrigan"
    }
   },
   {
