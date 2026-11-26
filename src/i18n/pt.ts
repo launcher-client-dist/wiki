@@ -181,6 +181,11 @@ export const pt = {
     methodTip: { join: "Juntar: os dois itens da receita, um com o outro.", cook: "Cozinhar: no fogo, com uma panela de ferro.", cut: "Cortar: com uma faca." },
     toolWord: "ferramenta",
     toolTip: "A ferramenta não se gasta na receita.",
+    meta: {
+      dropped1: "dropado por 1 monstro", droppedN: "dropado por {n} monstros", sold1: "vendido por 1 NPC", soldN: "vendido por {n} NPCs",
+      recipe: "feito por receita", map: "encontrado no mapa", quest: "recompensa de missão",
+      lead: "{name} em Opengea: {type}", tail: " Atributos, de onde vem e quanto vale.", pad: " Na wiki de Opengea.",
+    },
     stats: "Atributos",
     weight: "Peso",
     stack: "Empilha até",

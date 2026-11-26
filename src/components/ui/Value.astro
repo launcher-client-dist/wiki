@@ -8,7 +8,7 @@
  */
 import GameIcon from "./GameIcon.astro";
 import { ui, fill } from "../../i18n/index.ts";
-import type { Lang } from "../../lib/i18n.ts";
+import { LOCALE, type Lang } from "../../lib/i18n.ts";
 interface Props {
   kind: "gold" | "goldoz" | "weight" | "amount" | "time" | "stock" | "stockUnlimited" | "blackMarket";
   n?: number | string;
@@ -18,7 +18,7 @@ interface Props {
 }
 const { kind, n, lang, best = false, size = "normal" } = Astro.props;
 const t = ui(lang).value;
-const text = typeof n === "number" ? n.toLocaleString(lang === "pt" ? "pt-BR" : "en") : (n ?? "");
+const text = typeof n === "number" ? n.toLocaleString(LOCALE[lang]) : (n ?? "");
 const ICON: Record<Props["kind"], string> = { gold: "gold", goldoz: "gold", weight: "stat-weight", amount: "stack", time: "time", stock: "stack",
   stockUnlimited: "stack", blackMarket: "gold" };
 const unit = { gold: t.gold, goldoz: t.goldoz, weight: "oz", amount: "", time: "s", stock: t.perRestock, stockUnlimited: t.unlimited, blackMarket: fill(t.blackMarket, { n: text }) }[kind];

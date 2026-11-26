@@ -30,11 +30,11 @@ import DataTable from "../../components/data/DataTable.astro";
 import DataRow from "../../components/data/DataRow.astro";
 import DataCell from "../../components/data/DataCell.astro";
 import { ui } from "../../i18n/index.ts";
-import { LANGS, otherLang, type Lang } from "../../lib/i18n.ts";
+import { DEFAULT_LANG, LANGS, altLang, type Lang } from "../../lib/i18n.ts";
 import { ENTITY_KINDS } from "../../lib/entities/types.ts";
 import { TIERS } from "../../lib/entities/tiers.ts";
 import { getRegistry, KIT_ENABLED } from "../../lib/site-registry.ts";
-import { homePath } from "../../lib/routes.ts";
+import { alternatesBy, homePath } from "../../lib/routes.ts";
 
 export function getStaticPaths() {
   return KIT_ENABLED ? LANGS.map((lang) => ({ params: { lang } })) : [];
@@ -45,13 +45,14 @@ const KIND_ICON: Record<string, string> = { item: "cat-weapon", monster: "src-dr
 const t = ui(lang);
 const registry = await getRegistry();
 const fixtures = registry.all().filter((e) => !e.ref.startsWith("guide:"));
-const L = (pt: string, en: string) => (lang === "pt" ? pt : en);
+/** The gallery's own words: Portuguese for pt, English for every other language (a page for staff, not indexed). */
+const L = (pt: string, en: string) => (lang === DEFAULT_LANG ? pt : en);
 const kinds = [...new Set(fixtures.map((e) => e.ref.split(":")[0]!))];
 const swatches = ["--bg", "--surface", "--surface-2", "--accent", "--sky", "--sun", "--danger", "--magic", "--text", "--text-muted", "--hard", "--border"];
 const scene = `data:image/svg+xml,${encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 24" shape-rendering="crispEdges"><rect width="64" height="24" fill="#7cc4ff"/><rect y="8" width="64" height="16" fill="#b9e0ff"/><rect x="6" y="4" width="8" height="2" fill="#fff"/><rect x="8" y="2" width="4" height="2" fill="#fff"/><rect x="44" y="6" width="10" height="2" fill="#fff"/><rect y="16" width="20" height="8" fill="#5cb733"/><rect x="20" y="18" width="44" height="6" fill="#4fa52a"/><rect x="40" y="12" width="12" height="6" fill="#4fa52a"/><rect y="22" width="64" height="2" fill="#8a5a2b"/></svg>')}`;
 ---
 <PageShell lang={lang} title={L("Componentes", "Components")} description={L("Galeria de componentes da wiki, com dados inventados.", "The wiki's component gallery, every block with made-up data.")}
-  alternates={{ pt: "/pt/kit/", en: "/en/kit/" }} noindex
+  alternates={alternatesBy((l) => `/${l}/kit/`)} noindex
   crumbs={[{ label: t.home, href: homePath(lang) }, { label: L("Componentes", "Components") }]}>
   <div class="container kit">
     <h1>{L("Componentes", "Components")}</h1>
@@ -124,17 +125,17 @@ const scene = `data:image/svg+xml,${encodeURIComponent('<svg xmlns="http://www.w
 
     <section><h2>DataTable</h2>
       <DataTable id="kit-table" lang={lang} caption={L("Entidades de exemplo", "Example entities")} total={fixtures.length} sort={{ key: "name", dir: "asc" }}
-        columns={[{ key: "name", label: L("Nome", "Name") }, { key: "kind", label: L("Tipo", "Kind") }, { key: "refs", label: L("Citado por", "Referenced by"), align: "end" }, { key: "other", label: ui(otherLang(lang)).langName, sortable: false, hideOnPhone: true }]}
+        columns={[{ key: "name", label: L("Nome", "Name") }, { key: "kind", label: L("Tipo", "Kind") }, { key: "refs", label: L("Citado por", "Referenced by"), align: "end" }, { key: "other", label: ui(altLang(lang)).langName, sortable: false, hideOnPhone: true }]}
         filters={[{ key: "kind", label: L("Tipo", "Kind"), options: kinds.map((k) => ({ value: k, label: t.kindSingular[k as keyof typeof t.kindSingular], count: fixtures.filter((e) => e.ref.startsWith(`${k}:`)).length, icon: KIND_ICON[k] ?? "xp" })) }]}>
         {fixtures.map((e) => {
           const info = registry.link(e.ref, lang);
           const n = registry.reverse(e.ref).length;
           return (
-            <DataRow search={`${e.name.pt} ${e.name.en}`} sort={{ name: info.name, kind: t.kindSingular[info.kind], refs: n }} filters={{ kind: info.kind }}>
+            <DataRow search={LANGS.map((l) => e.name[l]).join(" ")} sort={{ name: info.name, kind: t.kindSingular[info.kind], refs: n }} filters={{ kind: info.kind }}>
               <DataCell label={L("Nome", "Name")} primary><span class="name-cell"><IconSlot icon={info.icon} kind={info.kind} size={36} /><EntityLink to={e.ref} icon={false} /></span></DataCell>
               <DataCell label={L("Tipo", "Kind")}>{t.kindSingular[info.kind]}</DataCell>
               <DataCell label={L("Citado por", "Referenced by")} align="end"><span class="num">{n}</span></DataCell>
-              <DataCell label={ui(otherLang(lang)).langName} hideOnPhone><span class="muted">{info.altName ?? "—"}</span></DataCell>
+              <DataCell label={ui(altLang(lang)).langName} hideOnPhone><span class="muted">{info.altName ?? "—"}</span></DataCell>
             </DataRow>
           );
         })}

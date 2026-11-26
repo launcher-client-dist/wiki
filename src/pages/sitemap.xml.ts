@@ -3,7 +3,7 @@
  * even where the two languages' slugs differ. Built from the route table and the registry, like the pages.
  */
 import type { APIRoute } from "astro";
-import { HREFLANG, LANGS, type Lang } from "../lib/i18n.ts";
+import { DEFAULT_LANG, HREFLANG, LANGS, type Lang } from "../lib/i18n.ts";
 import { absoluteUrl, homeAlternates, sectionAlternates, SHIPPED_KINDS, type Alternates } from "../lib/routes.ts";
 import { siteData } from "../lib/site-registry.ts";
 
@@ -24,7 +24,7 @@ export const GET: APIRoute = async () => {
   }
   const urls = pages.flatMap((p) => LANGS.map((lang) => {
     const links = LANGS.map((l) => `    <xhtml:link rel="alternate" hreflang="${HREFLANG[l]}" href="${absoluteUrl(p.alternates[l])}"/>`).join("\n");
-    const xdefault = `    <xhtml:link rel="alternate" hreflang="x-default" href="${absoluteUrl(p.alternates.pt)}"/>`;
+    const xdefault = `    <xhtml:link rel="alternate" hreflang="x-default" href="${absoluteUrl(p.alternates[DEFAULT_LANG])}"/>`;
     const lastmod = p.lastmod ? `\n    <lastmod>${p.lastmod}</lastmod>` : "";
     return `  <url>\n    <loc>${absoluteUrl(p.alternates[lang])}</loc>${lastmod}\n${links}\n${xdefault}\n  </url>`;
   }));

@@ -183,6 +183,11 @@ export const en: UiStrings = {
     methodTip: { join: "Join: the recipe's two items, one with the other.", cook: "Cook: over a fire, with an iron pan.", cut: "Cut: with a knife." },
     toolWord: "tool",
     toolTip: "The tool isn't used up by the recipe.",
+    meta: {
+      dropped1: "dropped by 1 monster", droppedN: "dropped by {n} monsters", sold1: "sold by 1 NPC", soldN: "sold by {n} NPCs",
+      recipe: "made by a recipe", map: "found on the map", quest: "a quest reward",
+      lead: "{name} in Opengea: {type}", tail: " Stats, where it comes from and its value.", pad: " On the Opengea wiki.",
+    },
     stats: "Stats",
     weight: "Weight",
     stack: "Stacks to",

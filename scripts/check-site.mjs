@@ -8,6 +8,16 @@
 //   - the social image exists and is referenced by an absolute URL
 import { readFileSync, readdirSync, existsSync, statSync } from "node:fs";
 import { join, relative, sep } from "node:path";
+// the languages, from the same table the site uses
+const LANG_TABLE = JSON.parse(readFileSync(new URL("../src/lib/languages.json", import.meta.url), "utf8"));
+const LANG_CODES = Object.keys(LANG_TABLE.languages);
+const HREF = Object.fromEntries(LANG_CODES.map((l) => [l, LANG_TABLE.languages[l].hreflang]));
+const DEFAULT_HREF = HREF[LANG_TABLE.default];
+const HREFS = LANG_CODES.map((l) => HREF[l]);
+// each language's item URLs, from the route table (Node strips the types)
+const { SECTIONS } = await import("../src/lib/routes.ts");
+const ITEM_DIR = Object.fromEntries(LANG_CODES.map((l) => [l, `/${l}/${SECTIONS.item.slug[l]}/`]));
+const itemUrls = (i) => LANG_CODES.map((l) => `${ITEM_DIR[l]}${i.slug[l]}/`);
 
 const SITE = "https://wiki.opengea.tech";
 const DIST = new URL("../dist/", import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, "$1");
@@ -72,11 +82,11 @@ for (const p of pages.values()) {
   if (h1 !== 1) fail(p.url, `${h1} <h1> elements (want exactly 1)`);
   if (p.noindex) continue;
   if (p.canonical !== SITE + p.url) fail(p.url, `canonical is ${p.canonical ?? "missing"}, want ${SITE + p.url}`);
-  for (const lang of ["pt-BR", "en", "x-default"]) if (!p.alternates[lang]) fail(p.url, `no hreflang ${lang}`);
-  const self = p.lang === "pt-BR" ? "pt-BR" : "en";
+  for (const lang of [...HREFS, "x-default"]) if (!p.alternates[lang]) fail(p.url, `no hreflang ${lang}`);
+  const self = HREFS.includes(p.lang) ? p.lang : DEFAULT_HREF;
   if (p.alternates[self] && p.alternates[self] !== SITE + p.url) fail(p.url, `hreflang ${self} is ${p.alternates[self]}, not this page`);
-  if (p.alternates["x-default"] && p.alternates["x-default"] !== p.alternates["pt-BR"]) fail(p.url, "x-default is not the pt-BR page");
-  for (const lang of ["pt-BR", "en"]) {
+  if (p.alternates["x-default"] && p.alternates["x-default"] !== p.alternates[DEFAULT_HREF]) fail(p.url, `x-default is not the ${DEFAULT_HREF} page`);
+  for (const lang of HREFS) {
     const href = p.alternates[lang];
     if (!href?.startsWith(SITE)) continue;
     const twin = pages.get(href.slice(SITE.length));
@@ -127,7 +137,7 @@ else {
     const page = pages.get(loc.slice(SITE.length));
     if (!page) fail("sitemap.xml", `${loc}: no such page`);
     else if (page.noindex) fail("sitemap.xml", `${loc}: a noindex page`);
-    for (const lang of ["pt-BR", "en", "x-default"]) {
+    for (const lang of [...HREFS, "x-default"]) {
       const alt = b.match(new RegExp(`hreflang="${lang}" href="([^"]+)"`))?.[1];
       if (!alt) fail("sitemap.xml", `${loc}: no ${lang} alternate`);
       else if (page && !page.noindex && alt !== page.alternates[lang]) fail("sitemap.xml", `${loc}: ${lang} alternate ${alt} differs from the page's ${page.alternates[lang]}`);
@@ -141,8 +151,8 @@ if (!existsSync(join(DIST, "og", "default.png"))) fail("og/default.png", "missin
 if (readFileSync(join(DIST, "CNAME"), "utf8").trim() !== "wiki.opengea.tech") fail("CNAME", "not wiki.opengea.tech");
 if (!pages.has("/404.html")) fail("404.html", "missing");
 else if (!pages.get("/404.html").noindex) fail("404.html", "should be noindex");
-else if (!pages.get("/404.html").html.includes('fetch("/en/404/")')) fail("404.html", "lost its swap to the English 404");
-if (!pages.get("/en/404/")?.noindex) fail("/en/404/", "missing or not noindex");
+else if (!pages.get("/404.html").html.includes('"/404/"')) fail("404.html", "lost its swap to the other languages' 404s");
+for (const l of LANG_CODES.filter((c) => c !== LANG_TABLE.default)) if (!pages.get(`/${l}/404/`)?.noindex) fail(`/${l}/404/`, "missing or not noindex");
 
 // ---------------------------------------------------------------------------------------------- item pages
 // No drop rate on any item page: no "<digits>%" anywhere in an item page (body, meta, JSON-LD) outside the game's own
@@ -151,10 +161,10 @@ if (!pages.get("/en/404/")?.noindex) fail("/en/404/", "missing or not noindex");
 {
   const itemsFile = JSON.parse(readFileSync(new URL("../src/data/items.json", import.meta.url), "utf8"));
   const esc = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
-  const gameTexts = [...new Set(itemsFile.items.flatMap((i) => i.versions.flatMap((v) => [v.text.pt, v.text.en])).filter((t) => t && t.includes("%")))]
+  const gameTexts = [...new Set(itemsFile.items.flatMap((i) => i.versions.flatMap((v) => LANG_CODES.map((l) => v.text[l]))).filter((t) => t && t.includes("%")))]
     .flatMap((t) => [t, esc(t), JSON.stringify(t).slice(1, -1)]);
-  const itemPages = [...pages.values()].filter((p) => /^\/(pt\/itens|en\/items)\/[^/]+\/$/.test(p.url));
-  if (itemPages.length !== itemsFile.items.length * 2) fail("items", `${itemPages.length} item pages for ${itemsFile.items.length} items (want 2 each)`);
+  const itemPages = [...pages.values()].filter((p) => Object.values(ITEM_DIR).some((d) => p.url.startsWith(d) && /^[^/]+\/$/.test(p.url.slice(d.length))));
+  if (itemPages.length !== itemsFile.items.length * LANG_CODES.length) fail("items", `${itemPages.length} item pages for ${itemsFile.items.length} items (want ${LANG_CODES.length} each)`);
   for (const p of itemPages) {
     // the page's text, meta and JSON-LD: CSS (style blocks and attributes) left out
     let html = p.html.replace(/<style[\s\S]*?<\/style>/gi, "").replace(/\sstyle="[^"]*"/gi, "");
@@ -169,7 +179,7 @@ if (!pages.get("/en/404/")?.noindex) fail("/en/404/", "missing or not noindex");
     for (const [list, section] of [[i.sources.shops, "shops-after-quest"], [i.sources.buyers, "buyers-after-quest"]]) {
       if (!list.some((s) => s.spoiler)) continue;
       const alsoTitle = list.some((s) => !s.spoiler);   // "Também ..." only under an open list it adds to
-      for (const url of [`/pt/itens/${i.slug.pt}/`, `/en/items/${i.slug.en}/`]) {
+      for (const url of itemUrls(i)) {
         const html = pages.get(url)?.html ?? "";
         if (!html.includes(`data-section="${section}"`)) fail(url, `a quest-opened NPC but no ${section} spoiler`);
         const also = section === "shops-after-quest" ? /Também vendido por|Also sold by/ : /Também comprado por|Also bought by/;
@@ -180,7 +190,7 @@ if (!pages.get("/en/404/")?.noindex) fail("/en/404/", "missing or not noindex");
   // a potion and its empty link both ways; a map object (a well) in a recipe shows as plain text, never an item link
   for (const i of itemsFile.items) {
     const hasObject = [...i.sources.recipes, ...i.uses.recipes].some((r) => r.ingredients.some((g) => g.object));
-    for (const url of [`/pt/itens/${i.slug.pt}/`, `/en/items/${i.slug.en}/`]) {
+    for (const url of itemUrls(i)) {
       const html = pages.get(url)?.html ?? "";
       if (i.sources.leftover.length && !html.includes('data-section="leftover"')) fail(url, "left after drinking a potion, but no \"leftover\" panel");
       if (i.uses.leavesEmpty.length && !html.includes('data-section="leaves"')) fail(url, "leaves an empty when drunk, but no \"leaves\" panel");
@@ -197,14 +207,16 @@ if (!pages.get("/en/404/")?.noindex) fail("/en/404/", "missing or not noindex");
   for (const i of itemsFile.items) {
     const v = i.versions.find((x) => x.type === i.primary) ?? i.versions[0];
     if (!Object.values(v.stats).some(Boolean)) continue;
-    const html = pages.get(`/pt/itens/${i.slug.pt}/`)?.html ?? "";
-    if (!html.includes('data-section="statlist"') || !html.includes('src="/ui/stat-')) fail(`/pt/itens/${i.slug.pt}/`, "has stats but no stat list with the game's icons");
+    for (const url of itemUrls(i)) {
+      const html = pages.get(url)?.html ?? "";
+      if (!html.includes('data-section="statlist"') || !html.includes('src="/ui/stat-')) fail(url, "has stats but no stat list with the game's icons");
+    }
   }
   // a monster that isn't an ordinary spawn (a lever boss, a timed boss, a placed or travel-called one) says how it appears
   const stubs = new Map(JSON.parse(readFileSync(new URL("../src/data/entities.json", import.meta.url), "utf8")).entities.map((e) => [e.ref, e]));
   for (const i of itemsFile.items) {
     const hows = new Set(i.sources.drops.map((d) => stubs.get(d.monster)?.appears?.how).filter(Boolean));
-    for (const how of hows) for (const url of [`/pt/itens/${i.slug.pt}/`, `/en/items/${i.slug.en}/`]) {
+    for (const how of hows) for (const url of itemUrls(i)) {
       if (!pages.get(url)?.html.includes(`data-appears="${how}"`)) fail(url, `a drop from a "${how}" monster without its how-it-appears line`);
     }
   }
@@ -225,16 +237,17 @@ if (!pages.get("/en/404/")?.noindex) fail("/en/404/", "missing or not noindex");
     }
   }
   console.log(`checked ${tagsSeen} tags, badges and chips for an icon${plainOk.size ? `; plain on purpose: ${[...plainOk].map(([why, n]) => `${n}× ${why}`).join("; ")}` : ""}`);
-  for (const url of ["/pt/itens/", "/en/items/"]) {
-    if (!/class="vnote"[^>]*>(Não inclui efeitos de traits|Trait effects not included)/.test(pages.get(url)?.html ?? "")) fail(url, "the class filter without the traits line");
+  for (const url of Object.values(ITEM_DIR)) {
+    if (!/class="vnote"[^>]*>[^<]{6,}</.test(pages.get(url)?.html ?? "")) fail(url, "the class filter without the traits line");
   }
-  if (pages.has("/pt/kit/")) {
+  const kitHome = `/${LANG_TABLE.default}/kit/`;
+  if (pages.has(kitHome)) {
     const ingot = itemsFile.items.find((i) => i.id === "iron-ingot");
-    const page = ingot && pages.get(`/pt/itens/${ingot.slug.pt}/`);
+    const page = ingot && pages.get(itemUrls(ingot)[LANG_CODES.indexOf(LANG_TABLE.default)]);
     if (!page) fail("kit", "the Iron Ingot page is missing");
     else if (!page.html.includes('data-section="appears-build"')) fail(page.url, "the made-up builds collection links here but no \"Usado em builds\" section shows");
   }
-  console.log(`checked ${itemPages.length} item pages for percentages${pages.has("/pt/kit/") ? " and the builds wiring" : ""}`);
+  console.log(`checked ${itemPages.length} item pages for percentages${pages.has(kitHome) ? " and the builds wiring" : ""}`);
 }
 
 console.log(`checked ${pages.size} pages (${indexable.length} indexable), sitemap, robots.txt, CNAME`);

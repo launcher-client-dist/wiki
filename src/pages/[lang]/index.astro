@@ -6,7 +6,7 @@ import Icon from "../../components/ui/Icon.astro";
 import Tag from "../../components/ui/Tag.astro";
 import EntityLink from "../../components/entity/EntityLink.astro";
 import { ui } from "../../i18n/index.ts";
-import { LANGS, type Lang } from "../../lib/i18n.ts";
+import { HREFLANG, LANGS, type Lang } from "../../lib/i18n.ts";
 import { absoluteUrl, homeAlternates, NAV_KINDS, sectionPath, SHIPPED_KINDS } from "../../lib/routes.ts";
 import { siteData } from "../../lib/site-registry.ts";
 
@@ -23,7 +23,7 @@ const jsonLd = [{
   "@type": "WebSite",
   name: t.siteName,
   url: absoluteUrl(`/${lang}/`),
-  inLanguage: lang === "pt" ? "pt-BR" : "en",
+  inLanguage: HREFLANG[lang],
   description: t.siteDescription,
   potentialAction: {
     "@type": "SearchAction",

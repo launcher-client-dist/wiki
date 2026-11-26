@@ -8,7 +8,7 @@
  */
 import "../../styles/global.css";
 import { ui } from "../../i18n/index.ts";
-import { HREFLANG, OG_LOCALE, otherLang, type Lang } from "../../lib/i18n.ts";
+import { DEFAULT_LANG, HREFLANG, LANGS, OG_LOCALE, otherLangs, type Lang } from "../../lib/i18n.ts";
 import { absoluteUrl, type Alternates } from "../../lib/routes.ts";
 import type { EntityKind } from "../../lib/entities/types.ts";
 import Header from "./Header.astro";
@@ -64,9 +64,8 @@ const ld = [...jsonLd, ...(breadcrumbLd ? [breadcrumbLd] : [])];
   <title>{fullTitle}</title>
   <meta name="description" content={description} />
   {!noindex && <link rel="canonical" href={canonical} />}
-  {!noindex && <link rel="alternate" hreflang={HREFLANG.pt} href={absoluteUrl(alternates.pt)} />}
-  {!noindex && <link rel="alternate" hreflang={HREFLANG.en} href={absoluteUrl(alternates.en)} />}
-  {!noindex && <link rel="alternate" hreflang="x-default" href={absoluteUrl(alternates.pt)} />}
+  {!noindex && LANGS.map((l) => <link rel="alternate" hreflang={HREFLANG[l]} href={absoluteUrl(alternates[l])} />)}
+  {!noindex && <link rel="alternate" hreflang="x-default" href={absoluteUrl(alternates[DEFAULT_LANG])} />}
   {noindex && <meta name="robots" content="noindex, follow" />}
   <meta name="theme-color" content="#121729" media="(prefers-color-scheme: dark)" />
   <meta name="theme-color" content="#e6f1ff" media="(prefers-color-scheme: light)" />
@@ -80,7 +79,7 @@ const ld = [...jsonLd, ...(breadcrumbLd ? [breadcrumbLd] : [])];
   <meta property="og:description" content={description} />
   <meta property="og:url" content={canonical} />
   <meta property="og:locale" content={OG_LOCALE[lang]} />
-  <meta property="og:locale:alternate" content={OG_LOCALE[otherLang(lang)]} />
+  {otherLangs(lang).map((l) => <meta property="og:locale:alternate" content={OG_LOCALE[l]} />)}
   <meta property="og:image" content={ogImage} />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />

@@ -8,7 +8,7 @@ import DataTable from "../../../components/data/DataTable.astro";
 import DataRow from "../../../components/data/DataRow.astro";
 import DataCell from "../../../components/data/DataCell.astro";
 import { ui, fill } from "../../../i18n/index.ts";
-import { LANGS, otherLang, type Lang } from "../../../lib/i18n.ts";
+import { LANGS, altLang, type Lang } from "../../../lib/i18n.ts";
 import { homePath, SECTIONS, sectionAlternates, sectionPath } from "../../../lib/routes.ts";
 import { siteData } from "../../../lib/site-registry.ts";
 import { CATEGORIES, CLASS_KEYS, SOURCE_KINDS, STAT_KEYS, goldPerOz, primaryVersion, sourceKinds, statLabel, type StatKey } from "../../../lib/items/data.ts";
@@ -80,12 +80,12 @@ const CLASSED: StatKey[] = ["armor", "defense", "attackSpeed", "health", "mana",
         const href = registry.url(`item:${item.id}`, lang)!;
         const icon = v.icon && v.iconSize ? { src: v.icon, width: v.iconSize[0], height: v.iconSize[1], pixel: true } : null;
         return (
-          <DataRow search={`${item.name.pt} ${item.name.en} ${item.subtype.pt} ${item.subtype.en}`} sort={sort}
+          <DataRow search={[...LANGS.map((l) => item.name[l]), ...LANGS.map((l) => item.subtype[l])].join(" ")} sort={sort}
             filters={{ category: item.category, slot: item.slots, where: sourceKinds(item) }}>
             <DataCell label={ti.colItem} primary>
               <span class="name">
                 <IconSlot icon={icon} kind="item" size={40} />
-                <span><a href={href}>{item.name[lang]}</a>{item.name[otherLang(lang)] !== item.name[lang] && <span class="alt">{item.name[otherLang(lang)]}</span>}</span>
+                <span><a href={href}>{item.name[lang]}</a>{item.name[altLang(lang)] !== item.name[lang] && <span class="alt">{item.name[altLang(lang)]}</span>}</span>
               </span>
             </DataCell>
             <DataCell label={ti.colType} hideOnPhone><span class="type">{item.subtype[lang]}</span></DataCell>

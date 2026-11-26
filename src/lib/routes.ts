@@ -2,7 +2,7 @@
  * The route table: the one place every URL of the site comes from (nav, breadcrumbs, twins, hreflang, sitemap,
  * entity links). URLs are directory-style and always end in "/" (astro.config: trailingSlash "always").
  */
-import type { Lang } from "./i18n.ts";
+import { LANGS, type Lang } from "./i18n.ts";
 import type { EntityKind } from "./entities/types.ts";
 
 export const SITE_URL = "https://wiki.opengea.tech";
@@ -52,13 +52,18 @@ export function kindForSegment(segment: string, lang: Lang): EntityKind | undefi
   return (Object.keys(SECTIONS) as EntityKind[]).find((k) => SECTIONS[k].slug[lang] === segment);
 }
 
-/** A page's addresses in both languages: what hreflang, the language switch and the sitemap use. */
+/** A page's address in every language: what hreflang, the language switch and the sitemap use. */
 export type Alternates = Record<Lang, string>;
 
+/** Each language's address, from a function of the language. */
+export function alternatesBy(path: (lang: Lang) => string): Alternates {
+  return Object.fromEntries(LANGS.map((l) => [l, path(l)])) as Alternates;
+}
+
 export function homeAlternates(): Alternates {
-  return { pt: homePath("pt"), en: homePath("en") };
+  return alternatesBy(homePath);
 }
 
 export function sectionAlternates(kind: EntityKind): Alternates {
-  return { pt: sectionPath(kind, "pt"), en: sectionPath(kind, "en") };
+  return alternatesBy((l) => sectionPath(kind, l));
 }

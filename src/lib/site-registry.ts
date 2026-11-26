@@ -43,7 +43,7 @@ export type GuidePage = ContentPage<CollectionEntry<"guides">>;
 /** "pt/como-usar-a-wiki" -> ["pt", "como-usar-a-wiki"] */
 function splitId(collection: string, id: string): [Lang, string] {
   const [lang, ...rest] = id.split("/");
-  if (!isLang(lang) || rest.length !== 1) throw new EntityError(`${collection} file "${id}" must live in <collection folder>/<pt|en>/<slug>.mdx`);
+  if (!isLang(lang) || rest.length !== 1) throw new EntityError(`${collection} file "${id}" must live in <collection folder>/<${LANGS.join("|")}>/<slug>.mdx`);
   return [lang, rest[0]!];
 }
 
@@ -65,7 +65,8 @@ async function contentOf(name: string, kind: EntityKind) {
     if (missing.length) throw new EntityError(`${name} "${key}" has no ${missing.join(", ")} version: every page needs its twin`);
     const twins = partial as Record<Lang, ContentEntry>;
     const ref = `${kind}:${key}` as EntityRef;
-    const slug = { pt: splitId(name, twins.pt.id)[1], en: splitId(name, twins.en.id)[1] };
+    const per = <T,>(f: (e: ContentEntry) => T) => Object.fromEntries(LANGS.map((l) => [l, f(twins[l])])) as Record<Lang, T>;
+    const slug = per((e) => splitId(name, e.id)[1]);
     // what the page points at, in either language: its links and its `related`
     const mentioned = new Set<string>();
     for (const lang of LANGS) {
@@ -74,8 +75,7 @@ async function contentOf(name: string, kind: EntityKind) {
     }
     mentioned.delete(ref);
     const relations: Relation[] = [...mentioned].sort().map((to) => ({ type: "mentions", to: to as EntityRef }));
-    entities.push({ ref, name: { pt: twins.pt.data.title, en: twins.en.data.title }, slug,
-      summary: { pt: twins.pt.data.description, en: twins.en.data.description }, relations });
+    entities.push({ ref, name: per((e) => e.data.title), slug, summary: per((e) => e.data.description), relations });
     for (const lang of LANGS) pages.push({ ref, lang, slug: slug[lang], entry: twins[lang], twins });
   }
   return { entities, pages };

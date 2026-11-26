@@ -100,7 +100,7 @@ describe("the exported data never carries a drop rate", () => {
   test("no rate-like key and no percent sign outside the game's own texts", () => {
     assert.deepEqual(text.match(/"\w*(chance|rate|percent|pct|odds)\w*"\s*:/gi) ?? [], []);
     const data = JSON.parse(readFileSync(new URL("../src/data/items.json", import.meta.url), "utf8")) as ItemsFile;
-    const gameTexts = new Set(data.items.flatMap((i) => i.versions.flatMap((v) => [v.text.pt, v.text.en])));
+    const gameTexts = new Set(data.items.flatMap((i) => i.versions.flatMap((v) => Object.values(v.text))));
     const stray: string[] = [];
     const walk = (v: unknown, path: string) => {
       if (typeof v === "string") { if (v.includes("%") && !gameTexts.has(v)) stray.push(`${path}: ${v}`); }

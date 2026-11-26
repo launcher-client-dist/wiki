@@ -1,42 +1,40 @@
 ---
 /**
- * "/": sends the reader to /pt/ or /en/ by their browser's language (a tiny inline script), with plain links as the
- * fallback. Not indexed: x-default and the canonical point at /pt/.
+ * "/": sends the reader to the first of their browser's languages the wiki has (by its two-letter code), else the
+ * default language's home, with plain links as the fallback. Not indexed: x-default and the canonical point at the
+ * default language's home.
  */
 import "../styles/global.css";
 import { ui } from "../i18n/index.ts";
-import { HREFLANG, LANGS } from "../lib/i18n.ts";
+import { DEFAULT_LANG, HREFLANG, LANGS } from "../lib/i18n.ts";
 import { absoluteUrl, homePath } from "../lib/routes.ts";
 import PixelArt from "../components/ui/PixelArt.astro";
-const pt = ui("pt");
+const home = ui(DEFAULT_LANG);
 ---
 <!doctype html>
-<html lang="pt-BR" data-theme="dark">
+<html lang={HREFLANG[DEFAULT_LANG]} data-theme="dark">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <script is:inline>
-    (function () {
-      var langs = (navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || "pt"]);
-      var en = false;
-      for (var i = 0; i < langs.length; i++) {
-        var l = String(langs[i]).toLowerCase();
-        if (l.indexOf("pt") === 0) break;
-        if (l.indexOf("en") === 0) { en = true; break; }
-      }
-      location.replace((en ? "/en/" : "/pt/") + location.search + location.hash);
-    })();
+  <script is:inline define:vars={{ langs: LANGS, fallback: DEFAULT_LANG }}>
+    var wanted = (navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || fallback]);
+    var pick = fallback;
+    search: for (var i = 0; i < wanted.length; i++) {
+      var code = String(wanted[i]).toLowerCase().slice(0, 2);
+      for (var j = 0; j < langs.length; j++) if (langs[j] === code) { pick = code; break search; }
+    }
+    location.replace("/" + pick + "/" + location.search + location.hash);
   </script>
-  <title>{pt.siteName}</title>
-  <meta name="description" content={pt.siteDescription} />
+  <title>{home.siteName}</title>
+  <meta name="description" content={home.siteDescription} />
   <meta name="robots" content="noindex, follow" />
-  <link rel="canonical" href={absoluteUrl("/pt/")} />
+  <link rel="canonical" href={absoluteUrl(homePath(DEFAULT_LANG))} />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 </head>
 <body>
   <main class="pick">
     <PixelArt logo size={56} />
-    <h1>{pt.siteName}</h1>
+    <h1>{home.siteName}</h1>
     <ul>
       {LANGS.map((l) => <li><a href={homePath(l)} hreflang={HREFLANG[l]} lang={HREFLANG[l]}>{ui(l).langName}</a></li>)}
     </ul>

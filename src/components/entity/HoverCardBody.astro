@@ -1,6 +1,7 @@
 ---
 /** What a hover card shows for an entity: icon, names, kind, summary, a few facts, and whether the page exists. */
 import { ui } from "../../i18n/index.ts";
+import { HREFLANG, altLang } from "../../lib/i18n.ts";
 import type { EntityLinkInfo } from "../../lib/entities/types.ts";
 import IconSlot from "../ui/IconSlot.astro";
 import Icon from "../ui/Icon.astro";
@@ -17,7 +18,7 @@ const t = ui(info.lang);
     <div class="hc-names">
       <span class="hc-kind">{t.kindSingular[info.kind]}</span>
       <span class="hc-title">{info.name}</span>
-      {info.altName && <span class="hc-alt" lang={info.lang === "pt" ? "en" : "pt-BR"}>{info.altName}</span>}
+      {info.altName && <span class="hc-alt" lang={HREFLANG[altLang(info.lang)]}>{info.altName}</span>}
     </div>
   </div>
   {info.summary && <p class="hc-summary">{info.summary}</p>}

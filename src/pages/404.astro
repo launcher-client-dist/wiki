@@ -1,18 +1,21 @@
 ---
 /**
- * The one 404 page GitHub Pages serves, for any missing path (with a real 404 status). It is the Portuguese one;
- * on a missing /en/... path it swaps itself for the English 404 (/en/404/) in place, keeping the URL and the status.
- * Not indexed, not in the sitemap or search.
+ * The one 404 page GitHub Pages serves, for any missing path (with a real 404 status). It is the default language's;
+ * on a missing /<lang>/... path of another language it swaps itself for that language's 404 (/<lang>/404/) in place,
+ * keeping the URL and the status. Not indexed, not in the sitemap or search.
  */
 import NotFound from "../components/NotFound.astro";
+import { DEFAULT_LANG, LANGS } from "../lib/i18n.ts";
+const others = LANGS.filter((l) => l !== DEFAULT_LANG);
 ---
-<NotFound lang="pt">
-  <script is:inline slot="head">
+<NotFound lang={DEFAULT_LANG}>
+  <script is:inline slot="head" define:vars={{ others }}>
     (function () {
-      if (!/^\/en(\/|$)/.test(location.pathname)) return;
+      var m = location.pathname.match(/^\/([a-z]{2,3})(\/|$)/);
+      if (!m || others.indexOf(m[1]) < 0) return;
       var root = document.documentElement;
       root.style.visibility = "hidden";
-      fetch("/en/404/").then(function (r) { if (!r.ok) throw r; return r.text(); }).then(function (html) {
+      fetch("/" + m[1] + "/404/").then(function (r) { if (!r.ok) throw r; return r.text(); }).then(function (html) {
         var next = new DOMParser().parseFromString(html, "text/html").documentElement;
         document.replaceChild(document.importNode(next, true), document.documentElement);
         // scripts moved in this way don't run: re-create them so they do

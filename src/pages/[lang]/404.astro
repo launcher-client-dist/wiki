@@ -1,0 +1,14 @@
+---
+/**
+ * Each non-default language's 404, at /<lang>/404/: the root 404.html loads it in place for a missing /<lang>/...
+ * path. Not indexed.
+ */
+import NotFound from "../../components/NotFound.astro";
+import { DEFAULT_LANG, LANGS, type Lang } from "../../lib/i18n.ts";
+
+export function getStaticPaths() {
+  return LANGS.filter((l) => l !== DEFAULT_LANG).map((lang) => ({ params: { lang } }));
+}
+const lang = Astro.params.lang as Lang;
+---
+<NotFound lang={lang} />

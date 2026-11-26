@@ -1,5 +1,6 @@
 /** What the item pages compute from the data: similar items, the meta description, odds as words. */
-import type { Lang } from "../i18n.ts";
+import { LOCALE, type Lang } from "../i18n.ts";
+import { ui, fill } from "../../i18n/index.ts";
 import { primaryVersion, statLabel, signed, STAT_KEYS, type ItemData, type OneIn, type StatKey } from "./data.ts";
 
 /** A rough size of an item: its positive stats added up, plus its value (only to rank neighbours). */
@@ -37,40 +38,39 @@ export function topStats(item: ItemData, lang: Lang, n = 3): string {
  * are spoilers; never a rate). 50-160 characters.
  */
 export function metaDescription(item: ItemData, lang: Lang): string {
-  const pt = lang === "pt";
+  const m = ui(lang).item.meta;
   const name = item.name[lang];
   const type = item.subtype[lang].toLowerCase();
   const stats = topStats(item, lang);
   const s = item.sources;
   const where: string[] = [];
-  if (s.drops.length) where.push(pt ? `dropado por ${s.drops.length} monstro${s.drops.length > 1 ? "s" : ""}` : `dropped by ${s.drops.length} monster${s.drops.length > 1 ? "s" : ""}`);
-  if (s.shops.length) where.push(pt ? `vendido por ${s.shops.length} NPC${s.shops.length > 1 ? "s" : ""}` : `sold by ${s.shops.length} NPC${s.shops.length > 1 ? "s" : ""}`);
-  if (s.recipes.length) where.push(pt ? "feito por receita" : "made by a recipe");
-  if (s.map.length) where.push(pt ? "encontrado no mapa" : "found on the map");
-  if (s.quests.length && !where.length) where.push(pt ? "recompensa de missão" : "a quest reward");
-  let text = pt ? `${name} em Opengea: ${type}` : `${name} in Opengea: ${type}`;
+  if (s.drops.length) where.push(s.drops.length > 1 ? fill(m.droppedN, { n: s.drops.length }) : m.dropped1);
+  if (s.shops.length) where.push(s.shops.length > 1 ? fill(m.soldN, { n: s.shops.length }) : m.sold1);
+  if (s.recipes.length) where.push(m.recipe);
+  if (s.map.length) where.push(m.map);
+  if (s.quests.length && !where.length) where.push(m.quest);
+  let text = fill(m.lead, { name, type });
   if (stats) text += `, ${stats}`;
   text += ".";
   if (where.length) text += ` ${where.join(", ").replace(/^./, (c) => c.toUpperCase())}.`;
-  const tail = pt ? " Atributos, de onde vem e quanto vale." : " Stats, where it comes from and its value.";
-  if (text.length < 110) text += tail;
+  if (text.length < 110) text += m.tail;
   if (text.length > 160) text = `${text.slice(0, 157).replace(/[ ,.]+\S*$/, "")}…`;
-  if (text.length < 50) text += pt ? " Na wiki de Opengea." : " On the Opengea wiki.";
+  if (text.length < 50) text += m.pad;
   return text;
 }
 
 /** "1 em 4", "cerca de 1 em 7", "nunca". */
 export function oneInText(o: OneIn | null, t: { oneIn: string; aboutOneIn: string; never: string }, lang: Lang): string {
   if (!o) return t.never;
-  const n = o.oneIn.toLocaleString(lang === "pt" ? "pt-BR" : "en");
+  const n = o.oneIn.toLocaleString(LOCALE[lang]);
   return (o.approx ? t.aboutOneIn : t.oneIn).replace("{n}", n);
 }
 
 /** A weight in ounces as the page shows it ("4,7 oz"). */
 export function oz(w: number, lang: Lang): string {
-  return `${(Math.round(w * 100) / 100).toLocaleString(lang === "pt" ? "pt-BR" : "en")} oz`;
+  return `${(Math.round(w * 100) / 100).toLocaleString(LOCALE[lang])} oz`;
 }
 
 export function num(n: number, lang: Lang): string {
-  return n.toLocaleString(lang === "pt" ? "pt-BR" : "en");
+  return n.toLocaleString(LOCALE[lang]);
 }

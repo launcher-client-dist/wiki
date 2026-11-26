@@ -4,7 +4,7 @@ import Card from "../../../components/ui/Card.astro";
 import PixelArt from "../../../components/ui/PixelArt.astro";
 import Icon from "../../../components/ui/Icon.astro";
 import { ui, fill } from "../../../i18n/index.ts";
-import { LANGS, type Lang } from "../../../lib/i18n.ts";
+import { LANGS, LOCALE, type Lang } from "../../../lib/i18n.ts";
 import { homePath, SECTIONS, sectionAlternates, sectionPath } from "../../../lib/routes.ts";
 import { siteData } from "../../../lib/site-registry.ts";
 
@@ -16,7 +16,7 @@ const t = ui(lang);
 const { registry, guides } = await siteData();
 const mine = guides.filter((g) => g.lang === lang);
 const words = (body?: string) => (body ?? "").split(/\s+/).filter(Boolean).length;
-const fmt = new Intl.DateTimeFormat(lang === "pt" ? "pt-BR" : "en", { dateStyle: "medium", timeZone: "UTC" });
+const fmt = new Intl.DateTimeFormat(LOCALE[lang], { dateStyle: "medium", timeZone: "UTC" });
 ---
 <PageShell lang={lang} title={t.kindPlural.guide} description={t.guidesIntro} alternates={sectionAlternates("guide")} current="guide"
   searchable={{ kind: "guide" }}

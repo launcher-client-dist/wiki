@@ -14,7 +14,7 @@ import Figure from "../../../components/ui/Figure.astro";
 import MapLink from "../../../components/ui/MapLink.astro";
 import EntityLink from "../../../components/entity/EntityLink.astro";
 import { ui, fill } from "../../../i18n/index.ts";
-import { HREFLANG, LANGS, type Lang } from "../../../lib/i18n.ts";
+import { HREFLANG, LANGS, LOCALE, type Lang } from "../../../lib/i18n.ts";
 import { absoluteUrl, homePath, SECTIONS, sectionPath } from "../../../lib/routes.ts";
 import { siteData } from "../../../lib/site-registry.ts";
 
@@ -31,7 +31,7 @@ const { Content, headings } = await render(entry);
 const alternates = Object.fromEntries(LANGS.map((l) => [l, registry.url(page.ref, l)!])) as Record<Lang, string>;
 const words = (entry.body ?? "").split(/\s+/).filter(Boolean).length;
 const minutes = Math.max(1, Math.round(words / 200));
-const fmt = new Intl.DateTimeFormat(lang === "pt" ? "pt-BR" : "en", { dateStyle: "long", timeZone: "UTC" });
+const fmt = new Intl.DateTimeFormat(LOCALE[lang], { dateStyle: "long", timeZone: "UTC" });
 const updated = entry.data.updated.toISOString().slice(0, 10);
 const related = entry.data.related.map((r) => registry.link(r, lang));
 const jsonLd = [{
