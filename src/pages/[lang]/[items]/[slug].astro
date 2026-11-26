@@ -558,7 +558,7 @@ const jsonLd = [{
   .qtable .r { text-align: right; }
   /* a phone: each row a two-by-two grid (the step and the ingot, then the two odds), the header in the same grid above,
      so every column stays in view and keeps its label; no side-scroll */
-  @container main (max-width: 759px) {
+  @container main (max-width: 839px) {
     .table-wrap { overflow: visible; }
     /* the step on two lines in every row (from, then "→ to"): every row the same height */
     .fstep { display: grid; grid-template-columns: auto 1fr; grid-template-areas: "from from" "arrow to"; justify-items: start; gap: 4px 6px; }
