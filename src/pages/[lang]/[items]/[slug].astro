@@ -487,21 +487,16 @@ const jsonLd = [{
   </div>
 </PageShell>
 <style>
-  /* the hero: the item on a lit slot, framed in gold like a looted item, a soft glow behind */
+  /* the hero (Codex): the item on a quiet dark slot, a soft green glow behind; no gold frame */
   .hero-icon { position: relative; isolation: isolate; padding: 6px; }
-  .hero-icon::before { content: ""; position: absolute; inset: -26px; z-index: -1; border-radius: 50%;
-    background: radial-gradient(circle, rgba(255, 211, 78, 0.42) 0%, rgba(127, 210, 255, 0.18) 40%, transparent 68%); }
-  .hero-icon :global(.slot) { position: relative; border-radius: 12px;
-    background: radial-gradient(circle at 50% 42%, #33468f 0%, #1b2340 62%, #10162c 100%);
-    box-shadow: 0 0 0 3px var(--hard), 0 0 0 6px var(--sun), 0 0 0 9px var(--hard), 0 12px 0 9px var(--hard), inset 0 -12px 0 rgba(0, 0, 0, 0.3); }
-  .hero-icon :global(.slot)::after { content: ""; position: absolute; inset: 8px; border-radius: 8px; pointer-events: none;
-    box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.06); }
-  .hero-icon :global(.slot img) { filter: drop-shadow(0 6px 0 rgba(0, 0, 0, 0.35)); }
+  .hero-icon::before { content: ""; position: absolute; inset: -30px; z-index: -1; border-radius: 50%; background: var(--hero-glow); }
+  .hero-icon :global(.slot) { position: relative; border-radius: 16px; background: var(--hero-slot);
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1), 0 14px 32px rgba(0, 0, 0, 0.4); }
+  .hero-icon :global(.slot img) { filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.45)); }
   @media (max-width: 640px) { .hero-icon::before { inset: -14px; } }
-  .kicker { margin: 0; font: 800 var(--fs-xs) / 1 var(--font-body); letter-spacing: 0.14em; text-transform: uppercase; color: var(--sun); text-shadow: 0 2px 0 var(--hard); }
-  :global(:root[data-theme="light"]) .kicker { color: #7a4a00; text-shadow: none; }
+  .kicker { margin: 0; font: 700 var(--fs-xs) / 1 var(--font-body); letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent-text); }
   .alt { margin: 0; color: var(--banner-muted); font-size: var(--fs-lg); }
-  .game-text { margin: 4px 0 0; padding: 8px 12px; border-left: 4px solid var(--sun); background: var(--banner-chip-bg); border-radius: 0 var(--r-m) var(--r-m) 0;
+  .game-text { margin: 4px 0 0; padding: 10px 14px; border-left: 3px solid var(--accent); background: var(--surface-2); border-radius: 0 var(--r-m) var(--r-m) 0;
     color: var(--banner-text); font-style: italic; max-width: 42rem; }
   .tags { position: relative; display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
   .tags :global(.tag) { background: var(--banner-chip-bg); color: var(--banner-text); white-space: normal; }
@@ -515,21 +510,22 @@ const jsonLd = [{
   .block > .muted { margin-bottom: var(--s-4); }
   .muted { color: var(--text-muted); }
   .small { font-size: var(--fs-sm); }
-  .panels { display: grid; gap: var(--s-4); }
+  .panels { display: grid; gap: var(--s-6); }
 
-  .versions { display: grid; gap: 12px; }
-  .version { display: flex; gap: 14px; padding: 12px; background: var(--card-bg); border: var(--bw) solid var(--hard); border-radius: var(--r-l); box-shadow: var(--shadow-1); }
+  .versions { display: grid; gap: 0; }
+  .version { display: flex; gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--row-border); }
+  .version:first-child { padding-top: 4px; }
   .version p { margin: 4px 0 0; }
   .vt { font-style: italic; color: var(--text-muted); }
   .vs { margin-top: 6px; }
 
   .effects { display: grid; gap: 10px; }
-  .effect { display: flex; flex-direction: column; gap: 6px; margin: 0; padding: 12px 14px; background: var(--card-bg); border: var(--bw) solid var(--hard); border-radius: var(--r-l); box-shadow: var(--shadow-1); }
+  .effect { display: flex; flex-direction: column; gap: 8px; margin: 0; padding: 4px 0; }
   .effect p { margin: 0; }
-  p.effect { flex-direction: row; align-items: center; gap: 8px; }
-  .effect :global(.icon) { color: var(--sun); }
-  .eicon { display: inline-grid; place-items: center; width: 40px; height: 40px; flex: none; border-radius: 8px; background: var(--hard); }
-  .erow { display: flex; align-items: center; gap: 8px; }
+  p.effect { flex-direction: row; align-items: center; gap: 12px; }
+  .effect :global(.icon) { color: var(--accent-text); }
+  .eicon { display: inline-grid; place-items: center; width: 52px; height: 52px; flex: none; border-radius: 12px; background: var(--well); }
+  .erow { display: flex; align-items: center; gap: 12px; }
   .buff { display: inline-flex; align-items: center; gap: 6px; }
   .fstep { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; }
   .fq { display: inline-flex; align-items: center; gap: 6px; }
@@ -537,10 +533,10 @@ const jsonLd = [{
   .hcell { display: inline-flex; align-items: center; gap: 6px; }
   .buffs { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: var(--fs-sm); color: var(--text-muted); }
 
-  .table-wrap { overflow-x: auto; border: var(--bw) solid var(--hard); border-radius: var(--r-l); box-shadow: var(--shadow-1); background: var(--card-bg); }
+  .table-wrap { overflow-x: auto; border: var(--bw) solid var(--border); border-radius: var(--r-l); background: var(--card-bg); }
   .qtable { width: 100%; border-collapse: collapse; font-size: var(--fs-sm); }
   .qtable th, .qtable td { padding: 9px 12px; text-align: left; white-space: nowrap; }
-  .qtable thead th { background: var(--surface-2); font-weight: 700; border-bottom: var(--bw) solid var(--hard); }
+  .qtable thead th { background: var(--surface-2); font-weight: 700; color: var(--text-muted); border-bottom: 1px solid var(--row-border); }
   .qtable tbody tr + tr > * { border-top: 1px solid var(--row-border); }
   .qtable .r { text-align: right; }
   .qname { font-weight: 800; }
@@ -554,19 +550,19 @@ const jsonLd = [{
   .dq, .forge { margin-top: var(--s-5); }
   .dq h3, .forge h3 { margin-bottom: 6px; font: 700 var(--fs-lg) / 1.3 var(--font-body); }
   .odds { list-style: none; margin: 0 0 6px; padding: 0; display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 190px), 1fr)); }
-  .odd { display: flex; align-items: center; gap: 12px; padding: 10px 14px; background: var(--card-bg); border: var(--bw) solid var(--hard);
-    border-left: 6px solid currentColor; border-radius: var(--r-m); box-shadow: var(--shadow-1); }
+  .odd { display: flex; align-items: center; gap: 12px; padding: 12px 16px; background: var(--card-bg); border: var(--bw) solid var(--border);
+    border-left: 4px solid currentColor; border-radius: var(--r-m); }
   .otext { display: grid; gap: 3px; min-width: 0; flex: 1; }
   .odd .num { color: var(--text); font-weight: 700; }
   .rare { display: block; height: 6px; border-radius: 3px; background: var(--surface-3); overflow: hidden; }
   .rare span { display: block; height: 100%; background: currentColor; border-radius: 3px; }
 
   /* the qualities: one card each, framed in the quality's colour, the item outlined as the game highlights it */
-  .qcards { list-style: none; margin: 0; padding: 4px 2px 10px; display: grid; gap: 12px; grid-template-columns: repeat(5, minmax(150px, 1fr));
-    overflow-x: auto; scroll-snap-type: x mandatory; }
-  .qcard { --qc: var(--quality-0); color: var(--text); position: relative; display: grid; align-content: start; gap: 10px; padding: 12px; scroll-snap-align: start;
+  /* the cards wrap (five across when there is room, two on a phone): every quality in view, no hidden side-scroll */
+  .qcards { list-style: none; margin: 0; padding: 4px 0 10px; display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 148px), 1fr)); }
+  .qcard { --qc: var(--quality-0); color: var(--text); position: relative; display: grid; align-content: start; gap: 10px; padding: 12px;
     background: linear-gradient(180deg, color-mix(in srgb, var(--qc) 16%, var(--card-bg)), var(--card-bg) 55%);
-    border: var(--bw) solid var(--hard); border-top: 4px solid var(--qc); border-radius: var(--r-l); box-shadow: var(--shadow-1); }
+    border: var(--bw) solid var(--border); border-top: 3px solid var(--qc); border-radius: var(--r-l); box-shadow: var(--shadow-1); }
   .qcard.q1 { --qc: var(--quality-1); } .qcard.q2 { --qc: var(--quality-2); } .qcard.q3 { --qc: var(--quality-3); } .qcard.q4 { --qc: var(--quality-4); }
   .qcard.q3, .qcard.q4 { box-shadow: var(--shadow-1), 0 0 18px -4px color-mix(in srgb, var(--qc) 70%, transparent); }
   .qhead { display: flex; align-items: center; gap: 8px; }
@@ -576,7 +572,7 @@ const jsonLd = [{
   .qimg { image-rendering: pixelated; }
   .qcard:not(.q0) .qimg { filter: drop-shadow(2px 0 0 var(--qc)) drop-shadow(-2px 0 0 var(--qc)) drop-shadow(0 2px 0 var(--qc)) drop-shadow(0 -2px 0 var(--qc)); }
   .qstats { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
-  .qstats li { display: flex; align-items: center; gap: 8px; min-height: 22px; font-size: var(--fs-sm); }
+  .qstats li { display: flex; align-items: center; gap: 8px; min-height: 28px; font-size: var(--fs-sm); }
   .qstats li.none { opacity: 0.5; }
   .qstats li.meta { color: var(--text-muted); }
   .qstats li.meta:first-of-type, .qstats li:not(.meta) + li.meta { margin-top: 4px; padding-top: 8px; border-top: 1px solid var(--row-border); }
@@ -584,7 +580,6 @@ const jsonLd = [{
   .gain { display: inline-block; padding: 1px 6px; border-radius: 999px; font: 700 var(--fs-xs) / 1.4 var(--font-num); color: var(--qc);
     background: color-mix(in srgb, var(--qc) 16%, transparent); }
   .gain:empty { display: none; }
-  @media (max-width: 720px) { .qcards { grid-template-columns: repeat(5, 70%); } }
 
   .plain { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
   .plus { color: var(--text-faint); font-weight: 700; }
@@ -592,7 +587,7 @@ const jsonLd = [{
 
   .similar { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); }
 
-  .switch { padding: 12px 14px; border-bottom: var(--bw) solid var(--hard); display: grid; gap: 8px; }
+  .switch { padding: 14px 18px; border-bottom: 1px solid var(--row-border); display: grid; gap: 10px; }
   .switch .label { display: flex; align-items: center; gap: 6px; font-size: var(--fs-xs); font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; }
   .switch .traits-note { margin: 0; font-size: var(--fs-xs); color: var(--text-muted); }
   .gated li { padding: 4px 0; }
@@ -603,11 +598,11 @@ const jsonLd = [{
 
   /* the stats box: the game's icon in a slot, the number big, where it stands among its type */
   .statlist { list-style: none; margin: 0; padding: 6px 0; display: grid; }
-  .stat { display: grid; grid-template-columns: 40px minmax(0, 1fr) auto; grid-template-areas: "icon name value" "icon rank rank"; column-gap: 12px; row-gap: 4px;
-    align-items: center; padding: 8px 16px; }
+  .stat { display: grid; grid-template-columns: 52px minmax(0, 1fr) auto; grid-template-areas: "icon name value" "icon rank rank"; column-gap: 14px; row-gap: 6px;
+    align-items: center; padding: 12px 18px; }
   .stat + .stat { border-top: 1px solid var(--row-border); }
-  .sicon { grid-area: icon; display: grid; place-items: center; width: 40px; height: 40px; border-radius: 8px; background: var(--hard);
-    box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.35), inset 0 0 0 1px rgba(255, 255, 255, 0.08); }
+  .sicon { grid-area: icon; display: grid; place-items: center; width: 52px; height: 52px; border-radius: 12px; background: var(--well);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06); }
   .sname { grid-area: name; display: flex; flex-wrap: wrap; align-items: center; gap: 6px; color: var(--text); font-weight: 700; font-size: var(--fs-sm); }
   .stat :global(.sv) { grid-area: value; justify-self: end; color: var(--heading); }
   .stat.negative :global(.sv) { color: var(--danger); }
@@ -615,19 +610,19 @@ const jsonLd = [{
   .rtext :global(.gicon) { vertical-align: -2px; }
   .takes { display: inline-flex; align-items: center; gap: 4px; padding: 1px 6px 1px 3px; border-radius: 999px; font-size: var(--fs-xs); font-weight: 700;
     color: var(--danger); border: 1px solid var(--danger); }
-  .stat.negative .sicon { box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.35), inset 0 0 0 2px var(--danger); }
+  .stat.negative .sicon { box-shadow: inset 0 0 0 2px var(--danger); }
   .rank { grid-area: rank; display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 10px; }
   .rbar { height: 6px; border-radius: 3px; background: var(--surface-3); overflow: hidden; box-shadow: inset 0 0 0 1px var(--row-border); }
   .rfill { display: block; height: 100%; border-radius: 3px; background: var(--sky); }
   .rfill.best { background: var(--sun); }
   .rtext { font-size: var(--fs-xs); color: var(--text-muted); white-space: nowrap; }
-  .facts { list-style: none; margin: 0; padding: 4px 0; display: grid; border-top: var(--bw) solid var(--hard); background: var(--surface-2); }
-  .facts li { display: grid; grid-template-columns: 40px minmax(0, 1fr) auto; align-items: center; gap: 12px; padding: 7px 16px; }
+  .facts { list-style: none; margin: 0; padding: 6px 0; display: grid; border-top: 1px solid var(--row-border); background: var(--surface-2); }
+  .facts li { display: grid; grid-template-columns: 52px minmax(0, 1fr) auto; align-items: center; gap: 14px; padding: 9px 18px; }
   .facts li + li { border-top: 1px solid var(--row-border); }
   .facts li > :global(.gicon), .facts .pair { justify-self: center; }
   .facts .pair { display: inline-flex; align-items: center; gap: 1px; }
-  .facts span { color: var(--text-muted); font-size: var(--fs-sm); }
+  .facts span { color: var(--text-muted); font-size: var(--fs-sm); white-space: nowrap; }
   .facts b { color: var(--heading); font-size: 1.0625rem; }
-  .nostats { margin: 0; padding: 14px 16px; color: var(--text-muted); display: flex; align-items: center; gap: 12px; font-size: var(--fs-sm); }
-  .nostats :global(.gicon) { padding: 6px; border-radius: 8px; background: var(--hard); box-sizing: content-box; }
+  .nostats { margin: 0; padding: 16px 18px; color: var(--text-muted); display: flex; align-items: center; gap: 12px; font-size: var(--fs-sm); }
+  .nostats :global(.gicon) { padding: 6px; border-radius: 8px; background: var(--well); box-sizing: content-box; }
 </style>
