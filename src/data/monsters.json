@@ -2675,7 +2675,7 @@
     "max": 6,
     "min": 5
    },
-   "loot": 4.8,
+   "loot": null,
    "places": [
     {
      "count": 2,
@@ -4530,7 +4530,7 @@
        "es": "Catedral de la Llanura",
        "pt": "Catedral da Planície"
       },
-      "underground": true
+      "underground": false
      }
     },
     {
@@ -5263,7 +5263,7 @@
     "max": 143,
     "min": 100
    },
-   "loot": 1500,
+   "loot": null,
    "places": [
     {
      "count": 1,
@@ -11728,7 +11728,7 @@
     },
     {
      "count": 5,
-     "link": "https://map.opengea.tech/#2.AgD8AxUGAQIBAQEAABSNCGNzz0_KycwDAA",
+     "link": "https://map.opengea.tech/#2.AgD8AxUGAQABAQEAAJQiAmNzz0_KycwDAA",
      "place": {
       "near": {
        "en": "Myrtle's House",
@@ -16394,7 +16394,7 @@
     },
     {
      "count": 8,
-     "link": "https://map.opengea.tech/#2.AgB9nAUGAQIBAQEAABSNCGPxzc_LBgA",
+     "link": "https://map.opengea.tech/#2.AgB9nAUGAQABAQEAAJQiAmPxzc_LBgA",
      "place": {
       "near": {
        "en": "North Temple",
@@ -21060,7 +21060,7 @@
     "max": 160,
     "min": 112
    },
-   "loot": 2700,
+   "loot": null,
    "places": [
     {
      "count": 1,
@@ -23852,7 +23852,7 @@
     "max": 36,
     "min": 25
    },
-   "loot": 23,
+   "loot": null,
    "places": [],
    "render": {
     "size": [
@@ -27275,7 +27275,7 @@
     "max": 5,
     "min": 4
    },
-   "loot": 3.1,
+   "loot": null,
    "places": [
     {
      "count": 3,
@@ -27611,7 +27611,7 @@
     "max": 23,
     "min": 18
    },
-   "loot": 4.0,
+   "loot": null,
    "places": [],
    "render": {
     "size": [
@@ -29952,7 +29952,7 @@
    "loot": 5.6,
    "places": [
     {
-     "count": 16,
+     "count": 17,
      "link": "https://map.opengea.tech/#2.AgDBBIcBBgEAAQEBAACUIgJjDy7NK87OzAMA",
      "place": {
       "near": {
@@ -29969,7 +29969,7 @@
      }
     },
     {
-     "count": 11,
+     "count": 10,
      "link": "https://map.opengea.tech/#2.AGNiOMiympENCBkZGRhErJTYg0vzirMz8wA",
      "place": {
       "near": {
@@ -30403,7 +30403,7 @@
     "max": 13,
     "min": 10
    },
-   "loot": 3.6,
+   "loot": null,
    "places": [
     {
      "count": 11,
@@ -31594,7 +31594,7 @@
     "max": 83,
     "min": 58
    },
-   "loot": 93,
+   "loot": null,
    "places": [
     {
      "count": 1,
@@ -36190,7 +36190,7 @@
     "max": 13,
     "min": 10
    },
-   "loot": 3.8,
+   "loot": null,
    "places": [
     {
      "count": 10,

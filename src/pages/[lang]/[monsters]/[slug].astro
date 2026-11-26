@@ -104,7 +104,7 @@ const spellRows = (spells: MonsterData["spells"]) => spells;
           <div class="tags" slot="foot" data-pagefind-ignore>
             {m.level && <TipTag icon="xp" tip={tm.levelNote}>{`${tm.level} ${fill(tm.levelValue, m.level)}`}</TipTag>}
             {m.boss && <TipTag icon="boss" tip={tm.kindTip.boss}>{tm.kind.boss}</TipTag>}
-            {m.windows.length > 0 && <TipTag icon="time" tip={tm.kindTip.timed}>{tm.kind.timed}</TipTag>}
+            {m.windows.length > 0 && <TipTag icon="time" tip={m.places.length ? tm.kindTip.timedAlso : tm.kindTip.timed}>{tm.kind.timed}</TipTag>}
             {m.how === "summon" && <TipTag icon="summon" tip={tm.kindTip.summon}>{tm.kind.summon}</TipTag>}
             {(m.how === "lever" || m.how === "travel" || m.how === "placed") && <TipTag icon="src-map" tip={tm.kindTip[m.how]}>{tm.kind[m.how]}</TipTag>}
             {m.family && <TipTag icon="src-drop" tip={fill(tm.familyTip, { f: m.family })}>{fill(tm.familyTag, { f: m.family })}</TipTag>}
@@ -157,7 +157,7 @@ const spellRows = (spells: MonsterData["spells"]) => spells;
                   </span>
                   <span class="spcad">
                     <span class="sval"><GameIcon name="time" scale={1} />{fill(tm.spellTries, { s: sec(sp.cooldown) })}</span>
-                    <span class="odds">{sp.oneIn.oneIn === 1 && !sp.oneIn.approx ? tm.spellAlways : fill(tm.spellOdds, { odds: oneInText(sp.oneIn, ti, lang) })}</span>
+                    <span class="odds">{sp.oneIn.oneIn === 1 ? (sp.oneIn.approx ? tm.spellAlmost : tm.spellAlways) : fill(tm.spellOdds, { odds: oneInText(sp.oneIn, ti, lang) })}</span>
                   </span>
                 </li>
               ))}
@@ -329,7 +329,7 @@ const spellRows = (spells: MonsterData["spells"]) => spells;
           </ul>
           <ul class="facts">
             {m.level && <li><span class="sicon"><GameIcon name="xp" fit={28} /></span><span>{tm.level}</span><b class="num">{fill(tm.levelValue, m.level)}</b></li>}
-            {m.how !== "summon" && <li><span class="sicon"><GameIcon name="time" fit={28} /></span><span>{tm.respawn}</span><b class="num">{respawnText(m.respawn, lang)}</b></li>}
+            {m.places.length > 0 && <li><span class="sicon"><GameIcon name="time" fit={28} /></span><span>{tm.respawn}</span><b class="num">{respawnText(m.respawn, lang)}</b></li>}
             {ePH !== null && <li><span class="sicon"><GameIcon name="xp" fit={28} /></span><span>{tm.expPerHealth}</span><b class="num">{num(ePH)}</b></li>}
             {m.loot !== null && <li><span class="sicon"><GameIcon name="gold" fit={28} /></span><span>{tm.loot}</span><b class="loot"><small>{fill(tm.lootAbout, { n: "" }).trim()}</small><Value kind="gold" n={m.loot} lang={lang} size="big" noIcon /></b></li>}
           </ul>
@@ -423,10 +423,10 @@ const spellRows = (spells: MonsterData["spells"]) => spells;
 
   /* the spells: one row each, the game's icon in its well, the name and what it does, then how often */
   .spells { list-style: none; margin: 0; padding: 0; display: grid; border: var(--bw) solid var(--border); border-radius: var(--r-l); background: var(--card-bg); }
-  .spell { display: grid; grid-template-columns: 44px minmax(0, 1fr); grid-template-areas: "icon text" "icon cad"; column-gap: 14px; row-gap: 6px; align-items: center; padding: 12px 16px; }
+  .spell { display: grid; grid-template-columns: 52px minmax(0, 1fr); grid-template-areas: "icon text" "icon cad"; column-gap: 14px; row-gap: 6px; align-items: center; padding: 12px 16px; }
   .spell + .spell { border-top: 1px solid var(--row-border); }
-  @container main (min-width: 620px) { .spell { grid-template-columns: 44px minmax(0, 1fr) auto; grid-template-areas: "icon text cad"; } }
-  .spicon { grid-area: icon; align-self: start; }
+  @container main (min-width: 620px) { .spell { grid-template-columns: 52px minmax(0, 1fr) auto; grid-template-areas: "icon text cad"; } }
+  .spicon { grid-area: icon; align-self: start; width: 52px; height: 52px; }
   .spicon .px { image-rendering: pixelated; }
   .sptext { grid-area: text; display: grid; gap: 4px; min-width: 0; }
   .spname { font-weight: 700; color: var(--heading); }

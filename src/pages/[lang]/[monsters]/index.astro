@@ -12,6 +12,8 @@ import { siteData } from "../../../lib/site-registry.ts";
 import { statLabel } from "../../../lib/items/data.ts";
 import { BEHAVIOUR_KEYS, MONSTER_STAT_KEYS, behaviourKeys, monsterRef, towns, type MonsterData } from "../../../lib/monsters/data.ts";
 import { displayName } from "../../../lib/names.ts";
+import uiSizes from "../../../data/ui-icons.json";
+const UI = uiSizes as Record<string, number[]>;
 
 export function getStaticPaths() {
   return LANGS.map((lang) => ({ params: { lang, monsters: SECTIONS.monster.slug[lang] } }));
@@ -97,7 +99,7 @@ const label = (k: string) => (k === "exp" ? tm.exp : statLabel(k as "health")[la
                 <span class="ntext">
                   <a href={href} title={dn.name} lang={dn.nameLang !== lang ? HREFLANG[dn.nameLang] : undefined}>{dn.name}</a>
                   {dn.aid && <span class="alt" title={dn.aid} lang={dn.aidLang && dn.aidLang !== lang ? HREFLANG[dn.aidLang] : undefined}>{dn.aid}</span>}
-                  {kinds(m).length > 0 && <span class="mk">{kinds(m).map((k) => <span class="kb" title={tm.kindTip[k as "boss"]}><img src={`/ui/${k === "boss" ? "boss" : k === "timed" ? "time" : "summon"}.png`} width="18" height="18" alt="" class="px" />{tm.kind[k as "boss"]}</span>)}</span>}
+                  {kinds(m).length > 0 && <span class="mk">{kinds(m).map((k) => <span class="kb" title={k === "timed" && m.places.length ? tm.kindTip.timedAlso : tm.kindTip[k as "boss"]}>{(() => { const ic = k === "boss" ? "boss" : k === "timed" ? "time" : "summon"; const sz = UI[ic]!; return <img src={`/ui/${ic}.png`} width={sz[0]! * 2} height={sz[1]! * 2} alt="" class="px" />; })()}{tm.kind[k as "boss"]}</span>)}</span>}
                 </span>
               </span>
             </DataCell>

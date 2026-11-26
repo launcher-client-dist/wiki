@@ -16,11 +16,16 @@ function element(sp: MonsterSpell, lang: Lang): string {
 export function spellWords(sp: MonsterSpell, lang: Lang): string {
   const n = ui(lang).monster.spellName;
   const physical = sp.element === 0;
+  // an element the server's table doesn't name (13 today: Omen, The Augur, Wisp...): a neutral "magic" word, never a guess
+  const named = sp.element >= 0 && sp.element < ui(lang).monster.element.length;
   switch (sp.kind) {
     case "at":
-      return physical ? (sp.ranged ? n.atPhysicalRanged : n.atPhysical) : fill(sp.ranged ? n.atRanged : n.at, { el: element(sp, lang) });
+      if (physical) return sp.ranged ? n.atPhysicalRanged : n.atPhysical;
+      if (!named) return sp.ranged ? n.atMagicRanged : n.atMagic;
+      return fill(sp.ranged ? n.atRanged : n.at, { el: element(sp, lang) });
     case "around":
-      return physical ? n.aroundPhysical : fill(n.around, { el: element(sp, lang) });
+      if (physical) return n.aroundPhysical;
+      return named ? fill(n.around, { el: element(sp, lang) }) : n.aroundMagic;
     default:
       return n[sp.kind];
   }
@@ -30,7 +35,7 @@ export function spellWords(sp: MonsterSpell, lang: Lang): string {
 export function allSpellWords(lang: Lang): string[] {
   const out = new Set<string>();
   for (const kind of ["at", "around", "leap", "heal", "summon", "buff"] as const) {
-    for (let el = 0; el < 11; el++) {
+    for (let el = 0; el < 14; el++) {
       for (const ranged of [false, true]) out.add(spellWords({ key: 0, kind, cooldown: 0, oneIn: { oneIn: 1, approx: false }, element: el, ranged }, lang));
     }
   }
