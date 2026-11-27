@@ -25,7 +25,7 @@ const ll = (x: number, z: number) => L.latLng(z, x);
 const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]!);
 
 interface Loaded { file: LayerFile; layer: LayerKey | "spoiler" }
-interface Mark { layer: LayerKey; entry: Entry; x: number; z: number; f: string; n: number; hours?: [number, number]; invasion?: boolean }
+interface Mark { layer: LayerKey; entry: Entry; x: number; z: number; f: string; n: number; hours?: [number, number]; invasion?: boolean; cells?: number[] }
 
 export function startMap(root: HTMLElement): void {
   const cfg = JSON.parse(root.dataset.config!) as Config;
@@ -78,18 +78,26 @@ export function startMap(root: HTMLElement): void {
         const layer = (l.layer === "spoiler" ? cfg.layers[p[p.length - 1] as number] : l.layer) as LayerKey;
         const m: Mark = { layer, entry: l.file.e[p[3] as number]!, x: p[0] as number, z: p[1] as number, f: String(p[2]), n: (p[4] as number) || 1 };
         if (layer === "bosses" && (p[5] as number) >= 0) { m.hours = [p[5] as number, p[6] as number]; m.invasion = p[7] === 1; }
+        if (layer === "monsters" && typeof p[5] === "string" && p[5]) m.cells = p[5].split(",").map(Number);
         out.push(m);
       }
     }
     return out;
   };
 
-  // ---- markers: the entity's game icon in a small dark well, a count badge; the highlighted entity's spots ringed.
-  // Zoomed far out (below zoom 0) a small dot per spot, on one canvas: the world fits the screen and icons can't. From
-  // zoom 0 in, icons, gathered on the screen so none overlaps another: a spot closer than an icon's width (plus a gap)
-  // to one already drawn joins it, and the group shows its first member's icon (bosses, NPCs, monsters, places, items,
-  // in that order), the count of what it holds, and a stack edge when it holds more than one thing.
+  // ---- markers. Monsters, bosses and NPCs are their own walking sprite, bare on the map (no box, no border): a soft
+  // dark ellipse under the feet, a small count pill under it. Places and map items are their game icon, bare too, with a dark
+  // outline. Markers are gathered on the screen so none covers another: a spot closer than a marker's reach to one
+  // already drawn joins it, and the group shows its first member (bosses, NPCs, monsters, places, items, in that
+  // order) with the count of what it holds. Up close (zoom 3 and in) a monster group spreads out: each creature stands
+  // on its own spawn cell (a seeded half-cell off it), on its own animation phase.
+  // The sprites move with CSS: each sprite is one strip of its frames (public/sprites/<f>-<h>.webp), stepped by
+  // steps(); the same animated WebP in many <img> plays in lockstep, a strip lets every creature take its own phase.
+  // prefers-reduced-motion, or more sprites in view than STILL_PAST: the first frame (<f>-<h>.png) instead.
   const ORDER: Record<LayerKey, number> = { bosses: 0, npcs: 1, monsters: 2, places: 3, items: 4 };
+  const STILL_PAST = 220;
+  const SPREAD_FROM = 3;
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)");
   const imgHtml = (i: Entry["i"], box: number) => {
     if (!i) return "";
     // a pixel icon at its largest whole scale that fits the well; a render scaled to fit (sizes inline: Leaflet's
@@ -98,20 +106,33 @@ export function startMap(root: HTMLElement): void {
     const [w, h] = i.px ? [i.w * k, i.h * k] : i.w >= i.h ? [box, Math.round((box * i.h) / i.w)] : [Math.round((box * i.w) / i.h), box];
     return `<img src="${esc(i.s)}" width="${w}" height="${h}" style="width:${w}px;height:${h}px" alt=""${i.px ? ' class="px"' : ""}>`;
   };
+  /** A stable number in [0, 1) from a few integers: a creature's spot and phase never change between visits. */
+  const seed = (...v: number[]) => {
+    let h = 2166136261;
+    for (const n of v) { h ^= Math.round(n * 997) | 0; h = Math.imul(h, 16777619); }
+    return ((h >>> 0) % 10007) / 10007;
+  };
+  const spriteHtml = (e: Entry, h: 32 | 64, phase: number, still: boolean) => {
+    const sp = e.sp!;
+    const w = h === 32 ? sp.w32 : sp.w64;
+    const base = `/sprites/${sp.f}-${h}`;
+    if (still || reduce.matches || sp.n <= 1) return `<img class="spr" src="${base}.png" width="${w}" height="${h}" style="width:${w}px;height:${h}px" alt="" decoding="async">`;
+    const dur = sp.n * sp.ms;
+    // the strip slides under a one-frame window by transform (the compositor's work: no repaint per frame)
+    return `<span class="spr anim" style="width:${w}px;height:${h}px;--sn:${sp.n}"><i style="width:${w * sp.n}px;height:${h}px;background-image:url(${base}.webp);animation-duration:${dur}ms;animation-timing-function:steps(${sp.n});animation-delay:${-Math.round(phase * dur)}ms"></i></span>`;
+  };
   interface Group { m: Mark; all: Mark[]; refs: Set<string>; n: number; p: L.Point }
   const countOf = (m: Mark) => (m.layer === "places" ? 1 : m.n);
   let current: Mark[] = [];
   let paintId = 0;
-  const dots = L.canvas({ padding: 0.3 });
-  const DOT: Record<LayerKey, string> = { monsters: "#ff8a6b", bosses: "#ff4d4d", npcs: "#8fd3ff", places: "#9be86d", items: "#ffd34e" };
   const tipOf = (g: Group) => {
     if (g.refs.size === 1) return esc(g.m.entry.n) + (g.n > 1 ? ` · ${esc(spotsText(g.n))}` : "");
     const names = [...new Map(g.all.map((m) => [m.entry.r + m.entry.n, m.entry.n])).values()];
     return `${names.slice(0, 4).map(esc).join(" · ")}${names.length > 4 ? ` · +${names.length - 4}` : ""}`;
   };
   /** Gathers spots on the screen: a spot closer than `reach` px to a group already made joins it (the highlighted
-   *  entity's spots only among themselves); a spot within `clear` px of a group in `avoid` is left out. */
-  const gather = (list: Mark[], reach: number, avoid: Group[] = [], clear = 0): Group[] => {
+   *  entity's spots only among themselves; a dimmed spot under a highlighted one is left out). */
+  const gather = (list: Mark[], reach: number): Group[] => {
     const groups: Group[] = [];
     const grid = new Map<string, Group[]>();
     const around = function* (p: L.Point) {
@@ -121,14 +142,13 @@ export function startMap(root: HTMLElement): void {
     const sorted = [...list].sort((a, b) => Number(highlight === b.entry.r) - Number(highlight === a.entry.r) || ORDER[a.layer] - ORDER[b.layer] || countOf(b) - countOf(a));
     for (const m of sorted) {
       const p = map.latLngToLayerPoint(ll(m.x, m.z));
-      if (clear && avoid.some((g) => g.p.distanceTo(p) < clear)) continue;
       const hit = highlight === m.entry.r;
       let join: Group | null = null, under = false;
       for (const g of around(p)) {
         if (g.p.distanceTo(p) >= reach) continue;
         const gHit = highlight === g.m.entry.r;
         if (gHit === hit) { join = g; break; }
-        if (gHit) under = true;   // a dimmed spot under a highlighted one is left out: the ring stays clear
+        if (gHit) under = true;
       }
       if (join) { join.all.push(m); join.refs.add(m.entry.r + "|" + m.entry.n); join.n += countOf(m); continue; }
       if (under) continue;
@@ -144,47 +164,77 @@ export function startMap(root: HTMLElement): void {
     const z = map.getZoom();
     map.flyTo(b.getCenter(), Math.min(map.getMaxZoom(), Math.max(z + 2, map.getBoundsZoom(b.pad(0.5)))), { duration: 0.4 });
   };
+  const pickMark = (m: Mark, mk: L.Marker) => {
+    // a monster, boss or NPC (or a map item): only it, on every floor; the rest fades. The card as before.
+    if (/^(monster|npc|item):/.test(m.entry.r) && highlight !== m.entry.r) select(m.entry.r, { floor, fit: false }).then(() => showCard(m, mk));
+    else showCard(m, mk);
+  };
+  /** One marker: a sprite (or a bare icon) with its pill. */
+  const marker = (at: L.LatLng, m: Mark, opts: { n: number; many: boolean; h: 32 | 64; phase: number; still: boolean; tip: string; onClick: (mk: L.Marker) => void }) => {
+    const hit = highlight === m.entry.r;
+    const state = `${hit ? " hit" : ""}${highlight && !hit ? " dim" : ""}`;
+    const pill = m.layer === "bosses"
+      ? `<b class="cnt boss"><img src="/ui/boss.png" width="14" height="14" alt="">${opts.n > 1 ? opts.n : ""}</b>`
+      : opts.n > 1 ? `<b class="cnt">${opts.n}</b>` : "";
+    let html: string, w: number, h: number, ax: number, ay: number;
+    if (m.entry.sp) {
+      h = opts.h;
+      w = h === 32 ? m.entry.sp.w32 : m.entry.sp.w64;
+      html = `<span class="sm${state}" style="width:${w}px;height:${h}px">${spriteHtml(m.entry, opts.h, opts.phase, opts.still)}${pill}</span>`;
+      ax = w / 2; ay = h - 3;   // the feet on the spot
+    } else {
+      const box = opts.h === 32 ? 22 : 28;
+      w = h = box;
+      html = `<span class="im im--${m.layer}${state}">${imgHtml(m.entry.i, box)}${pill}</span>`;
+      ax = ay = box / 2;
+    }
+    const mk = L.marker(at, {
+      icon: L.divIcon({ html, className: "mkwrap", iconSize: [w, h], iconAnchor: [ax, ay] }),
+      keyboard: false, riseOnHover: true, zIndexOffset: hit ? 1000 : m.layer === "bosses" ? 500 : 0,
+    });
+    mk.bindTooltip(opts.tip, { direction: "top", offset: [0, -ay], className: "mtip" });
+    mk.on("click", () => opts.onClick(mk));
+    return mk;
+  };
   const draw = () => {
     marks.clearLayers();
     const z = map.getZoom();
-    const view = map.getBounds().pad(0.2);
+    const view = map.getBounds().pad(0.15);
     const here = current.filter((m) => m.f === floor);
-    const box = z <= 0 ? 24 : 30;      // the well
-    const reach = box + (z <= 0 ? 10 : 8);   // two wells' centres never closer than this: no overlap, a gap between
-    // icons: every spot from zoom 0 in; zoomed further out only the highlighted entity's and the bosses'
-    const icons = gather(here.filter((m) => z >= 0 || highlight === m.entry.r || m.layer === "bosses"), reach);
-    if (z < 0) {
-      // the rest as dots, gathered the same way at a dot's size (none overlapping, none under an icon)
-      for (const g of gather(here.filter((m) => highlight !== m.entry.r && m.layer !== "bosses"), 9, icons, box / 2 + 6)) {
-        const at = map.layerPointToLatLng(g.p);
-        if (!view.contains(at)) continue;
-        const c = L.circleMarker(at, { renderer: dots, radius: g.all.length > 1 ? 3.5 : g.m.layer === "items" ? 2.5 : 3, weight: 1, color: "rgba(10,11,13,0.9)", fillColor: DOT[g.m.layer], fillOpacity: highlight ? 0.3 : 0.95 });
-        c.bindTooltip(tipOf(g), { direction: "top", className: "mtip" });
-        c.on("click", () => (g.refs.size > 1 ? zoomInto(g) : showCard(g.m)));
-        marks.addLayer(c);
-      }
-    }
-    for (const g of icons) {
+    const spread = z >= SPREAD_FROM;
+    const h: 32 | 64 = z >= 4 ? 64 : 32;
+    // up close, monster groups with their cells spread out; everything else is gathered
+    const creatures = spread ? here.filter((m) => m.layer === "monsters" && m.cells && m.cells.length) : [];
+    const rest = spread ? here.filter((m) => !(m.layer === "monsters" && m.cells && m.cells.length)) : here;
+    const groups = gather(rest, h === 64 ? 52 : 36);
+    const out: { at: L.LatLng; make: (still: boolean) => L.Marker }[] = [];
+    for (const g of groups) {
       const at = map.layerPointToLatLng(g.p);
       if (!view.contains(at)) continue;
-      const hit = highlight === g.m.entry.r;
       const many = g.refs.size > 1;
-      const size = g.m.layer === "items" && !many ? box - 6 : box;
-      const cls = `mk mk--${g.m.layer}${many ? " stack" : ""}${hit ? " hit" : ""}${highlight && !hit ? " dim" : ""}`;
-      const badge = g.n > 1 ? `<b>${g.n}</b>` : "";
-      const mk = L.marker(at, {
-        icon: L.divIcon({ html: `<span class="${cls}">${imgHtml(g.m.entry.i, size - 6)}${badge}</span>`, className: "mkwrap", iconSize: [size, size], iconAnchor: [size / 2, size / 2] }),
-        keyboard: false, riseOnHover: true, zIndexOffset: hit ? 1000 : g.m.layer === "bosses" ? 500 : 0,
-      });
-      mk.bindTooltip(tipOf(g) + (many && z < map.getMaxZoom() ? ` <i>${esc(s.zoomToSee)}</i>` : ""), { direction: "top", offset: [0, -size / 2], className: "mtip" });
-      mk.on("click", () => {
-        if (!many) return showCard(g.m, mk);
-        if (z < map.getMaxZoom()) zoomInto(g);
-        else showGroup(g, mk);
-      });
-      marks.addLayer(mk);
+      out.push({ at, make: (still) => marker(at, g.m, {
+        n: g.n, many, h, phase: seed(g.m.x, g.m.z), still,
+        tip: tipOf(g) + (many && z < map.getMaxZoom() ? ` <i>${esc(s.zoomToSee)}</i>` : ""),
+        onClick: (mk) => (!many ? pickMark(g.m, mk) : z < map.getMaxZoom() ? zoomInto(g) : showGroup(g, mk)),
+      }) });
     }
+    for (const m of creatures) {
+      const c = m.cells!;
+      for (let i = 0; i < c.length; i += 2) {
+        const x = m.x + c[i]! + (seed(m.x, m.z, i, 1) - 0.5) * 0.9, zz = m.z + c[i + 1]! + (seed(m.x, m.z, i, 2) - 0.5) * 0.9;
+        const at = ll(x, zz);
+        if (!view.contains(at)) continue;
+        out.push({ at, make: (still) => marker(at, m, { n: 1, many: false, h, phase: seed(m.x, m.z, i, 3), still, tip: esc(m.entry.n), onClick: (mk) => pickMark(m, mk) }) });
+      }
+    }
+    // many sprites in view: the first frames (they still read; the page stays light)
+    const sprites = out.length;
+    const still = sprites > STILL_PAST;
+    root.dataset.sprites = String(sprites);
+    root.dataset.animated = String(still || reduce.matches ? 0 : sprites);
+    for (const o of out) marks.addLayer(o.make(still));
   };
+  reduce.addEventListener?.("change", () => draw());
   map.on("moveend zoomend", draw);
   const paint = async () => {
     const id = ++paintId;

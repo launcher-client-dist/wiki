@@ -5,7 +5,8 @@
  *
  * One file per layer and language (/map-data/<lang>/<layer>.json), loaded when the layer is first shown:
  *   e  the layer's entries: {r ref, n name, a translation, u page URL or null, i icon {s, w, h, px}, k key fact}
- *   p  its points: [x, z, floor, entry index, count] (bosses add the window's game hours [h0, h1] and 1 for an invasion)
+ *   p  its points: [x, z, floor, entry index, count] (bosses add the window's game hours [h0, h1] and 1 for an invasion;
+ *      monster groups add their creatures' cells, "dx,dz,dx,dz..." from the group's spot, or "" to stay one marker)
  * The quest things (spoilers: items and NPCs that only appear in a quest) are left out of the layers and kept in their
  * own file, `spoiler`, loaded only when the reader turns the switch on, or for a deep link to one of them.
  */
@@ -15,6 +16,7 @@ import { ui, fill } from "../../i18n/index.ts";
 import type { Registry } from "../entities/registry.ts";
 import { displayName } from "../names.ts";
 import pointsJson from "../../data/map/points.json";
+import spritesJson from "../../data/map/sprites.json";
 import uiSizes from "../../data/ui-icons.json";
 import type { MonsterData } from "../monsters/data.ts";
 
@@ -28,14 +30,18 @@ export type PlaceKind = (typeof PLACE_KINDS)[number];
 export const LAYER_ICON: Record<LayerKey, string> = { monsters: "src-drop", bosses: "boss", npcs: "src-shop", places: "house", items: "stack" };
 export const PLACE_ICON: Record<PlaceKind, string> = { temple: "house", depot: "stack", well: "cat-drink", forge: "anvil", runeTable: "rune", cook: "src-cook", dock: "src-map" };
 
-interface RawPoint { x: number; z: number; f: string; ref?: string; n?: number; kind?: PlaceKind; town?: string; hours?: [number, number]; invasion?: boolean; sells?: number; buys?: number; spoiler?: boolean; npc?: string }
+interface RawPoint { x: number; z: number; f: string; ref?: string; n?: number; cells?: [number, number][]; kind?: PlaceKind; town?: string; hours?: [number, number]; invasion?: boolean; sells?: number; buys?: number; spoiler?: boolean; npc?: string }
 export interface PointsFile { floors: string[]; layers: Record<LayerKey, RawPoint[]> }
 export const POINTS = pointsJson as unknown as PointsFile;
 
 export interface Icon { s: string; w: number; h: number; px?: boolean }
 /** A card fact, never bare text: a game icon (at its largest whole scale within 20 px: w, h) and its words, or a gold value. */
 export type Fact = [icon: string, text: string, w: number, h: number] | ["$gold", number];
-export interface Entry { r: string; n: string; a?: string; u: string | null; i?: Icon; k?: string; x?: Fact[] }
+/** A walking sprite (public/sprites/<f>-<h>.webp: its frames side by side; <f>-<h>.png: the first frame): n frames of
+ *  ms each, w32 / w64 px wide at 32 / 64 px tall. */
+export interface Sprite { f: string; n: number; ms: number; w32: number; w64: number }
+export const SPRITES = spritesJson as unknown as Record<string, Sprite>;
+export interface Entry { r: string; n: string; a?: string; u: string | null; i?: Icon; k?: string; x?: Fact[]; sp?: Sprite }
 export type Point = (number | string)[];
 export interface LayerFile { e: Entry[]; p: Point[] }
 
@@ -85,7 +91,7 @@ export function buildLayers(lang: Lang, registry: Registry, monsters: readonly M
       // k: the facts' words, for the search and the result's second line
       const words = facts.filter((f): f is [string, string, number, number] => f[0] !== "$gold").map((f) => f[1]).join(" · ");
       return { r: ref, n: dn.name, ...(dn.aid ? { a: dn.aid } : {}), u: registry.url(ref, lang), ...(e.icon ? { i: { s: e.icon.src, w: e.icon.width, h: e.icon.height, ...(e.icon.pixel ? { px: true } : {}) } } : {}),
-        ...(words ? { k: words } : {}), ...(facts.length ? { x: facts } : {}) };
+        ...(words ? { k: words } : {}), ...(facts.length ? { x: facts } : {}), ...(SPRITES[ref] ? { sp: SPRITES[ref] } : {}) };
     };
     for (const p of POINTS.layers[layer]) {
       if (layer === "places") {
@@ -115,6 +121,9 @@ export function buildLayers(lang: Lang, registry: Registry, monsters: readonly M
       const i = entryOf(ref, () => entity(ref, facts), target, map);
       const row: Point = [p.x, p.z, p.f, i, p.n ?? 1];
       if (layer === "bosses") row.push(p.hours?.[0] ?? -1, p.hours?.[1] ?? -1, p.invasion ? 1 : 0);
+      // a monster group's creatures, each on its own spawn cell (offsets from the group's spot, flat: dx, dz, ...); none
+      // where the group must stay one marker
+      if (layer === "monsters") row.push(p.cells ? p.cells.flat().join(",") : "");
       if (p.spoiler) row.push(LAYERS.indexOf(layer));
       target.p.push(row);
     }

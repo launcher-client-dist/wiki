@@ -1,0 +1,1227 @@
+{
+"monster:alpha-wolf": {
+"f": "monsters/alpha-wolf",
+"ms": 87,
+"n": 11,
+"w32": 30,
+"w64": 61
+},
+"monster:amphitere": {
+"f": "monsters/amphitere",
+"ms": 85,
+"n": 14,
+"w32": 44,
+"w64": 88
+},
+"monster:ancient-snake": {
+"f": "monsters/ancient-snake",
+"ms": 207,
+"n": 16,
+"w32": 16,
+"w64": 33
+},
+"monster:bandit": {
+"f": "monsters/bandit",
+"ms": 82,
+"n": 10,
+"w32": 20,
+"w64": 41
+},
+"monster:banshee": {
+"f": "monsters/banshee",
+"ms": 82,
+"n": 12,
+"w32": 34,
+"w64": 67
+},
+"monster:bear": {
+"f": "monsters/bear",
+"ms": 81,
+"n": 9,
+"w32": 40,
+"w64": 81
+},
+"monster:black-lamb": {
+"f": "monsters/black-lamb",
+"ms": 90,
+"n": 16,
+"w32": 29,
+"w64": 58
+},
+"monster:black-sheep": {
+"f": "monsters/black-sheep",
+"ms": 90,
+"n": 16,
+"w32": 26,
+"w64": 52
+},
+"monster:bone-eater": {
+"f": "monsters/bone-eater",
+"ms": 207,
+"n": 16,
+"w32": 20,
+"w64": 40
+},
+"monster:bridge-troll": {
+"f": "monsters/bridge-troll",
+"ms": 175,
+"n": 16,
+"w32": 32,
+"w64": 63
+},
+"monster:brother-rossi": {
+"f": "monsters/brother-rossi",
+"ms": 82,
+"n": 10,
+"w32": 19,
+"w64": 38
+},
+"monster:capozzi-the-bandit": {
+"f": "monsters/capozzi-the-bandit",
+"ms": 82,
+"n": 10,
+"w32": 16,
+"w64": 32
+},
+"monster:cave-spider": {
+"f": "monsters/cave-spider",
+"ms": 62,
+"n": 8,
+"w32": 44,
+"w64": 89
+},
+"monster:cave-troll": {
+"f": "monsters/cave-troll",
+"ms": 175,
+"n": 16,
+"w32": 32,
+"w64": 63
+},
+"monster:conquest-champion": {
+"f": "monsters/conquest-champion",
+"ms": 82,
+"n": 12,
+"w32": 26,
+"w64": 51
+},
+"monster:conquest-crow": {
+"f": "monsters/conquest-crow",
+"ms": 82,
+"n": 10,
+"w32": 18,
+"w64": 35
+},
+"monster:conquest-fowler": {
+"f": "monsters/conquest-fowler",
+"ms": 124,
+"n": 16,
+"w32": 26,
+"w64": 53
+},
+"monster:conquest-priestess": {
+"f": "monsters/conquest-priestess",
+"ms": 103,
+"n": 16,
+"w32": 19,
+"w64": 38
+},
+"monster:crazed-occultist": {
+"f": "monsters/crazed-occultist",
+"ms": 82,
+"n": 10,
+"w32": 20,
+"w64": 40
+},
+"monster:cube-of-doom": {
+"f": "monsters/cube-of-doom",
+"ms": 100,
+"n": 1,
+"w32": 34,
+"w64": 68
+},
+"monster:deadly-webcap": {
+"f": "monsters/deadly-webcap",
+"ms": 161,
+"n": 16,
+"w32": 24,
+"w64": 48
+},
+"monster:deer": {
+"f": "monsters/deer",
+"ms": 81,
+"n": 9,
+"w32": 19,
+"w64": 38
+},
+"monster:devil-spider": {
+"f": "monsters/devil-spider",
+"ms": 62,
+"n": 8,
+"w32": 44,
+"w64": 89
+},
+"monster:digger": {
+"f": "monsters/digger",
+"ms": 87,
+"n": 9,
+"w32": 48,
+"w64": 95
+},
+"monster:eye-of-pestilence": {
+"f": "monsters/eye-of-pestilence",
+"ms": 100,
+"n": 1,
+"w32": 20,
+"w64": 41
+},
+"monster:faun": {
+"f": "monsters/faun",
+"ms": 82,
+"n": 10,
+"w32": 24,
+"w64": 48
+},
+"monster:frozen-chest": {
+"f": "monsters/frozen-chest",
+"ms": 100,
+"n": 1,
+"w32": 44,
+"w64": 89
+},
+"monster:gaglio-the-bandit": {
+"f": "monsters/gaglio-the-bandit",
+"ms": 82,
+"n": 12,
+"w32": 18,
+"w64": 37
+},
+"monster:ghost": {
+"f": "monsters/ghost",
+"ms": 82,
+"n": 10,
+"w32": 20,
+"w64": 39
+},
+"monster:ghoul": {
+"f": "monsters/ghoul",
+"ms": 124,
+"n": 16,
+"w32": 23,
+"w64": 46
+},
+"monster:giant-rat": {
+"f": "monsters/giant-rat",
+"ms": 87,
+"n": 11,
+"w32": 36,
+"w64": 71
+},
+"monster:goblin": {
+"f": "monsters/goblin",
+"ms": 40,
+"n": 8,
+"w32": 40,
+"w64": 79
+},
+"monster:great-lintwurm": {
+"f": "monsters/great-lintwurm",
+"ms": 249,
+"n": 16,
+"w32": 16,
+"w64": 33
+},
+"monster:grizzly-bear": {
+"f": "monsters/grizzly-bear",
+"ms": 81,
+"n": 9,
+"w32": 40,
+"w64": 81
+},
+"monster:huntsman": {
+"f": "monsters/huntsman",
+"ms": 82,
+"n": 10,
+"w32": 28,
+"w64": 56
+},
+"monster:imp": {
+"f": "monsters/imp",
+"ms": 84,
+"n": 11,
+"w32": 39,
+"w64": 78
+},
+"monster:lamb": {
+"f": "monsters/lamb",
+"ms": 90,
+"n": 16,
+"w32": 29,
+"w64": 58
+},
+"monster:lava-snoop": {
+"f": "monsters/lava-snoop",
+"ms": 100,
+"n": 1,
+"w32": 44,
+"w64": 89
+},
+"monster:lintwurm": {
+"f": "monsters/lintwurm",
+"ms": 82,
+"n": 14,
+"w32": 31,
+"w64": 62
+},
+"monster:mateo-the-bandit": {
+"f": "monsters/mateo-the-bandit",
+"ms": 82,
+"n": 10,
+"w32": 22,
+"w64": 43
+},
+"monster:minerva": {
+"f": "monsters/minerva",
+"ms": 82,
+"n": 12,
+"w32": 34,
+"w64": 67
+},
+"monster:minotaur": {
+"f": "monsters/minotaur",
+"ms": 82,
+"n": 12,
+"w32": 33,
+"w64": 66
+},
+"monster:minotaur-guard": {
+"f": "monsters/minotaur-guard",
+"ms": 82,
+"n": 12,
+"w32": 34,
+"w64": 67
+},
+"monster:mireling": {
+"f": "monsters/mireling",
+"ms": 81,
+"n": 8,
+"w32": 33,
+"w64": 66
+},
+"monster:mireling-noble": {
+"f": "monsters/mireling-noble",
+"ms": 81,
+"n": 8,
+"w32": 35,
+"w64": 70
+},
+"monster:monk": {
+"f": "monsters/monk",
+"ms": 82,
+"n": 10,
+"w32": 19,
+"w64": 38
+},
+"monster:necromancer": {
+"f": "monsters/necromancer",
+"ms": 82,
+"n": 10,
+"w32": 24,
+"w64": 49
+},
+"monster:obelisk": {
+"f": "monsters/obelisk",
+"ms": 100,
+"n": 1,
+"w32": 17,
+"w64": 34
+},
+"monster:occultist-acolyte": {
+"f": "monsters/occultist-acolyte",
+"ms": 82,
+"n": 10,
+"w32": 19,
+"w64": 38
+},
+"monster:occultist-apprentice": {
+"f": "monsters/occultist-apprentice",
+"ms": 82,
+"n": 10,
+"w32": 19,
+"w64": 38
+},
+"monster:occultist-enforcer": {
+"f": "monsters/occultist-enforcer",
+"ms": 82,
+"n": 10,
+"w32": 20,
+"w64": 39
+},
+"monster:occultist-scholar": {
+"f": "monsters/occultist-scholar",
+"ms": 82,
+"n": 10,
+"w32": 20,
+"w64": 39
+},
+"monster:omen": {
+"f": "monsters/omen",
+"ms": 100,
+"n": 1,
+"w32": 16,
+"w64": 31
+},
+"monster:orc-berserker": {
+"f": "monsters/orc-berserker",
+"ms": 82,
+"n": 12,
+"w32": 24,
+"w64": 48
+},
+"monster:orc-general": {
+"f": "monsters/orc-general",
+"ms": 82,
+"n": 12,
+"w32": 16,
+"w64": 31
+},
+"monster:orc-infantry": {
+"f": "monsters/orc-infantry",
+"ms": 82,
+"n": 12,
+"w32": 20,
+"w64": 40
+},
+"monster:orc-shaman": {
+"f": "monsters/orc-shaman",
+"ms": 82,
+"n": 12,
+"w32": 18,
+"w64": 36
+},
+"monster:pestilence-guardian": {
+"f": "monsters/pestilence-guardian",
+"ms": 175,
+"n": 16,
+"w32": 28,
+"w64": 55
+},
+"monster:pestilence-knight": {
+"f": "monsters/pestilence-knight",
+"ms": 124,
+"n": 16,
+"w32": 18,
+"w64": 36
+},
+"monster:pestilence-plague": {
+"f": "monsters/pestilence-plague",
+"ms": 87,
+"n": 11,
+"w32": 38,
+"w64": 75
+},
+"monster:pestilence-spawn": {
+"f": "monsters/pestilence-spawn",
+"ms": 65,
+"n": 8,
+"w32": 19,
+"w64": 38
+},
+"monster:pestilence-stinger": {
+"f": "monsters/pestilence-stinger",
+"ms": 207,
+"n": 16,
+"w32": 28,
+"w64": 56
+},
+"monster:pestilence-widow": {
+"f": "monsters/pestilence-widow",
+"ms": 62,
+"n": 8,
+"w32": 44,
+"w64": 89
+},
+"monster:plea": {
+"f": "monsters/plea",
+"ms": 82,
+"n": 10,
+"w32": 26,
+"w64": 51
+},
+"monster:plea-occultist": {
+"f": "monsters/plea-occultist",
+"ms": 82,
+"n": 10,
+"w32": 26,
+"w64": 52
+},
+"monster:profaner": {
+"f": "monsters/profaner",
+"ms": 124,
+"n": 16,
+"w32": 21,
+"w64": 42
+},
+"monster:queen-zoe": {
+"f": "monsters/queen-zoe",
+"ms": 82,
+"n": 10,
+"w32": 18,
+"w64": 37
+},
+"monster:rat": {
+"f": "monsters/rat",
+"ms": 87,
+"n": 11,
+"w32": 38,
+"w64": 75
+},
+"monster:rat-shipper": {
+"f": "monsters/rat-shipper",
+"ms": 87,
+"n": 11,
+"w32": 36,
+"w64": 71
+},
+"monster:rotwurm": {
+"f": "monsters/rotwurm",
+"ms": 249,
+"n": 16,
+"w32": 16,
+"w64": 33
+},
+"monster:rubellus": {
+"f": "monsters/rubellus",
+"ms": 82,
+"n": 10,
+"w32": 28,
+"w64": 57
+},
+"monster:sheep": {
+"f": "monsters/sheep",
+"ms": 90,
+"n": 16,
+"w32": 26,
+"w64": 52
+},
+"monster:skal-traitor": {
+"f": "monsters/skal-traitor",
+"ms": 82,
+"n": 12,
+"w32": 32,
+"w64": 64
+},
+"monster:skeleton": {
+"f": "monsters/skeleton",
+"ms": 124,
+"n": 16,
+"w32": 21,
+"w64": 42
+},
+"monster:smelt-ooze": {
+"f": "monsters/smelt-ooze",
+"ms": 100,
+"n": 1,
+"w32": 34,
+"w64": 68
+},
+"monster:sunskin": {
+"f": "monsters/sunskin",
+"ms": 40,
+"n": 8,
+"w32": 40,
+"w64": 79
+},
+"monster:sunskin-enchanter": {
+"f": "monsters/sunskin-enchanter",
+"ms": 40,
+"n": 8,
+"w32": 34,
+"w64": 67
+},
+"monster:swamp-tentacle": {
+"f": "monsters/swamp-tentacle",
+"ms": 100,
+"n": 1,
+"w32": 19,
+"w64": 38
+},
+"monster:swamp-troll": {
+"f": "monsters/swamp-troll",
+"ms": 175,
+"n": 16,
+"w32": 31,
+"w64": 62
+},
+"monster:terror-spider": {
+"f": "monsters/terror-spider",
+"ms": 62,
+"n": 8,
+"w32": 44,
+"w64": 89
+},
+"monster:the-augur": {
+"f": "monsters/the-augur",
+"ms": 82,
+"n": 10,
+"w32": 18,
+"w64": 36
+},
+"monster:the-black-knight": {
+"f": "monsters/the-black-knight",
+"ms": 82,
+"n": 10,
+"w32": 19,
+"w64": 38
+},
+"monster:the-blackhat": {
+"f": "monsters/the-blackhat",
+"ms": 82,
+"n": 10,
+"w32": 18,
+"w64": 36
+},
+"monster:the-broodmother": {
+"f": "monsters/the-broodmother",
+"ms": 87,
+"n": 11,
+"w32": 36,
+"w64": 71
+},
+"monster:the-gardener": {
+"f": "monsters/the-gardener",
+"ms": 82,
+"n": 10,
+"w32": 24,
+"w64": 49
+},
+"monster:thug": {
+"f": "monsters/thug",
+"ms": 82,
+"n": 10,
+"w32": 30,
+"w64": 59
+},
+"monster:titan": {
+"f": "monsters/titan",
+"ms": 82,
+"n": 12,
+"w32": 34,
+"w64": 68
+},
+"monster:tock": {
+"f": "monsters/tock",
+"ms": 82,
+"n": 10,
+"w32": 27,
+"w64": 54
+},
+"monster:tomb-diviner": {
+"f": "monsters/tomb-diviner",
+"ms": 82,
+"n": 16,
+"w32": 18,
+"w64": 37
+},
+"monster:tomb-guardian": {
+"f": "monsters/tomb-guardian",
+"ms": 82,
+"n": 16,
+"w32": 16,
+"w64": 31
+},
+"monster:tomb-worker": {
+"f": "monsters/tomb-worker",
+"ms": 82,
+"n": 16,
+"w32": 20,
+"w64": 39
+},
+"monster:tundra-rat": {
+"f": "monsters/tundra-rat",
+"ms": 87,
+"n": 11,
+"w32": 36,
+"w64": 71
+},
+"monster:unstable-quartz": {
+"f": "monsters/unstable-quartz",
+"ms": 100,
+"n": 1,
+"w32": 18,
+"w64": 35
+},
+"monster:viscid-goblin": {
+"f": "monsters/viscid-goblin",
+"ms": 40,
+"n": 8,
+"w32": 38,
+"w64": 77
+},
+"monster:walking-boletus": {
+"f": "monsters/walking-boletus",
+"ms": 82,
+"n": 10,
+"w32": 28,
+"w64": 57
+},
+"monster:wolf": {
+"f": "monsters/wolf",
+"ms": 87,
+"n": 11,
+"w32": 30,
+"w64": 60
+},
+"monster:young-amphitere": {
+"f": "monsters/young-amphitere",
+"ms": 85,
+"n": 14,
+"w32": 44,
+"w64": 88
+},
+"npc:a114": {
+"f": "npcs/benedict",
+"ms": 103,
+"n": 16,
+"w32": 14,
+"w64": 29
+},
+"npc:a117": {
+"f": "npcs/el-chad",
+"ms": 103,
+"n": 16,
+"w32": 16,
+"w64": 32
+},
+"npc:a119": {
+"f": "npcs/rubius",
+"ms": 103,
+"n": 16,
+"w32": 16,
+"w64": 32
+},
+"npc:a120": {
+"f": "npcs/bresenham",
+"ms": 103,
+"n": 16,
+"w32": 14,
+"w64": 29
+},
+"npc:a129": {
+"f": "npcs/tim",
+"ms": 82,
+"n": 12,
+"w32": 16,
+"w64": 33
+},
+"npc:a13": {
+"f": "npcs/sal",
+"ms": 103,
+"n": 16,
+"w32": 14,
+"w64": 29
+},
+"npc:a130": {
+"f": "npcs/ozrid",
+"ms": 103,
+"n": 16,
+"w32": 22,
+"w64": 44
+},
+"npc:a131": {
+"f": "npcs/nick",
+"ms": 82,
+"n": 12,
+"w32": 16,
+"w64": 31
+},
+"npc:a132": {
+"f": "npcs/a-stressed-chef",
+"ms": 82,
+"n": 12,
+"w32": 14,
+"w64": 29
+},
+"npc:a134": {
+"f": "npcs/maxwell",
+"ms": 93,
+"n": 16,
+"w32": 18,
+"w64": 35
+},
+"npc:a14": {
+"f": "npcs/mary",
+"ms": 103,
+"n": 16,
+"w32": 18,
+"w64": 37
+},
+"npc:a149": {
+"f": "npcs/margery-a149",
+"ms": 103,
+"n": 16,
+"w32": 16,
+"w64": 32
+},
+"npc:a150": {
+"f": "npcs/yoz",
+"ms": 103,
+"n": 16,
+"w32": 24,
+"w64": 49
+},
+"npc:a152": {
+"f": "npcs/matthew",
+"ms": 103,
+"n": 16,
+"w32": 30,
+"w64": 60
+},
+"npc:a158": {
+"f": "npcs/newell",
+"ms": 82,
+"n": 12,
+"w32": 16,
+"w64": 33
+},
+"npc:a159": {
+"f": "npcs/gabe",
+"ms": 93,
+"n": 16,
+"w32": 18,
+"w64": 36
+},
+"npc:a162": {
+"f": "npcs/amlon",
+"ms": 93,
+"n": 16,
+"w32": 27,
+"w64": 54
+},
+"npc:a164": {
+"f": "npcs/amlon-a164",
+"ms": 93,
+"n": 16,
+"w32": 27,
+"w64": 54
+},
+"npc:a166": {
+"f": "npcs/amlon-a166",
+"ms": 93,
+"n": 16,
+"w32": 27,
+"w64": 54
+},
+"npc:a178": {
+"f": "npcs/martem",
+"ms": 93,
+"n": 16,
+"w32": 18,
+"w64": 37
+},
+"npc:a18": {
+"f": "npcs/edmund",
+"ms": 93,
+"n": 16,
+"w32": 18,
+"w64": 36
+},
+"npc:a182": {
+"f": "npcs/constine",
+"ms": 93,
+"n": 16,
+"w32": 17,
+"w64": 34
+},
+"npc:a184": {
+"f": "npcs/joan",
+"ms": 82,
+"n": 12,
+"w32": 14,
+"w64": 29
+},
+"npc:a185": {
+"f": "npcs/odie",
+"ms": 103,
+"n": 16,
+"w32": 16,
+"w64": 31
+},
+"npc:a186": {
+"f": "npcs/gonlle",
+"ms": 103,
+"n": 16,
+"w32": 17,
+"w64": 34
+},
+"npc:a187": {
+"f": "npcs/nunie",
+"ms": 103,
+"n": 16,
+"w32": 18,
+"w64": 36
+},
+"npc:a204": {
+"f": "npcs/hoder",
+"ms": 82,
+"n": 12,
+"w32": 16,
+"w64": 31
+},
+"npc:a206": {
+"f": "npcs/reika",
+"ms": 103,
+"n": 16,
+"w32": 16,
+"w64": 31
+},
+"npc:a213": {
+"f": "npcs/dionel",
+"ms": 82,
+"n": 12,
+"w32": 14,
+"w64": 29
+},
+"npc:a214": {
+"f": "npcs/rosel",
+"ms": 124,
+"n": 16,
+"w32": 20,
+"w64": 39
+},
+"npc:a215": {
+"f": "npcs/petrus",
+"ms": 103,
+"n": 16,
+"w32": 16,
+"w64": 33
+},
+"npc:a229": {
+"f": "npcs/morrigan",
+"ms": 103,
+"n": 16,
+"w32": 14,
+"w64": 29
+},
+"npc:a241": {
+"f": "npcs/colman",
+"ms": 82,
+"n": 12,
+"w32": 14,
+"w64": 29
+},
+"npc:a242": {
+"f": "npcs/brean",
+"ms": 82,
+"n": 12,
+"w32": 16,
+"w64": 31
+},
+"npc:a243": {
+"f": "npcs/salazar",
+"ms": 93,
+"n": 16,
+"w32": 18,
+"w64": 36
+},
+"npc:a244": {
+"f": "npcs/logan",
+"ms": 82,
+"n": 12,
+"w32": 16,
+"w64": 33
+},
+"npc:a247": {
+"f": "npcs/tock",
+"ms": 82,
+"n": 10,
+"w32": 27,
+"w64": 54
+},
+"npc:a248": {
+"f": "npcs/loke",
+"ms": 81,
+"n": 8,
+"w32": 17,
+"w64": 34
+},
+"npc:a253": {
+"f": "npcs/a-blue-mage",
+"ms": 93,
+"n": 16,
+"w32": 27,
+"w64": 54
+},
+"npc:a269": {
+"f": "npcs/a-ghoulish-secretary",
+"ms": 93,
+"n": 16,
+"w32": 18,
+"w64": 37
+},
+"npc:a282": {
+"f": "npcs/a-blind-botanist",
+"ms": 103,
+"n": 16,
+"w32": 18,
+"w64": 37
+},
+"npc:a288": {
+"f": "npcs/berk",
+"ms": 82,
+"n": 12,
+"w32": 22,
+"w64": 45
+},
+"npc:a290": {
+"f": "npcs/egemen",
+"ms": 82,
+"n": 12,
+"w32": 30,
+"w64": 60
+},
+"npc:a293": {
+"f": "npcs/nebil",
+"ms": 82,
+"n": 12,
+"w32": 22,
+"w64": 44
+},
+"npc:a298": {
+"f": "npcs/tink",
+"ms": 88,
+"n": 9,
+"w32": 27,
+"w64": 54
+},
+"npc:a300": {
+"f": "npcs/hagar",
+"ms": 82,
+"n": 12,
+"w32": 22,
+"w64": 44
+},
+"npc:a301": {
+"f": "npcs/kazim",
+"ms": 82,
+"n": 12,
+"w32": 24,
+"w64": 49
+},
+"npc:a303": {
+"f": "npcs/isra",
+"ms": 82,
+"n": 12,
+"w32": 20,
+"w64": 41
+},
+"npc:a304": {
+"f": "npcs/ismet",
+"ms": 82,
+"n": 12,
+"w32": 15,
+"w64": 30
+},
+"npc:a306": {
+"f": "npcs/yacht",
+"ms": 82,
+"n": 12,
+"w32": 16,
+"w64": 32
+},
+"npc:a331": {
+"f": "npcs/hoder-a331",
+"ms": 82,
+"n": 12,
+"w32": 16,
+"w64": 31
+},
+"npc:a49": {
+"f": "npcs/seymour",
+"ms": 93,
+"n": 16,
+"w32": 18,
+"w64": 36
+},
+"npc:a51": {
+"f": "npcs/gavin",
+"ms": 83,
+"n": 13,
+"w32": 14,
+"w64": 29
+},
+"npc:a54": {
+"f": "npcs/guy",
+"ms": 103,
+"n": 16,
+"w32": 16,
+"w64": 32
+},
+"npc:a56": {
+"f": "npcs/rasobar",
+"ms": 103,
+"n": 16,
+"w32": 17,
+"w64": 34
+},
+"npc:a59": {
+"f": "npcs/sigurd",
+"ms": 83,
+"n": 13,
+"w32": 16,
+"w64": 31
+},
+"npc:a6": {
+"f": "npcs/violet",
+"ms": 124,
+"n": 16,
+"w32": 20,
+"w64": 39
+},
+"npc:a60": {
+"f": "npcs/wolfram",
+"ms": 103,
+"n": 16,
+"w32": 16,
+"w64": 32
+},
+"npc:a61": {
+"f": "npcs/jaques",
+"ms": 103,
+"n": 16,
+"w32": 15,
+"w64": 30
+},
+"npc:a72": {
+"f": "npcs/maude",
+"ms": 82,
+"n": 12,
+"w32": 14,
+"w64": 28
+},
+"npc:a73": {
+"f": "npcs/benedict-a73",
+"ms": 103,
+"n": 16,
+"w32": 14,
+"w64": 29
+},
+"npc:a75": {
+"f": "npcs/roland",
+"ms": 103,
+"n": 16,
+"w32": 16,
+"w64": 32
+},
+"npc:a78": {
+"f": "npcs/meredith",
+"ms": 82,
+"n": 12,
+"w32": 14,
+"w64": 28
+},
+"npc:a80": {
+"f": "npcs/wilfred",
+"ms": 82,
+"n": 12,
+"w32": 14,
+"w64": 29
+},
+"npc:a81": {
+"f": "npcs/mabel",
+"ms": 103,
+"n": 16,
+"w32": 16,
+"w64": 32
+},
+"npc:a82": {
+"f": "npcs/reginald",
+"ms": 103,
+"n": 16,
+"w32": 16,
+"w64": 32
+},
+"npc:a83": {
+"f": "npcs/margery",
+"ms": 103,
+"n": 16,
+"w32": 16,
+"w64": 32
+},
+"npc:a85": {
+"f": "npcs/zebulon",
+"ms": 82,
+"n": 12,
+"w32": 13,
+"w64": 26
+},
+"npc:a86": {
+"f": "npcs/lurleen",
+"ms": 103,
+"n": 16,
+"w32": 18,
+"w64": 36
+},
+"npc:a87": {
+"f": "npcs/erastus",
+"ms": 103,
+"n": 16,
+"w32": 26,
+"w64": 51
+},
+"npc:a88": {
+"f": "npcs/otis",
+"ms": 103,
+"n": 16,
+"w32": 14,
+"w64": 29
+},
+"npc:a89": {
+"f": "npcs/hester",
+"ms": 103,
+"n": 16,
+"w32": 16,
+"w64": 32
+},
+"npc:a90": {
+"f": "npcs/dewey",
+"ms": 82,
+"n": 12,
+"w32": 14,
+"w64": 29
+},
+"npc:a91": {
+"f": "npcs/opal",
+"ms": 83,
+"n": 13,
+"w32": 17,
+"w64": 34
+},
+"npc:a92": {
+"f": "npcs/burl",
+"ms": 103,
+"n": 16,
+"w32": 16,
+"w64": 32
+},
+"npc:a95": {
+"f": "npcs/bessie",
+"ms": 103,
+"n": 16,
+"w32": 18,
+"w64": 37
+},
+"npc:a96": {
+"f": "npcs/hobart",
+"ms": 103,
+"n": 16,
+"w32": 15,
+"w64": 30
+},
+"npc:a98": {
+"f": "npcs/jebidiah",
+"ms": 103,
+"n": 16,
+"w32": 15,
+"w64": 30
+}
+}

@@ -1,6 +1,6 @@
 import { describe, test } from "node:test";
 import assert from "node:assert/strict";
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { level, parsePlace, placeFloors, search } from "../src/lib/map/goto.ts";
 import { mapHref, readDeepLink } from "../src/lib/map/links.ts";
 import { nextWindow, windowSeconds } from "../src/lib/monsters/window.ts";
@@ -37,6 +37,26 @@ describe("the map's data", () => {
     const spots = new Map<string, number>();
     for (const r of POINTS.layers.monsters!) spots.set(r.ref!, (spots.get(r.ref!) ?? 0) + (r.n ?? 1));
     for (const m of monsters) assert.equal(spots.get(`monster:${m.id}`) ?? 0, m.places.reduce((n, p) => n + p.count, 0), m.id);
+  });
+
+  test("a monster group's creatures: one cell each, near the group, or none (it stays one marker)", () => {
+    const rows = POINTS.layers.monsters as unknown as { n?: number; cells?: [number, number][] }[];
+    for (const r of rows) {
+      if (!r.cells) continue;
+      assert.equal(r.cells.length, r.n ?? 1);
+      for (const [dx, dz] of r.cells) assert.ok(Math.abs(dx) <= 200 && Math.abs(dz) <= 200);
+    }
+    assert.ok(rows.filter((r) => r.cells).length > rows.length * 0.9);
+  });
+
+  test("every sprite the map names is in public/sprites, at both heights, a strip and a still, named by slug", () => {
+    const sprites = read<Record<string, { f: string; n: number; ms: number; w32: number; w64: number }>>("map/sprites.json");
+    assert.ok(Object.keys(sprites).length > 100);
+    for (const [ref, sp] of Object.entries(sprites)) {
+      assert.match(sp.f, /^(monsters|npcs)\/[a-z0-9-]+$/, ref);
+      for (const h of [32, 64]) for (const ext of ["webp", "png"]) assert.ok(existsSync(new URL(`../public/sprites/${sp.f}-${h}.${ext}`, import.meta.url)), `${sp.f}-${h}.${ext}`);
+      assert.ok(sp.n >= 1 && sp.ms > 0 && sp.w32 > 0 && sp.w64 > 0, ref);
+    }
   });
 
   test("no map link and no point leaves the wiki for the editor", () => {
