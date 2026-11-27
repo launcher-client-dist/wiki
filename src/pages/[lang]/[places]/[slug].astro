@@ -12,7 +12,6 @@ import InfoBox from "../../../components/ui/InfoBox.astro";
 import Spoiler from "../../../components/ui/Spoiler.astro";
 import MapLink from "../../../components/ui/MapLink.astro";
 import Card from "../../../components/ui/Card.astro";
-import IconSlot from "../../../components/ui/IconSlot.astro";
 import EntityLink from "../../../components/entity/EntityLink.astro";
 import GameIcon from "../../../components/ui/GameIcon.astro";
 import TipTag from "../../../components/ui/TipTag.astro";
@@ -81,7 +80,7 @@ const cardKicker = (o: PlaceData) => (o.level ? fill(tp.levelTag, o.level) : o.k
 ---
 <PageShell lang={lang} title={dn.name} description={description} alternates={alternates} current="place"
   searchable={{ kind: "place" }} jsonLd={jsonLd}
-  crumbs={[{ label: t.home, href: homePath(lang) }, { label: tp.listTitle, href: sectionPath("place", lang) }, ...(region && !town ? [{ label: regionName!, href: registry.url(p.town!, lang)! }] : []), { label: dn.name }]}>
+  crumbs={[{ label: t.home, href: homePath(lang) }, { label: tp.listTitle, href: sectionPath("place", lang) }, { label: dn.name }]}>
   <div class="container" id="place-page">
     <div class="layout">
       <div class="hero-area">
@@ -115,7 +114,7 @@ const cardKicker = (o: PlaceData) => (o.level ? fill(tp.levelTag, o.level) : o.k
             {services.length > 0 && (
               <div class="sub">
                 <h3>{tp.servicesTitle}</h3>
-                <ul class="chips">
+                <ul class="chips" data-flow>
                   {services.map((s) => (
                     <li class="chip"><span class="cicon"><GameIcon name={PLACE_ICON[s.kind]} fit={26} /></span><span>{tm.place[s.kind]}</span>{s.n > 1 && <b class="num">×{num(s.n)}</b>}</li>
                   ))}
@@ -125,10 +124,10 @@ const cardKicker = (o: PlaceData) => (o.level ? fill(tp.levelTag, o.level) : o.k
             {(openNpcs.length > 0 || gatedNpcs.length > 0) && (
               <div class="sub">
                 <h3>{tp.npcsTitle}</h3>
-                {openNpcs.length > 0 && <ul class="grid">{openNpcs.map((n) => <li><EntityLink to={n.ref} iconSize={40} /></li>)}</ul>}
+                {openNpcs.length > 0 && <ul class="grid" data-flow>{openNpcs.map((n) => <li><EntityLink to={n.ref} iconSize={40} /></li>)}</ul>}
                 {gatedNpcs.length > 0 && (
                   <Spoiler title={fill(tp.npcsSpoiler, { n: num(gatedNpcs.length) })}>
-                    <ul class="grid">{gatedNpcs.map((n) => <li><EntityLink to={n.ref} iconSize={40} /></li>)}</ul>
+                    <ul class="grid" data-flow>{gatedNpcs.map((n) => <li><EntityLink to={n.ref} iconSize={40} /></li>)}</ul>
                   </Spoiler>
                 )}
               </div>
@@ -136,10 +135,10 @@ const cardKicker = (o: PlaceData) => (o.level ? fill(tp.levelTag, o.level) : o.k
             {p.items.length > 0 && (
               <div class="sub">
                 <h3>{tp.itemsTitle}</h3>
-                {openItems.length > 0 && <ul class="grid">{openItems.map((i) => <li><EntityLink to={i.ref} iconSize={40} />{i.n > 1 && <b class="num cnt">×{num(i.n)}</b>}</li>)}</ul>}
+                {openItems.length > 0 && <ul class="grid" data-flow>{openItems.map((i) => <li><EntityLink to={i.ref} iconSize={40} />{i.n > 1 && <b class="num cnt">×{num(i.n)}</b>}</li>)}</ul>}
                 {questItems.length > 0 && (
                   <Spoiler title={fill(tp.itemsSpoiler, { n: num(questItems.length) })}>
-                    <ul class="grid">{questItems.map((i) => <li><EntityLink to={i.ref} iconSize={40} />{i.n > 1 && <b class="num cnt">×{num(i.n)}</b>}</li>)}</ul>
+                    <ul class="grid" data-flow>{questItems.map((i) => <li><EntityLink to={i.ref} iconSize={40} />{i.n > 1 && <b class="num cnt">×{num(i.n)}</b>}</li>)}</ul>
                   </Spoiler>
                 )}
               </div>
@@ -328,9 +327,7 @@ const cardKicker = (o: PlaceData) => (o.level ? fill(tp.levelTag, o.level) : o.k
   .chip b { color: var(--text-muted); font-weight: 600; }
   .cicon { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; background: var(--well); }
 
-  .grid { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px 18px; grid-template-columns: minmax(0, 1fr); }
-  @container main (min-width: 520px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-  @container main (min-width: 780px) { .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+  .grid { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px 26px; }
   .grid li { display: flex; align-items: center; gap: 8px; min-width: 0; }
   .cnt { color: var(--text-muted); }
 

@@ -96,8 +96,9 @@ const icon = (name: string, scale = 1) => { const sz = UI[name] ?? [9, 9]; retur
             <DataCell label={tp.colRegion} hideOnPhone><span class="where"><span class="v v-house"></span><span>{region}</span></span></DataCell>
             <DataCell label={tp.colLevel} align="end">{p.level ? <span class="num v v-xp">{p.level.min}–{p.level.max}</span> : <span class="nil">—</span>}</DataCell>
             <DataCell label={tp.colWhat} hideOnPhone>
-              <span class="what">
-                {svc.map((s) => { const ic = icon(PLACE_ICON[s.kind], 2); return <img src={ic.src} width={ic.w} height={ic.h} alt={tm.place[s.kind]} title={tm.place[s.kind]} class="px svc" />; })}
+              <span class="what" data-flow>
+                {svc.slice(0, 4).map((s) => { const ic = icon(PLACE_ICON[s.kind], 2); return <img src={ic.src} width={ic.w} height={ic.h} alt={tm.place[s.kind]} title={tm.place[s.kind]} class="px svc" />; })}
+                {svc.length > 4 && <span class="more" title={svc.slice(4).map((s) => tm.place[s.kind]).join(", ")}>+{svc.length - 4}</span>}
                 {npcs > 0 && <span class="num v v-shop">{num(npcs)}</span>}
                 {p.monsters.length > 0 && <span class="num v v-drop">{num(p.monsters.length)}</span>}
                 {p.bosses.length > 0 && <span class="v v-boss"></span>}
@@ -128,6 +129,7 @@ const icon = (name: string, scale = 1) => { const sz = UI[name] ?? [9, 9]; retur
   .places-page .px { image-rendering: pixelated; }
   .places-page .what { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; }
   .places-page .svc { width: auto; height: 20px; }
+  .places-page .more { display: inline-flex; align-items: center; height: 20px; padding: 0 5px; border-radius: 6px; font: 700 var(--fs-xs) / 1 var(--font-num); color: var(--text-muted); border: 1px dashed var(--border-strong); }
   .places-page .where { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; font-size: var(--fs-sm); color: var(--text-muted); }
   .places-page .v { display: inline-flex; align-items: center; gap: 5px; white-space: nowrap; }
   .places-page .v::before { content: ""; flex: none; width: 18px; height: 18px; image-rendering: pixelated; background: center / contain no-repeat; }
@@ -139,6 +141,10 @@ const icon = (name: string, scale = 1) => { const sz = UI[name] ?? [9, 9]; retur
   .places-page .count-note { margin-top: var(--s-4); font-size: var(--fs-sm); color: var(--text-faint); }
   .places-page .pic { display: none; }
   .places-page .dt[data-view="table"] .name { gap: 0; }
+  /* the table: one line a row (the region has its own column; what it holds stays on one line) */
+  .places-page .dt[data-view="table"] .mk { display: none; }
+  .places-page .dt[data-view="table"] .what { flex-wrap: nowrap; min-width: 300px; }
+  .places-page .dt[data-view="table"] .name a { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .places-page .dt[data-view="grid"] .name { flex-direction: column; align-items: stretch; gap: 10px; width: 100%; }
   .places-page .dt[data-view="grid"] .pic { display: block; aspect-ratio: 12 / 5; overflow: hidden; border-radius: var(--r-m); background: var(--well); }
   .places-page .dt[data-view="grid"] .pic img { display: block; width: 100%; height: 100%; object-fit: cover; }

@@ -28,11 +28,13 @@
        "es": "Cementerio de Yordin",
        "pt": "Cemitério de Yordin"
       },
+      "ref": "place:yordin-s-cemetery",
       "town": {
        "en": "Plains Cathedral",
        "es": "Catedral de la Llanura",
        "pt": "Catedral da Planície"
       },
+      "townRef": "place:plains-cathedral",
       "underground": false
      },
      "spoiler": true,
@@ -325,11 +327,13 @@
        "es": "Templo del Bosque",
        "pt": "Templo da Floresta"
       },
+      "ref": "place:forest-temple",
       "town": {
        "en": "Dorosam",
        "es": "Dorosam",
        "pt": "Dorosam"
       },
+      "townRef": "place:dorosam",
       "underground": false
      },
      "restock": 4,
@@ -388,15 +392,17 @@
        "link": "https://map.opengea.tech/#2.AgCIAwgGAQABAQEAAJQiAuN2SS0uycxLLMnMzwMA",
        "place": {
         "near": {
-         "en": "Jebidiah Ambush",
-         "es": "Emboscada de Jebidiah",
-         "pt": "Emboscada de Jebidiah"
+         "en": "Forest Temple",
+         "es": "Templo del Bosque",
+         "pt": "Templo da Floresta"
         },
+        "ref": "place:forest-temple",
         "town": {
          "en": "Dorosam",
          "es": "Dorosam",
          "pt": "Dorosam"
         },
+        "townRef": "place:dorosam",
         "underground": false
        }
       }
@@ -825,11 +831,13 @@
        "es": "Casa del Mago Azul",
        "pt": "Casa do Mago Azul"
       },
+      "ref": "place:blue-mage-home",
       "town": {
        "en": "Plains Cathedral",
        "es": "Catedral de la Llanura",
        "pt": "Catedral da Planície"
       },
+      "townRef": "place:plains-cathedral",
       "underground": false
      },
      "restock": 0,
@@ -949,11 +957,13 @@
          "es": "Escuela Rúnica",
          "pt": "Escola Rúnica"
         },
+        "ref": "place:runic-school",
         "town": {
          "en": "Dorosam",
          "es": "Dorosam",
          "pt": "Dorosam"
         },
+        "townRef": "place:dorosam",
         "underground": false
        }
       }
@@ -1073,11 +1083,13 @@
        "es": "Puente Real",
        "pt": "Ponte Real"
       },
+      "ref": "place:royal-bridge",
       "town": {
        "en": "Dorosam",
        "es": "Dorosam",
        "pt": "Dorosam"
       },
+      "townRef": "place:dorosam",
       "underground": false
      },
      "services": {
@@ -1090,11 +1102,13 @@
          "es": "Puente Real",
          "pt": "Ponte Real"
         },
+        "ref": "place:royal-bridge",
         "town": {
          "en": "Garadum",
          "es": "Garadum",
          "pt": "Garadum"
         },
+        "townRef": "place:garadum",
         "underground": false
        }
       }
@@ -1116,11 +1130,13 @@
        "es": "Puente Real",
        "pt": "Ponte Real"
       },
+      "ref": "place:royal-bridge",
       "town": {
        "en": "Garadum",
        "es": "Garadum",
        "pt": "Garadum"
       },
+      "townRef": "place:garadum",
       "underground": false
      },
      "services": {
@@ -1133,11 +1149,13 @@
          "es": "Puente Real",
          "pt": "Ponte Real"
         },
+        "ref": "place:royal-bridge",
         "town": {
          "en": "Garadum",
          "es": "Garadum",
          "pt": "Garadum"
         },
+        "townRef": "place:garadum",
         "underground": false
        }
       }
@@ -1521,12 +1539,18 @@
      ],
      "link": "https://map.opengea.tech/#2.AgCjA2gGARoBAQEAANCBFtboAFrAQxCIUVlbGFsZyNGbGFuaGw",
      "place": {
-      "near": null,
+      "near": {
+       "en": "West Garden",
+       "es": "Jardín Oeste",
+       "pt": "Jardim Oeste"
+      },
+      "ref": "place:west-garden",
       "town": {
        "en": "Plains Cathedral",
        "es": "Catedral de la Llanura",
        "pt": "Catedral da Planície"
       },
+      "townRef": "place:plains-cathedral",
       "underground": true
      },
      "spoiler": false,
@@ -1706,11 +1730,13 @@
        "es": "Camino Real",
        "pt": "Estrada Real"
       },
+      "ref": "place:royal-road",
       "town": {
        "en": "Plains Cathedral",
        "es": "Catedral de la Llanura",
        "pt": "Catedral da Planície"
       },
+      "townRef": "place:plains-cathedral",
       "underground": false
      },
      "services": {
@@ -1718,15 +1744,17 @@
        "link": "https://map.opengea.tech/#2.AgBUswEGAQ8BAQEAABQIIgLjdkktLsnMSyzJzM8DAA",
        "place": {
         "near": {
-         "en": "Floating Castle",
-         "es": "Castillo Flotante",
-         "pt": "Castelo Flutuante"
+         "en": "Blue Mage Home",
+         "es": "Casa del Mago Azul",
+         "pt": "Casa do Mago Azul"
         },
+        "ref": "place:blue-mage-home",
         "town": {
          "en": "Plains Cathedral",
          "es": "Catedral de la Llanura",
          "pt": "Catedral da Planície"
         },
+        "townRef": "place:plains-cathedral",
         "underground": false
        }
       }
@@ -1878,11 +1906,13 @@
        "es": "Camino Real",
        "pt": "Estrada Real"
       },
+      "ref": "place:royal-road",
       "town": {
        "en": "Plains Cathedral",
        "es": "Catedral de la Llanura",
        "pt": "Catedral da Planície"
       },
+      "townRef": "place:plains-cathedral",
       "underground": false
      },
      "restock": 4,
@@ -1993,6 +2023,7 @@
        "es": "Catedral de la Llanura",
        "pt": "Catedral da Planície"
       },
+      "townRef": "place:plains-cathedral",
       "underground": true
      },
      "spoiler": false,
@@ -2065,27 +2096,26 @@
        "es": "Campos de Hongos",
        "pt": "Campos de Cogumelos"
       },
+      "ref": "place:mushroom-fields",
       "town": {
        "en": "Dorosam",
        "es": "Dorosam",
        "pt": "Dorosam"
       },
+      "townRef": "place:dorosam",
       "underground": false
      },
      "services": {
       "travel": {
        "link": "https://map.opengea.tech/#2.AgD6A1IGARgBAQEAABQoIwLjdkktLsnMSyzJzM8DAA",
        "place": {
-        "near": {
-         "en": "Myrtle's House",
-         "es": "Casa de Myrtle",
-         "pt": "Casa de Myrtle"
-        },
+        "near": null,
         "town": {
          "en": "Dorosam",
          "es": "Dorosam",
          "pt": "Dorosam"
         },
+        "townRef": "place:dorosam",
         "underground": true
        }
       }
@@ -2187,11 +2217,13 @@
        "es": "Plaza de la Residencia",
        "pt": "Praça da Residência"
       },
+      "ref": "place:residency-square",
       "town": {
        "en": "Basile",
        "es": "Basile",
        "pt": "Basile"
       },
+      "townRef": "place:basile",
       "underground": false
      },
      "spoiler": false,
@@ -2368,11 +2400,13 @@
        "es": "La Caravana",
        "pt": "A Caravana"
       },
+      "ref": "place:the-caravan",
       "town": {
        "en": "Plains Cathedral",
        "es": "Catedral de la Llanura",
        "pt": "Catedral da Planície"
       },
+      "townRef": "place:plains-cathedral",
       "underground": false
      },
      "restock": 4,
@@ -2733,11 +2767,13 @@
        "es": "Templo de Basile",
        "pt": "Templo de Basile"
       },
+      "ref": "place:basile-s-temple",
       "town": {
        "en": "Basile",
        "es": "Basile",
        "pt": "Basile"
       },
+      "townRef": "place:basile",
       "underground": false
      },
      "spoiler": false,
@@ -2757,11 +2793,13 @@
        "es": "Catedral de la Llanura",
        "pt": "Catedral da Planície"
       },
+      "ref": "place:plains-cathedral",
       "town": {
        "en": "Plains Cathedral",
        "es": "Catedral de la Llanura",
        "pt": "Catedral da Planície"
       },
+      "townRef": "place:plains-cathedral",
       "underground": true
      },
      "spoiler": false,
@@ -3135,11 +3173,13 @@
        "es": "Barco de Rasobar",
        "pt": "Navio de Rasobar"
       },
+      "ref": "place:rasobar-s-ship",
       "town": {
        "en": "Basile",
        "es": "Basile",
        "pt": "Basile"
       },
+      "townRef": "place:basile",
       "underground": false
      },
      "spoiler": false,
@@ -3488,11 +3528,13 @@
        "es": "Cementerio de Yordin",
        "pt": "Cemitério de Yordin"
       },
+      "ref": "place:yordin-s-cemetery",
       "town": {
        "en": "Plains Cathedral",
        "es": "Catedral de la Llanura",
        "pt": "Catedral da Planície"
       },
+      "townRef": "place:plains-cathedral",
       "underground": true
      },
      "services": {
@@ -3868,11 +3910,13 @@
        "es": "Plaza de los Comerciantes",
        "pt": "Praça dos Comerciantes"
       },
+      "ref": "place:trader-s-square",
       "town": {
        "en": "Basile",
        "es": "Basile",
        "pt": "Basile"
       },
+      "townRef": "place:basile",
       "underground": false
      },
      "spoiler": false,
@@ -4522,11 +4566,13 @@
        "es": "Vecan, el Desierto.",
        "pt": "Vecan, o Deserto."
       },
+      "ref": "place:vecan-the-desert",
       "town": {
        "en": "Vecan",
        "es": "Vecan",
        "pt": "Vecan"
       },
+      "townRef": "place:vecan",
       "underground": false
      },
      "spoiler": true,
@@ -4599,11 +4645,13 @@
        "es": "Aldea El Chad",
        "pt": "Vila El Chad"
       },
+      "ref": "place:el-chad-village",
       "town": {
        "en": "Plains Cathedral",
        "es": "Catedral de la Llanura",
        "pt": "Catedral da Planície"
       },
+      "townRef": "place:plains-cathedral",
       "underground": false
      },
      "restock": 8,
@@ -5126,11 +5174,13 @@
        "es": "La Caravana",
        "pt": "A Caravana"
       },
+      "ref": "place:the-caravan",
       "town": {
        "en": "Plains Cathedral",
        "es": "Catedral de la Llanura",
        "pt": "Catedral da Planície"
       },
+      "townRef": "place:plains-cathedral",
       "underground": false
      },
      "restock": 8,
@@ -5692,11 +5742,13 @@
        "es": "Puerta Oeste",
        "pt": "Portão Oeste"
       },
+      "ref": "place:west-gate",
       "town": {
        "en": "Basile",
        "es": "Basile",
        "pt": "Basile"
       },
+      "townRef": "place:basile",
       "underground": false
      },
      "restock": 8,
@@ -5845,11 +5897,13 @@
        "es": "Árbol Antiguo",
        "pt": "Árvore Antiga"
       },
+      "ref": "place:ancient-tree",
       "town": {
        "en": "East Nordha",
        "es": "Nordha Este",
        "pt": "Nordha Oriental"
       },
+      "townRef": "place:east-nordha",
       "underground": false
      },
      "services": {
@@ -5861,11 +5915,13 @@
          "es": "Tumbas Antiguas",
          "pt": "Tumbas Antigas"
         },
+        "ref": "place:ancient-tombs",
         "town": {
          "en": "East Nordha",
          "es": "Nordha Este",
          "pt": "Nordha Oriental"
         },
+        "townRef": "place:east-nordha",
         "underground": false
        }
       }
@@ -6161,11 +6217,13 @@
        "es": "Aguja de Flores",
        "pt": "Torre das Flores"
       },
+      "ref": "place:flower-spire",
       "town": {
        "en": "Nordha",
        "es": "Nordha",
        "pt": "Nordha"
       },
+      "townRef": "place:nordha",
       "underground": false
      },
      "spoiler": false,
@@ -6556,11 +6614,13 @@
        "es": "Plaza del Trabajo",
        "pt": "Praça do Trabalho"
       },
+      "ref": "place:work-square",
       "town": {
        "en": "Vecan",
        "es": "Vecan",
        "pt": "Vecan"
       },
+      "townRef": "place:vecan",
       "underground": false
      },
      "spoiler": false,
@@ -6669,11 +6729,13 @@
        "es": "Plaza de los Sastres",
        "pt": "Praça dos Alfaiates"
       },
+      "ref": "place:clothier-square",
       "town": {
        "en": "Vecan",
        "es": "Vecan",
        "pt": "Vecan"
       },
+      "townRef": "place:vecan",
       "underground": false
      },
      "spoiler": false,
@@ -6821,15 +6883,17 @@
      "link": "https://map.opengea.tech/#2.AgAAqwMGASABAQEAANABBSTA6kCAQVCd3JtcGA",
      "place": {
       "near": {
-       "en": "Trader Square",
-       "es": "Plaza de Mercaderes",
-       "pt": "Praça dos Mercadores"
+       "en": "Old Mines",
+       "es": "Minas Antiguas",
+       "pt": "Minas Antigas"
       },
+      "ref": "place:old-mines",
       "town": {
        "en": "Garadum",
        "es": "Garadum",
        "pt": "Garadum"
       },
+      "townRef": "place:garadum",
       "underground": true
      },
      "spoiler": false,
@@ -7161,11 +7225,13 @@
        "es": "Taberna Dionel",
        "pt": "Taverna Dionel"
       },
+      "ref": "place:dionel-pub",
       "town": {
        "en": "Nordha",
        "es": "Nordha",
        "pt": "Nordha"
       },
+      "townRef": "place:nordha",
       "underground": false
      },
      "services": {
@@ -7514,11 +7580,13 @@
        "es": "El Herrero",
        "pt": "O Ferreiro"
       },
+      "ref": "place:the-blacksmith",
       "town": {
        "en": "Basile",
        "es": "Basile",
        "pt": "Basile"
       },
+      "townRef": "place:basile",
       "underground": false
      },
      "spoiler": false,
@@ -8167,11 +8235,13 @@
        "es": "Plaza de los Comerciantes",
        "pt": "Praça dos Comerciantes"
       },
+      "ref": "place:trader-s-square",
       "town": {
        "en": "Basile",
        "es": "Basile",
        "pt": "Basile"
       },
+      "townRef": "place:basile",
       "underground": false
      },
      "restock": 0,
@@ -8315,11 +8385,13 @@
        "es": "Taberna de Sigurd",
        "pt": "Taverna de Sigurd"
       },
+      "ref": "place:sigurd-s-pub",
       "town": {
        "en": "Basile",
        "es": "Basile",
        "pt": "Basile"
       },
+      "townRef": "place:basile",
       "underground": false
      },
      "restock": 6,
@@ -8769,11 +8841,13 @@
        "es": "Arena de Garadum",
        "pt": "Arena de Garadum"
       },
+      "ref": "place:garadum-s-arena",
       "town": {
        "en": "Garadum",
        "es": "Garadum",
        "pt": "Garadum"
       },
+      "townRef": "place:garadum",
       "underground": true
      },
      "services": {
@@ -8785,11 +8859,13 @@
          "es": "Arena de Garadum",
          "pt": "Arena de Garadum"
         },
+        "ref": "place:garadum-s-arena",
         "town": {
          "en": "Garadum",
          "es": "Garadum",
          "pt": "Garadum"
         },
+        "townRef": "place:garadum",
         "underground": true
        }
       }
@@ -9140,15 +9216,17 @@
      "link": "https://map.opengea.tech/#2.AgDdBIMDBgEAAQEBAADQCd9NMDgQgCBUJueGFiZHBg",
      "place": {
       "near": {
-       "en": "Work Square",
-       "es": "Plaza del Trabajo",
-       "pt": "Praça do Trabalho"
+       "en": "Storage Square",
+       "es": "Plaza del Almacén",
+       "pt": "Praça do Depósito"
       },
+      "ref": "place:storage-square",
       "town": {
        "en": "Vecan",
        "es": "Vecan",
        "pt": "Vecan"
       },
+      "townRef": "place:vecan",
       "underground": false
      },
      "spoiler": false,
@@ -9675,11 +9753,13 @@
        "es": "Puerto de Dorosam",
        "pt": "Porto de Dorosam"
       },
+      "ref": "place:dorosam-port",
       "town": {
        "en": "Dorosam",
        "es": "Dorosam",
        "pt": "Dorosam"
       },
+      "townRef": "place:dorosam",
       "underground": false
      },
      "restock": 4,
@@ -10119,11 +10199,13 @@
        "es": "Gremio de los Centinelas",
        "pt": "Guilda dos Sentinelas"
       },
+      "ref": "place:sentinel-s-guild",
       "town": {
        "en": "Plains Cathedral",
        "es": "Catedral de la Llanura",
        "pt": "Catedral da Planície"
       },
+      "townRef": "place:plains-cathedral",
       "underground": true
      },
      "spoiler": false,
@@ -10513,11 +10595,13 @@
        "es": "Granja de Branor",
        "pt": "Fazenda de Branor"
       },
+      "ref": "place:branor-s-farm",
       "town": {
        "en": "Plains Cathedral",
        "es": "Catedral de la Llanura",
        "pt": "Catedral da Planície"
       },
+      "townRef": "place:plains-cathedral",
       "underground": false
      },
      "spoiler": false,
@@ -10904,15 +10988,17 @@
      "link": "https://map.opengea.tech/#2.AgA7lgIGAQABAQEAANAJt2MpEFAgJFcW5gY",
      "place": {
       "near": {
-       "en": "Blacksmith Brean",
-       "es": "Herrero Brean",
-       "pt": "Ferreiro Brean"
+       "en": "Nordha Market & Center",
+       "es": "Mercado y Centro de Nordha",
+       "pt": "Mercado e Centro de Nordha"
       },
+      "ref": "place:nordha",
       "town": {
        "en": "Nordha",
        "es": "Nordha",
        "pt": "Nordha"
       },
+      "townRef": "place:nordha",
       "underground": false
      },
      "restock": 4,
@@ -11419,11 +11505,13 @@
        "es": "Torre Oeste",
        "pt": "Torre Oeste"
       },
+      "ref": "place:basile-west-tower",
       "town": {
        "en": "Basile west tower",
        "es": "Torre Oeste de Basile",
        "pt": "Torre oeste de Basile"
       },
+      "townRef": "place:basile-west-tower",
       "underground": false
      },
      "restock": 7,
@@ -11857,11 +11945,13 @@
        "es": "Escuela Rúnica",
        "pt": "Escola Rúnica"
       },
+      "ref": "place:runic-school",
       "town": {
        "en": "Dorosam",
        "es": "Dorosam",
        "pt": "Dorosam"
       },
+      "townRef": "place:dorosam",
       "underground": false
      },
      "spoiler": false,
@@ -12421,11 +12511,13 @@
        "es": "La Caravana",
        "pt": "A Caravana"
       },
+      "ref": "place:the-caravan",
       "town": {
        "en": "Plains Cathedral",
        "es": "Catedral de la Llanura",
        "pt": "Catedral da Planície"
       },
+      "townRef": "place:plains-cathedral",
       "underground": false
      },
      "restock": 13,
@@ -12966,11 +13058,13 @@
        "es": "Templo de Dorosam",
        "pt": "Templo de Dorosam"
       },
+      "ref": "place:dorosam-s-temple",
       "town": {
        "en": "Dorosam",
        "es": "Dorosam",
        "pt": "Dorosam"
       },
+      "townRef": "place:dorosam",
       "underground": false
      },
      "services": {
@@ -13420,11 +13514,13 @@
        "es": "El Monasterio",
        "pt": "O Mosteiro"
       },
+      "ref": "place:the-monastery",
       "town": {
        "en": "Basile",
        "es": "Basile",
        "pt": "Basile"
       },
+      "townRef": "place:basile",
       "underground": false
      },
      "services": {
@@ -13436,11 +13532,13 @@
          "es": "El Monasterio",
          "pt": "O Mosteiro"
         },
+        "ref": "place:the-monastery",
         "town": {
          "en": "Basile",
          "es": "Basile",
          "pt": "Basile"
         },
+        "townRef": "place:basile",
         "underground": false
        }
       }
@@ -13906,11 +14004,13 @@
        "es": "Cámara del Rey",
        "pt": "Câmara do Rei"
       },
+      "ref": "place:king-s-chamber",
       "town": {
        "en": "Basile",
        "es": "Basile",
        "pt": "Basile"
       },
+      "townRef": "place:basile",
       "underground": false
      },
      "spoiler": false,
@@ -14364,11 +14464,13 @@
        "es": "Cabaña de Clovi",
        "pt": "Cabana de Clovi"
       },
+      "ref": "place:clovi-s-hut",
       "town": {
        "en": "Dorosam",
        "es": "Dorosam",
        "pt": "Dorosam"
       },
+      "townRef": "place:dorosam",
       "underground": false
      },
      "spoiler": false,
@@ -14780,11 +14882,13 @@
        "es": "Cocina de Colman",
        "pt": "Cozinha de Colman"
       },
+      "ref": "place:colman-s-kitchen",
       "town": {
        "en": "East Nordha",
        "es": "Nordha Este",
        "pt": "Nordha Oriental"
       },
+      "townRef": "place:east-nordha",
       "underground": false
      },
      "restock": 4,
@@ -15289,11 +15393,13 @@
        "es": "Montaña Sunskin",
        "pt": "Montanha Sunskin"
       },
+      "ref": "place:sunskin-mountain",
       "town": {
        "en": "Plains Cathedral",
        "es": "Catedral de la Llanura",
        "pt": "Catedral da Planície"
       },
+      "townRef": "place:plains-cathedral",
       "underground": false
      },
      "restock": 4,
@@ -15709,11 +15815,13 @@
        "es": "Campos de Trigo",
        "pt": "Campos de Trigo"
       },
+      "ref": "place:wheat-fields",
       "town": {
        "en": "Plains Cathedral",
        "es": "Catedral de la Llanura",
        "pt": "Catedral da Planície"
       },
+      "townRef": "place:plains-cathedral",
       "underground": false
      },
      "services": {
@@ -15727,11 +15835,13 @@
          "es": "Puerta Oeste",
          "pt": "Portão Oeste"
         },
+        "ref": "place:west-gate",
         "town": {
          "en": "Basile",
          "es": "Basile",
          "pt": "Basile"
         },
+        "townRef": "place:basile",
         "underground": false
        }
       }
@@ -16075,11 +16185,13 @@
        "es": "Puerta Oeste",
        "pt": "Portão Oeste"
       },
+      "ref": "place:west-gate",
       "town": {
        "en": "Basile",
        "es": "Basile",
        "pt": "Basile"
       },
+      "townRef": "place:basile",
       "underground": false
      },
      "services": {
@@ -16093,11 +16205,13 @@
          "es": "Campos de Trigo",
          "pt": "Campos de Trigo"
         },
+        "ref": "place:wheat-fields",
         "town": {
          "en": "Plains Cathedral",
          "es": "Catedral de la Llanura",
          "pt": "Catedral da Planície"
         },
+        "townRef": "place:plains-cathedral",
         "underground": false
        }
       }
@@ -16663,11 +16777,13 @@
        "es": "Templo de Basile",
        "pt": "Templo de Basile"
       },
+      "ref": "place:basile-s-temple",
       "town": {
        "en": "Basile",
        "es": "Basile",
        "pt": "Basile"
       },
+      "townRef": "place:basile",
       "underground": false
      },
      "services": {
@@ -17009,11 +17125,13 @@
        "es": "Mercado de Basile",
        "pt": "Mercado de Basile"
       },
+      "ref": "place:basile-s-market",
       "town": {
        "en": "Basile",
        "es": "Basile",
        "pt": "Basile"
       },
+      "townRef": "place:basile",
       "underground": false
      },
      "spoiler": false,
@@ -17334,11 +17452,13 @@
        "es": "Plaza del Trabajo",
        "pt": "Praça do Trabalho"
       },
+      "ref": "place:work-square",
       "town": {
        "en": "Vecan",
        "es": "Vecan",
        "pt": "Vecan"
       },
+      "townRef": "place:vecan",
       "underground": false
      },
      "spoiler": false,
@@ -17688,11 +17808,13 @@
        "es": "Escuela Rúnica",
        "pt": "Escola Rúnica"
       },
+      "ref": "place:runic-school",
       "town": {
        "en": "Dorosam",
        "es": "Dorosam",
        "pt": "Dorosam"
       },
+      "townRef": "place:dorosam",
       "underground": false
      },
      "spoiler": false,
@@ -18211,11 +18333,13 @@
        "es": "La Caravana",
        "pt": "A Caravana"
       },
+      "ref": "place:the-caravan",
       "town": {
        "en": "Plains Cathedral",
        "es": "Catedral de la Llanura",
        "pt": "Catedral da Planície"
       },
+      "townRef": "place:plains-cathedral",
       "underground": false
      },
      "restock": 4,
@@ -18296,11 +18420,13 @@
          "es": "La Caravana",
          "pt": "A Caravana"
         },
+        "ref": "place:the-caravan",
         "town": {
          "en": "Plains Cathedral",
          "es": "Catedral de la Llanura",
          "pt": "Catedral da Planície"
         },
+        "townRef": "place:plains-cathedral",
         "underground": false
        }
       }
@@ -18796,11 +18922,13 @@
        "es": "Taberna Dionel",
        "pt": "Taverna Dionel"
       },
+      "ref": "place:dionel-pub",
       "town": {
        "en": "Nordha",
        "es": "Nordha",
        "pt": "Nordha"
       },
+      "townRef": "place:nordha",
       "underground": false
      },
      "restock": 4,
@@ -19234,15 +19362,17 @@
      "link": "https://map.opengea.tech/#2.AgAfuQQGAQgBAQEAANBBwX3kEgQUEL3J1a0B",
      "place": {
       "near": {
-       "en": "Garadum's Arena",
-       "es": "Arena de Garadum",
-       "pt": "Arena de Garadum"
+       "en": "Townhall",
+       "es": "Ayuntamiento",
+       "pt": "Prefeitura"
       },
+      "ref": "place:townhall",
       "town": {
        "en": "Garadum",
        "es": "Garadum",
        "pt": "Garadum"
       },
+      "townRef": "place:garadum",
       "underground": true
      },
      "spoiler": false,
@@ -19641,11 +19771,13 @@
        "es": "Gremio de los Centinelas",
        "pt": "Guilda dos Sentinelas"
       },
+      "ref": "place:sentinel-s-guild",
       "town": {
        "en": "Plains Cathedral",
        "es": "Catedral de la Llanura",
        "pt": "Catedral da Planície"
       },
+      "townRef": "place:plains-cathedral",
       "underground": false
      },
      "services": {
@@ -19657,11 +19789,13 @@
          "es": "Pasaje al Este",
          "pt": "Passagem para o Leste"
         },
+        "ref": "place:passage-to-the-east",
         "town": {
          "en": "Plains Cathedral",
          "es": "Catedral de la Llanura",
          "pt": "Catedral da Planície"
         },
+        "townRef": "place:plains-cathedral",
         "underground": true
        }
       }
@@ -19963,6 +20097,7 @@
        "es": "Dorosam",
        "pt": "Dorosam"
       },
+      "townRef": "place:dorosam",
       "underground": false
      },
      "services": {
@@ -19975,11 +20110,13 @@
          "es": "Plaza de los Sastres",
          "pt": "Praça dos Alfaiates"
         },
+        "ref": "place:clothier-square",
         "town": {
          "en": "Vecan",
          "es": "Vecan",
          "pt": "Vecan"
         },
+        "townRef": "place:vecan",
         "underground": false
        }
       }
@@ -20261,6 +20398,7 @@
        "es": "Dorosam",
        "pt": "Dorosam"
       },
+      "townRef": "place:dorosam",
       "underground": false
      },
      "services": {
@@ -20273,11 +20411,13 @@
          "es": "Plaza de los Sastres",
          "pt": "Praça dos Alfaiates"
         },
+        "ref": "place:clothier-square",
         "town": {
          "en": "Vecan",
          "es": "Vecan",
          "pt": "Vecan"
         },
+        "townRef": "place:vecan",
         "underground": false
        }
       }
@@ -21013,11 +21153,13 @@
        "es": "Catedral de la Llanura",
        "pt": "Catedral da Planície"
       },
+      "ref": "place:plains-cathedral",
       "town": {
        "en": "Plains Cathedral",
        "es": "Catedral de la Llanura",
        "pt": "Catedral da Planície"
       },
+      "townRef": "place:plains-cathedral",
       "underground": false
      },
      "restock": 4,
@@ -21421,11 +21563,13 @@
        "es": "Forja de Egemen",
        "pt": "Forja de Egemen"
       },
+      "ref": "place:egemen-s-forge",
       "town": {
        "en": "Garadum",
        "es": "Garadum",
        "pt": "Garadum"
       },
+      "townRef": "place:garadum",
       "underground": true
      },
      "restock": 2,
@@ -21960,11 +22104,13 @@
        "es": "Aldea El Chad",
        "pt": "Vila El Chad"
       },
+      "ref": "place:el-chad-village",
       "town": {
        "en": "Plains Cathedral",
        "es": "Catedral de la Llanura",
        "pt": "Catedral da Planície"
       },
+      "townRef": "place:plains-cathedral",
       "underground": false
      },
      "restock": 4,
@@ -22707,11 +22853,13 @@
        "es": "Cementerio de Yordin",
        "pt": "Cemitério de Yordin"
       },
+      "ref": "place:yordin-s-cemetery",
       "town": {
        "en": "Plains Cathedral",
        "es": "Catedral de la Llanura",
        "pt": "Catedral da Planície"
       },
+      "townRef": "place:plains-cathedral",
       "underground": false
      },
      "services": {
@@ -22737,11 +22885,13 @@
        "es": "Castillo Flotante",
        "pt": "Castelo Flutuante"
       },
+      "ref": "place:floating-castle",
       "town": {
        "en": "Plains Cathedral",
        "es": "Catedral de la Llanura",
        "pt": "Catedral da Planície"
       },
+      "townRef": "place:plains-cathedral",
       "underground": false
      },
      "services": {
@@ -23188,11 +23338,13 @@
        "es": "Plaza Principal",
        "pt": "Praça Principal"
       },
+      "ref": "place:main-square",
       "town": {
        "en": "Basile",
        "es": "Basile",
        "pt": "Basile"
       },
+      "townRef": "place:basile",
       "underground": false
      },
      "spoiler": false,
@@ -23281,11 +23433,13 @@
        "es": "Montaña Sunskin",
        "pt": "Montanha Sunskin"
       },
+      "ref": "place:sunskin-mountain",
       "town": {
        "en": "Plains Cathedral",
        "es": "Catedral de la Llanura",
        "pt": "Catedral da Planície"
       },
+      "townRef": "place:plains-cathedral",
       "underground": false
      },
      "spoiler": true,
@@ -23367,11 +23521,13 @@
        "es": "Montaña Sunskin",
        "pt": "Montanha Sunskin"
       },
+      "ref": "place:sunskin-mountain",
       "town": {
        "en": "Plains Cathedral",
        "es": "Catedral de la Llanura",
        "pt": "Catedral da Planície"
       },
+      "townRef": "place:plains-cathedral",
       "underground": false
      },
      "spoiler": true,
@@ -23453,11 +23609,13 @@
        "es": "Cabaña de Eofor",
        "pt": "Cabana de Eofor"
       },
+      "ref": "place:eofor-s-hut",
       "town": {
        "en": "Plains Cathedral",
        "es": "Catedral de la Llanura",
        "pt": "Catedral da Planície"
       },
+      "townRef": "place:plains-cathedral",
       "underground": true
      },
      "spoiler": true,
@@ -23540,11 +23698,13 @@
        "es": "Puerta Oeste",
        "pt": "Portão Oeste"
       },
+      "ref": "place:west-gate",
       "town": {
        "en": "Plains Cathedral",
        "es": "Catedral de la Llanura",
        "pt": "Catedral da Planície"
       },
+      "townRef": "place:plains-cathedral",
       "underground": false
      },
      "spoiler": true,
@@ -24541,11 +24701,13 @@
        "es": "Los Muelles",
        "pt": "As Docas"
       },
+      "ref": "place:the-docks",
       "town": {
        "en": "Basile",
        "es": "Basile",
        "pt": "Basile"
       },
+      "townRef": "place:basile",
       "underground": false
      },
      "spoiler": true,
@@ -24565,11 +24727,13 @@
        "es": "Puerta Oeste",
        "pt": "Portão Oeste"
       },
+      "ref": "place:west-gate",
       "town": {
        "en": "Plains Cathedral",
        "es": "Catedral de la Llanura",
        "pt": "Catedral da Planície"
       },
+      "townRef": "place:plains-cathedral",
       "underground": true
      },
      "spoiler": true,
@@ -24592,11 +24756,13 @@
        "es": "Plaza de la Residencia",
        "pt": "Praça da Residência"
       },
+      "ref": "place:residency-square",
       "town": {
        "en": "Basile",
        "es": "Basile",
        "pt": "Basile"
       },
+      "townRef": "place:basile",
       "underground": false
      },
      "spoiler": true,
@@ -24861,15 +25027,17 @@
      "link": "https://map.opengea.tech/#2.AgAiuwMGASABAQEAANABBZzI7kBAQZHbWZob",
      "place": {
       "near": {
-       "en": "Trader Square",
-       "es": "Plaza de Mercaderes",
-       "pt": "Praça dos Mercadores"
+       "en": "Boiler Room",
+       "es": "Sala de Calderas",
+       "pt": "Sala das Caldeiras"
       },
+      "ref": "place:boiler-room",
       "town": {
        "en": "Garadum",
        "es": "Garadum",
        "pt": "Garadum"
       },
+      "townRef": "place:garadum",
       "underground": true
      },
      "spoiler": false,
@@ -25197,11 +25365,13 @@
        "es": "Cabaña de Eofor",
        "pt": "Cabana de Eofor"
       },
+      "ref": "place:eofor-s-hut",
       "town": {
        "en": "Plains Cathedral",
        "es": "Catedral de la Llanura",
        "pt": "Catedral da Planície"
       },
+      "townRef": "place:plains-cathedral",
       "underground": false
      },
      "services": {
@@ -25799,11 +25969,13 @@
        "es": "La Caravana",
        "pt": "A Caravana"
       },
+      "ref": "place:the-caravan",
       "town": {
        "en": "Plains Cathedral",
        "es": "Catedral de la Llanura",
        "pt": "Catedral da Planície"
       },
+      "townRef": "place:plains-cathedral",
       "underground": false
      },
      "restock": 4,
@@ -26231,11 +26403,13 @@
        "es": "Puerto de Dorosam",
        "pt": "Porto de Dorosam"
       },
+      "ref": "place:dorosam-port",
       "town": {
        "en": "Dorosam",
        "es": "Dorosam",
        "pt": "Dorosam"
       },
+      "townRef": "place:dorosam",
       "underground": false
      },
      "services": {
@@ -26249,11 +26423,13 @@
          "es": "Los Muelles",
          "pt": "As Docas"
         },
+        "ref": "place:the-docks",
         "town": {
          "en": "Basile",
          "es": "Basile",
          "pt": "Basile"
         },
+        "townRef": "place:basile",
         "underground": false
        }
       }
@@ -26323,11 +26499,13 @@
        "es": "Plaza de la Residencia",
        "pt": "Praça da Residência"
       },
+      "ref": "place:residency-square",
       "town": {
        "en": "Basile",
        "es": "Basile",
        "pt": "Basile"
       },
+      "townRef": "place:basile",
       "underground": false
      },
      "services": {
@@ -26339,11 +26517,13 @@
          "es": "Posada de Basile",
          "pt": "Estalagem de Basile"
         },
+        "ref": "place:basile-inn",
         "town": {
          "en": "Basile",
          "es": "Basile",
          "pt": "Basile"
         },
+        "townRef": "place:basile",
         "underground": true
        }
       }
@@ -26719,11 +26899,13 @@
        "es": "Ayuntamiento",
        "pt": "Prefeitura"
       },
+      "ref": "place:townhall",
       "town": {
        "en": "Garadum",
        "es": "Garadum",
        "pt": "Garadum"
       },
+      "townRef": "place:garadum",
       "underground": true
      },
      "services": {
@@ -27118,11 +27300,13 @@
        "es": "Ayuntamiento",
        "pt": "Prefeitura"
       },
+      "ref": "place:townhall",
       "town": {
        "en": "Garadum",
        "es": "Garadum",
        "pt": "Garadum"
       },
+      "townRef": "place:garadum",
       "underground": true
      },
      "services": {
@@ -27131,15 +27315,17 @@
        "npc": "npc:doruk",
        "place": {
         "near": {
-         "en": "Garadum's Arena",
-         "es": "Arena de Garadum",
-         "pt": "Arena de Garadum"
+         "en": "Townhall",
+         "es": "Ayuntamiento",
+         "pt": "Prefeitura"
         },
+        "ref": "place:townhall",
         "town": {
          "en": "Garadum",
          "es": "Garadum",
          "pt": "Garadum"
         },
+        "townRef": "place:garadum",
         "underground": true
        }
       }
@@ -27512,11 +27698,13 @@
        "es": "Plaza del Trabajo",
        "pt": "Praça do Trabalho"
       },
+      "ref": "place:work-square",
       "town": {
        "en": "Vecan",
        "es": "Vecan",
        "pt": "Vecan"
       },
+      "townRef": "place:vecan",
       "underground": false
      },
      "spoiler": false,
@@ -27853,11 +28041,13 @@
        "es": "Plaza de los Mercaderes",
        "pt": "Praça dos Mercadores"
       },
+      "ref": "place:merchant-square",
       "town": {
        "en": "Vecan",
        "es": "Vecan",
        "pt": "Vecan"
       },
+      "townRef": "place:vecan",
       "underground": false
      },
      "services": {
@@ -27869,11 +28059,13 @@
          "es": "Palacio de Huesos",
          "pt": "Palácio de Ossos"
         },
+        "ref": "place:bone-palace",
         "town": {
          "en": "Vecan",
          "es": "Vecan",
          "pt": "Vecan"
         },
+        "townRef": "place:vecan",
         "underground": false
        }
       }
@@ -28219,11 +28411,13 @@
        "es": "Establo de Mensajería Ferag",
        "pt": "Estábulo de Correio Ferag"
       },
+      "ref": "place:ferag-courier-stable",
       "town": {
        "en": "East Nordha",
        "es": "Nordha Este",
        "pt": "Nordha Oriental"
       },
+      "townRef": "place:east-nordha",
       "underground": false
      },
      "services": {
@@ -28237,11 +28431,13 @@
          "es": "Cabaña de Eofor",
          "pt": "Cabana de Eofor"
         },
+        "ref": "place:eofor-s-hut",
         "town": {
          "en": "Nordha",
          "es": "Nordha",
          "pt": "Nordha"
         },
+        "townRef": "place:nordha",
         "underground": false
        }
       }
@@ -28519,11 +28715,13 @@
        "es": "Cabaña de Eofor",
        "pt": "Cabana de Eofor"
       },
+      "ref": "place:eofor-s-hut",
       "town": {
        "en": "Nordha",
        "es": "Nordha",
        "pt": "Nordha"
       },
+      "townRef": "place:nordha",
       "underground": false
      },
      "services": {
@@ -28537,11 +28735,13 @@
          "es": "Establo de Mensajería Ferag",
          "pt": "Estábulo de Correio Ferag"
         },
+        "ref": "place:ferag-courier-stable",
         "town": {
          "en": "East Nordha",
          "es": "Nordha Este",
          "pt": "Nordha Oriental"
         },
+        "townRef": "place:east-nordha",
         "underground": false
        }
       }
@@ -28956,11 +29156,13 @@
        "es": "Casa Comunal de Fergus",
        "pt": "Casa Comunal de Fergus"
       },
+      "ref": "place:fergus-longhouse",
       "town": {
        "en": "Nordha",
        "es": "Nordha",
        "pt": "Nordha"
       },
+      "townRef": "place:nordha",
       "underground": false
      },
      "spoiler": false,
@@ -29380,11 +29582,13 @@
        "es": "Granjas de Frances",
        "pt": "Fazendas de Frances"
       },
+      "ref": "place:frances-farms",
       "town": {
        "en": "Nordha",
        "es": "Nordha",
        "pt": "Nordha"
       },
+      "townRef": "place:nordha",
       "underground": false
      },
      "spoiler": false,
@@ -29753,11 +29957,13 @@
        "es": "Pasaje al Este",
        "pt": "Passagem para o Leste"
       },
+      "ref": "place:passage-to-the-east",
       "town": {
        "en": "Plains Cathedral",
        "es": "Catedral de la Llanura",
        "pt": "Catedral da Planície"
       },
+      "townRef": "place:plains-cathedral",
       "underground": false
      },
      "restock": 8,
@@ -30200,11 +30406,13 @@
        "es": "Gremio de los Centinelas",
        "pt": "Guilda dos Sentinelas"
       },
+      "ref": "place:sentinel-s-guild",
       "town": {
        "en": "Plains Cathedral",
        "es": "Catedral de la Llanura",
        "pt": "Catedral da Planície"
       },
+      "townRef": "place:plains-cathedral",
       "underground": false
      },
      "services": {
@@ -30289,11 +30497,13 @@
        "es": "Pasaje al Este",
        "pt": "Passagem para o Leste"
       },
+      "ref": "place:passage-to-the-east",
       "town": {
        "en": "Plains Cathedral",
        "es": "Catedral de la Llanura",
        "pt": "Catedral da Planície"
       },
+      "townRef": "place:plains-cathedral",
       "underground": true
      },
      "services": {
@@ -30305,11 +30515,13 @@
          "es": "Pasaje al Este",
          "pt": "Passagem para o Leste"
         },
+        "ref": "place:passage-to-the-east",
         "town": {
          "en": "Plains Cathedral",
          "es": "Catedral de la Llanura",
          "pt": "Catedral da Planície"
         },
+        "townRef": "place:plains-cathedral",
         "underground": true
        }
       }
@@ -30588,11 +30800,13 @@
        "es": "Plaza de los Sastres",
        "pt": "Praça dos Alfaiates"
       },
+      "ref": "place:clothier-square",
       "town": {
        "en": "Vecan",
        "es": "Vecan",
        "pt": "Vecan"
       },
+      "townRef": "place:vecan",
       "underground": false
      },
      "services": {
@@ -30604,11 +30818,13 @@
          "es": "Plaza de los Sastres",
          "pt": "Praça dos Alfaiates"
         },
+        "ref": "place:clothier-square",
         "town": {
          "en": "Vecan",
          "es": "Vecan",
          "pt": "Vecan"
         },
+        "townRef": "place:vecan",
         "underground": false
        }
       }
@@ -31257,11 +31473,13 @@
        "es": "La Caravana",
        "pt": "A Caravana"
       },
+      "ref": "place:the-caravan",
       "town": {
        "en": "Plains Cathedral",
        "es": "Catedral de la Llanura",
        "pt": "Catedral da Planície"
       },
+      "townRef": "place:plains-cathedral",
       "underground": false
      },
      "restock": 4,
@@ -31660,11 +31878,13 @@
        "es": "Taberna de Sigurd",
        "pt": "Taverna de Sigurd"
       },
+      "ref": "place:sigurd-s-pub",
       "town": {
        "en": "Basile",
        "es": "Basile",
        "pt": "Basile"
       },
+      "townRef": "place:basile",
       "underground": true
      },
      "spoiler": false,
@@ -31760,11 +31980,13 @@
        "es": "Barco de Rasobar",
        "pt": "Navio de Rasobar"
       },
+      "ref": "place:rasobar-s-ship",
       "town": {
        "en": "Basile",
        "es": "Basile",
        "pt": "Basile"
       },
+      "townRef": "place:basile",
       "underground": true
      },
      "spoiler": false,
@@ -32146,11 +32368,13 @@
        "es": "Cámara del Rey",
        "pt": "Câmara do Rei"
       },
+      "ref": "place:king-s-chamber",
       "town": {
        "en": "Basile",
        "es": "Basile",
        "pt": "Basile"
       },
+      "townRef": "place:basile",
       "underground": false
      },
      "services": {
@@ -32163,11 +32387,13 @@
          "es": "Cámara del Rey",
          "pt": "Câmara do Rei"
         },
+        "ref": "place:king-s-chamber",
         "town": {
          "en": "Basile",
          "es": "Basile",
          "pt": "Basile"
         },
+        "townRef": "place:basile",
         "underground": false
        }
       }
@@ -32636,11 +32862,13 @@
        "es": "Plaza de los Sastres",
        "pt": "Praça dos Alfaiates"
       },
+      "ref": "place:clothier-square",
       "town": {
        "en": "Vecan",
        "es": "Vecan",
        "pt": "Vecan"
       },
+      "townRef": "place:vecan",
       "underground": false
      },
      "restock": 4,
@@ -33108,15 +33336,17 @@
      "link": "https://map.opengea.tech/#2.AgBH_AEGAQABAQEAANAJdcQfEEBwVCeXBg",
      "place": {
       "near": {
-       "en": "Blacksmith Brean",
-       "es": "Herrero Brean",
-       "pt": "Ferreiro Brean"
+       "en": "Plains Road",
+       "es": "Camino de las Llanuras",
+       "pt": "Estrada das Planícies"
       },
+      "ref": "place:plains-road",
       "town": {
        "en": "Nordha",
        "es": "Nordha",
        "pt": "Nordha"
       },
+      "townRef": "place:nordha",
       "underground": false
      },
      "services": {
@@ -33585,11 +33815,13 @@
        "es": "Barco de Rasobar",
        "pt": "Navio de Rasobar"
       },
+      "ref": "place:rasobar-s-ship",
       "town": {
        "en": "Basile",
        "es": "Basile",
        "pt": "Basile"
       },
+      "townRef": "place:basile",
       "underground": false
      },
      "restock": 4,
@@ -33976,11 +34208,13 @@
        "es": "Plaza de Mercaderes",
        "pt": "Praça dos Mercadores"
       },
+      "ref": "place:trader-square",
       "town": {
        "en": "Garadum",
        "es": "Garadum",
        "pt": "Garadum"
       },
+      "townRef": "place:garadum",
       "underground": true
      },
      "restock": 2,
@@ -34396,11 +34630,13 @@
        "es": "Hospital de Vecan",
        "pt": "Hospital de Vecan"
       },
+      "ref": "place:vecan-hospital",
       "town": {
        "en": "Vecan",
        "es": "Vecan",
        "pt": "Vecan"
       },
+      "townRef": "place:vecan",
       "underground": false
      },
      "services": {
@@ -34673,11 +34909,13 @@
        "es": "Plaza de los Mercaderes",
        "pt": "Praça dos Mercadores"
       },
+      "ref": "place:merchant-square",
       "town": {
        "en": "Vecan",
        "es": "Vecan",
        "pt": "Vecan"
       },
+      "townRef": "place:vecan",
       "underground": false
      },
      "services": {
@@ -34690,11 +34928,13 @@
          "es": "Palacio de Huesos",
          "pt": "Palácio de Ossos"
         },
+        "ref": "place:bone-palace",
         "town": {
          "en": "Vecan",
          "es": "Vecan",
          "pt": "Vecan"
         },
+        "townRef": "place:vecan",
         "underground": false
        }
       }
@@ -35089,11 +35329,13 @@
        "es": "La Caravana",
        "pt": "A Caravana"
       },
+      "ref": "place:the-caravan",
       "town": {
        "en": "Plains Cathedral",
        "es": "Catedral de la Llanura",
        "pt": "Catedral da Planície"
       },
+      "townRef": "place:plains-cathedral",
       "underground": false
      },
      "restock": 4,
@@ -35514,11 +35756,13 @@
        "es": "Puerta Oeste",
        "pt": "Portão Oeste"
       },
+      "ref": "place:west-gate",
       "town": {
        "en": "Basile",
        "es": "Basile",
        "pt": "Basile"
       },
+      "townRef": "place:basile",
       "underground": false
      },
      "spoiler": false,
@@ -35966,15 +36210,17 @@
      "link": "https://map.opengea.tech/#2.AgDuAgMGARABAQEAANCBAukuMBBggPQmFiZHBw",
      "place": {
       "near": {
-       "en": "Jebidiah Ambush",
-       "es": "Emboscada de Jebidiah",
-       "pt": "Emboscada de Jebidiah"
+       "en": "Trident Passage",
+       "es": "Pasaje Trident",
+       "pt": "Passagem Trident"
       },
+      "ref": "place:trident-passage",
       "town": {
        "en": "Dorosam",
        "es": "Dorosam",
        "pt": "Dorosam"
       },
+      "townRef": "place:dorosam",
       "underground": true
      },
      "restock": 4,
@@ -36625,11 +36871,13 @@
        "es": "Las Cuevas de Lintcaves",
        "pt": "As Cavernas de Lintcaves"
       },
+      "ref": "place:the-lintcaves",
       "town": {
        "en": "East Nordha",
        "es": "Nordha Este",
        "pt": "Nordha Oriental"
       },
+      "townRef": "place:east-nordha",
       "underground": true
      },
      "restock": 0,
@@ -36705,11 +36953,13 @@
        "es": "Tienda de Herramientas de Hoder",
        "pt": "Loja de Ferramentas de Hoder"
       },
+      "ref": "place:hoder-s-tool-shop",
       "town": {
        "en": "Nordha",
        "es": "Nordha",
        "pt": "Nordha"
       },
+      "townRef": "place:nordha",
       "underground": false
      },
      "restock": 4,
@@ -37179,11 +37429,13 @@
        "es": "Plaza de los Mercaderes",
        "pt": "Praça dos Mercadores"
       },
+      "ref": "place:merchant-square",
       "town": {
        "en": "Vecan",
        "es": "Vecan",
        "pt": "Vecan"
       },
+      "townRef": "place:vecan",
       "underground": false
      },
      "spoiler": false,
@@ -37617,11 +37869,13 @@
        "es": "Plaza de Mercaderes",
        "pt": "Praça dos Mercadores"
       },
+      "ref": "place:trader-square",
       "town": {
        "en": "Garadum",
        "es": "Garadum",
        "pt": "Garadum"
       },
+      "townRef": "place:garadum",
       "underground": true
      },
      "restock": 2,
@@ -38084,11 +38338,13 @@
        "es": "Plaza de Mercaderes",
        "pt": "Praça dos Mercadores"
       },
+      "ref": "place:trader-square",
       "town": {
        "en": "Garadum",
        "es": "Garadum",
        "pt": "Garadum"
       },
+      "townRef": "place:garadum",
       "underground": true
      },
      "restock": 2,
@@ -38611,11 +38867,13 @@
        "es": "Las Alcantarillas",
        "pt": "Os Esgotos"
       },
+      "ref": "place:the-sewers",
       "town": {
        "en": "Basile",
        "es": "Basile",
        "pt": "Basile"
       },
+      "townRef": "place:basile",
       "underground": false
      },
      "restock": 4,
@@ -39187,11 +39445,13 @@
        "es": "Cabaña de Jebidiah",
        "pt": "Cabana de Jebidiah"
       },
+      "ref": "place:jebidiah-s-hut",
       "town": {
        "en": "Dorosam",
        "es": "Dorosam",
        "pt": "Dorosam"
       },
+      "townRef": "place:dorosam",
       "underground": false
      },
      "restock": 18,
@@ -39678,11 +39938,13 @@
        "es": "Plaza de los Mercaderes",
        "pt": "Praça dos Mercadores"
       },
+      "ref": "place:merchant-square",
       "town": {
        "en": "Vecan",
        "es": "Vecan",
        "pt": "Vecan"
       },
+      "townRef": "place:vecan",
       "underground": false
      },
      "restock": 4,
@@ -40057,11 +40319,13 @@
        "es": "Puerto de Nordha Este",
        "pt": "Porto de Nordha Oriental"
       },
+      "ref": "place:east-nordha-port",
       "town": {
        "en": "East Nordha",
        "es": "Nordha Este",
        "pt": "Nordha Oriental"
       },
+      "townRef": "place:east-nordha",
       "underground": false
      },
      "spoiler": false,
@@ -40093,11 +40357,13 @@
        "es": "Barco Pirata",
        "pt": "Navio Pirata"
       },
+      "ref": "place:pirate-ship",
       "town": {
        "en": "East Nordha",
        "es": "Nordha Este",
        "pt": "Nordha Oriental"
       },
+      "townRef": "place:east-nordha",
       "underground": false
      },
      "spoiler": true,
@@ -40477,11 +40743,13 @@
        "es": "La Ciudadela",
        "pt": "A Cidadela"
       },
+      "ref": "place:the-citadel",
       "town": {
        "en": "Nordha",
        "es": "Nordha",
        "pt": "Nordha"
       },
+      "townRef": "place:nordha",
       "underground": true
      },
      "spoiler": false,
@@ -40866,11 +41134,13 @@
        "es": "Sala de Calderas",
        "pt": "Sala das Caldeiras"
       },
+      "ref": "place:boiler-room",
       "town": {
        "en": "Garadum",
        "es": "Garadum",
        "pt": "Garadum"
       },
+      "townRef": "place:garadum",
       "underground": true
      },
      "spoiler": false,
@@ -40985,11 +41255,13 @@
        "es": "Salón Élfico",
        "pt": "Salão Élfico"
       },
+      "ref": "place:elvenhall",
       "town": {
        "en": "Garadum",
        "es": "Garadum",
        "pt": "Garadum"
       },
+      "townRef": "place:garadum",
       "underground": true
      },
      "spoiler": false,
@@ -41421,15 +41693,17 @@
      "link": "https://map.opengea.tech/#2.AgAlhgIGAQsBAQEAANBBRJUYCgQQLIXJpQE",
      "place": {
       "near": {
-       "en": "Blacksmith Brean",
-       "es": "Herrero Brean",
-       "pt": "Ferreiro Brean"
+       "en": "Flower Spire",
+       "es": "Aguja de Flores",
+       "pt": "Torre das Flores"
       },
+      "ref": "place:flower-spire",
       "town": {
        "en": "Nordha",
        "es": "Nordha",
        "pt": "Nordha"
       },
+      "townRef": "place:nordha",
       "underground": false
      },
      "services": {
@@ -41815,11 +42089,13 @@
        "es": "La Ciudadela",
        "pt": "A Cidadela"
       },
+      "ref": "place:the-citadel",
       "town": {
        "en": "Nordha",
        "es": "Nordha",
        "pt": "Nordha"
       },
+      "townRef": "place:nordha",
       "underground": true
      },
      "spoiler": false,
@@ -42202,11 +42478,13 @@
        "es": "Minas de Cuarzo",
        "pt": "Minas de Quartzo"
       },
+      "ref": "place:quartz-mines",
       "town": {
        "en": "Garadum",
        "es": "Garadum",
        "pt": "Garadum"
       },
+      "townRef": "place:garadum",
       "underground": true
      },
      "restock": 2,
@@ -42630,11 +42908,13 @@
        "es": "Castillo de Basile",
        "pt": "Castelo de Basile"
       },
+      "ref": "place:basile-castle",
       "town": {
        "en": "Basile",
        "es": "Basile",
        "pt": "Basile"
       },
+      "townRef": "place:basile",
       "underground": false
      },
      "spoiler": false,
@@ -43027,11 +43307,13 @@
        "es": "Tienda Salazar",
        "pt": "Loja Salazar"
       },
+      "ref": "place:salazar-shop",
       "town": {
        "en": "East Nordha",
        "es": "Nordha Este",
        "pt": "Nordha Oriental"
       },
+      "townRef": "place:east-nordha",
       "underground": false
      },
      "services": {
@@ -43482,11 +43764,13 @@
        "es": "Puerto de Nordha Este",
        "pt": "Porto de Nordha Oriental"
       },
+      "ref": "place:east-nordha-port",
       "town": {
        "en": "East Nordha",
        "es": "Nordha Este",
        "pt": "Nordha Oriental"
       },
+      "townRef": "place:east-nordha",
       "underground": false
      },
      "restock": 4,
@@ -43881,11 +44165,13 @@
        "es": "Casa de Loke",
        "pt": "Casa de Loke"
       },
+      "ref": "place:loke-s-home",
       "town": {
        "en": "East Nordha",
        "es": "Nordha Este",
        "pt": "Nordha Oriental"
       },
+      "townRef": "place:east-nordha",
       "underground": false
      },
      "services": {
@@ -43897,11 +44183,13 @@
          "es": "Minas de Nordha Este",
          "pt": "Minas de Nordha Oriental"
         },
+        "ref": "place:east-nordha-mines",
         "town": {
          "en": "East Nordha",
          "es": "Nordha Este",
          "pt": "Nordha Oriental"
         },
+        "townRef": "place:east-nordha",
         "underground": false
        }
       }
@@ -43937,11 +44225,13 @@
        "es": "Minas de Nordha Este",
        "pt": "Minas de Nordha Oriental"
       },
+      "ref": "place:east-nordha-mines",
       "town": {
        "en": "East Nordha",
        "es": "Nordha Este",
        "pt": "Nordha Oriental"
       },
+      "townRef": "place:east-nordha",
       "underground": false
      },
      "services": {
@@ -43953,11 +44243,13 @@
          "es": "Casa de Loke",
          "pt": "Casa de Loke"
         },
+        "ref": "place:loke-s-home",
         "town": {
          "en": "East Nordha",
          "es": "Nordha Este",
          "pt": "Nordha Oriental"
         },
+        "townRef": "place:east-nordha",
         "underground": false
        }
       }
@@ -43985,11 +44277,13 @@
        "es": "Boutique de Morrigan",
        "pt": "Boutique de Morrigan"
       },
+      "ref": "place:morrigan-s-boutique",
       "town": {
        "en": "Nordha",
        "es": "Nordha",
        "pt": "Nordha"
       },
+      "townRef": "place:nordha",
       "underground": false
      },
      "restock": 4,
@@ -44574,11 +44868,13 @@
        "es": "Floristería de Lurleen",
        "pt": "Floricultura da Lurleen"
       },
+      "ref": "place:lurleen-s-flower-shop",
       "town": {
        "en": "Basile",
        "es": "Basile",
        "pt": "Basile"
       },
+      "townRef": "place:basile",
       "underground": false
      },
      "restock": 4,
@@ -45047,11 +45343,13 @@
        "es": "Mercado de Basile",
        "pt": "Mercado de Basile"
       },
+      "ref": "place:basile-s-market",
       "town": {
        "en": "Basile",
        "es": "Basile",
        "pt": "Basile"
       },
+      "townRef": "place:basile",
       "underground": false
      },
      "restock": 4,
@@ -45927,11 +46225,13 @@
        "es": "Mercado de Basile",
        "pt": "Mercado de Basile"
       },
+      "ref": "place:basile-s-market",
       "town": {
        "en": "Basile",
        "es": "Basile",
        "pt": "Basile"
       },
+      "townRef": "place:basile",
       "underground": false
      },
      "restock": 5,
@@ -46023,11 +46323,13 @@
        "es": "Posada de Basile",
        "pt": "Estalagem de Basile"
       },
+      "ref": "place:basile-inn",
       "town": {
        "en": "Basile",
        "es": "Basile",
        "pt": "Basile"
       },
+      "townRef": "place:basile",
       "underground": false
      },
      "restock": 22,
@@ -46499,11 +46801,13 @@
        "es": "Plaza de los Sastres",
        "pt": "Praça dos Alfaiates"
       },
+      "ref": "place:clothier-square",
       "town": {
        "en": "Vecan",
        "es": "Vecan",
        "pt": "Vecan"
       },
+      "townRef": "place:vecan",
       "underground": false
      },
      "restock": 4,
@@ -47081,11 +47385,13 @@
        "es": "Mary y Sal",
        "pt": "Mary e Sal"
       },
+      "ref": "place:mary-and-sal-s",
       "town": {
        "en": "Dorosam",
        "es": "Dorosam",
        "pt": "Dorosam"
       },
+      "townRef": "place:dorosam",
       "underground": false
      },
      "restock": 4,
@@ -47689,11 +47995,13 @@
        "es": "Mercado de Basile",
        "pt": "Mercado de Basile"
       },
+      "ref": "place:basile-s-market",
       "town": {
        "en": "Basile",
        "es": "Basile",
        "pt": "Basile"
       },
+      "townRef": "place:basile",
       "underground": false
      },
      "restock": 4,
@@ -48152,11 +48460,13 @@
        "es": "Plaza de los Comerciantes",
        "pt": "Praça dos Comerciantes"
       },
+      "ref": "place:trader-s-square",
       "town": {
        "en": "Basile",
        "es": "Basile",
        "pt": "Basile"
       },
+      "townRef": "place:basile",
       "underground": false
      },
      "restock": 4,
@@ -48870,11 +49180,13 @@
        "es": "Templo de Basile",
        "pt": "Templo de Basile"
       },
+      "ref": "place:basile-s-temple",
       "town": {
        "en": "Basile",
        "es": "Basile",
        "pt": "Basile"
       },
+      "townRef": "place:basile",
       "underground": false
      },
      "restock": 4,
@@ -49404,11 +49716,13 @@
        "es": "Mercado de Basile",
        "pt": "Mercado de Basile"
       },
+      "ref": "place:basile-s-market",
       "town": {
        "en": "Basile",
        "es": "Basile",
        "pt": "Basile"
       },
+      "townRef": "place:basile",
       "underground": false
      },
      "restock": 5,
@@ -49866,11 +50180,13 @@
        "es": "Castillo de Basile",
        "pt": "Castelo de Basile"
       },
+      "ref": "place:basile-castle",
       "town": {
        "en": "Basile",
        "es": "Basile",
        "pt": "Basile"
       },
+      "townRef": "place:basile",
       "underground": false
      },
      "spoiler": false,
@@ -50254,15 +50570,17 @@
      "link": "https://map.opengea.tech/#2.AgAi9AMGAQgBAQEAANBBQYrQDwQYNKWxsZW5AQ",
      "place": {
       "near": {
-       "en": "The Citadel",
-       "es": "La Ciudadela",
-       "pt": "A Cidadela"
+       "en": "Morrigan's Boutique",
+       "es": "Boutique de Morrigan",
+       "pt": "Boutique de Morrigan"
       },
+      "ref": "place:morrigan-s-boutique",
       "town": {
        "en": "Nordha",
        "es": "Nordha",
        "pt": "Nordha"
       },
+      "townRef": "place:nordha",
       "underground": true
      },
      "spoiler": false,
@@ -50739,11 +51057,13 @@
        "es": "Boutique de Morrigan",
        "pt": "Boutique de Morrigan"
       },
+      "ref": "place:morrigan-s-boutique",
       "town": {
        "en": "Nordha",
        "es": "Nordha",
        "pt": "Nordha"
       },
+      "townRef": "place:nordha",
       "underground": false
      },
      "restock": 4,
@@ -51245,11 +51565,13 @@
        "es": "Casa de Tansy",
        "pt": "Casa de Tansy"
       },
+      "ref": "place:tansy-s-house",
       "town": {
        "en": "Dorosam",
        "es": "Dorosam",
        "pt": "Dorosam"
       },
+      "townRef": "place:dorosam",
       "underground": false
      },
      "spoiler": false,
@@ -51574,11 +51896,13 @@
        "es": "Gemas y Brillantes de Nebil",
        "pt": "Gemas e Brilhantes de Nebil"
       },
+      "ref": "place:nebil-s-gems-shinies",
       "town": {
        "en": "Garadum",
        "es": "Garadum",
        "pt": "Garadum"
       },
+      "townRef": "place:garadum",
       "underground": true
      },
      "restock": 2,
@@ -51978,11 +52302,13 @@
        "es": "Plaza de la Residencia",
        "pt": "Praça da Residência"
       },
+      "ref": "place:residency-square",
       "town": {
        "en": "Basile",
        "es": "Basile",
        "pt": "Basile"
       },
+      "townRef": "place:basile",
       "underground": false
      },
      "restock": 8,
@@ -52447,11 +52773,13 @@
        "es": "Hospital de Vecan",
        "pt": "Hospital de Vecan"
       },
+      "ref": "place:vecan-hospital",
       "town": {
        "en": "Vecan",
        "es": "Vecan",
        "pt": "Vecan"
       },
+      "townRef": "place:vecan",
       "underground": false
      },
      "spoiler": false,
@@ -52891,11 +53219,13 @@
        "es": "La Caravana",
        "pt": "A Caravana"
       },
+      "ref": "place:the-caravan",
       "town": {
        "en": "Plains Cathedral",
        "es": "Catedral de la Llanura",
        "pt": "Catedral da Planície"
       },
+      "townRef": "place:plains-cathedral",
       "underground": true
      },
      "restock": 17,
@@ -53400,11 +53730,13 @@
        "es": "Plaza de los Sastres",
        "pt": "Praça dos Alfaiates"
       },
+      "ref": "place:clothier-square",
       "town": {
        "en": "Vecan",
        "es": "Vecan",
        "pt": "Vecan"
       },
+      "townRef": "place:vecan",
       "underground": false
      },
      "restock": 4,
@@ -53919,11 +54251,13 @@
        "es": "Plaza de los Mercaderes",
        "pt": "Praça dos Mercadores"
       },
+      "ref": "place:merchant-square",
       "town": {
        "en": "Vecan",
        "es": "Vecan",
        "pt": "Vecan"
       },
+      "townRef": "place:vecan",
       "underground": false
      },
      "restock": 4,
@@ -54499,11 +54833,13 @@
        "es": "La Caravana",
        "pt": "A Caravana"
       },
+      "ref": "place:the-caravan",
       "town": {
        "en": "Plains Cathedral",
        "es": "Catedral de la Llanura",
        "pt": "Catedral da Planície"
       },
+      "townRef": "place:plains-cathedral",
       "underground": false
      },
      "restock": 4,
@@ -54916,11 +55252,13 @@
        "es": "Taberna de Sigurd",
        "pt": "Taverna de Sigurd"
       },
+      "ref": "place:sigurd-s-pub",
       "town": {
        "en": "Basile",
        "es": "Basile",
        "pt": "Basile"
       },
+      "townRef": "place:basile",
       "underground": true
      },
      "spoiler": false,
@@ -55348,11 +55686,13 @@
        "es": "La Caravana",
        "pt": "A Caravana"
       },
+      "ref": "place:the-caravan",
       "town": {
        "en": "Plains Cathedral",
        "es": "Catedral de la Llanura",
        "pt": "Catedral da Planície"
       },
+      "townRef": "place:plains-cathedral",
       "underground": false
      },
      "restock": 4,
@@ -55895,6 +56235,7 @@
        "es": "Catedral de la Llanura",
        "pt": "Catedral da Planície"
       },
+      "townRef": "place:plains-cathedral",
       "underground": true
      },
      "restock": 17,
@@ -56086,11 +56427,13 @@
        "es": "Puesto Avanzado del Norte",
        "pt": "Posto Avançado Norte"
       },
+      "ref": "place:northern-outpost",
       "town": {
        "en": "Nordha",
        "es": "Nordha",
        "pt": "Nordha"
       },
+      "townRef": "place:nordha",
       "underground": true
      },
      "spoiler": false,
@@ -56219,11 +56562,13 @@
        "es": "Caída del Yate",
        "pt": "Queda do Iate"
       },
+      "ref": "place:yacht-s-portfall",
       "town": {
        "en": "Garadum",
        "es": "Garadum",
        "pt": "Garadum"
       },
+      "townRef": "place:garadum",
       "underground": true
      },
      "spoiler": false,
@@ -56633,11 +56978,13 @@
        "es": "Torre Oriental",
        "pt": "Torre Leste"
       },
+      "ref": "place:east-tower",
       "town": {
        "en": "Nordha",
        "es": "Nordha",
        "pt": "Nordha"
       },
+      "townRef": "place:nordha",
       "underground": false
      },
      "spoiler": false,
@@ -56987,11 +57334,13 @@
        "es": "Escuela Rúnica",
        "pt": "Escola Rúnica"
       },
+      "ref": "place:runic-school",
       "town": {
        "en": "Plains Cathedral",
        "es": "Catedral de la Llanura",
        "pt": "Catedral da Planície"
       },
+      "townRef": "place:plains-cathedral",
       "underground": false
      },
      "spoiler": false,
@@ -57450,11 +57799,13 @@
        "es": "Santuario de la Madre",
        "pt": "Santuário da Mãe"
       },
+      "ref": "place:mother-shrine",
       "town": {
        "en": "Nordha",
        "es": "Nordha",
        "pt": "Nordha"
       },
+      "townRef": "place:nordha",
       "underground": false
      },
      "restock": 4,
@@ -57788,11 +58139,13 @@
        "es": "Villa Abandonada",
        "pt": "Vila Abandonada"
       },
+      "ref": "place:forsaken-village",
       "town": {
        "en": "Plains Cathedral",
        "es": "Catedral de la Llanura",
        "pt": "Catedral da Planície"
       },
+      "townRef": "place:plains-cathedral",
       "underground": false
      },
      "spoiler": false,
@@ -58179,11 +58532,13 @@
        "es": "Plaza del Trabajo",
        "pt": "Praça do Trabalho"
       },
+      "ref": "place:work-square",
       "town": {
        "en": "Vecan",
        "es": "Vecan",
        "pt": "Vecan"
       },
+      "townRef": "place:vecan",
       "underground": false
      },
      "spoiler": false,
@@ -58541,11 +58896,13 @@
        "es": "Plaza de los Sastres",
        "pt": "Praça dos Alfaiates"
       },
+      "ref": "place:clothier-square",
       "town": {
        "en": "Vecan",
        "es": "Vecan",
        "pt": "Vecan"
       },
+      "townRef": "place:vecan",
       "underground": false
      },
      "services": {
@@ -58560,6 +58917,7 @@
          "es": "Dorosam",
          "pt": "Dorosam"
         },
+        "townRef": "place:dorosam",
         "underground": false
        }
       }
@@ -59246,11 +59604,13 @@
        "es": "Barco de Rasobar",
        "pt": "Navio de Rasobar"
       },
+      "ref": "place:rasobar-s-ship",
       "town": {
        "en": "Basile",
        "es": "Basile",
        "pt": "Basile"
       },
+      "townRef": "place:basile",
       "underground": false
      },
      "restock": 5,
@@ -59729,11 +60089,13 @@
        "es": "Plaza de la Residencia",
        "pt": "Praça da Residência"
       },
+      "ref": "place:residency-square",
       "town": {
        "en": "Basile",
        "es": "Basile",
        "pt": "Basile"
       },
+      "townRef": "place:basile",
       "underground": false
      },
      "restock": 4,
@@ -60231,11 +60593,13 @@
        "es": "Aguja de Flores",
        "pt": "Torre das Flores"
       },
+      "ref": "place:flower-spire",
       "town": {
        "en": "Nordha",
        "es": "Nordha",
        "pt": "Nordha"
       },
+      "townRef": "place:nordha",
       "underground": false
      },
      "restock": 4,
@@ -60389,11 +60753,13 @@
        "es": "Forajidos de Nordha",
        "pt": "Fora-da-Lei de Nordha"
       },
+      "ref": "place:nordha-outlaws",
       "town": {
        "en": "Nordha",
        "es": "Nordha",
        "pt": "Nordha"
       },
+      "townRef": "place:nordha",
       "underground": true
      },
      "spoiler": true,
@@ -60790,11 +61156,13 @@
        "es": "Los Muelles",
        "pt": "As Docas"
       },
+      "ref": "place:the-docks",
       "town": {
        "en": "Basile",
        "es": "Basile",
        "pt": "Basile"
       },
+      "townRef": "place:basile",
       "underground": false
      },
      "restock": 4,
@@ -61243,15 +61611,17 @@
      "link": "https://map.opengea.tech/#2.AgAhhgIGAQsBAQEAANBBRIUYCgQQSL25pQE",
      "place": {
       "near": {
-       "en": "Blacksmith Brean",
-       "es": "Herrero Brean",
-       "pt": "Ferreiro Brean"
+       "en": "Flower Spire",
+       "es": "Aguja de Flores",
+       "pt": "Torre das Flores"
       },
+      "ref": "place:flower-spire",
       "town": {
        "en": "Nordha",
        "es": "Nordha",
        "pt": "Nordha"
       },
+      "townRef": "place:nordha",
       "underground": false
      },
      "spoiler": false,
@@ -61767,11 +62137,13 @@
        "es": "Tienda de Pociones Rosel",
        "pt": "Loja de Poções Rosel"
       },
+      "ref": "place:rosel-potion-shop",
       "town": {
        "en": "Nordha",
        "es": "Nordha",
        "pt": "Nordha"
       },
+      "townRef": "place:nordha",
       "underground": false
      },
      "restock": 2,
@@ -62241,11 +62613,13 @@
        "es": "Las Alcantarillas",
        "pt": "Os Esgotos"
       },
+      "ref": "place:the-sewers",
       "town": {
        "en": "Basile",
        "es": "Basile",
        "pt": "Basile"
       },
+      "townRef": "place:basile",
       "underground": false
      },
      "restock": 5,
@@ -62699,11 +63073,13 @@
        "es": "Plaza del Almacén",
        "pt": "Praça do Depósito"
       },
+      "ref": "place:storage-square",
       "town": {
        "en": "Vecan",
        "es": "Vecan",
        "pt": "Vecan"
       },
+      "townRef": "place:vecan",
       "underground": false
      },
      "spoiler": false,
@@ -63044,11 +63420,13 @@
        "es": "La Caravana",
        "pt": "A Caravana"
       },
+      "ref": "place:the-caravan",
       "town": {
        "en": "Plains Cathedral",
        "es": "Catedral de la Llanura",
        "pt": "Catedral da Planície"
       },
+      "townRef": "place:plains-cathedral",
       "underground": false
      },
      "spoiler": false,
@@ -63403,11 +63781,13 @@
        "es": "Cabaña de Sabrina",
        "pt": "Cabana de Sabrina"
       },
+      "ref": "place:sabrina-s-hut",
       "town": {
        "en": "Basile",
        "es": "Basile",
        "pt": "Basile"
       },
+      "townRef": "place:basile",
       "underground": false
      },
      "services": {
@@ -63993,11 +64373,13 @@
        "es": "Mary y Sal",
        "pt": "Mary e Sal"
       },
+      "ref": "place:mary-and-sal-s",
       "town": {
        "en": "Dorosam",
        "es": "Dorosam",
        "pt": "Dorosam"
       },
+      "townRef": "place:dorosam",
       "underground": false
      },
      "restock": 4,
@@ -64500,11 +64882,13 @@
        "es": "Tienda Salazar",
        "pt": "Loja Salazar"
       },
+      "ref": "place:salazar-shop",
       "town": {
        "en": "East Nordha",
        "es": "Nordha Este",
        "pt": "Nordha Oriental"
       },
+      "townRef": "place:east-nordha",
       "underground": true
      },
      "restock": 4,
@@ -64929,11 +65313,13 @@
        "es": "Granja de Branor",
        "pt": "Fazenda de Branor"
       },
+      "ref": "place:branor-s-farm",
       "town": {
        "en": "Plains Cathedral",
        "es": "Catedral de la Llanura",
        "pt": "Catedral da Planície"
       },
+      "townRef": "place:plains-cathedral",
       "underground": false
      },
      "spoiler": false,
@@ -65300,11 +65686,13 @@
        "es": "Castillo de Basile",
        "pt": "Castelo de Basile"
       },
+      "ref": "place:basile-castle",
       "town": {
        "en": "Basile",
        "es": "Basile",
        "pt": "Basile"
       },
+      "townRef": "place:basile",
       "underground": false
      },
      "spoiler": false,
@@ -65702,11 +66090,13 @@
        "es": "Santuario de la Madre",
        "pt": "Santuário da Mãe"
       },
+      "ref": "place:mother-shrine",
       "town": {
        "en": "Nordha",
        "es": "Nordha",
        "pt": "Nordha"
       },
+      "townRef": "place:nordha",
       "underground": false
      },
      "services": {
@@ -66020,11 +66410,13 @@
        "es": "Granjas de Frances",
        "pt": "Fazendas de Frances"
       },
+      "ref": "place:frances-farms",
       "town": {
        "en": "Nordha",
        "es": "Nordha",
        "pt": "Nordha"
       },
+      "townRef": "place:nordha",
       "underground": false
      },
      "spoiler": false,
@@ -66425,11 +66817,13 @@
        "es": "Cementerio de Yordin",
        "pt": "Cemitério de Yordin"
       },
+      "ref": "place:yordin-s-cemetery",
       "town": {
        "en": "Plains Cathedral",
        "es": "Catedral de la Llanura",
        "pt": "Catedral da Planície"
       },
+      "townRef": "place:plains-cathedral",
       "underground": false
      },
      "spoiler": false,
@@ -66920,11 +67314,13 @@
        "es": "Mausoleo de Seymour",
        "pt": "Mausoléu de Seymour"
       },
+      "ref": "place:seymour-s-mausoleum",
       "town": {
        "en": "Plains Cathedral",
        "es": "Catedral de la Llanura",
        "pt": "Catedral da Planície"
       },
+      "townRef": "place:plains-cathedral",
       "underground": true
      },
      "restock": 6,
@@ -67591,11 +67987,13 @@
        "es": "Taberna de Sigurd",
        "pt": "Taverna de Sigurd"
       },
+      "ref": "place:sigurd-s-pub",
       "town": {
        "en": "Basile",
        "es": "Basile",
        "pt": "Basile"
       },
+      "townRef": "place:basile",
       "underground": true
      },
      "restock": 6,
@@ -67753,15 +68151,17 @@
      "link": "https://map.opengea.tech/#2.AgCoAZ8CBgEAAQEBAADQCYUa8CkQMDC1lgc",
      "place": {
       "near": {
-       "en": "Garadum, City of Gems",
-       "es": "Garadum, Ciudad de las Gemas",
-       "pt": "Garadum, Cidade das Gemas"
+       "en": "Royal Bridge",
+       "es": "Puente Real",
+       "pt": "Ponte Real"
       },
+      "ref": "place:royal-bridge",
       "town": {
        "en": "Garadum",
        "es": "Garadum",
        "pt": "Garadum"
       },
+      "townRef": "place:garadum",
       "underground": false
      },
      "spoiler": false,
@@ -67919,11 +68319,13 @@
        "es": "Plaza de Mercaderes",
        "pt": "Praça dos Mercadores"
       },
+      "ref": "place:trader-square",
       "town": {
        "en": "Garadum",
        "es": "Garadum",
        "pt": "Garadum"
       },
+      "townRef": "place:garadum",
       "underground": true
      },
      "spoiler": false,
@@ -68433,11 +68835,13 @@
        "es": "Casa de Tansy",
        "pt": "Casa de Tansy"
       },
+      "ref": "place:tansy-s-house",
       "town": {
        "en": "Dorosam",
        "es": "Dorosam",
        "pt": "Dorosam"
       },
+      "townRef": "place:dorosam",
       "underground": false
      },
      "spoiler": false,
@@ -69108,11 +69512,13 @@
        "es": "Catedral de la Llanura",
        "pt": "Catedral da Planície"
       },
+      "ref": "place:plains-cathedral",
       "town": {
        "en": "Plains Cathedral",
        "es": "Catedral de la Llanura",
        "pt": "Catedral da Planície"
       },
+      "townRef": "place:plains-cathedral",
       "underground": false
      },
      "services": {
@@ -69760,11 +70166,13 @@
        "es": "Catedral de la Llanura",
        "pt": "Catedral da Planície"
       },
+      "ref": "place:plains-cathedral",
       "town": {
        "en": "Plains Cathedral",
        "es": "Catedral de la Llanura",
        "pt": "Catedral da Planície"
       },
+      "townRef": "place:plains-cathedral",
       "underground": false
      },
      "services": {
@@ -70139,11 +70547,13 @@
        "es": "La Caravana",
        "pt": "A Caravana"
       },
+      "ref": "place:the-caravan",
       "town": {
        "en": "Plains Cathedral",
        "es": "Catedral de la Llanura",
        "pt": "Catedral da Planície"
       },
+      "townRef": "place:plains-cathedral",
       "underground": false
      },
      "spoiler": false,
@@ -70471,11 +70881,13 @@
        "es": "Castillo de Basile",
        "pt": "Castelo de Basile"
       },
+      "ref": "place:basile-castle",
       "town": {
        "en": "Basile",
        "es": "Basile",
        "pt": "Basile"
       },
+      "townRef": "place:basile",
       "underground": false
      },
      "spoiler": false,
@@ -70837,11 +71249,13 @@
        "es": "Plaza de los Comerciantes",
        "pt": "Praça dos Comerciantes"
       },
+      "ref": "place:trader-s-square",
       "town": {
        "en": "Basile",
        "es": "Basile",
        "pt": "Basile"
       },
+      "townRef": "place:basile",
       "underground": false
      },
      "spoiler": false,
@@ -71224,11 +71638,13 @@
        "es": "La Caravana",
        "pt": "A Caravana"
       },
+      "ref": "place:the-caravan",
       "town": {
        "en": "Plains Cathedral",
        "es": "Catedral de la Llanura",
        "pt": "Catedral da Planície"
       },
+      "townRef": "place:plains-cathedral",
       "underground": true
      },
      "restock": 17,
@@ -71650,11 +72066,13 @@
        "es": "Pozos de Turmalina",
        "pt": "Poços de Turmalina"
       },
+      "ref": "place:tourmaline-shafts",
       "town": {
        "en": "Garadum",
        "es": "Garadum",
        "pt": "Garadum"
       },
+      "townRef": "place:garadum",
       "underground": true
      },
      "spoiler": false,
@@ -72213,11 +72631,13 @@
        "es": "Plaza de Mercaderes",
        "pt": "Praça dos Mercadores"
       },
+      "ref": "place:trader-square",
       "town": {
        "en": "Garadum",
        "es": "Garadum",
        "pt": "Garadum"
       },
+      "townRef": "place:garadum",
       "underground": true
      },
      "restock": 4,
@@ -72602,11 +73022,13 @@
        "es": "Cocina de Colman",
        "pt": "Cozinha de Colman"
       },
+      "ref": "place:colman-s-kitchen",
       "town": {
        "en": "East Nordha",
        "es": "Nordha Este",
        "pt": "Nordha Oriental"
       },
+      "townRef": "place:east-nordha",
       "underground": false
      },
      "restock": 4,
@@ -73087,11 +73509,13 @@
        "es": "Los Muelles",
        "pt": "As Docas"
       },
+      "ref": "place:the-docks",
       "town": {
        "en": "Basile",
        "es": "Basile",
        "pt": "Basile"
       },
+      "townRef": "place:basile",
       "underground": false
      },
      "services": {
@@ -73105,11 +73529,13 @@
          "es": "Puerto de Dorosam",
          "pt": "Porto de Dorosam"
         },
+        "ref": "place:dorosam-port",
         "town": {
          "en": "Dorosam",
          "es": "Dorosam",
          "pt": "Dorosam"
         },
+        "townRef": "place:dorosam",
         "underground": false
        }
       }
@@ -73501,11 +73927,13 @@
        "es": "Taberna de Sigurd",
        "pt": "Taverna de Sigurd"
       },
+      "ref": "place:sigurd-s-pub",
       "town": {
        "en": "Basile",
        "es": "Basile",
        "pt": "Basile"
       },
+      "townRef": "place:basile",
       "underground": false
      },
      "spoiler": false,
@@ -73888,15 +74316,17 @@
      "link": "https://map.opengea.tech/#2.AgA9hgIGAQEBAQEAANARVI-hQAABVZ1ZGg",
      "place": {
       "near": {
-       "en": "Blacksmith Brean",
-       "es": "Herrero Brean",
-       "pt": "Ferreiro Brean"
+       "en": "Nordha Market & Center",
+       "es": "Mercado y Centro de Nordha",
+       "pt": "Mercado e Centro de Nordha"
       },
+      "ref": "place:nordha",
       "town": {
        "en": "Nordha",
        "es": "Nordha",
        "pt": "Nordha"
       },
+      "townRef": "place:nordha",
       "underground": false
      },
      "spoiler": false,
@@ -74027,15 +74457,17 @@
      "link": "https://map.opengea.tech/#2.AgCCAesCBgESAQEBAADQgQYnGLAuEEBAVUdXBw",
      "place": {
       "near": {
-       "en": "Garadum, City of Gems",
-       "es": "Garadum, Ciudad de las Gemas",
-       "pt": "Garadum, Cidade das Gemas"
+       "en": "Tourmaline Shafts",
+       "es": "Pozos de Turmalina",
+       "pt": "Poços de Turmalina"
       },
+      "ref": "place:tourmaline-shafts",
       "town": {
        "en": "Garadum",
        "es": "Garadum",
        "pt": "Garadum"
       },
+      "townRef": "place:garadum",
       "underground": true
      },
      "spoiler": false,
@@ -74440,11 +74872,13 @@
        "es": "Aldea Destruida",
        "pt": "Vila Destruída"
       },
+      "ref": "place:destroyed-village",
       "town": {
        "en": "Nordha",
        "es": "Nordha",
        "pt": "Nordha"
       },
+      "townRef": "place:nordha",
       "underground": false
      },
      "services": {
@@ -74795,11 +75229,13 @@
        "es": "Escuela Rúnica",
        "pt": "Escola Rúnica"
       },
+      "ref": "place:runic-school",
       "town": {
        "en": "Dorosam",
        "es": "Dorosam",
        "pt": "Dorosam"
       },
+      "townRef": "place:dorosam",
       "underground": false
      },
      "spoiler": false,
@@ -75333,11 +75769,13 @@
        "es": "Casa de la Bruja Violet",
        "pt": "Casa da Bruxa Violet"
       },
+      "ref": "place:violet-s-witch-house",
       "town": {
        "en": "Dorosam",
        "es": "Dorosam",
        "pt": "Dorosam"
       },
+      "townRef": "place:dorosam",
       "underground": false
      },
      "restock": 2,
@@ -75796,11 +76234,13 @@
        "es": "Posada de Basile",
        "pt": "Estalagem de Basile"
       },
+      "ref": "place:basile-inn",
       "town": {
        "en": "Basile",
        "es": "Basile",
        "pt": "Basile"
       },
+      "townRef": "place:basile",
       "underground": false
      },
      "restock": 4,
@@ -76308,11 +76748,13 @@
        "es": "Floristería de Lurleen",
        "pt": "Floricultura da Lurleen"
       },
+      "ref": "place:lurleen-s-flower-shop",
       "town": {
        "en": "Basile",
        "es": "Basile",
        "pt": "Basile"
       },
+      "townRef": "place:basile",
       "underground": false
      },
      "restock": 4,
@@ -76422,11 +76864,13 @@
        "es": "Barco Pirata",
        "pt": "Navio Pirata"
       },
+      "ref": "place:pirate-ship",
       "town": {
        "en": "East Nordha",
        "es": "Nordha Este",
        "pt": "Nordha Oriental"
       },
+      "townRef": "place:east-nordha",
       "underground": true
      },
      "services": {
@@ -76440,6 +76884,7 @@
          "es": "Dorosam",
          "pt": "Dorosam"
         },
+        "townRef": "place:dorosam",
         "underground": false
        }
       }
@@ -76788,11 +77233,13 @@
        "es": "Caída del Yate",
        "pt": "Queda do Iate"
       },
+      "ref": "place:yacht-s-portfall",
       "town": {
        "en": "Garadum",
        "es": "Garadum",
        "pt": "Garadum"
       },
+      "townRef": "place:garadum",
       "underground": false
      },
      "restock": 8,
@@ -76872,11 +77319,13 @@
          "es": "Aldea El Chad",
          "pt": "Vila El Chad"
         },
+        "ref": "place:el-chad-village",
         "town": {
          "en": "Plains Cathedral",
          "es": "Catedral de la Llanura",
          "pt": "Catedral da Planície"
         },
+        "townRef": "place:plains-cathedral",
         "underground": false
        }
       }
@@ -77381,11 +77830,13 @@
        "es": "Cementerio de Yordin",
        "pt": "Cemitério de Yordin"
       },
+      "ref": "place:yordin-s-cemetery",
       "town": {
        "en": "Plains Cathedral",
        "es": "Catedral de la Llanura",
        "pt": "Catedral da Planície"
       },
+      "townRef": "place:plains-cathedral",
       "underground": false
      },
      "spoiler": false,
@@ -77895,11 +78346,13 @@
        "es": "Mercado de Basile",
        "pt": "Mercado de Basile"
       },
+      "ref": "place:basile-s-market",
       "town": {
        "en": "Basile",
        "es": "Basile",
        "pt": "Basile"
       },
+      "townRef": "place:basile",
       "underground": false
      },
      "restock": 4,
@@ -78394,11 +78847,13 @@
        "es": "Cámara del Rey",
        "pt": "Câmara do Rei"
       },
+      "ref": "place:king-s-chamber",
       "town": {
        "en": "Basile",
        "es": "Basile",
        "pt": "Basile"
       },
+      "townRef": "place:basile",
       "underground": false
      },
      "services": {
@@ -78411,11 +78866,13 @@
          "es": "Cámara del Rey",
          "pt": "Câmara do Rei"
         },
+        "ref": "place:king-s-chamber",
         "town": {
          "en": "Basile",
          "es": "Basile",
          "pt": "Basile"
         },
+        "townRef": "place:basile",
         "underground": false
        }
       }
@@ -78491,11 +78948,13 @@
        "es": "Gemas y Brillantes de Nebil",
        "pt": "Gemas e Brilhantes de Nebil"
       },
+      "ref": "place:nebil-s-gems-shinies",
       "town": {
        "en": "Garadum",
        "es": "Garadum",
        "pt": "Garadum"
       },
+      "townRef": "place:garadum",
       "underground": true
      },
      "spoiler": true,
@@ -78515,11 +78974,13 @@
        "es": "Minas de Cuarzo",
        "pt": "Minas de Quartzo"
       },
+      "ref": "place:quartz-mines",
       "town": {
        "en": "Garadum",
        "es": "Garadum",
        "pt": "Garadum"
       },
+      "townRef": "place:garadum",
       "underground": true
      },
      "spoiler": true,
@@ -78535,15 +78996,17 @@
      "link": "https://map.opengea.tech/#2.AgB31QMGARQBAQEAANCBCndXPRBQkFU3V2cG",
      "place": {
       "near": {
-       "en": "Nebil's Gems & Shinies",
-       "es": "Gemas y Brillantes de Nebil",
-       "pt": "Gemas e Brilhantes de Nebil"
+       "en": "Garadum's Arena",
+       "es": "Arena de Garadum",
+       "pt": "Arena de Garadum"
       },
+      "ref": "place:garadum-s-arena",
       "town": {
        "en": "Garadum",
        "es": "Garadum",
        "pt": "Garadum"
       },
+      "townRef": "place:garadum",
       "underground": true
      },
      "spoiler": true,
@@ -78563,11 +79026,13 @@
        "es": "Caída del Yate",
        "pt": "Queda do Iate"
       },
+      "ref": "place:yacht-s-portfall",
       "town": {
        "en": "Garadum",
        "es": "Garadum",
        "pt": "Garadum"
       },
+      "townRef": "place:garadum",
       "underground": true
      },
      "spoiler": true,
@@ -79269,11 +79734,13 @@
        "es": "Torre Oeste",
        "pt": "Torre Oeste"
       },
+      "ref": "place:basile-west-tower",
       "town": {
        "en": "Basile west tower",
        "es": "Torre Oeste de Basile",
        "pt": "Torre oeste de Basile"
       },
+      "townRef": "place:basile-west-tower",
       "underground": false
      },
      "services": {
@@ -79285,11 +79752,13 @@
          "es": "La Caravana",
          "pt": "A Caravana"
         },
+        "ref": "place:the-caravan",
         "town": {
          "en": "Plains Cathedral",
          "es": "Catedral de la Llanura",
          "pt": "Catedral da Planície"
         },
+        "townRef": "place:plains-cathedral",
         "underground": false
        }
       }
@@ -79352,11 +79821,13 @@
        "es": "La Caravana",
        "pt": "A Caravana"
       },
+      "ref": "place:the-caravan",
       "town": {
        "en": "Plains Cathedral",
        "es": "Catedral de la Llanura",
        "pt": "Catedral da Planície"
       },
+      "townRef": "place:plains-cathedral",
       "underground": false
      },
      "restock": 4,
@@ -79420,11 +79891,13 @@
          "es": "Torre Oeste",
          "pt": "Torre Oeste"
         },
+        "ref": "place:basile-west-tower",
         "town": {
          "en": "Basile west tower",
          "es": "Torre Oeste de Basile",
          "pt": "Torre oeste de Basile"
         },
+        "townRef": "place:basile-west-tower",
         "underground": false
        }
       }
@@ -79834,16 +80307,13 @@
      ],
      "link": "https://map.opengea.tech/#2.AgB44AQGAQgBAQEAANBBweCBEwQMaL2VAQ",
      "place": {
-      "near": {
-       "en": "The Citadel",
-       "es": "La Ciudadela",
-       "pt": "A Cidadela"
-      },
+      "near": null,
       "town": {
        "en": "Nordha",
        "es": "Nordha",
        "pt": "Nordha"
       },
+      "townRef": "place:nordha",
       "underground": true
      },
      "services": {
@@ -79855,11 +80325,13 @@
          "es": "La Ciudadela",
          "pt": "A Cidadela"
         },
+        "ref": "place:the-citadel",
         "town": {
          "en": "Nordha",
          "es": "Nordha",
          "pt": "Nordha"
         },
+        "townRef": "place:nordha",
         "underground": false
        }
       }
@@ -80224,15 +80696,17 @@
      "link": "https://map.opengea.tech/#2.AgA9hgIGAQsBAQEAANBBRPUYCgQQaL3JpQE",
      "place": {
       "near": {
-       "en": "Blacksmith Brean",
-       "es": "Herrero Brean",
-       "pt": "Ferreiro Brean"
+       "en": "Nordha Market & Center",
+       "es": "Mercado y Centro de Nordha",
+       "pt": "Mercado e Centro de Nordha"
       },
+      "ref": "place:nordha",
       "town": {
        "en": "Nordha",
        "es": "Nordha",
        "pt": "Nordha"
       },
+      "townRef": "place:nordha",
       "underground": false
      },
      "spoiler": false,

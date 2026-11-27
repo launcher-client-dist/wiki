@@ -268,11 +268,13 @@
        "es": "Puente Real",
        "pt": "Ponte Real"
       },
+      "ref": "place:royal-bridge",
       "town": {
        "en": "Dorosam",
        "es": "Dorosam",
        "pt": "Dorosam"
       },
+      "townRef": "place:dorosam",
       "underground": false
      }
     }
@@ -1177,11 +1179,13 @@
        "es": "Casa de Myrtle",
        "pt": "Casa de Myrtle"
       },
+      "ref": "place:myrtle-s-house",
       "town": {
        "en": "Dorosam",
        "es": "Dorosam",
        "pt": "Dorosam"
       },
+      "townRef": "place:dorosam",
       "underground": false
      }
     }
@@ -1944,11 +1948,13 @@
        "es": "La Ciudadela",
        "pt": "A Cidadela"
       },
+      "ref": "place:the-citadel",
       "town": {
        "en": "Nordha",
        "es": "Nordha",
        "pt": "Nordha"
       },
+      "townRef": "place:nordha",
       "underground": false
      }
     }
@@ -2603,11 +2609,13 @@
        "es": "Minas de Nordha Este",
        "pt": "Minas de Nordha Oriental"
       },
+      "ref": "place:east-nordha-mines",
       "town": {
        "en": "East Nordha",
        "es": "Nordha Este",
        "pt": "Nordha Oriental"
       },
+      "townRef": "place:east-nordha",
       "underground": false
      }
     }
@@ -6110,6 +6118,838 @@
   },
   {
    "name": {
+    "en": "Abandoned Mine North",
+    "es": "Mina Abandonada Norte",
+    "pt": "Mina Abandonada Norte"
+   },
+   "ref": "place:abandoned-mine-north",
+   "slug": {
+    "en": "abandoned-mine-north",
+    "es": "mina-abandonada-norte",
+    "pt": "mina-abandonada-norte"
+   }
+  },
+  {
+   "name": {
+    "en": "Abandoned Mine South",
+    "es": "Mina Abandonada Sur",
+    "pt": "Mina Abandonada Sul"
+   },
+   "ref": "place:abandoned-mine-south",
+   "slug": {
+    "en": "abandoned-mine-south",
+    "es": "mina-abandonada-sur",
+    "pt": "mina-abandonada-sul"
+   }
+  },
+  {
+   "name": {
+    "en": "Abandoned Village",
+    "es": "Aldea Abandonada",
+    "pt": "Vila Abandonada"
+   },
+   "ref": "place:abandoned-village",
+   "slug": {
+    "en": "abandoned-village",
+    "es": "aldea-abandonada",
+    "pt": "vila-abandonada"
+   }
+  },
+  {
+   "name": {
+    "en": "Amphitere Peak",
+    "es": "Pico Amphitere",
+    "pt": "Pico Amphitere"
+   },
+   "ref": "place:amphitere-peak",
+   "slug": {
+    "en": "amphitere-peak",
+    "es": "pico-amphitere",
+    "pt": "pico-amphitere"
+   }
+  },
+  {
+   "name": {
+    "en": "Ancient Tombs",
+    "es": "Tumbas Antiguas",
+    "pt": "Tumbas Antigas"
+   },
+   "ref": "place:ancient-tombs",
+   "slug": {
+    "en": "ancient-tombs",
+    "es": "tumbas-antiguas",
+    "pt": "tumbas-antigas"
+   }
+  },
+  {
+   "name": {
+    "en": "Ancient Tree",
+    "es": "Árbol Antiguo",
+    "pt": "Árvore Antiga"
+   },
+   "ref": "place:ancient-tree",
+   "slug": {
+    "en": "ancient-tree",
+    "es": "arbol-antiguo",
+    "pt": "arvore-antiga"
+   }
+  },
+  {
+   "name": {
+    "en": "Bandit Outpost",
+    "es": "Puesto Bandido",
+    "pt": "Posto Bandido"
+   },
+   "ref": "place:bandit-outpost",
+   "slug": {
+    "en": "bandit-outpost",
+    "es": "puesto-bandido",
+    "pt": "posto-bandido"
+   }
+  },
+  {
+   "name": {
+    "en": "Bandit Port",
+    "es": "Puerto de Bandidos",
+    "pt": "Porto dos Bandidos"
+   },
+   "ref": "place:bandit-port",
+   "slug": {
+    "en": "bandit-port",
+    "es": "puerto-de-bandidos",
+    "pt": "porto-dos-bandidos"
+   }
+  },
+  {
+   "name": {
+    "en": "Basile",
+    "es": "Basile",
+    "pt": "Basile"
+   },
+   "ref": "place:basile",
+   "slug": {
+    "en": "basile",
+    "es": "basile",
+    "pt": "basile"
+   }
+  },
+  {
+   "name": {
+    "en": "Basile Castle",
+    "es": "Castillo de Basile",
+    "pt": "Castelo de Basile"
+   },
+   "ref": "place:basile-castle",
+   "slug": {
+    "en": "basile-castle",
+    "es": "castillo-de-basile",
+    "pt": "castelo-de-basile"
+   }
+  },
+  {
+   "name": {
+    "en": "Basile Inn",
+    "es": "Posada de Basile",
+    "pt": "Estalagem de Basile"
+   },
+   "ref": "place:basile-inn",
+   "slug": {
+    "en": "basile-inn",
+    "es": "posada-de-basile",
+    "pt": "estalagem-de-basile"
+   }
+  },
+  {
+   "name": {
+    "en": "Basile's Market",
+    "es": "Mercado de Basile",
+    "pt": "Mercado de Basile"
+   },
+   "ref": "place:basile-s-market",
+   "slug": {
+    "en": "basile-s-market",
+    "es": "mercado-de-basile",
+    "pt": "mercado-de-basile"
+   }
+  },
+  {
+   "name": {
+    "en": "Basile's Temple",
+    "es": "Templo de Basile",
+    "pt": "Templo de Basile"
+   },
+   "ref": "place:basile-s-temple",
+   "slug": {
+    "en": "basile-s-temple",
+    "es": "templo-de-basile",
+    "pt": "templo-de-basile"
+   }
+  },
+  {
+   "name": {
+    "en": "Basile west tower",
+    "es": "Torre Oeste de Basile",
+    "pt": "Torre oeste de Basile"
+   },
+   "ref": "place:basile-west-tower",
+   "slug": {
+    "en": "basile-west-tower",
+    "es": "torre-oeste-de-basile",
+    "pt": "torre-oeste-de-basile"
+   }
+  },
+  {
+   "name": {
+    "en": "Blue Mage Home",
+    "es": "Casa del Mago Azul",
+    "pt": "Casa do Mago Azul"
+   },
+   "ref": "place:blue-mage-home",
+   "slug": {
+    "en": "blue-mage-home",
+    "es": "casa-del-mago-azul",
+    "pt": "casa-do-mago-azul"
+   }
+  },
+  {
+   "name": {
+    "en": "Blue Tunnel Entrance",
+    "es": "Entrada del Túnel Azul",
+    "pt": "Entrada do Túnel Azul"
+   },
+   "ref": "place:blue-tunnel-entrance",
+   "slug": {
+    "en": "blue-tunnel-entrance",
+    "es": "entrada-del-tunel-azul",
+    "pt": "entrada-do-tunel-azul"
+   }
+  },
+  {
+   "name": {
+    "en": "Blue Tunnel Exit",
+    "es": "Salida del Túnel Azul",
+    "pt": "Saída do Túnel Azul"
+   },
+   "ref": "place:blue-tunnel-exit",
+   "slug": {
+    "en": "blue-tunnel-exit",
+    "es": "salida-del-tunel-azul",
+    "pt": "saida-do-tunel-azul"
+   }
+  },
+  {
+   "name": {
+    "en": "Boiler Room",
+    "es": "Sala de Calderas",
+    "pt": "Sala das Caldeiras"
+   },
+   "ref": "place:boiler-room",
+   "slug": {
+    "en": "boiler-room",
+    "es": "sala-de-calderas",
+    "pt": "sala-das-caldeiras"
+   }
+  },
+  {
+   "name": {
+    "en": "Bone Palace",
+    "es": "Palacio de Huesos",
+    "pt": "Palácio de Ossos"
+   },
+   "ref": "place:bone-palace",
+   "slug": {
+    "en": "bone-palace",
+    "es": "palacio-de-huesos",
+    "pt": "palacio-de-ossos"
+   }
+  },
+  {
+   "name": {
+    "en": "Botanist's Guild",
+    "es": "Gremio de Botánicos",
+    "pt": "Guilda dos Botânicos"
+   },
+   "ref": "place:botanist-s-guild",
+   "slug": {
+    "en": "botanist-s-guild",
+    "es": "gremio-de-botanicos",
+    "pt": "guilda-dos-botanicos"
+   }
+  },
+  {
+   "name": {
+    "en": "Branor's Farm",
+    "es": "Granja de Branor",
+    "pt": "Fazenda de Branor"
+   },
+   "ref": "place:branor-s-farm",
+   "slug": {
+    "en": "branor-s-farm",
+    "es": "granja-de-branor",
+    "pt": "fazenda-de-branor"
+   }
+  },
+  {
+   "name": {
+    "en": "Clothier Square",
+    "es": "Plaza de los Sastres",
+    "pt": "Praça dos Alfaiates"
+   },
+   "ref": "place:clothier-square",
+   "slug": {
+    "en": "clothier-square",
+    "es": "plaza-de-los-sastres",
+    "pt": "praca-dos-alfaiates"
+   }
+  },
+  {
+   "name": {
+    "en": "Clovi's Hut",
+    "es": "Cabaña de Clovi",
+    "pt": "Cabana de Clovi"
+   },
+   "ref": "place:clovi-s-hut",
+   "slug": {
+    "en": "clovi-s-hut",
+    "es": "cabana-de-clovi",
+    "pt": "cabana-de-clovi"
+   }
+  },
+  {
+   "name": {
+    "en": "Colman's Kitchen",
+    "es": "Cocina de Colman",
+    "pt": "Cozinha de Colman"
+   },
+   "ref": "place:colman-s-kitchen",
+   "slug": {
+    "en": "colman-s-kitchen",
+    "es": "cocina-de-colman",
+    "pt": "cozinha-de-colman"
+   }
+  },
+  {
+   "name": {
+    "en": "Crater Waypath",
+    "es": "Sendero del Cráter",
+    "pt": "Caminho da Cratera"
+   },
+   "ref": "place:crater-waypath",
+   "slug": {
+    "en": "crater-waypath",
+    "es": "sendero-del-crater",
+    "pt": "caminho-da-cratera"
+   }
+  },
+  {
+   "name": {
+    "en": "Cursed Straight",
+    "es": "Estrecho Maldito",
+    "pt": "Estreito Amaldiçoado"
+   },
+   "ref": "place:cursed-straight",
+   "slug": {
+    "en": "cursed-straight",
+    "es": "estrecho-maldito",
+    "pt": "estreito-amaldicoado"
+   }
+  },
+  {
+   "name": {
+    "en": "Death Valley",
+    "es": "Valle de la Muerte",
+    "pt": "Vale da Morte"
+   },
+   "ref": "place:death-valley",
+   "slug": {
+    "en": "death-valley",
+    "es": "valle-de-la-muerte",
+    "pt": "vale-da-morte"
+   }
+  },
+  {
+   "name": {
+    "en": "Desecrated Church",
+    "es": "Iglesia Profanada",
+    "pt": "Igreja Profanada"
+   },
+   "ref": "place:desecrated-church",
+   "slug": {
+    "en": "desecrated-church",
+    "es": "iglesia-profanada",
+    "pt": "igreja-profanada"
+   }
+  },
+  {
+   "name": {
+    "en": "Destroyed Outpost",
+    "es": "Puesto Destruido",
+    "pt": "Posto Destruído"
+   },
+   "ref": "place:destroyed-outpost",
+   "slug": {
+    "en": "destroyed-outpost",
+    "es": "puesto-destruido",
+    "pt": "posto-destruido"
+   }
+  },
+  {
+   "name": {
+    "en": "Destroyed Village",
+    "es": "Aldea Destruida",
+    "pt": "Vila Destruída"
+   },
+   "ref": "place:destroyed-village",
+   "slug": {
+    "en": "destroyed-village",
+    "es": "aldea-destruida",
+    "pt": "vila-destruida"
+   }
+  },
+  {
+   "name": {
+    "en": "Dionel Pub",
+    "es": "Taberna Dionel",
+    "pt": "Taverna Dionel"
+   },
+   "ref": "place:dionel-pub",
+   "slug": {
+    "en": "dionel-pub",
+    "es": "taberna-dionel",
+    "pt": "taverna-dionel"
+   }
+  },
+  {
+   "name": {
+    "en": "Dorosam",
+    "es": "Dorosam",
+    "pt": "Dorosam"
+   },
+   "ref": "place:dorosam",
+   "slug": {
+    "en": "dorosam",
+    "es": "dorosam",
+    "pt": "dorosam"
+   }
+  },
+  {
+   "name": {
+    "en": "Dorosam Hidden Passage",
+    "es": "Pasaje Oculto de Dorosam",
+    "pt": "Passagem Oculta de Dorosam"
+   },
+   "ref": "place:dorosam-hidden-passage",
+   "slug": {
+    "en": "dorosam-hidden-passage",
+    "es": "pasaje-oculto-de-dorosam",
+    "pt": "passagem-oculta-de-dorosam"
+   }
+  },
+  {
+   "name": {
+    "en": "Dorosam Port",
+    "es": "Puerto de Dorosam",
+    "pt": "Porto de Dorosam"
+   },
+   "ref": "place:dorosam-port",
+   "slug": {
+    "en": "dorosam-port",
+    "es": "puerto-de-dorosam",
+    "pt": "porto-de-dorosam"
+   }
+  },
+  {
+   "name": {
+    "en": "Dorosam's Temple",
+    "es": "Templo de Dorosam",
+    "pt": "Templo de Dorosam"
+   },
+   "ref": "place:dorosam-s-temple",
+   "slug": {
+    "en": "dorosam-s-temple",
+    "es": "templo-de-dorosam",
+    "pt": "templo-de-dorosam"
+   }
+  },
+  {
+   "name": {
+    "en": "Dorosam, the Swamp",
+    "es": "Dorosam, el Pantano",
+    "pt": "Dorosam, o Pântano"
+   },
+   "ref": "place:dorosam-the-swamp",
+   "slug": {
+    "en": "dorosam-the-swamp",
+    "es": "dorosam-el-pantano",
+    "pt": "dorosam-o-pantano"
+   }
+  },
+  {
+   "name": {
+    "en": "Draughtwood",
+    "es": "Draughtwood",
+    "pt": "Draughtwood"
+   },
+   "ref": "place:draughtwood",
+   "slug": {
+    "en": "draughtwood",
+    "es": "draughtwood",
+    "pt": "draughtwood"
+   }
+  },
+  {
+   "name": {
+    "en": "East Nordha",
+    "es": "Nordha Este",
+    "pt": "Nordha Oriental"
+   },
+   "ref": "place:east-nordha",
+   "slug": {
+    "en": "east-nordha",
+    "es": "nordha-este",
+    "pt": "nordha-oriental"
+   }
+  },
+  {
+   "name": {
+    "en": "East Nordha Mines",
+    "es": "Minas de Nordha Este",
+    "pt": "Minas de Nordha Oriental"
+   },
+   "ref": "place:east-nordha-mines",
+   "slug": {
+    "en": "east-nordha-mines",
+    "es": "minas-de-nordha-este",
+    "pt": "minas-de-nordha-oriental"
+   }
+  },
+  {
+   "name": {
+    "en": "East Nordha Port",
+    "es": "Puerto de Nordha Este",
+    "pt": "Porto de Nordha Oriental"
+   },
+   "ref": "place:east-nordha-port",
+   "slug": {
+    "en": "east-nordha-port",
+    "es": "puerto-de-nordha-este",
+    "pt": "porto-de-nordha-oriental"
+   }
+  },
+  {
+   "name": {
+    "en": "East Tower",
+    "es": "Torre Oriental",
+    "pt": "Torre Leste"
+   },
+   "ref": "place:east-tower",
+   "slug": {
+    "en": "east-tower",
+    "es": "torre-oriental",
+    "pt": "torre-leste"
+   }
+  },
+  {
+   "name": {
+    "en": "Eastern Gate",
+    "es": "Puerta Oriental",
+    "pt": "Portão Leste"
+   },
+   "ref": "place:eastern-gate",
+   "slug": {
+    "en": "eastern-gate",
+    "es": "puerta-oriental",
+    "pt": "portao-leste"
+   }
+  },
+  {
+   "name": {
+    "en": "Edmund's Cottage",
+    "es": "Cabaña de Edmund",
+    "pt": "Chalé de Edmund"
+   },
+   "ref": "place:edmund-s-cottage",
+   "slug": {
+    "en": "edmund-s-cottage",
+    "es": "cabana-de-edmund",
+    "pt": "chale-de-edmund"
+   }
+  },
+  {
+   "name": {
+    "en": "Egemen's Forge",
+    "es": "Forja de Egemen",
+    "pt": "Forja de Egemen"
+   },
+   "ref": "place:egemen-s-forge",
+   "slug": {
+    "en": "egemen-s-forge",
+    "es": "forja-de-egemen",
+    "pt": "forja-de-egemen"
+   }
+  },
+  {
+   "name": {
+    "en": "El Chad Village",
+    "es": "Aldea El Chad",
+    "pt": "Vila El Chad"
+   },
+   "ref": "place:el-chad-village",
+   "slug": {
+    "en": "el-chad-village",
+    "es": "aldea-el-chad",
+    "pt": "vila-el-chad"
+   }
+  },
+  {
+   "name": {
+    "en": "Elvenhall",
+    "es": "Salón Élfico",
+    "pt": "Salão Élfico"
+   },
+   "ref": "place:elvenhall",
+   "slug": {
+    "en": "elvenhall",
+    "es": "salon-elfico",
+    "pt": "salao-elfico"
+   }
+  },
+  {
+   "name": {
+    "en": "Eofor's Hut",
+    "es": "Cabaña de Eofor",
+    "pt": "Cabana de Eofor"
+   },
+   "ref": "place:eofor-s-hut",
+   "slug": {
+    "en": "eofor-s-hut",
+    "es": "cabana-de-eofor",
+    "pt": "cabana-de-eofor"
+   }
+  },
+  {
+   "name": {
+    "en": "Ferag Courier Stable",
+    "es": "Establo de Mensajería Ferag",
+    "pt": "Estábulo de Correio Ferag"
+   },
+   "ref": "place:ferag-courier-stable",
+   "slug": {
+    "en": "ferag-courier-stable",
+    "es": "establo-de-mensajeria-ferag",
+    "pt": "estabulo-de-correio-ferag"
+   }
+  },
+  {
+   "name": {
+    "en": "Fergus' Longhouse",
+    "es": "Casa Comunal de Fergus",
+    "pt": "Casa Comunal de Fergus"
+   },
+   "ref": "place:fergus-longhouse",
+   "slug": {
+    "en": "fergus-longhouse",
+    "es": "casa-comunal-de-fergus",
+    "pt": "casa-comunal-de-fergus"
+   }
+  },
+  {
+   "name": {
+    "en": "Floating Castle",
+    "es": "Castillo Flotante",
+    "pt": "Castelo Flutuante"
+   },
+   "ref": "place:floating-castle",
+   "slug": {
+    "en": "floating-castle",
+    "es": "castillo-flotante",
+    "pt": "castelo-flutuante"
+   }
+  },
+  {
+   "name": {
+    "en": "Flower Spire",
+    "es": "Aguja de Flores",
+    "pt": "Torre das Flores"
+   },
+   "ref": "place:flower-spire",
+   "slug": {
+    "en": "flower-spire",
+    "es": "aguja-de-flores",
+    "pt": "torre-das-flores"
+   }
+  },
+  {
+   "name": {
+    "en": "Forest Temple",
+    "es": "Templo del Bosque",
+    "pt": "Templo da Floresta"
+   },
+   "ref": "place:forest-temple",
+   "slug": {
+    "en": "forest-temple",
+    "es": "templo-del-bosque",
+    "pt": "templo-da-floresta"
+   }
+  },
+  {
+   "name": {
+    "en": "Forgotten Caves",
+    "es": "Cuevas Olvidadas",
+    "pt": "Cavernas Esquecidas"
+   },
+   "ref": "place:forgotten-caves",
+   "slug": {
+    "en": "forgotten-caves",
+    "es": "cuevas-olvidadas",
+    "pt": "cavernas-esquecidas"
+   }
+  },
+  {
+   "name": {
+    "en": "Forsaken Village",
+    "es": "Villa Abandonada",
+    "pt": "Vila Abandonada"
+   },
+   "ref": "place:forsaken-village",
+   "slug": {
+    "en": "forsaken-village",
+    "es": "villa-abandonada",
+    "pt": "vila-abandonada-forsaken-village"
+   }
+  },
+  {
+   "name": {
+    "en": "Frances' Farms",
+    "es": "Granjas de Frances",
+    "pt": "Fazendas de Frances"
+   },
+   "ref": "place:frances-farms",
+   "slug": {
+    "en": "frances-farms",
+    "es": "granjas-de-frances",
+    "pt": "fazendas-de-frances"
+   }
+  },
+  {
+   "name": {
+    "en": "Garadum",
+    "es": "Garadum",
+    "pt": "Garadum"
+   },
+   "ref": "place:garadum",
+   "slug": {
+    "en": "garadum",
+    "es": "garadum",
+    "pt": "garadum"
+   }
+  },
+  {
+   "name": {
+    "en": "Garadum, City of Gems",
+    "es": "Garadum, Ciudad de las Gemas",
+    "pt": "Garadum, Cidade das Gemas"
+   },
+   "ref": "place:garadum-city-of-gems",
+   "slug": {
+    "en": "garadum-city-of-gems",
+    "es": "garadum-ciudad-de-las-gemas",
+    "pt": "garadum-cidade-das-gemas"
+   }
+  },
+  {
+   "name": {
+    "en": "Garadum's Arena",
+    "es": "Arena de Garadum",
+    "pt": "Arena de Garadum"
+   },
+   "ref": "place:garadum-s-arena",
+   "slug": {
+    "en": "garadum-s-arena",
+    "es": "arena-de-garadum",
+    "pt": "arena-de-garadum"
+   }
+  },
+  {
+   "name": {
+    "en": "Ghost Town",
+    "es": "Ciudad Fantasma",
+    "pt": "Cidade Fantasma"
+   },
+   "ref": "place:ghost-town",
+   "slug": {
+    "en": "ghost-town",
+    "es": "ciudad-fantasma",
+    "pt": "cidade-fantasma"
+   }
+  },
+  {
+   "name": {
+    "en": "Goblin Hills",
+    "es": "Colinas de los Trasgos",
+    "pt": "Colinas dos Goblins"
+   },
+   "ref": "place:goblin-hills",
+   "slug": {
+    "en": "goblin-hills",
+    "es": "colinas-de-los-trasgos",
+    "pt": "colinas-dos-goblins"
+   }
+  },
+  {
+   "name": {
+    "en": "Hoder's Tool Shop",
+    "es": "Tienda de Herramientas de Hoder",
+    "pt": "Loja de Ferramentas de Hoder"
+   },
+   "ref": "place:hoder-s-tool-shop",
+   "slug": {
+    "en": "hoder-s-tool-shop",
+    "es": "tienda-de-herramientas-de-hoder",
+    "pt": "loja-de-ferramentas-de-hoder"
+   }
+  },
+  {
+   "name": {
+    "en": "Ice Spiral",
+    "es": "Espiral de Hielo",
+    "pt": "Espiral de Gelo"
+   },
+   "ref": "place:ice-spiral",
+   "slug": {
+    "en": "ice-spiral",
+    "es": "espiral-de-hielo",
+    "pt": "espiral-de-gelo"
+   }
+  },
+  {
+   "name": {
+    "en": "Jebidiah's Hut",
+    "es": "Cabaña de Jebidiah",
+    "pt": "Cabana de Jebidiah"
+   },
+   "ref": "place:jebidiah-s-hut",
+   "slug": {
+    "en": "jebidiah-s-hut",
+    "es": "cabana-de-jebidiah",
+    "pt": "cabana-de-jebidiah"
+   }
+  },
+  {
+   "name": {
+    "en": "King's Chamber",
+    "es": "Cámara del Rey",
+    "pt": "Câmara do Rei"
+   },
+   "ref": "place:king-s-chamber",
+   "slug": {
+    "en": "king-s-chamber",
+    "es": "camara-del-rey",
+    "pt": "camara-do-rei"
+   }
+  },
+  {
+   "name": {
     "en": "Lever near East Nordha Mines",
     "es": "Palanca cerca de Minas de Nordha Este",
     "pt": "Alavanca perto de Minas de Nordha Oriental"
@@ -6160,6 +7000,994 @@
     "en": "A lever in Nordha.",
     "es": "Una palanca en Nordha.",
     "pt": "Uma alavanca em Nordha."
+   }
+  },
+  {
+   "name": {
+    "en": "Loke's Home",
+    "es": "Casa de Loke",
+    "pt": "Casa de Loke"
+   },
+   "ref": "place:loke-s-home",
+   "slug": {
+    "en": "loke-s-home",
+    "es": "casa-de-loke",
+    "pt": "casa-de-loke"
+   }
+  },
+  {
+   "name": {
+    "en": "Lurleen's Flower Shop",
+    "es": "Floristería de Lurleen",
+    "pt": "Floricultura da Lurleen"
+   },
+   "ref": "place:lurleen-s-flower-shop",
+   "slug": {
+    "en": "lurleen-s-flower-shop",
+    "es": "floristeria-de-lurleen",
+    "pt": "floricultura-da-lurleen"
+   }
+  },
+  {
+   "name": {
+    "en": "Main Square",
+    "es": "Plaza Principal",
+    "pt": "Praça Principal"
+   },
+   "ref": "place:main-square",
+   "slug": {
+    "en": "main-square",
+    "es": "plaza-principal",
+    "pt": "praca-principal"
+   }
+  },
+  {
+   "name": {
+    "en": "Mary And Sal's",
+    "es": "Mary y Sal",
+    "pt": "Mary e Sal"
+   },
+   "ref": "place:mary-and-sal-s",
+   "slug": {
+    "en": "mary-and-sal-s",
+    "es": "mary-y-sal",
+    "pt": "mary-e-sal"
+   }
+  },
+  {
+   "name": {
+    "en": "Merchant Square",
+    "es": "Plaza de los Mercaderes",
+    "pt": "Praça dos Mercadores"
+   },
+   "ref": "place:merchant-square",
+   "slug": {
+    "en": "merchant-square",
+    "es": "plaza-de-los-mercaderes",
+    "pt": "praca-dos-mercadores"
+   }
+  },
+  {
+   "name": {
+    "en": "Morrigan's Boutique",
+    "es": "Boutique de Morrigan",
+    "pt": "Boutique de Morrigan"
+   },
+   "ref": "place:morrigan-s-boutique",
+   "slug": {
+    "en": "morrigan-s-boutique",
+    "es": "boutique-de-morrigan",
+    "pt": "boutique-de-morrigan"
+   }
+  },
+  {
+   "name": {
+    "en": "Mosquito Marches",
+    "es": "Pantanos de los Mosquitos",
+    "pt": "Pântanos dos Mosquitos"
+   },
+   "ref": "place:mosquito-marches",
+   "slug": {
+    "en": "mosquito-marches",
+    "es": "pantanos-de-los-mosquitos",
+    "pt": "pantanos-dos-mosquitos"
+   }
+  },
+  {
+   "name": {
+    "en": "Mother Shrine",
+    "es": "Santuario de la Madre",
+    "pt": "Santuário da Mãe"
+   },
+   "ref": "place:mother-shrine",
+   "slug": {
+    "en": "mother-shrine",
+    "es": "santuario-de-la-madre",
+    "pt": "santuario-da-mae"
+   }
+  },
+  {
+   "name": {
+    "en": "Mushroom Fields",
+    "es": "Campos de Hongos",
+    "pt": "Campos de Cogumelos"
+   },
+   "ref": "place:mushroom-fields",
+   "slug": {
+    "en": "mushroom-fields",
+    "es": "campos-de-hongos",
+    "pt": "campos-de-cogumelos"
+   }
+  },
+  {
+   "name": {
+    "en": "Myrtle's House",
+    "es": "Casa de Myrtle",
+    "pt": "Casa de Myrtle"
+   },
+   "ref": "place:myrtle-s-house",
+   "slug": {
+    "en": "myrtle-s-house",
+    "es": "casa-de-myrtle",
+    "pt": "casa-de-myrtle"
+   }
+  },
+  {
+   "name": {
+    "en": "Nebil's Gems & Shinies",
+    "es": "Gemas y Brillantes de Nebil",
+    "pt": "Gemas e Brilhantes de Nebil"
+   },
+   "ref": "place:nebil-s-gems-shinies",
+   "slug": {
+    "en": "nebil-s-gems-shinies",
+    "es": "gemas-y-brillantes-de-nebil",
+    "pt": "gemas-e-brilhantes-de-nebil"
+   }
+  },
+  {
+   "name": {
+    "en": "Nordha",
+    "es": "Nordha",
+    "pt": "Nordha"
+   },
+   "ref": "place:nordha",
+   "slug": {
+    "en": "nordha",
+    "es": "nordha",
+    "pt": "nordha"
+   }
+  },
+  {
+   "name": {
+    "en": "Nordha Depot",
+    "es": "Depósito de Nordha",
+    "pt": "Depósito de Nordha"
+   },
+   "ref": "place:nordha-depot",
+   "slug": {
+    "en": "nordha-depot",
+    "es": "deposito-de-nordha",
+    "pt": "deposito-de-nordha"
+   }
+  },
+  {
+   "name": {
+    "en": "Nordha Labirynth",
+    "es": "Laberinto de Nordha",
+    "pt": "Labirinto de Nordha"
+   },
+   "ref": "place:nordha-labirynth",
+   "slug": {
+    "en": "nordha-labirynth",
+    "es": "laberinto-de-nordha",
+    "pt": "labirinto-de-nordha"
+   }
+  },
+  {
+   "name": {
+    "en": "Nordha Mountain Path",
+    "es": "Sendero de la Montaña de Nordha",
+    "pt": "Caminho da Montanha de Nordha"
+   },
+   "ref": "place:nordha-mountain-path",
+   "slug": {
+    "en": "nordha-mountain-path",
+    "es": "sendero-de-la-montana-de-nordha",
+    "pt": "caminho-da-montanha-de-nordha"
+   }
+  },
+  {
+   "name": {
+    "en": "Nordha Outlaws",
+    "es": "Forajidos de Nordha",
+    "pt": "Fora-da-Lei de Nordha"
+   },
+   "ref": "place:nordha-outlaws",
+   "slug": {
+    "en": "nordha-outlaws",
+    "es": "forajidos-de-nordha",
+    "pt": "fora-da-lei-de-nordha"
+   }
+  },
+  {
+   "name": {
+    "en": "Nordha Residency Village",
+    "es": "Villa Residencial de Nordha",
+    "pt": "Vila Residencial de Nordha"
+   },
+   "ref": "place:nordha-residency-village",
+   "slug": {
+    "en": "nordha-residency-village",
+    "es": "villa-residencial-de-nordha",
+    "pt": "vila-residencial-de-nordha"
+   }
+  },
+  {
+   "name": {
+    "en": "North Temple",
+    "es": "Templo Norte",
+    "pt": "Templo Norte"
+   },
+   "ref": "place:north-temple",
+   "slug": {
+    "en": "north-temple",
+    "es": "templo-norte",
+    "pt": "templo-norte"
+   }
+  },
+  {
+   "name": {
+    "en": "Northern Outpost",
+    "es": "Puesto Avanzado del Norte",
+    "pt": "Posto Avançado Norte"
+   },
+   "ref": "place:northern-outpost",
+   "slug": {
+    "en": "northern-outpost",
+    "es": "puesto-avanzado-del-norte",
+    "pt": "posto-avancado-norte"
+   }
+  },
+  {
+   "name": {
+    "en": "Occultists East",
+    "es": "Ocultistas Este",
+    "pt": "Ocultistas Leste"
+   },
+   "ref": "place:occultists-east",
+   "slug": {
+    "en": "occultists-east",
+    "es": "ocultistas-este",
+    "pt": "ocultistas-leste"
+   }
+  },
+  {
+   "name": {
+    "en": "Old Bridge",
+    "es": "Puente Viejo",
+    "pt": "Ponte Antiga"
+   },
+   "ref": "place:old-bridge",
+   "slug": {
+    "en": "old-bridge",
+    "es": "puente-viejo",
+    "pt": "ponte-antiga"
+   }
+  },
+  {
+   "name": {
+    "en": "Old Mines",
+    "es": "Minas Antiguas",
+    "pt": "Minas Antigas"
+   },
+   "ref": "place:old-mines",
+   "slug": {
+    "en": "old-mines",
+    "es": "minas-antiguas",
+    "pt": "minas-antigas"
+   }
+  },
+  {
+   "name": {
+    "en": "Old Village",
+    "es": "Villa Vieja",
+    "pt": "Vila Antiga"
+   },
+   "ref": "place:old-village",
+   "slug": {
+    "en": "old-village",
+    "es": "villa-vieja",
+    "pt": "vila-antiga"
+   }
+  },
+  {
+   "name": {
+    "en": "Orc Camp",
+    "es": "Campamento Orco",
+    "pt": "Acampamento Orc"
+   },
+   "ref": "place:orc-camp",
+   "slug": {
+    "en": "orc-camp",
+    "es": "campamento-orco",
+    "pt": "acampamento-orc"
+   }
+  },
+  {
+   "name": {
+    "en": "Passage to the East",
+    "es": "Pasaje al Este",
+    "pt": "Passagem para o Leste"
+   },
+   "ref": "place:passage-to-the-east",
+   "slug": {
+    "en": "passage-to-the-east",
+    "es": "pasaje-al-este",
+    "pt": "passagem-para-o-leste"
+   }
+  },
+  {
+   "name": {
+    "en": "Pirate Ship",
+    "es": "Barco Pirata",
+    "pt": "Navio Pirata"
+   },
+   "ref": "place:pirate-ship",
+   "slug": {
+    "en": "pirate-ship",
+    "es": "barco-pirata",
+    "pt": "navio-pirata"
+   }
+  },
+  {
+   "name": {
+    "en": "Plains Cathedral",
+    "es": "Catedral de la Llanura",
+    "pt": "Catedral da Planície"
+   },
+   "ref": "place:plains-cathedral",
+   "slug": {
+    "en": "plains-cathedral",
+    "es": "catedral-de-la-llanura",
+    "pt": "catedral-da-planicie"
+   }
+  },
+  {
+   "name": {
+    "en": "Plains Road",
+    "es": "Camino de las Llanuras",
+    "pt": "Estrada das Planícies"
+   },
+   "ref": "place:plains-road",
+   "slug": {
+    "en": "plains-road",
+    "es": "camino-de-las-llanuras",
+    "pt": "estrada-das-planicies"
+   }
+  },
+  {
+   "name": {
+    "en": "Quartz Mines",
+    "es": "Minas de Cuarzo",
+    "pt": "Minas de Quartzo"
+   },
+   "ref": "place:quartz-mines",
+   "slug": {
+    "en": "quartz-mines",
+    "es": "minas-de-cuarzo",
+    "pt": "minas-de-quartzo"
+   }
+  },
+  {
+   "name": {
+    "en": "Rasobar's Ship",
+    "es": "Barco de Rasobar",
+    "pt": "Navio de Rasobar"
+   },
+   "ref": "place:rasobar-s-ship",
+   "slug": {
+    "en": "rasobar-s-ship",
+    "es": "barco-de-rasobar",
+    "pt": "navio-de-rasobar"
+   }
+  },
+  {
+   "name": {
+    "en": "Residency Square",
+    "es": "Plaza de la Residencia",
+    "pt": "Praça da Residência"
+   },
+   "ref": "place:residency-square",
+   "slug": {
+    "en": "residency-square",
+    "es": "plaza-de-la-residencia",
+    "pt": "praca-da-residencia"
+   }
+  },
+  {
+   "name": {
+    "en": "Road To Basile",
+    "es": "Camino a Basile",
+    "pt": "Estrada para Basile"
+   },
+   "ref": "place:road-to-basile",
+   "slug": {
+    "en": "road-to-basile",
+    "es": "camino-a-basile",
+    "pt": "estrada-para-basile"
+   }
+  },
+  {
+   "name": {
+    "en": "Rosel Potion Shop",
+    "es": "Tienda de Pociones Rosel",
+    "pt": "Loja de Poções Rosel"
+   },
+   "ref": "place:rosel-potion-shop",
+   "slug": {
+    "en": "rosel-potion-shop",
+    "es": "tienda-de-pociones-rosel",
+    "pt": "loja-de-pocoes-rosel"
+   }
+  },
+  {
+   "name": {
+    "en": "Rotten Caves",
+    "es": "Cuevas Podridas",
+    "pt": "Cavernas Podres"
+   },
+   "ref": "place:rotten-caves",
+   "slug": {
+    "en": "rotten-caves",
+    "es": "cuevas-podridas",
+    "pt": "cavernas-podres"
+   }
+  },
+  {
+   "name": {
+    "en": "Royal Bridge",
+    "es": "Puente Real",
+    "pt": "Ponte Real"
+   },
+   "ref": "place:royal-bridge",
+   "slug": {
+    "en": "royal-bridge",
+    "es": "puente-real",
+    "pt": "ponte-real"
+   }
+  },
+  {
+   "name": {
+    "en": "Royal Road",
+    "es": "Camino Real",
+    "pt": "Estrada Real"
+   },
+   "ref": "place:royal-road",
+   "slug": {
+    "en": "royal-road",
+    "es": "camino-real",
+    "pt": "estrada-real"
+   }
+  },
+  {
+   "name": {
+    "en": "Runic School",
+    "es": "Escuela Rúnica",
+    "pt": "Escola Rúnica"
+   },
+   "ref": "place:runic-school",
+   "slug": {
+    "en": "runic-school",
+    "es": "escuela-runica",
+    "pt": "escola-runica"
+   }
+  },
+  {
+   "name": {
+    "en": "Sabrina's Hut",
+    "es": "Cabaña de Sabrina",
+    "pt": "Cabana de Sabrina"
+   },
+   "ref": "place:sabrina-s-hut",
+   "slug": {
+    "en": "sabrina-s-hut",
+    "es": "cabana-de-sabrina",
+    "pt": "cabana-de-sabrina"
+   }
+  },
+  {
+   "name": {
+    "en": "Salazar Shop",
+    "es": "Tienda Salazar",
+    "pt": "Loja Salazar"
+   },
+   "ref": "place:salazar-shop",
+   "slug": {
+    "en": "salazar-shop",
+    "es": "tienda-salazar",
+    "pt": "loja-salazar"
+   }
+  },
+  {
+   "name": {
+    "en": "Sentinel's Guild",
+    "es": "Gremio de los Centinelas",
+    "pt": "Guilda dos Sentinelas"
+   },
+   "ref": "place:sentinel-s-guild",
+   "slug": {
+    "en": "sentinel-s-guild",
+    "es": "gremio-de-los-centinelas",
+    "pt": "guilda-dos-sentinelas"
+   }
+  },
+  {
+   "name": {
+    "en": "Seymour's Mausoleum",
+    "es": "Mausoleo de Seymour",
+    "pt": "Mausoléu de Seymour"
+   },
+   "ref": "place:seymour-s-mausoleum",
+   "slug": {
+    "en": "seymour-s-mausoleum",
+    "es": "mausoleo-de-seymour",
+    "pt": "mausoleu-de-seymour"
+   }
+  },
+  {
+   "name": {
+    "en": "Sigurd's Pub",
+    "es": "Taberna de Sigurd",
+    "pt": "Taverna de Sigurd"
+   },
+   "ref": "place:sigurd-s-pub",
+   "slug": {
+    "en": "sigurd-s-pub",
+    "es": "taberna-de-sigurd",
+    "pt": "taverna-de-sigurd"
+   }
+  },
+  {
+   "name": {
+    "en": "Skalsgreet",
+    "es": "Skalsgreet",
+    "pt": "Skalsgreet"
+   },
+   "ref": "place:skalsgreet",
+   "slug": {
+    "en": "skalsgreet",
+    "es": "skalsgreet",
+    "pt": "skalsgreet"
+   }
+  },
+  {
+   "name": {
+    "en": "Snowy Mountains",
+    "es": "Montañas Nevadas",
+    "pt": "Montanhas Nevadas"
+   },
+   "ref": "place:snowy-mountains",
+   "slug": {
+    "en": "snowy-mountains",
+    "es": "montanas-nevadas",
+    "pt": "montanhas-nevadas"
+   }
+  },
+  {
+   "name": {
+    "en": "South Gate",
+    "es": "Puerta Sur",
+    "pt": "Portão Sul"
+   },
+   "ref": "place:south-gate",
+   "slug": {
+    "en": "south-gate",
+    "es": "puerta-sur",
+    "pt": "portao-sul"
+   }
+  },
+  {
+   "name": {
+    "en": "South Temple",
+    "es": "Templo Sur",
+    "pt": "Templo Sul"
+   },
+   "ref": "place:south-temple",
+   "slug": {
+    "en": "south-temple",
+    "es": "templo-sur",
+    "pt": "templo-sul"
+   }
+  },
+  {
+   "name": {
+    "en": "Stone Homes",
+    "es": "Casas de Piedra",
+    "pt": "Casas de Pedra"
+   },
+   "ref": "place:stone-homes",
+   "slug": {
+    "en": "stone-homes",
+    "es": "casas-de-piedra",
+    "pt": "casas-de-pedra"
+   }
+  },
+  {
+   "name": {
+    "en": "Storage Square",
+    "es": "Plaza del Almacén",
+    "pt": "Praça do Depósito"
+   },
+   "ref": "place:storage-square",
+   "slug": {
+    "en": "storage-square",
+    "es": "plaza-del-almacen",
+    "pt": "praca-do-deposito"
+   }
+  },
+  {
+   "name": {
+    "en": "Sunskin Mountain",
+    "es": "Montaña Sunskin",
+    "pt": "Montanha Sunskin"
+   },
+   "ref": "place:sunskin-mountain",
+   "slug": {
+    "en": "sunskin-mountain",
+    "es": "montana-sunskin",
+    "pt": "montanha-sunskin"
+   }
+  },
+  {
+   "name": {
+    "en": "Tansy's House",
+    "es": "Casa de Tansy",
+    "pt": "Casa de Tansy"
+   },
+   "ref": "place:tansy-s-house",
+   "slug": {
+    "en": "tansy-s-house",
+    "es": "casa-de-tansy",
+    "pt": "casa-de-tansy"
+   }
+  },
+  {
+   "name": {
+    "en": "The Blacksmith",
+    "es": "El Herrero",
+    "pt": "O Ferreiro"
+   },
+   "ref": "place:the-blacksmith",
+   "slug": {
+    "en": "the-blacksmith",
+    "es": "el-herrero",
+    "pt": "o-ferreiro"
+   }
+  },
+  {
+   "name": {
+    "en": "The Caravan",
+    "es": "La Caravana",
+    "pt": "A Caravana"
+   },
+   "ref": "place:the-caravan",
+   "slug": {
+    "en": "the-caravan",
+    "es": "la-caravana",
+    "pt": "a-caravana"
+   }
+  },
+  {
+   "name": {
+    "en": "The Citadel",
+    "es": "La Ciudadela",
+    "pt": "A Cidadela"
+   },
+   "ref": "place:the-citadel",
+   "slug": {
+    "en": "the-citadel",
+    "es": "la-ciudadela",
+    "pt": "a-cidadela"
+   }
+  },
+  {
+   "name": {
+    "en": "The Depot",
+    "es": "El Depósito",
+    "pt": "O Depósito"
+   },
+   "ref": "place:the-depot",
+   "slug": {
+    "en": "the-depot",
+    "es": "el-deposito",
+    "pt": "o-deposito"
+   }
+  },
+  {
+   "name": {
+    "en": "The Docks",
+    "es": "Los Muelles",
+    "pt": "As Docas"
+   },
+   "ref": "place:the-docks",
+   "slug": {
+    "en": "the-docks",
+    "es": "los-muelles",
+    "pt": "as-docas"
+   }
+  },
+  {
+   "name": {
+    "en": "The Garden",
+    "es": "El Jardín",
+    "pt": "O Jardim"
+   },
+   "ref": "place:the-garden",
+   "slug": {
+    "en": "the-garden",
+    "es": "el-jardin",
+    "pt": "o-jardim"
+   }
+  },
+  {
+   "name": {
+    "en": "The Lintcaves",
+    "es": "Las Cuevas de Lintcaves",
+    "pt": "As Cavernas de Lintcaves"
+   },
+   "ref": "place:the-lintcaves",
+   "slug": {
+    "en": "the-lintcaves",
+    "es": "las-cuevas-de-lintcaves",
+    "pt": "as-cavernas-de-lintcaves"
+   }
+  },
+  {
+   "name": {
+    "en": "The Monastery",
+    "es": "El Monasterio",
+    "pt": "O Mosteiro"
+   },
+   "ref": "place:the-monastery",
+   "slug": {
+    "en": "the-monastery",
+    "es": "el-monasterio",
+    "pt": "o-mosteiro"
+   }
+  },
+  {
+   "name": {
+    "en": "The Sewers",
+    "es": "Las Alcantarillas",
+    "pt": "Os Esgotos"
+   },
+   "ref": "place:the-sewers",
+   "slug": {
+    "en": "the-sewers",
+    "es": "las-alcantarillas",
+    "pt": "os-esgotos"
+   }
+  },
+  {
+   "name": {
+    "en": "Tourmaline Shafts",
+    "es": "Pozos de Turmalina",
+    "pt": "Poços de Turmalina"
+   },
+   "ref": "place:tourmaline-shafts",
+   "slug": {
+    "en": "tourmaline-shafts",
+    "es": "pozos-de-turmalina",
+    "pt": "pocos-de-turmalina"
+   }
+  },
+  {
+   "name": {
+    "en": "Townhall",
+    "es": "Ayuntamiento",
+    "pt": "Prefeitura"
+   },
+   "ref": "place:townhall",
+   "slug": {
+    "en": "townhall",
+    "es": "ayuntamiento",
+    "pt": "prefeitura"
+   }
+  },
+  {
+   "name": {
+    "en": "Trader's Square",
+    "es": "Plaza de los Comerciantes",
+    "pt": "Praça dos Comerciantes"
+   },
+   "ref": "place:trader-s-square",
+   "slug": {
+    "en": "trader-s-square",
+    "es": "plaza-de-los-comerciantes",
+    "pt": "praca-dos-comerciantes"
+   }
+  },
+  {
+   "name": {
+    "en": "Trader Square",
+    "es": "Plaza de Mercaderes",
+    "pt": "Praça dos Mercadores"
+   },
+   "ref": "place:trader-square",
+   "slug": {
+    "en": "trader-square",
+    "es": "plaza-de-mercaderes",
+    "pt": "praca-dos-mercadores-trader-square"
+   }
+  },
+  {
+   "name": {
+    "en": "Trident Passage",
+    "es": "Pasaje Trident",
+    "pt": "Passagem Trident"
+   },
+   "ref": "place:trident-passage",
+   "slug": {
+    "en": "trident-passage",
+    "es": "pasaje-trident",
+    "pt": "passagem-trident"
+   }
+  },
+  {
+   "name": {
+    "en": "Vecan",
+    "es": "Vecan",
+    "pt": "Vecan"
+   },
+   "ref": "place:vecan",
+   "slug": {
+    "en": "vecan",
+    "es": "vecan",
+    "pt": "vecan"
+   }
+  },
+  {
+   "name": {
+    "en": "Vecan Hospital",
+    "es": "Hospital de Vecan",
+    "pt": "Hospital de Vecan"
+   },
+   "ref": "place:vecan-hospital",
+   "slug": {
+    "en": "vecan-hospital",
+    "es": "hospital-de-vecan",
+    "pt": "hospital-de-vecan"
+   }
+  },
+  {
+   "name": {
+    "en": "Vecan, the Desert.",
+    "es": "Vecan, el Desierto.",
+    "pt": "Vecan, o Deserto."
+   },
+   "ref": "place:vecan-the-desert",
+   "slug": {
+    "en": "vecan-the-desert",
+    "es": "vecan-el-desierto",
+    "pt": "vecan-o-deserto"
+   }
+  },
+  {
+   "name": {
+    "en": "Violet's Witch House",
+    "es": "Casa de la Bruja Violet",
+    "pt": "Casa da Bruxa Violet"
+   },
+   "ref": "place:violet-s-witch-house",
+   "slug": {
+    "en": "violet-s-witch-house",
+    "es": "casa-de-la-bruja-violet",
+    "pt": "casa-da-bruxa-violet"
+   }
+  },
+  {
+   "name": {
+    "en": "West Exit",
+    "es": "Salida Oeste",
+    "pt": "Saída Oeste"
+   },
+   "ref": "place:west-exit",
+   "slug": {
+    "en": "west-exit",
+    "es": "salida-oeste",
+    "pt": "saida-oeste"
+   }
+  },
+  {
+   "name": {
+    "en": "West Garden",
+    "es": "Jardín Oeste",
+    "pt": "Jardim Oeste"
+   },
+   "ref": "place:west-garden",
+   "slug": {
+    "en": "west-garden",
+    "es": "jardin-oeste",
+    "pt": "jardim-oeste"
+   }
+  },
+  {
+   "name": {
+    "en": "West Gate",
+    "es": "Puerta Oeste",
+    "pt": "Portão Oeste"
+   },
+   "ref": "place:west-gate",
+   "slug": {
+    "en": "west-gate",
+    "es": "puerta-oeste",
+    "pt": "portao-oeste"
+   }
+  },
+  {
+   "name": {
+    "en": "West Nordha",
+    "es": "Nordha Oeste",
+    "pt": "Nordha Ocidental"
+   },
+   "ref": "place:west-nordha",
+   "slug": {
+    "en": "west-nordha",
+    "es": "nordha-oeste",
+    "pt": "nordha-ocidental"
+   }
+  },
+  {
+   "name": {
+    "en": "Wheat Fields",
+    "es": "Campos de Trigo",
+    "pt": "Campos de Trigo"
+   },
+   "ref": "place:wheat-fields",
+   "slug": {
+    "en": "wheat-fields",
+    "es": "campos-de-trigo",
+    "pt": "campos-de-trigo"
+   }
+  },
+  {
+   "name": {
+    "en": "Work Square",
+    "es": "Plaza del Trabajo",
+    "pt": "Praça do Trabalho"
+   },
+   "ref": "place:work-square",
+   "slug": {
+    "en": "work-square",
+    "es": "plaza-del-trabajo",
+    "pt": "praca-do-trabalho"
+   }
+  },
+  {
+   "name": {
+    "en": "Yacht's Portfall",
+    "es": "Caída del Yate",
+    "pt": "Queda do Iate"
+   },
+   "ref": "place:yacht-s-portfall",
+   "slug": {
+    "en": "yacht-s-portfall",
+    "es": "caida-del-yate",
+    "pt": "queda-do-iate"
+   }
+  },
+  {
+   "name": {
+    "en": "Yordin's Cemetery",
+    "es": "Cementerio de Yordin",
+    "pt": "Cemitério de Yordin"
+   },
+   "ref": "place:yordin-s-cemetery",
+   "slug": {
+    "en": "yordin-s-cemetery",
+    "es": "cementerio-de-yordin",
+    "pt": "cemiterio-de-yordin"
    }
   },
   {

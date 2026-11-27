@@ -370,8 +370,15 @@ for (const l of LANG_CODES.filter((c) => c !== LANG_TABLE.default)) if (!pages.g
   const NPC_DIR = Object.fromEntries(LANG_CODES.map((l) => [l, `/${l}/${SECTIONS.npc.slug[l]}/`]));
   const placePages = [...pages.values()].filter((p) => Object.values(PLACE_DIR).some((d) => p.url.startsWith(d) && /^[^/]+\/$/.test(p.url.slice(d.length))));
   if (placePages.length !== places.length * LANG_CODES.length) fail("places", `${placePages.length} place pages for ${places.length} places (want ${LANG_CODES.length} each)`);
+  // an item on the ground's hover card carries the item's own game text ("+15% Holy Resistance"): the game's words, not
+  // a rate (as on the NPC pages)
+  const placeItems = JSON.parse(readFileSync(new URL("../src/data/items.json", import.meta.url), "utf8")).items;
+  const escP = (t) => t.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  const placeItemTexts = [...new Set(placeItems.flatMap((i) => i.versions.flatMap((v) => LANG_CODES.map((l) => v.text[l]))).filter((t) => t && t.includes("%")))]
+    .flatMap((t) => [t, escP(t), JSON.stringify(t).slice(1, -1)]);
   for (const p of [...placePages, ...Object.values(PLACE_DIR).map((u) => pages.get(u)).filter(Boolean)]) {
-    const html = p.html.replace(/<style[\s\S]*?<\/style>/gi, "").replace(/\sstyle="[^"]*"/gi, "");
+    let html = p.html.replace(/<style[\s\S]*?<\/style>/gi, "").replace(/\sstyle="[^"]*"/gi, "");
+    for (const t of placeItemTexts) html = html.split(t).join("");
     const hit = html.match(/.{0,40}\d\s?%.{0,20}/);
     if (hit) fail(p.url, `a percentage on a place page: "${hit[0]}"`);
   }
