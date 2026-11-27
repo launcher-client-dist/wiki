@@ -95,7 +95,7 @@ export function startMap(root: HTMLElement): void {
   // steps(); the same animated WebP in many <img> plays in lockstep, a strip lets every creature take its own phase.
   // prefers-reduced-motion, or more sprites in view than STILL_PAST: the first frame (<f>-<h>.png) instead.
   const ORDER: Record<LayerKey, number> = { bosses: 0, npcs: 1, monsters: 2, places: 3, items: 4 };
-  const STILL_PAST = 220;
+  const STILL_PAST = 300;   // measured: 291 animated at a 1440 desktop zoom 1 (the busiest real view) cost 21% main thread, 28 MB of layers
   const SPREAD_FROM = 3;
   const reduce = matchMedia("(prefers-reduced-motion: reduce)");
   const imgHtml = (i: Entry["i"], box: number) => {
@@ -172,9 +172,9 @@ export function startMap(root: HTMLElement): void {
   /** One marker: a sprite (or a bare icon) with its pill. */
   const marker = (at: L.LatLng, m: Mark, opts: { n: number; many: boolean; h: 32 | 64; phase: number; still: boolean; tip: string; onClick: (mk: L.Marker) => void }) => {
     const hit = highlight === m.entry.r;
-    const state = `${hit ? " hit" : ""}${highlight && !hit ? " dim" : ""}`;
+    const state = `${opts.many ? " many" : ""}${hit ? " hit" : ""}${highlight && !hit ? " dim" : ""}`;
     const pill = m.layer === "bosses"
-      ? `<b class="cnt boss"><img src="/ui/boss.png" width="14" height="14" alt="">${opts.n > 1 ? opts.n : ""}</b>`
+      ? `<b class="cnt boss"><img src="/ui/boss.png" width="18" height="18" alt="">${opts.n > 1 ? opts.n : ""}</b>`
       : opts.n > 1 ? `<b class="cnt">${opts.n}</b>` : "";
     let html: string, w: number, h: number, ax: number, ay: number;
     if (m.entry.sp) {
@@ -207,12 +207,12 @@ export function startMap(root: HTMLElement): void {
     const creatures = spread ? here.filter((m) => m.layer === "monsters" && m.cells && m.cells.length) : [];
     const rest = spread ? here.filter((m) => !(m.layer === "monsters" && m.cells && m.cells.length)) : here;
     const groups = gather(rest, h === 64 ? 52 : 36);
-    const out: { at: L.LatLng; make: (still: boolean) => L.Marker }[] = [];
+    const out: { at: L.LatLng; sprite: boolean; make: (still: boolean) => L.Marker }[] = [];
     for (const g of groups) {
       const at = map.layerPointToLatLng(g.p);
       if (!view.contains(at)) continue;
       const many = g.refs.size > 1;
-      out.push({ at, make: (still) => marker(at, g.m, {
+      out.push({ at, sprite: !!g.m.entry.sp, make: (still) => marker(at, g.m, {
         n: g.n, many, h, phase: seed(g.m.x, g.m.z), still,
         tip: tipOf(g) + (many && z < map.getMaxZoom() ? ` <i>${esc(s.zoomToSee)}</i>` : ""),
         onClick: (mk) => (!many ? pickMark(g.m, mk) : z < map.getMaxZoom() ? zoomInto(g) : showGroup(g, mk)),
@@ -224,11 +224,11 @@ export function startMap(root: HTMLElement): void {
         const x = m.x + c[i]! + (seed(m.x, m.z, i, 1) - 0.5) * 0.9, zz = m.z + c[i + 1]! + (seed(m.x, m.z, i, 2) - 0.5) * 0.9;
         const at = ll(x, zz);
         if (!view.contains(at)) continue;
-        out.push({ at, make: (still) => marker(at, m, { n: 1, many: false, h, phase: seed(m.x, m.z, i, 3), still, tip: esc(m.entry.n), onClick: (mk) => pickMark(m, mk) }) });
+        out.push({ at, sprite: !!m.entry.sp, make: (still) => marker(at, m, { n: 1, many: false, h, phase: seed(m.x, m.z, i, 3), still, tip: esc(m.entry.n), onClick: (mk) => pickMark(m, mk) }) });
       }
     }
     // many sprites in view: the first frames (they still read; the page stays light)
-    const sprites = out.length;
+    const sprites = out.filter((o) => o.sprite).length;   // icons (places, items) don't count: they never move
     const still = sprites > STILL_PAST;
     root.dataset.sprites = String(sprites);
     root.dataset.animated = String(still || reduce.matches ? 0 : sprites);

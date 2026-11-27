@@ -240,7 +240,7 @@ const jsonLd = [{ "@context": "https://schema.org", "@type": "Map", name: `${tm.
     background: radial-gradient(closest-side, rgba(0, 0, 0, 0.55), transparent); }
   .spr { position: relative; display: block; image-rendering: pixelated; }
   .spr.anim { overflow: hidden; }
-  .spr.anim i { display: block; background-repeat: no-repeat; background-size: 100% 100%; image-rendering: pixelated; will-change: transform;
+  .spr.anim i { display: block; background-repeat: no-repeat; background-size: 100% 100%; image-rendering: pixelated;
     animation-name: walk; animation-iteration-count: infinite; }
   @keyframes walk { from { transform: translateX(0); } to { transform: translateX(-100%); } }
   .im { position: relative; display: grid; place-items: center; width: 100%; height: 100%;
@@ -250,7 +250,7 @@ const jsonLd = [{ "@context": "https://schema.org", "@type": "Map", name: `${tm.
     border-radius: var(--r-pill); background: var(--surface); color: var(--heading); border: var(--bw) solid var(--border); box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
     font: 700 10px / 1 var(--font-num); white-space: nowrap; justify-content: center; }
   .im .cnt { top: calc(100% - 2px); }
-  .cnt.boss { border-color: var(--danger); padding: 0 4px 0 2px; }
+  .cnt.boss { height: 22px; border-color: var(--danger); padding: 0 5px 0 2px; }   /* the game's 9 px boss sprite at 2x */
   .cnt.boss img { image-rendering: pixelated; }
   .mtip i { display: block; font-style: normal; font-weight: 500; color: var(--text-muted); }
   .sm.hit::before { width: 110%; height: 12px; bottom: -4px; background: radial-gradient(closest-side, color-mix(in srgb, var(--sun) 75%, transparent), transparent); }
