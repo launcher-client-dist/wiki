@@ -3,13 +3,13 @@
  * What an NPC does beyond trade, only what the data has: travel (where to, the NPC at the far end, the fare), the class
  * it teaches, healing. No invented services.
  */
+import PlaceLine from "../ui/PlaceLine.astro";
 import EntityLink from "../entity/EntityLink.astro";
 import GameIcon from "../ui/GameIcon.astro";
 import MapLink from "../ui/MapLink.astro";
 import Value from "../ui/Value.astro";
 import { ui, fill } from "../../i18n/index.ts";
 import { DEFAULT_LANG, isLang, type Lang } from "../../lib/i18n.ts";
-import { placeLine } from "../../lib/monsters/data.ts";
 import type { NpcShift } from "../../lib/npcs/data.ts";
 interface Props {
   sh: NpcShift;
@@ -34,7 +34,7 @@ const H = nested ? "h3" : "h2";
           <span class="sline" data-flow>
             <span>{tn.travel}</span>
             {s.travel.npc && <EntityLink to={s.travel.npc} iconSize={28} />}
-            <span class="muted">{placeLine(s.travel.place, lang, t.item.near, t.item.underground)}</span>
+            <span class="muted"><PlaceLine place={s.travel.place} /></span>
             <MapLink variant="inline" href={s.travel.link} label={t.item.mapLink} />
             {s.travel.fare && <span class="fare">{tn.fare} <Value kind="gold" n={s.travel.fare} lang={lang} /></span>}
           </span>

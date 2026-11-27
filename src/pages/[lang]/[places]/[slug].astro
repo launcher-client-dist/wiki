@@ -1,0 +1,369 @@
+---
+/**
+ * A place's page (ops/wiki/place-page.md): the hero (a picture of the place, its name as in game, its region, its
+ * floors, the map link, tags: suggested level, NPCs, monsters, underground), "O que tem aqui" (NPCs, services, items on
+ * the ground), the monsters and bosses with the suggested level band, the entrances (ropes, ladders, holes, portals,
+ * manholes: where they lead, as links to the other place), the places nearby. A town: its own map names, what the town
+ * and the places around its temple hold, and its region's places.
+ */
+import PageShell from "../../../components/layout/PageShell.astro";
+import Banner from "../../../components/ui/Banner.astro";
+import InfoBox from "../../../components/ui/InfoBox.astro";
+import Spoiler from "../../../components/ui/Spoiler.astro";
+import MapLink from "../../../components/ui/MapLink.astro";
+import Card from "../../../components/ui/Card.astro";
+import IconSlot from "../../../components/ui/IconSlot.astro";
+import EntityLink from "../../../components/entity/EntityLink.astro";
+import GameIcon from "../../../components/ui/GameIcon.astro";
+import TipTag from "../../../components/ui/TipTag.astro";
+import PlaceHero from "../../../components/place/PlaceHero.astro";
+import EntranceIcon from "../../../components/place/EntranceIcon.astro";
+import { ui, fill } from "../../../i18n/index.ts";
+import { HREFLANG, LANGS, LOCALE, type Lang } from "../../../lib/i18n.ts";
+import { absoluteUrl, homePath, SECTIONS, sectionPath } from "../../../lib/routes.ts";
+import { siteData, STUB_BY_REF } from "../../../lib/site-registry.ts";
+import { gameHour } from "../../../lib/monsters/data.ts";
+import { windowSeconds } from "../../../lib/monsters/window.ts";
+import { PLACE_ICON } from "../../../lib/map/layers.ts";
+import { floorWord, gathered, type PlaceData } from "../../../lib/places/data.ts";
+import { allNames, displayName } from "../../../lib/names.ts";
+
+export async function getStaticPaths() {
+  const { places } = await siteData();
+  return places.flatMap((p) => {
+    const slug = STUB_BY_REF.get(p.ref)!.slug;
+    return LANGS.map((lang) => ({ params: { lang, places: SECTIONS.place.slug[lang], slug: slug[lang] }, props: { id: p.id } }));
+  });
+}
+const lang = Astro.params.lang as Lang;
+const t = ui(lang);
+const tp = t.place;
+const tm = t.map;
+const { registry, places, monsters } = await siteData();
+const p = places.find((x) => x.id === Astro.props.id)! as PlaceData;
+const ent = registry.require(p.ref);
+const dn = displayName(ent.name, "place", lang);
+const nameText = (l: Record<string, unknown> & { en: string; _fb?: string[] }) => ({ text: (l[lang] as string | undefined) ?? l.en, english: !!l._fb?.includes(lang) });
+const alternates = Object.fromEntries(LANGS.map((l) => [l, registry.url(p.ref, l)!])) as Record<Lang, string>;
+const num = (v: number) => v.toLocaleString(LOCALE[lang]);
+const town = p.kind === "town";
+const { npcs, services } = gathered(p, places);
+const openNpcs = npcs.filter((n) => !n.spoiler);
+const gatedNpcs = npcs.filter((n) => n.spoiler);
+const openItems = p.items.filter((i) => !i.spoiler);
+const questItems = p.items.filter((i) => i.spoiler);
+const levelOf = new Map(monsters.map((m) => [`monster:${m.id}`, m.level]));
+const floorLabel = (f: string) => {
+  const w = floorWord(f);
+  return w.kind === "surface" ? tp.surface : fill(tm.floorN, { n: f });
+};
+const region = p.town ? registry.get(p.town) : null;
+const regionName = region ? displayName(region.name, "place", lang).name : null;
+const description = fill(town ? tp.metaTown : tp.metaPlace, { name: dn.name });
+const regionPlaces = (p.places ?? []).filter((r) => registry.get(r));
+const near = p.near.filter((r) => registry.get(r));
+const placeById = new Map(places.map((x) => [x.ref, x]));
+const outs = p.entrances.filter((e) => e.dir === "out");
+const ins = p.entrances.filter((e) => e.dir === "in");
+const inner = Object.entries(p.inner ?? {}) as [keyof typeof tp.entranceKind, number][];
+const jsonLd = [{
+  "@context": "https://schema.org",
+  "@type": "Place",
+  name: dn.name,
+  alternateName: allNames(ent.name).filter((x) => x !== dn.name),
+  description,
+  url: absoluteUrl(alternates[lang]),
+  inLanguage: HREFLANG[lang],
+  ...(p.render ? { image: absoluteUrl(p.render.src) } : {}),
+}];
+/** A place card's second line: its suggested level, else its region. */
+const cardKicker = (o: PlaceData) => (o.level ? fill(tp.levelTag, o.level) : o.kind === "town" ? tp.kickerTown : tp.kickerPlace);
+---
+<PageShell lang={lang} title={dn.name} description={description} alternates={alternates} current="place"
+  searchable={{ kind: "place" }} jsonLd={jsonLd}
+  crumbs={[{ label: t.home, href: homePath(lang) }, { label: tp.listTitle, href: sectionPath("place", lang) }, ...(region && !town ? [{ label: regionName!, href: registry.url(p.town!, lang)! }] : []), { label: dn.name }]}>
+  <div class="container" id="place-page">
+    <div class="layout">
+      <div class="hero-area">
+        <PlaceHero render={p.render} alt={dn.name} underground={p.underground} />
+        <Banner compact>
+          <p class="kicker" data-pagefind-ignore>{town ? tp.kickerTown : tp.kickerPlace}</p>
+          <h1 lang={dn.nameLang !== lang ? HREFLANG[dn.nameLang] : undefined}>{dn.name}</h1>
+          {p.mapNames && p.mapNames.length > 0 && (
+            <p class="alt">{tp.mapNames}: {p.mapNames.map((m, i) => { const x = nameText(m as never); return <>{i > 0 && " · "}<span lang={x.english ? "en" : undefined}>{x.text}</span></>; })}</p>
+          )}
+          <p class="where" data-section="where" data-flow>
+            <span class="wicon"><GameIcon name="src-map" fit={22} /></span>
+            {region && !town && <span>{tp.region}: <EntityLink to={p.town!} icon={false} /></span>}
+            <MapLink variant="inline" href={p.link} entity={p.ref} label={t.item.mapLink} />
+          </p>
+          <div class="tags" slot="foot" data-pagefind-ignore>
+            {p.level && <TipTag icon="xp" tip={tp.levelNote}>{fill(tp.levelTag, p.level)}</TipTag>}
+            {openNpcs.length > 0 && <TipTag icon="src-shop" tip={tp.npcsTitle}>{openNpcs.length === 1 ? tp.npc1 : fill(tp.npcsN, { n: num(openNpcs.length) })}</TipTag>}
+            {p.monsters.length > 0 && <TipTag icon="src-drop" tip={tp.monstersIntro}>{p.monsters.length === 1 ? tp.monster1 : fill(tp.monstersN, { n: num(p.monsters.length) })}</TipTag>}
+            {p.bosses.length > 0 && <TipTag icon="boss" tip={tp.bossesIntro}>{tp.bossTag}</TipTag>}
+            {p.underground && <TipTag icon="jump-floors" tip={tp.floorUnder}>{tp.underground}</TipTag>}
+          </div>
+        </Banner>
+      </div>
+
+      <div class="main">
+        {(openNpcs.length > 0 || gatedNpcs.length > 0 || services.length > 0 || p.items.length > 0) && (
+          <section class="block" aria-labelledby="h-here" data-section="here">
+            <h2 id="h-here">{tp.hereTitle}</h2>
+            {town && <p class="muted">{tp.hereTownIntro}</p>}
+            {services.length > 0 && (
+              <div class="sub">
+                <h3>{tp.servicesTitle}</h3>
+                <ul class="chips">
+                  {services.map((s) => (
+                    <li class="chip"><span class="cicon"><GameIcon name={PLACE_ICON[s.kind]} fit={26} /></span><span>{tm.place[s.kind]}</span>{s.n > 1 && <b class="num">×{num(s.n)}</b>}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            {(openNpcs.length > 0 || gatedNpcs.length > 0) && (
+              <div class="sub">
+                <h3>{tp.npcsTitle}</h3>
+                {openNpcs.length > 0 && <ul class="grid">{openNpcs.map((n) => <li><EntityLink to={n.ref} iconSize={40} /></li>)}</ul>}
+                {gatedNpcs.length > 0 && (
+                  <Spoiler title={fill(tp.npcsSpoiler, { n: num(gatedNpcs.length) })}>
+                    <ul class="grid">{gatedNpcs.map((n) => <li><EntityLink to={n.ref} iconSize={40} /></li>)}</ul>
+                  </Spoiler>
+                )}
+              </div>
+            )}
+            {p.items.length > 0 && (
+              <div class="sub">
+                <h3>{tp.itemsTitle}</h3>
+                {openItems.length > 0 && <ul class="grid">{openItems.map((i) => <li><EntityLink to={i.ref} iconSize={40} />{i.n > 1 && <b class="num cnt">×{num(i.n)}</b>}</li>)}</ul>}
+                {questItems.length > 0 && (
+                  <Spoiler title={fill(tp.itemsSpoiler, { n: num(questItems.length) })}>
+                    <ul class="grid">{questItems.map((i) => <li><EntityLink to={i.ref} iconSize={40} />{i.n > 1 && <b class="num cnt">×{num(i.n)}</b>}</li>)}</ul>
+                  </Spoiler>
+                )}
+              </div>
+            )}
+          </section>
+        )}
+
+        {(p.monsters.length > 0 || p.bosses.length > 0) && (
+          <section class="block" aria-labelledby="h-monsters" data-section="monsters">
+            <h2 id="h-monsters">{tp.monstersTitle}</h2>
+            {p.level && (
+              <p class="level"><span class="wicon"><GameIcon name="xp" fit={22} /></span><span><b>{tp.levelTitle}: {p.level.min}–{p.level.max}</b> <span class="muted">{tp.levelNote}</span></span></p>
+            )}
+            {p.monsters.length > 0 && (
+              <ul class="rows">
+                {p.monsters.map((m) => {
+                  const lv = levelOf.get(m.ref);
+                  return (
+                    <li class="row" data-flow>
+                      <span class="rname"><EntityLink to={m.ref} iconSize={40} /></span>
+                      <span class="rfacts">
+                        <span class="fact"><GameIcon name="src-map" fit={20} />{m.count === 1 ? tp.spot1 : fill(tp.spots, { n: num(m.count) })}</span>
+                        {lv && <span class="fact"><GameIcon name="xp" fit={20} />{fill(tp.levelTag, lv)}</span>}
+                        <MapLink variant="inline" href={m.link} entity={m.ref} label={t.item.mapLink} />
+                      </span>
+                    </li>
+                  );
+                })}
+              </ul>
+            )}
+            {p.bosses.length > 0 && (
+              <div class="sub">
+                <h3>{tp.bossesTitle}</h3>
+                <p class="muted">{tp.bossesIntro}</p>
+                <ul class="rows">
+                  {p.bosses.map((b) => {
+                    const w = windowSeconds(b.hours);
+                    return (
+                      <li class="row" data-flow data-win-start={String(w.start)} data-win-end={String(w.end)}>
+                        <span class="rname"><EntityLink to={b.ref} iconSize={40} /></span>
+                        <span class="rfacts">
+                          <span class="fact"><GameIcon name="time" fit={20} /><b class="num">{gameHour(b.hours[0])}–{gameHour(b.hours[1])}</b></span>
+                          {b.oneOf && <span class="fact"><GameIcon name="src-map" fit={20} />{tp.oneOf}</span>}
+                          {b.invasion && <span class="fact"><GameIcon name="boss" fit={20} />{tp.invasion}</span>}
+                          <span class="fact next" data-win-next data-t-now={t.npc.nowThere} data-t-back={t.npc.backAt} data-t-clock={t.npc.clock}></span>
+                          <MapLink variant="inline" href={b.link} entity={b.ref} label={t.item.mapLink} />
+                        </span>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            )}
+          </section>
+        )}
+
+        {(p.entrances.length > 0 || inner.length > 0) && (
+          <section class="block" aria-labelledby="h-ways" data-section="entrances">
+            <h2 id="h-ways">{tp.entrancesTitle}</h2>
+            <p class="muted">{tp.entrancesIntro}</p>
+            {[outs, ins].filter((list) => list.length > 0).map((list) => (
+              <ul class="rows">
+                {list.map((e) => (
+                  <li class="row" data-flow>
+                    <span class="rname"><span class="eicon"><EntranceIcon kind={e.kind} /></span><span>{(e.dir === "out" ? tp.entranceOut : tp.entranceIn)[e.kind]} {e.other ? <EntityLink to={e.other} icon={false} /> : <span class="muted">{tp.openWorld}</span>}</span></span>
+                    <span class="rfacts">
+                      {e.n > 1 && <span class="fact"><b class="num">×{num(e.n)}</b></span>}
+                      {e.oneWay && <TipTag size="small" icon="leap" iconScale={1} tip={tp.oneWayTip}>{tp.oneWay}</TipTag>}
+                      {e.gated && <TipTag size="small" icon="src-quest" iconScale={1} tip={tp.gatedTip}>{tp.gated}</TipTag>}
+                      <MapLink variant="inline" href={e.link} entity={p.ref} label={t.item.mapLink} />
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            ))}
+            {inner.length > 0 && (
+              <p class="inner"><b>{tp.innerTitle}:</b> {inner.map(([k, n], i) => <>{i > 0 && " · "}<span class="fact"><span class="eicon sm"><EntranceIcon kind={k} size={20} /></span>{tp.entranceKind[k]} <span class="muted">{fill(tp.innerN, { n: num(n) })}</span></span></>)}</p>
+            )}
+          </section>
+        )}
+
+        {town && regionPlaces.length > 0 && (
+          <section class="block" aria-labelledby="h-region" data-pagefind-ignore data-section="region">
+            <h2 id="h-region">{tp.placesTitle}</h2>
+            <p class="muted">{fill(tp.placesIntro, { town: dn.name })}</p>
+            <div class="similar">
+              {regionPlaces.map((r) => {
+                const o = placeById.get(r)!;
+                const e = registry.require(r);
+                return (
+                  <Card href={registry.url(r, lang)!} title={displayName(e.name, "place", lang).name} kicker={cardKicker(o)} layout="row">
+                    <span slot="emblem" class="pemblem">{o.render ? <img src={o.render.src} alt="" loading="lazy" width="56" height="56" /> : <GameIcon name={o.underground ? "jump-floors" : "src-map"} fit={36} />}</span>
+                  </Card>
+                );
+              })}
+            </div>
+          </section>
+        )}
+
+        {!town && near.length > 0 && (
+          <section class="block" aria-labelledby="h-near" data-pagefind-ignore data-section="near">
+            <h2 id="h-near">{tp.nearTitle}</h2>
+            <div class="similar">
+              {near.map((r) => {
+                const o = placeById.get(r)!;
+                const e = registry.require(r);
+                return (
+                  <Card href={registry.url(r, lang)!} title={displayName(e.name, "place", lang).name} kicker={cardKicker(o)} layout="row">
+                    <span slot="emblem" class="pemblem">{o.render ? <img src={o.render.src} alt="" loading="lazy" width="56" height="56" /> : <GameIcon name={o.underground ? "jump-floors" : "src-map"} fit={36} />}</span>
+                  </Card>
+                );
+              })}
+            </div>
+          </section>
+        )}
+
+        {!town && p.npcs.length === 0 && p.monsters.length === 0 && p.bosses.length === 0 && p.entrances.length === 0 && services.length === 0 && p.items.length === 0 && (
+          <p class="muted" data-section="nothing">{tp.nothing}</p>
+        )}
+      </div>
+
+      <aside class="side">
+        <InfoBox title={town ? tp.kickerTown : tp.kickerPlace}>
+          <ul class="facts">
+            {region && !town && <li><span class="sicon"><GameIcon name="house" fit={28} /></span><span>{tp.region}</span><b>{regionName}</b></li>}
+            <li class="top"><span class="sicon"><GameIcon name="jump-floors" fit={28} /></span><span>{tp.floors}</span><b class="hrs">{p.floors.map((f) => <span>{floorLabel(f)}</span>)}</b></li>
+            {p.level && <li><span class="sicon"><GameIcon name="xp" fit={28} /></span><span>{tp.levelTitle}</span><b class="num">{p.level.min}–{p.level.max}</b></li>}
+            {openNpcs.length > 0 && <li><span class="sicon"><GameIcon name="src-shop" fit={28} /></span><span>{tp.npcsTitle}</span><b class="num">{num(openNpcs.length)}</b></li>}
+            {p.monsters.length > 0 && <li><span class="sicon"><GameIcon name="src-drop" fit={28} /></span><span>{tp.monstersTitle}</span><b class="num">{num(p.monsters.length)}</b></li>}
+            {p.entrances.length > 0 && <li><span class="sicon"><EntranceIcon kind="rope" size={28} /></span><span>{tp.entrancesTitle}</span><b class="num">{num(p.entrances.reduce((a, e) => a + e.n, 0))}</b></li>}
+          </ul>
+        </InfoBox>
+      </aside>
+    </div>
+  </div>
+</PageShell>
+<script>
+  // a boss window's next opening in the reader's own clock (src/lib/monsters/window.ts: shared with the map)
+  import { nextWindow } from "../../../lib/monsters/window.ts";
+  function paint() {
+    const fmt = new Intl.DateTimeFormat(document.documentElement.lang || undefined, { hour: "2-digit", minute: "2-digit" });
+    const now = Date.now() / 1000;
+    for (const el of document.querySelectorAll<HTMLElement>("[data-win-start]")) {
+      const out = el.querySelector<HTMLElement>("[data-win-next]");
+      if (!out) continue;
+      const w = nextWindow({ start: Number(el.dataset.winStart), end: Number(el.dataset.winEnd) }, now);
+      const text = w.open ? (out.dataset.tNow ?? "").replace("{t}", fmt.format(w.until * 1000)) : (out.dataset.tBack ?? "").replace("{t}", fmt.format(w.at * 1000));
+      out.textContent = `${text} (${out.dataset.tClock})`;
+    }
+  }
+  paint();
+  setInterval(paint, 30000);
+</script>
+<style>
+  .hero-area { grid-area: hero; min-width: 0; display: grid; gap: var(--s-4); }
+  .kicker { margin: 0; font: 700 var(--fs-xs) / 1 var(--font-body); letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent-text); }
+  .alt { margin: 0; color: var(--banner-muted); font-size: var(--fs-md); }
+  .where { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; margin: 6px 0 0; color: var(--banner-text); }
+  .wicon { display: inline-grid; place-items: center; width: 32px; height: 32px; flex: none; border-radius: 8px; background: var(--well); }
+  .tags { position: relative; display: flex; flex-wrap: wrap; gap: 8px; }
+  @container foot (max-width: 679px) {
+    .tags { display: inline-grid; grid-template-columns: minmax(0, max-content); }
+    .tags :global(.tiptag) { display: block; }
+    .tags :global(.tt) { width: 100%; }
+  }
+  .tags :global(.tag) { background: var(--banner-chip-bg); color: var(--banner-text); white-space: normal; }
+
+  .layout { display: grid; gap: var(--s-6); grid-template-columns: minmax(0, 1fr); grid-template-areas: "hero" "side" "main"; }
+  .main { grid-area: main; min-width: 0; container: main / inline-size; }
+  .side { grid-area: side; min-width: 0; }
+  @media (min-width: 1000px) {
+    .layout { grid-template-columns: minmax(0, 1fr) 330px; grid-template-areas: "hero side" "main side"; align-items: start; column-gap: var(--s-6); row-gap: var(--s-7); }
+  }
+  @media (min-width: 1000px) and (max-width: 1199px) { .layout { grid-template-areas: "hero hero" "main side"; } }
+  .block + .block { margin-top: var(--s-7); }
+  .block > h2 { margin-bottom: var(--s-4); }
+  .block > .muted { margin: calc(-1 * var(--s-2)) 0 var(--s-4); }
+  .sub + .sub { margin-top: var(--s-5); }
+  .sub > h3 { margin: 0 0 var(--s-3); font-size: var(--fs-md); }
+  .sub > .muted { margin: calc(-1 * var(--s-2)) 0 var(--s-3); }
+  .muted { color: var(--text-muted); }
+  .num { font-family: var(--font-num); }
+
+  .chips { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+  .chip { display: inline-flex; align-items: center; gap: 10px; padding: 6px 14px 6px 6px; border: var(--bw) solid var(--border); border-radius: 999px; background: var(--card-bg); }
+  .chip b { color: var(--text-muted); font-weight: 600; }
+  .cicon { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; background: var(--well); }
+
+  .grid { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px 18px; grid-template-columns: minmax(0, 1fr); }
+  @container main (min-width: 520px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @container main (min-width: 780px) { .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+  .grid li { display: flex; align-items: center; gap: 8px; min-width: 0; }
+  .cnt { color: var(--text-muted); }
+
+  .level { display: flex; align-items: center; gap: 12px; margin: 0 0 var(--s-4); padding: 12px 16px; border-radius: var(--r-l); background: var(--card-bg); border: var(--bw) solid var(--border); }
+  .rows { list-style: none; margin: 0; padding: 0; display: grid; border: var(--bw) solid var(--border); border-radius: var(--r-l); background: var(--card-bg); }
+  .rows + .rows { margin-top: var(--s-4); }
+  .row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 16px; padding: 10px 16px; }
+  .row + .row { border-top: 1px solid var(--row-border); }
+  .rname { display: inline-flex; align-items: center; gap: 10px; min-width: 0; }
+  .rfacts { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 6px 16px; color: var(--text-muted); }
+  .fact { display: inline-flex; align-items: center; gap: 6px; }
+  .fact b { color: var(--heading); }
+  .next:empty { display: none; }
+  .next { color: var(--accent-text); font-weight: 700; }
+  .eicon { display: inline-grid; place-items: center; width: 40px; height: 40px; flex: none; border-radius: 10px; background: var(--well); }
+  .eicon.sm { width: 28px; height: 28px; border-radius: 7px; }
+  .inner { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin: var(--s-4) 0 0; }
+
+  .similar { display: grid; gap: 12px; grid-template-columns: minmax(0, 1fr); }
+  @container main (min-width: 520px) {
+    .similar { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .similar > :global(:last-child:nth-child(odd)) { grid-column: 1 / -1; }
+  }
+  .pemblem { display: grid; place-items: center; width: 56px; height: 56px; border-radius: 8px; overflow: hidden; background: var(--well); }
+  .pemblem img { width: 100%; height: 100%; object-fit: cover; image-rendering: auto; }
+
+  .facts { list-style: none; margin: 0; padding: 4px 0; display: grid; }
+  .facts li { display: grid; grid-template-columns: 44px minmax(0, 1fr) auto; column-gap: 14px; align-items: center; padding: 10px 18px; }
+  .facts li + li { border-top: 1px solid var(--row-border); }
+  .sicon { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 10px; background: var(--well); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06); }
+  .facts span:not(.sicon) { color: var(--text-muted); font-size: var(--fs-sm); }
+  .facts b { color: var(--heading); font-size: 1.0625rem; text-align: right; }
+  .facts .hrs { display: grid; justify-items: end; gap: 2px; white-space: nowrap; }
+  .facts li.top { align-items: start; }
+  .facts li.top > span:not(.sicon), .facts li.top > b { padding-top: 12px; }
+</style>

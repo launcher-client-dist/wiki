@@ -31,6 +31,15 @@ const VIEWPORTS = [{ name: "1440", width: 1440, height: 900 }, { name: "1024", w
 const data = JSON.parse(fs.readFileSync(path.join(ROOT, "src/data/items.json"), "utf8"));
 const mdata = JSON.parse(fs.readFileSync(path.join(ROOT, "src/data/monsters.json"), "utf8")).monsters;
 const ndata = JSON.parse(fs.readFileSync(path.join(ROOT, "src/data/npcs.json"), "utf8")).npcs;
+const pdata = fs.existsSync(path.join(ROOT, "src/data/places.json")) ? JSON.parse(fs.readFileSync(path.join(ROOT, "src/data/places.json"), "utf8")).places : [];
+const pRich = (p) => p.monsters.length + p.npcs.length + p.entrances.length * 2 + p.bosses.length * 3 + (p.places?.length ?? 0);
+const pPick = (fn) => [...pdata].filter(fn).sort((a, b) => pRich(b) - pRich(a) || a.id.localeCompare(b.id))[0];
+/** The place pages measured: a town (Basile), a cave with entrances, a place with a boss window. */
+const PLACE_KINDS = {
+  town: (p) => p.id === "basile",
+  cave: (p) => p.kind === "place" && p.underground && p.entrances.length > 0,
+  boss: (p) => p.kind === "place" && p.bosses.length > 0,
+};
 const catOfItem = new Map(JSON.parse(fs.readFileSync(path.join(ROOT, "src/data/items.json"), "utf8")).items.map((i) => [i.id, i.category]));
 const nSells = (n) => n.shifts.reduce((k, s) => k + (s.sells?.length ?? 0) + (s.buys?.length ?? 0), 0);
 const nPick = (fn) => [...ndata].filter(fn).sort((a, b) => nSells(b) - nSells(a) || a.id.localeCompare(b.id))[0];
@@ -79,6 +88,12 @@ for (const lang of LANGS) {
   PAGES.push({ id: "item-group", lang, url: grp ? `/${lang}/${SECTIONS.item.slug[lang]}/${grp.slug[lang]}/` : null, type: "group" });
   PAGES.push({ id: "monsters", lang, url: `/${lang}/${SECTIONS.monster.slug[lang]}/`, type: "mlist" });
   PAGES.push({ id: "npcs", lang, url: `/${lang}/${SECTIONS.npc.slug[lang]}/`, type: "mlist" });
+  PAGES.push({ id: "places", lang, url: `/${lang}/${SECTIONS.place.slug[lang]}/`, type: "mlist" });
+  for (const [kind, fn] of Object.entries(PLACE_KINDS)) {
+    const pl = pPick(fn);
+    const slug = pl && slugs[pl.ref]?.[lang];
+    PAGES.push({ id: `place-${kind}`, lang, url: slug ? `/${lang}/${SECTIONS.place.slug[lang]}/${slug}/` : null, type: "npc" });
+  }
   for (const [kind, fn] of Object.entries(NPC_KINDS)) {
     const n = nPick(fn);
     const slug = n && slugs[n.ref]?.[lang];

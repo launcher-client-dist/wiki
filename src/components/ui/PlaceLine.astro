@@ -1,0 +1,24 @@
+---
+/**
+ * Where a spot is, as one line: its town · "perto de" its place · underground. The town and the place are links to
+ * their place pages when those exist (their refs ride with the data: the place that lists the spot is the one named),
+ * plain text otherwise. placeLine() in lib/monsters/data.ts is the same line as text (for card kickers inside a link).
+ */
+import EntityLink from "../entity/EntityLink.astro";
+import { ui } from "../../i18n/index.ts";
+import { DEFAULT_LANG, isLang, type Lang } from "../../lib/i18n.ts";
+import { getRegistry } from "../../lib/site-registry.ts";
+import type { Place } from "../../lib/items/data.ts";
+
+interface Props {
+  place: Place;
+}
+const { place } = Astro.props;
+const lang: Lang = isLang(Astro.params.lang) ? Astro.params.lang : DEFAULT_LANG;
+const ti = ui(lang).item;
+const registry = await getRegistry();
+const linkable = (ref?: string) => !!ref && !!registry.get(ref) && !!registry.url(ref, lang);
+const town = place.town[lang] ?? place.town.en;
+const near = place.near ? (place.near[lang] ?? place.near.en) : null;
+---
+<span class="placeline">{linkable(place.townRef) ? <EntityLink to={place.townRef!} label={town} icon={false} /> : town}{near && <> · {ti.near} {linkable(place.ref) ? <EntityLink to={place.ref!} label={near} icon={false} /> : near}</>}{place.underground && <> · {ti.underground}</>}</span>

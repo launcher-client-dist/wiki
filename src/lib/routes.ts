@@ -25,7 +25,7 @@ export const SECTIONS: Record<EntityKind, { slug: Record<Lang, string>; nav: boo
  * The kinds whose pages exist. A kind joins this list when its page type ships; from then on every link to an
  * entity of that kind becomes a real link (before that it renders as text with its icon and hover card).
  */
-export const SHIPPED_KINDS: readonly EntityKind[] = ["guide", "item", "monster", "npc"];
+export const SHIPPED_KINDS: readonly EntityKind[] = ["guide", "item", "monster", "npc", "place"];
 
 /** The kinds in the main navigation, in order. */
 export const NAV_KINDS: readonly EntityKind[] = (Object.keys(SECTIONS) as EntityKind[]).filter((k) => SECTIONS[k].nav);

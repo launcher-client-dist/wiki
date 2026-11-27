@@ -9,7 +9,7 @@ import { mapPath } from "../lib/map/links.ts";
 import { ITEMS, siteData } from "../lib/site-registry.ts";
 
 export const GET: APIRoute = async () => {
-  const { registry, guides, items, monsters, npcs } = await siteData();
+  const { registry, guides, items, monsters, npcs, places } = await siteData();
   const pages: { alternates: Alternates; lastmod?: string }[] = [{ alternates: homeAlternates() }];
   for (const kind of SHIPPED_KINDS) pages.push({ alternates: sectionAlternates(kind) });
   pages.push({ alternates: alternatesBy(mapPath) });
@@ -32,6 +32,9 @@ export const GET: APIRoute = async () => {
   }
   for (const n of npcs) {
     pages.push({ alternates: Object.fromEntries(LANGS.map((l) => [l, registry.url(n.ref, l)!])) as Record<Lang, string> });
+  }
+  for (const p of places) {
+    pages.push({ alternates: Object.fromEntries(LANGS.map((l) => [l, registry.url(p.ref, l)!])) as Record<Lang, string> });
   }
   const urls = pages.flatMap((p) => LANGS.map((lang) => {
     const links = LANGS.map((l) => `    <xhtml:link rel="alternate" hreflang="${HREFLANG[l]}" href="${absoluteUrl(p.alternates[l])}"/>`).join("\n");

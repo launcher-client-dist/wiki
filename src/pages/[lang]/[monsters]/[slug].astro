@@ -1,4 +1,5 @@
 ---
+import PlaceLine from "../../../components/ui/PlaceLine.astro";
 import PageShell from "../../../components/layout/PageShell.astro";
 import Banner from "../../../components/ui/Banner.astro";
 import RenderSlot from "../../../components/ui/RenderSlot.astro";
@@ -21,7 +22,7 @@ import { siteData, STUB_BY_REF } from "../../../lib/site-registry.ts";
 import { appearsIn } from "../../../lib/entities/appears.ts";
 import { statLabel } from "../../../lib/items/data.ts";
 import { oneInText } from "../../../lib/items/view.ts";
-import { MONSTER_STAT_KEYS, expPerHealth, gameHour, monsterRank, monsterRef, placeLine, realOffset, respawnText, similarMonsters, type MonsterData, type MonsterStatKey, type MonsterVersion } from "../../../lib/monsters/data.ts";
+import { MONSTER_STAT_KEYS, expPerHealth, gameHour, monsterRank, monsterRef, realOffset, respawnText, similarMonsters, type MonsterData, type MonsterStatKey, type MonsterVersion } from "../../../lib/monsters/data.ts";
 import { spellWords } from "../../../lib/monsters/spells.ts";
 import { windowSeconds } from "../../../lib/monsters/window.ts";
 import { monsterMeta } from "../../../lib/monsters/view.ts";
@@ -128,7 +129,7 @@ const spellRows = (spells: MonsterData["spells"]) => spells;
                   <p class="wnext" data-win-next data-t-next={tm.windowNext} data-t-now={tm.windowNow} data-t-clock={tm.yourClock} aria-live="polite"></p>
                   <p class="wwhere">
                     {w.invasion && <span class="inv"><GameIcon name="summon" scale={1} />{tm.windowInvasion}{w.oneNightIn && <> · {fill(tm.windowNights, { n: w.oneNightIn })}</>}</span>}
-                    <span>{placeLine(w.place, lang, ti.near, ti.underground)}</span>
+                    <span><PlaceLine place={w.place} /></span>
                     <MapLink variant="inline" href={w.link} entity={ref} label={ti.mapLink} />
                   </p>
                 </li>
@@ -218,7 +219,7 @@ const spellRows = (spells: MonsterData["spells"]) => spells;
               <ul class="rows" id="places">
                 {m.places.map((p) => (
                   <ListRow>
-                    <span class="pline">{placeLine(p.place, lang, ti.near, ti.underground)}</span>
+                    <span class="pline"><PlaceLine place={p.place} /></span>
                     <Fragment slot="end">
                       <span class="spawns" title={tm.spawnTip}><GameIcon name="stack" scale={1} /><b class="num">{p.count === 1 ? tm.spawnPoint : fill(tm.spawnPoints, { n: p.count })}</b></span>
                       <MapLink variant="inline" href={p.link} entity={ref} label={ti.mapLink} />
@@ -229,7 +230,7 @@ const spellRows = (spells: MonsterData["spells"]) => spells;
             )}
             {ap && ap.how !== "timed" && (
               <p class="how" data-section="how">
-                {ap.how === "placed" && <><span class="bicon"><GameIcon name="src-map" fit={28} /></span><span>{tm.howPlaced}: {placeLine(ap.where.place, lang, ti.near, ti.underground)}</span><MapLink variant="inline" href={ap.where.link} entity={ref} label={ti.mapLink} /></>}
+                {ap.how === "placed" && <><span class="bicon"><GameIcon name="src-map" fit={28} /></span><span>{tm.howPlaced}: <PlaceLine place={ap.where.place} /></span><MapLink variant="inline" href={ap.where.link} entity={ref} label={ti.mapLink} /></>}
                 {ap.how === "lever" && <><span class="bicon"><GameIcon name="src-map" fit={28} /></span><span>{tm.howLever}:</span><EntityLink to={ap.place} icon={false} /><MapLink variant="inline" href={ap.where.link} entity={ref} label={ti.mapLink} /></>}
                 {ap.how === "travel" && <><span class="bicon"><GameIcon name="src-map" fit={28} /></span><span>{tm.howTravel}:</span><EntityLink to={ap.via} iconSize={28} /></>}
               </p>

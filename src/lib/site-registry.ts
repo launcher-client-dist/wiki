@@ -12,6 +12,7 @@ import itemsJson from "../data/items.json";
 import entitiesJson from "../data/entities.json";
 import monstersJson from "../data/monsters.json";
 import npcsJson from "../data/npcs.json";
+import placesJson from "../data/places.json";
 import { FIXTURE_ENTITIES } from "../../tests/fixtures/entities.ts";
 import { isLang, LANGS, type Lang } from "./i18n.ts";
 import { createRegistry, EntityError, type Registry } from "./entities/registry.ts";
@@ -21,6 +22,7 @@ import { entitiesFromData, type ItemData, type ItemsFile, type StubEntity } from
 import { SHIPPED_KINDS } from "./routes.ts";
 import type { MonsterData, MonstersFile } from "./monsters/data.ts";
 import type { NpcData, NpcsFile } from "./npcs/data.ts";
+import type { PlaceData, PlacesFile } from "./places/data.ts";
 
 export const KIT_ENABLED = process.env.WIKI_KIT === "1";
 
@@ -30,6 +32,7 @@ export const CONTENT_KINDS: Record<string, EntityKind> = { guides: "guide", buil
 export const ITEMS = itemsJson as unknown as ItemsFile;
 export const MONSTERS = (monstersJson as unknown as MonstersFile).monsters;
 export const NPCS = (npcsJson as unknown as NpcsFile).npcs;
+export const PLACES = (placesJson as unknown as PlacesFile).places;
 const STUBS = (entitiesJson as unknown as { entities: StubEntity[] }).entities;
 /** A stub by its ref (a monster's `appears`, a lever place): for what the item pages show beside a link. */
 export const STUB_BY_REF: ReadonlyMap<string, StubEntity> = new Map(STUBS.map((e) => [e.ref, e]));
@@ -87,7 +90,7 @@ async function contentOf(name: string, kind: EntityKind) {
   return { entities, pages };
 }
 
-let cache: Promise<{ registry: Registry; guides: GuidePage[]; items: ItemData[]; monsters: MonsterData[]; npcs: NpcData[] }> | undefined;
+let cache: Promise<{ registry: Registry; guides: GuidePage[]; items: ItemData[]; monsters: MonsterData[]; npcs: NpcData[]; places: PlaceData[] }> | undefined;
 
 async function build() {
   const entities: Entity[] = entitiesFromData(ITEMS, STUBS);
@@ -98,6 +101,9 @@ async function build() {
   // an NPC stub with no NPC page (none today: every NPC the data names is a character the game places) keeps its icon
   const npcPage = new Set(NPCS.map((n) => n.ref));
   for (const e of entities) if (e.ref.startsWith("npc:") && !npcPage.has(e.ref)) e.noPage = true;
+  // a place stub with no place page (none today: every place stub is a page) keeps its name
+  const placePage = new Set(PLACES.map((p) => p.ref));
+  for (const e of entities) if (e.ref.startsWith("place:") && !placePage.has(e.ref)) e.noPage = true;
   let guides: GuidePage[] = [];
   for (const name of Object.keys(collections).sort()) {
     const kind = CONTENT_KINDS[name];
@@ -109,7 +115,7 @@ async function build() {
   if (KIT_ENABLED) entities.push(...FIXTURE_ENTITIES.map((e) => ({ ...e, noPage: true })));
   const registry = createRegistry(entities, { shippedKinds: SHIPPED_KINDS });
   guides.sort((a, b) => a.entry.data.order - b.entry.data.order || a.slug.localeCompare(b.slug));
-  return { registry, guides, items: ITEMS.items, monsters: MONSTERS, npcs: NPCS };
+  return { registry, guides, items: ITEMS.items, monsters: MONSTERS, npcs: NPCS, places: PLACES };
 }
 
 /** The registry, the guide pages, the items and the monsters (cached: built once per build). */

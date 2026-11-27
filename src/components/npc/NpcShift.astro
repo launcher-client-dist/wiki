@@ -4,6 +4,7 @@
  * real hour, and the next change in the reader's clock ("agora: está lá até HH:MM" / "volta às HH:MM"); with several
  * shifts, the shift's own shop, services and Conversa too. Its anchor (#turno-N) is where the map's marker opens.
  */
+import PlaceLine from "../ui/PlaceLine.astro";
 import GameIcon from "../ui/GameIcon.astro";
 import MapLink from "../ui/MapLink.astro";
 import Spoiler from "../ui/Spoiler.astro";
@@ -13,7 +14,7 @@ import NpcServices from "./NpcServices.astro";
 import NpcTalk from "./NpcTalk.astro";
 import { ui, fill } from "../../i18n/index.ts";
 import { DEFAULT_LANG, isLang, type Lang } from "../../lib/i18n.ts";
-import { gameHour, placeLine, realOffset } from "../../lib/monsters/data.ts";
+import { gameHour, realOffset } from "../../lib/monsters/data.ts";
 import { windowSeconds } from "../../lib/monsters/window.ts";
 import { shiftAnchor, type NpcShift } from "../../lib/npcs/data.ts";
 interface Props {
@@ -54,7 +55,7 @@ const ownTitle = st && st.text !== mainTitle ? st : null;
 <article class="shift" id={nestedIn ? undefined : id} {...(win ? { "data-win-start": String(win.start), "data-win-end": String(win.end) } : {})}>
   <header class="shead">
     {many && <h3 class="sname">{head}{ownTitle && <span class="stitle" lang={ownTitle.en ? "en" : undefined}> · {ownTitle.text}</span>}</h3>}
-    <p class="splace" data-flow><span class="wicon"><GameIcon name="src-map" fit={22} /></span><span>{placeLine(sh.place, lang, ti.near, ti.underground)}</span><MapLink variant="inline" href={sh.link} entity={entity} label={ti.mapLink} /></p>
+    <p class="splace" data-flow><span class="wicon"><GameIcon name="src-map" fit={22} /></span><span><PlaceLine place={sh.place} /></span><MapLink variant="inline" href={sh.link} entity={entity} label={ti.mapLink} /></p>
   </header>
   {sh.hours ? (
     <div class="times">

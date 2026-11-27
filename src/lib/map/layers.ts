@@ -30,7 +30,7 @@ export type PlaceKind = (typeof PLACE_KINDS)[number];
 export const LAYER_ICON: Record<LayerKey, string> = { monsters: "src-drop", bosses: "boss", npcs: "src-shop", places: "house", items: "stack" };
 export const PLACE_ICON: Record<PlaceKind, string> = { temple: "house", depot: "stack", well: "cat-drink", forge: "anvil", runeTable: "rune", cook: "src-cook", dock: "src-map" };
 
-interface RawPoint { x: number; z: number; f: string; ref?: string; n?: number; cells?: [number, number][]; kind?: PlaceKind; town?: string; hours?: [number, number]; invasion?: boolean; sells?: number; buys?: number; spoiler?: boolean; npc?: string; shift?: number }
+interface RawPoint { x: number; z: number; f: string; ref?: string; n?: number; cells?: [number, number][]; kind?: PlaceKind; town?: string; hours?: [number, number]; invasion?: boolean; sells?: number; buys?: number; spoiler?: boolean; npc?: string; shift?: number; place?: string }
 export interface PointsFile { floors: string[]; layers: Record<LayerKey, RawPoint[]> }
 export const POINTS = pointsJson as unknown as PointsFile;
 
@@ -97,7 +97,12 @@ export function buildLayers(lang: Lang, registry: Registry, monsters: readonly M
       if (layer === "places") {
         const kind = p.kind!;
         const town = p.town ?? townOf(p.x, p.z);
-        const i = entryOf(`${kind}|${town}`, () => ({ r: `place:${kind}`, n: tm.place[kind], u: null, i: uiIcon(PLACE_ICON[kind]), k: town, x: town ? [fact("house", town)] : [] }), file, idx);
+        // its place page, when it has one: the card names it ("Templo · Basile · Praça Principal") and opens it
+        const pref = p.place && registry.get(p.place) && registry.url(p.place, lang) ? p.place : null;
+        const pname = pref ? displayName(registry.require(pref).name, "place", lang).name : null;
+        const words = [town, pname && pname !== town ? pname : null].filter((w): w is string => !!w);
+        const i = entryOf(`${kind}|${pref ?? town}`, () => ({ r: pref ?? `place:${kind}`, n: tm.place[kind], u: pref ? registry.url(pref, lang) : null, i: uiIcon(PLACE_ICON[kind]), k: words.join(" · "),
+          x: [...(town ? [fact("house", town)] : []), ...(pname && pname !== town ? [fact("src-map", pname)] : [])] }), file, idx);
         file.p.push([p.x, p.z, p.f, i, p.n ?? 1]);
         continue;
       }

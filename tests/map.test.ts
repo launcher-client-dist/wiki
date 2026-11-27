@@ -24,6 +24,7 @@ function dataLinks(): Set<string> {
     out.add(sh.link);
     if (sh.services?.travel?.link) out.add(sh.services.travel.link);
   }
+  for (const p of read<{ places: any[] }>("places.json").places) for (const l of [p.link, ...[...p.entrances, ...p.monsters, ...p.bosses].map((r: any) => r.link)]) out.add(l);
   return out;
 }
 

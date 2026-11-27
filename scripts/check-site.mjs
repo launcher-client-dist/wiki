@@ -345,6 +345,64 @@ for (const l of LANG_CODES.filter((c) => c !== LANG_TABLE.default)) if (!pages.g
   console.log(`checked ${npcPages.length} NPC pages: percentages, spoilers, ${rows} trade rows linked both ways`);
 }
 
+// -------------------------------------------------------------------------------------------- Place pages
+// Every place (a town, a map name) has its page in each language; no percentage on it; every monster, NPC and entrance
+// it lists links to that page; a place a monster's "Onde vive" names links its page, and that place lists the monster;
+// a quest NPC or a quest item on a place page sits inside a spoiler.
+{
+  const placesPath = new URL("../src/data/places.json", import.meta.url);
+  const places = JSON.parse(readFileSync(placesPath, "utf8")).places;
+  const slugs = JSON.parse(readFileSync(new URL("../src/data/slugs.json", import.meta.url), "utf8"));
+  const monsters = JSON.parse(readFileSync(new URL("../src/data/monsters.json", import.meta.url), "utf8")).monsters;
+  const PLACE_DIR = Object.fromEntries(LANG_CODES.map((l) => [l, `/${l}/${SECTIONS.place.slug[l]}/`]));
+  const MON_DIR = Object.fromEntries(LANG_CODES.map((l) => [l, `/${l}/${SECTIONS.monster.slug[l]}/`]));
+  const NPC_DIR = Object.fromEntries(LANG_CODES.map((l) => [l, `/${l}/${SECTIONS.npc.slug[l]}/`]));
+  const placePages = [...pages.values()].filter((p) => Object.values(PLACE_DIR).some((d) => p.url.startsWith(d) && /^[^/]+\/$/.test(p.url.slice(d.length))));
+  if (placePages.length !== places.length * LANG_CODES.length) fail("places", `${placePages.length} place pages for ${places.length} places (want ${LANG_CODES.length} each)`);
+  for (const p of [...placePages, ...Object.values(PLACE_DIR).map((u) => pages.get(u)).filter(Boolean)]) {
+    const html = p.html.replace(/<style[\s\S]*?<\/style>/gi, "").replace(/\sstyle="[^"]*"/gi, "");
+    const hit = html.match(/.{0,40}\d\s?%.{0,20}/);
+    if (hit) fail(p.url, `a percentage on a place page: "${hit[0]}"`);
+  }
+  const urlOf = (ref, l) => {
+    const [kind] = ref.split(":");
+    const dir = { monster: MON_DIR, npc: NPC_DIR, place: PLACE_DIR }[kind];
+    return dir && slugs[ref]?.[l] ? `${dir[l]}${slugs[ref][l]}/` : null;
+  };
+  const byRef = new Map(places.map((p) => [p.ref, p]));
+  let links = 0;
+  for (const pl of places) {
+    LANG_CODES.forEach((l) => {
+      const url = urlOf(pl.ref, l);
+      const html = url && pages.get(url)?.html;
+      if (!html) return fail(url ?? pl.ref, "missing place page");
+      for (const r of [...pl.monsters.map((m) => m.ref), ...pl.bosses.map((b) => b.ref), ...pl.npcs.map((n) => n.ref), ...pl.entrances.filter((e) => e.other).map((e) => e.other)]) {
+        links++;
+        const to = urlOf(r, l);
+        if (!to || !html.includes(`href="${to}"`)) fail(url, `${r} listed without a link to its page`);
+      }
+      const hidden = pl.npcs.filter((n) => n.spoiler).length + pl.items.filter((i) => i.spoiler).length;
+      if (hidden && !/<details class="spoiler"/.test(html)) fail(url, "quest NPCs or items outside a spoiler");
+      if (pl.bosses.length && !html.includes("data-win-start")) fail(url, "a place with a boss without its window");
+    });
+  }
+  // a monster page's "Onde vive" place that has a page links it, and that place lists the monster
+  let back = 0;
+  for (const m of monsters) {
+    for (const row of m.places) {
+      const ref = row.place?.ref;
+      if (!ref || !byRef.has(ref)) continue;
+      back++;
+      if (!byRef.get(ref).monsters.some((x) => x.ref === `monster:${m.id}`)) fail(ref, `monster:${m.id} names it but it doesn't list the monster`);
+      const l = "pt";
+      const mu = urlOf(`monster:${m.id}`, l);
+      const pu = urlOf(ref, l);
+      if (mu && pu && !pages.get(mu)?.html.includes(`href="${pu}"`)) fail(mu, `its place ${ref} without a link`);
+    }
+  }
+  console.log(`checked ${placePages.length} place pages: percentages, spoilers, ${links} listed links, ${back} "Onde vive" places linked both ways`);
+}
+
 // every /icons/, /renders/ and /sprites/ path a page names exists in the build (a renamed or removed picture leaves none
 // behind: the NPC icons once named by actor)
 {

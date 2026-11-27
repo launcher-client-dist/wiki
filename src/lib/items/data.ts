@@ -72,6 +72,10 @@ export interface Place {
   town: Localized & Fallback;
   near: (Localized & Fallback) | null;
   underground: boolean;
+  /** The place page of `near` (the place whose page lists this spot). */
+  ref?: string;
+  /** The town's page. */
+  townRef?: string;
 }
 export interface Where {
   place: Place;

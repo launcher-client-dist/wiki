@@ -1,0 +1,31 @@
+---
+/**
+ * A place's picture across the top of its page (a 12:5 banner, render.py's picture of the spot, as close to the game
+ * as the headless renderer draws it). With no picture yet: a calm panel with the place's kind icon, never a broken
+ * image.
+ */
+import GameIcon from "../ui/GameIcon.astro";
+interface Props {
+  render?: { src: string; size: [number, number] };
+  alt: string;
+  underground?: boolean;
+}
+const { render, alt, underground = false } = Astro.props;
+---
+<figure class:list={["phero", { empty: !render }]}>
+  {render ? (
+    <img src={render.src} alt={alt} width={render.size[0]} height={render.size[1]} fetchpriority="high" />
+  ) : (
+    <span class="ph" aria-hidden="true"><GameIcon name={underground ? "jump-floors" : "src-map"} fit={56} /></span>
+  )}
+</figure>
+<style>
+  .phero { position: relative; margin: 0; aspect-ratio: 12 / 5; overflow: hidden; border: var(--bw) solid var(--border); border-radius: var(--r-xl); background: var(--well); box-shadow: var(--shadow-2); }
+  .phero img { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .phero.empty { display: grid; place-items: center; background:
+      radial-gradient(ellipse at 50% 60%, color-mix(in srgb, var(--accent-text) 10%, transparent), transparent 70%),
+      repeating-linear-gradient(45deg, transparent 0 14px, color-mix(in srgb, var(--border) 45%, transparent) 14px 15px),
+      var(--well); }
+  .ph { display: grid; place-items: center; width: 96px; height: 96px; border-radius: 50%; background: var(--card-bg); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06); opacity: 0.9; }
+  @media (max-width: 759px) { .phero { aspect-ratio: 16 / 9; border-radius: var(--r-l); } }
+</style>

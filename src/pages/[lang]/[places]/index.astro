@@ -1,0 +1,157 @@
+---
+/**
+ * The place list: the towns first, then each region's places (by default, a grid of pictures; a table view too): name,
+ * region, suggested level, what it holds (services as their game icons, NPCs, monsters), floor. Filters: region,
+ * hunting (with monsters or not), services, floor (surface / underground).
+ */
+import PageShell from "../../../components/layout/PageShell.astro";
+import PixelArt from "../../../components/ui/PixelArt.astro";
+import DataTable from "../../../components/data/DataTable.astro";
+import DataRow from "../../../components/data/DataRow.astro";
+import DataCell from "../../../components/data/DataCell.astro";
+import { ui, fill } from "../../../i18n/index.ts";
+import { HREFLANG, LANGS, LOCALE, type Lang } from "../../../lib/i18n.ts";
+import { homePath, SECTIONS, sectionAlternates, sectionPath } from "../../../lib/routes.ts";
+import { siteData } from "../../../lib/site-registry.ts";
+import { PLACE_ICON } from "../../../lib/map/layers.ts";
+import { gathered, hasHunting, SERVICE_ORDER, type PlaceData } from "../../../lib/places/data.ts";
+import { displayName } from "../../../lib/names.ts";
+import uiSizes from "../../../data/ui-icons.json";
+const UI = uiSizes as Record<string, number[]>;
+
+export function getStaticPaths() {
+  return LANGS.map((lang) => ({ params: { lang, places: SECTIONS.place.slug[lang] } }));
+}
+const lang = Astro.params.lang as Lang;
+const t = ui(lang);
+const tp = t.place;
+const tm = t.map;
+const { registry, places } = await siteData();
+const num = (v: number) => v.toLocaleString(LOCALE[lang]);
+const NAME = new Map(places.map((p) => [p.ref, displayName(registry.require(p.ref).name, "place", lang)]));
+/** A place's region: its town page (a town is its own). */
+const regionOf = (p: PlaceData) => (p.kind === "town" ? p.ref : p.town!);
+const towns = places.filter((p) => p.kind === "town").sort((a, b) => (b.places?.length ?? 0) - (a.places?.length ?? 0) || NAME.get(a.ref)!.name.localeCompare(NAME.get(b.ref)!.name, lang));
+const townOrder = new Map(towns.map((tw, i) => [tw.ref, i]));
+/** The towns first, then each region's places by name (the regions in the towns' order). */
+const orderKey = (p: PlaceData) => `${p.kind === "town" ? "0" : "1"}|${String(townOrder.get(regionOf(p)) ?? 99).padStart(2, "0")}|${NAME.get(p.ref)!.name}`;
+const rows = [...places].sort((a, b) => orderKey(a).localeCompare(orderKey(b), lang));
+const servicesOf = (p: PlaceData) => gathered(p, places).services;
+const npcCount = (p: PlaceData) => gathered(p, places).npcs.filter((n) => !n.spoiler).length;
+const regionOpts = towns.map((tw) => ({ value: tw.id, label: NAME.get(tw.ref)!.name, count: places.filter((p) => regionOf(p) === tw.ref).length, icon: "house" }));
+const serviceOpts = SERVICE_ORDER.map((k) => ({ value: k, label: tm.place[k], count: places.filter((p) => servicesOf(p).some((s) => s.kind === k)).length, icon: PLACE_ICON[k] })).filter((o) => o.count);
+const icon = (name: string, scale = 1) => { const sz = UI[name] ?? [9, 9]; return { src: `/ui/${name}.png`, w: sz[0]! * scale, h: sz[1]! * scale }; };
+---
+<PageShell lang={lang} title={tp.listTitle} description={tp.listDescription} alternates={sectionAlternates("place")} current="place"
+  searchable={{ kind: "place" }}
+  crumbs={[{ label: t.home, href: homePath(lang) }, { label: tp.listTitle, href: sectionPath("place", lang) }]}>
+  <div class="container places-page">
+    <header class="page-head">
+      <PixelArt kind="place" size={64} />
+      <div>
+        <h1>{tp.listTitle}</h1>
+        <p>{tp.listIntro}</p>
+      </div>
+    </header>
+    <DataTable id="places" lang={lang} caption={tp.listTitle} total={places.length} sort={{ key: "order", dir: "asc" }} defaultView="grid"
+      columns={[
+        { key: "order", label: tp.colName },
+        { key: "region", label: tp.colRegion, hideOnPhone: true },
+        { key: "level", label: tp.colLevel, align: "end", icon: "xp" },
+        { key: "what", label: tp.colWhat, hideOnPhone: true },
+      ]}
+      filters={[
+        { key: "region", label: tp.filterRegion, options: regionOpts },
+        { key: "hunt", label: tp.filterHunt, options: [
+          { value: "yes", label: tp.huntYes, count: places.filter(hasHunting).length, icon: "src-drop" },
+          { value: "no", label: tp.huntNo, count: places.filter((p) => !hasHunting(p)).length, icon: "house" },
+        ] },
+        { key: "services", label: tp.filterServices, options: serviceOpts },
+        { key: "floor", label: tp.filterFloor, options: [
+          { value: "surface", label: tp.floorSurface, count: places.filter((p) => !p.underground).length, icon: "src-map" },
+          { value: "under", label: tp.floorUnder, count: places.filter((p) => p.underground).length, icon: "jump-floors" },
+        ] },
+      ]}>
+      {rows.map((p) => {
+        const e = registry.require(p.ref);
+        const dn = NAME.get(p.ref)!;
+        const href = registry.url(p.ref, lang)!;
+        const region = NAME.get(regionOf(p))!.name;
+        const svc = servicesOf(p);
+        const npcs = npcCount(p);
+        return (
+          <DataRow search={[...LANGS.map((l) => e.name[l]), region].join(" ")} sort={{ order: orderKey(p), region, level: p.level?.min ?? 999, what: svc.length * 100 + npcs }}
+            filters={{ region: [towns.find((tw) => tw.ref === regionOf(p))!.id], hunt: [hasHunting(p) ? "yes" : "no"], services: svc.map((s) => s.kind), floor: [p.underground ? "under" : "surface"] }}>
+            <DataCell label={tp.colName} primary>
+              <span class="name">
+                <span class="pic">{p.render ? <img src={p.render.src} width="480" height="200" alt="" loading="lazy" decoding="async" /> : <span class="ph"><img src={icon(p.underground ? "jump-floors" : "src-map", 4).src} width={icon(p.underground ? "jump-floors" : "src-map", 4).w} height={icon(p.underground ? "jump-floors" : "src-map", 4).h} alt="" class="px" /></span>}</span>
+                <span class="ntext">
+                  <a href={href} title={dn.name} lang={dn.nameLang !== lang ? HREFLANG[dn.nameLang] : undefined}>{dn.name}</a>
+                  <span class="mk">
+                    <span class="kb">{(() => { const ic = icon(p.kind === "town" ? "house" : p.underground ? "jump-floors" : "src-map"); return <img src={ic.src} width={ic.w} height={ic.h} alt="" class="px" />; })()}{p.kind === "town" ? tp.kickerTown : fill(tp.regionTitle, { town: region })}</span>
+                  </span>
+                </span>
+              </span>
+            </DataCell>
+            <DataCell label={tp.colRegion} hideOnPhone><span class="where"><span class="v v-house"></span><span>{region}</span></span></DataCell>
+            <DataCell label={tp.colLevel} align="end">{p.level ? <span class="num v v-xp">{p.level.min}–{p.level.max}</span> : <span class="nil">—</span>}</DataCell>
+            <DataCell label={tp.colWhat} hideOnPhone>
+              <span class="what">
+                {svc.map((s) => { const ic = icon(PLACE_ICON[s.kind], 2); return <img src={ic.src} width={ic.w} height={ic.h} alt={tm.place[s.kind]} title={tm.place[s.kind]} class="px svc" />; })}
+                {npcs > 0 && <span class="num v v-shop">{num(npcs)}</span>}
+                {p.monsters.length > 0 && <span class="num v v-drop">{num(p.monsters.length)}</span>}
+                {p.bosses.length > 0 && <span class="v v-boss"></span>}
+                {svc.length === 0 && npcs === 0 && p.monsters.length === 0 && p.bosses.length === 0 && <span class="nil">—</span>}
+              </span>
+            </DataCell>
+          </DataRow>
+        );
+      })}
+    </DataTable>
+    <p class="count-note">{num(places.length)} · {tp.listTitle}</p>
+  </div>
+</PageShell>
+<style is:global>
+  .places-page.container { max-width: 1400px; }
+  .places-page .page-head { display: flex; gap: var(--s-5); align-items: center; margin-bottom: var(--s-6); }
+  .places-page .page-head p { margin: 8px 0 0; color: var(--text-muted); max-width: 46rem; font-size: var(--fs-lg); }
+  .places-page .name { display: flex; align-items: center; gap: 12px; min-width: 0; }
+  .places-page .ntext { display: flex; flex-direction: column; justify-content: center; gap: 4px; min-width: 0; }
+  .places-page .name a { display: block; font-weight: 700; line-height: 1.25; color: var(--heading); text-decoration: none; }
+  .places-page .name a::after { content: ""; position: absolute; inset: 0; }
+  .places-page tr { position: relative; }
+  .places-page .name a:hover { color: var(--link); text-decoration: underline; }
+  .places-page .nil { color: var(--text-faint); }
+  .places-page .mk { display: flex; flex-wrap: wrap; gap: 4px; }
+  .places-page .kb { display: inline-flex; align-items: center; gap: 4px; height: 22px; padding: 0 7px 0 3px; border-radius: 999px; font-size: var(--fs-xs); font-weight: 700;
+    color: var(--text-muted); background: var(--surface-2); border: 1px solid var(--row-border); white-space: nowrap; max-width: 100%; overflow: hidden; text-overflow: ellipsis; }
+  .places-page .px { image-rendering: pixelated; }
+  .places-page .what { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; }
+  .places-page .svc { width: auto; height: 20px; }
+  .places-page .where { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; font-size: var(--fs-sm); color: var(--text-muted); }
+  .places-page .v { display: inline-flex; align-items: center; gap: 5px; white-space: nowrap; }
+  .places-page .v::before { content: ""; flex: none; width: 18px; height: 18px; image-rendering: pixelated; background: center / contain no-repeat; }
+  .places-page .v-house::before { background-image: url(/ui/house.png); }
+  .places-page .v-xp::before { background-image: url(/ui/xp.png); }
+  .places-page .v-shop::before { background-image: url(/ui/src-shop.png); }
+  .places-page .v-drop::before { background-image: url(/ui/src-drop.png); }
+  .places-page .v-boss::before { width: 20px; height: 20px; background-image: url(/ui/boss.png); }
+  .places-page .count-note { margin-top: var(--s-4); font-size: var(--fs-sm); color: var(--text-faint); }
+  .places-page .pic { display: none; }
+  .places-page .dt[data-view="table"] .name { gap: 0; }
+  .places-page .dt[data-view="grid"] .name { flex-direction: column; align-items: stretch; gap: 10px; width: 100%; }
+  .places-page .dt[data-view="grid"] .pic { display: block; aspect-ratio: 12 / 5; overflow: hidden; border-radius: var(--r-m); background: var(--well); }
+  .places-page .dt[data-view="grid"] .pic img { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .places-page .dt[data-view="grid"] .pic .ph { display: grid; place-items: center; width: 100%; height: 100%; background:
+      repeating-linear-gradient(45deg, transparent 0 12px, color-mix(in srgb, var(--border) 40%, transparent) 12px 13px), var(--well); }
+  .places-page .dt[data-view="grid"] .pic .ph img { width: auto; height: auto; opacity: 0.85; }
+  .places-page .dt[data-view="grid"] .ntext { min-height: 52px; justify-content: flex-start; }
+  .places-page .dt[data-view="grid"] .name a { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  @media (min-width: 1024px) {
+    .places-page.container .dt[data-view="grid"] table tbody { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .places-page.container .dt[data-view="grid"] table tbody > tr:last-child:nth-child(3n+1) { grid-column: 1 / -1; }
+    .places-page .dt[data-view="table"] td.primary { width: 100%; max-width: 0; }
+    .places-page .dt[data-view="table"] td:not(.primary) { white-space: nowrap; }
+  }
+  @media (max-width: 520px) { .places-page .page-head { flex-direction: column; align-items: flex-start; gap: var(--s-3); } }
+</style>

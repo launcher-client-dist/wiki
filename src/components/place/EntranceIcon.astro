@@ -1,0 +1,25 @@
+---
+/**
+ * An entrance's game icon: the Rope item for a rope, the Shovel for a hole, the game's floor-change sign for a ladder
+ * and a manhole, the conjure sparkle for a portal. Pixel art at a whole scale that fits `size`.
+ */
+import GameIcon from "../ui/GameIcon.astro";
+import type { EntranceKind } from "../../lib/places/data.ts";
+interface Props {
+  kind: EntranceKind;
+  size?: number;
+}
+const { kind, size = 28 } = Astro.props;
+/** The item icons (public/icons/items/<type>.png) and their pixel size. */
+const ITEM: Partial<Record<EntranceKind, { src: string; w: number; h: number }>> = {
+  rope: { src: "/icons/items/261.png", w: 16, h: 16 },
+  hole: { src: "/icons/items/260.png", w: 28, h: 27 },
+};
+const UI: Record<EntranceKind, string> = { rope: "", hole: "", ladder: "jump-floors", manhole: "jump-floors", portal: "src-conjure" };
+const it = ITEM[kind];
+const k = it ? Math.max(1, Math.floor(size / Math.max(it.w, it.h))) : 1;
+---
+{it ? <img class="px" src={it.src} width={it.w * k} height={it.h * k} alt="" /> : <GameIcon name={UI[kind]} fit={size} />}
+<style>
+  .px { image-rendering: pixelated; display: block; }
+</style>

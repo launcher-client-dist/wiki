@@ -5,6 +5,7 @@
  * one's own shop), the shop and what it buys, its services, the Conversa (the game's keyword answers; quest hints in a
  * spoiler), the quests it gives (spoiler), who stands nearby. A quest-only NPC: everything below the hero is a spoiler.
  */
+import PlaceLine from "../../../components/ui/PlaceLine.astro";
 import PageShell from "../../../components/layout/PageShell.astro";
 import Banner from "../../../components/ui/Banner.astro";
 import RenderSlot from "../../../components/ui/RenderSlot.astro";
@@ -99,7 +100,7 @@ const jsonLd = [{
           {!n.spoiler && (
             <p class="where" data-section="where" data-flow>
               <span class="wicon"><GameIcon name="src-map" fit={22} /></span>
-              <span>{placeLine(first.place, lang, ti.near, ti.underground)}</span>
+              <span><PlaceLine place={first.place} /></span>
               <MapLink variant="inline" href={first.link} entity={n.ref} label={ti.mapLink} />
             </p>
           )}
