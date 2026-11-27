@@ -2124,7 +2124,7 @@
   {
    "appears": {
     "how": "travel",
-    "via": "npc:a288"
+    "via": "npc:berk"
    },
    "boss": true,
    "facts": [
@@ -2928,723 +2928,21 @@
    }
   },
   {
-   "icon": "/icons/npcs/benedict.png",
+   "icon": "/icons/npcs/a-betrayed-man.png",
    "iconSize": [
     64,
     64
    ],
    "name": {
-    "en": "Benedict",
-    "es": "Benedict",
-    "pt": "Benedict"
+    "en": "A Betrayed Man",
+    "es": "Un Hombre Traicionado",
+    "pt": "Um Homem Traído"
    },
-   "ref": "npc:a114",
+   "ref": "npc:a-betrayed-man",
    "slug": {
-    "en": "benedict",
-    "es": "benedict",
-    "pt": "benedict"
-   }
-  },
-  {
-   "icon": "/icons/npcs/el-chad.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "El Chad",
-    "es": "El Chad",
-    "pt": "El Chad"
-   },
-   "ref": "npc:a117",
-   "slug": {
-    "en": "el-chad",
-    "es": "el-chad",
-    "pt": "el-chad"
-   }
-  },
-  {
-   "icon": "/icons/npcs/rubius.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Rubius",
-    "es": "Rubius",
-    "pt": "Rubius"
-   },
-   "ref": "npc:a119",
-   "slug": {
-    "en": "rubius",
-    "es": "rubius",
-    "pt": "rubius"
-   }
-  },
-  {
-   "icon": "/icons/npcs/bresenham.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Bresenham",
-    "es": "Bresenham",
-    "pt": "Bresenham"
-   },
-   "ref": "npc:a120",
-   "slug": {
-    "en": "bresenham",
-    "es": "bresenham",
-    "pt": "bresenham"
-   }
-  },
-  {
-   "icon": "/icons/npcs/tim.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Tim",
-    "es": "Tim",
-    "pt": "Tim"
-   },
-   "ref": "npc:a129",
-   "slug": {
-    "en": "tim",
-    "es": "tim",
-    "pt": "tim"
-   }
-  },
-  {
-   "icon": "/icons/npcs/sal.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Sal",
-    "es": "Sal",
-    "pt": "Sal"
-   },
-   "ref": "npc:a13",
-   "slug": {
-    "en": "sal",
-    "es": "sal",
-    "pt": "sal"
-   }
-  },
-  {
-   "icon": "/icons/npcs/ozrid.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Ozrid",
-    "es": "Ozrid",
-    "pt": "Ozrid"
-   },
-   "ref": "npc:a130",
-   "slug": {
-    "en": "ozrid",
-    "es": "ozrid",
-    "pt": "ozrid"
-   }
-  },
-  {
-   "icon": "/icons/npcs/nick.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Nick",
-    "es": "Nick",
-    "pt": "Nick"
-   },
-   "ref": "npc:a131",
-   "slug": {
-    "en": "nick",
-    "es": "nick",
-    "pt": "nick"
-   }
-  },
-  {
-   "icon": "/icons/npcs/a-stressed-chef.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "A Stressed Chef",
-    "es": "Un Chef Estresado",
-    "pt": "Um Chefe Estressado"
-   },
-   "ref": "npc:a132",
-   "slug": {
-    "en": "a-stressed-chef",
-    "es": "un-chef-estresado",
-    "pt": "um-chefe-estressado"
-   }
-  },
-  {
-   "icon": "/icons/npcs/maxwell.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Maxwell",
-    "es": "Maxwell",
-    "pt": "Maxwell"
-   },
-   "ref": "npc:a134",
-   "slug": {
-    "en": "maxwell",
-    "es": "maxwell",
-    "pt": "maxwell"
-   }
-  },
-  {
-   "icon": "/icons/npcs/mary.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Mary",
-    "es": "Mary",
-    "pt": "Mary"
-   },
-   "ref": "npc:a14",
-   "slug": {
-    "en": "mary",
-    "es": "mary",
-    "pt": "mary"
-   }
-  },
-  {
-   "icon": "/icons/npcs/margery-a149.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Margery",
-    "es": "Margery",
-    "pt": "Margery"
-   },
-   "ref": "npc:a149",
-   "slug": {
-    "en": "margery-a149",
-    "es": "margery-a149",
-    "pt": "margery-a149"
-   }
-  },
-  {
-   "icon": "/icons/npcs/yoz.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Yoz",
-    "es": "Yoz",
-    "pt": "Yoz"
-   },
-   "ref": "npc:a150",
-   "slug": {
-    "en": "yoz",
-    "es": "yoz",
-    "pt": "yoz"
-   }
-  },
-  {
-   "icon": "/icons/npcs/matthew.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Matthew",
-    "es": "Matthew",
-    "pt": "Matthew"
-   },
-   "ref": "npc:a152",
-   "slug": {
-    "en": "matthew",
-    "es": "matthew",
-    "pt": "matthew"
-   }
-  },
-  {
-   "icon": "/icons/npcs/newell.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Newell",
-    "es": "Newell",
-    "pt": "Newell"
-   },
-   "ref": "npc:a158",
-   "slug": {
-    "en": "newell",
-    "es": "newell",
-    "pt": "newell"
-   }
-  },
-  {
-   "icon": "/icons/npcs/gabe.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Gabe",
-    "es": "Gabe",
-    "pt": "Gabe"
-   },
-   "ref": "npc:a159",
-   "slug": {
-    "en": "gabe",
-    "es": "gabe",
-    "pt": "gabe"
-   }
-  },
-  {
-   "icon": "/icons/npcs/amlon.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Amlon",
-    "es": "Amlon",
-    "pt": "Amlon"
-   },
-   "ref": "npc:a162",
-   "slug": {
-    "en": "amlon",
-    "es": "amlon",
-    "pt": "amlon"
-   }
-  },
-  {
-   "icon": "/icons/npcs/amlon-a164.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Amlon",
-    "es": "Amlon",
-    "pt": "Amlon"
-   },
-   "ref": "npc:a164",
-   "slug": {
-    "en": "amlon-a164",
-    "es": "amlon-a164",
-    "pt": "amlon-a164"
-   }
-  },
-  {
-   "icon": "/icons/npcs/amlon-a166.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Amlon",
-    "es": "Amlon",
-    "pt": "Amlon"
-   },
-   "ref": "npc:a166",
-   "slug": {
-    "en": "amlon-a166",
-    "es": "amlon-a166",
-    "pt": "amlon-a166"
-   }
-  },
-  {
-   "icon": "/icons/npcs/martem.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Martem",
-    "es": "Martem",
-    "pt": "Martem"
-   },
-   "ref": "npc:a178",
-   "slug": {
-    "en": "martem",
-    "es": "martem",
-    "pt": "martem"
-   }
-  },
-  {
-   "icon": "/icons/npcs/edmund.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Edmund",
-    "es": "Edmund",
-    "pt": "Edmund"
-   },
-   "ref": "npc:a18",
-   "slug": {
-    "en": "edmund",
-    "es": "edmund",
-    "pt": "edmund"
-   }
-  },
-  {
-   "icon": "/icons/npcs/constine.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Constine",
-    "es": "Constine",
-    "pt": "Constine"
-   },
-   "ref": "npc:a182",
-   "slug": {
-    "en": "constine",
-    "es": "constine",
-    "pt": "constine"
-   }
-  },
-  {
-   "icon": "/icons/npcs/joan.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Joan",
-    "es": "Joan",
-    "pt": "Joan"
-   },
-   "ref": "npc:a184",
-   "slug": {
-    "en": "joan",
-    "es": "joan",
-    "pt": "joan"
-   }
-  },
-  {
-   "icon": "/icons/npcs/odie.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Odie",
-    "es": "Odie",
-    "pt": "Odie"
-   },
-   "ref": "npc:a185",
-   "slug": {
-    "en": "odie",
-    "es": "odie",
-    "pt": "odie"
-   }
-  },
-  {
-   "icon": "/icons/npcs/gonlle.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Gonlle",
-    "es": "Gonlle",
-    "pt": "Gonlle"
-   },
-   "ref": "npc:a186",
-   "slug": {
-    "en": "gonlle",
-    "es": "gonlle",
-    "pt": "gonlle"
-   }
-  },
-  {
-   "icon": "/icons/npcs/nunie.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Nunie",
-    "es": "Nunie",
-    "pt": "Nunie"
-   },
-   "ref": "npc:a187",
-   "slug": {
-    "en": "nunie",
-    "es": "nunie",
-    "pt": "nunie"
-   }
-  },
-  {
-   "icon": "/icons/npcs/hoder.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Hoder",
-    "es": "Hoder",
-    "pt": "Hoder"
-   },
-   "ref": "npc:a204",
-   "slug": {
-    "en": "hoder",
-    "es": "hoder",
-    "pt": "hoder"
-   }
-  },
-  {
-   "icon": "/icons/npcs/reika.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Reika",
-    "es": "Reika",
-    "pt": "Reika"
-   },
-   "ref": "npc:a206",
-   "slug": {
-    "en": "reika",
-    "es": "reika",
-    "pt": "reika"
-   }
-  },
-  {
-   "icon": "/icons/npcs/dionel.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Dionel",
-    "es": "Dionel",
-    "pt": "Dionel"
-   },
-   "ref": "npc:a213",
-   "slug": {
-    "en": "dionel",
-    "es": "dionel",
-    "pt": "dionel"
-   }
-  },
-  {
-   "icon": "/icons/npcs/rosel.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Rosel",
-    "es": "Rosel",
-    "pt": "Rosel"
-   },
-   "ref": "npc:a214",
-   "slug": {
-    "en": "rosel",
-    "es": "rosel",
-    "pt": "rosel"
-   }
-  },
-  {
-   "icon": "/icons/npcs/petrus.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Petrus",
-    "es": "Petrus",
-    "pt": "Petrus"
-   },
-   "ref": "npc:a215",
-   "slug": {
-    "en": "petrus",
-    "es": "petrus",
-    "pt": "petrus"
-   }
-  },
-  {
-   "icon": "/icons/npcs/morrigan.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Morrigan",
-    "es": "Morrigan",
-    "pt": "Morrigan"
-   },
-   "ref": "npc:a229",
-   "slug": {
-    "en": "morrigan",
-    "es": "morrigan",
-    "pt": "morrigan"
-   }
-  },
-  {
-   "icon": "/icons/npcs/colman.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Colman",
-    "es": "Colman",
-    "pt": "Colman"
-   },
-   "ref": "npc:a241",
-   "slug": {
-    "en": "colman",
-    "es": "colman",
-    "pt": "colman"
-   }
-  },
-  {
-   "icon": "/icons/npcs/brean.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Brean",
-    "es": "Brean",
-    "pt": "Brean"
-   },
-   "ref": "npc:a242",
-   "slug": {
-    "en": "brean",
-    "es": "brean",
-    "pt": "brean"
-   }
-  },
-  {
-   "icon": "/icons/npcs/salazar.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Salazar",
-    "es": "Salazar",
-    "pt": "Salazar"
-   },
-   "ref": "npc:a243",
-   "slug": {
-    "en": "salazar",
-    "es": "salazar",
-    "pt": "salazar"
-   }
-  },
-  {
-   "icon": "/icons/npcs/logan.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Logan",
-    "es": "Logan",
-    "pt": "Logan"
-   },
-   "ref": "npc:a244",
-   "slug": {
-    "en": "logan",
-    "es": "logan",
-    "pt": "logan"
-   }
-  },
-  {
-   "icon": "/icons/npcs/tock.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Tock",
-    "es": "Tock",
-    "pt": "Tock"
-   },
-   "ref": "npc:a247",
-   "slug": {
-    "en": "tock",
-    "es": "tock",
-    "pt": "tock"
-   }
-  },
-  {
-   "icon": "/icons/npcs/loke.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Loke",
-    "es": "Loke",
-    "pt": "Loke"
-   },
-   "ref": "npc:a248",
-   "slug": {
-    "en": "loke",
-    "es": "loke",
-    "pt": "loke"
-   }
-  },
-  {
-   "icon": "/icons/npcs/a-blue-mage.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "A Blue Mage",
-    "es": "Un Mago Azul",
-    "pt": "Um Mago Azul"
-   },
-   "ref": "npc:a253",
-   "slug": {
-    "en": "a-blue-mage",
-    "es": "un-mago-azul",
-    "pt": "um-mago-azul"
-   }
-  },
-  {
-   "icon": "/icons/npcs/a-ghoulish-secretary.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "A Ghoulish Secretary",
-    "es": "Una Secretaria Macabra",
-    "pt": "Uma Secretária Macabra"
-   },
-   "ref": "npc:a269",
-   "slug": {
-    "en": "a-ghoulish-secretary",
-    "es": "una-secretaria-macabra",
-    "pt": "uma-secretaria-macabra"
+    "en": "a-betrayed-man",
+    "es": "un-hombre-traicionado",
+    "pt": "um-homem-traido"
    }
   },
   {
@@ -3658,11 +2956,384 @@
     "es": "Un Botánico Ciego",
     "pt": "Um Botânico Cego"
    },
-   "ref": "npc:a282",
+   "ref": "npc:a-blind-botanist",
    "slug": {
     "en": "a-blind-botanist",
     "es": "un-botanico-ciego",
     "pt": "um-botanico-cego"
+   }
+  },
+  {
+   "icon": "/icons/npcs/a-blue-mage.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "A Blue Mage",
+    "es": "Un Mago Azul",
+    "pt": "Um Mago Azul"
+   },
+   "ref": "npc:a-blue-mage",
+   "slug": {
+    "en": "a-blue-mage",
+    "es": "un-mago-azul",
+    "pt": "um-mago-azul"
+   }
+  },
+  {
+   "icon": "/icons/npcs/a-bridge-troll.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "A Bridge Troll",
+    "es": "Un Trol del Puente",
+    "pt": "Um Troll da Ponte"
+   },
+   "ref": "npc:a-bridge-troll",
+   "slug": {
+    "en": "a-bridge-troll",
+    "es": "un-trol-del-puente",
+    "pt": "um-troll-da-ponte"
+   }
+  },
+  {
+   "icon": "/icons/npcs/a-female-goblin.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "A Female Goblin",
+    "es": "Una Goblin Hembra",
+    "pt": "Uma Goblin Fêmea"
+   },
+   "ref": "npc:a-female-goblin",
+   "slug": {
+    "en": "a-female-goblin",
+    "es": "una-goblin-hembra",
+    "pt": "uma-goblin-femea"
+   }
+  },
+  {
+   "icon": "/icons/npcs/a-ghoulish-secretary.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "A Ghoulish Secretary",
+    "es": "Una Secretaria Macabra",
+    "pt": "Uma Secretária Macabra"
+   },
+   "ref": "npc:a-ghoulish-secretary",
+   "slug": {
+    "en": "a-ghoulish-secretary",
+    "es": "una-secretaria-macabra",
+    "pt": "uma-secretaria-macabra"
+   }
+  },
+  {
+   "icon": "/icons/npcs/a-hooded-figure.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "A Hooded Figure",
+    "es": "Una Figura Encapuchada",
+    "pt": "Uma Figura Encapuzada"
+   },
+   "ref": "npc:a-hooded-figure",
+   "slug": {
+    "en": "a-hooded-figure",
+    "es": "una-figura-encapuchada",
+    "pt": "uma-figura-encapuzada"
+   }
+  },
+  {
+   "icon": "/icons/npcs/a-mad-ritualist.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "A Mad Ritualist",
+    "es": "Un Ritualista Loco",
+    "pt": "Um Ritualista Louco"
+   },
+   "ref": "npc:a-mad-ritualist",
+   "slug": {
+    "en": "a-mad-ritualist",
+    "es": "un-ritualista-loco",
+    "pt": "um-ritualista-louco"
+   }
+  },
+  {
+   "icon": "/icons/npcs/a-mysterious-monk.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "A Mysterious Monk",
+    "es": "Un Monje Misterioso",
+    "pt": "Um Monge Misterioso"
+   },
+   "ref": "npc:a-mysterious-monk",
+   "slug": {
+    "en": "a-mysterious-monk",
+    "es": "un-monje-misterioso",
+    "pt": "um-monge-misterioso"
+   }
+  },
+  {
+   "icon": "/icons/npcs/a-stressed-chef.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "A Stressed Chef",
+    "es": "Un Chef Estresado",
+    "pt": "Um Chefe Estressado"
+   },
+   "ref": "npc:a-stressed-chef",
+   "slug": {
+    "en": "a-stressed-chef",
+    "es": "un-chef-estresado",
+    "pt": "um-chefe-estressado"
+   }
+  },
+  {
+   "icon": "/icons/npcs/a-wounded-soldier.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "A Wounded Soldier",
+    "es": "Un Soldado Herido",
+    "pt": "Um Soldado Ferido"
+   },
+   "ref": "npc:a-wounded-soldier",
+   "slug": {
+    "en": "a-wounded-soldier",
+    "es": "un-soldado-herido",
+    "pt": "um-soldado-ferido"
+   }
+  },
+  {
+   "icon": "/icons/npcs/alan.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Alan",
+    "es": "Alan",
+    "pt": "Alan"
+   },
+   "ref": "npc:alan",
+   "slug": {
+    "en": "alan",
+    "es": "alan",
+    "pt": "alan"
+   }
+  },
+  {
+   "icon": "/icons/npcs/aldric.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Aldric",
+    "es": "Aldric",
+    "pt": "Aldric"
+   },
+   "ref": "npc:aldric",
+   "slug": {
+    "en": "aldric",
+    "es": "aldric",
+    "pt": "aldric"
+   }
+  },
+  {
+   "icon": "/icons/npcs/amelia.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Amelia",
+    "es": "Amelia",
+    "pt": "Amelia"
+   },
+   "ref": "npc:amelia",
+   "slug": {
+    "en": "amelia",
+    "es": "amelia",
+    "pt": "amelia"
+   }
+  },
+  {
+   "icon": "/icons/npcs/amlon.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Amlon",
+    "es": "Amlon",
+    "pt": "Amlon"
+   },
+   "ref": "npc:amlon",
+   "slug": {
+    "en": "amlon",
+    "es": "amlon",
+    "pt": "amlon"
+   }
+  },
+  {
+   "name": {
+    "en": "An Ancient Tree",
+    "es": "Un Árbol Ancestral",
+    "pt": "Uma Árvore Ancestral"
+   },
+   "ref": "npc:an-ancient-tree",
+   "slug": {
+    "en": "an-ancient-tree",
+    "es": "un-arbol-ancestral",
+    "pt": "uma-arvore-ancestral"
+   }
+  },
+  {
+   "icon": "/icons/npcs/an-injured-soldier.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "An Injured Soldier",
+    "es": "Un Soldado Herido",
+    "pt": "Um Soldado Ferido"
+   },
+   "ref": "npc:an-injured-soldier",
+   "slug": {
+    "en": "an-injured-soldier",
+    "es": "un-soldado-herido-an-injured-soldier",
+    "pt": "um-soldado-ferido-an-injured-soldier"
+   }
+  },
+  {
+   "icon": "/icons/npcs/arquie.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Arquie",
+    "es": "Arquie",
+    "pt": "Arquie"
+   },
+   "ref": "npc:arquie",
+   "slug": {
+    "en": "arquie",
+    "es": "arquie",
+    "pt": "arquie"
+   }
+  },
+  {
+   "icon": "/icons/npcs/assa.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Assa",
+    "es": "Assa",
+    "pt": "Assa"
+   },
+   "ref": "npc:assa",
+   "slug": {
+    "en": "assa",
+    "es": "assa",
+    "pt": "assa"
+   }
+  },
+  {
+   "icon": "/icons/npcs/aurora.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Aurora",
+    "es": "Aurora",
+    "pt": "Aurora"
+   },
+   "ref": "npc:aurora",
+   "slug": {
+    "en": "aurora",
+    "es": "aurora",
+    "pt": "aurora"
+   }
+  },
+  {
+   "icon": "/icons/npcs/balder.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Balder",
+    "es": "Balder",
+    "pt": "Balder"
+   },
+   "ref": "npc:balder",
+   "slug": {
+    "en": "balder",
+    "es": "balder",
+    "pt": "balder"
+   }
+  },
+  {
+   "icon": "/icons/npcs/baldwin.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Baldwin",
+    "es": "Baldwin",
+    "pt": "Baldwin"
+   },
+   "ref": "npc:baldwin",
+   "slug": {
+    "en": "baldwin",
+    "es": "baldwin",
+    "pt": "baldwin"
+   }
+  },
+  {
+   "icon": "/icons/npcs/benedict.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Benedict",
+    "es": "Benedict",
+    "pt": "Benedict"
+   },
+   "ref": "npc:benedict",
+   "slug": {
+    "en": "benedict",
+    "es": "benedict",
+    "pt": "benedict"
    }
   },
   {
@@ -3676,7 +3347,7 @@
     "es": "Berk",
     "pt": "Berk"
    },
-   "ref": "npc:a288",
+   "ref": "npc:berk",
    "slug": {
     "en": "berk",
     "es": "berk",
@@ -3684,597 +3355,21 @@
    }
   },
   {
-   "icon": "/icons/npcs/egemen.png",
+   "icon": "/icons/npcs/bernhard.png",
    "iconSize": [
     64,
     64
    ],
    "name": {
-    "en": "Egemen",
-    "es": "Egemen",
-    "pt": "Egemen"
+    "en": "Bernhard",
+    "es": "Bernhard",
+    "pt": "Bernhard"
    },
-   "ref": "npc:a290",
+   "ref": "npc:bernhard",
    "slug": {
-    "en": "egemen",
-    "es": "egemen",
-    "pt": "egemen"
-   }
-  },
-  {
-   "icon": "/icons/npcs/nebil.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Nebil",
-    "es": "Nebil",
-    "pt": "Nebil"
-   },
-   "ref": "npc:a293",
-   "slug": {
-    "en": "nebil",
-    "es": "nebil",
-    "pt": "nebil"
-   }
-  },
-  {
-   "icon": "/icons/npcs/tink.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Tink",
-    "es": "Tink",
-    "pt": "Tink"
-   },
-   "ref": "npc:a298",
-   "slug": {
-    "en": "tink",
-    "es": "tink",
-    "pt": "tink"
-   }
-  },
-  {
-   "icon": "/icons/npcs/hagar.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Hagar",
-    "es": "Hagar",
-    "pt": "Hagar"
-   },
-   "ref": "npc:a300",
-   "slug": {
-    "en": "hagar",
-    "es": "hagar",
-    "pt": "hagar"
-   }
-  },
-  {
-   "icon": "/icons/npcs/kazim.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Kazim",
-    "es": "Kazim",
-    "pt": "Kazim"
-   },
-   "ref": "npc:a301",
-   "slug": {
-    "en": "kazim",
-    "es": "kazim",
-    "pt": "kazim"
-   }
-  },
-  {
-   "icon": "/icons/npcs/isra.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Isra",
-    "es": "Isra",
-    "pt": "Isra"
-   },
-   "ref": "npc:a303",
-   "slug": {
-    "en": "isra",
-    "es": "isra",
-    "pt": "isra"
-   }
-  },
-  {
-   "icon": "/icons/npcs/ismet.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Ismet",
-    "es": "Ismet",
-    "pt": "Ismet"
-   },
-   "ref": "npc:a304",
-   "slug": {
-    "en": "ismet",
-    "es": "ismet",
-    "pt": "ismet"
-   }
-  },
-  {
-   "icon": "/icons/npcs/yacht.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Yacht",
-    "es": "Yacht",
-    "pt": "Yacht"
-   },
-   "ref": "npc:a306",
-   "slug": {
-    "en": "yacht",
-    "es": "yacht",
-    "pt": "yacht"
-   }
-  },
-  {
-   "icon": "/icons/npcs/hoder-a331.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Hoder",
-    "es": "Hoder",
-    "pt": "Hoder"
-   },
-   "ref": "npc:a331",
-   "slug": {
-    "en": "hoder-a331",
-    "es": "hoder-a331",
-    "pt": "hoder-a331"
-   }
-  },
-  {
-   "icon": "/icons/npcs/seymour.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Seymour",
-    "es": "Seymour",
-    "pt": "Seymour"
-   },
-   "ref": "npc:a49",
-   "slug": {
-    "en": "seymour",
-    "es": "seymour",
-    "pt": "seymour"
-   }
-  },
-  {
-   "icon": "/icons/npcs/gavin.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Gavin",
-    "es": "Gavin",
-    "pt": "Gavin"
-   },
-   "ref": "npc:a51",
-   "slug": {
-    "en": "gavin",
-    "es": "gavin",
-    "pt": "gavin"
-   }
-  },
-  {
-   "icon": "/icons/npcs/guy.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Guy",
-    "es": "Guy",
-    "pt": "Guy"
-   },
-   "ref": "npc:a54",
-   "slug": {
-    "en": "guy",
-    "es": "guy",
-    "pt": "guy"
-   }
-  },
-  {
-   "icon": "/icons/npcs/rasobar.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Rasobar",
-    "es": "Rasobar",
-    "pt": "Rasobar"
-   },
-   "ref": "npc:a56",
-   "slug": {
-    "en": "rasobar",
-    "es": "rasobar",
-    "pt": "rasobar"
-   }
-  },
-  {
-   "icon": "/icons/npcs/sigurd.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Sigurd",
-    "es": "Sigurd",
-    "pt": "Sigurd"
-   },
-   "ref": "npc:a59",
-   "slug": {
-    "en": "sigurd",
-    "es": "sigurd",
-    "pt": "sigurd"
-   }
-  },
-  {
-   "icon": "/icons/npcs/violet.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Violet",
-    "es": "Violet",
-    "pt": "Violet"
-   },
-   "ref": "npc:a6",
-   "slug": {
-    "en": "violet",
-    "es": "violet",
-    "pt": "violet"
-   }
-  },
-  {
-   "icon": "/icons/npcs/wolfram.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Wolfram",
-    "es": "Wolfram",
-    "pt": "Wolfram"
-   },
-   "ref": "npc:a60",
-   "slug": {
-    "en": "wolfram",
-    "es": "wolfram",
-    "pt": "wolfram"
-   }
-  },
-  {
-   "icon": "/icons/npcs/jaques.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Jaques",
-    "es": "Jaques",
-    "pt": "Jaques"
-   },
-   "ref": "npc:a61",
-   "slug": {
-    "en": "jaques",
-    "es": "jaques",
-    "pt": "jaques"
-   }
-  },
-  {
-   "icon": "/icons/npcs/maude.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Maude",
-    "es": "Maude",
-    "pt": "Maude"
-   },
-   "ref": "npc:a72",
-   "slug": {
-    "en": "maude",
-    "es": "maude",
-    "pt": "maude"
-   }
-  },
-  {
-   "icon": "/icons/npcs/benedict-a73.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Benedict",
-    "es": "Benedict",
-    "pt": "Benedict"
-   },
-   "ref": "npc:a73",
-   "slug": {
-    "en": "benedict-a73",
-    "es": "benedict-a73",
-    "pt": "benedict-a73"
-   }
-  },
-  {
-   "icon": "/icons/npcs/roland.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Roland",
-    "es": "Roland",
-    "pt": "Roland"
-   },
-   "ref": "npc:a75",
-   "slug": {
-    "en": "roland",
-    "es": "roland",
-    "pt": "roland"
-   }
-  },
-  {
-   "icon": "/icons/npcs/meredith.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Meredith",
-    "es": "Meredith",
-    "pt": "Meredith"
-   },
-   "ref": "npc:a78",
-   "slug": {
-    "en": "meredith",
-    "es": "meredith",
-    "pt": "meredith"
-   }
-  },
-  {
-   "icon": "/icons/npcs/wilfred.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Wilfred",
-    "es": "Wilfred",
-    "pt": "Wilfred"
-   },
-   "ref": "npc:a80",
-   "slug": {
-    "en": "wilfred",
-    "es": "wilfred",
-    "pt": "wilfred"
-   }
-  },
-  {
-   "icon": "/icons/npcs/mabel.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Mabel",
-    "es": "Mabel",
-    "pt": "Mabel"
-   },
-   "ref": "npc:a81",
-   "slug": {
-    "en": "mabel",
-    "es": "mabel",
-    "pt": "mabel"
-   }
-  },
-  {
-   "icon": "/icons/npcs/reginald.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Reginald",
-    "es": "Reginald",
-    "pt": "Reginald"
-   },
-   "ref": "npc:a82",
-   "slug": {
-    "en": "reginald",
-    "es": "reginald",
-    "pt": "reginald"
-   }
-  },
-  {
-   "icon": "/icons/npcs/margery.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Margery",
-    "es": "Margery",
-    "pt": "Margery"
-   },
-   "ref": "npc:a83",
-   "slug": {
-    "en": "margery",
-    "es": "margery",
-    "pt": "margery"
-   }
-  },
-  {
-   "icon": "/icons/npcs/zebulon.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Zebulon",
-    "es": "Zebulon",
-    "pt": "Zebulon"
-   },
-   "ref": "npc:a85",
-   "slug": {
-    "en": "zebulon",
-    "es": "zebulon",
-    "pt": "zebulon"
-   }
-  },
-  {
-   "icon": "/icons/npcs/lurleen.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Lurleen",
-    "es": "Lurleen",
-    "pt": "Lurleen"
-   },
-   "ref": "npc:a86",
-   "slug": {
-    "en": "lurleen",
-    "es": "lurleen",
-    "pt": "lurleen"
-   }
-  },
-  {
-   "icon": "/icons/npcs/erastus.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Erastus",
-    "es": "Erastus",
-    "pt": "Erastus"
-   },
-   "ref": "npc:a87",
-   "slug": {
-    "en": "erastus",
-    "es": "erastus",
-    "pt": "erastus"
-   }
-  },
-  {
-   "icon": "/icons/npcs/otis.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Otis",
-    "es": "Otis",
-    "pt": "Otis"
-   },
-   "ref": "npc:a88",
-   "slug": {
-    "en": "otis",
-    "es": "otis",
-    "pt": "otis"
-   }
-  },
-  {
-   "icon": "/icons/npcs/hester.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Hester",
-    "es": "Hester",
-    "pt": "Hester"
-   },
-   "ref": "npc:a89",
-   "slug": {
-    "en": "hester",
-    "es": "hester",
-    "pt": "hester"
-   }
-  },
-  {
-   "icon": "/icons/npcs/dewey.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Dewey",
-    "es": "Dewey",
-    "pt": "Dewey"
-   },
-   "ref": "npc:a90",
-   "slug": {
-    "en": "dewey",
-    "es": "dewey",
-    "pt": "dewey"
-   }
-  },
-  {
-   "icon": "/icons/npcs/opal.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Opal",
-    "es": "Opal",
-    "pt": "Opal"
-   },
-   "ref": "npc:a91",
-   "slug": {
-    "en": "opal",
-    "es": "opal",
-    "pt": "opal"
-   }
-  },
-  {
-   "icon": "/icons/npcs/burl.png",
-   "iconSize": [
-    64,
-    64
-   ],
-   "name": {
-    "en": "Burl",
-    "es": "Burl",
-    "pt": "Burl"
-   },
-   "ref": "npc:a92",
-   "slug": {
-    "en": "burl",
-    "es": "burl",
-    "pt": "burl"
+    "en": "bernhard",
+    "es": "bernhard",
+    "pt": "bernhard"
    }
   },
   {
@@ -4288,11 +3383,965 @@
     "es": "Bessie",
     "pt": "Bessie"
    },
-   "ref": "npc:a95",
+   "ref": "npc:bessie",
    "slug": {
     "en": "bessie",
     "es": "bessie",
     "pt": "bessie"
+   }
+  },
+  {
+   "icon": "/icons/npcs/branigan.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Branigan",
+    "es": "Branigan",
+    "pt": "Branigan"
+   },
+   "ref": "npc:branigan",
+   "slug": {
+    "en": "branigan",
+    "es": "branigan",
+    "pt": "branigan"
+   }
+  },
+  {
+   "icon": "/icons/npcs/branor.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Branor",
+    "es": "Branor",
+    "pt": "Branor"
+   },
+   "ref": "npc:branor",
+   "slug": {
+    "en": "branor",
+    "es": "branor",
+    "pt": "branor"
+   }
+  },
+  {
+   "icon": "/icons/npcs/brean.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Brean",
+    "es": "Brean",
+    "pt": "Brean"
+   },
+   "ref": "npc:brean",
+   "slug": {
+    "en": "brean",
+    "es": "brean",
+    "pt": "brean"
+   }
+  },
+  {
+   "icon": "/icons/npcs/bresenham.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Bresenham",
+    "es": "Bresenham",
+    "pt": "Bresenham"
+   },
+   "ref": "npc:bresenham",
+   "slug": {
+    "en": "bresenham",
+    "es": "bresenham",
+    "pt": "bresenham"
+   }
+  },
+  {
+   "icon": "/icons/npcs/brigitte.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Brigitte",
+    "es": "Brigitte",
+    "pt": "Brigitte"
+   },
+   "ref": "npc:brigitte",
+   "slug": {
+    "en": "brigitte",
+    "es": "brigitte",
+    "pt": "brigitte"
+   }
+  },
+  {
+   "icon": "/icons/npcs/burl.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Burl",
+    "es": "Burl",
+    "pt": "Burl"
+   },
+   "ref": "npc:burl",
+   "slug": {
+    "en": "burl",
+    "es": "burl",
+    "pt": "burl"
+   }
+  },
+  {
+   "icon": "/icons/npcs/cain.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Cain",
+    "es": "Cain",
+    "pt": "Cain"
+   },
+   "ref": "npc:cain",
+   "slug": {
+    "en": "cain",
+    "es": "cain",
+    "pt": "cain"
+   }
+  },
+  {
+   "icon": "/icons/npcs/cedric.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Cedric",
+    "es": "Cedric",
+    "pt": "Cedric"
+   },
+   "ref": "npc:cedric",
+   "slug": {
+    "en": "cedric",
+    "es": "cedric",
+    "pt": "cedric"
+   }
+  },
+  {
+   "icon": "/icons/npcs/charles.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Charles",
+    "es": "Charles",
+    "pt": "Charles"
+   },
+   "ref": "npc:charles",
+   "slug": {
+    "en": "charles",
+    "es": "charles",
+    "pt": "charles"
+   }
+  },
+  {
+   "icon": "/icons/npcs/clovis.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Clovis",
+    "es": "Clovis",
+    "pt": "Clovis"
+   },
+   "ref": "npc:clovis",
+   "slug": {
+    "en": "clovis",
+    "es": "clovis",
+    "pt": "clovis"
+   }
+  },
+  {
+   "icon": "/icons/npcs/colman.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Colman",
+    "es": "Colman",
+    "pt": "Colman"
+   },
+   "ref": "npc:colman",
+   "slug": {
+    "en": "colman",
+    "es": "colman",
+    "pt": "colman"
+   }
+  },
+  {
+   "icon": "/icons/npcs/constine.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Constine",
+    "es": "Constine",
+    "pt": "Constine"
+   },
+   "ref": "npc:constine",
+   "slug": {
+    "en": "constine",
+    "es": "constine",
+    "pt": "constine"
+   }
+  },
+  {
+   "icon": "/icons/npcs/daboga.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Daboga",
+    "es": "Daboga",
+    "pt": "Daboga"
+   },
+   "ref": "npc:daboga",
+   "slug": {
+    "en": "daboga",
+    "es": "daboga",
+    "pt": "daboga"
+   }
+  },
+  {
+   "icon": "/icons/npcs/daniel.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Daniel",
+    "es": "Daniel",
+    "pt": "Daniel"
+   },
+   "ref": "npc:daniel",
+   "slug": {
+    "en": "daniel",
+    "es": "daniel",
+    "pt": "daniel"
+   }
+  },
+  {
+   "icon": "/icons/npcs/deckard.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Deckard",
+    "es": "Deckard",
+    "pt": "Deckard"
+   },
+   "ref": "npc:deckard",
+   "slug": {
+    "en": "deckard",
+    "es": "deckard",
+    "pt": "deckard"
+   }
+  },
+  {
+   "icon": "/icons/npcs/dee.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Dee",
+    "es": "Dee",
+    "pt": "Dee"
+   },
+   "ref": "npc:dee",
+   "slug": {
+    "en": "dee",
+    "es": "dee",
+    "pt": "dee"
+   }
+  },
+  {
+   "icon": "/icons/npcs/dewey.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Dewey",
+    "es": "Dewey",
+    "pt": "Dewey"
+   },
+   "ref": "npc:dewey",
+   "slug": {
+    "en": "dewey",
+    "es": "dewey",
+    "pt": "dewey"
+   }
+  },
+  {
+   "icon": "/icons/npcs/dionel.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Dionel",
+    "es": "Dionel",
+    "pt": "Dionel"
+   },
+   "ref": "npc:dionel",
+   "slug": {
+    "en": "dionel",
+    "es": "dionel",
+    "pt": "dionel"
+   }
+  },
+  {
+   "icon": "/icons/npcs/doruk.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Doruk",
+    "es": "Doruk",
+    "pt": "Doruk"
+   },
+   "ref": "npc:doruk",
+   "slug": {
+    "en": "doruk",
+    "es": "doruk",
+    "pt": "doruk"
+   }
+  },
+  {
+   "icon": "/icons/npcs/drystan.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Drystan",
+    "es": "Drystan",
+    "pt": "Drystan"
+   },
+   "ref": "npc:drystan",
+   "slug": {
+    "en": "drystan",
+    "es": "drystan",
+    "pt": "drystan"
+   }
+  },
+  {
+   "icon": "/icons/npcs/dylan.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Dylan",
+    "es": "Dylan",
+    "pt": "Dylan"
+   },
+   "ref": "npc:dylan",
+   "slug": {
+    "en": "dylan",
+    "es": "dylan",
+    "pt": "dylan"
+   }
+  },
+  {
+   "icon": "/icons/npcs/edmund.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Edmund",
+    "es": "Edmund",
+    "pt": "Edmund"
+   },
+   "ref": "npc:edmund",
+   "slug": {
+    "en": "edmund",
+    "es": "edmund",
+    "pt": "edmund"
+   }
+  },
+  {
+   "icon": "/icons/npcs/egemen.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Egemen",
+    "es": "Egemen",
+    "pt": "Egemen"
+   },
+   "ref": "npc:egemen",
+   "slug": {
+    "en": "egemen",
+    "es": "egemen",
+    "pt": "egemen"
+   }
+  },
+  {
+   "icon": "/icons/npcs/el-chad.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "El Chad",
+    "es": "El Chad",
+    "pt": "El Chad"
+   },
+   "ref": "npc:el-chad",
+   "slug": {
+    "en": "el-chad",
+    "es": "el-chad",
+    "pt": "el-chad"
+   }
+  },
+  {
+   "icon": "/icons/npcs/elanur.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Elanur",
+    "es": "Elanur",
+    "pt": "Elanur"
+   },
+   "ref": "npc:elanur",
+   "slug": {
+    "en": "elanur",
+    "es": "elanur",
+    "pt": "elanur"
+   }
+  },
+  {
+   "icon": "/icons/npcs/elgifu.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Elgifu",
+    "es": "Elgifu",
+    "pt": "Elgifu"
+   },
+   "ref": "npc:elgifu",
+   "slug": {
+    "en": "elgifu",
+    "es": "elgifu",
+    "pt": "elgifu"
+   }
+  },
+  {
+   "icon": "/icons/npcs/elmo.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Elmo",
+    "es": "Elmo",
+    "pt": "Elmo"
+   },
+   "ref": "npc:elmo",
+   "slug": {
+    "en": "elmo",
+    "es": "elmo",
+    "pt": "elmo"
+   }
+  },
+  {
+   "icon": "/icons/npcs/elsie.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Elsie",
+    "es": "Elsie",
+    "pt": "Elsie"
+   },
+   "ref": "npc:elsie",
+   "slug": {
+    "en": "elsie",
+    "es": "elsie",
+    "pt": "elsie"
+   }
+  },
+  {
+   "icon": "/icons/npcs/engin.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Engin",
+    "es": "Engin",
+    "pt": "Engin"
+   },
+   "ref": "npc:engin",
+   "slug": {
+    "en": "engin",
+    "es": "engin",
+    "pt": "engin"
+   }
+  },
+  {
+   "icon": "/icons/npcs/eofor.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Eofor",
+    "es": "Eofor",
+    "pt": "Eofor"
+   },
+   "ref": "npc:eofor",
+   "slug": {
+    "en": "eofor",
+    "es": "eofor",
+    "pt": "eofor"
+   }
+  },
+  {
+   "icon": "/icons/npcs/erastus.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Erastus",
+    "es": "Erastus",
+    "pt": "Erastus"
+   },
+   "ref": "npc:erastus",
+   "slug": {
+    "en": "erastus",
+    "es": "erastus",
+    "pt": "erastus"
+   }
+  },
+  {
+   "icon": "/icons/npcs/eric.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Eric",
+    "es": "Eric",
+    "pt": "Eric"
+   },
+   "ref": "npc:eric",
+   "slug": {
+    "en": "eric",
+    "es": "eric",
+    "pt": "eric"
+   }
+  },
+  {
+   "icon": "/icons/npcs/euler.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Euler",
+    "es": "Euler",
+    "pt": "Euler"
+   },
+   "ref": "npc:euler",
+   "slug": {
+    "en": "euler",
+    "es": "euler",
+    "pt": "euler"
+   }
+  },
+  {
+   "icon": "/icons/npcs/faruq.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Faruq",
+    "es": "Faruq",
+    "pt": "Faruq"
+   },
+   "ref": "npc:faruq",
+   "slug": {
+    "en": "faruq",
+    "es": "faruq",
+    "pt": "faruq"
+   }
+  },
+  {
+   "icon": "/icons/npcs/faysal.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Faysal",
+    "es": "Faysal",
+    "pt": "Faysal"
+   },
+   "ref": "npc:faysal",
+   "slug": {
+    "en": "faysal",
+    "es": "faysal",
+    "pt": "faysal"
+   }
+  },
+  {
+   "icon": "/icons/npcs/felix.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Felix",
+    "es": "Felix",
+    "pt": "Felix"
+   },
+   "ref": "npc:felix",
+   "slug": {
+    "en": "felix",
+    "es": "felix",
+    "pt": "felix"
+   }
+  },
+  {
+   "icon": "/icons/npcs/ferag.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Ferag",
+    "es": "Ferag",
+    "pt": "Ferag"
+   },
+   "ref": "npc:ferag",
+   "slug": {
+    "en": "ferag",
+    "es": "ferag",
+    "pt": "ferag"
+   }
+  },
+  {
+   "icon": "/icons/npcs/fergus.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Fergus",
+    "es": "Fergus",
+    "pt": "Fergus"
+   },
+   "ref": "npc:fergus",
+   "slug": {
+    "en": "fergus",
+    "es": "fergus",
+    "pt": "fergus"
+   }
+  },
+  {
+   "icon": "/icons/npcs/frances.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Frances",
+    "es": "Frances",
+    "pt": "Frances"
+   },
+   "ref": "npc:frances",
+   "slug": {
+    "en": "frances",
+    "es": "frances",
+    "pt": "frances"
+   }
+  },
+  {
+   "icon": "/icons/npcs/gabe.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Gabe",
+    "es": "Gabe",
+    "pt": "Gabe"
+   },
+   "ref": "npc:gabe",
+   "slug": {
+    "en": "gabe",
+    "es": "gabe",
+    "pt": "gabe"
+   }
+  },
+  {
+   "icon": "/icons/npcs/gareth.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Gareth",
+    "es": "Gareth",
+    "pt": "Gareth"
+   },
+   "ref": "npc:gareth",
+   "slug": {
+    "en": "gareth",
+    "es": "gareth",
+    "pt": "gareth"
+   }
+  },
+  {
+   "icon": "/icons/npcs/gaspile.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Gaspile",
+    "es": "Gaspile",
+    "pt": "Gaspile"
+   },
+   "ref": "npc:gaspile",
+   "slug": {
+    "en": "gaspile",
+    "es": "gaspile",
+    "pt": "gaspile"
+   }
+  },
+  {
+   "icon": "/icons/npcs/gavin.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Gavin",
+    "es": "Gavin",
+    "pt": "Gavin"
+   },
+   "ref": "npc:gavin",
+   "slug": {
+    "en": "gavin",
+    "es": "gavin",
+    "pt": "gavin"
+   }
+  },
+  {
+   "icon": "/icons/npcs/george.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "George",
+    "es": "George",
+    "pt": "George"
+   },
+   "ref": "npc:george",
+   "slug": {
+    "en": "george",
+    "es": "george",
+    "pt": "george"
+   }
+  },
+  {
+   "icon": "/icons/npcs/gil.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Gil",
+    "es": "Gil",
+    "pt": "Gil"
+   },
+   "ref": "npc:gil",
+   "slug": {
+    "en": "gil",
+    "es": "gil",
+    "pt": "gil"
+   }
+  },
+  {
+   "icon": "/icons/npcs/godric.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Godric",
+    "es": "Godric",
+    "pt": "Godric"
+   },
+   "ref": "npc:godric",
+   "slug": {
+    "en": "godric",
+    "es": "godric",
+    "pt": "godric"
+   }
+  },
+  {
+   "icon": "/icons/npcs/gonlle.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Gonlle",
+    "es": "Gonlle",
+    "pt": "Gonlle"
+   },
+   "ref": "npc:gonlle",
+   "slug": {
+    "en": "gonlle",
+    "es": "gonlle",
+    "pt": "gonlle"
+   }
+  },
+  {
+   "icon": "/icons/npcs/guri.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Guri",
+    "es": "Guri",
+    "pt": "Guri"
+   },
+   "ref": "npc:guri",
+   "slug": {
+    "en": "guri",
+    "es": "guri",
+    "pt": "guri"
+   }
+  },
+  {
+   "icon": "/icons/npcs/guy.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Guy",
+    "es": "Guy",
+    "pt": "Guy"
+   },
+   "ref": "npc:guy",
+   "slug": {
+    "en": "guy",
+    "es": "guy",
+    "pt": "guy"
+   }
+  },
+  {
+   "icon": "/icons/npcs/hagar.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Hagar",
+    "es": "Hagar",
+    "pt": "Hagar"
+   },
+   "ref": "npc:hagar",
+   "slug": {
+    "en": "hagar",
+    "es": "hagar",
+    "pt": "hagar"
+   }
+  },
+  {
+   "icon": "/icons/npcs/heinrich.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Heinrich",
+    "es": "Heinrich",
+    "pt": "Heinrich"
+   },
+   "ref": "npc:heinrich",
+   "slug": {
+    "en": "heinrich",
+    "es": "heinrich",
+    "pt": "heinrich"
+   }
+  },
+  {
+   "icon": "/icons/npcs/hester.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Hester",
+    "es": "Hester",
+    "pt": "Hester"
+   },
+   "ref": "npc:hester",
+   "slug": {
+    "en": "hester",
+    "es": "hester",
+    "pt": "hester"
+   }
+  },
+  {
+   "icon": "/icons/npcs/hildegarde.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Hildegarde",
+    "es": "Hildegarde",
+    "pt": "Hildegarde"
+   },
+   "ref": "npc:hildegarde",
+   "slug": {
+    "en": "hildegarde",
+    "es": "hildegarde",
+    "pt": "hildegarde"
    }
   },
   {
@@ -4306,11 +4355,101 @@
     "es": "Hobart",
     "pt": "Hobart"
    },
-   "ref": "npc:a96",
+   "ref": "npc:hobart",
    "slug": {
     "en": "hobart",
     "es": "hobart",
     "pt": "hobart"
+   }
+  },
+  {
+   "icon": "/icons/npcs/hoder.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Hoder",
+    "es": "Hoder",
+    "pt": "Hoder"
+   },
+   "ref": "npc:hoder",
+   "slug": {
+    "en": "hoder",
+    "es": "hoder",
+    "pt": "hoder"
+   }
+  },
+  {
+   "icon": "/icons/npcs/inna.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Inna",
+    "es": "Inna",
+    "pt": "Inna"
+   },
+   "ref": "npc:inna",
+   "slug": {
+    "en": "inna",
+    "es": "inna",
+    "pt": "inna"
+   }
+  },
+  {
+   "icon": "/icons/npcs/ismet.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Ismet",
+    "es": "Ismet",
+    "pt": "Ismet"
+   },
+   "ref": "npc:ismet",
+   "slug": {
+    "en": "ismet",
+    "es": "ismet",
+    "pt": "ismet"
+   }
+  },
+  {
+   "icon": "/icons/npcs/isra.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Isra",
+    "es": "Isra",
+    "pt": "Isra"
+   },
+   "ref": "npc:isra",
+   "slug": {
+    "en": "isra",
+    "es": "isra",
+    "pt": "isra"
+   }
+  },
+  {
+   "icon": "/icons/npcs/jaques.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Jaques",
+    "es": "Jaques",
+    "pt": "Jaques"
+   },
+   "ref": "npc:jaques",
+   "slug": {
+    "en": "jaques",
+    "es": "jaques",
+    "pt": "jaques"
    }
   },
   {
@@ -4324,11 +4463,1649 @@
     "es": "Jebidiah",
     "pt": "Jebidiah"
    },
-   "ref": "npc:a98",
+   "ref": "npc:jebidiah",
    "slug": {
     "en": "jebidiah",
     "es": "jebidiah",
     "pt": "jebidiah"
+   }
+  },
+  {
+   "icon": "/icons/npcs/joan.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Joan",
+    "es": "Joan",
+    "pt": "Joan"
+   },
+   "ref": "npc:joan",
+   "slug": {
+    "en": "joan",
+    "es": "joan",
+    "pt": "joan"
+   }
+  },
+  {
+   "icon": "/icons/npcs/johnny.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Johnny",
+    "es": "Johnny",
+    "pt": "Johnny"
+   },
+   "ref": "npc:johnny",
+   "slug": {
+    "en": "johnny",
+    "es": "johnny",
+    "pt": "johnny"
+   }
+  },
+  {
+   "icon": "/icons/npcs/jon.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Jon",
+    "es": "Jon",
+    "pt": "Jon"
+   },
+   "ref": "npc:jon",
+   "slug": {
+    "en": "jon",
+    "es": "jon",
+    "pt": "jon"
+   }
+  },
+  {
+   "icon": "/icons/npcs/kaan.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Kaan",
+    "es": "Kaan",
+    "pt": "Kaan"
+   },
+   "ref": "npc:kaan",
+   "slug": {
+    "en": "kaan",
+    "es": "kaan",
+    "pt": "kaan"
+   }
+  },
+  {
+   "icon": "/icons/npcs/karamel.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Karamel",
+    "es": "Karamel",
+    "pt": "Karamel"
+   },
+   "ref": "npc:karamel",
+   "slug": {
+    "en": "karamel",
+    "es": "karamel",
+    "pt": "karamel"
+   }
+  },
+  {
+   "icon": "/icons/npcs/kari.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Kari",
+    "es": "Kari",
+    "pt": "Kari"
+   },
+   "ref": "npc:kari",
+   "slug": {
+    "en": "kari",
+    "es": "kari",
+    "pt": "kari"
+   }
+  },
+  {
+   "icon": "/icons/npcs/karmac.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Karmac",
+    "es": "Karmac",
+    "pt": "Karmac"
+   },
+   "ref": "npc:karmac",
+   "slug": {
+    "en": "karmac",
+    "es": "karmac",
+    "pt": "karmac"
+   }
+  },
+  {
+   "icon": "/icons/npcs/kazim.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Kazim",
+    "es": "Kazim",
+    "pt": "Kazim"
+   },
+   "ref": "npc:kazim",
+   "slug": {
+    "en": "kazim",
+    "es": "kazim",
+    "pt": "kazim"
+   }
+  },
+  {
+   "icon": "/icons/npcs/leofric.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Leofric",
+    "es": "Leofric",
+    "pt": "Leofric"
+   },
+   "ref": "npc:leofric",
+   "slug": {
+    "en": "leofric",
+    "es": "leofric",
+    "pt": "leofric"
+   }
+  },
+  {
+   "icon": "/icons/npcs/lisa.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Lisa",
+    "es": "Lisa",
+    "pt": "Lisa"
+   },
+   "ref": "npc:lisa",
+   "slug": {
+    "en": "lisa",
+    "es": "lisa",
+    "pt": "lisa"
+   }
+  },
+  {
+   "icon": "/icons/npcs/logan.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Logan",
+    "es": "Logan",
+    "pt": "Logan"
+   },
+   "ref": "npc:logan",
+   "slug": {
+    "en": "logan",
+    "es": "logan",
+    "pt": "logan"
+   }
+  },
+  {
+   "icon": "/icons/npcs/loke.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Loke",
+    "es": "Loke",
+    "pt": "Loke"
+   },
+   "ref": "npc:loke",
+   "slug": {
+    "en": "loke",
+    "es": "loke",
+    "pt": "loke"
+   }
+  },
+  {
+   "icon": "/icons/npcs/lurleen.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Lurleen",
+    "es": "Lurleen",
+    "pt": "Lurleen"
+   },
+   "ref": "npc:lurleen",
+   "slug": {
+    "en": "lurleen",
+    "es": "lurleen",
+    "pt": "lurleen"
+   }
+  },
+  {
+   "icon": "/icons/npcs/mabel.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Mabel",
+    "es": "Mabel",
+    "pt": "Mabel"
+   },
+   "ref": "npc:mabel",
+   "slug": {
+    "en": "mabel",
+    "es": "mabel",
+    "pt": "mabel"
+   }
+  },
+  {
+   "icon": "/icons/npcs/margery.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Margery",
+    "es": "Margery",
+    "pt": "Margery"
+   },
+   "ref": "npc:margery",
+   "slug": {
+    "en": "margery",
+    "es": "margery",
+    "pt": "margery"
+   }
+  },
+  {
+   "icon": "/icons/npcs/martem.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Martem",
+    "es": "Martem",
+    "pt": "Martem"
+   },
+   "ref": "npc:martem",
+   "slug": {
+    "en": "martem",
+    "es": "martem",
+    "pt": "martem"
+   }
+  },
+  {
+   "icon": "/icons/npcs/mary.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Mary",
+    "es": "Mary",
+    "pt": "Mary"
+   },
+   "ref": "npc:mary",
+   "slug": {
+    "en": "mary",
+    "es": "mary",
+    "pt": "mary"
+   }
+  },
+  {
+   "icon": "/icons/npcs/matthew.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Matthew",
+    "es": "Matthew",
+    "pt": "Matthew"
+   },
+   "ref": "npc:matthew",
+   "slug": {
+    "en": "matthew",
+    "es": "matthew",
+    "pt": "matthew"
+   }
+  },
+  {
+   "icon": "/icons/npcs/maude.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Maude",
+    "es": "Maude",
+    "pt": "Maude"
+   },
+   "ref": "npc:maude",
+   "slug": {
+    "en": "maude",
+    "es": "maude",
+    "pt": "maude"
+   }
+  },
+  {
+   "icon": "/icons/npcs/maxwell.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Maxwell",
+    "es": "Maxwell",
+    "pt": "Maxwell"
+   },
+   "ref": "npc:maxwell",
+   "slug": {
+    "en": "maxwell",
+    "es": "maxwell",
+    "pt": "maxwell"
+   }
+  },
+  {
+   "icon": "/icons/npcs/meredith.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Meredith",
+    "es": "Meredith",
+    "pt": "Meredith"
+   },
+   "ref": "npc:meredith",
+   "slug": {
+    "en": "meredith",
+    "es": "meredith",
+    "pt": "meredith"
+   }
+  },
+  {
+   "icon": "/icons/npcs/merida.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Merida",
+    "es": "Merida",
+    "pt": "Merida"
+   },
+   "ref": "npc:merida",
+   "slug": {
+    "en": "merida",
+    "es": "merida",
+    "pt": "merida"
+   }
+  },
+  {
+   "icon": "/icons/npcs/millen.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Millen",
+    "es": "Millen",
+    "pt": "Millen"
+   },
+   "ref": "npc:millen",
+   "slug": {
+    "en": "millen",
+    "es": "millen",
+    "pt": "millen"
+   }
+  },
+  {
+   "icon": "/icons/npcs/morrigan.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Morrigan",
+    "es": "Morrigan",
+    "pt": "Morrigan"
+   },
+   "ref": "npc:morrigan",
+   "slug": {
+    "en": "morrigan",
+    "es": "morrigan",
+    "pt": "morrigan"
+   }
+  },
+  {
+   "icon": "/icons/npcs/myrtle.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Myrtle",
+    "es": "Myrtle",
+    "pt": "Myrtle"
+   },
+   "ref": "npc:myrtle",
+   "slug": {
+    "en": "myrtle",
+    "es": "myrtle",
+    "pt": "myrtle"
+   }
+  },
+  {
+   "icon": "/icons/npcs/nebil.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Nebil",
+    "es": "Nebil",
+    "pt": "Nebil"
+   },
+   "ref": "npc:nebil",
+   "slug": {
+    "en": "nebil",
+    "es": "nebil",
+    "pt": "nebil"
+   }
+  },
+  {
+   "icon": "/icons/npcs/newell.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Newell",
+    "es": "Newell",
+    "pt": "Newell"
+   },
+   "ref": "npc:newell",
+   "slug": {
+    "en": "newell",
+    "es": "newell",
+    "pt": "newell"
+   }
+  },
+  {
+   "icon": "/icons/npcs/newt.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Newt",
+    "es": "Newt",
+    "pt": "Newt"
+   },
+   "ref": "npc:newt",
+   "slug": {
+    "en": "newt",
+    "es": "newt",
+    "pt": "newt"
+   }
+  },
+  {
+   "icon": "/icons/npcs/nick.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Nick",
+    "es": "Nick",
+    "pt": "Nick"
+   },
+   "ref": "npc:nick",
+   "slug": {
+    "en": "nick",
+    "es": "nick",
+    "pt": "nick"
+   }
+  },
+  {
+   "icon": "/icons/npcs/nunie.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Nunie",
+    "es": "Nunie",
+    "pt": "Nunie"
+   },
+   "ref": "npc:nunie",
+   "slug": {
+    "en": "nunie",
+    "es": "nunie",
+    "pt": "nunie"
+   }
+  },
+  {
+   "icon": "/icons/npcs/odie.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Odie",
+    "es": "Odie",
+    "pt": "Odie"
+   },
+   "ref": "npc:odie",
+   "slug": {
+    "en": "odie",
+    "es": "odie",
+    "pt": "odie"
+   }
+  },
+  {
+   "icon": "/icons/npcs/opal.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Opal",
+    "es": "Opal",
+    "pt": "Opal"
+   },
+   "ref": "npc:opal",
+   "slug": {
+    "en": "opal",
+    "es": "opal",
+    "pt": "opal"
+   }
+  },
+  {
+   "icon": "/icons/npcs/osbert.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Osbert",
+    "es": "Osbert",
+    "pt": "Osbert"
+   },
+   "ref": "npc:osbert",
+   "slug": {
+    "en": "osbert",
+    "es": "osbert",
+    "pt": "osbert"
+   }
+  },
+  {
+   "icon": "/icons/npcs/otis.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Otis",
+    "es": "Otis",
+    "pt": "Otis"
+   },
+   "ref": "npc:otis",
+   "slug": {
+    "en": "otis",
+    "es": "otis",
+    "pt": "otis"
+   }
+  },
+  {
+   "icon": "/icons/npcs/ozrid.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Ozrid",
+    "es": "Ozrid",
+    "pt": "Ozrid"
+   },
+   "ref": "npc:ozrid",
+   "slug": {
+    "en": "ozrid",
+    "es": "ozrid",
+    "pt": "ozrid"
+   }
+  },
+  {
+   "icon": "/icons/npcs/pale-goblin.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Pale Goblin",
+    "es": "Goblin Pálido",
+    "pt": "Goblin Pálido"
+   },
+   "ref": "npc:pale-goblin",
+   "slug": {
+    "en": "pale-goblin",
+    "es": "goblin-palido",
+    "pt": "goblin-palido"
+   }
+  },
+  {
+   "icon": "/icons/npcs/patas.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Patas",
+    "es": "Patas",
+    "pt": "Patas"
+   },
+   "ref": "npc:patas",
+   "slug": {
+    "en": "patas",
+    "es": "patas",
+    "pt": "patas"
+   }
+  },
+  {
+   "icon": "/icons/npcs/perlin.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Perlin",
+    "es": "Perlin",
+    "pt": "Perlin"
+   },
+   "ref": "npc:perlin",
+   "slug": {
+    "en": "perlin",
+    "es": "perlin",
+    "pt": "perlin"
+   }
+  },
+  {
+   "icon": "/icons/npcs/perry.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Perry",
+    "es": "Perry",
+    "pt": "Perry"
+   },
+   "ref": "npc:perry",
+   "slug": {
+    "en": "perry",
+    "es": "perry",
+    "pt": "perry"
+   }
+  },
+  {
+   "icon": "/icons/npcs/petrus.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Petrus",
+    "es": "Petrus",
+    "pt": "Petrus"
+   },
+   "ref": "npc:petrus",
+   "slug": {
+    "en": "petrus",
+    "es": "petrus",
+    "pt": "petrus"
+   }
+  },
+  {
+   "icon": "/icons/npcs/philip.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Philip",
+    "es": "Philip",
+    "pt": "Philip"
+   },
+   "ref": "npc:philip",
+   "slug": {
+    "en": "philip",
+    "es": "philip",
+    "pt": "philip"
+   }
+  },
+  {
+   "icon": "/icons/npcs/pythar.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Pythar",
+    "es": "Pythar",
+    "pt": "Pythar"
+   },
+   "ref": "npc:pythar",
+   "slug": {
+    "en": "pythar",
+    "es": "pythar",
+    "pt": "pythar"
+   }
+  },
+  {
+   "icon": "/icons/npcs/ramel.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Ramel",
+    "es": "Ramel",
+    "pt": "Ramel"
+   },
+   "ref": "npc:ramel",
+   "slug": {
+    "en": "ramel",
+    "es": "ramel",
+    "pt": "ramel"
+   }
+  },
+  {
+   "icon": "/icons/npcs/rasobar.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Rasobar",
+    "es": "Rasobar",
+    "pt": "Rasobar"
+   },
+   "ref": "npc:rasobar",
+   "slug": {
+    "en": "rasobar",
+    "es": "rasobar",
+    "pt": "rasobar"
+   }
+  },
+  {
+   "icon": "/icons/npcs/reginald.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Reginald",
+    "es": "Reginald",
+    "pt": "Reginald"
+   },
+   "ref": "npc:reginald",
+   "slug": {
+    "en": "reginald",
+    "es": "reginald",
+    "pt": "reginald"
+   }
+  },
+  {
+   "icon": "/icons/npcs/reika.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Reika",
+    "es": "Reika",
+    "pt": "Reika"
+   },
+   "ref": "npc:reika",
+   "slug": {
+    "en": "reika",
+    "es": "reika",
+    "pt": "reika"
+   }
+  },
+  {
+   "icon": "/icons/npcs/ribamar.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Ribamar",
+    "es": "Ribamar",
+    "pt": "Ribamar"
+   },
+   "ref": "npc:ribamar",
+   "slug": {
+    "en": "ribamar",
+    "es": "ribamar",
+    "pt": "ribamar"
+   }
+  },
+  {
+   "icon": "/icons/npcs/roland.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Roland",
+    "es": "Roland",
+    "pt": "Roland"
+   },
+   "ref": "npc:roland",
+   "slug": {
+    "en": "roland",
+    "es": "roland",
+    "pt": "roland"
+   }
+  },
+  {
+   "icon": "/icons/npcs/roni.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Roni",
+    "es": "Roni",
+    "pt": "Roni"
+   },
+   "ref": "npc:roni",
+   "slug": {
+    "en": "roni",
+    "es": "roni",
+    "pt": "roni"
+   }
+  },
+  {
+   "icon": "/icons/npcs/rosel.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Rosel",
+    "es": "Rosel",
+    "pt": "Rosel"
+   },
+   "ref": "npc:rosel",
+   "slug": {
+    "en": "rosel",
+    "es": "rosel",
+    "pt": "rosel"
+   }
+  },
+  {
+   "icon": "/icons/npcs/rubius.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Rubius",
+    "es": "Rubius",
+    "pt": "Rubius"
+   },
+   "ref": "npc:rubius",
+   "slug": {
+    "en": "rubius",
+    "es": "rubius",
+    "pt": "rubius"
+   }
+  },
+  {
+   "icon": "/icons/npcs/rue.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Rue",
+    "es": "Rue",
+    "pt": "Rue"
+   },
+   "ref": "npc:rue",
+   "slug": {
+    "en": "rue",
+    "es": "rue",
+    "pt": "rue"
+   }
+  },
+  {
+   "icon": "/icons/npcs/rufus.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Rufus",
+    "es": "Rufus",
+    "pt": "Rufus"
+   },
+   "ref": "npc:rufus",
+   "slug": {
+    "en": "rufus",
+    "es": "rufus",
+    "pt": "rufus"
+   }
+  },
+  {
+   "icon": "/icons/npcs/sabrina.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Sabrina",
+    "es": "Sabrina",
+    "pt": "Sabrina"
+   },
+   "ref": "npc:sabrina",
+   "slug": {
+    "en": "sabrina",
+    "es": "sabrina",
+    "pt": "sabrina"
+   }
+  },
+  {
+   "icon": "/icons/npcs/sal.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Sal",
+    "es": "Sal",
+    "pt": "Sal"
+   },
+   "ref": "npc:sal",
+   "slug": {
+    "en": "sal",
+    "es": "sal",
+    "pt": "sal"
+   }
+  },
+  {
+   "icon": "/icons/npcs/salazar.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Salazar",
+    "es": "Salazar",
+    "pt": "Salazar"
+   },
+   "ref": "npc:salazar",
+   "slug": {
+    "en": "salazar",
+    "es": "salazar",
+    "pt": "salazar"
+   }
+  },
+  {
+   "icon": "/icons/npcs/selene.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Selene",
+    "es": "Selene",
+    "pt": "Selene"
+   },
+   "ref": "npc:selene",
+   "slug": {
+    "en": "selene",
+    "es": "selene",
+    "pt": "selene"
+   }
+  },
+  {
+   "icon": "/icons/npcs/seraphina.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Seraphina",
+    "es": "Seraphina",
+    "pt": "Seraphina"
+   },
+   "ref": "npc:seraphina",
+   "slug": {
+    "en": "seraphina",
+    "es": "seraphina",
+    "pt": "seraphina"
+   }
+  },
+  {
+   "icon": "/icons/npcs/sercha.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Sercha",
+    "es": "Sercha",
+    "pt": "Sercha"
+   },
+   "ref": "npc:sercha",
+   "slug": {
+    "en": "sercha",
+    "es": "sercha",
+    "pt": "sercha"
+   }
+  },
+  {
+   "icon": "/icons/npcs/serilda.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Serilda",
+    "es": "Serilda",
+    "pt": "Serilda"
+   },
+   "ref": "npc:serilda",
+   "slug": {
+    "en": "serilda",
+    "es": "serilda",
+    "pt": "serilda"
+   }
+  },
+  {
+   "icon": "/icons/npcs/seymour.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Seymour",
+    "es": "Seymour",
+    "pt": "Seymour"
+   },
+   "ref": "npc:seymour",
+   "slug": {
+    "en": "seymour",
+    "es": "seymour",
+    "pt": "seymour"
+   }
+  },
+  {
+   "icon": "/icons/npcs/sigurd.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Sigurd",
+    "es": "Sigurd",
+    "pt": "Sigurd"
+   },
+   "ref": "npc:sigurd",
+   "slug": {
+    "en": "sigurd",
+    "es": "sigurd",
+    "pt": "sigurd"
+   }
+  },
+  {
+   "icon": "/icons/npcs/sky.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Sky",
+    "es": "Sky",
+    "pt": "Sky"
+   },
+   "ref": "npc:sky",
+   "slug": {
+    "en": "sky",
+    "es": "sky",
+    "pt": "sky"
+   }
+  },
+  {
+   "icon": "/icons/npcs/sushi.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Sushi",
+    "es": "Sushi",
+    "pt": "Sushi"
+   },
+   "ref": "npc:sushi",
+   "slug": {
+    "en": "sushi",
+    "es": "sushi",
+    "pt": "sushi"
+   }
+  },
+  {
+   "icon": "/icons/npcs/tansy.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Tansy",
+    "es": "Tansy",
+    "pt": "Tansy"
+   },
+   "ref": "npc:tansy",
+   "slug": {
+    "en": "tansy",
+    "es": "tansy",
+    "pt": "tansy"
+   }
+  },
+  {
+   "icon": "/icons/npcs/thadeus.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Thadeus",
+    "es": "Thadeus",
+    "pt": "Thadeus"
+   },
+   "ref": "npc:thadeus",
+   "slug": {
+    "en": "thadeus",
+    "es": "thadeus",
+    "pt": "thadeus"
+   }
+  },
+  {
+   "icon": "/icons/npcs/thelma.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Thelma",
+    "es": "Thelma",
+    "pt": "Thelma"
+   },
+   "ref": "npc:thelma",
+   "slug": {
+    "en": "thelma",
+    "es": "thelma",
+    "pt": "thelma"
+   }
+  },
+  {
+   "icon": "/icons/npcs/thibault.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Thibault",
+    "es": "Thibault",
+    "pt": "Thibault"
+   },
+   "ref": "npc:thibault",
+   "slug": {
+    "en": "thibault",
+    "es": "thibault",
+    "pt": "thibault"
+   }
+  },
+  {
+   "icon": "/icons/npcs/thomas.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Thomas",
+    "es": "Thomas",
+    "pt": "Thomas"
+   },
+   "ref": "npc:thomas",
+   "slug": {
+    "en": "thomas",
+    "es": "thomas",
+    "pt": "thomas"
+   }
+  },
+  {
+   "icon": "/icons/npcs/tim.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Tim",
+    "es": "Tim",
+    "pt": "Tim"
+   },
+   "ref": "npc:tim",
+   "slug": {
+    "en": "tim",
+    "es": "tim",
+    "pt": "tim"
+   }
+  },
+  {
+   "icon": "/icons/npcs/timur.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Timur",
+    "es": "Timur",
+    "pt": "Timur"
+   },
+   "ref": "npc:timur",
+   "slug": {
+    "en": "timur",
+    "es": "timur",
+    "pt": "timur"
+   }
+  },
+  {
+   "icon": "/icons/npcs/tink.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Tink",
+    "es": "Tink",
+    "pt": "Tink"
+   },
+   "ref": "npc:tink",
+   "slug": {
+    "en": "tink",
+    "es": "tink",
+    "pt": "tink"
+   }
+  },
+  {
+   "icon": "/icons/npcs/tock.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Tock",
+    "es": "Tock",
+    "pt": "Tock"
+   },
+   "ref": "npc:tock",
+   "slug": {
+    "en": "tock",
+    "es": "tock",
+    "pt": "tock"
+   }
+  },
+  {
+   "icon": "/icons/npcs/torvan.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Torvan",
+    "es": "Torvan",
+    "pt": "Torvan"
+   },
+   "ref": "npc:torvan",
+   "slug": {
+    "en": "torvan",
+    "es": "torvan",
+    "pt": "torvan"
+   }
+  },
+  {
+   "icon": "/icons/npcs/tristan.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Tristan",
+    "es": "Tristan",
+    "pt": "Tristan"
+   },
+   "ref": "npc:tristan",
+   "slug": {
+    "en": "tristan",
+    "es": "tristan",
+    "pt": "tristan"
+   }
+  },
+  {
+   "icon": "/icons/npcs/tufi.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Tufi",
+    "es": "Tufi",
+    "pt": "Tufi"
+   },
+   "ref": "npc:tufi",
+   "slug": {
+    "en": "tufi",
+    "es": "tufi",
+    "pt": "tufi"
+   }
+  },
+  {
+   "icon": "/icons/npcs/tutu.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Tutu",
+    "es": "Tutu",
+    "pt": "Tutu"
+   },
+   "ref": "npc:tutu",
+   "slug": {
+    "en": "tutu",
+    "es": "tutu",
+    "pt": "tutu"
+   }
+  },
+  {
+   "icon": "/icons/npcs/ulrich.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Ulrich",
+    "es": "Ulrich",
+    "pt": "Ulrich"
+   },
+   "ref": "npc:ulrich",
+   "slug": {
+    "en": "ulrich",
+    "es": "ulrich",
+    "pt": "ulrich"
+   }
+  },
+  {
+   "icon": "/icons/npcs/vee.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Vee",
+    "es": "Vee",
+    "pt": "Vee"
+   },
+   "ref": "npc:vee",
+   "slug": {
+    "en": "vee",
+    "es": "vee",
+    "pt": "vee"
+   }
+  },
+  {
+   "icon": "/icons/npcs/violet.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Violet",
+    "es": "Violet",
+    "pt": "Violet"
+   },
+   "ref": "npc:violet",
+   "slug": {
+    "en": "violet",
+    "es": "violet",
+    "pt": "violet"
+   }
+  },
+  {
+   "icon": "/icons/npcs/wilfred.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Wilfred",
+    "es": "Wilfred",
+    "pt": "Wilfred"
+   },
+   "ref": "npc:wilfred",
+   "slug": {
+    "en": "wilfred",
+    "es": "wilfred",
+    "pt": "wilfred"
+   }
+  },
+  {
+   "icon": "/icons/npcs/wolfram.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Wolfram",
+    "es": "Wolfram",
+    "pt": "Wolfram"
+   },
+   "ref": "npc:wolfram",
+   "slug": {
+    "en": "wolfram",
+    "es": "wolfram",
+    "pt": "wolfram"
+   }
+  },
+  {
+   "icon": "/icons/npcs/wounded-dylan.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Wounded Dylan",
+    "es": "Dylan Herido",
+    "pt": "Dylan Ferido"
+   },
+   "ref": "npc:wounded-dylan",
+   "slug": {
+    "en": "wounded-dylan",
+    "es": "dylan-herido",
+    "pt": "dylan-ferido"
+   }
+  },
+  {
+   "icon": "/icons/npcs/yacht.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Yacht",
+    "es": "Yacht",
+    "pt": "Yacht"
+   },
+   "ref": "npc:yacht",
+   "slug": {
+    "en": "yacht",
+    "es": "yacht",
+    "pt": "yacht"
+   }
+  },
+  {
+   "icon": "/icons/npcs/yordin.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Yordin",
+    "es": "Yordin",
+    "pt": "Yordin"
+   },
+   "ref": "npc:yordin",
+   "slug": {
+    "en": "yordin",
+    "es": "yordin",
+    "pt": "yordin"
+   }
+  },
+  {
+   "icon": "/icons/npcs/yoz.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Yoz",
+    "es": "Yoz",
+    "pt": "Yoz"
+   },
+   "ref": "npc:yoz",
+   "slug": {
+    "en": "yoz",
+    "es": "yoz",
+    "pt": "yoz"
+   }
+  },
+  {
+   "icon": "/icons/npcs/yseult.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Yseult",
+    "es": "Yseult",
+    "pt": "Yseult"
+   },
+   "ref": "npc:yseult",
+   "slug": {
+    "en": "yseult",
+    "es": "yseult",
+    "pt": "yseult"
+   }
+  },
+  {
+   "icon": "/icons/npcs/yusuf.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Yusuf",
+    "es": "Yusuf",
+    "pt": "Yusuf"
+   },
+   "ref": "npc:yusuf",
+   "slug": {
+    "en": "yusuf",
+    "es": "yusuf",
+    "pt": "yusuf"
+   }
+  },
+  {
+   "icon": "/icons/npcs/zebulon.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Zebulon",
+    "es": "Zebulon",
+    "pt": "Zebulon"
+   },
+   "ref": "npc:zebulon",
+   "slug": {
+    "en": "zebulon",
+    "es": "zebulon",
+    "pt": "zebulon"
+   }
+  },
+  {
+   "icon": "/icons/npcs/zoe.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Zoe",
+    "es": "Zoe",
+    "pt": "Zoe"
+   },
+   "ref": "npc:zoe",
+   "slug": {
+    "en": "zoe",
+    "es": "zoe",
+    "pt": "zoe"
+   }
+  },
+  {
+   "icon": "/icons/npcs/zori.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "en": "Zori",
+    "es": "Zori",
+    "pt": "Zori"
+   },
+   "ref": "npc:zori",
+   "slug": {
+    "en": "zori",
+    "es": "zori",
+    "pt": "zori"
    }
   },
   {
@@ -4630,6 +6407,19 @@
     "en": "wilfred-s-gift",
     "es": "regalo-de-wilfred",
     "pt": "presente-de-wilfred"
+   }
+  },
+  {
+   "name": {
+    "en": "Father knows best",
+    "es": "Padre sabe más",
+    "pt": "Pai sabe mais"
+   },
+   "ref": "quest:q1045",
+   "slug": {
+    "en": "father-knows-best",
+    "es": "padre-sabe-mas",
+    "pt": "pai-sabe-mais"
    }
   },
   {
@@ -5219,6 +7009,19 @@
   },
   {
    "name": {
+    "en": "Nordha's East Farmer",
+    "es": "Granjero del Este de Nordha",
+    "pt": "Fazendeiro do Leste de Nordha"
+   },
+   "ref": "quest:q1188",
+   "slug": {
+    "en": "nordha-s-east-farmer",
+    "es": "granjero-del-este-de-nordha",
+    "pt": "fazendeiro-do-leste-de-nordha"
+   }
+  },
+  {
+   "name": {
     "en": "Tomb Ornate Chest",
     "es": "Cofre Ornamentado de la Tumba",
     "pt": "Baú Ornamentado da Tumba"
@@ -5319,6 +7122,19 @@
     "en": "church-investigated",
     "es": "iglesia-investigada",
     "pt": "igreja-investigada"
+   }
+  },
+  {
+   "name": {
+    "en": "Deceived by Loke",
+    "es": "Engañado por Loke",
+    "pt": "Enganado por Loke"
+   },
+   "ref": "quest:q1207",
+   "slug": {
+    "en": "deceived-by-loke",
+    "es": "enganado-por-loke",
+    "pt": "enganado-por-loke"
    }
   },
   {

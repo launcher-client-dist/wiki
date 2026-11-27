@@ -1,0 +1,63 @@
+---
+/**
+ * What an NPC does beyond trade, only what the data has: travel (where to, the NPC at the far end, the fare), the class
+ * it teaches, healing. No invented services.
+ */
+import EntityLink from "../entity/EntityLink.astro";
+import GameIcon from "../ui/GameIcon.astro";
+import MapLink from "../ui/MapLink.astro";
+import Value from "../ui/Value.astro";
+import { ui, fill } from "../../i18n/index.ts";
+import { DEFAULT_LANG, isLang, type Lang } from "../../lib/i18n.ts";
+import { placeLine } from "../../lib/monsters/data.ts";
+import type { NpcShift } from "../../lib/npcs/data.ts";
+interface Props {
+  sh: NpcShift;
+  nested?: boolean;
+  id: string;
+}
+const { sh, nested = false, id } = Astro.props;
+const lang: Lang = isLang(Astro.params.lang) ? Astro.params.lang : DEFAULT_LANG;
+const t = ui(lang);
+const tn = t.npc;
+const s = sh.services ?? {};
+const CLASS: Record<string, string> = t.item.classes as Record<string, string>;
+const H = nested ? "h3" : "h2";
+---
+{(s.travel || s.trainer || s.heal) && (
+  <section class="block services" aria-labelledby={`${id}-services`} data-section="services">
+    <H id={`${id}-services`}>{tn.servicesTitle}</H>
+    <ul class="svc">
+      {s.travel && (
+        <li>
+          <span class="sicon"><GameIcon name="src-map" fit={28} /></span>
+          <span class="sline" data-flow>
+            <span>{tn.travel}</span>
+            {s.travel.npc && <EntityLink to={s.travel.npc} iconSize={28} />}
+            <span class="muted">{placeLine(s.travel.place, lang, t.item.near, t.item.underground)}</span>
+            <MapLink variant="inline" href={s.travel.link} label={t.item.mapLink} />
+            {s.travel.fare && <span class="fare">{tn.fare} <Value kind="gold" n={s.travel.fare} lang={lang} /></span>}
+          </span>
+        </li>
+      )}
+      {s.trainer && (
+        <li>
+          <span class="sicon"><GameIcon name={`class-${s.trainer.class}`} fit={28} /></span>
+          <span class="sline" data-flow><span>{fill(tn.trainer, { c: CLASS[s.trainer.class] ?? s.trainer.class })}</span><Value kind="gold" n={s.trainer.price} lang={lang} /></span>
+        </li>
+      )}
+      {s.heal && (
+        <li><span class="sicon"><GameIcon name="stat-health" fit={28} /></span><span>{tn.heal}</span></li>
+      )}
+    </ul>
+  </section>
+)}
+<style>
+  .services { margin-top: var(--s-6); }
+  .svc { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+  .svc li { display: grid; grid-template-columns: 44px minmax(0, 1fr); column-gap: 14px; align-items: center; }
+  .sicon { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 10px; background: var(--well); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06); }
+  .sline { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px; }
+  .muted { color: var(--text-muted); font-size: var(--fs-sm); }
+  .fare { display: inline-flex; align-items: center; gap: 6px; font-size: var(--fs-sm); color: var(--text-muted); }
+</style>

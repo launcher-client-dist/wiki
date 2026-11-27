@@ -30,7 +30,7 @@ export type PlaceKind = (typeof PLACE_KINDS)[number];
 export const LAYER_ICON: Record<LayerKey, string> = { monsters: "src-drop", bosses: "boss", npcs: "src-shop", places: "house", items: "stack" };
 export const PLACE_ICON: Record<PlaceKind, string> = { temple: "house", depot: "stack", well: "cat-drink", forge: "anvil", runeTable: "rune", cook: "src-cook", dock: "src-map" };
 
-interface RawPoint { x: number; z: number; f: string; ref?: string; n?: number; cells?: [number, number][]; kind?: PlaceKind; town?: string; hours?: [number, number]; invasion?: boolean; sells?: number; buys?: number; spoiler?: boolean; npc?: string }
+interface RawPoint { x: number; z: number; f: string; ref?: string; n?: number; cells?: [number, number][]; kind?: PlaceKind; town?: string; hours?: [number, number]; invasion?: boolean; sells?: number; buys?: number; spoiler?: boolean; npc?: string; shift?: number }
 export interface PointsFile { floors: string[]; layers: Record<LayerKey, RawPoint[]> }
 export const POINTS = pointsJson as unknown as PointsFile;
 
@@ -124,6 +124,8 @@ export function buildLayers(lang: Lang, registry: Registry, monsters: readonly M
       // a monster group's creatures, each on its own spawn cell (offsets from the group's spot, flat: dx, dz, ...); none
       // where the group must stay one marker
       if (layer === "monsters") row.push(p.cells ? p.cells.flat().join(",") : "");
+      // an NPC's marker is one of its shifts (an actor): its card opens the page at that shift (#turno-N)
+      if (layer === "npcs") row.push(p.shift ?? 0);
       if (p.spoiler) row.push(LAYERS.indexOf(layer));
       target.p.push(row);
     }

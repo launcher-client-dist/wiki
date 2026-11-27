@@ -11,6 +11,8 @@ English is the game's own text. Every other language comes from the game client'
 | Actor | the players' client (0.2.6) | the original game's client |
 | Enum | the players' client (0.2.6) | the original game's client |
 | Item | the players' client (0.2.6) | the original game's client |
+| Keyword | the players' client (0.2.6) | the original game's client |
+| NPC | the players' client (0.2.6) | the original game's client |
 | Quest | the players' client (0.2.6) | the original game's client |
 | Spell | the players' client (0.2.6) | the original game's client |
 | Track | the players' client (0.2.6) | the original game's client |

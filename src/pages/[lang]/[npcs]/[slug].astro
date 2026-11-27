@@ -1,0 +1,262 @@
+---
+/**
+ * An NPC's page (ops/wiki/npc-page.md): the hero (render, name, the game's description, its own Job line, where it
+ * stands with a map link), its shifts (place, hours in game time and in the reader's clock; with several shifts, each
+ * one's own shop), the shop and what it buys, its services, the Conversa (the game's keyword answers; quest hints in a
+ * spoiler), the quests it gives (spoiler), who stands nearby. A quest-only NPC: everything below the hero is a spoiler.
+ */
+import PageShell from "../../../components/layout/PageShell.astro";
+import Banner from "../../../components/ui/Banner.astro";
+import RenderSlot from "../../../components/ui/RenderSlot.astro";
+import InfoBox from "../../../components/ui/InfoBox.astro";
+import Spoiler from "../../../components/ui/Spoiler.astro";
+import MapLink from "../../../components/ui/MapLink.astro";
+import Card from "../../../components/ui/Card.astro";
+import IconSlot from "../../../components/ui/IconSlot.astro";
+import EntityLink from "../../../components/entity/EntityLink.astro";
+import GameIcon from "../../../components/ui/GameIcon.astro";
+import TipTag from "../../../components/ui/TipTag.astro";
+import NpcShift from "../../../components/npc/NpcShift.astro";
+import NpcTrade from "../../../components/npc/NpcTrade.astro";
+import NpcServices from "../../../components/npc/NpcServices.astro";
+import NpcTalk from "../../../components/npc/NpcTalk.astro";
+import { ui, fill } from "../../../i18n/index.ts";
+import { HREFLANG, LANGS, LOCALE, type Lang } from "../../../lib/i18n.ts";
+import { absoluteUrl, homePath, SECTIONS, sectionPath } from "../../../lib/routes.ts";
+import { siteData, STUB_BY_REF } from "../../../lib/site-registry.ts";
+import { gameHour, placeLine } from "../../../lib/monsters/data.ts";
+import { hasHours, serviceKeys, type NpcData } from "../../../lib/npcs/data.ts";
+import { allNames, displayName, nameWithAid } from "../../../lib/names.ts";
+
+export async function getStaticPaths() {
+  const { npcs } = await siteData();
+  return npcs.flatMap((n) => {
+    const slug = STUB_BY_REF.get(n.ref)!.slug;
+    return LANGS.map((lang) => ({ params: { lang, npcs: SECTIONS.npc.slug[lang], slug: slug[lang] }, props: { id: n.id } }));
+  });
+}
+const lang = Astro.params.lang as Lang;
+const t = ui(lang);
+const tn = t.npc;
+const ti = t.item;
+const { registry, npcs } = await siteData();
+const n = npcs.find((x) => x.id === Astro.props.id)! as NpcData;
+const ent = registry.require(n.ref);
+const dn = displayName(ent.name, "npc", lang);
+const alternates = Object.fromEntries(LANGS.map((l) => [l, registry.url(n.ref, l)!])) as Record<Lang, string>;
+const num = (v: number) => v.toLocaleString(LOCALE[lang]);
+/** A text in the page's language, or the game's English (marked). */
+const txt = (l: Record<string, unknown> & { en: string; _fb?: string[] }) => ({ text: (l[lang] as string | undefined) ?? l.en, english: !!l._fb?.includes(lang) });
+const title = txt(n.title as never);
+const job = n.job ? txt(n.job as never) : null;
+const first = n.shifts[0]!;
+const many = n.shifts.length > 1;
+const services = serviceKeys(n);
+const gated = !n.spoiler && n.shifts.some((s) => s.spoiler);
+/** Who stands nearby: at most six (two full rows of cards). */
+const near = n.near.filter((r) => registry.get(r)).slice(0, 6);
+/** Another character whose name holds this one's, or the other way round (Dylan / Wounded Dylan): "see also". */
+const enName = ent.name.en.toLowerCase();
+const seeAlso = npcs.filter((o) => {
+  if (o.id === n.id || (o.spoiler && !n.spoiler)) return false;
+  const on = registry.require(o.ref).name.en.toLowerCase();
+  return on.length >= 3 && enName.length >= 3 && (on.split(" ").includes(enName) || enName.split(" ").includes(on));
+}).map((o) => o.ref);
+/** The page's description: the game's own description where translated, and always what the page holds (the Job line
+ *  stays out: some carry an emote or a line break). */
+const description = n.spoiler ? fill(tn.metaShop, { name: nameWithAid(dn) })
+  : [title.english ? null : title.text, fill(tn.metaShop, { name: nameWithAid(dn) })].filter(Boolean).join(" ");
+const sellsN = new Set(n.shifts.flatMap((s) => (s.sells ?? []).map((r) => r.item))).size;
+const buysN = new Set(n.shifts.flatMap((s) => (s.buys ?? []).map((r) => r.item))).size;
+const jsonLd = [{
+  "@context": "https://schema.org",
+  "@type": "Thing",
+  name: dn.name,
+  alternateName: allNames(ent.name).filter((x) => x !== dn.name),
+  description,
+  url: absoluteUrl(alternates[lang]),
+  inLanguage: HREFLANG[lang],
+  ...(n.render && !n.spoiler ? { image: absoluteUrl(n.render.src) } : {}),
+}];
+---
+<PageShell lang={lang} title={nameWithAid(dn)} description={description} alternates={alternates} current="npc"
+  searchable={{ kind: "npc", image: ent.icon?.src }} jsonLd={jsonLd}
+  crumbs={[{ label: t.home, href: homePath(lang) }, { label: tn.listTitle, href: sectionPath("npc", lang) }, { label: dn.name }]}>
+  <div class="container" id="npc-page">
+    <div class="layout">
+      <div class="hero-area">
+        <Banner>
+          <div slot="media" class="hero-render">
+            <RenderSlot src={n.render?.src} alt={dn.name} width={n.render?.size[0]} height={n.render?.size[1]} size={300} eager />
+          </div>
+          <p class="kicker" data-pagefind-ignore>{n.spoiler ? tn.questOnlyKicker : tn.kicker}</p>
+          <h1 lang={dn.nameLang !== lang ? HREFLANG[dn.nameLang] : undefined}>{dn.name}</h1>
+          {!n.spoiler && <p class="alt" lang={title.english ? "en" : undefined}>{title.text}</p>}
+          {!n.spoiler && job && <p class="summary" lang={job.english ? "en" : undefined}>“{job.text}”</p>}
+          {!n.spoiler && (
+            <p class="where" data-section="where" data-flow>
+              <span class="wicon"><GameIcon name="src-map" fit={22} /></span>
+              <span>{placeLine(first.place, lang, ti.near, ti.underground)}</span>
+              <MapLink variant="inline" href={first.link} entity={n.ref} label={ti.mapLink} />
+            </p>
+          )}
+          <div class="tags" slot="foot" data-pagefind-ignore>
+            {!n.spoiler && (hasHours(n) ? <TipTag icon="time" tip={tn.shiftsIntro}>{tn.hoursTag}</TipTag> : <TipTag icon="time" tip={tn.always}>{tn.hoursAlways}</TipTag>)}
+            {!n.spoiler && sellsN > 0 && <TipTag icon="src-shop" tip={tn.shopIntro}>{fill(tn.sellsN, { n: num(sellsN) })}</TipTag>}
+            {!n.spoiler && buysN > 0 && <TipTag icon="gold" tip={tn.buysIntro}>{fill(tn.buysN, { n: num(buysN) })}</TipTag>}
+            {!n.spoiler && services.includes("travel") && <TipTag icon="src-map" tip={tn.servicesTitle}>{tn.travel}</TipTag>}
+            {gated && <TipTag icon="src-quest" tip={tn.afterQuestTip}>{tn.afterQuest}</TipTag>}
+          </div>
+        </Banner>
+      </div>
+
+      <div class="main">
+        {n.spoiler ? (
+          <section class="block" data-section="quest-only">
+            <Spoiler title={tn.questOnlySpoiler}>
+              <p class="alt-in" lang={title.english ? "en" : undefined}>{title.text}</p>
+              {job && <p class="alt-in" lang={job.english ? "en" : undefined}>“{job.text}”</p>}
+              <div class="shifts">{n.shifts.map((sh, i) => <NpcShift sh={sh} i={i} many={true} entity={n.ref} />)}</div>
+              <NpcTalk lines={n.conversation} nested id="q" />
+            </Spoiler>
+          </section>
+        ) : (
+          <>
+            {(many || hasHours(n)) && (
+              <section class="block" aria-labelledby="h-shifts" data-section="shifts">
+                <h2 id="h-shifts">{many ? tn.shiftsTitle : tn.placeTitle}</h2>
+                <p class="muted">{tn.shiftsIntro}</p>
+                <div class="shifts">{n.shifts.map((sh, i) => <NpcShift sh={sh} i={i} many={many} entity={n.ref} />)}</div>
+              </section>
+            )}
+            {!many && (first.spoiler && (first.sells?.length || first.buys?.length) ? (
+              <section class="block" data-section="gated-shop"><Spoiler title={tn.afterQuest}><NpcTrade sh={first} id="s" nested /></Spoiler></section>
+            ) : <NpcTrade sh={first} id="s" />)}
+            {!many && <NpcServices sh={first} id="s" />}
+            <NpcTalk lines={n.conversation} id="c" />
+            {n.quests.length > 0 && (
+              <section class="block" aria-labelledby="h-quests" data-section="quests">
+                <h2 id="h-quests">{tn.questsTitle}</h2>
+                <Spoiler title={tn.questsSpoiler}>
+                  <ul class="plain">{n.quests.map((r) => <li><EntityLink to={r} /></li>)}</ul>
+                </Spoiler>
+              </section>
+            )}
+          </>
+        )}
+
+        {near.length > 0 && (
+          <section class="block" aria-labelledby="h-near" data-pagefind-ignore data-section="near">
+            <h2 id="h-near">{tn.nearTitle}</h2>
+            <div class="similar">
+              {near.map((r) => {
+                const e = registry.require(r);
+                const o = npcs.find((x) => x.ref === r)!;
+                return (
+                  <Card href={registry.url(r, lang)!} title={displayName(e.name, "npc", lang).name} kicker={placeLine(o.shifts[0]!.place, lang, ti.near, ti.underground)} layout="row">
+                    <IconSlot slot="emblem" icon={e.icon ?? null} kind="npc" size={56} />
+                  </Card>
+                );
+              })}
+            </div>
+          </section>
+        )}
+
+        {seeAlso.length > 0 && (
+          <section class="block" aria-labelledby="h-see" data-pagefind-ignore data-section="see-also">
+            <h2 id="h-see">{tn.seeAlso}</h2>
+            <ul class="plain">{seeAlso.map((r) => <li><EntityLink to={r} iconSize={40} /></li>)}</ul>
+          </section>
+        )}
+      </div>
+
+      {!n.spoiler && (
+        <aside class="side">
+          <InfoBox title={tn.kicker}>
+            <ul class="facts">
+              <li><span class="sicon"><GameIcon name="src-map" fit={28} /></span><span>{tn.colPlace}</span><b>{first.place.town[lang]}</b></li>
+              <li><span class="sicon"><GameIcon name="time" fit={28} /></span><span>{tn.colHours}</span><b class="num">{hasHours(n) ? n.shifts.filter((s) => s.hours).map((s) => `${gameHour(s.hours![0])}–${gameHour(s.hours![1])}`).join(" · ") : tn.hoursAlways}</b></li>
+              {sellsN > 0 && <li><span class="sicon"><GameIcon name="src-shop" fit={28} /></span><span>{tn.colSells}</span><b class="num">{num(sellsN)}</b></li>}
+              {buysN > 0 && <li><span class="sicon"><GameIcon name="gold" fit={28} /></span><span>{tn.colBuys}</span><b class="num">{num(buysN)}</b></li>}
+              {services.includes("travel") && <li><span class="sicon"><GameIcon name="src-map" fit={28} /></span><span>{tn.servicesTitle}</span><b>{tn.travel}</b></li>}
+            </ul>
+          </InfoBox>
+        </aside>
+      )}
+    </div>
+  </div>
+</PageShell>
+<script>
+  // a shift's hours and a shop's restock in the reader's own clock (src/lib/monsters/window.ts: shared with the map)
+  import { nextWindow } from "../../../lib/monsters/window.ts";
+  function paint() {
+    const fmt = new Intl.DateTimeFormat(document.documentElement.lang || undefined, { hour: "2-digit", minute: "2-digit" });
+    const now = Date.now() / 1000;
+    for (const el of document.querySelectorAll<HTMLElement>("[data-win-start]")) {
+      const out = el.querySelector<HTMLElement>("[data-win-next]");
+      if (!out) continue;
+      const w = nextWindow({ start: Number(el.dataset.winStart), end: Number(el.dataset.winEnd) }, now);
+      const text = w.open ? (out.dataset.tNow ?? "").replace("{t}", fmt.format(w.until * 1000)) : (out.dataset.tBack ?? "").replace("{t}", fmt.format(w.at * 1000));
+      out.textContent = `${text} (${out.dataset.tClock})`;
+    }
+    for (const el of document.querySelectorAll<HTMLElement>("[data-restock]")) {
+      // a game day is one real hour: game hour H starts at real second H x 150 of every hour
+      const s = Number(el.dataset.restock) * 150;
+      const hour = now - (now % 3600);
+      const at = hour + s > now ? hour + s : hour + 3600 + s;
+      el.textContent = `${(el.dataset.t ?? "").replace("{t}", fmt.format(at * 1000))} (${el.dataset.tClock})`;
+    }
+  }
+  paint();
+  setInterval(paint, 30000);
+</script>
+<style>
+  .hero-render { position: relative; isolation: isolate; width: 300px; margin: -12px 0; }
+  .hero-render::before { content: ""; position: absolute; inset: -24px; z-index: -1; border-radius: 50%; background: var(--render-halo), var(--hero-glow); }
+  .hero-render :global(img) { filter: var(--render-rim); }
+  @media (max-width: 759px) { .hero-render { width: 240px; margin: 0; } }
+  .kicker { margin: 0; font: 700 var(--fs-xs) / 1 var(--font-body); letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent-text); }
+  .alt { margin: 0; color: var(--banner-muted); font-size: var(--fs-lg); }
+  .summary { margin: 2px 0 0; max-width: 34rem; color: var(--banner-text); font-size: var(--fs-md); line-height: 1.5; font-style: italic; }
+  .where { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; margin: 6px 0 0; color: var(--banner-text); }
+  .wicon { display: inline-grid; place-items: center; width: 32px; height: 32px; flex: none; border-radius: 8px; background: var(--well); }
+  .tags { position: relative; display: flex; flex-wrap: wrap; gap: 8px; }
+  @container foot (max-width: 679px) {
+    .tags { display: inline-grid; grid-template-columns: minmax(0, max-content); }
+    .tags :global(.tiptag) { display: block; }
+    .tags :global(.tt) { width: 100%; }
+  }
+  .tags :global(.tag) { background: var(--banner-chip-bg); color: var(--banner-text); white-space: normal; }
+
+  .layout { display: grid; gap: var(--s-6); grid-template-columns: minmax(0, 1fr); grid-template-areas: "hero" "side" "main"; }
+  .hero-area { grid-area: hero; min-width: 0; }
+  .main { grid-area: main; min-width: 0; container: main / inline-size; }
+  .side { grid-area: side; min-width: 0; }
+  @media (min-width: 1000px) {
+    .layout { grid-template-columns: minmax(0, 1fr) 330px; grid-template-areas: "hero side" "main side"; align-items: start; column-gap: var(--s-6); row-gap: var(--s-7); }
+  }
+  @media (min-width: 1000px) and (max-width: 1199px) { .layout { grid-template-areas: "hero hero" "main side"; } }
+  .block + .block { margin-top: var(--s-7); }
+  .block > h2 { margin-bottom: var(--s-4); }
+  .block > .muted { margin: calc(-1 * var(--s-2)) 0 var(--s-4); }
+  .muted { color: var(--text-muted); }
+  .shifts { display: grid; gap: 14px; }
+  .alt-in { margin: 0 0 var(--s-3); color: var(--text-muted); }
+  .plain { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+  .similar { display: grid; gap: 12px; grid-template-columns: minmax(0, 1fr); }
+  @container main (min-width: 520px) {
+    .similar { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .similar > :global(:last-child:nth-child(odd)) { grid-column: 1 / -1; }
+  }
+  @container main (min-width: 780px) {
+    .similar:not(:has(> :nth-child(4):last-child)) { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .similar:not(:has(> :nth-child(4):last-child)) > :global(:last-child:nth-child(odd)) { grid-column: auto; }
+  }
+  .num { font-family: var(--font-num); }
+  .facts { list-style: none; margin: 0; padding: 4px 0; display: grid; }
+  .facts li { display: grid; grid-template-columns: 44px minmax(0, 1fr) auto; column-gap: 14px; align-items: center; padding: 10px 18px; }
+  .facts li + li { border-top: 1px solid var(--row-border); }
+  .sicon { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 10px; background: var(--well); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06); }
+  .facts span:not(.sicon) { color: var(--text-muted); font-size: var(--fs-sm); }
+  .facts b { color: var(--heading); font-size: 1.0625rem; text-align: right; }
+</style>

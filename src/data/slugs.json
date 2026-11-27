@@ -2984,395 +2984,890 @@
   "es": "amphitere-joven",
   "pt": "amphitere-jovem"
  },
- "npc:a114": {
-  "en": "benedict",
-  "es": "benedict",
-  "pt": "benedict"
+ "npc:a-betrayed-man": {
+  "en": "a-betrayed-man",
+  "es": "un-hombre-traicionado",
+  "pt": "um-homem-traido"
  },
- "npc:a117": {
-  "en": "el-chad",
-  "es": "el-chad",
-  "pt": "el-chad"
- },
- "npc:a119": {
-  "en": "rubius",
-  "es": "rubius",
-  "pt": "rubius"
- },
- "npc:a120": {
-  "en": "bresenham",
-  "es": "bresenham",
-  "pt": "bresenham"
- },
- "npc:a129": {
-  "en": "tim",
-  "es": "tim",
-  "pt": "tim"
- },
- "npc:a13": {
-  "en": "sal",
-  "es": "sal",
-  "pt": "sal"
- },
- "npc:a130": {
-  "en": "ozrid",
-  "es": "ozrid",
-  "pt": "ozrid"
- },
- "npc:a131": {
-  "en": "nick",
-  "es": "nick",
-  "pt": "nick"
- },
- "npc:a132": {
-  "en": "a-stressed-chef",
-  "es": "un-chef-estresado",
-  "pt": "um-chefe-estressado"
- },
- "npc:a134": {
-  "en": "maxwell",
-  "es": "maxwell",
-  "pt": "maxwell"
- },
- "npc:a14": {
-  "en": "mary",
-  "es": "mary",
-  "pt": "mary"
- },
- "npc:a149": {
-  "en": "margery-a149",
-  "es": "margery-a149",
-  "pt": "margery-a149"
- },
- "npc:a150": {
-  "en": "yoz",
-  "es": "yoz",
-  "pt": "yoz"
- },
- "npc:a152": {
-  "en": "matthew",
-  "es": "matthew",
-  "pt": "matthew"
- },
- "npc:a158": {
-  "en": "newell",
-  "es": "newell",
-  "pt": "newell"
- },
- "npc:a159": {
-  "en": "gabe",
-  "es": "gabe",
-  "pt": "gabe"
- },
- "npc:a162": {
-  "en": "amlon",
-  "es": "amlon",
-  "pt": "amlon"
- },
- "npc:a164": {
-  "en": "amlon-a164",
-  "es": "amlon-a164",
-  "pt": "amlon-a164"
- },
- "npc:a166": {
-  "en": "amlon-a166",
-  "es": "amlon-a166",
-  "pt": "amlon-a166"
- },
- "npc:a178": {
-  "en": "martem",
-  "es": "martem",
-  "pt": "martem"
- },
- "npc:a18": {
-  "en": "edmund",
-  "es": "edmund",
-  "pt": "edmund"
- },
- "npc:a182": {
-  "en": "constine",
-  "es": "constine",
-  "pt": "constine"
- },
- "npc:a184": {
-  "en": "joan",
-  "es": "joan",
-  "pt": "joan"
- },
- "npc:a185": {
-  "en": "odie",
-  "es": "odie",
-  "pt": "odie"
- },
- "npc:a186": {
-  "en": "gonlle",
-  "es": "gonlle",
-  "pt": "gonlle"
- },
- "npc:a187": {
-  "en": "nunie",
-  "es": "nunie",
-  "pt": "nunie"
- },
- "npc:a204": {
-  "en": "hoder",
-  "es": "hoder",
-  "pt": "hoder"
- },
- "npc:a206": {
-  "en": "reika",
-  "es": "reika",
-  "pt": "reika"
- },
- "npc:a213": {
-  "en": "dionel",
-  "es": "dionel",
-  "pt": "dionel"
- },
- "npc:a214": {
-  "en": "rosel",
-  "es": "rosel",
-  "pt": "rosel"
- },
- "npc:a215": {
-  "en": "petrus",
-  "es": "petrus",
-  "pt": "petrus"
- },
- "npc:a229": {
-  "en": "morrigan",
-  "es": "morrigan",
-  "pt": "morrigan"
- },
- "npc:a241": {
-  "en": "colman",
-  "es": "colman",
-  "pt": "colman"
- },
- "npc:a242": {
-  "en": "brean",
-  "es": "brean",
-  "pt": "brean"
- },
- "npc:a243": {
-  "en": "salazar",
-  "es": "salazar",
-  "pt": "salazar"
- },
- "npc:a244": {
-  "en": "logan",
-  "es": "logan",
-  "pt": "logan"
- },
- "npc:a247": {
-  "en": "tock",
-  "es": "tock",
-  "pt": "tock"
- },
- "npc:a248": {
-  "en": "loke",
-  "es": "loke",
-  "pt": "loke"
- },
- "npc:a253": {
-  "en": "a-blue-mage",
-  "es": "un-mago-azul",
-  "pt": "um-mago-azul"
- },
- "npc:a269": {
-  "en": "a-ghoulish-secretary",
-  "es": "una-secretaria-macabra",
-  "pt": "uma-secretaria-macabra"
- },
- "npc:a282": {
+ "npc:a-blind-botanist": {
   "en": "a-blind-botanist",
   "es": "un-botanico-ciego",
   "pt": "um-botanico-cego"
  },
- "npc:a288": {
+ "npc:a-blue-mage": {
+  "en": "a-blue-mage",
+  "es": "un-mago-azul",
+  "pt": "um-mago-azul"
+ },
+ "npc:a-bridge-troll": {
+  "en": "a-bridge-troll",
+  "es": "un-trol-del-puente",
+  "pt": "um-troll-da-ponte"
+ },
+ "npc:a-female-goblin": {
+  "en": "a-female-goblin",
+  "es": "una-goblin-hembra",
+  "pt": "uma-goblin-femea"
+ },
+ "npc:a-ghoulish-secretary": {
+  "en": "a-ghoulish-secretary",
+  "es": "una-secretaria-macabra",
+  "pt": "uma-secretaria-macabra"
+ },
+ "npc:a-hooded-figure": {
+  "en": "a-hooded-figure",
+  "es": "una-figura-encapuchada",
+  "pt": "uma-figura-encapuzada"
+ },
+ "npc:a-mad-ritualist": {
+  "en": "a-mad-ritualist",
+  "es": "un-ritualista-loco",
+  "pt": "um-ritualista-louco"
+ },
+ "npc:a-mysterious-monk": {
+  "en": "a-mysterious-monk",
+  "es": "un-monje-misterioso",
+  "pt": "um-monge-misterioso"
+ },
+ "npc:a-stressed-chef": {
+  "en": "a-stressed-chef",
+  "es": "un-chef-estresado",
+  "pt": "um-chefe-estressado"
+ },
+ "npc:a-wounded-soldier": {
+  "en": "a-wounded-soldier",
+  "es": "un-soldado-herido",
+  "pt": "um-soldado-ferido"
+ },
+ "npc:alan": {
+  "en": "alan",
+  "es": "alan",
+  "pt": "alan"
+ },
+ "npc:aldric": {
+  "en": "aldric",
+  "es": "aldric",
+  "pt": "aldric"
+ },
+ "npc:amelia": {
+  "en": "amelia",
+  "es": "amelia",
+  "pt": "amelia"
+ },
+ "npc:amlon": {
+  "en": "amlon",
+  "es": "amlon",
+  "pt": "amlon"
+ },
+ "npc:an-ancient-tree": {
+  "en": "an-ancient-tree",
+  "es": "un-arbol-ancestral",
+  "pt": "uma-arvore-ancestral"
+ },
+ "npc:an-injured-soldier": {
+  "en": "an-injured-soldier",
+  "es": "un-soldado-herido-an-injured-soldier",
+  "pt": "um-soldado-ferido-an-injured-soldier"
+ },
+ "npc:arquie": {
+  "en": "arquie",
+  "es": "arquie",
+  "pt": "arquie"
+ },
+ "npc:assa": {
+  "en": "assa",
+  "es": "assa",
+  "pt": "assa"
+ },
+ "npc:aurora": {
+  "en": "aurora",
+  "es": "aurora",
+  "pt": "aurora"
+ },
+ "npc:balder": {
+  "en": "balder",
+  "es": "balder",
+  "pt": "balder"
+ },
+ "npc:baldwin": {
+  "en": "baldwin",
+  "es": "baldwin",
+  "pt": "baldwin"
+ },
+ "npc:benedict": {
+  "en": "benedict",
+  "es": "benedict",
+  "pt": "benedict"
+ },
+ "npc:berk": {
   "en": "berk",
   "es": "berk",
   "pt": "berk"
  },
- "npc:a290": {
-  "en": "egemen",
-  "es": "egemen",
-  "pt": "egemen"
+ "npc:bernhard": {
+  "en": "bernhard",
+  "es": "bernhard",
+  "pt": "bernhard"
  },
- "npc:a293": {
-  "en": "nebil",
-  "es": "nebil",
-  "pt": "nebil"
- },
- "npc:a298": {
-  "en": "tink",
-  "es": "tink",
-  "pt": "tink"
- },
- "npc:a300": {
-  "en": "hagar",
-  "es": "hagar",
-  "pt": "hagar"
- },
- "npc:a301": {
-  "en": "kazim",
-  "es": "kazim",
-  "pt": "kazim"
- },
- "npc:a303": {
-  "en": "isra",
-  "es": "isra",
-  "pt": "isra"
- },
- "npc:a304": {
-  "en": "ismet",
-  "es": "ismet",
-  "pt": "ismet"
- },
- "npc:a306": {
-  "en": "yacht",
-  "es": "yacht",
-  "pt": "yacht"
- },
- "npc:a331": {
-  "en": "hoder-a331",
-  "es": "hoder-a331",
-  "pt": "hoder-a331"
- },
- "npc:a49": {
-  "en": "seymour",
-  "es": "seymour",
-  "pt": "seymour"
- },
- "npc:a51": {
-  "en": "gavin",
-  "es": "gavin",
-  "pt": "gavin"
- },
- "npc:a54": {
-  "en": "guy",
-  "es": "guy",
-  "pt": "guy"
- },
- "npc:a56": {
-  "en": "rasobar",
-  "es": "rasobar",
-  "pt": "rasobar"
- },
- "npc:a59": {
-  "en": "sigurd",
-  "es": "sigurd",
-  "pt": "sigurd"
- },
- "npc:a6": {
-  "en": "violet",
-  "es": "violet",
-  "pt": "violet"
- },
- "npc:a60": {
-  "en": "wolfram",
-  "es": "wolfram",
-  "pt": "wolfram"
- },
- "npc:a61": {
-  "en": "jaques",
-  "es": "jaques",
-  "pt": "jaques"
- },
- "npc:a72": {
-  "en": "maude",
-  "es": "maude",
-  "pt": "maude"
- },
- "npc:a73": {
-  "en": "benedict-a73",
-  "es": "benedict-a73",
-  "pt": "benedict-a73"
- },
- "npc:a75": {
-  "en": "roland",
-  "es": "roland",
-  "pt": "roland"
- },
- "npc:a78": {
-  "en": "meredith",
-  "es": "meredith",
-  "pt": "meredith"
- },
- "npc:a80": {
-  "en": "wilfred",
-  "es": "wilfred",
-  "pt": "wilfred"
- },
- "npc:a81": {
-  "en": "mabel",
-  "es": "mabel",
-  "pt": "mabel"
- },
- "npc:a82": {
-  "en": "reginald",
-  "es": "reginald",
-  "pt": "reginald"
- },
- "npc:a83": {
-  "en": "margery",
-  "es": "margery",
-  "pt": "margery"
- },
- "npc:a85": {
-  "en": "zebulon",
-  "es": "zebulon",
-  "pt": "zebulon"
- },
- "npc:a86": {
-  "en": "lurleen",
-  "es": "lurleen",
-  "pt": "lurleen"
- },
- "npc:a87": {
-  "en": "erastus",
-  "es": "erastus",
-  "pt": "erastus"
- },
- "npc:a88": {
-  "en": "otis",
-  "es": "otis",
-  "pt": "otis"
- },
- "npc:a89": {
-  "en": "hester",
-  "es": "hester",
-  "pt": "hester"
- },
- "npc:a90": {
-  "en": "dewey",
-  "es": "dewey",
-  "pt": "dewey"
- },
- "npc:a91": {
-  "en": "opal",
-  "es": "opal",
-  "pt": "opal"
- },
- "npc:a92": {
-  "en": "burl",
-  "es": "burl",
-  "pt": "burl"
- },
- "npc:a95": {
+ "npc:bessie": {
   "en": "bessie",
   "es": "bessie",
   "pt": "bessie"
  },
- "npc:a96": {
+ "npc:branigan": {
+  "en": "branigan",
+  "es": "branigan",
+  "pt": "branigan"
+ },
+ "npc:branor": {
+  "en": "branor",
+  "es": "branor",
+  "pt": "branor"
+ },
+ "npc:brean": {
+  "en": "brean",
+  "es": "brean",
+  "pt": "brean"
+ },
+ "npc:bresenham": {
+  "en": "bresenham",
+  "es": "bresenham",
+  "pt": "bresenham"
+ },
+ "npc:brigitte": {
+  "en": "brigitte",
+  "es": "brigitte",
+  "pt": "brigitte"
+ },
+ "npc:burl": {
+  "en": "burl",
+  "es": "burl",
+  "pt": "burl"
+ },
+ "npc:cain": {
+  "en": "cain",
+  "es": "cain",
+  "pt": "cain"
+ },
+ "npc:cedric": {
+  "en": "cedric",
+  "es": "cedric",
+  "pt": "cedric"
+ },
+ "npc:charles": {
+  "en": "charles",
+  "es": "charles",
+  "pt": "charles"
+ },
+ "npc:clovis": {
+  "en": "clovis",
+  "es": "clovis",
+  "pt": "clovis"
+ },
+ "npc:colman": {
+  "en": "colman",
+  "es": "colman",
+  "pt": "colman"
+ },
+ "npc:constine": {
+  "en": "constine",
+  "es": "constine",
+  "pt": "constine"
+ },
+ "npc:daboga": {
+  "en": "daboga",
+  "es": "daboga",
+  "pt": "daboga"
+ },
+ "npc:daniel": {
+  "en": "daniel",
+  "es": "daniel",
+  "pt": "daniel"
+ },
+ "npc:deckard": {
+  "en": "deckard",
+  "es": "deckard",
+  "pt": "deckard"
+ },
+ "npc:dee": {
+  "en": "dee",
+  "es": "dee",
+  "pt": "dee"
+ },
+ "npc:dewey": {
+  "en": "dewey",
+  "es": "dewey",
+  "pt": "dewey"
+ },
+ "npc:dionel": {
+  "en": "dionel",
+  "es": "dionel",
+  "pt": "dionel"
+ },
+ "npc:doruk": {
+  "en": "doruk",
+  "es": "doruk",
+  "pt": "doruk"
+ },
+ "npc:drystan": {
+  "en": "drystan",
+  "es": "drystan",
+  "pt": "drystan"
+ },
+ "npc:dylan": {
+  "en": "dylan",
+  "es": "dylan",
+  "pt": "dylan"
+ },
+ "npc:edmund": {
+  "en": "edmund",
+  "es": "edmund",
+  "pt": "edmund"
+ },
+ "npc:egemen": {
+  "en": "egemen",
+  "es": "egemen",
+  "pt": "egemen"
+ },
+ "npc:el-chad": {
+  "en": "el-chad",
+  "es": "el-chad",
+  "pt": "el-chad"
+ },
+ "npc:elanur": {
+  "en": "elanur",
+  "es": "elanur",
+  "pt": "elanur"
+ },
+ "npc:elgifu": {
+  "en": "elgifu",
+  "es": "elgifu",
+  "pt": "elgifu"
+ },
+ "npc:elmo": {
+  "en": "elmo",
+  "es": "elmo",
+  "pt": "elmo"
+ },
+ "npc:elsie": {
+  "en": "elsie",
+  "es": "elsie",
+  "pt": "elsie"
+ },
+ "npc:engin": {
+  "en": "engin",
+  "es": "engin",
+  "pt": "engin"
+ },
+ "npc:eofor": {
+  "en": "eofor",
+  "es": "eofor",
+  "pt": "eofor"
+ },
+ "npc:erastus": {
+  "en": "erastus",
+  "es": "erastus",
+  "pt": "erastus"
+ },
+ "npc:eric": {
+  "en": "eric",
+  "es": "eric",
+  "pt": "eric"
+ },
+ "npc:euler": {
+  "en": "euler",
+  "es": "euler",
+  "pt": "euler"
+ },
+ "npc:faruq": {
+  "en": "faruq",
+  "es": "faruq",
+  "pt": "faruq"
+ },
+ "npc:faysal": {
+  "en": "faysal",
+  "es": "faysal",
+  "pt": "faysal"
+ },
+ "npc:felix": {
+  "en": "felix",
+  "es": "felix",
+  "pt": "felix"
+ },
+ "npc:ferag": {
+  "en": "ferag",
+  "es": "ferag",
+  "pt": "ferag"
+ },
+ "npc:fergus": {
+  "en": "fergus",
+  "es": "fergus",
+  "pt": "fergus"
+ },
+ "npc:frances": {
+  "en": "frances",
+  "es": "frances",
+  "pt": "frances"
+ },
+ "npc:gabe": {
+  "en": "gabe",
+  "es": "gabe",
+  "pt": "gabe"
+ },
+ "npc:gareth": {
+  "en": "gareth",
+  "es": "gareth",
+  "pt": "gareth"
+ },
+ "npc:gaspile": {
+  "en": "gaspile",
+  "es": "gaspile",
+  "pt": "gaspile"
+ },
+ "npc:gavin": {
+  "en": "gavin",
+  "es": "gavin",
+  "pt": "gavin"
+ },
+ "npc:george": {
+  "en": "george",
+  "es": "george",
+  "pt": "george"
+ },
+ "npc:gil": {
+  "en": "gil",
+  "es": "gil",
+  "pt": "gil"
+ },
+ "npc:godric": {
+  "en": "godric",
+  "es": "godric",
+  "pt": "godric"
+ },
+ "npc:gonlle": {
+  "en": "gonlle",
+  "es": "gonlle",
+  "pt": "gonlle"
+ },
+ "npc:guri": {
+  "en": "guri",
+  "es": "guri",
+  "pt": "guri"
+ },
+ "npc:guy": {
+  "en": "guy",
+  "es": "guy",
+  "pt": "guy"
+ },
+ "npc:hagar": {
+  "en": "hagar",
+  "es": "hagar",
+  "pt": "hagar"
+ },
+ "npc:heinrich": {
+  "en": "heinrich",
+  "es": "heinrich",
+  "pt": "heinrich"
+ },
+ "npc:hester": {
+  "en": "hester",
+  "es": "hester",
+  "pt": "hester"
+ },
+ "npc:hildegarde": {
+  "en": "hildegarde",
+  "es": "hildegarde",
+  "pt": "hildegarde"
+ },
+ "npc:hobart": {
   "en": "hobart",
   "es": "hobart",
   "pt": "hobart"
  },
- "npc:a98": {
+ "npc:hoder": {
+  "en": "hoder",
+  "es": "hoder",
+  "pt": "hoder"
+ },
+ "npc:inna": {
+  "en": "inna",
+  "es": "inna",
+  "pt": "inna"
+ },
+ "npc:ismet": {
+  "en": "ismet",
+  "es": "ismet",
+  "pt": "ismet"
+ },
+ "npc:isra": {
+  "en": "isra",
+  "es": "isra",
+  "pt": "isra"
+ },
+ "npc:jaques": {
+  "en": "jaques",
+  "es": "jaques",
+  "pt": "jaques"
+ },
+ "npc:jebidiah": {
   "en": "jebidiah",
   "es": "jebidiah",
   "pt": "jebidiah"
+ },
+ "npc:joan": {
+  "en": "joan",
+  "es": "joan",
+  "pt": "joan"
+ },
+ "npc:johnny": {
+  "en": "johnny",
+  "es": "johnny",
+  "pt": "johnny"
+ },
+ "npc:jon": {
+  "en": "jon",
+  "es": "jon",
+  "pt": "jon"
+ },
+ "npc:kaan": {
+  "en": "kaan",
+  "es": "kaan",
+  "pt": "kaan"
+ },
+ "npc:karamel": {
+  "en": "karamel",
+  "es": "karamel",
+  "pt": "karamel"
+ },
+ "npc:kari": {
+  "en": "kari",
+  "es": "kari",
+  "pt": "kari"
+ },
+ "npc:karmac": {
+  "en": "karmac",
+  "es": "karmac",
+  "pt": "karmac"
+ },
+ "npc:kazim": {
+  "en": "kazim",
+  "es": "kazim",
+  "pt": "kazim"
+ },
+ "npc:leofric": {
+  "en": "leofric",
+  "es": "leofric",
+  "pt": "leofric"
+ },
+ "npc:lisa": {
+  "en": "lisa",
+  "es": "lisa",
+  "pt": "lisa"
+ },
+ "npc:logan": {
+  "en": "logan",
+  "es": "logan",
+  "pt": "logan"
+ },
+ "npc:loke": {
+  "en": "loke",
+  "es": "loke",
+  "pt": "loke"
+ },
+ "npc:lurleen": {
+  "en": "lurleen",
+  "es": "lurleen",
+  "pt": "lurleen"
+ },
+ "npc:mabel": {
+  "en": "mabel",
+  "es": "mabel",
+  "pt": "mabel"
+ },
+ "npc:margery": {
+  "en": "margery",
+  "es": "margery",
+  "pt": "margery"
+ },
+ "npc:martem": {
+  "en": "martem",
+  "es": "martem",
+  "pt": "martem"
+ },
+ "npc:mary": {
+  "en": "mary",
+  "es": "mary",
+  "pt": "mary"
+ },
+ "npc:matthew": {
+  "en": "matthew",
+  "es": "matthew",
+  "pt": "matthew"
+ },
+ "npc:maude": {
+  "en": "maude",
+  "es": "maude",
+  "pt": "maude"
+ },
+ "npc:maxwell": {
+  "en": "maxwell",
+  "es": "maxwell",
+  "pt": "maxwell"
+ },
+ "npc:meredith": {
+  "en": "meredith",
+  "es": "meredith",
+  "pt": "meredith"
+ },
+ "npc:merida": {
+  "en": "merida",
+  "es": "merida",
+  "pt": "merida"
+ },
+ "npc:millen": {
+  "en": "millen",
+  "es": "millen",
+  "pt": "millen"
+ },
+ "npc:morrigan": {
+  "en": "morrigan",
+  "es": "morrigan",
+  "pt": "morrigan"
+ },
+ "npc:myrtle": {
+  "en": "myrtle",
+  "es": "myrtle",
+  "pt": "myrtle"
+ },
+ "npc:nebil": {
+  "en": "nebil",
+  "es": "nebil",
+  "pt": "nebil"
+ },
+ "npc:newell": {
+  "en": "newell",
+  "es": "newell",
+  "pt": "newell"
+ },
+ "npc:newt": {
+  "en": "newt",
+  "es": "newt",
+  "pt": "newt"
+ },
+ "npc:nick": {
+  "en": "nick",
+  "es": "nick",
+  "pt": "nick"
+ },
+ "npc:nunie": {
+  "en": "nunie",
+  "es": "nunie",
+  "pt": "nunie"
+ },
+ "npc:odie": {
+  "en": "odie",
+  "es": "odie",
+  "pt": "odie"
+ },
+ "npc:opal": {
+  "en": "opal",
+  "es": "opal",
+  "pt": "opal"
+ },
+ "npc:osbert": {
+  "en": "osbert",
+  "es": "osbert",
+  "pt": "osbert"
+ },
+ "npc:otis": {
+  "en": "otis",
+  "es": "otis",
+  "pt": "otis"
+ },
+ "npc:ozrid": {
+  "en": "ozrid",
+  "es": "ozrid",
+  "pt": "ozrid"
+ },
+ "npc:pale-goblin": {
+  "en": "pale-goblin",
+  "es": "goblin-palido",
+  "pt": "goblin-palido"
+ },
+ "npc:patas": {
+  "en": "patas",
+  "es": "patas",
+  "pt": "patas"
+ },
+ "npc:perlin": {
+  "en": "perlin",
+  "es": "perlin",
+  "pt": "perlin"
+ },
+ "npc:perry": {
+  "en": "perry",
+  "es": "perry",
+  "pt": "perry"
+ },
+ "npc:petrus": {
+  "en": "petrus",
+  "es": "petrus",
+  "pt": "petrus"
+ },
+ "npc:philip": {
+  "en": "philip",
+  "es": "philip",
+  "pt": "philip"
+ },
+ "npc:pythar": {
+  "en": "pythar",
+  "es": "pythar",
+  "pt": "pythar"
+ },
+ "npc:ramel": {
+  "en": "ramel",
+  "es": "ramel",
+  "pt": "ramel"
+ },
+ "npc:rasobar": {
+  "en": "rasobar",
+  "es": "rasobar",
+  "pt": "rasobar"
+ },
+ "npc:reginald": {
+  "en": "reginald",
+  "es": "reginald",
+  "pt": "reginald"
+ },
+ "npc:reika": {
+  "en": "reika",
+  "es": "reika",
+  "pt": "reika"
+ },
+ "npc:ribamar": {
+  "en": "ribamar",
+  "es": "ribamar",
+  "pt": "ribamar"
+ },
+ "npc:roland": {
+  "en": "roland",
+  "es": "roland",
+  "pt": "roland"
+ },
+ "npc:roni": {
+  "en": "roni",
+  "es": "roni",
+  "pt": "roni"
+ },
+ "npc:rosel": {
+  "en": "rosel",
+  "es": "rosel",
+  "pt": "rosel"
+ },
+ "npc:rubius": {
+  "en": "rubius",
+  "es": "rubius",
+  "pt": "rubius"
+ },
+ "npc:rue": {
+  "en": "rue",
+  "es": "rue",
+  "pt": "rue"
+ },
+ "npc:rufus": {
+  "en": "rufus",
+  "es": "rufus",
+  "pt": "rufus"
+ },
+ "npc:sabrina": {
+  "en": "sabrina",
+  "es": "sabrina",
+  "pt": "sabrina"
+ },
+ "npc:sal": {
+  "en": "sal",
+  "es": "sal",
+  "pt": "sal"
+ },
+ "npc:salazar": {
+  "en": "salazar",
+  "es": "salazar",
+  "pt": "salazar"
+ },
+ "npc:selene": {
+  "en": "selene",
+  "es": "selene",
+  "pt": "selene"
+ },
+ "npc:seraphina": {
+  "en": "seraphina",
+  "es": "seraphina",
+  "pt": "seraphina"
+ },
+ "npc:sercha": {
+  "en": "sercha",
+  "es": "sercha",
+  "pt": "sercha"
+ },
+ "npc:serilda": {
+  "en": "serilda",
+  "es": "serilda",
+  "pt": "serilda"
+ },
+ "npc:seymour": {
+  "en": "seymour",
+  "es": "seymour",
+  "pt": "seymour"
+ },
+ "npc:sigurd": {
+  "en": "sigurd",
+  "es": "sigurd",
+  "pt": "sigurd"
+ },
+ "npc:sky": {
+  "en": "sky",
+  "es": "sky",
+  "pt": "sky"
+ },
+ "npc:sushi": {
+  "en": "sushi",
+  "es": "sushi",
+  "pt": "sushi"
+ },
+ "npc:tansy": {
+  "en": "tansy",
+  "es": "tansy",
+  "pt": "tansy"
+ },
+ "npc:thadeus": {
+  "en": "thadeus",
+  "es": "thadeus",
+  "pt": "thadeus"
+ },
+ "npc:thelma": {
+  "en": "thelma",
+  "es": "thelma",
+  "pt": "thelma"
+ },
+ "npc:thibault": {
+  "en": "thibault",
+  "es": "thibault",
+  "pt": "thibault"
+ },
+ "npc:thomas": {
+  "en": "thomas",
+  "es": "thomas",
+  "pt": "thomas"
+ },
+ "npc:tim": {
+  "en": "tim",
+  "es": "tim",
+  "pt": "tim"
+ },
+ "npc:timur": {
+  "en": "timur",
+  "es": "timur",
+  "pt": "timur"
+ },
+ "npc:tink": {
+  "en": "tink",
+  "es": "tink",
+  "pt": "tink"
+ },
+ "npc:tock": {
+  "en": "tock",
+  "es": "tock",
+  "pt": "tock"
+ },
+ "npc:torvan": {
+  "en": "torvan",
+  "es": "torvan",
+  "pt": "torvan"
+ },
+ "npc:tristan": {
+  "en": "tristan",
+  "es": "tristan",
+  "pt": "tristan"
+ },
+ "npc:tufi": {
+  "en": "tufi",
+  "es": "tufi",
+  "pt": "tufi"
+ },
+ "npc:tutu": {
+  "en": "tutu",
+  "es": "tutu",
+  "pt": "tutu"
+ },
+ "npc:ulrich": {
+  "en": "ulrich",
+  "es": "ulrich",
+  "pt": "ulrich"
+ },
+ "npc:vee": {
+  "en": "vee",
+  "es": "vee",
+  "pt": "vee"
+ },
+ "npc:violet": {
+  "en": "violet",
+  "es": "violet",
+  "pt": "violet"
+ },
+ "npc:wilfred": {
+  "en": "wilfred",
+  "es": "wilfred",
+  "pt": "wilfred"
+ },
+ "npc:wolfram": {
+  "en": "wolfram",
+  "es": "wolfram",
+  "pt": "wolfram"
+ },
+ "npc:wounded-dylan": {
+  "en": "wounded-dylan",
+  "es": "dylan-herido",
+  "pt": "dylan-ferido"
+ },
+ "npc:yacht": {
+  "en": "yacht",
+  "es": "yacht",
+  "pt": "yacht"
+ },
+ "npc:yordin": {
+  "en": "yordin",
+  "es": "yordin",
+  "pt": "yordin"
+ },
+ "npc:yoz": {
+  "en": "yoz",
+  "es": "yoz",
+  "pt": "yoz"
+ },
+ "npc:yseult": {
+  "en": "yseult",
+  "es": "yseult",
+  "pt": "yseult"
+ },
+ "npc:yusuf": {
+  "en": "yusuf",
+  "es": "yusuf",
+  "pt": "yusuf"
+ },
+ "npc:zebulon": {
+  "en": "zebulon",
+  "es": "zebulon",
+  "pt": "zebulon"
+ },
+ "npc:zoe": {
+  "en": "zoe",
+  "es": "zoe",
+  "pt": "zoe"
+ },
+ "npc:zori": {
+  "en": "zori",
+  "es": "zori",
+  "pt": "zori"
  },
  "place:lever-2651": {
   "en": "lever-near-east-nordha-mines",
@@ -3483,6 +3978,11 @@
   "en": "wilfred-s-gift",
   "es": "regalo-de-wilfred",
   "pt": "presente-de-wilfred"
+ },
+ "quest:q1045": {
+  "en": "father-knows-best",
+  "es": "padre-sabe-mas",
+  "pt": "pai-sabe-mais"
  },
  "quest:q1047": {
   "en": "hero-in-basile",
@@ -3709,6 +4209,11 @@
   "es": "regalo-de-elmo",
   "pt": "presente-de-elmo"
  },
+ "quest:q1188": {
+  "en": "nordha-s-east-farmer",
+  "es": "granjero-del-este-de-nordha",
+  "pt": "fazendeiro-do-leste-de-nordha"
+ },
  "quest:q119": {
   "en": "tomb-ornate-chest",
   "es": "cofre-ornamentado-de-la-tumba",
@@ -3748,6 +4253,11 @@
   "en": "church-investigated",
   "es": "iglesia-investigada",
   "pt": "igreja-investigada"
+ },
+ "quest:q1207": {
+  "en": "deceived-by-loke",
+  "es": "enganado-por-loke",
+  "pt": "enganado-por-loke"
  },
  "quest:q1208": {
   "en": "champion-defeated",

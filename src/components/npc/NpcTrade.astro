@@ -1,0 +1,87 @@
+---
+/**
+ * An NPC's shop (sells: the item, the spell a spellbook teaches, the price, the stock and the restock in the reader's
+ * clock) and what it buys (the price it pays, highest first). One shift's: a character with several shifts shows one
+ * per shift. Every value carries its icon (Value).
+ */
+import ListRow from "../ui/ListRow.astro";
+import EntityLink from "../entity/EntityLink.astro";
+import GameIcon from "../ui/GameIcon.astro";
+import Value from "../ui/Value.astro";
+import { ui, fill } from "../../i18n/index.ts";
+import { DEFAULT_LANG, isLang, type Lang } from "../../lib/i18n.ts";
+import { gameHour } from "../../lib/monsters/data.ts";
+import { siteData } from "../../lib/site-registry.ts";
+import type { NpcShift } from "../../lib/npcs/data.ts";
+interface Props {
+  sh: NpcShift;
+  /** Inside a shift's block: smaller headings. */
+  nested?: boolean;
+  id: string;
+}
+const { sh, nested = false, id } = Astro.props;
+const lang: Lang = isLang(Astro.params.lang) ? Astro.params.lang : DEFAULT_LANG;
+const t = ui(lang);
+const tn = t.npc;
+const { items } = await siteData();
+const spellOf = (item: string) => items.find((i) => i.id === item)?.versions.find((v) => v.spell)?.spell;
+const H = nested ? "h3" : "h2";
+---
+{sh.sells?.length ? (
+  <section class="block trade" aria-labelledby={`${id}-sells`} data-section="sells">
+    <H id={`${id}-sells`} class="hcount">{tn.shopTitle}<span class="n">{sh.sells.length}</span></H>
+    <p class="muted restock" data-flow>
+      <GameIcon name="time" scale={1} />
+      <span data-restock={sh.restock} data-t={tn.restock} data-t-clock={tn.clock}>{fill(tn.restock, { t: gameHour(sh.restock ?? 0) })}</span>
+      <small>· {fill(tn.restockGame, { h: gameHour(sh.restock ?? 0) })}</small>
+    </p>
+    <ul class="rows sells">
+      {sh.sells.map((r) => {
+        const spell = spellOf(r.item);
+        return (
+          <ListRow>
+            <EntityLink to={`item:${r.item}`} iconSize={40} />
+            {spell && <Fragment slot="sub"><span class="teach">{tn.teaches} <EntityLink to={spell} iconSize={22} /></span></Fragment>}
+            <Fragment slot="end">
+              {r.stock.kind === "limited" && <Value kind="stock" n={r.stock.n} lang={lang} />}
+              {r.stock.kind === "unlimited" && <Value kind="stockUnlimited" lang={lang} />}
+              {r.stock.kind === "blackMarket" && <Value kind="blackMarket" n={r.stock.n} lang={lang} />}
+              <Value kind="gold" n={r.price} lang={lang} />
+            </Fragment>
+          </ListRow>
+        );
+      })}
+    </ul>
+  </section>
+) : null}
+{sh.buys?.length ? (
+  <section class="block trade" aria-labelledby={`${id}-buys`} data-section="buys">
+    <H id={`${id}-buys`} class="hcount">{tn.buysTitle}<span class="n">{sh.buys.length}</span></H>
+    <p class="muted">{tn.buysIntro}</p>
+    <ul class="rows buys">
+      {sh.buys.map((r) => {
+        const spell = spellOf(r.item);
+        return (
+          <ListRow>
+            <EntityLink to={`item:${r.item}`} iconSize={40} />
+            {spell && <Fragment slot="sub"><span class="teach">{tn.teaches} <EntityLink to={spell} iconSize={22} /></span></Fragment>}
+            <Fragment slot="end"><Value kind="gold" n={r.price} lang={lang} /></Fragment>
+          </ListRow>
+        );
+      })}
+    </ul>
+  </section>
+) : null}
+<style>
+  .trade + .trade, :global(.block) + .trade { margin-top: var(--s-6); }
+  .hcount { display: flex; align-items: center; gap: 10px; margin-bottom: var(--s-3); }
+  h3.hcount { font-size: var(--fs-md); }
+  .hcount .n { display: inline-grid; place-items: center; min-width: 26px; height: 24px; padding: 0 8px; border-radius: var(--r-pill);
+    font: 700 var(--fs-xs) / 1 var(--font-num); color: var(--text); background: var(--surface-3); }
+  .muted { color: var(--text-muted); margin: 0 0 var(--s-3); }
+  .restock { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; font-weight: 700; color: var(--accent-text); }
+  .restock small { font-weight: 500; color: var(--text-muted); }
+  .rows { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--row-border); }
+  .teach { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 4px 6px; font-size: var(--fs-sm); color: var(--text-muted); }
+  :global(.sells .end), :global(.buys .end) { display: flex; align-items: center; gap: 12px; flex-wrap: nowrap; }
+</style>

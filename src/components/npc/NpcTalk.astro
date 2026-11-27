@@ -1,0 +1,79 @@
+---
+/**
+ * The Conversa: the game's own keyword answers, greeting first, then Job, Trade, Help, the topics, the farewell. Each
+ * line with its keywords as chips (what a player types) and the answer; a line the client doesn't translate shows the
+ * game's English, marked. Quest hints and secrets go in a spoiler (the lines that give a secret away never reach the
+ * data: tools/wiki_npcs.py).
+ */
+import Spoiler from "../ui/Spoiler.astro";
+import GameIcon from "../ui/GameIcon.astro";
+import { ui, fill } from "../../i18n/index.ts";
+import { DEFAULT_LANG, isLang, type Lang } from "../../lib/i18n.ts";
+import type { NpcLine } from "../../lib/npcs/data.ts";
+interface Props {
+  lines: NpcLine[];
+  nested?: boolean;
+  intro?: string;
+  id: string;
+}
+const { lines, nested = false, intro, id } = Astro.props;
+const lang: Lang = isLang(Astro.params.lang) ? Astro.params.lang : DEFAULT_LANG;
+const t = ui(lang);
+const tn = t.npc;
+const shown = lines.filter((l) => !l.spoiler);
+const hidden = lines.filter((l) => l.spoiler);
+const val = (l: Record<string, unknown> & { en: string; _fb?: string[] }) => ({ text: ((l[lang] as string | undefined) ?? l.en), en: !!l._fb?.includes(lang) });
+const label = (l: NpcLine) => (l.kind === "greet" ? tn.greet : l.kind === "farewell" ? tn.farewell : null);
+const H = nested ? "h3" : "h2";
+---
+{lines.length > 0 && (
+  <section class="block talk" aria-labelledby={`${id}-talk`} data-section="talk">
+    <H id={`${id}-talk`}>{tn.talkTitle}</H>
+    <p class="muted">{intro ?? tn.talkIntro}</p>
+    <ul class="lines">
+      {shown.map((l) => {
+        const v = val(l.text as never);
+        const lb = label(l);
+        return (
+          <li class="line">
+            <span class="keys" data-pagefind-ignore data-flow>
+              {lb ? <span class="key ev"><GameIcon name="src-quest" scale={1} />{lb}</span>
+                : l.keys.length ? l.keys.map((k) => { const kv = val(k as never); return <span class="key" lang={kv.en ? "en" : undefined}>{kv.text}</span>; })
+                : <span class="key ev">{t.npc.kindLabel}</span>}
+            </span>
+            <span class="say" lang={v.en ? "en" : undefined}>{v.text}{v.en && <small class="eng">{tn.gameEnglish}</small>}</span>
+          </li>
+        );
+      })}
+    </ul>
+    {hidden.length > 0 && (
+      <Spoiler title={fill(tn.spoilerLines, { n: hidden.length })}>
+        <ul class="lines">
+          {hidden.map((l) => {
+            const v = val(l.text as never);
+            return (
+              <li class="line">
+                <span class="keys" data-flow>{l.keys.length ? l.keys.map((k) => { const kv = val(k as never); return <span class="key" lang={kv.en ? "en" : undefined}>{kv.text}</span>; }) : <span class="key ev">{label(l) ?? t.npc.kindLabel}</span>}</span>
+                <span class="say" lang={v.en ? "en" : undefined}>{v.text}{v.en && <small class="eng">{tn.gameEnglish}</small>}</span>
+              </li>
+            );
+          })}
+        </ul>
+      </Spoiler>
+    )}
+  </section>
+)}
+<style>
+  .talk { margin-top: var(--s-7); }
+  .muted { color: var(--text-muted); margin: 0 0 var(--s-4); }
+  .lines { list-style: none; margin: 0 0 var(--s-4); padding: 0; display: grid; border: var(--bw) solid var(--border); border-radius: var(--r-l); background: var(--card-bg); }
+  .line { display: grid; grid-template-columns: minmax(0, 1fr); gap: 6px; padding: 12px 16px; }
+  .line + .line { border-top: 1px solid var(--row-border); }
+  @container main (min-width: 620px) { .line { grid-template-columns: 11rem minmax(0, 1fr); column-gap: 18px; align-items: start; } }
+  .keys { display: flex; flex-wrap: wrap; gap: 6px; }
+  .key { display: inline-flex; align-items: center; gap: 5px; padding: 2px 9px; border-radius: var(--r-pill); font: 700 var(--fs-xs) / 1.4 var(--font-body);
+    color: var(--chip-on-text); background: var(--chip-on-bg); }
+  .key.ev { color: var(--text); background: var(--surface-3); }
+  .say { color: var(--text); line-height: 1.5; white-space: pre-line; }
+  .eng { display: block; margin-top: 2px; font-size: var(--fs-xs); color: var(--text-faint); }
+</style>

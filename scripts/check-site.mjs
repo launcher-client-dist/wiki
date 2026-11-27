@@ -300,6 +300,60 @@ for (const l of LANG_CODES.filter((c) => c !== LANG_TABLE.default)) if (!pages.g
   console.log(`checked ${monPages.length} monster pages: percentages, stats, drops linked both ways`);
 }
 
+// -------------------------------------------------------------------------------------------- NPC pages
+// Every NPC (a character: every actor of one name) has its page in each language; no percentage anywhere on it; each
+// shop and buyer row links to the item's page, and that item's "sold by" / "bought by" links back; a quest-only NPC's
+// trade and lines sit inside its spoiler (never in the page's description).
+{
+  const npcs = JSON.parse(readFileSync(new URL("../src/data/npcs.json", import.meta.url), "utf8")).npcs;
+  const slugs = JSON.parse(readFileSync(new URL("../src/data/slugs.json", import.meta.url), "utf8"));
+  const itemsById = new Map(JSON.parse(readFileSync(new URL("../src/data/items.json", import.meta.url), "utf8")).items.map((i) => [i.id, i]));
+  const NPC_DIR = Object.fromEntries(LANG_CODES.map((l) => [l, `/${l}/${SECTIONS.npc.slug[l]}/`]));
+  const npcPages = [...pages.values()].filter((p) => Object.values(NPC_DIR).some((d) => p.url.startsWith(d) && /^[^/]+\/$/.test(p.url.slice(d.length))));
+  if (npcPages.length !== npcs.length * LANG_CODES.length) fail("npcs", `${npcPages.length} NPC pages for ${npcs.length} NPCs (want ${LANG_CODES.length} each)`);
+  // a shop row's hover card carries the item's own game text (a rune's "+5% magic"): the game's words, not a rate
+  const escT = (t) => t.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  const itemTexts = [...new Set([...itemsById.values()].flatMap((i) => i.versions.flatMap((v) => LANG_CODES.map((l) => v.text[l]))).filter((t) => t && t.includes("%")))]
+    .flatMap((t) => [t, escT(t), JSON.stringify(t).slice(1, -1)]);
+  for (const p of [...npcPages, ...Object.values(NPC_DIR).map((u) => pages.get(u)).filter(Boolean)]) {
+    let html = p.html.replace(/<style[\s\S]*?<\/style>/gi, "").replace(/\sstyle="[^"]*"/gi, "");
+    for (const t of itemTexts) html = html.split(t).join("");
+    const hit = html.match(/.{0,40}\d\s?%.{0,20}/);
+    if (hit) fail(p.url, `a percentage on an NPC page: "${hit[0]}"`);
+  }
+  let rows = 0;
+  for (const n of npcs) {
+    LANG_CODES.forEach((l, k) => {
+      const url = `${NPC_DIR[l]}${slugs[n.ref][l]}/`;
+      const html = pages.get(url)?.html;
+      if (!html) return fail(url, "missing NPC page");
+      if (n.spoiler && !/<details class="spoiler"/.test(html)) fail(url, "a quest-only NPC without its spoiler");
+      for (const sh of n.shifts) for (const r of [...(sh.sells ?? []), ...(sh.buys ?? [])]) {
+        rows++;
+        const item = itemsById.get(r.item);
+        const itemUrl = item && itemUrls(item)[k];
+        if (!itemUrl || !html.includes(`href="${itemUrl}"`)) fail(url, `trade row ${r.item} without a link to its page`);
+        else if (!pages.get(itemUrl)?.html.includes(`href="${url}`)) fail(itemUrl, `"sold by / bought by" doesn't link back to ${url}`);
+      }
+      if (n.shifts.some((s) => s.hours) && !n.spoiler && !html.includes("data-win-start")) fail(url, "an NPC with hours without its shift hours");
+    });
+  }
+  console.log(`checked ${npcPages.length} NPC pages: percentages, spoilers, ${rows} trade rows linked both ways`);
+}
+
+// every /icons/, /renders/ and /sprites/ path a page names exists in the build (a renamed or removed picture leaves none
+// behind: the NPC icons once named by actor)
+{
+  let seen = 0;
+  for (const p of pages.values()) {
+    for (const m of p.html.matchAll(/(?:src|href)="(\/(?:icons|renders|sprites)\/[^"#?]+)"/g)) {
+      seen++;
+      if (!existsSync(join(DIST, decodeURIComponent(m[1])))) fail(p.url, `a dead picture path: ${m[1]}`);
+    }
+  }
+  console.log(`checked ${seen} picture paths: none dead`);
+}
+
 // --------------------------------------------------------------------------------------------------- the map
 // The wiki has its own map: no page links to the editor (map.opengea.tech) any more, every "ver no mapa" opens the
 // wiki's map, and the map pages answer in every language.

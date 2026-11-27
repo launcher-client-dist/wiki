@@ -5364,16 +5364,6 @@
       1,
       1
      ],
-     "item": "longsword",
-     "quality": true,
-     "tier": "raro",
-     "unique": false
-    },
-    {
-     "amount": [
-      1,
-      1
-     ],
      "item": "scale-kilt",
      "quality": true,
      "tier": "raro",
@@ -5414,6 +5404,16 @@
       1,
       1
      ],
+     "item": "longsword",
+     "quality": true,
+     "tier": "muito-raro",
+     "unique": false
+    },
+    {
+     "amount": [
+      1,
+      1
+     ],
      "item": "quoki-headgear",
      "quality": true,
      "tier": "muito-raro",
@@ -5438,7 +5438,7 @@
     "max": 30,
     "min": 21
    },
-   "loot": 37,
+   "loot": 28,
    "places": [
     {
      "count": 9,
@@ -14927,8 +14927,8 @@
       1,
       1
      ],
-     "item": "tower-shield",
-     "quality": true,
+     "item": "yellow-rune-algiz",
+     "quality": false,
      "tier": "raro",
      "unique": false
     },
@@ -14937,9 +14937,9 @@
       1,
       1
      ],
-     "item": "yellow-rune-algiz",
-     "quality": false,
-     "tier": "raro",
+     "item": "tower-shield",
+     "quality": true,
+     "tier": "muito-raro",
      "unique": false
     }
    ],
@@ -14951,7 +14951,7 @@
     "max": 40,
     "min": 28
    },
-   "loot": 73,
+   "loot": 61,
    "places": [
     {
      "count": 24,

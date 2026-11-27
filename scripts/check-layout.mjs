@@ -30,6 +30,17 @@ const VIEWPORTS = [{ name: "1440", width: 1440, height: 900 }, { name: "1024", w
 // data, the fullest page), the monster list in its grid and its table
 const data = JSON.parse(fs.readFileSync(path.join(ROOT, "src/data/items.json"), "utf8"));
 const mdata = JSON.parse(fs.readFileSync(path.join(ROOT, "src/data/monsters.json"), "utf8")).monsters;
+const ndata = JSON.parse(fs.readFileSync(path.join(ROOT, "src/data/npcs.json"), "utf8")).npcs;
+const catOfItem = new Map(JSON.parse(fs.readFileSync(path.join(ROOT, "src/data/items.json"), "utf8")).items.map((i) => [i.id, i.category]));
+const nSells = (n) => n.shifts.reduce((k, s) => k + (s.sells?.length ?? 0) + (s.buys?.length ?? 0), 0);
+const nPick = (fn) => [...ndata].filter(fn).sort((a, b) => nSells(b) - nSells(a) || a.id.localeCompare(b.id))[0];
+/** The NPC pages measured: a merchant with hours and two shifts (Benedict), a spellbook seller, a travel NPC, a quest-only one. */
+const NPC_KINDS = {
+  hours: (n) => n.id === "benedict",
+  spellbooks: (n) => n.shifts.some((s) => (s.sells ?? []).some((r) => catOfItem.get(r.item) === "spellbook")),
+  travel: (n) => n.shifts.some((s) => s.services?.travel),
+  "quest-only": (n) => n.spoiler,
+};
 const slugs = JSON.parse(fs.readFileSync(path.join(ROOT, "src/data/slugs.json"), "utf8"));
 const mRich = (m) => m.drops.length + m.spells.length * 2 + m.places.length + m.windows.length * 3 + (m.behaviour.summons?.length ?? 0) * 3;
 const mPick = (fn) => [...mdata].filter(fn).sort((a, b) => mRich(b) - mRich(a) || a.id.localeCompare(b.id))[0];
@@ -67,6 +78,12 @@ for (const lang of LANGS) {
   const grp = [...(data.groups ?? [])].filter((x) => x.kind === "spellbook").sort((a, b) => b.members.length - a.members.length)[0];
   PAGES.push({ id: "item-group", lang, url: grp ? `/${lang}/${SECTIONS.item.slug[lang]}/${grp.slug[lang]}/` : null, type: "group" });
   PAGES.push({ id: "monsters", lang, url: `/${lang}/${SECTIONS.monster.slug[lang]}/`, type: "mlist" });
+  PAGES.push({ id: "npcs", lang, url: `/${lang}/${SECTIONS.npc.slug[lang]}/`, type: "mlist" });
+  for (const [kind, fn] of Object.entries(NPC_KINDS)) {
+    const n = nPick(fn);
+    const slug = n && slugs[n.ref]?.[lang];
+    PAGES.push({ id: `npc-${kind}`, lang, url: slug ? `/${lang}/${SECTIONS.npc.slug[lang]}/${slug}/` : null, type: "npc" });
+  }
   for (const [kind, fn] of Object.entries(MONSTER_KINDS)) {
     const m = mPick(fn);
     const slug = m && slugs[`monster:${m.id}`]?.[lang];

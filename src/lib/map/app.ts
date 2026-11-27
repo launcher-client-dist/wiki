@@ -25,7 +25,7 @@ const ll = (x: number, z: number) => L.latLng(z, x);
 const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]!);
 
 interface Loaded { file: LayerFile; layer: LayerKey | "spoiler" }
-interface Mark { layer: LayerKey; entry: Entry; x: number; z: number; f: string; n: number; hours?: [number, number]; invasion?: boolean; cells?: number[] }
+interface Mark { layer: LayerKey; entry: Entry; x: number; z: number; f: string; n: number; hours?: [number, number]; invasion?: boolean; cells?: number[]; shift?: number }
 
 export function startMap(root: HTMLElement): void {
   const cfg = JSON.parse(root.dataset.config!) as Config;
@@ -79,6 +79,7 @@ export function startMap(root: HTMLElement): void {
         const m: Mark = { layer, entry: l.file.e[p[3] as number]!, x: p[0] as number, z: p[1] as number, f: String(p[2]), n: (p[4] as number) || 1 };
         if (layer === "bosses" && (p[5] as number) >= 0) { m.hours = [p[5] as number, p[6] as number]; m.invasion = p[7] === 1; }
         if (layer === "monsters" && typeof p[5] === "string" && p[5]) m.cells = p[5].split(",").map(Number);
+        if (layer === "npcs" && typeof p[5] === "number") m.shift = p[5];
         out.push(m);
       }
     }
@@ -316,7 +317,7 @@ export function startMap(root: HTMLElement): void {
     card.innerHTML = `
       <button type="button" class="cclose" aria-label="${esc(s.close)}">×</button>
       <div class="chead">${headHtml(m.entry)}</div>
-      ${m.entry.u ? `<a class="copen" href="${esc(m.entry.u)}">${esc(s.openPage)} →</a>` : m.layer === "places" ? "" : `<span class="csoon">${esc(s.noPage)}</span>`}`;
+      ${m.entry.u ? `<a class="copen" href="${esc(m.entry.u)}${m.shift !== undefined ? `#turno-${m.shift + 1}` : ""}">${esc(s.openPage)} →</a>` : m.layer === "places" ? "" : `<span class="csoon">${esc(s.noPage)}</span>`}`;
     if (facts.childNodes.length) card.querySelector(".chead")!.after(facts);
     card.hidden = false;
     card.querySelector<HTMLButtonElement>(".cclose")!.onclick = () => { card.hidden = true; };

@@ -775,327 +775,15 @@
 "w32": 50,
 "w64": 94
 },
-"npc:a114": {
-"f": "npcs/benedict",
-"ms": 103,
-"n": 16,
-"p": 3,
-"w32": 20,
-"w64": 35
-},
-"npc:a117": {
-"f": "npcs/el-chad",
+"npc:a-betrayed-man": {
+"f": "npcs/a-betrayed-man",
 "ms": 103,
 "n": 16,
 "p": 3,
 "w32": 22,
 "w64": 38
 },
-"npc:a119": {
-"f": "npcs/rubius",
-"ms": 103,
-"n": 16,
-"p": 3,
-"w32": 22,
-"w64": 38
-},
-"npc:a120": {
-"f": "npcs/bresenham",
-"ms": 103,
-"n": 16,
-"p": 3,
-"w32": 20,
-"w64": 35
-},
-"npc:a129": {
-"f": "npcs/tim",
-"ms": 82,
-"n": 12,
-"p": 3,
-"w32": 22,
-"w64": 39
-},
-"npc:a13": {
-"f": "npcs/sal",
-"ms": 103,
-"n": 16,
-"p": 3,
-"w32": 20,
-"w64": 35
-},
-"npc:a130": {
-"f": "npcs/ozrid",
-"ms": 103,
-"n": 16,
-"p": 3,
-"w32": 28,
-"w64": 50
-},
-"npc:a131": {
-"f": "npcs/nick",
-"ms": 82,
-"n": 12,
-"p": 3,
-"w32": 22,
-"w64": 37
-},
-"npc:a132": {
-"f": "npcs/a-stressed-chef",
-"ms": 82,
-"n": 12,
-"p": 3,
-"w32": 20,
-"w64": 35
-},
-"npc:a134": {
-"f": "npcs/maxwell",
-"ms": 93,
-"n": 16,
-"p": 3,
-"w32": 24,
-"w64": 41
-},
-"npc:a14": {
-"f": "npcs/mary",
-"ms": 103,
-"n": 16,
-"p": 3,
-"w32": 24,
-"w64": 43
-},
-"npc:a149": {
-"f": "npcs/margery-a149",
-"ms": 103,
-"n": 16,
-"p": 3,
-"w32": 22,
-"w64": 38
-},
-"npc:a150": {
-"f": "npcs/yoz",
-"ms": 103,
-"n": 16,
-"p": 3,
-"w32": 30,
-"w64": 55
-},
-"npc:a152": {
-"f": "npcs/matthew",
-"ms": 103,
-"n": 16,
-"p": 3,
-"w32": 36,
-"w64": 66
-},
-"npc:a158": {
-"f": "npcs/newell",
-"ms": 82,
-"n": 12,
-"p": 3,
-"w32": 22,
-"w64": 39
-},
-"npc:a159": {
-"f": "npcs/gabe",
-"ms": 93,
-"n": 16,
-"p": 3,
-"w32": 24,
-"w64": 42
-},
-"npc:a162": {
-"f": "npcs/amlon",
-"ms": 93,
-"n": 16,
-"p": 3,
-"w32": 33,
-"w64": 60
-},
-"npc:a164": {
-"f": "npcs/amlon-a164",
-"ms": 93,
-"n": 16,
-"p": 3,
-"w32": 33,
-"w64": 60
-},
-"npc:a166": {
-"f": "npcs/amlon-a166",
-"ms": 93,
-"n": 16,
-"p": 3,
-"w32": 33,
-"w64": 60
-},
-"npc:a178": {
-"f": "npcs/martem",
-"ms": 93,
-"n": 16,
-"p": 3,
-"w32": 24,
-"w64": 43
-},
-"npc:a18": {
-"f": "npcs/edmund",
-"ms": 93,
-"n": 16,
-"p": 3,
-"w32": 24,
-"w64": 42
-},
-"npc:a182": {
-"f": "npcs/constine",
-"ms": 93,
-"n": 16,
-"p": 3,
-"w32": 23,
-"w64": 40
-},
-"npc:a184": {
-"f": "npcs/joan",
-"ms": 82,
-"n": 12,
-"p": 3,
-"w32": 20,
-"w64": 35
-},
-"npc:a185": {
-"f": "npcs/odie",
-"ms": 103,
-"n": 16,
-"p": 3,
-"w32": 22,
-"w64": 37
-},
-"npc:a186": {
-"f": "npcs/gonlle",
-"ms": 103,
-"n": 16,
-"p": 3,
-"w32": 23,
-"w64": 40
-},
-"npc:a187": {
-"f": "npcs/nunie",
-"ms": 103,
-"n": 16,
-"p": 3,
-"w32": 24,
-"w64": 42
-},
-"npc:a204": {
-"f": "npcs/hoder",
-"ms": 82,
-"n": 12,
-"p": 3,
-"w32": 22,
-"w64": 37
-},
-"npc:a206": {
-"f": "npcs/reika",
-"ms": 103,
-"n": 16,
-"p": 3,
-"w32": 22,
-"w64": 37
-},
-"npc:a213": {
-"f": "npcs/dionel",
-"ms": 82,
-"n": 12,
-"p": 3,
-"w32": 20,
-"w64": 35
-},
-"npc:a214": {
-"f": "npcs/rosel",
-"ms": 124,
-"n": 16,
-"p": 3,
-"w32": 26,
-"w64": 45
-},
-"npc:a215": {
-"f": "npcs/petrus",
-"ms": 103,
-"n": 16,
-"p": 3,
-"w32": 22,
-"w64": 39
-},
-"npc:a229": {
-"f": "npcs/morrigan",
-"ms": 103,
-"n": 16,
-"p": 3,
-"w32": 20,
-"w64": 35
-},
-"npc:a241": {
-"f": "npcs/colman",
-"ms": 82,
-"n": 12,
-"p": 3,
-"w32": 20,
-"w64": 35
-},
-"npc:a242": {
-"f": "npcs/brean",
-"ms": 82,
-"n": 12,
-"p": 3,
-"w32": 22,
-"w64": 37
-},
-"npc:a243": {
-"f": "npcs/salazar",
-"ms": 93,
-"n": 16,
-"p": 3,
-"w32": 24,
-"w64": 42
-},
-"npc:a244": {
-"f": "npcs/logan",
-"ms": 82,
-"n": 12,
-"p": 3,
-"w32": 22,
-"w64": 39
-},
-"npc:a247": {
-"f": "npcs/tock",
-"ms": 82,
-"n": 10,
-"p": 3,
-"w32": 33,
-"w64": 60
-},
-"npc:a248": {
-"f": "npcs/loke",
-"ms": 81,
-"n": 8,
-"p": 3,
-"w32": 23,
-"w64": 40
-},
-"npc:a253": {
-"f": "npcs/a-blue-mage",
-"ms": 93,
-"n": 16,
-"p": 3,
-"w32": 33,
-"w64": 60
-},
-"npc:a269": {
-"f": "npcs/a-ghoulish-secretary",
-"ms": 93,
-"n": 16,
-"p": 3,
-"w32": 24,
-"w64": 43
-},
-"npc:a282": {
+"npc:a-blind-botanist": {
 "f": "npcs/a-blind-botanist",
 "ms": 103,
 "n": 16,
@@ -1103,7 +791,167 @@
 "w32": 24,
 "w64": 43
 },
-"npc:a288": {
+"npc:a-blue-mage": {
+"f": "npcs/a-blue-mage",
+"ms": 93,
+"n": 16,
+"p": 3,
+"w32": 24,
+"w64": 42
+},
+"npc:a-bridge-troll": {
+"f": "npcs/a-bridge-troll",
+"ms": 175,
+"n": 16,
+"p": 3,
+"w32": 38,
+"w64": 69
+},
+"npc:a-female-goblin": {
+"f": "npcs/a-female-goblin",
+"ms": 40,
+"n": 8,
+"p": 3,
+"w32": 50,
+"w64": 93
+},
+"npc:a-ghoulish-secretary": {
+"f": "npcs/a-ghoulish-secretary",
+"ms": 93,
+"n": 16,
+"p": 3,
+"w32": 24,
+"w64": 43
+},
+"npc:a-hooded-figure": {
+"f": "npcs/a-hooded-figure",
+"ms": 93,
+"n": 16,
+"p": 3,
+"w32": 24,
+"w64": 41
+},
+"npc:a-mad-ritualist": {
+"f": "npcs/a-mad-ritualist",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 22,
+"w64": 38
+},
+"npc:a-mysterious-monk": {
+"f": "npcs/a-mysterious-monk",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 22,
+"w64": 38
+},
+"npc:a-stressed-chef": {
+"f": "npcs/a-stressed-chef",
+"ms": 82,
+"n": 12,
+"p": 3,
+"w32": 20,
+"w64": 35
+},
+"npc:a-wounded-soldier": {
+"f": "npcs/a-wounded-soldier",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 22,
+"w64": 37
+},
+"npc:alan": {
+"f": "npcs/alan",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 22,
+"w64": 39
+},
+"npc:aldric": {
+"f": "npcs/aldric",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 22,
+"w64": 38
+},
+"npc:amelia": {
+"f": "npcs/amelia",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 23,
+"w64": 40
+},
+"npc:amlon": {
+"f": "npcs/amlon",
+"ms": 93,
+"n": 16,
+"p": 3,
+"w32": 24,
+"w64": 41
+},
+"npc:an-injured-soldier": {
+"f": "npcs/an-injured-soldier",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 22,
+"w64": 37
+},
+"npc:arquie": {
+"f": "npcs/arquie",
+"ms": 82,
+"n": 16,
+"p": 3,
+"w32": 23,
+"w64": 40
+},
+"npc:assa": {
+"f": "npcs/assa",
+"ms": 82,
+"n": 12,
+"p": 3,
+"w32": 21,
+"w64": 36
+},
+"npc:aurora": {
+"f": "npcs/aurora",
+"ms": 88,
+"n": 9,
+"p": 3,
+"w32": 33,
+"w64": 60
+},
+"npc:balder": {
+"f": "npcs/balder",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 29,
+"w64": 52
+},
+"npc:baldwin": {
+"f": "npcs/baldwin",
+"ms": 82,
+"n": 12,
+"p": 3,
+"w32": 20,
+"w64": 35
+},
+"npc:benedict": {
+"f": "npcs/benedict",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 20,
+"w64": 35
+},
+"npc:berk": {
 "f": "npcs/berk",
 "ms": 82,
 "n": 12,
@@ -1111,271 +959,15 @@
 "w32": 28,
 "w64": 51
 },
-"npc:a290": {
-"f": "npcs/egemen",
-"ms": 82,
-"n": 12,
-"p": 3,
-"w32": 36,
-"w64": 66
-},
-"npc:a293": {
-"f": "npcs/nebil",
-"ms": 82,
-"n": 12,
-"p": 3,
-"w32": 28,
-"w64": 50
-},
-"npc:a298": {
-"f": "npcs/tink",
-"ms": 88,
-"n": 9,
-"p": 3,
-"w32": 33,
-"w64": 60
-},
-"npc:a300": {
-"f": "npcs/hagar",
-"ms": 82,
-"n": 12,
-"p": 3,
-"w32": 28,
-"w64": 50
-},
-"npc:a301": {
-"f": "npcs/kazim",
-"ms": 82,
-"n": 12,
-"p": 3,
-"w32": 30,
-"w64": 55
-},
-"npc:a303": {
-"f": "npcs/isra",
-"ms": 82,
-"n": 12,
-"p": 3,
-"w32": 26,
-"w64": 47
-},
-"npc:a304": {
-"f": "npcs/ismet",
-"ms": 82,
-"n": 12,
-"p": 3,
-"w32": 21,
-"w64": 36
-},
-"npc:a306": {
-"f": "npcs/yacht",
-"ms": 82,
-"n": 12,
-"p": 3,
-"w32": 22,
-"w64": 38
-},
-"npc:a331": {
-"f": "npcs/hoder-a331",
-"ms": 82,
-"n": 12,
-"p": 3,
-"w32": 22,
-"w64": 37
-},
-"npc:a49": {
-"f": "npcs/seymour",
+"npc:bernhard": {
+"f": "npcs/bernhard",
 "ms": 93,
 "n": 16,
 "p": 3,
 "w32": 24,
-"w64": 42
+"w64": 41
 },
-"npc:a51": {
-"f": "npcs/gavin",
-"ms": 83,
-"n": 13,
-"p": 3,
-"w32": 20,
-"w64": 35
-},
-"npc:a54": {
-"f": "npcs/guy",
-"ms": 103,
-"n": 16,
-"p": 3,
-"w32": 22,
-"w64": 38
-},
-"npc:a56": {
-"f": "npcs/rasobar",
-"ms": 103,
-"n": 16,
-"p": 3,
-"w32": 23,
-"w64": 40
-},
-"npc:a59": {
-"f": "npcs/sigurd",
-"ms": 83,
-"n": 13,
-"p": 3,
-"w32": 22,
-"w64": 37
-},
-"npc:a6": {
-"f": "npcs/violet",
-"ms": 124,
-"n": 16,
-"p": 3,
-"w32": 26,
-"w64": 45
-},
-"npc:a60": {
-"f": "npcs/wolfram",
-"ms": 103,
-"n": 16,
-"p": 3,
-"w32": 22,
-"w64": 38
-},
-"npc:a61": {
-"f": "npcs/jaques",
-"ms": 103,
-"n": 16,
-"p": 3,
-"w32": 21,
-"w64": 36
-},
-"npc:a72": {
-"f": "npcs/maude",
-"ms": 82,
-"n": 12,
-"p": 3,
-"w32": 20,
-"w64": 34
-},
-"npc:a73": {
-"f": "npcs/benedict-a73",
-"ms": 103,
-"n": 16,
-"p": 3,
-"w32": 20,
-"w64": 35
-},
-"npc:a75": {
-"f": "npcs/roland",
-"ms": 103,
-"n": 16,
-"p": 3,
-"w32": 22,
-"w64": 38
-},
-"npc:a78": {
-"f": "npcs/meredith",
-"ms": 82,
-"n": 12,
-"p": 3,
-"w32": 20,
-"w64": 34
-},
-"npc:a80": {
-"f": "npcs/wilfred",
-"ms": 82,
-"n": 12,
-"p": 3,
-"w32": 20,
-"w64": 35
-},
-"npc:a81": {
-"f": "npcs/mabel",
-"ms": 103,
-"n": 16,
-"p": 3,
-"w32": 22,
-"w64": 38
-},
-"npc:a82": {
-"f": "npcs/reginald",
-"ms": 103,
-"n": 16,
-"p": 3,
-"w32": 22,
-"w64": 38
-},
-"npc:a83": {
-"f": "npcs/margery",
-"ms": 103,
-"n": 16,
-"p": 3,
-"w32": 22,
-"w64": 38
-},
-"npc:a85": {
-"f": "npcs/zebulon",
-"ms": 82,
-"n": 12,
-"p": 3,
-"w32": 19,
-"w64": 32
-},
-"npc:a86": {
-"f": "npcs/lurleen",
-"ms": 103,
-"n": 16,
-"p": 3,
-"w32": 24,
-"w64": 42
-},
-"npc:a87": {
-"f": "npcs/erastus",
-"ms": 103,
-"n": 16,
-"p": 3,
-"w32": 32,
-"w64": 57
-},
-"npc:a88": {
-"f": "npcs/otis",
-"ms": 103,
-"n": 16,
-"p": 3,
-"w32": 20,
-"w64": 35
-},
-"npc:a89": {
-"f": "npcs/hester",
-"ms": 103,
-"n": 16,
-"p": 3,
-"w32": 22,
-"w64": 38
-},
-"npc:a90": {
-"f": "npcs/dewey",
-"ms": 82,
-"n": 12,
-"p": 3,
-"w32": 20,
-"w64": 35
-},
-"npc:a91": {
-"f": "npcs/opal",
-"ms": 83,
-"n": 13,
-"p": 3,
-"w32": 23,
-"w64": 40
-},
-"npc:a92": {
-"f": "npcs/burl",
-"ms": 103,
-"n": 16,
-"p": 3,
-"w32": 22,
-"w64": 38
-},
-"npc:a95": {
+"npc:bessie": {
 "f": "npcs/bessie",
 "ms": 103,
 "n": 16,
@@ -1383,7 +975,431 @@
 "w32": 24,
 "w64": 43
 },
-"npc:a96": {
+"npc:branigan": {
+"f": "npcs/branigan",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 36,
+"w64": 65
+},
+"npc:branor": {
+"f": "npcs/branor",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 24,
+"w64": 43
+},
+"npc:brean": {
+"f": "npcs/brean",
+"ms": 82,
+"n": 12,
+"p": 3,
+"w32": 22,
+"w64": 37
+},
+"npc:bresenham": {
+"f": "npcs/bresenham",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 20,
+"w64": 35
+},
+"npc:brigitte": {
+"f": "npcs/brigitte",
+"ms": 88,
+"n": 9,
+"p": 3,
+"w32": 33,
+"w64": 60
+},
+"npc:burl": {
+"f": "npcs/burl",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 22,
+"w64": 38
+},
+"npc:cain": {
+"f": "npcs/cain",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 22,
+"w64": 39
+},
+"npc:cedric": {
+"f": "npcs/cedric",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 22,
+"w64": 38
+},
+"npc:charles": {
+"f": "npcs/charles",
+"ms": 83,
+"n": 12,
+"p": 3,
+"w32": 26,
+"w64": 45
+},
+"npc:clovis": {
+"f": "npcs/clovis",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 22,
+"w64": 38
+},
+"npc:colman": {
+"f": "npcs/colman",
+"ms": 82,
+"n": 12,
+"p": 3,
+"w32": 20,
+"w64": 35
+},
+"npc:constine": {
+"f": "npcs/constine",
+"ms": 93,
+"n": 16,
+"p": 3,
+"w32": 23,
+"w64": 40
+},
+"npc:daboga": {
+"f": "npcs/daboga",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 22,
+"w64": 38
+},
+"npc:daniel": {
+"f": "npcs/daniel",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 22,
+"w64": 38
+},
+"npc:deckard": {
+"f": "npcs/deckard",
+"ms": 93,
+"n": 16,
+"p": 3,
+"w32": 23,
+"w64": 40
+},
+"npc:dee": {
+"f": "npcs/dee",
+"ms": 81,
+"n": 8,
+"p": 3,
+"w32": 20,
+"w64": 33
+},
+"npc:dewey": {
+"f": "npcs/dewey",
+"ms": 82,
+"n": 12,
+"p": 3,
+"w32": 20,
+"w64": 35
+},
+"npc:dionel": {
+"f": "npcs/dionel",
+"ms": 82,
+"n": 12,
+"p": 3,
+"w32": 20,
+"w64": 35
+},
+"npc:doruk": {
+"f": "npcs/doruk",
+"ms": 82,
+"n": 12,
+"p": 3,
+"w32": 28,
+"w64": 51
+},
+"npc:drystan": {
+"f": "npcs/drystan",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 36,
+"w64": 66
+},
+"npc:dylan": {
+"f": "npcs/dylan",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 22,
+"w64": 38
+},
+"npc:edmund": {
+"f": "npcs/edmund",
+"ms": 93,
+"n": 16,
+"p": 3,
+"w32": 24,
+"w64": 42
+},
+"npc:egemen": {
+"f": "npcs/egemen",
+"ms": 82,
+"n": 12,
+"p": 3,
+"w32": 36,
+"w64": 66
+},
+"npc:el-chad": {
+"f": "npcs/el-chad",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 22,
+"w64": 38
+},
+"npc:elanur": {
+"f": "npcs/elanur",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 22,
+"w64": 37
+},
+"npc:elgifu": {
+"f": "npcs/elgifu",
+"ms": 93,
+"n": 16,
+"p": 3,
+"w32": 22,
+"w64": 38
+},
+"npc:elmo": {
+"f": "npcs/elmo",
+"ms": 87,
+"n": 11,
+"p": 3,
+"w32": 42,
+"w64": 77
+},
+"npc:elsie": {
+"f": "npcs/elsie",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 23,
+"w64": 40
+},
+"npc:engin": {
+"f": "npcs/engin",
+"ms": 82,
+"n": 12,
+"p": 3,
+"w32": 36,
+"w64": 65
+},
+"npc:eofor": {
+"f": "npcs/eofor",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 30,
+"w64": 55
+},
+"npc:erastus": {
+"f": "npcs/erastus",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 32,
+"w64": 57
+},
+"npc:eric": {
+"f": "npcs/eric",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 22,
+"w64": 38
+},
+"npc:euler": {
+"f": "npcs/euler",
+"ms": 93,
+"n": 16,
+"p": 3,
+"w32": 23,
+"w64": 40
+},
+"npc:faruq": {
+"f": "npcs/faruq",
+"ms": 82,
+"n": 12,
+"p": 3,
+"w32": 28,
+"w64": 50
+},
+"npc:faysal": {
+"f": "npcs/faysal",
+"ms": 82,
+"n": 12,
+"p": 3,
+"w32": 30,
+"w64": 53
+},
+"npc:felix": {
+"f": "npcs/felix",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 22,
+"w64": 39
+},
+"npc:ferag": {
+"f": "npcs/ferag",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 22,
+"w64": 38
+},
+"npc:fergus": {
+"f": "npcs/fergus",
+"ms": 82,
+"n": 12,
+"p": 3,
+"w32": 33,
+"w64": 60
+},
+"npc:frances": {
+"f": "npcs/frances",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 23,
+"w64": 40
+},
+"npc:gabe": {
+"f": "npcs/gabe",
+"ms": 93,
+"n": 16,
+"p": 3,
+"w32": 24,
+"w64": 42
+},
+"npc:gareth": {
+"f": "npcs/gareth",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 36,
+"w64": 66
+},
+"npc:gaspile": {
+"f": "npcs/gaspile",
+"ms": 82,
+"n": 12,
+"p": 3,
+"w32": 28,
+"w64": 49
+},
+"npc:gavin": {
+"f": "npcs/gavin",
+"ms": 83,
+"n": 13,
+"p": 3,
+"w32": 20,
+"w64": 35
+},
+"npc:george": {
+"f": "npcs/george",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 28,
+"w64": 49
+},
+"npc:gil": {
+"f": "npcs/gil",
+"ms": 87,
+"n": 11,
+"p": 3,
+"w32": 42,
+"w64": 77
+},
+"npc:godric": {
+"f": "npcs/godric",
+"ms": 207,
+"n": 16,
+"p": 3,
+"w32": 18,
+"w64": 30
+},
+"npc:gonlle": {
+"f": "npcs/gonlle",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 23,
+"w64": 40
+},
+"npc:guri": {
+"f": "npcs/guri",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 22,
+"w64": 37
+},
+"npc:guy": {
+"f": "npcs/guy",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 22,
+"w64": 38
+},
+"npc:hagar": {
+"f": "npcs/hagar",
+"ms": 82,
+"n": 12,
+"p": 3,
+"w32": 28,
+"w64": 50
+},
+"npc:heinrich": {
+"f": "npcs/heinrich",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 23,
+"w64": 40
+},
+"npc:hester": {
+"f": "npcs/hester",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 22,
+"w64": 38
+},
+"npc:hildegarde": {
+"f": "npcs/hildegarde",
+"ms": 207,
+"n": 16,
+"p": 3,
+"w32": 15,
+"w64": 24
+},
+"npc:hobart": {
 "f": "npcs/hobart",
 "ms": 103,
 "n": 16,
@@ -1391,12 +1407,780 @@
 "w32": 21,
 "w64": 36
 },
-"npc:a98": {
+"npc:hoder": {
+"f": "npcs/hoder",
+"ms": 82,
+"n": 12,
+"p": 3,
+"w32": 22,
+"w64": 37
+},
+"npc:inna": {
+"f": "npcs/inna",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 24,
+"w64": 42
+},
+"npc:ismet": {
+"f": "npcs/ismet",
+"ms": 82,
+"n": 12,
+"p": 3,
+"w32": 21,
+"w64": 36
+},
+"npc:isra": {
+"f": "npcs/isra",
+"ms": 82,
+"n": 12,
+"p": 3,
+"w32": 26,
+"w64": 47
+},
+"npc:jaques": {
+"f": "npcs/jaques",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 21,
+"w64": 36
+},
+"npc:jebidiah": {
 "f": "npcs/jebidiah",
 "ms": 103,
 "n": 16,
 "p": 3,
 "w32": 21,
 "w64": 36
+},
+"npc:joan": {
+"f": "npcs/joan",
+"ms": 82,
+"n": 12,
+"p": 3,
+"w32": 20,
+"w64": 35
+},
+"npc:johnny": {
+"f": "npcs/johnny",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 22,
+"w64": 37
+},
+"npc:jon": {
+"f": "npcs/jon",
+"ms": 82,
+"n": 12,
+"p": 3,
+"w32": 22,
+"w64": 37
+},
+"npc:kaan": {
+"f": "npcs/kaan",
+"ms": 82,
+"n": 12,
+"p": 3,
+"w32": 26,
+"w64": 47
+},
+"npc:karamel": {
+"f": "npcs/karamel",
+"ms": 88,
+"n": 9,
+"p": 3,
+"w32": 33,
+"w64": 60
+},
+"npc:kari": {
+"f": "npcs/kari",
+"ms": 93,
+"n": 16,
+"p": 3,
+"w32": 24,
+"w64": 41
+},
+"npc:karmac": {
+"f": "npcs/karmac",
+"ms": 82,
+"n": 12,
+"p": 3,
+"w32": 22,
+"w64": 37
+},
+"npc:kazim": {
+"f": "npcs/kazim",
+"ms": 82,
+"n": 12,
+"p": 3,
+"w32": 30,
+"w64": 55
+},
+"npc:leofric": {
+"f": "npcs/leofric",
+"ms": 207,
+"n": 16,
+"p": 3,
+"w32": 18,
+"w64": 30
+},
+"npc:lisa": {
+"f": "npcs/lisa",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 22,
+"w64": 38
+},
+"npc:logan": {
+"f": "npcs/logan",
+"ms": 82,
+"n": 12,
+"p": 3,
+"w32": 22,
+"w64": 39
+},
+"npc:loke": {
+"f": "npcs/loke",
+"ms": 81,
+"n": 8,
+"p": 3,
+"w32": 23,
+"w64": 40
+},
+"npc:lurleen": {
+"f": "npcs/lurleen",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 24,
+"w64": 42
+},
+"npc:mabel": {
+"f": "npcs/mabel",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 22,
+"w64": 38
+},
+"npc:margery": {
+"f": "npcs/margery",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 22,
+"w64": 38
+},
+"npc:martem": {
+"f": "npcs/martem",
+"ms": 93,
+"n": 16,
+"p": 3,
+"w32": 24,
+"w64": 43
+},
+"npc:mary": {
+"f": "npcs/mary",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 24,
+"w64": 43
+},
+"npc:matthew": {
+"f": "npcs/matthew",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 36,
+"w64": 66
+},
+"npc:maude": {
+"f": "npcs/maude",
+"ms": 82,
+"n": 12,
+"p": 3,
+"w32": 20,
+"w64": 34
+},
+"npc:maxwell": {
+"f": "npcs/maxwell",
+"ms": 93,
+"n": 16,
+"p": 3,
+"w32": 24,
+"w64": 41
+},
+"npc:meredith": {
+"f": "npcs/meredith",
+"ms": 82,
+"n": 12,
+"p": 3,
+"w32": 20,
+"w64": 34
+},
+"npc:merida": {
+"f": "npcs/merida",
+"ms": 85,
+"n": 14,
+"p": 3,
+"w32": 19,
+"w64": 32
+},
+"npc:millen": {
+"f": "npcs/millen",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 22,
+"w64": 38
+},
+"npc:morrigan": {
+"f": "npcs/morrigan",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 20,
+"w64": 35
+},
+"npc:myrtle": {
+"f": "npcs/myrtle",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 23,
+"w64": 40
+},
+"npc:nebil": {
+"f": "npcs/nebil",
+"ms": 82,
+"n": 12,
+"p": 3,
+"w32": 28,
+"w64": 50
+},
+"npc:newell": {
+"f": "npcs/newell",
+"ms": 82,
+"n": 12,
+"p": 3,
+"w32": 22,
+"w64": 39
+},
+"npc:newt": {
+"f": "npcs/newt",
+"ms": 82,
+"n": 16,
+"p": 3,
+"w32": 22,
+"w64": 37
+},
+"npc:nick": {
+"f": "npcs/nick",
+"ms": 82,
+"n": 12,
+"p": 3,
+"w32": 22,
+"w64": 37
+},
+"npc:nunie": {
+"f": "npcs/nunie",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 24,
+"w64": 42
+},
+"npc:odie": {
+"f": "npcs/odie",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 22,
+"w64": 37
+},
+"npc:opal": {
+"f": "npcs/opal",
+"ms": 83,
+"n": 13,
+"p": 3,
+"w32": 23,
+"w64": 40
+},
+"npc:osbert": {
+"f": "npcs/osbert",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 22,
+"w64": 38
+},
+"npc:otis": {
+"f": "npcs/otis",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 20,
+"w64": 35
+},
+"npc:ozrid": {
+"f": "npcs/ozrid",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 28,
+"w64": 50
+},
+"npc:pale-goblin": {
+"f": "npcs/pale-goblin",
+"ms": 40,
+"n": 8,
+"p": 3,
+"w32": 46,
+"w64": 85
+},
+"npc:patas": {
+"f": "npcs/patas",
+"ms": 88,
+"n": 9,
+"p": 3,
+"w32": 33,
+"w64": 60
+},
+"npc:perlin": {
+"f": "npcs/perlin",
+"ms": 82,
+"n": 10,
+"p": 3,
+"w32": 23,
+"w64": 40
+},
+"npc:perry": {
+"f": "npcs/perry",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 21,
+"w64": 36
+},
+"npc:petrus": {
+"f": "npcs/petrus",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 22,
+"w64": 39
+},
+"npc:philip": {
+"f": "npcs/philip",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 28,
+"w64": 50
+},
+"npc:pythar": {
+"f": "npcs/pythar",
+"ms": 82,
+"n": 16,
+"p": 3,
+"w32": 20,
+"w64": 33
+},
+"npc:ramel": {
+"f": "npcs/ramel",
+"ms": 82,
+"n": 12,
+"p": 3,
+"w32": 22,
+"w64": 37
+},
+"npc:rasobar": {
+"f": "npcs/rasobar",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 23,
+"w64": 40
+},
+"npc:reginald": {
+"f": "npcs/reginald",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 22,
+"w64": 38
+},
+"npc:reika": {
+"f": "npcs/reika",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 22,
+"w64": 37
+},
+"npc:ribamar": {
+"f": "npcs/ribamar",
+"ms": 82,
+"n": 10,
+"p": 3,
+"w32": 34,
+"w64": 63
+},
+"npc:roland": {
+"f": "npcs/roland",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 22,
+"w64": 38
+},
+"npc:roni": {
+"f": "npcs/roni",
+"ms": 81,
+"n": 8,
+"p": 3,
+"w32": 24,
+"w64": 41
+},
+"npc:rosel": {
+"f": "npcs/rosel",
+"ms": 124,
+"n": 16,
+"p": 3,
+"w32": 26,
+"w64": 45
+},
+"npc:rubius": {
+"f": "npcs/rubius",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 22,
+"w64": 38
+},
+"npc:rue": {
+"f": "npcs/rue",
+"ms": 124,
+"n": 16,
+"p": 3,
+"w32": 24,
+"w64": 43
+},
+"npc:rufus": {
+"f": "npcs/rufus",
+"ms": 82,
+"n": 10,
+"p": 3,
+"w32": 23,
+"w64": 40
+},
+"npc:sabrina": {
+"f": "npcs/sabrina",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 30,
+"w64": 54
+},
+"npc:sal": {
+"f": "npcs/sal",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 20,
+"w64": 35
+},
+"npc:salazar": {
+"f": "npcs/salazar",
+"ms": 93,
+"n": 16,
+"p": 3,
+"w32": 24,
+"w64": 42
+},
+"npc:selene": {
+"f": "npcs/selene",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 23,
+"w64": 40
+},
+"npc:seraphina": {
+"f": "npcs/seraphina",
+"ms": 82,
+"n": 12,
+"p": 3,
+"w32": 20,
+"w64": 34
+},
+"npc:sercha": {
+"f": "npcs/sercha",
+"ms": 93,
+"n": 16,
+"p": 3,
+"w32": 22,
+"w64": 39
+},
+"npc:serilda": {
+"f": "npcs/serilda",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 21,
+"w64": 36
+},
+"npc:seymour": {
+"f": "npcs/seymour",
+"ms": 93,
+"n": 16,
+"p": 3,
+"w32": 24,
+"w64": 42
+},
+"npc:sigurd": {
+"f": "npcs/sigurd",
+"ms": 83,
+"n": 13,
+"p": 3,
+"w32": 22,
+"w64": 37
+},
+"npc:sky": {
+"f": "npcs/sky",
+"ms": 88,
+"n": 9,
+"p": 3,
+"w32": 33,
+"w64": 60
+},
+"npc:sushi": {
+"f": "npcs/sushi",
+"ms": 88,
+"n": 9,
+"p": 3,
+"w32": 33,
+"w64": 60
+},
+"npc:tansy": {
+"f": "npcs/tansy",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 24,
+"w64": 43
+},
+"npc:thadeus": {
+"f": "npcs/thadeus",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 22,
+"w64": 39
+},
+"npc:thelma": {
+"f": "npcs/thelma",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 22,
+"w64": 38
+},
+"npc:thibault": {
+"f": "npcs/thibault",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 22,
+"w64": 38
+},
+"npc:thomas": {
+"f": "npcs/thomas",
+"ms": 82,
+"n": 12,
+"p": 3,
+"w32": 22,
+"w64": 39
+},
+"npc:tim": {
+"f": "npcs/tim",
+"ms": 82,
+"n": 12,
+"p": 3,
+"w32": 22,
+"w64": 39
+},
+"npc:timur": {
+"f": "npcs/timur",
+"ms": 82,
+"n": 12,
+"p": 3,
+"w32": 30,
+"w64": 54
+},
+"npc:tink": {
+"f": "npcs/tink",
+"ms": 88,
+"n": 9,
+"p": 3,
+"w32": 33,
+"w64": 60
+},
+"npc:tock": {
+"f": "npcs/tock",
+"ms": 82,
+"n": 10,
+"p": 3,
+"w32": 33,
+"w64": 60
+},
+"npc:torvan": {
+"f": "npcs/torvan",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 22,
+"w64": 38
+},
+"npc:tristan": {
+"f": "npcs/tristan",
+"ms": 93,
+"n": 16,
+"p": 3,
+"w32": 22,
+"w64": 38
+},
+"npc:tufi": {
+"f": "npcs/tufi",
+"ms": 82,
+"n": 10,
+"p": 3,
+"w32": 23,
+"w64": 40
+},
+"npc:tutu": {
+"f": "npcs/tutu",
+"ms": 88,
+"n": 9,
+"p": 3,
+"w32": 33,
+"w64": 60
+},
+"npc:ulrich": {
+"f": "npcs/ulrich",
+"ms": 207,
+"n": 16,
+"p": 3,
+"w32": 18,
+"w64": 30
+},
+"npc:vee": {
+"f": "npcs/vee",
+"ms": 81,
+"n": 8,
+"p": 3,
+"w32": 20,
+"w64": 33
+},
+"npc:violet": {
+"f": "npcs/violet",
+"ms": 124,
+"n": 16,
+"p": 3,
+"w32": 26,
+"w64": 45
+},
+"npc:wilfred": {
+"f": "npcs/wilfred",
+"ms": 82,
+"n": 12,
+"p": 3,
+"w32": 20,
+"w64": 35
+},
+"npc:wolfram": {
+"f": "npcs/wolfram",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 22,
+"w64": 38
+},
+"npc:wounded-dylan": {
+"f": "npcs/wounded-dylan",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 23,
+"w64": 40
+},
+"npc:yacht": {
+"f": "npcs/yacht",
+"ms": 82,
+"n": 12,
+"p": 3,
+"w32": 22,
+"w64": 38
+},
+"npc:yordin": {
+"f": "npcs/yordin",
+"ms": 82,
+"n": 12,
+"p": 3,
+"w32": 22,
+"w64": 37
+},
+"npc:yoz": {
+"f": "npcs/yoz",
+"ms": 103,
+"n": 16,
+"p": 3,
+"w32": 30,
+"w64": 55
+},
+"npc:yseult": {
+"f": "npcs/yseult",
+"ms": 82,
+"n": 12,
+"p": 3,
+"w32": 20,
+"w64": 33
+},
+"npc:yusuf": {
+"f": "npcs/yusuf",
+"ms": 88,
+"n": 9,
+"p": 3,
+"w32": 33,
+"w64": 60
+},
+"npc:zebulon": {
+"f": "npcs/zebulon",
+"ms": 82,
+"n": 12,
+"p": 3,
+"w32": 19,
+"w64": 32
+},
+"npc:zoe": {
+"f": "npcs/zoe",
+"ms": 82,
+"n": 12,
+"p": 3,
+"w32": 24,
+"w64": 41
+},
+"npc:zori": {
+"f": "npcs/zori",
+"ms": 82,
+"n": 10,
+"p": 3,
+"w32": 23,
+"w64": 40
 }
 }

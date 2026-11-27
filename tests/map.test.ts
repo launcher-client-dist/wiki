@@ -20,6 +20,10 @@ function dataLinks(): Set<string> {
   }
   for (const m of read<{ monsters: any[] }>("monsters.json").monsters) for (const p of [...m.places, ...m.windows]) out.add(p.link);
   for (const e of read<{ entities: any[] }>("entities.json").entities) if (e.appears?.where) out.add(e.appears.where.link);
+  for (const n of read<{ npcs: any[] }>("npcs.json").npcs) for (const sh of n.shifts) {
+    out.add(sh.link);
+    if (sh.services?.travel?.link) out.add(sh.services.travel.link);
+  }
   return out;
 }
 
