@@ -114,12 +114,14 @@ export function startMap(root: HTMLElement): void {
   };
   const spriteHtml = (e: Entry, h: 32 | 64, phase: number, still: boolean) => {
     const sp = e.sp!;
+    // each frame carries its outline and halo in a margin of p px (baked at export: option E, tokens.css --map-*)
     const w = h === 32 ? sp.w32 : sp.w64;
+    const ph = h + 2 * (sp.p ?? 0);
     const base = `/sprites/${sp.f}-${h}`;
-    if (still || reduce.matches || sp.n <= 1) return `<img class="spr" src="${base}.png" width="${w}" height="${h}" style="width:${w}px;height:${h}px" alt="" decoding="async">`;
+    if (still || reduce.matches || sp.n <= 1) return `<img class="spr" src="${base}.png" width="${w}" height="${ph}" style="width:${w}px;height:${ph}px" alt="" decoding="async">`;
     const dur = sp.n * sp.ms;
     // the strip slides under a one-frame window by transform (the compositor's work: no repaint per frame)
-    return `<span class="spr anim" style="width:${w}px;height:${h}px;--sn:${sp.n}"><i style="width:${w * sp.n}px;height:${h}px;background-image:url(${base}.webp);animation-duration:${dur}ms;animation-timing-function:steps(${sp.n});animation-delay:${-Math.round(phase * dur)}ms"></i></span>`;
+    return `<span class="spr anim" style="width:${w}px;height:${ph}px;--sn:${sp.n}"><i style="width:${w * sp.n}px;height:${ph}px;background-image:url(${base}.webp);animation-duration:${dur}ms;animation-timing-function:steps(${sp.n});animation-delay:${-Math.round(phase * dur)}ms"></i></span>`;
   };
   interface Group { m: Mark; all: Mark[]; refs: Set<string>; n: number; p: L.Point }
   const countOf = (m: Mark) => (m.layer === "places" ? 1 : m.n);
@@ -179,9 +181,11 @@ export function startMap(root: HTMLElement): void {
     let html: string, w: number, h: number, ax: number, ay: number;
     if (m.entry.sp) {
       h = opts.h;
+      const pad = m.entry.sp.p ?? 0;
       w = h === 32 ? m.entry.sp.w32 : m.entry.sp.w64;
-      html = `<span class="sm${state}" style="width:${w}px;height:${h}px">${spriteHtml(m.entry, opts.h, opts.phase, opts.still)}${pill}</span>`;
-      ax = w / 2; ay = h - 3;   // the feet on the spot
+      h += 2 * pad;
+      html = `<span class="sm sm--${m.layer}${state}" style="width:${w}px;height:${h}px">${spriteHtml(m.entry, opts.h, opts.phase, opts.still)}${pill}</span>`;
+      ax = w / 2; ay = h - pad - 3;   // the feet on the spot
     } else {
       const box = opts.h === 32 ? 22 : 28;
       w = h = box;
@@ -213,7 +217,8 @@ export function startMap(root: HTMLElement): void {
       if (!view.contains(at)) continue;
       const many = g.refs.size > 1;
       out.push({ at, sprite: !!g.m.entry.sp, make: (still) => marker(at, g.m, {
-        n: g.n, many, h, phase: seed(g.m.x, g.m.z), still,
+        // NPCs and bosses, few and the ones a reader looks for in a town: 64 px from zoom 2 (32 px they read as specks)
+        n: g.n, many, h: (g.m.layer === "npcs" || g.m.layer === "bosses") && z >= 2 ? 64 : h, phase: seed(g.m.x, g.m.z), still,
         tip: tipOf(g) + (many && z < map.getMaxZoom() ? ` <i>${esc(s.zoomToSee)}</i>` : ""),
         onClick: (mk) => (!many ? pickMark(g.m, mk) : z < map.getMaxZoom() ? zoomInto(g) : showGroup(g, mk)),
       }) });

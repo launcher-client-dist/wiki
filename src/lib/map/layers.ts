@@ -39,7 +39,7 @@ export interface Icon { s: string; w: number; h: number; px?: boolean }
 export type Fact = [icon: string, text: string, w: number, h: number] | ["$gold", number];
 /** A walking sprite (public/sprites/<f>-<h>.webp: its frames side by side; <f>-<h>.png: the first frame): n frames of
  *  ms each, w32 / w64 px wide at 32 / 64 px tall. */
-export interface Sprite { f: string; n: number; ms: number; w32: number; w64: number }
+export interface Sprite { f: string; n: number; ms: number; w32: number; w64: number; p?: number }
 export const SPRITES = spritesJson as unknown as Record<string, Sprite>;
 export interface Entry { r: string; n: string; a?: string; u: string | null; i?: Icon; k?: string; x?: Fact[]; sp?: Sprite }
 export type Point = (number | string)[];

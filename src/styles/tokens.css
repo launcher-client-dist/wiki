@@ -48,6 +48,15 @@
   --t-fast: 120ms;
   --t-med: 200ms;
   --lift: -2px;              /* how far a block rises on hover */
+
+  /* ---- the map's markers (the map is dark in both themes, so one set): a sprite's 1 px outline in its kind's colour
+     (r g b, then the alpha: a picked one goes full), the soft dark halo around it, and how much the tiles dim under
+     the markers */
+  --map-outline-monster: 255 170 160;
+  --map-outline-npc: 170 210 255;
+  --map-outline-alpha: 0.55;
+  --map-halo: rgba(0, 0, 0, 0.6);
+  --map-dim: brightness(0.6) saturate(0.6);
 }
 @media (min-width: 720px) { :root { --gutter: 2rem; } }
 @media (prefers-reduced-motion: reduce) { :root { --t-fast: 0ms; --t-med: 0ms; --lift: 0px; } }

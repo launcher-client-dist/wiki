@@ -238,7 +238,14 @@ const jsonLd = [{ "@context": "https://schema.org", "@type": "Map", name: `${tm.
   .sm { position: relative; display: block; }
   .sm::before { content: ""; position: absolute; left: 50%; bottom: -2px; width: 70%; height: 8px; transform: translateX(-50%); border-radius: 50%;
     background: radial-gradient(closest-side, rgba(0, 0, 0, 0.55), transparent); }
+  /* option E (the user, 2026-11-27): the sprite's silhouette outlined 1 px in its kind's colour, half strong, then a soft
+     dark halo, baked into the sprite files at export from these tokens (--map-outline-*, --map-halo: as a CSS filter it
+     was re-applied every frame under the moving sprites, measured); the tiles dimmed under the markers (--map-dim).
+     A pick keeps that outline (a CSS ring would wrap the baked halo, not the silhouette): its sun ellipse and the rest
+     faded carry it. */
   .spr { position: relative; display: block; image-rendering: pixelated; }
+  /* on each tile, not the pane: drawn once with the tile, never re-applied per frame under the moving sprites */
+  .mapcanvas .leaflet-tile { filter: var(--map-dim); }
   .spr.anim { overflow: hidden; }
   .spr.anim i { display: block; background-repeat: no-repeat; background-size: 100% 100%; image-rendering: pixelated;
     animation-name: walk; animation-iteration-count: infinite; }
