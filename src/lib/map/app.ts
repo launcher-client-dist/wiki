@@ -15,7 +15,7 @@ interface Strings {
   surface: string; floorN: string; up: string; down: string; searchEmpty: string; gotoBad: string; openPage: string; noPage: string;
   spotsN: string; spotsHere: string; otherFloors: string; pin: string; zoomIn: string; zoomOut: string; layer: Record<LayerKey, string>;
   next: string; now: string; clock: string; close: string;
-  spot1: string; floor1: string; floorsF: string; spotsIn: string; highlighted: string; clearHighlight: string; hereTitle: string; zoomToSee: string; pays: string;
+  spot1: string; floor1: string; floorsF: string; spotsIn: string; oneOf: string; chance: string; highlighted: string; clearHighlight: string; hereTitle: string; zoomToSee: string; pays: string;
 }
 interface Config { lang: string; layers: LayerKey[]; defaultOn: LayerKey[]; floors: string[]; meta: TileMeta; icons: Record<string, [number, number]>; s: Strings }
 
@@ -25,7 +25,7 @@ const ll = (x: number, z: number) => L.latLng(z, x);
 const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]!);
 
 interface Loaded { file: LayerFile; layer: LayerKey | "spoiler" }
-interface Mark { layer: LayerKey; entry: Entry; x: number; z: number; f: string; n: number; hours?: [number, number]; invasion?: boolean; cells?: number[]; shift?: number }
+interface Mark { layer: LayerKey; entry: Entry; x: number; z: number; f: string; n: number; hours?: [number, number]; invasion?: boolean; oneOf?: number; picks?: [number, number]; cells?: number[]; shift?: number }
 
 export function startMap(root: HTMLElement): void {
   const cfg = JSON.parse(root.dataset.config!) as Config;
@@ -78,6 +78,8 @@ export function startMap(root: HTMLElement): void {
         const layer = (l.layer === "spoiler" ? cfg.layers[p[p.length - 1] as number] : l.layer) as LayerKey;
         const m: Mark = { layer, entry: l.file.e[p[3] as number]!, x: p[0] as number, z: p[1] as number, f: String(p[2]), n: (p[4] as number) || 1 };
         if (layer === "bosses" && (p[5] as number) >= 0) { m.hours = [p[5] as number, p[6] as number]; m.invasion = p[7] === 1; }
+        // a boss that comes out at one of N spots: this marker is one of them (its odds when they differ)
+        if (layer === "bosses" && (p[8] as number) > 1) { m.oneOf = p[8] as number; if ((p[10] as number) > 0) m.picks = [p[9] as number, p[10] as number]; }
         if (layer === "monsters" && typeof p[5] === "string" && p[5]) m.cells = p[5].split(",").map(Number);
         if (layer === "npcs" && typeof p[5] === "number") m.shift = p[5];
         out.push(m);
@@ -173,11 +175,14 @@ export function startMap(root: HTMLElement): void {
     else showCard(m, mk);
   };
   /** One marker: a sprite (or a bare icon) with its pill. */
-  const marker = (at: L.LatLng, m: Mark, opts: { n: number; many: boolean; h: 32 | 64; phase: number; still: boolean; tip: string; onClick: (mk: L.Marker) => void }) => {
+  const marker = (at: L.LatLng, m: Mark, opts: { n: number; nb?: number; bn?: number; many: boolean; h: 32 | 64; phase: number; still: boolean; tip: string; onClick: (mk: L.Marker) => void }) => {
     const hit = highlight === m.entry.r;
     const state = `${opts.many ? " many" : ""}${hit ? " hit" : ""}${highlight && !hit ? " dim" : ""}`;
+    // a boss leads its group: the pill counts its distinct bosses (a boss's two spots are one boss), and the rest of the
+    // group as "+N" (never "40" bosses when one boss stands among 39 creatures)
+    const nb = opts.nb ?? 1, bn = opts.bn ?? opts.n;
     const pill = m.layer === "bosses"
-      ? `<b class="cnt boss"><img src="/ui/boss.png" width="18" height="18" alt="">${opts.n > 1 ? opts.n : ""}</b>`
+      ? `<b class="cnt boss"><img src="/ui/boss.png" width="18" height="18" alt="">${nb > 1 ? nb : ""}${opts.n > bn ? `<span class="more">+${opts.n - bn}</span>` : ""}</b>`
       : opts.n > 1 ? `<b class="cnt">${opts.n}</b>` : "";
     let html: string, w: number, h: number, ax: number, ay: number;
     if (m.entry.sp) {
@@ -219,7 +224,8 @@ export function startMap(root: HTMLElement): void {
       const many = g.refs.size > 1;
       out.push({ at, sprite: !!g.m.entry.sp, make: (still) => marker(at, g.m, {
         // NPCs and bosses, few and the ones a reader looks for in a town: 64 px from zoom 2 (32 px they read as specks)
-        n: g.n, many, h: (g.m.layer === "npcs" || g.m.layer === "bosses") && z >= 2 ? 64 : h, phase: seed(g.m.x, g.m.z), still,
+        n: g.n, nb: new Set(g.all.filter((x) => x.layer === "bosses").map((x) => x.entry.r)).size,
+        bn: g.all.filter((x) => x.layer === "bosses").reduce((a, x) => a + countOf(x), 0), many, h: (g.m.layer === "npcs" || g.m.layer === "bosses") && z >= 2 ? 64 : h, phase: seed(g.m.x, g.m.z), still,
         tip: tipOf(g) + (many && z < map.getMaxZoom() ? ` <i>${esc(s.zoomToSee)}</i>` : ""),
         onClick: (mk) => (!many ? pickMark(g.m, mk) : z < map.getMaxZoom() ? zoomInto(g) : showGroup(g, mk)),
       }) });
@@ -313,7 +319,9 @@ export function startMap(root: HTMLElement): void {
       facts.append(tagOf(["time", `${(w.open ? s.now : s.next).replace("{t}", fmt.format((w.open ? w.until : w.at) * 1000))} (${s.clock})`, ...cfg.icons.time!], "tag-sun"));
     }
     const sp = spread(m.entry.r);
-    if (m.layer !== "places" && sp.n > 0) facts.append(tagOf(["src-map", sp.text, ...cfg.icons["src-map"]!]));
+    // one of N spots: say so (never "N spots", which reads as N bosses out at once), with this spot's odds
+    if (m.oneOf) facts.append(tagOf(["src-map", s.oneOf.replace("{n}", String(m.oneOf)) + (m.picks ? ` · ${s.chance.replace("{k}", String(m.picks[0])).replace("{n}", String(m.picks[1]))}` : ""), ...cfg.icons["src-map"]!]));
+    else if (m.layer !== "places" && sp.n > 0) facts.append(tagOf(["src-map", sp.text, ...cfg.icons["src-map"]!]));
     card.innerHTML = `
       <button type="button" class="cclose" aria-label="${esc(s.close)}">×</button>
       <div class="chead">${headHtml(m.entry)}</div>

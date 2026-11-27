@@ -10,7 +10,7 @@ import { HREFLANG, LANGS, LOCALE, type Lang } from "../../../lib/i18n.ts";
 import { homePath, SECTIONS, sectionAlternates, sectionPath } from "../../../lib/routes.ts";
 import { siteData } from "../../../lib/site-registry.ts";
 import { statLabel } from "../../../lib/items/data.ts";
-import { BEHAVIOUR_KEYS, MONSTER_STAT_KEYS, behaviourKeys, monsterRef, towns, type MonsterData } from "../../../lib/monsters/data.ts";
+import { BEHAVIOUR_KEYS, MONSTER_STAT_KEYS, behaviourKeys, monsterRef, towns, windowPlaces, type MonsterData } from "../../../lib/monsters/data.ts";
 import { displayName } from "../../../lib/names.ts";
 import uiSizes from "../../../data/ui-icons.json";
 const UI = uiSizes as Record<string, number[]>;
@@ -32,7 +32,7 @@ const bandLabel = ([lo, hi]: readonly [number, number]) => (hi >= 999 ? `${lo}+`
 /** The towns, by how many monsters live there (the commonest first). */
 const TOWN = new Map<string, { label: string; n: number }>();
 for (const m of monsters) {
-  for (const p of [...m.places.map((x) => x.place), ...m.windows.map((w) => w.place)]) {
+  for (const p of [...m.places.map((x) => x.place), ...m.windows.flatMap(windowPlaces)]) {
     const cur = TOWN.get(p.town.en) ?? { label: p.town[lang], n: 0 };
     TOWN.set(p.town.en, cur);
   }
@@ -94,7 +94,7 @@ const label = (k: string) => (k === "exp" ? tm.exp : statLabel(k as "health")[la
             filters={{ level: bandOf(m), kind: kinds(m), region: where.map((w) => w.toLowerCase().replace(/[^a-z0-9]+/g, "-")), family: m.family ? m.family.toLowerCase() : [], behaviour: behaviourKeys(m) }}>
             <DataCell label={tm.colMonster} primary>
               <span class="name">
-                {m.grid ? <span class="render"><img src={m.grid} width="128" height="128" alt="" loading="lazy" decoding="async" /></span> : null}
+                <span class="render">{m.render ? <img src={m.render.src} width={m.render.size[0]} height={m.render.size[1]} alt="" loading="lazy" decoding="async" /> : null}</span>
                 <span class="small-icon"><IconSlot icon={e.icon ?? null} kind="monster" size={44} /></span>
                 <span class="ntext">
                   <a href={href} title={dn.name} lang={dn.nameLang !== lang ? HREFLANG[dn.nameLang] : undefined}>{dn.name}</a>
@@ -162,7 +162,6 @@ const label = (k: string) => (k === "exp" ? tm.exp : statLabel(k as "health")[la
   /* 96 cards: four across on a desktop (three on a narrow one), never one alone on the last line */
   @media (min-width: 1024px) {
     .monsters-page.container .dt[data-view="grid"] table tbody { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-    .monsters-page.container .dt[data-view="grid"] table tbody > tr:last-child:nth-child(4n+1) { grid-column: 1 / -1; }
   }
   .monsters-page .dt[data-view="grid"] .render { display: grid; place-items: center; height: 136px; border-radius: var(--r-m); background: var(--render-halo), var(--render-bg); }
   .monsters-page .dt[data-view="grid"] .render img { width: 128px; height: 128px; object-fit: contain; filter: var(--render-rim); }

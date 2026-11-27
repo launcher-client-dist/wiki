@@ -22,7 +22,7 @@ import { siteData, STUB_BY_REF } from "../../../lib/site-registry.ts";
 import { appearsIn } from "../../../lib/entities/appears.ts";
 import { statLabel } from "../../../lib/items/data.ts";
 import { oneInText } from "../../../lib/items/view.ts";
-import { MONSTER_STAT_KEYS, expPerHealth, gameHour, monsterRank, monsterRef, realOffset, respawnText, similarMonsters, type MonsterData, type MonsterStatKey, type MonsterVersion } from "../../../lib/monsters/data.ts";
+import { MONSTER_STAT_KEYS, expPerHealth, gameHour, monsterRank, monsterRef, realOffset, respawnText, similarMonsters, windowPlaces, type MonsterData, type MonsterStatKey, type MonsterVersion } from "../../../lib/monsters/data.ts";
 import { spellWords } from "../../../lib/monsters/spells.ts";
 import { windowSeconds } from "../../../lib/monsters/window.ts";
 import { monsterMeta } from "../../../lib/monsters/view.ts";
@@ -64,7 +64,7 @@ const description = monsterMeta(m, nameWithAid(dn), lang);
 const sec = (s: number) => num(Math.round(s * 10) / 10);
 const b = m.behaviour;
 /** A short summary from the data: where it lives (or comes out), its level band and how many drops. */
-const townNames = [...new Map([...m.places.map((p) => p.place.town), ...m.windows.map((w) => w.place.town)].map((tw) => [tw.en, tw[lang]])).values()];
+const townNames = [...new Map([...m.places.map((p) => p.place.town), ...m.windows.flatMap(windowPlaces).map((p) => p.town)].map((tw) => [tw.en, tw[lang]])).values()];
 const townList = townNames.length > 1 ? `${townNames.slice(0, 3).slice(0, -1).join(", ")} ${tm.and} ${townNames.slice(0, 3).at(-1)}` : townNames[0];
 const summary = [
   townList ? fill(m.places.length ? tm.summaryLives : tm.summaryTimed, { towns: townList }) : null,
@@ -127,11 +127,25 @@ const spellRows = (spells: MonsterData["spells"]) => spells;
                     <span class="wreal"><small>{tm.windowReal}</small><span>{fill(tm.windowRealText, { a: realOffset(w.hours[0]), b: realOffset(w.hours[1]) })}</span></span>
                   </div>
                   <p class="wnext" data-win-next data-t-next={tm.windowNext} data-t-now={tm.windowNow} data-t-clock={tm.yourClock} aria-live="polite"></p>
-                  <p class="wwhere">
-                    {w.invasion && <span class="inv"><GameIcon name="summon" scale={1} />{tm.windowInvasion}{w.oneNightIn && <> · {fill(tm.windowNights, { n: w.oneNightIn })}</>}</span>}
-                    <span><PlaceLine place={w.place} /></span>
-                    <MapLink variant="inline" href={w.link} entity={ref} label={ti.mapLink} />
-                  </p>
+                  {w.spots ? (
+                    <div class="wone" data-one-of={w.spots.length}>
+                      <p class="wonehead"><GameIcon name="src-map" scale={1} />{fill(tm.windowOneOf, { n: w.spots.length })}</p>
+                      <ul class="wspots">
+                        {w.spots.map((s) => (
+                          <li class="wwhere">
+                            <span class="wsplace">{s.picks && <span class:list={["fchance", s.picks[0] * 2 > s.picks[1] ? "up" : "safe"]}>{fill(tm.windowChance, { k: s.picks[0], n: s.picks[1] })}</span>}<PlaceLine place={s.place} /></span>
+                            <MapLink variant="inline" href={s.link} entity={ref} label={ti.mapLink} />
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ) : (
+                    <p class="wwhere">
+                      {w.invasion && <span class="inv"><GameIcon name="summon" scale={1} />{tm.windowInvasion}{w.oneNightIn && <> · {fill(tm.windowNights, { n: w.oneNightIn })}</>}</span>}
+                      <span><PlaceLine place={w.place} /></span>
+                      <MapLink variant="inline" href={w.link} entity={ref} label={ti.mapLink} />
+                    </p>
+                  )}
                 </li>
               ))}
             </ul>
@@ -412,6 +426,18 @@ const spellRows = (spells: MonsterData["spells"]) => spells;
   .wnext { margin: 0; font-weight: 700; color: var(--accent-text); }
   .wnext:empty { display: none; }
   .wwhere { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px; margin: 0; font-size: var(--fs-sm); color: var(--text-muted); }
+  /* a boss that picks one of several spots each window: the window once, its spots listed under "one of these N" */
+  .wone { display: grid; gap: 6px; }
+  .wonehead { display: flex; align-items: center; gap: 6px; margin: 0; font-size: var(--fs-sm); font-weight: 700; color: var(--text); }
+  .wspots { list-style: none; margin: 0; padding: 0 0 0 4px; display: grid; gap: 6px; }
+  .wspots .wwhere { padding-left: 10px; border-left: 2px solid var(--row-border); }
+  /* the odds pill stays on its place's line (the text wraps beside it); only the map link may drop below */
+  .wsplace .fchance { display: inline-flex; vertical-align: middle; margin-right: 8px; }
+  /* its odds when they differ, as the item pages' forging chance pill ("9 em 10", never a %): accent for the likely spot */
+  .fchance { display: inline-flex; align-items: center; gap: 5px; height: 26px; padding: 0 10px; border-radius: 13px;
+    font: 700 var(--fs-xs) / 1 var(--font-body); white-space: nowrap; border: var(--bw) solid; }
+  .fchance.up { color: var(--accent); background: color-mix(in srgb, var(--accent) 12%, transparent); border-color: color-mix(in srgb, var(--accent) 45%, transparent); }
+  .fchance.safe { color: var(--text-muted); background: var(--surface-2); border-color: var(--border); }
   .inv { display: inline-flex; align-items: center; gap: 5px; padding: 1px 8px 1px 4px; border-radius: 999px; font-weight: 700; color: var(--text); background: var(--surface-2); border: 1px solid var(--row-border); }
 
   /* the spells: one row each, the game's icon in its well, the name and what it does, then how often */

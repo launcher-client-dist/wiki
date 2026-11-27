@@ -41,7 +41,7 @@ const config = {
     surface: tm.surface, floorN: tm.floorN, up: tm.up, down: tm.down, searchEmpty: tm.searchEmpty, gotoBad: tm.gotoBad, openPage: tm.openPage,
     noPage: tm.noPage, spotsN: tm.spotsN, spotsHere: tm.spotsHere, otherFloors: tm.otherFloors, pin: tm.pin, zoomIn: tm.zoomIn, zoomOut: tm.zoomOut,
     layer: tm.layer, next: tmo.windowNext, now: tmo.windowNow, clock: tmo.yourClock, close: tm.close,
-    spot1: tm.spot1, floor1: tm.floor1, floorsF: tm.floorsF, spotsIn: tm.spotsIn, highlighted: tm.highlighted, clearHighlight: tm.clearHighlight,
+    spot1: tm.spot1, floor1: tm.floor1, floorsF: tm.floorsF, spotsIn: tm.spotsIn, oneOf: tm.oneOf, chance: tm.chance, highlighted: tm.highlighted, clearHighlight: tm.clearHighlight,
     hereTitle: tm.hereTitle, zoomToSee: tm.zoomToSee, pays: t.item.colValue,
   },
 };
@@ -259,6 +259,7 @@ const jsonLd = [{ "@context": "https://schema.org", "@type": "Map", name: `${tm.
   .im .cnt { top: calc(100% - 2px); }
   .cnt.boss { height: 22px; border-color: var(--danger); padding: 0 5px 0 2px; }   /* the game's 9 px boss sprite at 2x */
   .cnt.boss img { image-rendering: pixelated; }
+  .cnt.boss .more { margin-left: 3px; padding-left: 4px; border-left: 1px solid var(--border); color: var(--text-muted); }   /* the rest of the group */
   .mtip i { display: block; font-style: normal; font-weight: 500; color: var(--text-muted); }
   .sm.hit::before { width: 110%; height: 12px; bottom: -4px; background: radial-gradient(closest-side, color-mix(in srgb, var(--sun) 75%, transparent), transparent); }
   .sm.dim, .im.dim { opacity: 0.28; filter: grayscale(0.7); }

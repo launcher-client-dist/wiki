@@ -18,7 +18,7 @@ function dataLinks(): Set<string> {
     for (const m of i.sources.map) out.add(m.link);
     for (const r of [...i.sources.recipes, ...i.uses.recipes]) for (const g of r.ingredients) for (const w of g.where ?? []) out.add(w.link);
   }
-  for (const m of read<{ monsters: any[] }>("monsters.json").monsters) for (const p of [...m.places, ...m.windows]) out.add(p.link);
+  for (const m of read<{ monsters: any[] }>("monsters.json").monsters) for (const p of [...m.places, ...m.windows, ...m.windows.flatMap((w: any) => w.spots ?? [])]) out.add(p.link);
   for (const e of read<{ entities: any[] }>("entities.json").entities) if (e.appears?.where) out.add(e.appears.where.link);
   for (const n of read<{ npcs: any[] }>("npcs.json").npcs) for (const sh of n.shifts) {
     out.add(sh.link);
@@ -33,6 +33,34 @@ describe("the map's data", () => {
     const want = dataLinks();
     assert.deepEqual([...want].filter((l) => !LINKS[l]).length, 0);
     assert.deepEqual(Object.keys(LINKS).filter((l) => !want.has(l)).length, 0);
+  });
+
+  test("a boss that picks one of N spots: one window on its page, a marker on each spot saying one of N, odds only when they differ", () => {
+    const monsters = read<{ monsters: { id: string; windows: { hours: [number, number]; place: unknown; link: string; spots?: { place: unknown; link: string; picks?: [number, number] }[] }[] }[] }>("monsters.json").monsters;
+    const bosses = POINTS.layers.bosses as unknown as { ref: string; x: number; z: number; f: string; hours?: [number, number]; oneOf?: number; picks?: [number, number] }[];
+    let seen = 0;
+    for (const m of monsters) for (const w of m.windows) {
+      if (!w.spots) continue;
+      seen++;
+      assert.ok(w.spots.length > 1, `${m.id}: a one-spot window carries no spots`);
+      assert.deepEqual([w.spots[0]!.place, w.spots[0]!.link], [w.place, w.link], `${m.id}: the window's place is its first (likeliest) spot`);
+      assert.equal(new Set(w.spots.map((s) => s.link)).size, w.spots.length, `${m.id}: a spot twice`);
+      const odds = w.spots.map((s) => s.picks);
+      if (odds.some(Boolean)) {
+        assert.ok(odds.every(Boolean), `${m.id}: odds on some spots only`);
+        assert.ok(Math.abs(odds.reduce((a, c) => a + c![0] / c![1], 0) - 1) < 1e-9, `${m.id}: the odds don't add up to one`);
+        for (let i = 1; i < odds.length; i++) assert.ok(odds[i - 1]![0] / odds[i - 1]![1] >= odds[i]![0] / odds[i]![1], `${m.id}: the likeliest spot first`);
+      }
+      for (const s of w.spots) {
+        const [x, z, f] = LINKS[s.link]!;
+        const mk = bosses.filter((r) => r.ref === `monster:${m.id}` && r.x === x && r.z === z && r.f === f && r.hours?.join() === w.hours.join());
+        assert.equal(mk.length, 1, `${m.id}: one marker per spot`);
+        assert.equal(mk[0]!.oneOf, w.spots.length, `${m.id}: the marker says one of ${w.spots.length}`);
+        assert.deepEqual(mk[0]!.picks, s.picks, `${m.id}: the marker's odds`);
+      }
+    }
+    assert.ok(seen > 0, "no boss picks one of several spots: the export lost them");
+    for (const r of bosses) if (!r.oneOf) assert.equal(r.picks, undefined, "odds on a one-spot boss");
   });
 
   test("every point names a floor the map has, and a monster's spots add up to its pages' spawn points", () => {

@@ -81,6 +81,14 @@ export interface MonsterWindow {
   link: string;
   invasion?: boolean;
   oneNightIn?: number;
+  /** The boss comes out at ONE of these each window (the first is `place`), with `picks` [k, n] (k times in n) when they differ. */
+  spots?: MonsterSpot[];
+}
+
+export interface MonsterSpot {
+  place: Place;
+  link: string;
+  picks?: [number, number];
 }
 
 export type MonsterHow = "spawn" | "timed" | "placed" | "lever" | "travel" | "summon";
@@ -132,9 +140,12 @@ export function expPerHealth(m: MonsterData): number | null {
   return m.stats.health > 0 && m.stats.exp > 0 ? Math.round((m.stats.exp / m.stats.health) * 100) / 100 : null;
 }
 
+/** A window's places: every spot of a boss that picks one, else its one place. */
+export const windowPlaces = (w: MonsterWindow): Place[] => (w.spots ? w.spots.map((s) => s.place) : [w.place]);
+
 /** The town names a monster lives in (its spawn places, else its windows' places). */
 export function towns(m: MonsterData): string[] {
-  return [...new Set([...m.places.map((p) => p.place.town.en), ...m.windows.map((w) => w.place.town.en)])];
+  return [...new Set([...m.places.map((p) => p.place.town.en), ...m.windows.flatMap(windowPlaces).map((p) => p.town.en)])];
 }
 
 /** Behaviour flags, as filter values. */
