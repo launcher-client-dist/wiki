@@ -175,7 +175,7 @@ const jsonLd = [{
           <InfoBox title={tn.kicker}>
             <ul class="facts">
               <li><span class="sicon"><GameIcon name="src-map" fit={28} /></span><span>{tn.colPlace}</span><b>{first.place.town[lang]}</b></li>
-              <li><span class="sicon"><GameIcon name="time" fit={28} /></span><span>{tn.colHours}</span><b class="num">{hasHours(n) ? n.shifts.filter((s) => s.hours).map((s) => `${gameHour(s.hours![0])}–${gameHour(s.hours![1])}`).join(" · ") : tn.hoursAlways}</b></li>
+              <li class="top"><span class="sicon"><GameIcon name="time" fit={28} /></span><span>{tn.colHours}</span><b class="num hrs">{hasHours(n) ? n.shifts.filter((s) => s.hours).map((s) => <span>{`${gameHour(s.hours![0])}–${gameHour(s.hours![1])}`}</span>) : tn.hoursAlways}</b></li>
               {sellsN > 0 && <li><span class="sicon"><GameIcon name="src-shop" fit={28} /></span><span>{tn.colSells}</span><b class="num">{num(sellsN)}</b></li>}
               {buysN > 0 && <li><span class="sicon"><GameIcon name="gold" fit={28} /></span><span>{tn.colBuys}</span><b class="num">{num(buysN)}</b></li>}
               {services.includes("travel") && <li><span class="sicon"><GameIcon name="src-map" fit={28} /></span><span>{tn.servicesTitle}</span><b>{tn.travel}</b></li>}
@@ -259,4 +259,8 @@ const jsonLd = [{
   .sicon { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 10px; background: var(--well); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06); }
   .facts span:not(.sicon) { color: var(--text-muted); font-size: var(--fs-sm); }
   .facts b { color: var(--heading); font-size: 1.0625rem; text-align: right; }
+  .facts .hrs { display: grid; justify-items: end; gap: 2px; white-space: nowrap; }
+  /* a value of several lines (each shift's hours): the row reads from the top, the label beside the first line */
+  .facts li.top { align-items: start; }
+  .facts li.top > span:not(.sicon), .facts li.top > b { padding-top: 12px; }
 </style>

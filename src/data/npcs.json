@@ -1,22 +1,7 @@
 {
  "npcs": [
   {
-   "conversation": [
-    {
-     "keys": [],
-     "kind": "farewell",
-     "spoiler": false,
-     "text": {
-      "_fb": [
-       "pt",
-       "es"
-      ],
-      "en": "...",
-      "es": "...",
-      "pt": "..."
-     }
-    }
-   ],
+   "conversation": [],
    "grid": "/icons/npcs128/a-betrayed-man.png",
    "id": "a-betrayed-man",
    "near": [
@@ -1536,9 +1521,12 @@
      "kind": "greet",
      "spoiler": false,
      "text": {
-      "en": "<sighs> Welcome Sir or Madam to the BCCA, how can I help you today",
-      "es": "<suspira> Bienvenido señor o señora al BCCA, ¿cómo puedo ayudarle hoy?",
-      "pt": "<suspira> Bem-vindo senhor ou senhora ao BCCA, como posso ajudá-lo hoje"
+      "_fb": [
+       "es"
+      ],
+      "en": "<sighs> Welcome Sir or Madam to the BCCA, entrance is closed during nighttime, please come back later.",
+      "es": "<sighs> Welcome Sir or Madam to the BCCA, entrance is closed during nighttime, please come back later.",
+      "pt": "<suspira> Bem-vindo senhor ou senhora ao BCCA, a entrada fica fechada durante a noite, por favor volte mais tarde."
      }
     },
     {
@@ -1557,29 +1545,12 @@
      "kind": "job",
      "spoiler": false,
      "text": {
-      "en": "We are in the Bureau Center of Castle Access in service of the Blue Mage... <sighs> My job is to handle all visitors for him.",
-      "es": "Estamos en el Centro de Acceso al Castillo al servicio del Mago Azul... <suspira> Mi trabajo es atender a todos los visitantes para él.",
-      "pt": "Estamos no Centro de Acesso ao Castelo a serviço do Mago Azul... <suspira> Meu trabalho é atender todos os visitantes para ele."
-     }
-    },
-    {
-     "keys": [
-      {
-       "en": "trade",
-       "es": "comerciar",
-       "pt": "comerciar"
-      }
-     ],
-     "kind": "trade",
-     "spoiler": false,
-     "text": {
       "_fb": [
-       "pt",
        "es"
       ],
-      "en": "...",
-      "es": "...",
-      "pt": "..."
+      "en": "We are in the Bureau Center of Castle Access in service of the Blue Mage. <sighs> My job is to handle all visitors for him.",
+      "es": "We are in the Bureau Center of Castle Access in service of the Blue Mage. <sighs> My job is to handle all visitors for him.",
+      "pt": "Estamos no Centro de Acesso ao Castelo a serviço do Mago Azul. <suspira> Meu trabalho é atender todos os visitantes dele."
      }
     },
     {
@@ -1593,9 +1564,9 @@
      "kind": "topic",
      "spoiler": false,
      "text": {
-      "en": "The current number calling is 38.",
-      "es": "El número actual en llamada es 38.",
-      "pt": "O número atual sendo chamado é 38."
+      "en": "Entrance is closed during nighttime, please come back later.",
+      "es": "La entrada está cerrada durante la noche, vuelve más tarde.",
+      "pt": "A entrada está fechada durante a noite, volte mais tarde."
      }
     },
     {
@@ -1613,9 +1584,9 @@
        "pt",
        "es"
       ],
-      "en": "Here you go, please keep your ticket with you, if you lose it you need to pay a small fee to get a new one.\n<yawns> ... Dear Sir or Madam, if you need a new ticket, please ask for a trade.",
-      "es": "Here you go, please keep your ticket with you, if you lose it you need to pay a small fee to get a new one.\n<yawns> ... Dear Sir or Madam, if you need a new ticket, please ask for a trade.",
-      "pt": "Here you go, please keep your ticket with you, if you lose it you need to pay a small fee to get a new one.\n<yawns> ... Dear Sir or Madam, if you need a new ticket, please ask for a trade."
+      "en": "You're still here? <sighs> Fine, I'll jump you ahead. Here we go.\n<yawns> ... Tickets are only available during daytime.",
+      "es": "You're still here? <sighs> Fine, I'll jump you ahead. Here we go.\n<yawns> ... Tickets are only available during daytime.",
+      "pt": "You're still here? <sighs> Fine, I'll jump you ahead. Here we go.\n<yawns> ... Tickets are only available during daytime."
      }
     },
     {
@@ -1674,9 +1645,12 @@
    "grid": "/icons/npcs128/a-ghoulish-secretary.png",
    "id": "a-ghoulish-secretary",
    "job": {
-    "en": "We are in the Bureau Center of Castle Access in service of the Blue Mage... <sighs> My job is to handle all visitors for him.",
-    "es": "Estamos en el Centro de Acceso al Castillo al servicio del Mago Azul... <suspira> Mi trabajo es atender a todos los visitantes para él.",
-    "pt": "Estamos no Centro de Acesso ao Castelo a serviço do Mago Azul... <suspira> Meu trabalho é atender todos os visitantes para ele."
+    "_fb": [
+     "es"
+    ],
+    "en": "We are in the Bureau Center of Castle Access in service of the Blue Mage. <sighs> My job is to handle all visitors for him.",
+    "es": "We are in the Bureau Center of Castle Access in service of the Blue Mage. <sighs> My job is to handle all visitors for him.",
+    "pt": "Estamos no Centro de Acesso ao Castelo a serviço do Mago Azul. <suspira> Meu trabalho é atender todos os visitantes dele."
    },
    "near": [],
    "quests": [],
@@ -1691,18 +1665,61 @@
    "shifts": [
     {
      "afterQuests": [],
+     "hours": [
+      0,
+      4
+     ],
+     "link": "https://map.opengea.tech/#2.AgADvQEGAQoBAQEAANBBgzrQGxBAEQRyhPZWx5Y2hwYyVTYmV0YXJpcH",
+     "place": {
+      "near": {
+       "en": "Royal Road",
+       "es": "Camino Real",
+       "pt": "Estrada Real"
+      },
+      "town": {
+       "en": "Plains Cathedral",
+       "es": "Catedral de la Llanura",
+       "pt": "Catedral da Planície"
+      },
+      "underground": false
+     },
+     "services": {
+      "travel": {
+       "link": "https://map.opengea.tech/#2.AgBUswEGAQ8BAQEAABQIIgLjdkktLsnMSyzJzM8DAA",
+       "place": {
+        "near": {
+         "en": "Floating Castle",
+         "es": "Castillo Flotante",
+         "pt": "Castelo Flutuante"
+        },
+        "town": {
+         "en": "Plains Cathedral",
+         "es": "Catedral de la Llanura",
+         "pt": "Catedral da Planície"
+        },
+        "underground": false
+       }
+      }
+     },
+     "spoiler": false
+    },
+    {
+     "afterQuests": [],
+     "buys": [
+      {
+       "item": "castle-ticket",
+       "price": 100
+      }
+     ],
      "conversation": [
       {
        "keys": [],
        "kind": "greet",
        "spoiler": false,
        "text": {
-        "_fb": [
-         "es"
-        ],
-        "en": "<sighs> Welcome Sir or Madam to the BCCA, entrance is closed during nighttime, please come back later.",
-        "es": "<sighs> Welcome Sir or Madam to the BCCA, entrance is closed during nighttime, please come back later.",
-        "pt": "<suspira> Bem-vindo senhor ou senhora ao BCCA, a entrada fica fechada durante a noite, por favor volte mais tarde."
+        "en": "<sighs> Welcome Sir or Madam to the BCCA, how can I help you today",
+        "es": "<suspira> Bienvenido señor o señora al BCCA, ¿cómo puedo ayudarle hoy?",
+        "pt": "<suspira> Bem-vindo senhor ou senhora ao BCCA, como posso ajudá-lo hoje"
        }
       },
       {
@@ -1721,12 +1738,9 @@
        "kind": "job",
        "spoiler": false,
        "text": {
-        "_fb": [
-         "es"
-        ],
-        "en": "We are in the Bureau Center of Castle Access in service of the Blue Mage. <sighs> My job is to handle all visitors for him.",
-        "es": "We are in the Bureau Center of Castle Access in service of the Blue Mage. <sighs> My job is to handle all visitors for him.",
-        "pt": "Estamos no Centro de Acesso ao Castelo a serviço do Mago Azul. <suspira> Meu trabalho é atender todos os visitantes dele."
+        "en": "We are in the Bureau Center of Castle Access in service of the Blue Mage... <sighs> My job is to handle all visitors for him.",
+        "es": "Estamos en el Centro de Acceso al Castillo al servicio del Mago Azul... <suspira> Mi trabajo es atender a todos los visitantes para él.",
+        "pt": "Estamos no Centro de Acesso ao Castelo a serviço do Mago Azul... <suspira> Meu trabalho é atender todos os visitantes para ele."
        }
       },
       {
@@ -1740,9 +1754,9 @@
        "kind": "topic",
        "spoiler": false,
        "text": {
-        "en": "Entrance is closed during nighttime, please come back later.",
-        "es": "La entrada está cerrada durante la noche, vuelve más tarde.",
-        "pt": "A entrada está fechada durante a noite, volte mais tarde."
+        "en": "The current number calling is 38.",
+        "es": "El número actual en llamada es 38.",
+        "pt": "O número atual sendo chamado é 38."
        }
       },
       {
@@ -1760,9 +1774,9 @@
          "pt",
          "es"
         ],
-        "en": "You're still here? <sighs> Fine, I'll jump you ahead. Here we go.\n<yawns> ... Tickets are only available during daytime.",
-        "es": "You're still here? <sighs> Fine, I'll jump you ahead. Here we go.\n<yawns> ... Tickets are only available during daytime.",
-        "pt": "You're still here? <sighs> Fine, I'll jump you ahead. Here we go.\n<yawns> ... Tickets are only available during daytime."
+        "en": "Here you go, please keep your ticket with you, if you lose it you need to pay a small fee to get a new one.\n<yawns> ... Dear Sir or Madam, if you need a new ticket, please ask for a trade.",
+        "es": "Here you go, please keep your ticket with you, if you lose it you need to pay a small fee to get a new one.\n<yawns> ... Dear Sir or Madam, if you need a new ticket, please ask for a trade.",
+        "pt": "Here you go, please keep your ticket with you, if you lose it you need to pay a small fee to get a new one.\n<yawns> ... Dear Sir or Madam, if you need a new ticket, please ask for a trade."
        }
       },
       {
@@ -1816,52 +1830,6 @@
         "es": "El sentimiento es mutuo.",
         "pt": "O sentimento é mútuo."
        }
-      }
-     ],
-     "hours": [
-      0,
-      4
-     ],
-     "link": "https://map.opengea.tech/#2.AgADvQEGAQoBAQEAANBBgzrQGxBAEQRyhPZWx5Y2hwYyVTYmV0YXJpcH",
-     "place": {
-      "near": {
-       "en": "Royal Road",
-       "es": "Camino Real",
-       "pt": "Estrada Real"
-      },
-      "town": {
-       "en": "Plains Cathedral",
-       "es": "Catedral de la Llanura",
-       "pt": "Catedral da Planície"
-      },
-      "underground": false
-     },
-     "services": {
-      "travel": {
-       "link": "https://map.opengea.tech/#2.AgBUswEGAQ8BAQEAABQIIgLjdkktLsnMSyzJzM8DAA",
-       "place": {
-        "near": {
-         "en": "Floating Castle",
-         "es": "Castillo Flotante",
-         "pt": "Castelo Flutuante"
-        },
-        "town": {
-         "en": "Plains Cathedral",
-         "es": "Catedral de la Llanura",
-         "pt": "Catedral da Planície"
-        },
-        "underground": false
-       }
-      }
-     },
-     "spoiler": false
-    },
-    {
-     "afterQuests": [],
-     "buys": [
-      {
-       "item": "castle-ticket",
-       "price": 100
       }
      ],
      "hours": [
@@ -2090,20 +2058,6 @@
   {
    "conversation": [
     {
-     "keys": [],
-     "kind": "greet",
-     "spoiler": false,
-     "text": {
-      "_fb": [
-       "pt",
-       "es"
-      ],
-      "en": "...",
-      "es": "...",
-      "pt": "..."
-     }
-    },
-    {
      "keys": [
       {
        "en": "blue rose",
@@ -2154,20 +2108,6 @@
       "en": "Useless.",
       "es": "Inútil.",
       "pt": "Inútil."
-     }
-    },
-    {
-     "keys": [],
-     "kind": "farewell",
-     "spoiler": false,
-     "text": {
-      "_fb": [
-       "pt",
-       "es"
-      ],
-      "en": "...",
-      "es": "...",
-      "pt": "..."
      }
     }
    ],
@@ -5781,20 +5721,6 @@
       "es": "HMMMMMNNNNNNNN...\nGHAAARRRRRLLLLL MMHHAAARRRRRMMSSSS\nHMMMMMNNNNNNNN...",
       "pt": "HMMMMMNNNNNNNN...\nGHAAARRRRRLLLLL MMHHAAARRRRRMMSSSS\nHMMMMMNNNNNNNN..."
      }
-    },
-    {
-     "keys": [],
-     "kind": "farewell",
-     "spoiler": false,
-     "text": {
-      "_fb": [
-       "pt",
-       "es"
-      ],
-      "en": "...",
-      "es": "...",
-      "pt": "..."
-     }
     }
    ],
    "id": "an-ancient-tree",
@@ -6593,20 +6519,6 @@
       "en": "You know not what you talk.",
       "es": "No sabes de lo que hablas.",
       "pt": "Você não sabe do que fala."
-     }
-    },
-    {
-     "keys": [],
-     "kind": "farewell",
-     "spoiler": false,
-     "text": {
-      "_fb": [
-       "pt",
-       "es"
-      ],
-      "en": "...",
-      "es": "...",
-      "pt": "..."
      }
     }
    ],
@@ -23813,22 +23725,6 @@
    "shifts": [
     {
      "afterQuests": [],
-     "conversation": [
-      {
-       "keys": [],
-       "kind": "farewell",
-       "spoiler": false,
-       "text": {
-        "_fb": [
-         "pt",
-         "es"
-        ],
-        "en": "...",
-        "es": "...",
-        "pt": "..."
-       }
-      }
-     ],
      "hours": null,
      "link": "https://map.opengea.tech/#2.AgChBHYGARgBAQEAANCBEhdKYBdQUMQ2l1YG",
      "place": {
@@ -70354,20 +70250,6 @@
       "es": "¿Ese raro? Solo vigila nuestro escondite, no hablamos mucho.",
       "pt": "Aquele esquisito? Ele só guarda nosso esconderijo, não conversamos muito."
      }
-    },
-    {
-     "keys": [],
-     "kind": "farewell",
-     "spoiler": false,
-     "text": {
-      "_fb": [
-       "pt",
-       "es"
-      ],
-      "en": "...",
-      "es": "...",
-      "pt": "..."
-     }
     }
    ],
    "grid": "/icons/npcs128/tim.png",
@@ -77531,17 +77413,33 @@
   {
    "conversation": [
     {
-     "keys": [],
-     "kind": "farewell",
-     "spoiler": false,
+     "keys": [
+      {
+       "en": "stone",
+       "es": "piedra",
+       "pt": "pedra"
+      },
+      {
+       "en": "warm",
+       "es": "cálido",
+       "pt": "quente"
+      },
+      {
+       "en": "yacht",
+       "es": "yate",
+       "pt": "iate"
+      }
+     ],
+     "kind": "topic",
+     "spoiler": true,
      "text": {
       "_fb": [
        "pt",
        "es"
       ],
-      "en": "...",
-      "es": "...",
-      "pt": "..."
+      "en": "Meh! Mmleh! <points to key>\nMmleh!",
+      "es": "Meh! Mmleh! <points to key>\nMmleh!",
+      "pt": "Meh! Mmleh! <points to key>\nMmleh!"
      }
     }
    ],
@@ -77617,38 +77515,6 @@
     },
     {
      "afterQuests": [],
-     "conversation": [
-      {
-       "keys": [
-        {
-         "en": "stone",
-         "es": "piedra",
-         "pt": "pedra"
-        },
-        {
-         "en": "warm",
-         "es": "cálido",
-         "pt": "quente"
-        },
-        {
-         "en": "yacht",
-         "es": "yate",
-         "pt": "iate"
-        }
-       ],
-       "kind": "topic",
-       "spoiler": true,
-       "text": {
-        "_fb": [
-         "pt",
-         "es"
-        ],
-        "en": "Meh! Mmleh! <points to key>\nMmleh!",
-        "es": "Meh! Mmleh! <points to key>\nMmleh!",
-        "pt": "Meh! Mmleh! <points to key>\nMmleh!"
-       }
-      }
-     ],
      "hours": null,
      "link": "https://map.opengea.tech/#2.AgAR5QIGAQQBAQEAANChcBHlAgEFWXVzdWY",
      "place": {
