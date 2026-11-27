@@ -266,6 +266,7 @@ export const pt = {
     oneIn: "1 em {n}",
     aboutOneIn: "cerca de 1 em {n}",
     never: "nunca",
+    neverBreaks: "nunca quebra",
     forging: "Forja",
     forgingIntro: "Duas peças iguais, da mesma qualidade, e os lingotes dessa qualidade, juntas numa bigorna. Cada tentativa:",
     forgingTakes: "Leva",
