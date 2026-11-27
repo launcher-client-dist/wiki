@@ -272,6 +272,7 @@ export const es: UiStrings = {
     oneIn: "1 de cada {n}",
     aboutOneIn: "cerca de 1 de cada {n}",
     never: "nunca",
+    neverBreaks: "nunca se rompen",
     forging: "Forja",
     forgingIntro: "Dos piezas iguales, de la misma calidad, y los lingotes de esa calidad, juntas en un yunque. Cada intento:",
     forgingTakes: "Lleva",

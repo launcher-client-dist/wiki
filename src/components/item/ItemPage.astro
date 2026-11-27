@@ -422,8 +422,8 @@ const jsonLd = [{
                         <tr>
                           <th scope="row"><span class="fstep"><span class={`fq q${f.from}`}><GameIcon name={`quality-${f.from}`} /><span class="qname">{ti.quality[`q${f.from}` as keyof typeof ti.quality]}</span></span><span class="farrow" aria-hidden="true">➜</span><span class={`fq q${f.from + 1}`}><GameIcon name={`quality-${f.from + 1}`} /><span class="qname">{ti.quality[`q${f.from + 1}` as keyof typeof ti.quality]}</span></span></span></th>
                           <td><span class="num">{f.count} ×</span> <EntityLink to={`item:${f.ingot}`} iconSize={32} /></td>
-                          <td class="r num">{oneInText(f.upgrade, ti, lang)}</td>
-                          <td class="r num">{oneInText(f.bothBreak, ti, lang)}</td>
+                          <td class="r"><span class:list={["fchance", f.upgrade ? "up" : "safe"]}>{f.upgrade && <i aria-hidden="true">▲</i>}{oneInText(f.upgrade, ti, lang)}</span></td>
+                          <td class="r"><span class:list={["fchance", f.bothBreak ? "break" : "safe"]}>{f.bothBreak ? <><i aria-hidden="true">✖</i>{oneInText(f.bothBreak, ti, lang)}</> : ti.neverBreaks}</span></td>
                         </tr>
                       ))}
                     </tbody>
@@ -491,9 +491,8 @@ const jsonLd = [{
                     <span class="sname">{statLabel(k)[lang]}</span>
                     <StatValue value={n} variants={v.classes ? classVariants(k, v) : undefined} size="big" />
                     {r && <span class="rbar" aria-hidden="true"><span class:list={["rfill", { best: r.rank === 1 }]} style={`width:${Math.max(6, Math.round(r.share * 100))}%`}></span></span>}
-                    {(r || n < 0) && (
+                    {r && (
                       <span class="smeta" data-pagefind-ignore>
-                        {n < 0 && <span class="takes"><GameIcon name="minus" scale={1} />{ti.takesAway}</span>}
                         {r && <span class="rtext">{fill(r.rank === 1 ? ti.rankBest : ti.rankOf, { n: r.rank, of: r.of, group: item.subtype[lang] })}</span>}
                       </span>
                     )}
@@ -634,6 +633,13 @@ const jsonLd = [{
   .qtable thead th { background: var(--surface-2); font-weight: 700; color: var(--text-muted); border-bottom: 1px solid var(--row-border); }
   .qtable tbody tr + tr > * { border-top: 1px solid var(--row-border); }
   .qtable .r { text-align: right; }
+  /* a forging chance as a pill: green raises, red breaks, grey never breaks (the words stay "1 em N", never a %) */
+  .fchance { display: inline-flex; align-items: center; gap: 5px; height: 26px; padding: 0 10px; border-radius: 13px;
+    font: 700 var(--fs-xs) / 1 var(--font-body); white-space: nowrap; border: var(--bw) solid; }
+  .fchance i { font-style: normal; font-size: 0.75em; }
+  .fchance.up { color: var(--accent); background: color-mix(in srgb, var(--accent) 12%, transparent); border-color: color-mix(in srgb, var(--accent) 45%, transparent); }
+  .fchance.break { color: var(--danger); background: color-mix(in srgb, var(--danger) 12%, transparent); border-color: color-mix(in srgb, var(--danger) 45%, transparent); }
+  .fchance.safe { color: var(--text-muted); background: var(--surface-2); border-color: var(--border); }
   /* a phone: each row a two-by-two grid (the step and the ingot, then the two odds), the header in the same grid above,
      so every column stays in view and keeps its label; no side-scroll */
   @container main (max-width: 839px) {
@@ -766,15 +772,12 @@ const jsonLd = [{
   .stat :global(.sv) { grid-area: value; justify-self: end; color: var(--heading); }
   .stat.negative :global(.sv) { color: var(--danger); }
   .stat > .sv.big { font: 700 1.375rem / 1 var(--font-num); white-space: nowrap; }
-  .stat.negative .sicon { box-shadow: inset 0 0 0 2px var(--danger); }
   .rbar { grid-area: bar; height: 6px; border-radius: 3px; background: var(--surface-3); overflow: hidden; box-shadow: inset 0 0 0 1px var(--row-border); }
   .rfill { display: block; height: 100%; border-radius: 3px; background: var(--sky); }
   .rfill.best { background: var(--sun); }
   .smeta { grid-area: meta; display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; }
   .rtext { display: inline-flex; align-items: center; gap: 4px; font-size: var(--fs-xs); color: var(--text-muted); }
   .rtext :global(.gicon) { vertical-align: -2px; }
-  .takes { display: inline-flex; align-items: center; gap: 4px; padding: 1px 7px 1px 3px; border-radius: 999px; font-size: var(--fs-xs); font-weight: 700;
-    color: var(--danger); border: 1px solid var(--danger); }
   .facts { list-style: none; margin: 0; padding: 4px 0; display: grid; border-top: 1px solid var(--row-border); background: var(--surface-2); }
   .facts li + li { border-top: 1px solid var(--row-border); }
   .facts span:not(.sicon) { color: var(--text-muted); font-size: var(--fs-sm); }

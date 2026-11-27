@@ -268,6 +268,7 @@ export const en: UiStrings = {
     oneIn: "1 in {n}",
     aboutOneIn: "about 1 in {n}",
     never: "never",
+    neverBreaks: "never breaks",
     forging: "Forging",
     forgingIntro: "Two equal pieces of the same quality and that quality's ingots, together on an anvil. Each attempt:",
     forgingTakes: "Takes",
