@@ -215,7 +215,7 @@ const cardKicker = (o: PlaceData) => (o.level ? fill(tp.levelTag, o.level) : o.k
               </ul>
             ))}
             {inner.length > 0 && (
-              <p class="inner"><b>{tp.innerTitle}:</b> {inner.map(([k, n], i) => <>{i > 0 && " · "}<span class="fact"><span class="eicon sm"><EntranceIcon kind={k} size={20} /></span>{tp.entranceKind[k]} <span class="muted">{fill(tp.innerN, { n: num(n) })}</span></span></>)}</p>
+              <p class="inner"><b>{tp.innerTitle}:</b> {inner.map(([k], i) => <>{i > 0 && " · "}<span class="fact"><span class="eicon sm"><EntranceIcon kind={k} size={20} /></span>{tp.entranceKind[k]}</span></>)}</p>
             )}
           </section>
         )}
@@ -264,11 +264,10 @@ const cardKicker = (o: PlaceData) => (o.level ? fill(tp.levelTag, o.level) : o.k
         <InfoBox title={town ? tp.kickerTown : tp.kickerPlace}>
           <ul class="facts">
             {region && !town && <li><span class="sicon"><GameIcon name="house" fit={28} /></span><span>{tp.region}</span><b>{regionName}</b></li>}
-            <li class="top"><span class="sicon"><GameIcon name="jump-floors" fit={28} /></span><span>{tp.floors}</span><b class="hrs">{p.floors.map((f) => <span>{floorLabel(f)}</span>)}</b></li>
+            {!town && <li class="top"><span class="sicon"><GameIcon name="jump-floors" fit={28} /></span><span>{tp.floors}</span><b class="hrs">{p.floors.map((f) => <span>{floorLabel(f)}</span>)}</b></li>}
             {p.level && <li><span class="sicon"><GameIcon name="xp" fit={28} /></span><span>{tp.levelTitle}</span><b class="num">{p.level.min}–{p.level.max}</b></li>}
             {openNpcs.length > 0 && <li><span class="sicon"><GameIcon name="src-shop" fit={28} /></span><span>{tp.npcsTitle}</span><b class="num">{num(openNpcs.length)}</b></li>}
             {p.monsters.length > 0 && <li><span class="sicon"><GameIcon name="src-drop" fit={28} /></span><span>{tp.monstersTitle}</span><b class="num">{num(p.monsters.length)}</b></li>}
-            {p.entrances.length > 0 && <li><span class="sicon"><EntranceIcon kind="rope" size={28} /></span><span>{tp.entrancesTitle}</span><b class="num">{num(p.entrances.reduce((a, e) => a + e.n, 0))}</b></li>}
           </ul>
         </InfoBox>
       </aside>

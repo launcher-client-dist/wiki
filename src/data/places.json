@@ -356,7 +356,7 @@
     }
    ],
    "town": "place:nordha",
-   "underground": true
+   "underground": false
   },
   {
    "bosses": [],
