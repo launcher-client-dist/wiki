@@ -1539,12 +1539,7 @@
      ],
      "link": "https://map.opengea.tech/#2.AgCjA2gGARoBAQEAANCBFtboAFrAQxCIUVlbGFsZyNGbGFuaGw",
      "place": {
-      "near": {
-       "en": "West Garden",
-       "es": "Jardín Oeste",
-       "pt": "Jardim Oeste"
-      },
-      "ref": "place:west-garden",
+      "near": null,
       "town": {
        "en": "Plains Cathedral",
        "es": "Catedral de la Llanura",
@@ -2762,12 +2757,7 @@
      "hours": null,
      "link": "https://map.opengea.tech/#2.AgChBLYEBgEJAQEBAADQQYIYSmBLEBARBHL1VudGVkYGMvXGRpZWJgc",
      "place": {
-      "near": {
-       "en": "Basile's Temple",
-       "es": "Templo de Basile",
-       "pt": "Templo de Basile"
-      },
-      "ref": "place:basile-s-temple",
+      "near": null,
       "town": {
        "en": "Basile",
        "es": "Basile",
@@ -2788,12 +2778,7 @@
      "hours": null,
      "link": "https://map.opengea.tech/#2.AgCDAQQGARABAQEAANCBAt5gAEFARBDI1VudG1kZGcjUGxtZWpkc",
      "place": {
-      "near": {
-       "en": "Plain's Cathedral",
-       "es": "Catedral de la Llanura",
-       "pt": "Catedral da Planície"
-      },
-      "ref": "place:plains-cathedral",
+      "near": null,
       "town": {
        "en": "Plains Cathedral",
        "es": "Catedral de la Llanura",
@@ -5910,12 +5895,7 @@
       "travel": {
        "link": "https://map.opengea.tech/#2.AgD-AsgEBgENAQEBAAAU5IjjdkktLsnMSyzJzM8DAA",
        "place": {
-        "near": {
-         "en": "Ancient Tombs",
-         "es": "Tumbas Antiguas",
-         "pt": "Tumbas Antigas"
-        },
-        "ref": "place:ancient-tombs",
+        "near": null,
         "town": {
          "en": "East Nordha",
          "es": "Nordha Este",
@@ -7220,12 +7200,7 @@
      ],
      "link": "https://map.opengea.tech/#2.AgBpgAIGAQsBAQEAANBBRKYBCgQYCIWxkZXJAQ",
      "place": {
-      "near": {
-       "en": "Dionel Pub",
-       "es": "Taberna Dionel",
-       "pt": "Taverna Dionel"
-      },
-      "ref": "place:dionel-pub",
+      "near": null,
       "town": {
        "en": "Nordha",
        "es": "Nordha",
@@ -8231,11 +8206,11 @@
      "link": "https://map.opengea.tech/#2.AgCBA_4CBgEOAQEBAADQQccHDvgLBCAIlbmVkaWN0QE",
      "place": {
       "near": {
-       "en": "Trader's Square",
-       "es": "Plaza de los Comerciantes",
-       "pt": "Praça dos Comerciantes"
+       "en": "The Docks",
+       "es": "Los Muelles",
+       "pt": "As Docas"
       },
-      "ref": "place:trader-s-square",
+      "ref": "place:the-docks",
       "town": {
        "en": "Basile",
        "es": "Basile",
@@ -9216,11 +9191,11 @@
      "link": "https://map.opengea.tech/#2.AgDdBIMDBgEAAQEBAADQCd9NMDgQgCBUJueGFiZHBg",
      "place": {
       "near": {
-       "en": "Storage Square",
-       "es": "Plaza del Almacén",
-       "pt": "Praça do Depósito"
+       "en": "Vecan Hospital",
+       "es": "Hospital de Vecan",
+       "pt": "Hospital de Vecan"
       },
-      "ref": "place:storage-square",
+      "ref": "place:vecan-hospital",
       "town": {
        "en": "Vecan",
        "es": "Vecan",
@@ -13528,11 +13503,11 @@
        "link": "https://map.opengea.tech/#2.AgDzA8YDBgEFAQEBAAAUMiLjdkktLsnMSyzJzM8DAA",
        "place": {
         "near": {
-         "en": "The Monastery",
-         "es": "El Monasterio",
-         "pt": "O Mosteiro"
+         "en": "Sabrina's Hut",
+         "es": "Cabaña de Sabrina",
+         "pt": "Cabana de Sabrina"
         },
-        "ref": "place:the-monastery",
+        "ref": "place:sabrina-s-hut",
         "town": {
          "en": "Basile",
          "es": "Basile",
@@ -19785,11 +19760,11 @@
        "link": "https://map.opengea.tech/#2.AgAXQQYBHgEBAQAAFOgjAuN2SS0uycxLLMnMzwMA",
        "place": {
         "near": {
-         "en": "Passage to the East",
-         "es": "Pasaje al Este",
-         "pt": "Passagem para o Leste"
+         "en": "Abandoned Mine South",
+         "es": "Mina Abandonada Sur",
+         "pt": "Mina Abandonada Sul"
         },
-        "ref": "place:passage-to-the-east",
+        "ref": "place:abandoned-mine-south",
         "town": {
          "en": "Plains Cathedral",
          "es": "Catedral de la Llanura",
@@ -23604,12 +23579,7 @@
      ],
      "link": "https://map.opengea.tech/#2.AgChAYgBBgEgAQEBAADQAQVcaABiQABBEVvbGw",
      "place": {
-      "near": {
-       "en": "Eofor's Hut",
-       "es": "Cabaña de Eofor",
-       "pt": "Cabana de Eofor"
-      },
-      "ref": "place:eofor-s-hut",
+      "near": null,
       "town": {
        "en": "Plains Cathedral",
        "es": "Catedral de la Llanura",
@@ -24722,12 +24692,7 @@
      "hours": null,
      "link": "https://map.opengea.tech/#2.AgChBHYGARgBAQEAANCBEhdKYBdQUMQ2l1YG",
      "place": {
-      "near": {
-       "en": "West Gate",
-       "es": "Puerta Oeste",
-       "pt": "Portão Oeste"
-      },
-      "ref": "place:west-gate",
+      "near": null,
       "town": {
        "en": "Plains Cathedral",
        "es": "Catedral de la Llanura",
@@ -26495,11 +26460,11 @@
      "link": "https://map.opengea.tech/#2.AgCPBcoDBgEJAQEBAADQQUI-FigPBBQU1bGVyQE",
      "place": {
       "near": {
-       "en": "Residency Square",
-       "es": "Plaza de la Residencia",
-       "pt": "Praça da Residência"
+       "en": "West Tower",
+       "es": "Torre Oeste",
+       "pt": "Torre Oeste"
       },
-      "ref": "place:residency-square",
+      "ref": "place:basile-west-tower",
       "town": {
        "en": "Basile",
        "es": "Basile",
@@ -26512,12 +26477,7 @@
       "travel": {
        "link": "https://map.opengea.tech/#2.AgCZBeIBBgEcAQEBAAAUqCMC43ZJLS7JzEssyczPAwA",
        "place": {
-        "near": {
-         "en": "Basile Inn",
-         "es": "Posada de Basile",
-         "pt": "Estalagem de Basile"
-        },
-        "ref": "place:basile-inn",
+        "near": null,
         "town": {
          "en": "Basile",
          "es": "Basile",
@@ -28036,12 +27996,7 @@
      ],
      "link": "https://map.opengea.tech/#2.AgCdBJcEBgEAAQEBAADQCdlJcEkQUGBUxpaGBw",
      "place": {
-      "near": {
-       "en": "Merchant Square",
-       "es": "Plaza de los Mercaderes",
-       "pt": "Praça dos Mercadores"
-      },
-      "ref": "place:merchant-square",
+      "near": null,
       "town": {
        "en": "Vecan",
        "es": "Vecan",
@@ -30493,11 +30448,11 @@
      "link": "https://map.opengea.tech/#2.AgAfPQYBIAEBAQAA0AEF3EdPgMFRmFwZHRo",
      "place": {
       "near": {
-       "en": "Passage to the East",
-       "es": "Pasaje al Este",
-       "pt": "Passagem para o Leste"
+       "en": "Abandoned Mine South",
+       "es": "Mina Abandonada Sur",
+       "pt": "Mina Abandonada Sul"
       },
-      "ref": "place:passage-to-the-east",
+      "ref": "place:abandoned-mine-south",
       "town": {
        "en": "Plains Cathedral",
        "es": "Catedral de la Llanura",
@@ -30510,12 +30465,7 @@
       "travel": {
        "link": "https://map.opengea.tech/#2.AgAvPQYBHgEBAQAAFOgjAuN2SS0uycxLLMnMzwMA",
        "place": {
-        "near": {
-         "en": "Passage to the East",
-         "es": "Pasaje al Este",
-         "pt": "Passagem para o Leste"
-        },
-        "ref": "place:passage-to-the-east",
+        "near": null,
         "town": {
          "en": "Plains Cathedral",
          "es": "Catedral de la Llanura",
@@ -30813,12 +30763,7 @@
       "travel": {
        "link": "https://map.opengea.tech/#2.AgCXBbsDBgEPAQEBAAAUCCIC43ZJLS7JzEssyczPAwA",
        "place": {
-        "near": {
-         "en": "Clothier Square",
-         "es": "Plaza de los Sastres",
-         "pt": "Praça dos Alfaiates"
-        },
-        "ref": "place:clothier-square",
+        "near": null,
         "town": {
          "en": "Vecan",
          "es": "Vecan",
@@ -34904,12 +34849,7 @@
      ],
      "link": "https://map.opengea.tech/#2.AgCdBJsEBgEAAQEBAADQCd9JsEkQgIBUluYmlzaGBg",
      "place": {
-      "near": {
-       "en": "Merchant Square",
-       "es": "Plaza de los Mercaderes",
-       "pt": "Praça dos Mercadores"
-      },
-      "ref": "place:merchant-square",
+      "near": null,
       "town": {
        "en": "Vecan",
        "es": "Vecan",
@@ -38863,11 +38803,11 @@
      "link": "https://map.opengea.tech/#2.AgDhA6YCBgEAAQEBAADQCRs-YCoQYKAUFldXNgc",
      "place": {
       "near": {
-       "en": "The Sewers",
-       "es": "Las Alcantarillas",
-       "pt": "Os Esgotos"
+       "en": "The Blacksmith",
+       "es": "El Herrero",
+       "pt": "O Ferreiro"
       },
-      "ref": "place:the-sewers",
+      "ref": "place:the-blacksmith",
       "town": {
        "en": "Basile",
        "es": "Basile",
@@ -40352,12 +40292,7 @@
      "hours": null,
      "link": "https://map.opengea.tech/#2.AgCWBfACBgEFAQEBAADQIbGWBfACAQZKb2hubnk",
      "place": {
-      "near": {
-       "en": "Pirate Ship",
-       "es": "Barco Pirata",
-       "pt": "Navio Pirata"
-      },
-      "ref": "place:pirate-ship",
+      "near": null,
       "town": {
        "en": "East Nordha",
        "es": "Nordha Este",
@@ -41693,11 +41628,11 @@
      "link": "https://map.opengea.tech/#2.AgAlhgIGAQsBAQEAANBBRJUYCgQQLIXJpQE",
      "place": {
       "near": {
-       "en": "Flower Spire",
-       "es": "Aguja de Flores",
-       "pt": "Torre das Flores"
+       "en": "Amphitere Peak",
+       "es": "Pico Amphitere",
+       "pt": "Pico Amphitere"
       },
-      "ref": "place:flower-spire",
+      "ref": "place:amphitere-peak",
       "town": {
        "en": "Nordha",
        "es": "Nordha",
@@ -43302,12 +43237,7 @@
      ],
      "link": "https://map.opengea.tech/#2.AgDwA54DBgEDAQEBAADQIXDwA54DAQRMaXNh",
      "place": {
-      "near": {
-       "en": "Salazar Shop",
-       "es": "Tienda Salazar",
-       "pt": "Loja Salazar"
-      },
-      "ref": "place:salazar-shop",
+      "near": null,
       "town": {
        "en": "East Nordha",
        "es": "Nordha Este",
@@ -44179,11 +44109,11 @@
        "link": "https://map.opengea.tech/#2.AgC6AsICBgEEAQEBAAAUKiLjdkktLsnMSyzJzM8DAA",
        "place": {
         "near": {
-         "en": "East Nordha Mines",
-         "es": "Minas de Nordha Este",
-         "pt": "Minas de Nordha Oriental"
+         "en": "Loke's Home",
+         "es": "Casa de Loke",
+         "pt": "Casa de Loke"
         },
-        "ref": "place:east-nordha-mines",
+        "ref": "place:loke-s-home",
         "town": {
          "en": "East Nordha",
          "es": "Nordha Este",
@@ -44221,11 +44151,11 @@
      "link": "https://map.opengea.tech/#2.AgCyAsICBgEEAQEBAADQoXCyAsICAQRMb2tl",
      "place": {
       "near": {
-       "en": "East Nordha Mines",
-       "es": "Minas de Nordha Este",
-       "pt": "Minas de Nordha Oriental"
+       "en": "Loke's Home",
+       "es": "Casa de Loke",
+       "pt": "Casa de Loke"
       },
-      "ref": "place:east-nordha-mines",
+      "ref": "place:loke-s-home",
       "town": {
        "en": "East Nordha",
        "es": "Nordha Este",
@@ -50570,11 +50500,11 @@
      "link": "https://map.opengea.tech/#2.AgAi9AMGAQgBAQEAANBBQYrQDwQYNKWxsZW5AQ",
      "place": {
       "near": {
-       "en": "Morrigan's Boutique",
-       "es": "Boutique de Morrigan",
-       "pt": "Boutique de Morrigan"
+       "en": "The Citadel",
+       "es": "La Ciudadela",
+       "pt": "A Cidadela"
       },
-      "ref": "place:morrigan-s-boutique",
+      "ref": "place:the-citadel",
       "town": {
        "en": "Nordha",
        "es": "Nordha",
@@ -53214,12 +53144,7 @@
      ],
      "link": "https://map.opengea.tech/#2.AgDzAY4BBgEMAQEBAADQQcXNBzgGBBA4pY2tAQ",
      "place": {
-      "near": {
-       "en": "The Caravan",
-       "es": "La Caravana",
-       "pt": "A Caravana"
-      },
-      "ref": "place:the-caravan",
+      "near": null,
       "town": {
        "en": "Plains Cathedral",
        "es": "Catedral de la Llanura",
@@ -56422,12 +56347,7 @@
      ],
      "link": "https://map.opengea.tech/#2.AgDZAb4DBgESAQEBAADQgQZKdoDvQMACVBhbGcjRmxhbmhs",
      "place": {
-      "near": {
-       "en": "Northern Outpost",
-       "es": "Puesto Avanzado del Norte",
-       "pt": "Posto Avançado Norte"
-      },
-      "ref": "place:northern-outpost",
+      "near": null,
       "town": {
        "en": "Nordha",
        "es": "Nordha",
@@ -60749,11 +60669,11 @@
      "link": "https://map.opengea.tech/#2.AgB4iAIGASABAQEAANABBSweokDAgVSaWFhbmBw",
      "place": {
       "near": {
-       "en": "Nordha Outlaws",
-       "es": "Forajidos de Nordha",
-       "pt": "Fora-da-Lei de Nordha"
+       "en": "Nordha Labirynth",
+       "es": "Laberinto de Nordha",
+       "pt": "Labirinto de Nordha"
       },
-      "ref": "place:nordha-outlaws",
+      "ref": "place:nordha-labirynth",
       "town": {
        "en": "Nordha",
        "es": "Nordha",
@@ -61611,11 +61531,11 @@
      "link": "https://map.opengea.tech/#2.AgAhhgIGAQsBAQEAANBBRIUYCgQQSL25pQE",
      "place": {
       "near": {
-       "en": "Flower Spire",
-       "es": "Aguja de Flores",
-       "pt": "Torre das Flores"
+       "en": "Amphitere Peak",
+       "es": "Pico Amphitere",
+       "pt": "Pico Amphitere"
       },
-      "ref": "place:flower-spire",
+      "ref": "place:amphitere-peak",
       "town": {
        "en": "Nordha",
        "es": "Nordha",
@@ -62609,11 +62529,11 @@
      "link": "https://map.opengea.tech/#2.AgDfA4oCBgEAAQEBAADQCfs9oCgQYCBVJ5ZWNwc",
      "place": {
       "near": {
-       "en": "The Sewers",
-       "es": "Las Alcantarillas",
-       "pt": "Os Esgotos"
+       "en": "Basile's Market",
+       "es": "Mercado de Basile",
+       "pt": "Mercado de Basile"
       },
-      "ref": "place:the-sewers",
+      "ref": "place:basile-s-market",
       "town": {
        "en": "Basile",
        "es": "Basile",
@@ -64878,11 +64798,11 @@
      "link": "https://map.opengea.tech/#2.AgDiA5ADBgEWAQEBAADQgQ4tPgA5EHAwFcYWphcmBw",
      "place": {
       "near": {
-       "en": "Salazar Shop",
-       "es": "Tienda Salazar",
-       "pt": "Loja Salazar"
+       "en": "The Lintcaves",
+       "es": "Las Cuevas de Lintcaves",
+       "pt": "As Cavernas de Lintcaves"
       },
-      "ref": "place:salazar-shop",
+      "ref": "place:the-lintcaves",
       "town": {
        "en": "East Nordha",
        "es": "Nordha Este",
@@ -67983,11 +67903,11 @@
      "link": "https://map.opengea.tech/#2.AgCjA8YCBgEUAQEBAADQgQo7OmAsEGAwlXZWJ0cG",
      "place": {
       "near": {
-       "en": "Sigurd's Pub",
-       "es": "Taberna de Sigurd",
-       "pt": "Taverna de Sigurd"
+       "en": "The Sewers",
+       "es": "Las Alcantarillas",
+       "pt": "Os Esgotos"
       },
-      "ref": "place:sigurd-s-pub",
+      "ref": "place:the-sewers",
       "town": {
        "en": "Basile",
        "es": "Basile",
@@ -71633,12 +71553,7 @@
      ],
      "link": "https://map.opengea.tech/#2.AgCBAnQGAQwBAQEAANBBxQQK0AUMUKW1AQ",
      "place": {
-      "near": {
-       "en": "The Caravan",
-       "es": "La Caravana",
-       "pt": "A Caravana"
-      },
-      "ref": "place:the-caravan",
+      "near": null,
       "town": {
        "en": "Plains Cathedral",
        "es": "Catedral de la Llanura",
@@ -76859,12 +76774,7 @@
      "hours": null,
      "link": "https://map.opengea.tech/#2.AgDqBMQCBgESAQEBAADQgQaSOgGxQEDD1VudG1kZGQhRHluYGw",
      "place": {
-      "near": {
-       "en": "Pirate Ship",
-       "es": "Barco Pirata",
-       "pt": "Navio Pirata"
-      },
-      "ref": "place:pirate-ship",
+      "near": null,
       "town": {
        "en": "East Nordha",
        "es": "Nordha Este",
@@ -77229,11 +77139,11 @@
      "link": "https://map.opengea.tech/#2.AgAF1wIGAQgBAQEAANBBwRVcCwQUZIWNodEB",
      "place": {
       "near": {
-       "en": "Yacht's Portfall",
-       "es": "Caída del Yate",
-       "pt": "Queda do Iate"
+       "en": "Royal Road",
+       "es": "Camino Real",
+       "pt": "Estrada Real"
       },
-      "ref": "place:yacht-s-portfall",
+      "ref": "place:royal-road",
       "town": {
        "en": "Garadum",
        "es": "Garadum",
@@ -78944,11 +78854,11 @@
      "link": "https://map.opengea.tech/#2.AgAf3wMGAQoBAQEAANBBw318DwQUZNXN1ZkB",
      "place": {
       "near": {
-       "en": "Nebil's Gems & Shinies",
-       "es": "Gemas y Brillantes de Nebil",
-       "pt": "Gemas e Brilhantes de Nebil"
+       "en": "Crater Waypath",
+       "es": "Sendero del Cráter",
+       "pt": "Caminho da Cratera"
       },
-      "ref": "place:nebil-s-gems-shinies",
+      "ref": "place:crater-waypath",
       "town": {
        "en": "Garadum",
        "es": "Garadum",
@@ -79729,12 +79639,7 @@
      ],
      "link": "https://map.opengea.tech/#2.AgCnBYoEBgEMAQEBAADQQUWfFigSBBxolYnVsb25AQ",
      "place": {
-      "near": {
-       "en": "West Tower",
-       "es": "Torre Oeste",
-       "pt": "Torre Oeste"
-      },
-      "ref": "place:basile-west-tower",
+      "near": null,
       "town": {
        "en": "Basile west tower",
        "es": "Torre Oeste de Basile",
@@ -79886,12 +79791,7 @@
        "link": "https://map.opengea.tech/#2.AgCnBYoEBgEMAQEBAADQQUWfFigSBBxolYnVsb25AQ",
        "npc": "npc:zebulon",
        "place": {
-        "near": {
-         "en": "West Tower",
-         "es": "Torre Oeste",
-         "pt": "Torre Oeste"
-        },
-        "ref": "place:basile-west-tower",
+        "near": null,
         "town": {
          "en": "Basile west tower",
          "es": "Torre Oeste de Basile",
@@ -80320,12 +80220,7 @@
       "travel": {
        "link": "https://map.opengea.tech/#2.AgCEAd4EBgEPAQEBAAAUCCIC43ZJLS7JzEssyczPAwA",
        "place": {
-        "near": {
-         "en": "The Citadel",
-         "es": "La Ciudadela",
-         "pt": "A Cidadela"
-        },
-        "ref": "place:the-citadel",
+        "near": null,
         "town": {
          "en": "Nordha",
          "es": "Nordha",
@@ -80696,11 +80591,11 @@
      "link": "https://map.opengea.tech/#2.AgA9hgIGAQsBAQEAANBBRPUYCgQQaL3JpQE",
      "place": {
       "near": {
-       "en": "Nordha Market & Center",
-       "es": "Mercado y Centro de Nordha",
-       "pt": "Mercado e Centro de Nordha"
+       "en": "Amphitere Peak",
+       "es": "Pico Amphitere",
+       "pt": "Pico Amphitere"
       },
-      "ref": "place:nordha",
+      "ref": "place:amphitere-peak",
       "town": {
        "en": "Nordha",
        "es": "Nordha",

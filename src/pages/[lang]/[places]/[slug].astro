@@ -215,7 +215,7 @@ const cardKicker = (o: PlaceData) => (o.level ? fill(tp.levelTag, o.level) : o.k
               </ul>
             ))}
             {inner.length > 0 && (
-              <p class="inner"><b>{tp.innerTitle}:</b> {inner.map(([k], i) => <>{i > 0 && " · "}<span class="fact"><span class="eicon sm"><EntranceIcon kind={k} size={20} /></span>{tp.entranceKind[k]}</span></>)}</p>
+              <div class="inner"><b>{tp.innerTitle}:</b><p class="ifacts">{inner.map(([k]) => <span class="fact"><span class="eicon sm"><EntranceIcon kind={k} size={20} /></span>{tp.entranceKind[k]}</span>)}</p></div>
             )}
           </section>
         )}
@@ -315,7 +315,8 @@ const cardKicker = (o: PlaceData) => (o.level ? fill(tp.levelTag, o.level) : o.k
   .block + .block { margin-top: var(--s-7); }
   .block > h2 { margin-bottom: var(--s-4); }
   .block > .muted { margin: calc(-1 * var(--s-2)) 0 var(--s-4); }
-  .sub + .sub { margin-top: var(--s-5); }
+  /* docs/theming.md: 32 px between a section's groups ("Chefes" under the monster list too), 12 px title to rows */
+  .block > * + .sub { margin-top: 2rem; }
   .sub > h3 { margin: 0 0 var(--s-3); font-size: var(--fs-md); }
   .sub > .muted { margin: calc(-1 * var(--s-2)) 0 var(--s-3); }
   .muted { color: var(--text-muted); }
@@ -343,7 +344,10 @@ const cardKicker = (o: PlaceData) => (o.level ? fill(tp.levelTag, o.level) : o.k
   .next { color: var(--accent-text); font-weight: 700; }
   .eicon { display: inline-grid; place-items: center; width: 40px; height: 40px; flex: none; border-radius: 10px; background: var(--well); }
   .eicon.sm { width: 28px; height: 28px; border-radius: 7px; }
-  .inner { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin: var(--s-4) 0 0; }
+  /* the title on its own line, the kinds under it (a phone never leaves one kind alone under the title's row) */
+  .inner { margin: var(--s-4) 0 0; }
+  .inner > b { display: block; margin: 0 0 var(--s-3); color: var(--heading); }
+  .ifacts { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; margin: 0; }
 
   .similar { display: grid; gap: 12px; grid-template-columns: minmax(0, 1fr); }
   @container main (min-width: 520px) {

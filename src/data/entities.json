@@ -1943,12 +1943,7 @@
     "where": {
      "link": "https://map.opengea.tech/#2.AgCCAd4EBgEPAQEBAAAUCCICY_VJLUstAgA",
      "place": {
-      "near": {
-       "en": "The Citadel",
-       "es": "La Ciudadela",
-       "pt": "A Cidadela"
-      },
-      "ref": "place:the-citadel",
+      "near": null,
       "town": {
        "en": "Nordha",
        "es": "Nordha",
@@ -2605,11 +2600,11 @@
      "link": "https://map.opengea.tech/#2.AgC6AsYCBgEEAQEBAAAUKiJj9UktSy0CAA",
      "place": {
       "near": {
-       "en": "East Nordha Mines",
-       "es": "Minas de Nordha Este",
-       "pt": "Minas de Nordha Oriental"
+       "en": "Loke's Home",
+       "es": "Casa de Loke",
+       "pt": "Casa de Loke"
       },
-      "ref": "place:east-nordha-mines",
+      "ref": "place:loke-s-home",
       "town": {
        "en": "East Nordha",
        "es": "Nordha Este",
@@ -6950,9 +6945,9 @@
   },
   {
    "name": {
-    "en": "Lever near East Nordha Mines",
-    "es": "Palanca cerca de Minas de Nordha Este",
-    "pt": "Alavanca perto de Minas de Nordha Oriental"
+    "en": "Lever near Loke's Home",
+    "es": "Palanca cerca de Casa de Loke",
+    "pt": "Alavanca perto de Casa de Loke"
    },
    "ref": "place:lever-2651",
    "slug": {
@@ -6986,9 +6981,9 @@
   },
   {
    "name": {
-    "en": "Lever near The Citadel",
-    "es": "Palanca cerca de La Ciudadela",
-    "pt": "Alavanca perto de A Cidadela"
+    "en": "Lever near Nordha",
+    "es": "Palanca cerca de Nordha",
+    "pt": "Alavanca perto de Nordha"
    },
    "ref": "place:lever-2917",
    "slug": {
