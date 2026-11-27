@@ -7,7 +7,6 @@
 import PageShell from "../../../components/layout/PageShell.astro";
 import PixelArt from "../../../components/ui/PixelArt.astro";
 import IconSlot from "../../../components/ui/IconSlot.astro";
-import RenderSlot from "../../../components/ui/RenderSlot.astro";
 import DataTable from "../../../components/data/DataTable.astro";
 import DataRow from "../../../components/data/DataRow.astro";
 import DataCell from "../../../components/data/DataCell.astro";
@@ -92,7 +91,7 @@ const icon = (name: string, scale = 2) => { const sz = UI[name] ?? [9, 9]; retur
             filters={{ town: towns.map(slugTown), sells: s, buys: b, services: n.spoiler ? [] : serviceKeys(n), hours: !n.spoiler && hasHours(n) ? ["yes"] : [] }}>
             <DataCell label={tn.colName} primary>
               <span class="name">
-                <span class="render">{n.grid ? <img src={n.grid} width="128" height="128" alt="" loading="lazy" decoding="async" /> : <RenderSlot alt={dn.name} size={128} />}</span>
+                <span class="render">{n.render ? <img src={n.render.src} width={n.render.size[0]} height={n.render.size[1]} alt="" loading="lazy" decoding="async" /> : null}</span>
                 <span class="small-icon"><IconSlot icon={e.icon ?? null} kind="npc" size={44} /></span>
                 <span class="ntext">
                   <a href={href} title={dn.name} lang={dn.nameLang !== lang ? HREFLANG[dn.nameLang] : undefined}>{dn.name}</a>
