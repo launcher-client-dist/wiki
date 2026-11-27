@@ -23521,6 +23521,10 @@
     "quests": [
      {
       "amount": 1,
+      "quest": "quest:q241"
+     },
+     {
+      "amount": 1,
       "quest": "quest:q40"
      }
     ],
@@ -43820,7 +43824,12 @@
     ],
     "leftover": [],
     "map": [],
-    "quests": [],
+    "quests": [
+     {
+      "amount": 1,
+      "quest": "quest:q243"
+     }
+    ],
     "recipes": [],
     "shops": []
    },
@@ -133448,7 +133457,12 @@
     ],
     "leftover": [],
     "map": [],
-    "quests": [],
+    "quests": [
+     {
+      "amount": 1,
+      "quest": "quest:q242"
+     }
+    ],
     "recipes": [],
     "shops": []
    },

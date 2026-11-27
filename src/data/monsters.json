@@ -825,7 +825,7 @@
    ],
    "render": {
     "size": [
-     186,
+     184,
      512
     ],
     "src": "/renders/monsters/ancient-snake.webp"
@@ -2139,7 +2139,7 @@
    ],
    "render": {
     "size": [
-     353,
+     411,
      512
     ],
     "src": "/renders/monsters/banshee.webp"
@@ -5197,7 +5197,7 @@
    ],
    "render": {
     "size": [
-     314,
+     467,
      512
     ],
     "src": "/renders/monsters/conquest-champion.webp"
@@ -5871,7 +5871,7 @@
    ],
    "render": {
     "size": [
-     308,
+     310,
      512
     ],
     "src": "/renders/monsters/conquest-fowler.webp"
@@ -6207,7 +6207,7 @@
    ],
    "render": {
     "size": [
-     278,
+     332,
      512
     ],
     "src": "/renders/monsters/conquest-priestess.webp"
@@ -7303,7 +7303,7 @@
    ],
    "render": {
     "size": [
-     284,
+     376,
      512
     ],
     "src": "/renders/monsters/deadly-webcap.webp"
@@ -8897,8 +8897,8 @@
    ],
    "render": {
     "size": [
-     512,
-     505
+     333,
+     512
     ],
     "src": "/renders/monsters/eye-of-pestilence.webp"
    },
@@ -14570,7 +14570,7 @@
    "places": [],
    "render": {
     "size": [
-     353,
+     410,
      512
     ],
     "src": "/renders/monsters/minerva.webp"
@@ -16820,7 +16820,7 @@
    ],
    "render": {
     "size": [
-     311,
+     345,
      512
     ],
     "src": "/renders/monsters/necromancer.webp"
@@ -18658,7 +18658,7 @@
    ],
    "render": {
     "size": [
-     321,
+     322,
      512
     ],
     "src": "/renders/monsters/occultist-enforcer.webp"
@@ -30458,7 +30458,7 @@
      "item": "stone-shortbow",
      "quality": true,
      "tier": "muito-raro",
-     "unique": true
+     "unique": false
     }
    ],
    "family": "Troll",
@@ -30615,7 +30615,7 @@
    ],
    "render": {
     "size": [
-     426,
+     416,
      512
     ],
     "src": "/renders/monsters/swamp-troll.webp"
@@ -32046,7 +32046,7 @@
    "places": [],
    "render": {
     "size": [
-     317,
+     327,
      512
     ],
     "src": "/renders/monsters/the-gardener.webp"
@@ -32611,7 +32611,7 @@
    ],
    "render": {
     "size": [
-     461,
+     460,
      512
     ],
     "src": "/renders/monsters/thug.webp"
@@ -33007,7 +33007,7 @@
    "places": [],
    "render": {
     "size": [
-     364,
+     379,
      512
     ],
     "src": "/renders/monsters/tock.webp"
