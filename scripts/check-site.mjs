@@ -162,6 +162,9 @@ for (const l of LANG_CODES.filter((c) => c !== LANG_TABLE.default)) if (!pages.g
 // "builds" collection that links to the Iron Ingot must show on that item's page by itself (the generic reverse index).
 {
   const itemsFile = JSON.parse(readFileSync(new URL("../src/data/items.json", import.meta.url), "utf8"));
+  // rewards kept out on purpose: no item's quest source is one of these quests
+  const KEPT_OUT = new Set(["quest:q241", "quest:q242", "quest:q243"]);
+  for (const i of itemsFile.items) for (const q of i.sources.quests) if (KEPT_OUT.has(q.quest)) fail(`item ${i.id}`, `${q.quest}: rewards kept out on purpose`);
   const esc = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
   const gameTexts = [...new Set(itemsFile.items.flatMap((i) => i.versions.flatMap((v) => LANG_CODES.map((l) => v.text[l]))).filter((t) => t && t.includes("%")))]
     .flatMap((t) => [t, esc(t), JSON.stringify(t).slice(1, -1)]);

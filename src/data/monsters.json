@@ -30458,7 +30458,7 @@
      "item": "stone-shortbow",
      "quality": true,
      "tier": "muito-raro",
-     "unique": false
+     "unique": true
     }
    ],
    "family": "Troll",

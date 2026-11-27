@@ -7356,57 +7356,6 @@
   },
   {
    "name": {
-    "_fb": [
-     "pt",
-     "es"
-    ],
-    "en": "Drowned Chest",
-    "es": "Drowned Chest",
-    "pt": "Drowned Chest"
-   },
-   "ref": "quest:q241",
-   "slug": {
-    "en": "drowned-chest",
-    "es": "drowned-chest",
-    "pt": "drowned-chest"
-   }
-  },
-  {
-   "name": {
-    "_fb": [
-     "pt",
-     "es"
-    ],
-    "en": "Guardian's Hoard",
-    "es": "Guardian's Hoard",
-    "pt": "Guardian's Hoard"
-   },
-   "ref": "quest:q242",
-   "slug": {
-    "en": "guardian-s-hoard",
-    "es": "guardian-s-hoard",
-    "pt": "guardian-s-hoard"
-   }
-  },
-  {
-   "name": {
-    "_fb": [
-     "pt",
-     "es"
-    ],
-    "en": "Widow's Nest",
-    "es": "Widow's Nest",
-    "pt": "Widow's Nest"
-   },
-   "ref": "quest:q243",
-   "slug": {
-    "en": "widow-s-nest",
-    "es": "widow-s-nest",
-    "pt": "widow-s-nest"
-   }
-  },
-  {
-   "name": {
     "en": "Marshes Chest",
     "es": "Cofre de los Pantanos",
     "pt": "Baú dos Pântanos"
