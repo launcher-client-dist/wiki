@@ -758,14 +758,6 @@
       1,
       4
      ],
-     "link": "https://map.opengea.tech/#2.AgCBBUMGAQwBAQEAABTUiBN0T0zPycxXCMlIVXBKzEvJLAEA",
-     "ref": "monster:gaglio-the-bandit"
-    },
-    {
-     "hours": [
-      1,
-      4
-     ],
      "link": "https://map.opengea.tech/#2.AgClBBgGAQsBAQEAABTEiBPwTSxJzVcIyUhVcErMS8ksAQA",
      "ref": "monster:mateo-the-bandit"
     }
@@ -991,7 +983,12 @@
     "pt": "Basile"
    },
    "near": [],
-   "npcs": [],
+   "npcs": [
+    {
+     "ref": "npc:a-wounded-soldier",
+     "shift": 0
+    }
+   ],
    "places": [
     "place:basile-s-temple",
     "place:the-monastery",
@@ -1433,7 +1430,6 @@
    ],
    "floors": [
     "s",
-    "4",
     "0",
     "-2",
     "-3",
@@ -1483,10 +1479,6 @@
    ],
    "npcs": [
     {
-     "ref": "npc:a-wounded-soldier",
-     "shift": 0
-    },
-    {
      "ref": "npc:daniel",
      "shift": 0
     },
@@ -1530,8 +1522,7 @@
     "4",
     "3",
     "2",
-    "0",
-    "-6"
+    "0"
    ],
    "id": "basile-west-tower",
    "inner": {
@@ -3388,7 +3379,6 @@
    ],
    "floors": [
     "s",
-    "5",
     "-1",
     "-2",
     "-5"
@@ -3427,10 +3417,6 @@
     "place:west-nordha"
    ],
    "npcs": [
-    {
-     "ref": "npc:balder",
-     "shift": 0
-    },
     {
      "ref": "npc:dionel",
      "shift": 0
@@ -4064,7 +4050,12 @@
     "pt": "Nordha Oriental"
    },
    "near": [],
-   "npcs": [],
+   "npcs": [
+    {
+     "ref": "npc:lisa",
+     "shift": 0
+    }
+   ],
    "places": [
     "place:salazar-shop",
     "place:nordha-depot",
@@ -4866,8 +4857,7 @@
    "floors": [
     "s",
     "-3",
-    "-4",
-    "-16"
+    "-4"
    ],
    "id": "eofor-s-hut",
    "inner": {
@@ -4924,11 +4914,6 @@
     "place:plains-road"
    ],
    "npcs": [
-    {
-     "ref": "npc:elmo",
-     "shift": 2,
-     "spoiler": true
-    },
     {
      "ref": "npc:eofor",
      "shift": 0
@@ -8177,6 +8162,10 @@
     {
      "ref": "npc:tufi",
      "shift": 0
+    },
+    {
+     "ref": "npc:balder",
+     "shift": 0
     }
    ],
    "places": [
@@ -9039,8 +9028,7 @@
     "1",
     "-1",
     "-2",
-    "-6",
-    "-9"
+    "-6"
    ],
    "id": "northern-outpost",
    "inner": {
@@ -9088,12 +9076,7 @@
     "place:the-docks",
     "place:trader-s-square"
    ],
-   "npcs": [
-    {
-     "ref": "npc:pale-goblin",
-     "shift": 0
-    }
-   ],
+   "npcs": [],
    "ref": "place:northern-outpost",
    "render": {
     "size": [
@@ -9779,8 +9762,7 @@
     "-1",
     "-2",
     "-3",
-    "-4",
-    "-9"
+    "-4"
    ],
    "id": "pirate-ship",
    "inner": {
@@ -9838,17 +9820,7 @@
     "place:ferag-courier-stable",
     "place:colman-s-kitchen"
    ],
-   "npcs": [
-    {
-     "ref": "npc:johnny",
-     "shift": 1,
-     "spoiler": true
-    },
-    {
-     "ref": "npc:wounded-dylan",
-     "shift": 0
-    }
-   ],
+   "npcs": [],
    "ref": "place:pirate-ship",
    "render": {
     "size": [
@@ -9889,7 +9861,6 @@
     "-3",
     "-4",
     "-7",
-    "-8",
     "-10",
     "-11",
     "-15"
@@ -9936,16 +9907,16 @@
    "near": [],
    "npcs": [
     {
-     "ref": "npc:a-wounded-soldier",
-     "shift": 1
-    },
-    {
      "ref": "npc:edmund",
      "shift": 0
     },
     {
      "ref": "npc:thadeus",
      "shift": 0
+    },
+    {
+     "ref": "npc:a-wounded-soldier",
+     "shift": 1
     }
    ],
    "places": [
@@ -10403,8 +10374,7 @@
     "-1",
     "-3",
     "-5",
-    "-6",
-    "-13"
+    "-6"
    ],
    "id": "road-to-basile",
    "inner": {
@@ -10506,15 +10476,19 @@
    ],
    "npcs": [
     {
-     "ref": "npc:a-female-goblin",
-     "shift": 0
-    },
-    {
      "ref": "npc:a-hooded-figure",
      "shift": 0
     },
     {
+     "ref": "npc:nick",
+     "shift": 0
+    },
+    {
      "ref": "npc:ozrid",
+     "shift": 0
+    },
+    {
+     "ref": "npc:tim",
      "shift": 0
     }
    ],
@@ -11349,8 +11323,7 @@
    "bosses": [],
    "entrances": [],
    "floors": [
-    "s",
-    "1"
+    "s"
    ],
    "id": "salazar-shop",
    "inner": {
@@ -11383,12 +11356,7 @@
     "place:colman-s-kitchen",
     "place:ghost-town"
    ],
-   "npcs": [
-    {
-     "ref": "npc:lisa",
-     "shift": 0
-    }
-   ],
+   "npcs": [],
    "ref": "place:salazar-shop",
    "render": {
     "size": [
@@ -12726,8 +12694,7 @@
    "entrances": [],
    "floors": [
     "s",
-    "-2",
-    "-6"
+    "-2"
    ],
    "id": "the-caravan",
    "items": [
@@ -12891,10 +12858,6 @@
      "shift": 0
     },
     {
-     "ref": "npc:nick",
-     "shift": 0
-    },
-    {
      "ref": "npc:opal",
      "shift": 0
     },
@@ -12908,10 +12871,6 @@
     },
     {
      "ref": "npc:thelma",
-     "shift": 0
-    },
-    {
-     "ref": "npc:tim",
      "shift": 0
     },
     {
@@ -13053,10 +13012,6 @@
     },
     {
      "ref": "npc:millen",
-     "shift": 0
-    },
-    {
-     "ref": "npc:zoe",
      "shift": 0
     }
    ],
@@ -14858,8 +14813,7 @@
    "floors": [
     "s",
     "-3",
-    "-5",
-    "-12"
+    "-5"
    ],
    "id": "west-gate",
    "inner": {
@@ -14933,11 +14887,6 @@
     {
      "ref": "npc:elmo",
      "shift": 3,
-     "spoiler": true
-    },
-    {
-     "ref": "npc:elsie",
-     "shift": 1,
      "spoiler": true
     },
     {
