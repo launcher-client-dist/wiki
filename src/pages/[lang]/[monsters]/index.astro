@@ -10,7 +10,7 @@ import { HREFLANG, LANGS, LOCALE, type Lang } from "../../../lib/i18n.ts";
 import { homePath, SECTIONS, sectionAlternates, sectionPath } from "../../../lib/routes.ts";
 import { siteData } from "../../../lib/site-registry.ts";
 import { statLabel } from "../../../lib/items/data.ts";
-import { BEHAVIOUR_KEYS, MONSTER_STAT_KEYS, behaviourKeys, monsterRef, towns, type MonsterData } from "../../../lib/monsters/data.ts";
+import { BEHAVIOUR_KEYS, MONSTER_STAT_KEYS, behaviourKeys, monsterRef, towns, windowPlaces, type MonsterData } from "../../../lib/monsters/data.ts";
 import { displayName } from "../../../lib/names.ts";
 import uiSizes from "../../../data/ui-icons.json";
 const UI = uiSizes as Record<string, number[]>;
@@ -32,7 +32,7 @@ const bandLabel = ([lo, hi]: readonly [number, number]) => (hi >= 999 ? `${lo}+`
 /** The towns, by how many monsters live there (the commonest first). */
 const TOWN = new Map<string, { label: string; n: number }>();
 for (const m of monsters) {
-  for (const p of [...m.places.map((x) => x.place), ...m.windows.map((w) => w.place)]) {
+  for (const p of [...m.places.map((x) => x.place), ...m.windows.flatMap(windowPlaces)]) {
     const cur = TOWN.get(p.town.en) ?? { label: p.town[lang], n: 0 };
     TOWN.set(p.town.en, cur);
   }

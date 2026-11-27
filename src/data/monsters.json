@@ -200,7 +200,41 @@
        "pt": "Nordha"
       },
       "underground": false
-     }
+     },
+     "spots": [
+      {
+       "link": "https://map.opengea.tech/#2.AgBJqgIGAQABAQEAAJQiAuNyzCnISFQIz89JAwA",
+       "place": {
+        "near": {
+         "en": "Nordha Market & Center",
+         "es": "Mercado y Centro de Nordha",
+         "pt": "Mercado e Centro de Nordha"
+        },
+        "town": {
+         "en": "Nordha",
+         "es": "Nordha",
+         "pt": "Nordha"
+        },
+        "underground": false
+       }
+      },
+      {
+       "link": "https://map.opengea.tech/#2.AgBouAMGAQABAQEAAJQiAuNyzCnISFQIz89JAwA",
+       "place": {
+        "near": {
+         "en": "Nordha Mountain Path",
+         "es": "Sendero de la Montaña de Nordha",
+         "pt": "Caminho da Montanha de Nordha"
+        },
+        "town": {
+         "en": "Nordha",
+         "es": "Nordha",
+         "pt": "Nordha"
+        },
+        "underground": false
+       }
+      }
+     ]
     },
     {
      "hours": [
@@ -32303,7 +32337,41 @@
        "pt": "Nordha Oriental"
       },
       "underground": false
-     }
+     },
+     "spots": [
+      {
+       "link": "https://map.opengea.tech/#2.AgDQA74DBgEAAQEBAACUIgLjDMlIVXAsTS8tAgA",
+       "place": {
+        "near": {
+         "en": "Nordha Depot",
+         "es": "Depósito de Nordha",
+         "pt": "Depósito de Nordha"
+        },
+        "town": {
+         "en": "East Nordha",
+         "es": "Nordha Este",
+         "pt": "Nordha Oriental"
+        },
+        "underground": false
+       }
+      },
+      {
+       "link": "https://map.opengea.tech/#2.AgC0AYwCBgEAAQEBAACUIgLjDMlIVXAsTS8tAgA",
+       "place": {
+        "near": {
+         "en": "Nordha Labirynth",
+         "es": "Laberinto de Nordha",
+         "pt": "Labirinto de Nordha"
+        },
+        "town": {
+         "en": "Nordha",
+         "es": "Nordha",
+         "pt": "Nordha"
+        },
+        "underground": false
+       }
+      }
+     ]
     }
    ]
   },
@@ -32786,7 +32854,49 @@
        "pt": "Garadum"
       },
       "underground": false
-     }
+     },
+     "spots": [
+      {
+       "link": "https://map.opengea.tech/#2.AgC1AcUCBgEAAQEBAACUIgLjCclIVXDKSUzOzkgsAQA",
+       "picks": [
+        9,
+        10
+       ],
+       "place": {
+        "near": {
+         "en": "South Temple",
+         "es": "Templo Sur",
+         "pt": "Templo Sul"
+        },
+        "town": {
+         "en": "Garadum",
+         "es": "Garadum",
+         "pt": "Garadum"
+        },
+        "underground": false
+       }
+      },
+      {
+       "link": "https://map.opengea.tech/#2.AgD3AW4GAQABAQEAAJQiAuMJyUhVcMpJTM7OSCwBAA",
+       "picks": [
+        1,
+        10
+       ],
+       "place": {
+        "near": {
+         "en": "The Caravan",
+         "es": "La Caravana",
+         "pt": "A Caravana"
+        },
+        "town": {
+         "en": "Plains Cathedral",
+         "es": "Catedral de la Llanura",
+         "pt": "Catedral da Planície"
+        },
+        "underground": false
+       }
+      }
+     ]
     }
    ]
   },
@@ -33274,7 +33384,37 @@
        "pt": "Catedral da Planície"
       },
       "underground": false
-     }
+     },
+     "spots": [
+      {
+       "link": "https://map.opengea.tech/#2.AgChAdEBBgEAAQEBAACUIgLjCclIVXBPLEpJzUstAgA",
+       "place": {
+        "near": null,
+        "town": {
+         "en": "Plains Cathedral",
+         "es": "Catedral de la Llanura",
+         "pt": "Catedral da Planície"
+        },
+        "underground": false
+       }
+      },
+      {
+       "link": "https://map.opengea.tech/#2.AgCpAwYGAQoBAQEAABS0iOMJyUhVcE8sSknNSy0CAA",
+       "place": {
+        "near": {
+         "en": "West Garden",
+         "es": "Jardín Oeste",
+         "pt": "Jardim Oeste"
+        },
+        "town": {
+         "en": "Plains Cathedral",
+         "es": "Catedral de la Llanura",
+         "pt": "Catedral da Planície"
+        },
+        "underground": false
+       }
+      }
+     ]
     }
    ]
   },

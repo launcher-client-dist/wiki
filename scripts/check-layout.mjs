@@ -46,6 +46,8 @@ const mRich = (m) => m.drops.length + m.spells.length * 2 + m.places.length + m.
 const mPick = (fn) => [...mdata].filter(fn).sort((a, b) => mRich(b) - mRich(a) || a.id.localeCompare(b.id))[0];
 const MONSTER_KINDS = {
   common: (m) => !m.boss && !m.windows.length && m.how === "spawn", boss: (m) => m.boss && m.windows.length > 0,
+  // a boss that comes out at one of several spots, with odds (its spot rows and pills at every width)
+  "boss-one-of": (m) => m.windows.some((w) => w.spots?.some((s) => s.picks)),
   summoner: (m) => m.behaviour.summons?.length > 0, variants: (m) => m.variants.length > 0,
 };
 const richness = (i) => Object.values(i.sources).reduce((n, v) => n + (Array.isArray(v) ? v.length : 0), 0) + i.versions.length + (i.forgeable ? 3 : 0);

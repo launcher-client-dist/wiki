@@ -295,6 +295,17 @@ for (const l of LANG_CODES.filter((c) => c !== LANG_TABLE.default)) if (!pages.g
         else if (!pages.get(itemUrl)?.html.includes(`href="${url}"`)) fail(itemUrl, `"dropped by" doesn't link back to ${url}`);
       }
       if (m.windows.length && !html.includes("data-win-start")) fail(url, "a timed monster without its schedule");
+      // a boss that comes out at one of N spots: its window once (never N windows, which read as N bosses at once),
+      // "one of these N" over the N spots, each with its own map link
+      const winCards = (html.match(/class="window"/g) ?? []).length;
+      if (winCards !== m.windows.length) fail(url, `${winCards} schedule cards for ${m.windows.length} windows`);
+      for (const w of m.windows.filter((x) => x.spots)) {
+        const at = html.indexOf(`data-one-of="${w.spots.length}"`);
+        if (at < 0) { fail(url, `a one-of-${w.spots.length} window without its spots`); continue; }
+        const block = html.slice(at, html.indexOf("</ul>", at));
+        const hrefs = new Set([...block.matchAll(/<a [^>]*href="([^"]+)"[^>]*data-maplink/g)].map((x) => x[1]));
+        if (hrefs.size !== w.spots.length) fail(url, `${hrefs.size} map links for ${w.spots.length} spots`);
+      }
     });
   }
   console.log(`checked ${monPages.length} monster pages: percentages, stats, drops linked both ways`);

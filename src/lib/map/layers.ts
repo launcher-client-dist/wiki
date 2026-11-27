@@ -5,7 +5,8 @@
  *
  * One file per layer and language (/map-data/<lang>/<layer>.json), loaded when the layer is first shown:
  *   e  the layer's entries: {r ref, n name, a translation, u page URL or null, i icon {s, w, h, px}, k key fact}
- *   p  its points: [x, z, floor, entry index, count] (bosses add the window's game hours [h0, h1] and 1 for an invasion;
+ *   p  its points: [x, z, floor, entry index, count] (bosses add the window's game hours [h0, h1], 1 for an invasion, and
+ *      for a boss that picks one of N spots: N and that spot's picks k in n (0, 0 when even), else 0, 0, 0;
  *      monster groups add their creatures' cells, "dx,dz,dx,dz..." from the group's spot, or "" to stay one marker)
  * The quest things (spoilers: items and NPCs that only appear in a quest) are left out of the layers and kept in their
  * own file, `spoiler`, loaded only when the reader turns the switch on, or for a deep link to one of them.
@@ -22,15 +23,15 @@ import type { MonsterData } from "../monsters/data.ts";
 
 export const LAYERS = ["monsters", "bosses", "npcs", "places", "items"] as const;
 export type LayerKey = (typeof LAYERS)[number];
-/** Shown when the map opens (the user, 2026-11-26). */
-export const DEFAULT_ON: readonly LayerKey[] = ["places", "npcs", "monsters"];
+/** Shown when the map opens (the user, 2026-11-26; the bosses too, 2026-11-27). */
+export const DEFAULT_ON: readonly LayerKey[] = ["places", "npcs", "monsters", "bosses"];
 export const PLACE_KINDS = ["temple", "depot", "well", "forge", "runeTable", "cook", "dock"] as const;
 export type PlaceKind = (typeof PLACE_KINDS)[number];
 /** Each layer's and place kind's game icon (src/data/ui-icons.json). */
 export const LAYER_ICON: Record<LayerKey, string> = { monsters: "src-drop", bosses: "boss", npcs: "src-shop", places: "house", items: "stack" };
 export const PLACE_ICON: Record<PlaceKind, string> = { temple: "house", depot: "stack", well: "cat-drink", forge: "anvil", runeTable: "rune", cook: "src-cook", dock: "src-map" };
 
-interface RawPoint { x: number; z: number; f: string; ref?: string; n?: number; cells?: [number, number][]; kind?: PlaceKind; town?: string; hours?: [number, number]; invasion?: boolean; sells?: number; buys?: number; spoiler?: boolean; npc?: string; shift?: number }
+interface RawPoint { x: number; z: number; f: string; ref?: string; n?: number; cells?: [number, number][]; kind?: PlaceKind; town?: string; hours?: [number, number]; invasion?: boolean; oneOf?: number; picks?: [number, number]; sells?: number; buys?: number; spoiler?: boolean; npc?: string; shift?: number }
 export interface PointsFile { floors: string[]; layers: Record<LayerKey, RawPoint[]> }
 export const POINTS = pointsJson as unknown as PointsFile;
 
@@ -121,7 +122,7 @@ export function buildLayers(lang: Lang, registry: Registry, monsters: readonly M
       // an NPC's entry is per shift: each marker's card shows that shift's own shop (Benedict at the pub, at the square)
       const i = entryOf(layer === "npcs" ? `${ref}#${p.shift ?? 0}` : ref, () => entity(ref, facts), target, map);
       const row: Point = [p.x, p.z, p.f, i, p.n ?? 1];
-      if (layer === "bosses") row.push(p.hours?.[0] ?? -1, p.hours?.[1] ?? -1, p.invasion ? 1 : 0);
+      if (layer === "bosses") row.push(p.hours?.[0] ?? -1, p.hours?.[1] ?? -1, p.invasion ? 1 : 0, p.oneOf ?? 0, p.picks?.[0] ?? 0, p.picks?.[1] ?? 0);
       // a monster group's creatures, each on its own spawn cell (offsets from the group's spot, flat: dx, dz, ...); none
       // where the group must stay one marker
       if (layer === "monsters") row.push(p.cells ? p.cells.flat().join(",") : "");
