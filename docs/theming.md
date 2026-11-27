@@ -51,7 +51,9 @@ and 390 px, in Portuguese and Spanish. Chrome comes from `CHROME_PATH` or the us
   the room (quality cards 5 / 3 / 2 with the last across, drop odds 4 / 2 / 1, similar items by count), lay chips
   inline with `text-wrap: balance` (filter chips, stat chips, a rune's types: seven wrap 4+3, never 6+1), stack them all
   as an even column (the hero's tags on a phone, each as wide as the widest), or make the last one take the whole line.
-  A list that reads like text (a rune's 19 linked items) opts out with `data-flow`; the check lists those.
+  A list that reads like text (a rune's 19 linked items) opts out with `data-flow`; the check lists those. A catalog's
+  card grid (the lists' grid view, `data-catalog`) is the one exception: it ends on a partial row and every card keeps
+  its width, never stretched across (the user, 2026-11-27: a lone last card stretched across "looks weird").
   *Checked (orphan).*
 - **No duplicate content.** A fact is told once: a potion's effect in the stats box, not again in "Efeito"; a rune's
   effect is its hero text.

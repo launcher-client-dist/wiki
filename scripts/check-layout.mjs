@@ -227,6 +227,7 @@ function measure() {
     if (!vis(el) || el.closest(".sr-only, [hidden]")) continue;
     if (inMap(el)) continue;
     if (el.closest("[data-flow]")) { flows.push(name(el)); continue; }
+    if (el.matches("[data-catalog]")) continue;   // a list's card grid ends on a partial row; the cards keep their width
     const kids = [...el.children].filter((c) => vis(c) && getComputedStyle(c).position !== "absolute" && getComputedStyle(c).position !== "fixed");
     if (kids.length < 3) continue;
     const rows = [];
