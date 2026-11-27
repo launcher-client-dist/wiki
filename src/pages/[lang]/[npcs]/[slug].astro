@@ -25,7 +25,7 @@ import { HREFLANG, LANGS, LOCALE, type Lang } from "../../../lib/i18n.ts";
 import { absoluteUrl, homePath, SECTIONS, sectionPath } from "../../../lib/routes.ts";
 import { siteData, STUB_BY_REF } from "../../../lib/site-registry.ts";
 import { gameHour, placeLine } from "../../../lib/monsters/data.ts";
-import { hasHours, serviceKeys, type NpcData } from "../../../lib/npcs/data.ts";
+import { hasHours, openShifts, serviceKeys, takesTurns, type NpcData } from "../../../lib/npcs/data.ts";
 import { allNames, displayName, nameWithAid } from "../../../lib/names.ts";
 
 export async function getStaticPaths() {
@@ -49,7 +49,10 @@ const num = (v: number) => v.toLocaleString(LOCALE[lang]);
 const txt = (l: Record<string, unknown> & { en: string; _fb?: string[] }) => ({ text: (l[lang] as string | undefined) ?? l.en, english: !!l._fb?.includes(lang) });
 const title = txt(n.title as never);
 const job = n.job ? txt(n.job as never) : null;
-const first = n.shifts[0]!;
+/** The first-met shift (the order puts the ones behind a quest last): the hero and the sidebar's place. */
+const open = openShifts(n);
+const first = open[0]!;
+const turns = takesTurns(n);
 const many = n.shifts.length > 1;
 const services = serviceKeys(n);
 const gated = !n.spoiler && n.shifts.some((s) => s.spoiler);
@@ -66,8 +69,8 @@ const seeAlso = npcs.filter((o) => {
  *  stays out: some carry an emote or a line break). */
 const description = n.spoiler ? fill(tn.metaShop, { name: nameWithAid(dn) })
   : [title.english ? null : title.text, fill(tn.metaShop, { name: nameWithAid(dn) })].filter(Boolean).join(" ");
-const sellsN = new Set(n.shifts.flatMap((s) => (s.sells ?? []).map((r) => r.item))).size;
-const buysN = new Set(n.shifts.flatMap((s) => (s.buys ?? []).map((r) => r.item))).size;
+const sellsN = new Set(open.flatMap((s) => (s.sells ?? []).map((r) => r.item))).size;
+const buysN = new Set(open.flatMap((s) => (s.buys ?? []).map((r) => r.item))).size;
 const jsonLd = [{
   "@context": "https://schema.org",
   "@type": "Thing",
@@ -116,7 +119,7 @@ const jsonLd = [{
             <Spoiler title={tn.questOnlySpoiler}>
               <p class="alt-in" lang={title.english ? "en" : undefined}>{title.text}</p>
               {job && <p class="alt-in" lang={job.english ? "en" : undefined}>“{job.text}”</p>}
-              <div class="shifts">{n.shifts.map((sh, i) => <NpcShift sh={sh} i={i} many={true} entity={n.ref} />)}</div>
+              <div class="shifts">{n.shifts.map((sh, i) => <NpcShift sh={sh} i={i} many={true} entity={n.ref} turns={turns} mainTitle={title.text} />)}</div>
               <NpcTalk lines={n.conversation} nested id="q" />
             </Spoiler>
           </section>
@@ -126,7 +129,7 @@ const jsonLd = [{
               <section class="block" aria-labelledby="h-shifts" data-section="shifts">
                 <h2 id="h-shifts">{many ? tn.shiftsTitle : tn.placeTitle}</h2>
                 <p class="muted">{tn.shiftsIntro}</p>
-                <div class="shifts">{n.shifts.map((sh, i) => <NpcShift sh={sh} i={i} many={many} entity={n.ref} />)}</div>
+                <div class="shifts">{n.shifts.map((sh, i) => <NpcShift sh={sh} i={i} many={many} entity={n.ref} turns={turns} mainTitle={title.text} hide={sh.spoiler} />)}</div>
               </section>
             )}
             {!many && (first.spoiler && (first.sells?.length || first.buys?.length) ? (
@@ -175,7 +178,7 @@ const jsonLd = [{
           <InfoBox title={tn.kicker}>
             <ul class="facts">
               <li><span class="sicon"><GameIcon name="src-map" fit={28} /></span><span>{tn.colPlace}</span><b>{first.place.town[lang]}</b></li>
-              <li class="top"><span class="sicon"><GameIcon name="time" fit={28} /></span><span>{tn.colHours}</span><b class="num hrs">{hasHours(n) ? n.shifts.filter((s) => s.hours).map((s) => <span>{`${gameHour(s.hours![0])}–${gameHour(s.hours![1])}`}</span>) : tn.hoursAlways}</b></li>
+              <li class="top"><span class="sicon"><GameIcon name="time" fit={28} /></span><span>{tn.colHours}</span><b class="num hrs">{hasHours(n) ? open.filter((s) => s.hours).map((s) => <span>{`${gameHour(s.hours![0])}–${gameHour(s.hours![1])}`}</span>) : tn.hoursAlways}</b></li>
               {sellsN > 0 && <li><span class="sicon"><GameIcon name="src-shop" fit={28} /></span><span>{tn.colSells}</span><b class="num">{num(sellsN)}</b></li>}
               {buysN > 0 && <li><span class="sicon"><GameIcon name="gold" fit={28} /></span><span>{tn.colBuys}</span><b class="num">{num(buysN)}</b></li>}
               {services.includes("travel") && <li><span class="sicon"><GameIcon name="src-map" fit={28} /></span><span>{tn.servicesTitle}</span><b>{tn.travel}</b></li>}

@@ -118,7 +118,8 @@ export function buildLayers(lang: Lang, registry: Registry, monsters: readonly M
       }
       const target = p.spoiler ? spoiler : file;
       const map = p.spoiler ? spoilerIdx : idx;
-      const i = entryOf(ref, () => entity(ref, facts), target, map);
+      // an NPC's entry is per shift: each marker's card shows that shift's own shop (Benedict at the pub, at the square)
+      const i = entryOf(layer === "npcs" ? `${ref}#${p.shift ?? 0}` : ref, () => entity(ref, facts), target, map);
       const row: Point = [p.x, p.z, p.f, i, p.n ?? 1];
       if (layer === "bosses") row.push(p.hours?.[0] ?? -1, p.hours?.[1] ?? -1, p.invasion ? 1 : 0);
       // a monster group's creatures, each on its own spawn cell (offsets from the group's spot, flat: dx, dz, ...); none

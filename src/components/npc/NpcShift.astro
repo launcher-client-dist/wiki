@@ -22,8 +22,16 @@ interface Props {
   /** The character has several shifts: number them and show each one's own shop. */
   many: boolean;
   entity: string;
+  /** "Turno N" when the shifts take turns, else "Lugar N". */
+  turns?: boolean;
+  /** The character's own title: a shift with another one shows it. */
+  mainTitle?: string;
+  /** A shift behind a quest on an ordinary page: the whole block in a spoiler (its title, place and hours too). */
+  hide?: boolean;
+  /** Drawn inside the block's own spoiler: no anchor of its own, no second spoiler. */
+  inner?: boolean;
 }
-const { sh, i, many, entity } = Astro.props;
+const { sh, i, many, entity, turns = true, mainTitle, hide = false, inner: nestedIn = false } = Astro.props;
 const lang: Lang = isLang(Astro.params.lang) ? Astro.params.lang : DEFAULT_LANG;
 const t = ui(lang);
 const tn = t.npc;
@@ -31,10 +39,21 @@ const ti = t.item;
 const win = sh.hours ? windowSeconds(sh.hours) : null;
 const id = shiftAnchor(i);
 const inner = many;
+const head = fill(turns ? tn.shiftN : tn.placeN, { n: i + 1 });
+const st = sh.title ? { text: ((sh.title as unknown as Record<string, unknown>)[lang] as string | undefined) ?? sh.title.en, en: !!sh.title._fb?.includes(lang) } : null;
+const ownTitle = st && st.text !== mainTitle ? st : null;
 ---
-<article class="shift" id={id} {...(win ? { "data-win-start": String(win.start), "data-win-end": String(win.end) } : {})}>
+{hide ? (
+  <article class="shift hidden-shift" id={id}>
+    <h3 class="sname">{head}</h3>
+    <Spoiler title={tn.afterQuest}>
+      <Astro.self sh={sh} i={i} many={many} entity={entity} turns={turns} mainTitle={mainTitle} inner />
+    </Spoiler>
+  </article>
+) : (
+<article class="shift" id={nestedIn ? undefined : id} {...(win ? { "data-win-start": String(win.start), "data-win-end": String(win.end) } : {})}>
   <header class="shead">
-    {many && <h3 class="sname">{fill(tn.shiftN, { n: i + 1 })}</h3>}
+    {many && <h3 class="sname">{head}{ownTitle && <span class="stitle" lang={ownTitle.en ? "en" : undefined}> · {ownTitle.text}</span>}</h3>}
     <p class="splace" data-flow><span class="wicon"><GameIcon name="src-map" fit={22} /></span><span>{placeLine(sh.place, lang, ti.near, ti.underground)}</span><MapLink variant="inline" href={sh.link} entity={entity} label={ti.mapLink} /></p>
   </header>
   {sh.hours ? (
@@ -48,7 +67,7 @@ const inner = many;
   )}
   {sh.spoiler && sh.afterQuests.length === 0 && <p class="gate"><TipTag icon="src-quest" tip={tn.afterQuestTip}>{tn.afterQuest}</TipTag></p>}
   {inner && (sh.sells?.length || sh.buys?.length || sh.services) && (
-    sh.spoiler ? (
+    sh.spoiler && !nestedIn ? (
       <Spoiler title={tn.afterQuest}>
         <NpcTrade sh={sh} nested id={id} />
         <NpcServices sh={sh} nested id={id} />
@@ -62,11 +81,15 @@ const inner = many;
   )}
   {inner && sh.conversation?.length ? <NpcTalk lines={sh.conversation} nested intro={tn.talkIntroShift} id={id} /> : null}
 </article>
+)}
 <style>
   .shift { display: grid; gap: 12px; padding: 16px 18px; background: var(--card-bg); border: var(--bw) solid var(--border); border-left: 4px solid var(--sky); border-radius: var(--r-l); scroll-margin-top: calc(var(--header-h) + 16px); }
   .shift:target { border-left-color: var(--sun); box-shadow: 0 0 0 2px color-mix(in srgb, var(--sun) 40%, transparent); }
   .shead { display: grid; gap: 6px; }
   .sname { margin: 0; font-size: var(--fs-md); }
+  .stitle { font-weight: 500; color: var(--text-muted); }
+  .hidden-shift { border-left-color: var(--border-strong); }
+  .hidden-shift :global(.shift) { border: 0; padding: 0; background: none; }
   .splace { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; margin: 0; color: var(--text); }
   .times { display: grid; gap: 10px; grid-template-columns: minmax(0, 1fr); }
   @container main (min-width: 520px) { .times { grid-template-columns: auto minmax(0, 1fr); align-items: center; column-gap: 28px; } }

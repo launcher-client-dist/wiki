@@ -380,6 +380,7 @@ export const es: UiStrings = {
     shiftsTitle: "Horarios y lugares",
     shiftsIntro: "Dónde está en cada turno. Un día del juego dura una hora real: cada hora del juego, 2,5 minutos.",
     placeTitle: "Dónde está",
+    placeN: "Lugar {n}",
     shiftN: "Turno {n}",
     outGame: "En el juego",
     outReal: "Cada hora real",

@@ -328,6 +328,10 @@ for (const l of LANG_CODES.filter((c) => c !== LANG_TABLE.default)) if (!pages.g
       const html = pages.get(url)?.html;
       if (!html) return fail(url, "missing NPC page");
       if (n.spoiler && !/<details class="spoiler"/.test(html)) fail(url, "a quest-only NPC without its spoiler");
+      // a shift behind a quest on an ordinary page: the whole block (title, place, hours) in its spoiler
+      const hiddenShifts = n.spoiler ? 0 : n.shifts.filter((s) => s.spoiler).length;
+      const blocks = (html.match(/class="shift hidden-shift"/g) ?? []).length;
+      if (hiddenShifts && n.shifts.length > 1 && blocks !== hiddenShifts) fail(url, `${hiddenShifts} shift(s) behind a quest, ${blocks} hidden block(s)`);
       for (const sh of n.shifts) for (const r of [...(sh.sells ?? []), ...(sh.buys ?? [])]) {
         rows++;
         const item = itemsById.get(r.item);

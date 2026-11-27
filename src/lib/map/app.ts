@@ -96,7 +96,7 @@ export function startMap(root: HTMLElement): void {
   // steps(); the same animated WebP in many <img> plays in lockstep, a strip lets every creature take its own phase.
   // prefers-reduced-motion, or more sprites in view than STILL_PAST: the first frame (<f>-<h>.png) instead.
   const ORDER: Record<LayerKey, number> = { bosses: 0, npcs: 1, monsters: 2, places: 3, items: 4 };
-  const STILL_PAST = 300;   // measured: 291 animated at a 1440 desktop zoom 1 (the busiest real view) cost 21% main thread, 28 MB of layers
+  const STILL_PAST = 360;   // measured: 301 animated at a 1440 desktop zoom 1 (the busiest real view, with every NPC) draw at full rate
   const SPREAD_FROM = 3;
   const reduce = matchMedia("(prefers-reduced-motion: reduce)");
   const imgHtml = (i: Entry["i"], box: number) => {

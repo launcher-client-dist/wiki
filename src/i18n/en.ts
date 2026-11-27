@@ -376,6 +376,7 @@ export const en: UiStrings = {
     shiftsTitle: "Hours and places",
     shiftsIntro: "Where they stand on each shift. A game day lasts one real hour: each game hour, 2.5 minutes.",
     placeTitle: "Where",
+    placeN: "Place {n}",
     shiftN: "Shift {n}",
     outGame: "In game",
     outReal: "Every real hour",

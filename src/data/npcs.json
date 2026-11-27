@@ -35,7 +35,12 @@
       },
       "underground": false
      },
-     "spoiler": true
+     "spoiler": true,
+     "title": {
+      "en": "A betrayed man.",
+      "es": "Un hombre traicionado.",
+      "pt": "Um homem traído."
+     }
     }
    ],
    "spoiler": true,
@@ -396,7 +401,12 @@
        }
       }
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "A blind botanist.",
+      "es": "Un botánico ciego.",
+      "pt": "Um botânico cego."
+     }
     }
    ],
    "spoiler": false,
@@ -948,7 +958,12 @@
        }
       }
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "A Blue Mage.",
+      "es": "Un Mago Azul.",
+      "pt": "Um Mago Azul."
+     }
     }
    ],
    "spoiler": false,
@@ -1051,44 +1066,6 @@
     {
      "afterQuests": [],
      "hours": null,
-     "link": "https://map.opengea.tech/#2.AgDEAfkBBgEAAQEBAADQCRZxQH5AgEMQiJBcGtlZGQiV3BsbGw",
-     "place": {
-      "near": {
-       "en": "Royal Bridge",
-       "es": "Puente Real",
-       "pt": "Ponte Real"
-      },
-      "town": {
-       "en": "Garadum",
-       "es": "Garadum",
-       "pt": "Garadum"
-      },
-      "underground": false
-     },
-     "services": {
-      "travel": {
-       "fare": 50,
-       "link": "https://map.opengea.tech/#2.AgCaAekBBgEAAQEBAACUIgLjdkktLsnMSyzJzM8DAA",
-       "place": {
-        "near": {
-         "en": "Royal Bridge",
-         "es": "Puente Real",
-         "pt": "Ponte Real"
-        },
-        "town": {
-         "en": "Garadum",
-         "es": "Garadum",
-         "pt": "Garadum"
-        },
-        "underground": false
-       }
-      }
-     },
-     "spoiler": true
-    },
-    {
-     "afterQuests": [],
-     "hours": null,
      "link": "https://map.opengea.tech/#2.AgDYAekBBgEAAQEBAADQCRZ2QHpAgEMQiJBcGtlZGQiV3BsbGw",
      "place": {
       "near": {
@@ -1122,7 +1099,55 @@
        }
       }
      },
-     "spoiler": true
+     "spoiler": true,
+     "title": {
+      "en": "A bridge troll.",
+      "es": "Un trol del puente.",
+      "pt": "Um troll da ponte."
+     }
+    },
+    {
+     "afterQuests": [],
+     "hours": null,
+     "link": "https://map.opengea.tech/#2.AgDEAfkBBgEAAQEBAADQCRZxQH5AgEMQiJBcGtlZGQiV3BsbGw",
+     "place": {
+      "near": {
+       "en": "Royal Bridge",
+       "es": "Puente Real",
+       "pt": "Ponte Real"
+      },
+      "town": {
+       "en": "Garadum",
+       "es": "Garadum",
+       "pt": "Garadum"
+      },
+      "underground": false
+     },
+     "services": {
+      "travel": {
+       "fare": 50,
+       "link": "https://map.opengea.tech/#2.AgCaAekBBgEAAQEBAACUIgLjdkktLsnMSyzJzM8DAA",
+       "place": {
+        "near": {
+         "en": "Royal Bridge",
+         "es": "Puente Real",
+         "pt": "Ponte Real"
+        },
+        "town": {
+         "en": "Garadum",
+         "es": "Garadum",
+         "pt": "Garadum"
+        },
+        "underground": false
+       }
+      }
+     },
+     "spoiler": true,
+     "title": {
+      "en": "A bridge troll.",
+      "es": "Un trol del puente.",
+      "pt": "Um troll da ponte."
+     }
     }
    ],
    "spoiler": true,
@@ -1504,7 +1529,12 @@
       },
       "underground": true
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "A female goblin.",
+      "es": "Una goblin hembra.",
+      "pt": "Uma goblin fêmea."
+     }
     }
    ],
    "spoiler": false,
@@ -1701,7 +1731,12 @@
        }
       }
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "A ghoulish secretary.",
+      "es": "Una secretaria macabra.",
+      "pt": "Uma secretária macabra."
+     }
     },
     {
      "afterQuests": [],
@@ -1861,7 +1896,12 @@
        }
       }
      ],
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "A ghoulish secretary.",
+      "es": "Una secretaria macabra.",
+      "pt": "Uma secretária macabra."
+     }
     }
    ],
    "spoiler": false,
@@ -1955,7 +1995,12 @@
       },
       "underground": true
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "A hooded figure.",
+      "es": "Una figura encapuchada.",
+      "pt": "Uma figura encapuzada."
+     }
     }
    ],
    "spoiler": false,
@@ -2045,7 +2090,12 @@
        }
       }
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "A mad ritualist.",
+      "es": "Un ritualista loco.",
+      "pt": "Um ritualista louco."
+     }
     }
    ],
    "spoiler": false,
@@ -2144,7 +2194,12 @@
       },
       "underground": false
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "A mysterious monk.",
+      "es": "Un monje misterioso.",
+      "pt": "Um monge misterioso."
+     }
     }
    ],
    "spoiler": false,
@@ -2387,7 +2442,12 @@
        }
       }
      ],
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "A Stressed Chef.",
+      "es": "Un Chef Estresado.",
+      "pt": "Um Chefe Estressado."
+     }
     }
    ],
    "spoiler": false,
@@ -2680,7 +2740,12 @@
       },
       "underground": false
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "A wounded soldier.",
+      "es": "Un soldado herido.",
+      "pt": "Um soldado ferido."
+     }
     },
     {
      "afterQuests": [],
@@ -2699,7 +2764,12 @@
       },
       "underground": true
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "A wounded soldier.",
+      "es": "Un soldado herido.",
+      "pt": "Um soldado ferido."
+     }
     }
    ],
    "spoiler": false,
@@ -3072,7 +3142,12 @@
       },
       "underground": false
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Alan, the sailor.",
+      "es": "Alan, el marinero.",
+      "pt": "Alan, o marinheiro."
+     }
     }
    ],
    "spoiler": false,
@@ -3426,7 +3501,12 @@
        "price": 100
       }
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Aldric, the student.",
+      "es": "Aldric, el estudiante.",
+      "pt": "Aldric, o estudante."
+     }
     }
    ],
    "spoiler": false,
@@ -3795,7 +3875,12 @@
       },
       "underground": false
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Amelia, the farmer.",
+      "es": "Amelia, la granjera.",
+      "pt": "Amelia, a fazendeira."
+     }
     }
    ],
    "spoiler": false,
@@ -3812,9 +3897,13 @@
      "kind": "greet",
      "spoiler": false,
      "text": {
-      "en": "My dear friend! Long time no see. How may I help you?",
-      "es": "¡Mi querido amigo! Cuánto tiempo sin verte. ¿Cómo puedo ayudarte?",
-      "pt": "Meu caro amigo! Há quanto tempo. Como posso ajudá-lo?"
+      "_fb": [
+       "pt",
+       "es"
+      ],
+      "en": "Hello traveler! Good to see you again.",
+      "es": "Hello traveler! Good to see you again.",
+      "pt": "Hello traveler! Good to see you again."
      }
     },
     {
@@ -3828,9 +3917,12 @@
      "kind": "job",
      "spoiler": false,
      "text": {
-      "en": "My dear friend, you know my job! I am a merchant, a good one too, ho!",
-      "es": "Mi querido amigo, ¡conoces mi trabajo! Soy un mercader, ¡y de los buenos, jo!",
-      "pt": "Meu caro amigo, você conhece meu trabalho! Sou um mercador, e dos bons, ho!"
+      "_fb": [
+       "es"
+      ],
+      "en": "My job is of a wizard! But I like exchanging goods - so I guess that makes me a merchant, ho!",
+      "es": "My job is of a wizard! But I like exchanging goods - so I guess that makes me a merchant, ho!",
+      "pt": "Meu trabalho é de mago! Mas gosto de trocar mercadorias, então acho que isso me torna um mercador, ho!"
      }
     },
     {
@@ -3844,9 +3936,13 @@
      "kind": "trade",
      "spoiler": false,
      "text": {
-      "en": "Of course my dear friend, only the best prices for you!",
-      "es": "¡Por supuesto mi querido amigo, solo los mejores precios para ti!",
-      "pt": "Claro meu caro amigo, só os melhores preços para você!"
+      "_fb": [
+       "pt",
+       "es"
+      ],
+      "en": "Of course, traveler! Here, take a look!",
+      "es": "Of course, traveler! Here, take a look!",
+      "pt": "Of course, traveler! Here, take a look!"
      }
     },
     {
@@ -3860,30 +3956,48 @@
      "kind": "help",
      "spoiler": false,
      "text": {
-      "en": "My dearest friend! Ask me for a trade, let's barter!",
-      "es": "¡Mi queridísimo amigo! Pídeme comerciar, ¡negociemos!",
-      "pt": "Meu caríssimo amigo! Peça-me para negociar, vamos barganhar!"
+      "en": "My friend! Ask me for a trade, maybe I can help with a really good offer, ho!",
+      "es": "¡Mi amigo! Pídeme un intercambio, tal vez pueda ayudarte con una muy buena oferta, ¡jo!",
+      "pt": "Meu amigo! Peça-me uma troca, talvez eu possa ajudar com uma oferta muito boa, ho!"
      }
     },
     {
      "keys": [
       {
-       "en": "capital",
-       "es": "capital",
-       "pt": "capital"
-      },
+       "en": "quest",
+       "es": "misión",
+       "pt": "missão"
+      }
+     ],
+     "kind": "quest",
+     "spoiler": true,
+     "text": {
+      "_fb": [
+       "pt",
+       "es"
+      ],
+      "en": "I appreciate the help on the desert, traveler! Little Elmo could have been hurt, good thing you found him!",
+      "es": "I appreciate the help on the desert, traveler! Little Elmo could have been hurt, good thing you found him!",
+      "pt": "I appreciate the help on the desert, traveler! Little Elmo could have been hurt, good thing you found him!"
+     }
+    },
+    {
+     "keys": [
       {
-       "en": "basile",
-       "es": "Basile",
-       "pt": "Basile"
+       "en": "direction",
+       "es": "dirección",
+       "pt": "direção"
       }
      ],
      "kind": "direction",
      "spoiler": false,
      "text": {
-      "en": "My friend! We are at Basile! Specifically the west gate. Very powerful place, don't you think?",
-      "es": "¡Mi amigo! ¡Estamos en Basile! Específicamente en la puerta oeste. Lugar muy poderoso, ¿no crees?",
-      "pt": "Meu amigo! Estamos em Basile! Especificamente no portão oeste. Lugar muito poderoso, não acha?"
+      "_fb": [
+       "es"
+      ],
+      "en": "Right now, my friend, we are at El Chad's village! Very rustic and cozy, don't you think?",
+      "es": "Right now, my friend, we are at El Chad's village! Very rustic and cozy, don't you think?",
+      "pt": "Neste momento, meu amigo, estamos no vilarejo de El Chad! Bem rústico e aconchegante, não acha?"
      }
     },
     {
@@ -3897,9 +4011,12 @@
      "kind": "skill",
      "spoiler": false,
      "text": {
-      "en": "My best skill is to keep losing Elmo, as you can tell my friend, ho!",
-      "es": "Mi mejor habilidad es seguir perdiendo a Elmo, como puedes ver mi amigo, ¡jo!",
-      "pt": "Minha melhor habilidade é continuar perdendo Elmo, como você pode perceber meu amigo, ho!"
+      "_fb": [
+       "es"
+      ],
+      "en": "My friend, I am a travelling mage! So I'd say my best skill is helping others with trade.",
+      "es": "My friend, I am a travelling mage! So I'd say my best skill is helping others with trade.",
+      "pt": "Meu amigo, sou um mago viajante! Então eu diria que minha melhor habilidade é ajudar os outros com o comércio."
      }
     },
     {
@@ -3907,9 +4024,9 @@
      "kind": "options",
      "spoiler": false,
      "text": {
-      "en": "My dear friend, let's talk about trade! My one and true passion, ho!",
-      "es": "Mi querido amigo, ¡hablemos de comercio! Mi única y verdadera pasión, ¡jo!",
-      "pt": "Meu caro amigo, vamos falar sobre comércio! Minha única e verdadeira paixão, ho!"
+      "en": "My friend, let's talk about trade! I'm sure I have something that interests you.",
+      "es": "¡Mi amigo, hablemos de comercio! Estoy seguro de que tengo algo que te interesa.",
+      "pt": "Meu amigo, vamos falar sobre comércio! Tenho certeza de que tenho algo que te interessa."
      }
     },
     {
@@ -3923,9 +4040,9 @@
      "kind": "reputation",
      "spoiler": false,
      "text": {
-      "en": "You know me, dear friend. Now, shall we trade, hmm?",
-      "es": "Me conoces, querido amigo. Ahora, ¿comerciamos, hmm?",
-      "pt": "Você me conhece, caro amigo. Agora, vamos negociar, hmm?"
+      "en": "I am Amlon! People know me as the travelling gray mage.",
+      "es": "¡Soy Amlon! La gente me conoce como el mago gris viajero.",
+      "pt": "Eu sou Amlon! As pessoas me conhecem como o mago cinzento viajante."
      }
     },
     {
@@ -4000,12 +4117,32 @@
      "spoiler": false,
      "text": {
       "_fb": [
-       "pt",
        "es"
       ],
-      "en": "You know who I am, traveler! I am Amlon, the gray wizard, ho!",
-      "es": "You know who I am, traveler! I am Amlon, the gray wizard, ho!",
-      "pt": "You know who I am, traveler! I am Amlon, the gray wizard, ho!"
+      "en": "I am Amlon, the gray wizard! At your service.",
+      "es": "I am Amlon, the gray wizard! At your service.",
+      "pt": "Sou Amlon, o mago cinzento! Ao seu dispor."
+     }
+    },
+    {
+     "keys": [
+      {
+       "en": "elchad",
+       "es": "elchad",
+       "pt": "elchad"
+      },
+      {
+       "en": "el chad",
+       "es": "el chad",
+       "pt": "el chad"
+      }
+     ],
+     "kind": "topic",
+     "spoiler": false,
+     "text": {
+      "en": "El Chad's village is one of my favorite travel stops, ho!",
+      "es": "¡La aldea de El Chad es una de mis paradas favoritas, jo!",
+      "pt": "A vila de El Chad é uma das minhas paradas favoritas, ho!"
      }
     },
     {
@@ -4056,6 +4193,58 @@
     {
      "keys": [
       {
+       "en": "plain",
+       "es": "llanura",
+       "pt": "planície"
+      }
+     ],
+     "kind": "topic",
+     "spoiler": false,
+     "text": {
+      "en": "The plains are a very peaceful region and it wasn't always like that!",
+      "es": "¡Las llanuras son una región muy pacífica y no siempre fue así!",
+      "pt": "As planícies são uma região muito pacífica e nem sempre foi assim!"
+     }
+    },
+    {
+     "keys": [
+      {
+       "en": "caravan",
+       "es": "caravana",
+       "pt": "caravana"
+      },
+      {
+       "en": "thelma",
+       "es": "Thelma",
+       "pt": "Thelma"
+      },
+      {
+       "en": "amelia",
+       "es": "Amelia",
+       "pt": "Amelia"
+      },
+      {
+       "en": "tool",
+       "es": "herramienta",
+       "pt": "ferramenta"
+      },
+      {
+       "en": "deliver",
+       "es": "entregar",
+       "pt": "entregar"
+      }
+     ],
+     "kind": "topic",
+     "spoiler": false,
+     "text": {
+      "en": "Oh yes, the tools! I will deliver them once Elmo's back from his exploring trip, ho!",
+      "es": "¡Oh sí, las herramientas! Las entregaré cuando Elmo regrese de su viaje de exploración, ¡jo!",
+      "pt": "Ah sim, as ferramentas! Vou entregá-las quando Elmo voltar de sua viagem de exploração, ho!"
+     }
+    },
+    {
+     "keys": [
+      {
        "en": "elmo",
        "es": "Elmo",
        "pt": "Elmo"
@@ -4072,128 +4261,15 @@
       }
      ],
      "kind": "topic",
-     "spoiler": false,
-     "text": {
-      "en": "Ah yes, little Elmo is exploring a bit around, I saw him last him up north by the river.",
-      "es": "Ah sí, el pequeño Elmo está explorando un poco por ahí, lo vi por última vez al norte, cerca del río.",
-      "pt": "Ah sim, o pequeno Elmo está explorando um pouco por aí, vi ele pela última vez ao norte, perto do rio."
-     }
-    },
-    {
-     "keys": [
-      {
-       "en": "basile",
-       "es": "Basile",
-       "pt": "Basile"
-      },
-      {
-       "en": "amelia",
-       "es": "Amelia",
-       "pt": "Amelia"
-      },
-      {
-       "en": "tool",
-       "es": "herramienta",
-       "pt": "ferramenta"
-      },
-      {
-       "en": "deliver",
-       "es": "entregar",
-       "pt": "entregar"
-      },
-      {
-       "en": "capital",
-       "es": "capital",
-       "pt": "capital"
-      },
-      {
-       "en": "thelma",
-       "es": "Thelma",
-       "pt": "Thelma"
-      },
-      {
-       "en": "elchad",
-       "es": "elchad",
-       "pt": "elchad"
-      },
-      {
-       "en": "el chad",
-       "es": "el chad",
-       "pt": "el chad"
-      }
-     ],
-     "kind": "topic",
-     "spoiler": false,
-     "text": {
-      "en": "The tools are all delivered, my dear friend! Safe and sound, like Amlon always does, ho!",
-      "es": "¡Las herramientas están todas entregadas, mi querido amigo! Sanas y salvas, como Amlon siempre hace, ¡jo!",
-      "pt": "As ferramentas foram todas entregues, meu caro amigo! Seguras e intactas, como Amlon sempre faz, ho!"
-     }
-    },
-    {
-     "keys": [
-      {
-       "en": "quest",
-       "es": "misión",
-       "pt": "missão"
-      }
-     ],
-     "kind": "quest",
-     "spoiler": true,
-     "text": {
-      "en": "I remember our past quests, my dear friend. Quite adventurous indeed, ho!",
-      "es": "Recuerdo nuestras misiones pasadas, mi querido amigo. Bastante aventureras, de hecho, ¡jo!",
-      "pt": "Lembro-me de nossas missões passadas, meu caro amigo. Bastante aventureiras, de fato, ho!"
-     }
-    },
-    {
-     "keys": [
-      {
-       "en": "minotaur",
-       "es": "minotauro",
-       "pt": "minotauro"
-      }
-     ],
-     "kind": "topic",
-     "spoiler": false,
-     "text": {
-      "_fb": [
-       "pt",
-       "es"
-      ],
-      "en": "I've seen the creature minotaur, there is something odd and magical about it, traveler.",
-      "es": "I've seen the creature minotaur, there is something odd and magical about it, traveler.",
-      "pt": "I've seen the creature minotaur, there is something odd and magical about it, traveler."
-     }
-    },
-    {
-     "keys": [
-      {
-       "en": "shield",
-       "es": "escudo",
-       "pt": "escudo"
-      },
-      {
-       "en": "key",
-       "es": "llave",
-       "pt": "chave"
-      },
-      {
-       "en": "chest",
-       "es": "cofre",
-       "pt": "baú"
-      }
-     ],
-     "kind": "topic",
      "spoiler": true,
      "text": {
       "_fb": [
        "pt",
        "es"
       ],
-      "en": "Ah yes, the locked chest. Elmo is guarding that for me.\nHe gave you the key? He must really like you dear friend, ho!",
-      "es": "Ah yes, the locked chest. Elmo is guarding that for me.\nHe gave you the key? He must really like you dear friend, ho!",
-      "pt": "Ah yes, the locked chest. Elmo is guarding that for me.\nHe gave you the key? He must really like you dear friend, ho!"
+      "en": "He's probably somewhere nearby enjoying the grassy lands near the village. Once he's back I will head north-east to the caravan.\nLet me know if you find little Elmo, I will pick him up to head to the Caravan.\nOh! I will go pick him up immediately, then head up north to the Caravan. Thank you, traveler.",
+      "es": "He's probably somewhere nearby enjoying the grassy lands near the village. Once he's back I will head north-east to the caravan.\nLet me know if you find little Elmo, I will pick him up to head to the Caravan.\nOh! I will go pick him up immediately, then head up north to the Caravan. Thank you, traveler.",
+      "pt": "He's probably somewhere nearby enjoying the grassy lands near the village. Once he's back I will head north-east to the caravan.\nLet me know if you find little Elmo, I will pick him up to head to the Caravan.\nOh! I will go pick him up immediately, then head up north to the Caravan. Thank you, traveler."
      }
     },
     {
@@ -4212,9 +4288,9 @@
      "kind": "topic",
      "spoiler": false,
      "text": {
-      "en": "Runes are not my specialty, no! I've heard that a cat... Professor... Something! Teaches it.",
-      "es": "¡Las runas no son mi especialidad, no! He oído que un gato... Profesor... ¡Algo así! Lo enseña.",
-      "pt": "Runas não são minha especialidade, não! Ouvi dizer que um gato... Professor... Algo assim! Ensina isso."
+      "en": "Runes are still not my specialty, no! Still hearing rumors about that cat, though.",
+      "es": "¡Las runas todavía no son mi especialidad, no! Aunque sigo escuchando rumores sobre ese gato.",
+      "pt": "Runas ainda não são minha especialidade, não! Ainda estou ouvindo rumores sobre aquele gato, no entanto."
      }
     },
     {
@@ -4222,24 +4298,23 @@
      "kind": "farewell",
      "spoiler": false,
      "text": {
-      "en": "Please my dear friend, come back soon!",
-      "es": "¡Por favor, mi querido amigo, vuelve pronto!",
-      "pt": "Por favor, meu caro amigo, volte logo!"
+      "en": "Till we meet again, friend.",
+      "es": "Hasta que nos volvamos a encontrar, amigo.",
+      "pt": "Até nos encontrarmos novamente, amigo."
      }
     }
    ],
    "grid": "/icons/npcs128/amlon.png",
    "id": "amlon",
    "job": {
-    "en": "My dear friend, you know my job! I am a merchant, a good one too, ho!",
-    "es": "Mi querido amigo, ¡conoces mi trabajo! Soy un mercader, ¡y de los buenos, jo!",
-    "pt": "Meu caro amigo, você conhece meu trabalho! Sou um mercador, e dos bons, ho!"
+    "_fb": [
+     "es"
+    ],
+    "en": "My job is of a wizard! But I like exchanging goods - so I guess that makes me a merchant, ho!",
+    "es": "My job is of a wizard! But I like exchanging goods - so I guess that makes me a merchant, ho!",
+    "pt": "Meu trabalho é de mago! Mas gosto de trocar mercadorias, então acho que isso me torna um mercador, ho!"
    },
-   "near": [
-    "npc:hildegarde",
-    "npc:elmo",
-    "npc:margery"
-   ],
+   "near": [],
    "quests": [],
    "ref": "npc:amlon",
    "render": {
@@ -4250,137 +4325,6 @@
     "src": "/renders/npcs/amlon.webp"
    },
    "shifts": [
-    {
-     "afterQuests": [],
-     "buys": [
-      {
-       "item": "red-spellbook-fireball",
-       "price": 200
-      },
-      {
-       "item": "red-spellbook-water-pillar",
-       "price": 200
-      },
-      {
-       "item": "blue-spellbook-mana-shield",
-       "price": 175
-      },
-      {
-       "item": "blue-spellbook-adjure",
-       "price": 100
-      },
-      {
-       "item": "blue-spellbook-ice-berserk",
-       "price": 80
-      },
-      {
-       "item": "blue-rune-laguz",
-       "price": 50
-      },
-      {
-       "item": "regeneration-ring",
-       "price": 50
-      },
-      {
-       "item": "yellow-spellbook-starlight",
-       "price": 50
-      },
-      {
-       "item": "red-spellbook-thrash",
-       "price": 40
-      },
-      {
-       "item": "blue-spellbook-light-missile",
-       "price": 30
-      },
-      {
-       "item": "red-spellbook-energy-bolt",
-       "price": 30
-      },
-      {
-       "item": "blue-spellbook-heal",
-       "price": 15
-      },
-      {
-       "item": "blue-spellbook-light",
-       "price": 10
-      },
-      {
-       "item": "gray-backpack",
-       "price": 5
-      }
-     ],
-     "hours": [
-      8,
-      5
-     ],
-     "link": "https://map.opengea.tech/#2.AgClBKIBBgEAAQEBAADQCVlKIBoQUBDUxvbmBg",
-     "place": {
-      "near": {
-       "en": "West Gate",
-       "es": "Puerta Oeste",
-       "pt": "Portão Oeste"
-      },
-      "town": {
-       "en": "Basile",
-       "es": "Basile",
-       "pt": "Basile"
-      },
-      "underground": false
-     },
-     "restock": 8,
-     "sells": [
-      {
-       "item": "blue-rune-laguz",
-       "price": 500,
-       "stock": {
-        "kind": "limited",
-        "n": 10
-       }
-      },
-      {
-       "item": "blue-spellbook-adjure",
-       "price": 500,
-       "stock": {
-        "kind": "limited",
-        "n": 10
-       }
-      },
-      {
-       "item": "gray-backpack",
-       "price": 10,
-       "stock": {
-        "kind": "limited",
-        "n": 10
-       }
-      },
-      {
-       "item": "red-spellbook-water-pillar",
-       "price": 500,
-       "stock": {
-        "kind": "limited",
-        "n": 10
-       }
-      },
-      {
-       "item": "regeneration-ring",
-       "price": 600,
-       "stock": {
-        "kind": "limited",
-        "n": 10
-       }
-      },
-      {
-       "item": "yellow-spellbook-starlight",
-       "price": 200,
-       "stock": {
-        "kind": "limited",
-        "n": 10
-       }
-      }
-     ],
-     "spoiler": true
-    },
     {
      "afterQuests": [],
      "conversation": [
@@ -4585,7 +4529,12 @@
       },
       "underground": false
      },
-     "spoiler": true
+     "spoiler": true,
+     "title": {
+      "en": "Amlon, the gray wizard.",
+      "es": "Amlon, el mago gris.",
+      "pt": "Amlon, o mago cinzento."
+     }
     },
     {
      "afterQuests": [],
@@ -4637,419 +4586,6 @@
       {
        "item": "blue-backpack",
        "price": 5
-      }
-     ],
-     "conversation": [
-      {
-       "keys": [],
-       "kind": "greet",
-       "spoiler": false,
-       "text": {
-        "_fb": [
-         "pt",
-         "es"
-        ],
-        "en": "Hello traveler! Good to see you again.",
-        "es": "Hello traveler! Good to see you again.",
-        "pt": "Hello traveler! Good to see you again."
-       }
-      },
-      {
-       "keys": [
-        {
-         "en": "job",
-         "es": "trabajo",
-         "pt": "trabalho"
-        }
-       ],
-       "kind": "job",
-       "spoiler": false,
-       "text": {
-        "_fb": [
-         "es"
-        ],
-        "en": "My job is of a wizard! But I like exchanging goods - so I guess that makes me a merchant, ho!",
-        "es": "My job is of a wizard! But I like exchanging goods - so I guess that makes me a merchant, ho!",
-        "pt": "Meu trabalho é de mago! Mas gosto de trocar mercadorias, então acho que isso me torna um mercador, ho!"
-       }
-      },
-      {
-       "keys": [
-        {
-         "en": "trade",
-         "es": "comerciar",
-         "pt": "comerciar"
-        }
-       ],
-       "kind": "trade",
-       "spoiler": false,
-       "text": {
-        "_fb": [
-         "pt",
-         "es"
-        ],
-        "en": "Of course, traveler! Here, take a look!",
-        "es": "Of course, traveler! Here, take a look!",
-        "pt": "Of course, traveler! Here, take a look!"
-       }
-      },
-      {
-       "keys": [
-        {
-         "en": "help",
-         "es": "ayuda",
-         "pt": "ajuda"
-        }
-       ],
-       "kind": "help",
-       "spoiler": false,
-       "text": {
-        "en": "My friend! Ask me for a trade, maybe I can help with a really good offer, ho!",
-        "es": "¡Mi amigo! Pídeme un intercambio, tal vez pueda ayudarte con una muy buena oferta, ¡jo!",
-        "pt": "Meu amigo! Peça-me uma troca, talvez eu possa ajudar com uma oferta muito boa, ho!"
-       }
-      },
-      {
-       "keys": [
-        {
-         "en": "quest",
-         "es": "misión",
-         "pt": "missão"
-        }
-       ],
-       "kind": "quest",
-       "spoiler": true,
-       "text": {
-        "_fb": [
-         "pt",
-         "es"
-        ],
-        "en": "I appreciate the help on the desert, traveler! Little Elmo could have been hurt, good thing you found him!",
-        "es": "I appreciate the help on the desert, traveler! Little Elmo could have been hurt, good thing you found him!",
-        "pt": "I appreciate the help on the desert, traveler! Little Elmo could have been hurt, good thing you found him!"
-       }
-      },
-      {
-       "keys": [
-        {
-         "en": "direction",
-         "es": "dirección",
-         "pt": "direção"
-        }
-       ],
-       "kind": "direction",
-       "spoiler": false,
-       "text": {
-        "_fb": [
-         "es"
-        ],
-        "en": "Right now, my friend, we are at El Chad's village! Very rustic and cozy, don't you think?",
-        "es": "Right now, my friend, we are at El Chad's village! Very rustic and cozy, don't you think?",
-        "pt": "Neste momento, meu amigo, estamos no vilarejo de El Chad! Bem rústico e aconchegante, não acha?"
-       }
-      },
-      {
-       "keys": [
-        {
-         "en": "skill",
-         "es": "habilidad",
-         "pt": "habilidade"
-        }
-       ],
-       "kind": "skill",
-       "spoiler": false,
-       "text": {
-        "_fb": [
-         "es"
-        ],
-        "en": "My friend, I am a travelling mage! So I'd say my best skill is helping others with trade.",
-        "es": "My friend, I am a travelling mage! So I'd say my best skill is helping others with trade.",
-        "pt": "Meu amigo, sou um mago viajante! Então eu diria que minha melhor habilidade é ajudar os outros com o comércio."
-       }
-      },
-      {
-       "keys": [],
-       "kind": "options",
-       "spoiler": false,
-       "text": {
-        "en": "My friend, let's talk about trade! I'm sure I have something that interests you.",
-        "es": "¡Mi amigo, hablemos de comercio! Estoy seguro de que tengo algo que te interesa.",
-        "pt": "Meu amigo, vamos falar sobre comércio! Tenho certeza de que tenho algo que te interessa."
-       }
-      },
-      {
-       "keys": [
-        {
-         "en": "reputation",
-         "es": "reputación",
-         "pt": "reputação"
-        }
-       ],
-       "kind": "reputation",
-       "spoiler": false,
-       "text": {
-        "en": "I am Amlon! People know me as the travelling gray mage.",
-        "es": "¡Soy Amlon! La gente me conoce como el mago gris viajero.",
-        "pt": "Eu sou Amlon! As pessoas me conhecem como o mago cinzento viajante."
-       }
-      },
-      {
-       "keys": [
-        {
-         "_fb": [
-          "pt",
-          "es"
-         ],
-         "en": "rumors",
-         "es": "rumors",
-         "pt": "rumors"
-        }
-       ],
-       "kind": "rumors",
-       "spoiler": false,
-       "text": {
-        "_fb": [
-         "pt",
-         "es"
-        ],
-        "en": "Oh I have heard many things, traveler. But I try to not get dwelled too much into it.",
-        "es": "Oh I have heard many things, traveler. But I try to not get dwelled too much into it.",
-        "pt": "Oh I have heard many things, traveler. But I try to not get dwelled too much into it."
-       }
-      },
-      {
-       "keys": [
-        {
-         "en": "apogea",
-         "es": "apogea",
-         "pt": "apogea"
-        }
-       ],
-       "kind": "apogea",
-       "spoiler": false,
-       "text": {
-        "en": "Apogea is a magical land, ho!",
-        "es": "Apogea es una tierra mágica, ¡jo!",
-        "pt": "Apogea é uma terra mágica, ho!"
-       }
-      },
-      {
-       "keys": [
-        {
-         "en": "wizard",
-         "es": "hechicero",
-         "pt": "feiticeiro"
-        },
-        {
-         "en": "mage",
-         "es": "mago",
-         "pt": "mago"
-        },
-        {
-         "en": "gray",
-         "es": "gris",
-         "pt": "cinza"
-        },
-        {
-         "en": "amlon",
-         "es": "Amlon",
-         "pt": "Amlon"
-        },
-        {
-         "en": "name",
-         "es": "nombre",
-         "pt": "nome"
-        }
-       ],
-       "kind": "topic",
-       "spoiler": false,
-       "text": {
-        "_fb": [
-         "es"
-        ],
-        "en": "I am Amlon, the gray wizard! At your service.",
-        "es": "I am Amlon, the gray wizard! At your service.",
-        "pt": "Sou Amlon, o mago cinzento! Ao seu dispor."
-       }
-      },
-      {
-       "keys": [
-        {
-         "en": "elchad",
-         "es": "elchad",
-         "pt": "elchad"
-        },
-        {
-         "en": "el chad",
-         "es": "el chad",
-         "pt": "el chad"
-        }
-       ],
-       "kind": "topic",
-       "spoiler": false,
-       "text": {
-        "en": "El Chad's village is one of my favorite travel stops, ho!",
-        "es": "¡La aldea de El Chad es una de mis paradas favoritas, jo!",
-        "pt": "A vila de El Chad é uma das minhas paradas favoritas, ho!"
-       }
-      },
-      {
-       "keys": [
-        {
-         "en": "garden",
-         "es": "jardín",
-         "pt": "jardim"
-        },
-        {
-         "en": "bandit",
-         "es": "bandido",
-         "pt": "bandido"
-        }
-       ],
-       "kind": "topic",
-       "spoiler": false,
-       "text": {
-        "_fb": [
-         "pt",
-         "es"
-        ],
-        "en": "The mysterious gardens, ho! That place creeps me out, traveler.",
-        "es": "The mysterious gardens, ho! That place creeps me out, traveler.",
-        "pt": "The mysterious gardens, ho! That place creeps me out, traveler."
-       }
-      },
-      {
-       "keys": [
-        {
-         "en": "lore",
-         "es": "saber",
-         "pt": "saber"
-        }
-       ],
-       "kind": "lore",
-       "spoiler": false,
-       "text": {
-        "_fb": [
-         "pt",
-         "es"
-        ],
-        "en": "My story spans back way before civilization was here, traveler. If I told you everything, we would be here for ages, ho!",
-        "es": "My story spans back way before civilization was here, traveler. If I told you everything, we would be here for ages, ho!",
-        "pt": "My story spans back way before civilization was here, traveler. If I told you everything, we would be here for ages, ho!"
-       }
-      },
-      {
-       "keys": [
-        {
-         "en": "plain",
-         "es": "llanura",
-         "pt": "planície"
-        }
-       ],
-       "kind": "topic",
-       "spoiler": false,
-       "text": {
-        "en": "The plains are a very peaceful region and it wasn't always like that!",
-        "es": "¡Las llanuras son una región muy pacífica y no siempre fue así!",
-        "pt": "As planícies são uma região muito pacífica e nem sempre foi assim!"
-       }
-      },
-      {
-       "keys": [
-        {
-         "en": "caravan",
-         "es": "caravana",
-         "pt": "caravana"
-        },
-        {
-         "en": "thelma",
-         "es": "Thelma",
-         "pt": "Thelma"
-        },
-        {
-         "en": "amelia",
-         "es": "Amelia",
-         "pt": "Amelia"
-        },
-        {
-         "en": "tool",
-         "es": "herramienta",
-         "pt": "ferramenta"
-        },
-        {
-         "en": "deliver",
-         "es": "entregar",
-         "pt": "entregar"
-        }
-       ],
-       "kind": "topic",
-       "spoiler": false,
-       "text": {
-        "en": "Oh yes, the tools! I will deliver them once Elmo's back from his exploring trip, ho!",
-        "es": "¡Oh sí, las herramientas! Las entregaré cuando Elmo regrese de su viaje de exploración, ¡jo!",
-        "pt": "Ah sim, as ferramentas! Vou entregá-las quando Elmo voltar de sua viagem de exploração, ho!"
-       }
-      },
-      {
-       "keys": [
-        {
-         "en": "elmo",
-         "es": "Elmo",
-         "pt": "Elmo"
-        },
-        {
-         "en": "rat",
-         "es": "rata",
-         "pt": "rato"
-        },
-        {
-         "en": "shipper",
-         "es": "transportista",
-         "pt": "transportador"
-        }
-       ],
-       "kind": "topic",
-       "spoiler": true,
-       "text": {
-        "_fb": [
-         "pt",
-         "es"
-        ],
-        "en": "He's probably somewhere nearby enjoying the grassy lands near the village. Once he's back I will head north-east to the caravan.\nLet me know if you find little Elmo, I will pick him up to head to the Caravan.\nOh! I will go pick him up immediately, then head up north to the Caravan. Thank you, traveler.",
-        "es": "He's probably somewhere nearby enjoying the grassy lands near the village. Once he's back I will head north-east to the caravan.\nLet me know if you find little Elmo, I will pick him up to head to the Caravan.\nOh! I will go pick him up immediately, then head up north to the Caravan. Thank you, traveler.",
-        "pt": "He's probably somewhere nearby enjoying the grassy lands near the village. Once he's back I will head north-east to the caravan.\nLet me know if you find little Elmo, I will pick him up to head to the Caravan.\nOh! I will go pick him up immediately, then head up north to the Caravan. Thank you, traveler."
-       }
-      },
-      {
-       "keys": [
-        {
-         "en": "rune",
-         "es": "runa",
-         "pt": "runa"
-        },
-        {
-         "en": "enchant",
-         "es": "encantar",
-         "pt": "encantar"
-        }
-       ],
-       "kind": "topic",
-       "spoiler": false,
-       "text": {
-        "en": "Runes are still not my specialty, no! Still hearing rumors about that cat, though.",
-        "es": "¡Las runas todavía no son mi especialidad, no! Aunque sigo escuchando rumores sobre ese gato.",
-        "pt": "Runas ainda não são minha especialidade, não! Ainda estou ouvindo rumores sobre aquele gato, no entanto."
-       }
-      },
-      {
-       "keys": [],
-       "kind": "farewell",
-       "spoiler": false,
-       "text": {
-        "en": "Till we meet again, friend.",
-        "es": "Hasta que nos volvamos a encontrar, amigo.",
-        "pt": "Até nos encontrarmos novamente, amigo."
-       }
       }
      ],
      "hours": [
@@ -5129,7 +4665,12 @@
        }
       }
      ],
-     "spoiler": true
+     "spoiler": true,
+     "title": {
+      "en": "Amlon, the gray wizard.",
+      "es": "Amlon, el mago gris.",
+      "pt": "Amlon, o mago cinzento."
+     }
     },
     {
      "afterQuests": [],
@@ -5651,7 +5192,570 @@
        }
       }
      ],
-     "spoiler": true
+     "spoiler": true,
+     "title": {
+      "en": "Amlon, the gray wizard.",
+      "es": "Amlon, el mago gris.",
+      "pt": "Amlon, o mago cinzento."
+     }
+    },
+    {
+     "afterQuests": [],
+     "buys": [
+      {
+       "item": "red-spellbook-fireball",
+       "price": 200
+      },
+      {
+       "item": "red-spellbook-water-pillar",
+       "price": 200
+      },
+      {
+       "item": "blue-spellbook-mana-shield",
+       "price": 175
+      },
+      {
+       "item": "blue-spellbook-adjure",
+       "price": 100
+      },
+      {
+       "item": "blue-spellbook-ice-berserk",
+       "price": 80
+      },
+      {
+       "item": "blue-rune-laguz",
+       "price": 50
+      },
+      {
+       "item": "regeneration-ring",
+       "price": 50
+      },
+      {
+       "item": "yellow-spellbook-starlight",
+       "price": 50
+      },
+      {
+       "item": "red-spellbook-thrash",
+       "price": 40
+      },
+      {
+       "item": "blue-spellbook-light-missile",
+       "price": 30
+      },
+      {
+       "item": "red-spellbook-energy-bolt",
+       "price": 30
+      },
+      {
+       "item": "blue-spellbook-heal",
+       "price": 15
+      },
+      {
+       "item": "blue-spellbook-light",
+       "price": 10
+      },
+      {
+       "item": "gray-backpack",
+       "price": 5
+      }
+     ],
+     "conversation": [
+      {
+       "keys": [],
+       "kind": "greet",
+       "spoiler": false,
+       "text": {
+        "en": "My dear friend! Long time no see. How may I help you?",
+        "es": "¡Mi querido amigo! Cuánto tiempo sin verte. ¿Cómo puedo ayudarte?",
+        "pt": "Meu caro amigo! Há quanto tempo. Como posso ajudá-lo?"
+       }
+      },
+      {
+       "keys": [
+        {
+         "en": "job",
+         "es": "trabajo",
+         "pt": "trabalho"
+        }
+       ],
+       "kind": "job",
+       "spoiler": false,
+       "text": {
+        "en": "My dear friend, you know my job! I am a merchant, a good one too, ho!",
+        "es": "Mi querido amigo, ¡conoces mi trabajo! Soy un mercader, ¡y de los buenos, jo!",
+        "pt": "Meu caro amigo, você conhece meu trabalho! Sou um mercador, e dos bons, ho!"
+       }
+      },
+      {
+       "keys": [
+        {
+         "en": "trade",
+         "es": "comerciar",
+         "pt": "comerciar"
+        }
+       ],
+       "kind": "trade",
+       "spoiler": false,
+       "text": {
+        "en": "Of course my dear friend, only the best prices for you!",
+        "es": "¡Por supuesto mi querido amigo, solo los mejores precios para ti!",
+        "pt": "Claro meu caro amigo, só os melhores preços para você!"
+       }
+      },
+      {
+       "keys": [
+        {
+         "en": "help",
+         "es": "ayuda",
+         "pt": "ajuda"
+        }
+       ],
+       "kind": "help",
+       "spoiler": false,
+       "text": {
+        "en": "My dearest friend! Ask me for a trade, let's barter!",
+        "es": "¡Mi queridísimo amigo! Pídeme comerciar, ¡negociemos!",
+        "pt": "Meu caríssimo amigo! Peça-me para negociar, vamos barganhar!"
+       }
+      },
+      {
+       "keys": [
+        {
+         "en": "capital",
+         "es": "capital",
+         "pt": "capital"
+        },
+        {
+         "en": "basile",
+         "es": "Basile",
+         "pt": "Basile"
+        }
+       ],
+       "kind": "direction",
+       "spoiler": false,
+       "text": {
+        "en": "My friend! We are at Basile! Specifically the west gate. Very powerful place, don't you think?",
+        "es": "¡Mi amigo! ¡Estamos en Basile! Específicamente en la puerta oeste. Lugar muy poderoso, ¿no crees?",
+        "pt": "Meu amigo! Estamos em Basile! Especificamente no portão oeste. Lugar muito poderoso, não acha?"
+       }
+      },
+      {
+       "keys": [
+        {
+         "en": "skill",
+         "es": "habilidad",
+         "pt": "habilidade"
+        }
+       ],
+       "kind": "skill",
+       "spoiler": false,
+       "text": {
+        "en": "My best skill is to keep losing Elmo, as you can tell my friend, ho!",
+        "es": "Mi mejor habilidad es seguir perdiendo a Elmo, como puedes ver mi amigo, ¡jo!",
+        "pt": "Minha melhor habilidade é continuar perdendo Elmo, como você pode perceber meu amigo, ho!"
+       }
+      },
+      {
+       "keys": [],
+       "kind": "options",
+       "spoiler": false,
+       "text": {
+        "en": "My dear friend, let's talk about trade! My one and true passion, ho!",
+        "es": "Mi querido amigo, ¡hablemos de comercio! Mi única y verdadera pasión, ¡jo!",
+        "pt": "Meu caro amigo, vamos falar sobre comércio! Minha única e verdadeira paixão, ho!"
+       }
+      },
+      {
+       "keys": [
+        {
+         "en": "reputation",
+         "es": "reputación",
+         "pt": "reputação"
+        }
+       ],
+       "kind": "reputation",
+       "spoiler": false,
+       "text": {
+        "en": "You know me, dear friend. Now, shall we trade, hmm?",
+        "es": "Me conoces, querido amigo. Ahora, ¿comerciamos, hmm?",
+        "pt": "Você me conhece, caro amigo. Agora, vamos negociar, hmm?"
+       }
+      },
+      {
+       "keys": [
+        {
+         "_fb": [
+          "pt",
+          "es"
+         ],
+         "en": "rumors",
+         "es": "rumors",
+         "pt": "rumors"
+        }
+       ],
+       "kind": "rumors",
+       "spoiler": false,
+       "text": {
+        "_fb": [
+         "pt",
+         "es"
+        ],
+        "en": "Oh I have heard many things, traveler. But I try to not get dwelled too much into it.",
+        "es": "Oh I have heard many things, traveler. But I try to not get dwelled too much into it.",
+        "pt": "Oh I have heard many things, traveler. But I try to not get dwelled too much into it."
+       }
+      },
+      {
+       "keys": [
+        {
+         "en": "apogea",
+         "es": "apogea",
+         "pt": "apogea"
+        }
+       ],
+       "kind": "apogea",
+       "spoiler": false,
+       "text": {
+        "en": "Apogea is a magical land, ho!",
+        "es": "Apogea es una tierra mágica, ¡jo!",
+        "pt": "Apogea é uma terra mágica, ho!"
+       }
+      },
+      {
+       "keys": [
+        {
+         "en": "wizard",
+         "es": "hechicero",
+         "pt": "feiticeiro"
+        },
+        {
+         "en": "mage",
+         "es": "mago",
+         "pt": "mago"
+        },
+        {
+         "en": "gray",
+         "es": "gris",
+         "pt": "cinza"
+        },
+        {
+         "en": "amlon",
+         "es": "Amlon",
+         "pt": "Amlon"
+        },
+        {
+         "en": "name",
+         "es": "nombre",
+         "pt": "nome"
+        }
+       ],
+       "kind": "topic",
+       "spoiler": false,
+       "text": {
+        "_fb": [
+         "pt",
+         "es"
+        ],
+        "en": "You know who I am, traveler! I am Amlon, the gray wizard, ho!",
+        "es": "You know who I am, traveler! I am Amlon, the gray wizard, ho!",
+        "pt": "You know who I am, traveler! I am Amlon, the gray wizard, ho!"
+       }
+      },
+      {
+       "keys": [
+        {
+         "en": "garden",
+         "es": "jardín",
+         "pt": "jardim"
+        },
+        {
+         "en": "bandit",
+         "es": "bandido",
+         "pt": "bandido"
+        }
+       ],
+       "kind": "topic",
+       "spoiler": false,
+       "text": {
+        "_fb": [
+         "pt",
+         "es"
+        ],
+        "en": "The mysterious gardens, ho! That place creeps me out, traveler.",
+        "es": "The mysterious gardens, ho! That place creeps me out, traveler.",
+        "pt": "The mysterious gardens, ho! That place creeps me out, traveler."
+       }
+      },
+      {
+       "keys": [
+        {
+         "en": "lore",
+         "es": "saber",
+         "pt": "saber"
+        }
+       ],
+       "kind": "lore",
+       "spoiler": false,
+       "text": {
+        "_fb": [
+         "pt",
+         "es"
+        ],
+        "en": "My story spans back way before civilization was here, traveler. If I told you everything, we would be here for ages, ho!",
+        "es": "My story spans back way before civilization was here, traveler. If I told you everything, we would be here for ages, ho!",
+        "pt": "My story spans back way before civilization was here, traveler. If I told you everything, we would be here for ages, ho!"
+       }
+      },
+      {
+       "keys": [
+        {
+         "en": "elmo",
+         "es": "Elmo",
+         "pt": "Elmo"
+        },
+        {
+         "en": "rat",
+         "es": "rata",
+         "pt": "rato"
+        },
+        {
+         "en": "shipper",
+         "es": "transportista",
+         "pt": "transportador"
+        }
+       ],
+       "kind": "topic",
+       "spoiler": false,
+       "text": {
+        "en": "Ah yes, little Elmo is exploring a bit around, I saw him last him up north by the river.",
+        "es": "Ah sí, el pequeño Elmo está explorando un poco por ahí, lo vi por última vez al norte, cerca del río.",
+        "pt": "Ah sim, o pequeno Elmo está explorando um pouco por aí, vi ele pela última vez ao norte, perto do rio."
+       }
+      },
+      {
+       "keys": [
+        {
+         "en": "basile",
+         "es": "Basile",
+         "pt": "Basile"
+        },
+        {
+         "en": "amelia",
+         "es": "Amelia",
+         "pt": "Amelia"
+        },
+        {
+         "en": "tool",
+         "es": "herramienta",
+         "pt": "ferramenta"
+        },
+        {
+         "en": "deliver",
+         "es": "entregar",
+         "pt": "entregar"
+        },
+        {
+         "en": "capital",
+         "es": "capital",
+         "pt": "capital"
+        },
+        {
+         "en": "thelma",
+         "es": "Thelma",
+         "pt": "Thelma"
+        },
+        {
+         "en": "elchad",
+         "es": "elchad",
+         "pt": "elchad"
+        },
+        {
+         "en": "el chad",
+         "es": "el chad",
+         "pt": "el chad"
+        }
+       ],
+       "kind": "topic",
+       "spoiler": false,
+       "text": {
+        "en": "The tools are all delivered, my dear friend! Safe and sound, like Amlon always does, ho!",
+        "es": "¡Las herramientas están todas entregadas, mi querido amigo! Sanas y salvas, como Amlon siempre hace, ¡jo!",
+        "pt": "As ferramentas foram todas entregues, meu caro amigo! Seguras e intactas, como Amlon sempre faz, ho!"
+       }
+      },
+      {
+       "keys": [
+        {
+         "en": "quest",
+         "es": "misión",
+         "pt": "missão"
+        }
+       ],
+       "kind": "quest",
+       "spoiler": true,
+       "text": {
+        "en": "I remember our past quests, my dear friend. Quite adventurous indeed, ho!",
+        "es": "Recuerdo nuestras misiones pasadas, mi querido amigo. Bastante aventureras, de hecho, ¡jo!",
+        "pt": "Lembro-me de nossas missões passadas, meu caro amigo. Bastante aventureiras, de fato, ho!"
+       }
+      },
+      {
+       "keys": [
+        {
+         "en": "minotaur",
+         "es": "minotauro",
+         "pt": "minotauro"
+        }
+       ],
+       "kind": "topic",
+       "spoiler": false,
+       "text": {
+        "_fb": [
+         "pt",
+         "es"
+        ],
+        "en": "I've seen the creature minotaur, there is something odd and magical about it, traveler.",
+        "es": "I've seen the creature minotaur, there is something odd and magical about it, traveler.",
+        "pt": "I've seen the creature minotaur, there is something odd and magical about it, traveler."
+       }
+      },
+      {
+       "keys": [
+        {
+         "en": "shield",
+         "es": "escudo",
+         "pt": "escudo"
+        },
+        {
+         "en": "key",
+         "es": "llave",
+         "pt": "chave"
+        },
+        {
+         "en": "chest",
+         "es": "cofre",
+         "pt": "baú"
+        }
+       ],
+       "kind": "topic",
+       "spoiler": true,
+       "text": {
+        "_fb": [
+         "pt",
+         "es"
+        ],
+        "en": "Ah yes, the locked chest. Elmo is guarding that for me.\nHe gave you the key? He must really like you dear friend, ho!",
+        "es": "Ah yes, the locked chest. Elmo is guarding that for me.\nHe gave you the key? He must really like you dear friend, ho!",
+        "pt": "Ah yes, the locked chest. Elmo is guarding that for me.\nHe gave you the key? He must really like you dear friend, ho!"
+       }
+      },
+      {
+       "keys": [
+        {
+         "en": "rune",
+         "es": "runa",
+         "pt": "runa"
+        },
+        {
+         "en": "enchant",
+         "es": "encantar",
+         "pt": "encantar"
+        }
+       ],
+       "kind": "topic",
+       "spoiler": false,
+       "text": {
+        "en": "Runes are not my specialty, no! I've heard that a cat... Professor... Something! Teaches it.",
+        "es": "¡Las runas no son mi especialidad, no! He oído que un gato... Profesor... ¡Algo así! Lo enseña.",
+        "pt": "Runas não são minha especialidade, não! Ouvi dizer que um gato... Professor... Algo assim! Ensina isso."
+       }
+      },
+      {
+       "keys": [],
+       "kind": "farewell",
+       "spoiler": false,
+       "text": {
+        "en": "Please my dear friend, come back soon!",
+        "es": "¡Por favor, mi querido amigo, vuelve pronto!",
+        "pt": "Por favor, meu caro amigo, volte logo!"
+       }
+      }
+     ],
+     "hours": [
+      8,
+      5
+     ],
+     "link": "https://map.opengea.tech/#2.AgClBKIBBgEAAQEBAADQCVlKIBoQUBDUxvbmBg",
+     "place": {
+      "near": {
+       "en": "West Gate",
+       "es": "Puerta Oeste",
+       "pt": "Portão Oeste"
+      },
+      "town": {
+       "en": "Basile",
+       "es": "Basile",
+       "pt": "Basile"
+      },
+      "underground": false
+     },
+     "restock": 8,
+     "sells": [
+      {
+       "item": "blue-rune-laguz",
+       "price": 500,
+       "stock": {
+        "kind": "limited",
+        "n": 10
+       }
+      },
+      {
+       "item": "blue-spellbook-adjure",
+       "price": 500,
+       "stock": {
+        "kind": "limited",
+        "n": 10
+       }
+      },
+      {
+       "item": "gray-backpack",
+       "price": 10,
+       "stock": {
+        "kind": "limited",
+        "n": 10
+       }
+      },
+      {
+       "item": "red-spellbook-water-pillar",
+       "price": 500,
+       "stock": {
+        "kind": "limited",
+        "n": 10
+       }
+      },
+      {
+       "item": "regeneration-ring",
+       "price": 600,
+       "stock": {
+        "kind": "limited",
+        "n": 10
+       }
+      },
+      {
+       "item": "yellow-spellbook-starlight",
+       "price": 200,
+       "stock": {
+        "kind": "limited",
+        "n": 10
+       }
+      }
+     ],
+     "spoiler": true,
+     "title": {
+      "en": "Amlon, the gray wizard.",
+      "es": "Amlon, el mago gris.",
+      "pt": "Amlon, o mago cinzento."
+     }
     }
    ],
    "spoiler": true,
@@ -5766,7 +5870,12 @@
        }
       }
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "An ancient tree.",
+      "es": "Un árbol ancestral.",
+      "pt": "Uma árvore ancestral."
+     }
     }
    ],
    "spoiler": false,
@@ -6059,7 +6168,12 @@
       },
       "underground": false
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "An injured soldier.",
+      "es": "Un soldado herido.",
+      "pt": "Um soldado ferido."
+     }
     }
    ],
    "spoiler": false,
@@ -6449,7 +6563,12 @@
       },
       "underground": false
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Arquie, the robot.",
+      "es": "Arquie, el robot.",
+      "pt": "Arquie, o robô."
+     }
     }
    ],
    "spoiler": false,
@@ -6557,7 +6676,12 @@
       },
       "underground": false
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Assa, the Vecan.",
+      "es": "Assa, el Vecan.",
+      "pt": "Assa, o Vecan."
+     }
     }
    ],
    "spoiler": false,
@@ -6708,7 +6832,12 @@
       },
       "underground": true
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Aurora, the cat.",
+      "es": "Aurora, la gata.",
+      "pt": "Aurora, a gata."
+     }
     }
    ],
    "spoiler": false,
@@ -7045,7 +7174,12 @@
        "price": 100
       }
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Balder, the vanguard.",
+      "es": "Balder, la vanguardia.",
+      "pt": "Balder, a vanguarda."
+     }
     }
    ],
    "spoiler": false,
@@ -7387,7 +7521,12 @@
       },
       "underground": false
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Baldwin, the blacksmith.",
+      "es": "Baldwin, el herrero.",
+      "pt": "Baldwin, o ferreiro."
+     }
     }
    ],
    "spoiler": false,
@@ -8102,7 +8241,12 @@
        }
       }
      ],
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Benedict, the merchant.",
+      "es": "Benedict, el mercader.",
+      "pt": "Benedict, o mercador."
+     }
     },
     {
      "afterQuests": [],
@@ -8221,7 +8365,12 @@
        }
       }
      ],
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Benedict, the merchant.",
+      "es": "Benedict, el mercader.",
+      "pt": "Benedict, o mercador."
+     }
     }
    ],
    "spoiler": false,
@@ -8645,7 +8794,12 @@
        }
       }
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Berk, the brawler.",
+      "es": "Berk, el peleador.",
+      "pt": "Berk, o brigão."
+     }
     }
    ],
    "spoiler": false,
@@ -8997,7 +9151,12 @@
       },
       "underground": false
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Bernhard, the missionary.",
+      "es": "Bernhard, el misionero.",
+      "pt": "Bernhard, o missionário."
+     }
     }
    ],
    "spoiler": false,
@@ -9566,7 +9725,12 @@
        }
       }
      ],
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Bessie, the botanist.",
+      "es": "Bessie, la botánica.",
+      "pt": "Bessie, a botânica."
+     }
     }
    ],
    "spoiler": false,
@@ -9962,7 +10126,12 @@
       },
       "underground": true
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Branigan, the sentinel.",
+      "es": "Branigan, el centinela.",
+      "pt": "Branigan, o sentinela."
+     }
     }
    ],
    "spoiler": false,
@@ -10351,7 +10520,12 @@
       },
       "underground": false
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Branor, the wheat farmer.",
+      "es": "Branor, el granjero de trigo.",
+      "pt": "Branor, o fazendeiro de trigo."
+     }
     }
    ],
    "spoiler": false,
@@ -10783,7 +10957,12 @@
        }
       }
      ],
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Brean, the blacksmith.",
+      "es": "Brean, el herrero.",
+      "pt": "Brean, o ferreiro."
+     }
     }
    ],
    "spoiler": false,
@@ -11320,7 +11499,12 @@
        "price": 100
       }
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Bresenham, the mage.",
+      "es": "Bresenham, el mago.",
+      "pt": "Bresenham, o mago."
+     }
     }
    ],
    "spoiler": false,
@@ -11680,7 +11864,12 @@
       },
       "underground": false
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Brigitte, the professor.",
+      "es": "Brigitte, la profesora.",
+      "pt": "Brigitte, a professora."
+     }
     }
    ],
    "spoiler": false,
@@ -12290,7 +12479,12 @@
        }
       }
      ],
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Burl, the ale trader.",
+      "es": "Burl, el mercader de cerveza.",
+      "pt": "Burl, o mercador de cerveja."
+     }
     }
    ],
    "spoiler": false,
@@ -12782,7 +12976,12 @@
      "services": {
       "heal": true
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Cain, the monk.",
+      "es": "Cain, el monje.",
+      "pt": "Cain, o monge."
+     }
     }
    ],
    "spoiler": false,
@@ -13246,7 +13445,12 @@
        }
       }
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Cedric, the monk.",
+      "es": "Cedric, el monje.",
+      "pt": "Cedric, o monge."
+     }
     }
    ],
    "spoiler": false,
@@ -13709,7 +13913,12 @@
       },
       "underground": false
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Charles, the king.",
+      "es": "Charles, el rey.",
+      "pt": "Charles, o rei."
+     }
     }
    ],
    "spoiler": false,
@@ -14162,7 +14371,12 @@
       },
       "underground": false
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Clovis, the young botanist.",
+      "es": "Clovis, el joven botánico.",
+      "pt": "Clovis, o jovem botânico."
+     }
     }
    ],
    "spoiler": false,
@@ -14559,7 +14773,7 @@
       4,
       0
      ],
-     "link": "https://map.opengea.tech/#2.AgD-AoIDBgEMAQEBAADQQcX6CwgOBBgMvbG1hbkB",
+     "link": "https://map.opengea.tech/#2.AgD-AoIDBgEAAQEBAADQCesvIDgQYDD0xtYW5gY",
      "place": {
       "near": {
        "en": "Colman's Kitchen",
@@ -14613,7 +14827,12 @@
        }
       }
      ],
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Colman, the cook.",
+      "es": "Colman, el cocinero.",
+      "pt": "Colman, o cozinheiro."
+     }
     }
    ],
    "spoiler": false,
@@ -15063,7 +15282,7 @@
       4,
       0
      ],
-     "link": "https://map.opengea.tech/#2.AgC9A7EBBgEBAQEBAADQEXzvQGxAAMLQm9scXZpbGQ",
+     "link": "https://map.opengea.tech/#2.AgC9A7EBBgEAAQEBAADQCd87EBsQgDD05jZHl-ZWBg",
      "place": {
       "near": {
        "en": "Sunskin Mountain",
@@ -15128,7 +15347,12 @@
        }
       }
      ],
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Constine, the farmer.",
+      "es": "Constine, el granjero.",
+      "pt": "Constine, o fazendeiro."
+     }
     }
    ],
    "spoiler": false,
@@ -15512,7 +15736,12 @@
        }
       }
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Daboga, the traveller.",
+      "es": "Daboga, el viajero.",
+      "pt": "Daboga, o viajante."
+     }
     },
     {
      "afterQuests": [],
@@ -15873,7 +16102,12 @@
        }
       }
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Daboga, the traveller.",
+      "es": "Daboga, el viajero.",
+      "pt": "Daboga, o viajante."
+     }
     }
    ],
    "spoiler": false,
@@ -16439,7 +16673,12 @@
      "services": {
       "heal": true
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Daniel, the monk.",
+      "es": "Daniel, el monje.",
+      "pt": "Daniel, o monge."
+     }
     },
     {
      "afterQuests": [],
@@ -16777,7 +17016,12 @@
       },
       "underground": false
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Daniel, the monk.",
+      "es": "Daniel, el monje.",
+      "pt": "Daniel, o monge."
+     }
     }
    ],
    "spoiler": false,
@@ -17097,7 +17341,12 @@
       },
       "underground": false
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Deckard, the tracker.",
+      "es": "Deckard, el rastreador.",
+      "pt": "Deckard, o rastreador."
+     }
     }
    ],
    "spoiler": false,
@@ -17446,7 +17695,12 @@
       },
       "underground": false
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Dee, the student.",
+      "es": "Dee, el estudiante.",
+      "pt": "Dee, o estudante."
+     }
     }
    ],
    "spoiler": false,
@@ -18051,7 +18305,12 @@
        }
       }
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Dewey, the food trader.",
+      "es": "Dewey, el comerciante de comida.",
+      "pt": "Dewey, o comerciante de comida."
+     }
     }
    ],
    "spoiler": false,
@@ -18530,7 +18789,7 @@
       4,
       0
      ],
-     "link": "https://map.opengea.tech/#2.AgCRAeYBBgEEAQEBAADQobCRAeYBAQZEaW9uZWw",
+     "link": "https://map.opengea.tech/#2.AgCRAeYBBgEAAQEBAADQCRsZYB4QYECU9uZWxgY",
      "place": {
       "near": {
        "en": "Dionel Pub",
@@ -18595,7 +18854,12 @@
        }
       }
      ],
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Dionel, the immigrant.",
+      "es": "Dionel, el inmigrante.",
+      "pt": "Dionel, o imigrante."
+     }
     }
    ],
    "spoiler": false,
@@ -18981,7 +19245,12 @@
       },
       "underground": true
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Doruk, the king.",
+      "es": "Doruk, el rey.",
+      "pt": "Doruk, o rei."
+     }
     }
    ],
    "spoiler": false,
@@ -19397,7 +19666,12 @@
        }
       }
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Drystan, the sentinel.",
+      "es": "Drystan, el centinela.",
+      "pt": "Drystan, o sentinela."
+     }
     }
    ],
    "spoiler": false,
@@ -19410,6 +19684,20 @@
   {
    "conversation": [
     {
+     "keys": [],
+     "kind": "greet",
+     "spoiler": false,
+     "text": {
+      "_fb": [
+       "pt",
+       "es"
+      ],
+      "en": "Calm seas and favorable winds, traveler.",
+      "es": "Calm seas and favorable winds, traveler.",
+      "pt": "Calm seas and favorable winds, traveler."
+     }
+    },
+    {
      "keys": [
       {
        "en": "job",
@@ -19420,9 +19708,9 @@
      "kind": "job",
      "spoiler": false,
      "text": {
-      "en": "Still doing cargo, as usual.",
-      "es": "Sigo haciendo cargas, como siempre.",
-      "pt": "Ainda fazendo cargas, como sempre."
+      "en": "Sailor. Cargo or folk, moving them is my duty.",
+      "es": "Marinero. Carga o gente, transportarlos es mi deber.",
+      "pt": "Marinheiro. Carga ou gente, transportá-los é meu dever."
      }
     },
     {
@@ -19452,13 +19740,9 @@
      "kind": "help",
      "spoiler": false,
      "text": {
-      "_fb": [
-       "pt",
-       "es"
-      ],
-      "en": "I can help ya with transporting anything, traveler. Just say the word.",
-      "es": "I can help ya with transporting anything, traveler. Just say the word.",
-      "pt": "I can help ya with transporting anything, traveler. Just say the word."
+      "en": "If it ain't on land, sure.",
+      "es": "Si es en tierra, seguro.",
+      "pt": "Se for em terra, com certeza."
      }
     },
     {
@@ -19488,9 +19772,9 @@
      "kind": "skill",
      "spoiler": false,
      "text": {
-      "en": "Feeling the wind. A storm can't stop me.",
-      "es": "Sintiendo el viento. Una tormenta no puede detenerme.",
-      "pt": "Sentindo o vento. Uma tempestade não pode me parar."
+      "en": "Reading the wind. Can smell a storm a day ahead.",
+      "es": "Leyendo el viento. Puedo oler una tormenta con un día de antelación.",
+      "pt": "Lendo o vento. Posso sentir o cheiro de uma tempestade um dia antes."
      }
     },
     {
@@ -19498,9 +19782,13 @@
      "kind": "options",
      "spoiler": false,
      "text": {
-      "en": "If ya need a trip, you know who to call.",
-      "es": "Si necesitas un viaje, ya sabes a quién llamar.",
-      "pt": "Se precisas de uma viagem, já sabes quem chamar."
+      "_fb": [
+       "pt",
+       "es"
+      ],
+      "en": "Ask me about a trip on the ocean, traveler.",
+      "es": "Ask me about a trip on the ocean, traveler.",
+      "pt": "Ask me about a trip on the ocean, traveler."
      }
     },
     {
@@ -19514,13 +19802,9 @@
      "kind": "reputation",
      "spoiler": false,
      "text": {
-      "_fb": [
-       "pt",
-       "es"
-      ],
-      "en": "I'm known now as a survivor, thanks to you, traveler.",
-      "es": "I'm known now as a survivor, thanks to you, traveler.",
-      "pt": "I'm known now as a survivor, thanks to you, traveler."
+      "en": "Fair. I don't cheat and I don't sink. People trust me boat.",
+      "es": "Justo. No hago trampas y no me hundo. La gente confía en mi barco.",
+      "pt": "Justo. Não trapaceio e não afundo. As pessoas confiam no meu barco."
      }
     },
     {
@@ -19544,9 +19828,9 @@
      "kind": "topic",
      "spoiler": false,
      "text": {
-      "en": "Cold, rough, aggressive... Like the sea.",
-      "es": "Frío, áspero, agresivo... Como el mar.",
-      "pt": "Frio, áspero, agressivo... Como o mar."
+      "en": "Cold, rough, but honest. Like the sea.",
+      "es": "Frío, áspero, pero honesto. Como el mar.",
+      "pt": "Frio, áspero, mas honesto. Como o mar."
      }
     },
     {
@@ -19586,9 +19870,9 @@
      "kind": "apogea",
      "spoiler": false,
      "text": {
-      "en": "It's home. Treacherous at times, but home.",
-      "es": "Es mi hogar. Traicionero a veces, pero es hogar.",
-      "pt": "É meu lar. Traiçoeiro às vezes, mas é lar."
+      "en": "It's home. Dry land, wet sea. Works for me.",
+      "es": "Es hogar. Tierra seca, mar mojado. Funciona para mí.",
+      "pt": "É lar. Terra seca, mar molhado. Funciona pra mim."
      }
     },
     {
@@ -19612,9 +19896,9 @@
      "kind": "rumors",
      "spoiler": false,
      "text": {
-      "en": "I don't wish to speak about it, that day still haunts me.",
-      "es": "No deseo hablar de ello, ese día aún me atormenta.",
-      "pt": "Não desejo falar sobre isso, aquele dia ainda me assombra."
+      "en": "That ship, aye. Black as tar. No crew on deck. Gave me chills.",
+      "es": "Ese barco, sí. Negro como el alquitrán. Ninguna tripulación en cubierta. Me dio escalofríos.",
+      "pt": "Aquele navio, sim. Negro como piche. Nenhuma tripulação no convés. Me deu calafrios."
      }
     },
     {
@@ -19634,51 +19918,32 @@
      }
     },
     {
-     "keys": [
-      {
-       "en": "quest",
-       "es": "misión",
-       "pt": "missão"
-      }
-     ],
-     "kind": "quest",
-     "spoiler": true,
-     "text": {
-      "en": "Not if I can avoid it, haha!",
-      "es": "¡No si puedo evitarlo, jaja!",
-      "pt": "Não se eu puder evitar, haha!"
-     }
-    },
-    {
      "keys": [],
      "kind": "farewell",
      "spoiler": false,
      "text": {
-      "_fb": [
-       "pt",
-       "es"
-      ],
-      "en": "Seas blessings to ya, traveler.",
-      "es": "Seas blessings to ya, traveler.",
-      "pt": "Seas blessings to ya, traveler."
+      "en": "Fair tides to ya.",
+      "es": "Buenas mareas para ti.",
+      "pt": "Boas marés pra você."
      }
     }
    ],
    "grid": "/icons/npcs128/dylan.png",
    "id": "dylan",
    "job": {
-    "en": "Still doing cargo, as usual.",
-    "es": "Sigo haciendo cargas, como siempre.",
-    "pt": "Ainda fazendo cargas, como sempre."
+    "en": "Sailor. Cargo or folk, moving them is my duty.",
+    "es": "Marinero. Carga o gente, transportarlos es mi deber.",
+    "pt": "Marinheiro. Carga ou gente, transportá-los é meu dever."
    },
    "near": [
+    "npc:johnny",
     "npc:logan"
    ],
    "quests": [],
    "ref": "npc:dylan",
    "render": {
     "size": [
-     228,
+     261,
      512
     ],
     "src": "/renders/npcs/dylan.webp"
@@ -19690,7 +19955,7 @@
       4,
       0
      ],
-     "link": "https://map.opengea.tech/#2.AgD2AoQCBgEAAQEBAADQCWkvQCgQUECUxxbmBg",
+     "link": "https://map.opengea.tech/#2.AgD4AoQCBgEAAQEBAADQCYkvQCgQUECUxxbmBg",
      "place": {
       "near": null,
       "town": {
@@ -19719,25 +19984,16 @@
        }
       }
      },
-     "spoiler": true
+     "spoiler": true,
+     "title": {
+      "en": "Dylan, the sailor.",
+      "es": "Dylan, el marinero.",
+      "pt": "Dylan, o marinheiro."
+     }
     },
     {
      "afterQuests": [],
      "conversation": [
-      {
-       "keys": [],
-       "kind": "greet",
-       "spoiler": false,
-       "text": {
-        "_fb": [
-         "pt",
-         "es"
-        ],
-        "en": "Calm seas and favorable winds, traveler.",
-        "es": "Calm seas and favorable winds, traveler.",
-        "pt": "Calm seas and favorable winds, traveler."
-       }
-      },
       {
        "keys": [
         {
@@ -19749,9 +20005,9 @@
        "kind": "job",
        "spoiler": false,
        "text": {
-        "en": "Sailor. Cargo or folk, moving them is my duty.",
-        "es": "Marinero. Carga o gente, transportarlos es mi deber.",
-        "pt": "Marinheiro. Carga ou gente, transportá-los é meu dever."
+        "en": "Still doing cargo, as usual.",
+        "es": "Sigo haciendo cargas, como siempre.",
+        "pt": "Ainda fazendo cargas, como sempre."
        }
       },
       {
@@ -19781,9 +20037,13 @@
        "kind": "help",
        "spoiler": false,
        "text": {
-        "en": "If it ain't on land, sure.",
-        "es": "Si es en tierra, seguro.",
-        "pt": "Se for em terra, com certeza."
+        "_fb": [
+         "pt",
+         "es"
+        ],
+        "en": "I can help ya with transporting anything, traveler. Just say the word.",
+        "es": "I can help ya with transporting anything, traveler. Just say the word.",
+        "pt": "I can help ya with transporting anything, traveler. Just say the word."
        }
       },
       {
@@ -19813,9 +20073,9 @@
        "kind": "skill",
        "spoiler": false,
        "text": {
-        "en": "Reading the wind. Can smell a storm a day ahead.",
-        "es": "Leyendo el viento. Puedo oler una tormenta con un día de antelación.",
-        "pt": "Lendo o vento. Posso sentir o cheiro de uma tempestade um dia antes."
+        "en": "Feeling the wind. A storm can't stop me.",
+        "es": "Sintiendo el viento. Una tormenta no puede detenerme.",
+        "pt": "Sentindo o vento. Uma tempestade não pode me parar."
        }
       },
       {
@@ -19823,13 +20083,9 @@
        "kind": "options",
        "spoiler": false,
        "text": {
-        "_fb": [
-         "pt",
-         "es"
-        ],
-        "en": "Ask me about a trip on the ocean, traveler.",
-        "es": "Ask me about a trip on the ocean, traveler.",
-        "pt": "Ask me about a trip on the ocean, traveler."
+        "en": "If ya need a trip, you know who to call.",
+        "es": "Si necesitas un viaje, ya sabes a quién llamar.",
+        "pt": "Se precisas de uma viagem, já sabes quem chamar."
        }
       },
       {
@@ -19843,9 +20099,13 @@
        "kind": "reputation",
        "spoiler": false,
        "text": {
-        "en": "Fair. I don't cheat and I don't sink. People trust me boat.",
-        "es": "Justo. No hago trampas y no me hundo. La gente confía en mi barco.",
-        "pt": "Justo. Não trapaceio e não afundo. As pessoas confiam no meu barco."
+        "_fb": [
+         "pt",
+         "es"
+        ],
+        "en": "I'm known now as a survivor, thanks to you, traveler.",
+        "es": "I'm known now as a survivor, thanks to you, traveler.",
+        "pt": "I'm known now as a survivor, thanks to you, traveler."
        }
       },
       {
@@ -19869,9 +20129,9 @@
        "kind": "topic",
        "spoiler": false,
        "text": {
-        "en": "Cold, rough, but honest. Like the sea.",
-        "es": "Frío, áspero, pero honesto. Como el mar.",
-        "pt": "Frio, áspero, mas honesto. Como o mar."
+        "en": "Cold, rough, aggressive... Like the sea.",
+        "es": "Frío, áspero, agresivo... Como el mar.",
+        "pt": "Frio, áspero, agressivo... Como o mar."
        }
       },
       {
@@ -19911,9 +20171,9 @@
        "kind": "apogea",
        "spoiler": false,
        "text": {
-        "en": "It's home. Dry land, wet sea. Works for me.",
-        "es": "Es hogar. Tierra seca, mar mojado. Funciona para mí.",
-        "pt": "É lar. Terra seca, mar molhado. Funciona pra mim."
+        "en": "It's home. Treacherous at times, but home.",
+        "es": "Es mi hogar. Traicionero a veces, pero es hogar.",
+        "pt": "É meu lar. Traiçoeiro às vezes, mas é lar."
        }
       },
       {
@@ -19937,9 +20197,9 @@
        "kind": "rumors",
        "spoiler": false,
        "text": {
-        "en": "That ship, aye. Black as tar. No crew on deck. Gave me chills.",
-        "es": "Ese barco, sí. Negro como el alquitrán. Ninguna tripulación en cubierta. Me dio escalofríos.",
-        "pt": "Aquele navio, sim. Negro como piche. Nenhuma tripulação no convés. Me deu calafrios."
+        "en": "I don't wish to speak about it, that day still haunts me.",
+        "es": "No deseo hablar de ello, ese día aún me atormenta.",
+        "pt": "Não desejo falar sobre isso, aquele dia ainda me assombra."
        }
       },
       {
@@ -19959,13 +20219,33 @@
        }
       },
       {
+       "keys": [
+        {
+         "en": "quest",
+         "es": "misión",
+         "pt": "missão"
+        }
+       ],
+       "kind": "quest",
+       "spoiler": true,
+       "text": {
+        "en": "Not if I can avoid it, haha!",
+        "es": "¡No si puedo evitarlo, jaja!",
+        "pt": "Não se eu puder evitar, haha!"
+       }
+      },
+      {
        "keys": [],
        "kind": "farewell",
        "spoiler": false,
        "text": {
-        "en": "Fair tides to ya.",
-        "es": "Buenas mareas para ti.",
-        "pt": "Boas marés pra você."
+        "_fb": [
+         "pt",
+         "es"
+        ],
+        "en": "Seas blessings to ya, traveler.",
+        "es": "Seas blessings to ya, traveler.",
+        "pt": "Seas blessings to ya, traveler."
        }
       }
      ],
@@ -19973,7 +20253,7 @@
       4,
       0
      ],
-     "link": "https://map.opengea.tech/#2.AgD4AoQCBgEAAQEBAADQCYkvQCgQUECUxxbmBg",
+     "link": "https://map.opengea.tech/#2.AgD2AoQCBgEAAQEBAADQCWkvQCgQUECUxxbmBg",
      "place": {
       "near": null,
       "town": {
@@ -20002,12 +20282,21 @@
        }
       }
      },
-     "spoiler": true
+     "spoiler": true,
+     "title": {
+      "_fb": [
+       "pt",
+       "es"
+      ],
+      "en": "Dylan, the experinced sailor.",
+      "es": "Dylan, the experinced sailor.",
+      "pt": "Dylan, the experinced sailor."
+     }
     }
    ],
    "spoiler": true,
    "title": {
-    "en": "Dylan, the experinced sailor.",
+    "en": "Dylan, the sailor.",
     "es": "Dylan, el marinero.",
     "pt": "Dylan, o marinheiro."
    }
@@ -20777,7 +21066,12 @@
      "services": {
       "heal": true
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Edmund, the monk.",
+      "es": "Edmund, el monje.",
+      "pt": "Edmund, o monge."
+     }
     }
    ],
    "spoiler": false,
@@ -21199,7 +21493,12 @@
        }
       }
      ],
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Egemen, the engineer.",
+      "es": "Egemen, el ingeniero.",
+      "pt": "Egemen, o engenheiro."
+     }
     }
    ],
    "spoiler": false,
@@ -21727,7 +22026,12 @@
        }
       }
      ],
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "El Chad, the Chieftan",
+      "es": "El Chad, el jefe",
+      "pt": "El Chad, o chefe"
+     }
     }
    ],
    "spoiler": false,
@@ -22413,7 +22717,12 @@
      "services": {
       "heal": true
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Elanur, the priestess.",
+      "es": "Elanur, la sacerdotisa.",
+      "pt": "Elanur, a sacerdotisa."
+     }
     },
     {
      "afterQuests": [],
@@ -22438,7 +22747,12 @@
      "services": {
       "heal": true
      },
-     "spoiler": true
+     "spoiler": true,
+     "title": {
+      "en": "Elanur, the priestess.",
+      "es": "Elanur, la sacerdotisa.",
+      "pt": "Elanur, a sacerdotisa."
+     }
     }
    ],
    "spoiler": false,
@@ -22881,7 +23195,12 @@
       },
       "underground": false
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Elgifu, the jester.",
+      "es": "Elgifu, el bufón.",
+      "pt": "Elgifu, o bobo."
+     }
     }
    ],
    "spoiler": false,
@@ -22898,27 +23217,13 @@
      "kind": "greet",
      "spoiler": false,
      "text": {
-      "_fb": [
-       "pt",
-       "es"
-      ],
-      "en": "Squeak Squeak",
-      "es": "Squeak Squeak",
-      "pt": "Squeak Squeak"
+      "en": "Eeek!? <cowers>",
+      "es": "¡Eeek!? <se encoge>",
+      "pt": "Eeek!? <encolhe-se>"
      }
     },
     {
      "keys": [
-      {
-       "en": "boy",
-       "es": "chico",
-       "pt": "garoto"
-      },
-      {
-       "en": "good",
-       "es": "bueno",
-       "pt": "bom"
-      },
       {
        "en": "amlon",
        "es": "Amlon",
@@ -22929,12 +23234,11 @@
      "spoiler": true,
      "text": {
       "_fb": [
-       "pt",
-       "es"
+       "pt"
       ],
-      "en": "Squeak Squeeak! <hands you over a key>\nSqueak Squeak!",
-      "es": "Squeak Squeeak! <hands you over a key>\nSqueak Squeak!",
-      "pt": "Squeak Squeeak! <hands you over a key>\nSqueak Squeak!"
+      "en": "Squeak Squeak!",
+      "es": "¡Squeak Squeak!",
+      "pt": "Squeak Squeak!"
      }
     },
     {
@@ -22943,20 +23247,17 @@
      "spoiler": false,
      "text": {
       "_fb": [
-       "pt",
-       "es"
+       "pt"
       ],
-      "en": "Eeek",
-      "es": "Eeek",
-      "pt": "Eeek"
+      "en": "Squeak?",
+      "es": "¿Squeak?",
+      "pt": "Squeak?"
      }
     }
    ],
    "grid": "/icons/npcs128/elmo.png",
    "id": "elmo",
-   "near": [
-    "npc:amlon"
-   ],
+   "near": [],
    "quests": [],
    "ref": "npc:elmo",
    "render": {
@@ -22973,12 +23274,12 @@
       4,
       0
      ],
-     "link": "https://map.opengea.tech/#2.AgC7BHQGAQABAQEAANAJtUtAF0BQxNb2Bg",
+     "link": "https://map.opengea.tech/#2.AgCrA4sBBgEAAQEBAADQCbc6sBgQQFDE1vYG",
      "place": {
       "near": {
-       "en": "West Gate",
-       "es": "Puerta Oeste",
-       "pt": "Portão Oeste"
+       "en": "Sunskin Mountain",
+       "es": "Montaña Sunskin",
+       "pt": "Montanha Sunskin"
       },
       "town": {
        "en": "Plains Cathedral",
@@ -22987,7 +23288,12 @@
       },
       "underground": false
      },
-     "spoiler": true
+     "spoiler": true,
+     "title": {
+      "en": "Elmo, the rat shipper.",
+      "es": "Elmo, el transportador de ratas.",
+      "pt": "Elmo, o transportador de ratos."
+     }
     },
     {
      "afterQuests": [],
@@ -23068,73 +23374,12 @@
       },
       "underground": false
      },
-     "spoiler": true
-    },
-    {
-     "afterQuests": [],
-     "conversation": [
-      {
-       "keys": [],
-       "kind": "greet",
-       "spoiler": false,
-       "text": {
-        "en": "Eeek!? <cowers>",
-        "es": "¡Eeek!? <se encoge>",
-        "pt": "Eeek!? <encolhe-se>"
-       }
-      },
-      {
-       "keys": [
-        {
-         "en": "amlon",
-         "es": "Amlon",
-         "pt": "Amlon"
-        }
-       ],
-       "kind": "topic",
-       "spoiler": true,
-       "text": {
-        "_fb": [
-         "pt"
-        ],
-        "en": "Squeak Squeak!",
-        "es": "¡Squeak Squeak!",
-        "pt": "Squeak Squeak!"
-       }
-      },
-      {
-       "keys": [],
-       "kind": "farewell",
-       "spoiler": false,
-       "text": {
-        "_fb": [
-         "pt"
-        ],
-        "en": "Squeak?",
-        "es": "¿Squeak?",
-        "pt": "Squeak?"
-       }
-      }
-     ],
-     "hours": [
-      4,
-      0
-     ],
-     "link": "https://map.opengea.tech/#2.AgCrA4sBBgEAAQEBAADQCbc6sBgQQFDE1vYG",
-     "place": {
-      "near": {
-       "en": "Sunskin Mountain",
-       "es": "Montaña Sunskin",
-       "pt": "Montanha Sunskin"
-      },
-      "town": {
-       "en": "Plains Cathedral",
-       "es": "Catedral de la Llanura",
-       "pt": "Catedral da Planície"
-      },
-      "underground": false
-     },
-     "spoiler": true
+     "spoiler": true,
+     "title": {
+      "en": "Elmo, the rat shipper.",
+      "es": "Elmo, el transportador de ratas.",
+      "pt": "Elmo, o transportador de ratos."
+     }
     },
     {
      "afterQuests": [],
@@ -23215,7 +23460,99 @@
       },
       "underground": true
      },
-     "spoiler": true
+     "spoiler": true,
+     "title": {
+      "en": "Elmo, the rat shipper.",
+      "es": "Elmo, el transportador de ratas.",
+      "pt": "Elmo, o transportador de ratos."
+     }
+    },
+    {
+     "afterQuests": [],
+     "conversation": [
+      {
+       "keys": [],
+       "kind": "greet",
+       "spoiler": false,
+       "text": {
+        "_fb": [
+         "pt",
+         "es"
+        ],
+        "en": "Squeak Squeak",
+        "es": "Squeak Squeak",
+        "pt": "Squeak Squeak"
+       }
+      },
+      {
+       "keys": [
+        {
+         "en": "boy",
+         "es": "chico",
+         "pt": "garoto"
+        },
+        {
+         "en": "good",
+         "es": "bueno",
+         "pt": "bom"
+        },
+        {
+         "en": "amlon",
+         "es": "Amlon",
+         "pt": "Amlon"
+        }
+       ],
+       "kind": "topic",
+       "spoiler": true,
+       "text": {
+        "_fb": [
+         "pt",
+         "es"
+        ],
+        "en": "Squeak Squeeak! <hands you over a key>\nSqueak Squeak!",
+        "es": "Squeak Squeeak! <hands you over a key>\nSqueak Squeak!",
+        "pt": "Squeak Squeeak! <hands you over a key>\nSqueak Squeak!"
+       }
+      },
+      {
+       "keys": [],
+       "kind": "farewell",
+       "spoiler": false,
+       "text": {
+        "_fb": [
+         "pt",
+         "es"
+        ],
+        "en": "Eeek",
+        "es": "Eeek",
+        "pt": "Eeek"
+       }
+      }
+     ],
+     "hours": [
+      4,
+      0
+     ],
+     "link": "https://map.opengea.tech/#2.AgC7BHQGAQABAQEAANAJtUtAF0BQxNb2Bg",
+     "place": {
+      "near": {
+       "en": "West Gate",
+       "es": "Puerta Oeste",
+       "pt": "Portão Oeste"
+      },
+      "town": {
+       "en": "Plains Cathedral",
+       "es": "Catedral de la Llanura",
+       "pt": "Catedral da Planície"
+      },
+      "underground": false
+     },
+     "spoiler": true,
+     "title": {
+      "en": "Elmo, the rat shipper.",
+      "es": "Elmo, el transportador de ratas.",
+      "pt": "Elmo, o transportador de ratos."
+     }
     }
    ],
    "spoiler": true,
@@ -23712,58 +24049,21 @@
     "es": "¡Soy una mensajera! Solo que no estoy trabajando en este momento.",
     "pt": "Sou uma mensageira! Só não estou trabalhando no momento."
    },
-   "near": [],
+   "near": [
+    "npc:torvan",
+    "npc:amelia",
+    "npc:alan"
+   ],
    "quests": [],
    "ref": "npc:elsie",
    "render": {
     "size": [
-     275,
+     244,
      512
     ],
     "src": "/renders/npcs/elsie.webp"
    },
    "shifts": [
-    {
-     "afterQuests": [],
-     "hours": null,
-     "link": "https://map.opengea.tech/#2.AgChBHYGARgBAQEAANCBEhdKYBdQUMQ2l1YG",
-     "place": {
-      "near": {
-       "en": "West Gate",
-       "es": "Puerta Oeste",
-       "pt": "Portão Oeste"
-      },
-      "town": {
-       "en": "Plains Cathedral",
-       "es": "Catedral de la Llanura",
-       "pt": "Catedral da Planície"
-      },
-      "underground": true
-     },
-     "spoiler": true
-    },
-    {
-     "afterQuests": [],
-     "hours": [
-      4,
-      0
-     ],
-     "link": "https://map.opengea.tech/#2.AgCXBcoDBgEAAQEBAADQCXlZoDwQUFDENpdWBg",
-     "place": {
-      "near": {
-       "en": "Residency Square",
-       "es": "Plaza de la Residencia",
-       "pt": "Praça da Residência"
-      },
-      "town": {
-       "en": "Basile",
-       "es": "Basile",
-       "pt": "Basile"
-      },
-      "underground": false
-     },
-     "spoiler": true
-    },
     {
      "afterQuests": [],
      "conversation": [
@@ -24248,7 +24548,63 @@
       },
       "underground": false
      },
-     "spoiler": true
+     "spoiler": true,
+     "title": {
+      "en": "Elsie, the courier.",
+      "es": "Elsie, la mensajera.",
+      "pt": "Elsie, a mensageira."
+     }
+    },
+    {
+     "afterQuests": [],
+     "hours": null,
+     "link": "https://map.opengea.tech/#2.AgChBHYGARgBAQEAANCBEhdKYBdQUMQ2l1YG",
+     "place": {
+      "near": {
+       "en": "West Gate",
+       "es": "Puerta Oeste",
+       "pt": "Portão Oeste"
+      },
+      "town": {
+       "en": "Plains Cathedral",
+       "es": "Catedral de la Llanura",
+       "pt": "Catedral da Planície"
+      },
+      "underground": true
+     },
+     "spoiler": true,
+     "title": {
+      "en": "Elsie, the courier.",
+      "es": "Elsie, la mensajera.",
+      "pt": "Elsie, a mensageira."
+     }
+    },
+    {
+     "afterQuests": [],
+     "hours": [
+      4,
+      0
+     ],
+     "link": "https://map.opengea.tech/#2.AgCXBcoDBgEAAQEBAADQCXlZoDwQUFDENpdWBg",
+     "place": {
+      "near": {
+       "en": "Residency Square",
+       "es": "Plaza de la Residencia",
+       "pt": "Praça da Residência"
+      },
+      "town": {
+       "en": "Basile",
+       "es": "Basile",
+       "pt": "Basile"
+      },
+      "underground": false
+     },
+     "spoiler": true,
+     "title": {
+      "en": "Elsie, the courier.",
+      "es": "Elsie, la mensajera.",
+      "pt": "Elsie, a mensageira."
+     }
     }
    ],
    "spoiler": true,
@@ -24516,7 +24872,12 @@
       },
       "underground": true
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Engin, the engineer.",
+      "es": "Engin, el ingeniero.",
+      "pt": "Engin, o engenheiro."
+     }
     }
    ],
    "spoiler": false,
@@ -24849,7 +25210,12 @@
        "price": 100
       }
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Eofor, the adventurer.",
+      "es": "Eofor, el aventurero.",
+      "pt": "Eofor, o aventureiro."
+     }
     }
    ],
    "spoiler": false,
@@ -25507,7 +25873,12 @@
        }
       }
      ],
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Erastus, the arrow trader.",
+      "es": "Erastus, el mercader de flechas.",
+      "pt": "Erastus, o mercador de flechas."
+     }
     }
    ],
    "spoiler": false,
@@ -25887,7 +26258,12 @@
        }
       }
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Eric, the mage.",
+      "es": "Eric, el mago.",
+      "pt": "Eric, o mago."
+     }
     }
    ],
    "spoiler": false,
@@ -25972,7 +26348,12 @@
        }
       }
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Euler, the mage.",
+      "es": "Euler, el mago.",
+      "pt": "Euler, o mago."
+     }
     }
    ],
    "spoiler": false,
@@ -26348,7 +26729,12 @@
      "services": {
       "heal": true
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Faruq, the drinker.",
+      "es": "Faruq, el bebedor.",
+      "pt": "Faruq, o beberrão."
+     }
     }
    ],
    "spoiler": false,
@@ -26758,7 +27144,12 @@
        }
       }
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Faysal, the host.",
+      "es": "Faysal, el anfitrión.",
+      "pt": "Faysal, o anfitrião."
+     }
     }
    ],
    "spoiler": false,
@@ -27096,18 +27487,45 @@
    "grid": "/icons/npcs128/felix.png",
    "id": "felix",
    "near": [
-    "npc:heinrich"
+    "npc:newt"
    ],
    "quests": [],
    "ref": "npc:felix",
    "render": {
     "size": [
-     276,
+     253,
      512
     ],
     "src": "/renders/npcs/felix.webp"
    },
    "shifts": [
+    {
+     "afterQuests": [],
+     "hours": [
+      4,
+      0
+     ],
+     "link": "https://map.opengea.tech/#2.AgDfBIUDBgEEAQEBAADQoZDfBIUDAQVGZWxpeA",
+     "place": {
+      "near": {
+       "en": "Work Square",
+       "es": "Plaza del Trabajo",
+       "pt": "Praça do Trabalho"
+      },
+      "town": {
+       "en": "Vecan",
+       "es": "Vecan",
+       "pt": "Vecan"
+      },
+      "underground": false
+     },
+     "spoiler": false,
+     "title": {
+      "en": "Felix, the tracker.",
+      "es": "Felix, el rastreador.",
+      "pt": "Felix, o rastreador."
+     }
+    },
     {
      "afterQuests": [],
      "conversation": [
@@ -27460,29 +27878,12 @@
        }
       }
      },
-     "spoiler": true
-    },
-    {
-     "afterQuests": [],
-     "hours": [
-      4,
-      0
-     ],
-     "link": "https://map.opengea.tech/#2.AgDfBIUDBgEEAQEBAADQoZDfBIUDAQVGZWxpeA",
-     "place": {
-      "near": {
-       "en": "Work Square",
-       "es": "Plaza del Trabajo",
-       "pt": "Praça do Trabalho"
-      },
-      "town": {
-       "en": "Vecan",
-       "es": "Vecan",
-       "pt": "Vecan"
-      },
-      "underground": false
-     },
-     "spoiler": false
+     "spoiler": true,
+     "title": {
+      "en": "Felix, the tracker.",
+      "es": "Felix, el rastreador.",
+      "pt": "Felix, o rastreador."
+     }
     }
    ],
    "spoiler": false,
@@ -27845,7 +28246,12 @@
        }
       }
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Ferag, the courier.",
+      "es": "Ferag, el mensajero.",
+      "pt": "Ferag, o mensageiro."
+     }
     },
     {
      "afterQuests": [],
@@ -28140,7 +28546,12 @@
        }
       }
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Ferag, the courier.",
+      "es": "Ferag, el mensajero.",
+      "pt": "Ferag, o mensageiro."
+     }
     }
    ],
    "spoiler": false,
@@ -28552,7 +28963,12 @@
       },
       "underground": false
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Fergus, the chieftan.",
+      "es": "Fergus, el jefe.",
+      "pt": "Fergus, o chefe."
+     }
     }
    ],
    "spoiler": false,
@@ -28971,7 +29387,12 @@
       },
       "underground": false
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Frances, the farmer.",
+      "es": "Frances, el granjero.",
+      "pt": "Frances, o fazendeiro."
+     }
     }
    ],
    "spoiler": false,
@@ -29272,7 +29693,9 @@
     "es": "¿Mi trabajo? Soy mercader... y también mago.",
     "pt": "Meu trabalho? Sou mercador... e também mago."
    },
-   "near": [],
+   "near": [
+    "npc:gareth"
+   ],
    "quests": [],
    "ref": "npc:gabe",
    "render": {
@@ -29404,7 +29827,12 @@
        }
       }
      ],
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Gabe, a wealthy mage.",
+      "es": "Gabe, un mago rico.",
+      "pt": "Gabe, um mago rico."
+     }
     }
    ],
    "spoiler": false,
@@ -29746,7 +30174,9 @@
     "es": "Estoy aquí con Branigan, ayudándole en esta misión. Somos viejos amigos, sabes.",
     "pt": "Estou aqui com Branigan, ajudando-o nesta missão. Somos velhos amigos, sabe."
    },
-   "near": [],
+   "near": [
+    "npc:gabe"
+   ],
    "quests": [],
    "ref": "npc:gareth",
    "render": {
@@ -29757,6 +30187,39 @@
     "src": "/renders/npcs/gareth.webp"
    },
    "shifts": [
+    {
+     "afterQuests": [],
+     "hours": [
+      4,
+      0
+     ],
+     "link": "https://map.opengea.tech/#2.AgBbNQYBAAEBAQAA0Am3VRNgcBQmV0aHBg",
+     "place": {
+      "near": {
+       "en": "Sentinel's Guild",
+       "es": "Gremio de los Centinelas",
+       "pt": "Guilda dos Sentinelas"
+      },
+      "town": {
+       "en": "Plains Cathedral",
+       "es": "Catedral de la Llanura",
+       "pt": "Catedral da Planície"
+      },
+      "underground": false
+     },
+     "services": {
+      "trainer": {
+       "class": "knight",
+       "price": 100
+      }
+     },
+     "spoiler": false,
+     "title": {
+      "en": "Gareth, the sentinel.",
+      "es": "Gareth, el centinela.",
+      "pt": "Gareth, o sentinela."
+     }
+    },
     {
      "afterQuests": [],
      "conversation": [
@@ -29851,35 +30314,12 @@
        }
       }
      },
-     "spoiler": true
-    },
-    {
-     "afterQuests": [],
-     "hours": [
-      4,
-      0
-     ],
-     "link": "https://map.opengea.tech/#2.AgBbNQYBAAEBAQAA0Am3VRNgcBQmV0aHBg",
-     "place": {
-      "near": {
-       "en": "Sentinel's Guild",
-       "es": "Gremio de los Centinelas",
-       "pt": "Guilda dos Sentinelas"
-      },
-      "town": {
-       "en": "Plains Cathedral",
-       "es": "Catedral de la Llanura",
-       "pt": "Catedral da Planície"
-      },
-      "underground": false
-     },
-     "services": {
-      "trainer": {
-       "class": "knight",
-       "price": 100
-      }
-     },
-     "spoiler": false
+     "spoiler": true,
+     "title": {
+      "en": "Gareth, the sentinel.",
+      "es": "Gareth, el centinela.",
+      "pt": "Gareth, o sentinela."
+     }
     }
    ],
    "spoiler": false,
@@ -30122,7 +30562,9 @@
     "es": "Roi Vecan oh.",
     "pt": "Roi Vecan oh."
    },
-   "near": [],
+   "near": [
+    "npc:heinrich"
+   ],
    "quests": [],
    "ref": "npc:gaspile",
    "render": {
@@ -30171,7 +30613,12 @@
        }
       }
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Gaspile, the Vecan.",
+      "es": "Gaspile, el Vecan.",
+      "pt": "Gaspile, o Vecan."
+     }
     }
    ],
    "spoiler": false,
@@ -30868,7 +31315,12 @@
        }
       }
      ],
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Gavin, the merchant.",
+      "es": "Gavin, el mercader.",
+      "pt": "Gavin, o mercador."
+     }
     }
    ],
    "spoiler": false,
@@ -31215,7 +31667,12 @@
       },
       "underground": true
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "George.",
+      "es": "George.",
+      "pt": "George."
+     }
     }
    ],
    "spoiler": false,
@@ -31310,7 +31767,12 @@
       },
       "underground": true
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Gil, the rat shipper.",
+      "es": "Gil, el transportador de ratas.",
+      "pt": "Gil, o transportador de ratos."
+     }
     }
    ],
    "spoiler": false,
@@ -31710,7 +32172,12 @@
        }
       }
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Godric, the guard.",
+      "es": "Godric, el guardia.",
+      "pt": "Godric, o guarda."
+     }
     }
    ],
    "spoiler": false,
@@ -32227,7 +32694,12 @@
        }
       }
      ],
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Gonlle, the fisherman.",
+      "es": "Gonlle, el pescador.",
+      "pt": "Gonlle, o pescador."
+     }
     }
    ],
    "spoiler": false,
@@ -32653,7 +33125,12 @@
        "price": 100
       }
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Guri, the oldest.",
+      "es": "Guri, el más viejo.",
+      "pt": "Guri, o mais velho."
+     }
     }
    ],
    "spoiler": false,
@@ -33174,7 +33651,12 @@
        }
       }
      ],
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Guy, the sailor.",
+      "es": "Guy, el marinero.",
+      "pt": "Guy, o marinheiro."
+     }
     }
    ],
    "spoiler": false,
@@ -33568,7 +34050,12 @@
        }
       }
      ],
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Hagar, the gourmand.",
+      "es": "Hagar, el glotón.",
+      "pt": "Hagar, o glutão."
+     }
     }
    ],
    "spoiler": false,
@@ -33884,18 +34371,48 @@
     "pt": "Sou um servo do Rei de Basile e um missionário da igreja. Meu papel é trazer esclarecimento e orientação a esta região e seu povo."
    },
    "near": [
-    "npc:felix"
+    "npc:gaspile"
    ],
    "quests": [],
    "ref": "npc:heinrich",
    "render": {
     "size": [
-     278,
+     215,
      512
     ],
     "src": "/renders/npcs/heinrich.webp"
    },
    "shifts": [
+    {
+     "afterQuests": [],
+     "hours": [
+      4,
+      0
+     ],
+     "link": "https://map.opengea.tech/#2.AgDrBM8DBgEFAQEBAADQIfHrBM8DAQhIZWlucmljaA",
+     "place": {
+      "near": {
+       "en": "Vecan Hospital",
+       "es": "Hospital de Vecan",
+       "pt": "Hospital de Vecan"
+      },
+      "town": {
+       "en": "Vecan",
+       "es": "Vecan",
+       "pt": "Vecan"
+      },
+      "underground": false
+     },
+     "services": {
+      "heal": true
+     },
+     "spoiler": false,
+     "title": {
+      "en": "Heinrich, the missionary.",
+      "es": "Heinrich, el misionero.",
+      "pt": "Heinrich, o missionário."
+     }
+    },
     {
      "afterQuests": [],
      "conversation": [
@@ -34182,32 +34699,12 @@
        }
       }
      },
-     "spoiler": true
-    },
-    {
-     "afterQuests": [],
-     "hours": [
-      4,
-      0
-     ],
-     "link": "https://map.opengea.tech/#2.AgDrBM8DBgEFAQEBAADQIfHrBM8DAQhIZWlucmljaA",
-     "place": {
-      "near": {
-       "en": "Vecan Hospital",
-       "es": "Hospital de Vecan",
-       "pt": "Hospital de Vecan"
-      },
-      "town": {
-       "en": "Vecan",
-       "es": "Vecan",
-       "pt": "Vecan"
-      },
-      "underground": false
-     },
-     "services": {
-      "heal": true
-     },
-     "spoiler": false
+     "spoiler": true,
+     "title": {
+      "en": "Heinrich, the missionary.",
+      "es": "Heinrich, el misionero.",
+      "pt": "Heinrich, o missionário."
+     }
     }
    ],
    "spoiler": false,
@@ -34658,7 +35155,12 @@
        }
       }
      ],
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Hester, the general trader.",
+      "es": "Hester, la comerciante general.",
+      "pt": "Hester, a comerciante geral."
+     }
     }
    ],
    "spoiler": false,
@@ -35019,7 +35521,12 @@
       },
       "underground": false
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Hildegard, the guard.",
+      "es": "Hildegard, la guardia.",
+      "pt": "Hildegard, a guarda."
+     }
     }
    ],
    "spoiler": false,
@@ -35537,7 +36044,12 @@
        }
       }
      ],
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Hobart, the botanist.",
+      "es": "Hobart, el botánico.",
+      "pt": "Hobart, o botânico."
+     }
     }
    ],
    "spoiler": false,
@@ -36131,7 +36643,12 @@
        }
       }
      ],
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Hoder, the greedy.",
+      "es": "Hode, el druida.",
+      "pt": "Hode, o druida."
+     }
     },
     {
      "afterQuests": [],
@@ -36181,7 +36698,7 @@
       4,
       0
      ],
-     "link": "https://map.opengea.tech/#2.AgA9zAIGAQwBAQEAANBBxfUwCwQUIL2RlckB",
+     "link": "https://map.opengea.tech/#2.AgA9zAIGAQABAQEAANAJ18MsEFCA9EZWJgc",
      "place": {
       "near": {
        "en": "Hoder's Tool Shop",
@@ -36261,7 +36778,16 @@
        }
       }
      ],
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "_fb": [
+       "pt",
+       "es"
+      ],
+      "en": "Hode, the druid.",
+      "es": "Hode, the druid.",
+      "pt": "Hode, the druid."
+     }
     }
    ],
    "spoiler": false,
@@ -36660,7 +37186,12 @@
       },
       "underground": false
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Inna, the clothier.",
+      "es": "Inna, la costurera.",
+      "pt": "Inna, a alfaiate."
+     }
     }
    ],
    "spoiler": false,
@@ -37160,7 +37691,12 @@
        }
       }
      ],
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Ismet, the trader.",
+      "es": "Ismet, el comerciante.",
+      "pt": "Ismet, o comerciante."
+     }
     }
    ],
    "spoiler": false,
@@ -37622,7 +38158,12 @@
        }
       }
      ],
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Isra, the trader.",
+      "es": "Isra, la comerciante.",
+      "pt": "Isra, a comerciante."
+     }
     }
    ],
    "spoiler": false,
@@ -38063,7 +38604,7 @@
       4,
       0
      ],
-     "link": "https://map.opengea.tech/#2.AgDhA6YCBgEEAQEBAADQobDhA6YCAQZKYXF1ZXM",
+     "link": "https://map.opengea.tech/#2.AgDhA6YCBgEAAQEBAADQCRs-YCoQYKAUFldXNgc",
      "place": {
       "near": {
        "en": "The Sewers",
@@ -38135,7 +38676,12 @@
        }
       }
      ],
-     "spoiler": true
+     "spoiler": true,
+     "title": {
+      "en": "Jaques, the fisherman.",
+      "es": "Jaques, el pescador.",
+      "pt": "Jaques, o pescador."
+     }
     }
    ],
    "spoiler": true,
@@ -38634,7 +39180,7 @@
       18,
       14
      ],
-     "link": "https://map.opengea.tech/#2.AgCAA90BBgEKAQEBAADQQcMDDnQHBCAolYmlkaWFoQE",
+     "link": "https://map.opengea.tech/#2.AgCAA90BBgEAAQEBAADQCQ840B0QgKBUJpZGlhaGBg",
      "place": {
       "near": {
        "en": "Jebidiah's Hut",
@@ -38707,7 +39253,12 @@
        }
       }
      ],
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Jebidiah, the high botanist.",
+      "es": "Jebidiah, el alto botánico.",
+      "pt": "Jebidiah, o alto botânico."
+     }
     }
    ],
    "spoiler": false,
@@ -39193,7 +39744,12 @@
        }
       }
      ],
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Joan, the merchant.",
+      "es": "Joan, la mercadera.",
+      "pt": "Joan, a mercadora."
+     }
     }
    ],
    "spoiler": false,
@@ -39475,7 +40031,9 @@
     "es": "Soy un marinero bajo las órdenes de Dylan, solía trabajar en el establecimiento de Rasobar, pero me trasladó aquí desde entonces, para un aprendizaje.",
     "pt": "Sou um marinheiro sob o comando de Dylan, costumava trabalhar no estabelecimento de Rasobar, mas ele me transferiu para cá desde então, para um aprendizado."
    },
-   "near": [],
+   "near": [
+    "npc:logan"
+   ],
    "quests": [],
    "ref": "npc:johnny",
    "render": {
@@ -39486,6 +40044,33 @@
     "src": "/renders/npcs/johnny.webp"
    },
    "shifts": [
+    {
+     "afterQuests": [],
+     "hours": [
+      4,
+      0
+     ],
+     "link": "https://map.opengea.tech/#2.AgD6AqQCBgEAAQEBAADQCasvQCoQYKD0hubmlgc",
+     "place": {
+      "near": {
+       "en": "East Nordha Port",
+       "es": "Puerto de Nordha Este",
+       "pt": "Porto de Nordha Oriental"
+      },
+      "town": {
+       "en": "East Nordha",
+       "es": "Nordha Este",
+       "pt": "Nordha Oriental"
+      },
+      "underground": false
+     },
+     "spoiler": false,
+     "title": {
+      "en": "Johnny, the sailor.",
+      "es": "Johnny, el marinero.",
+      "pt": "Johnny, o marinheiro."
+     }
+    },
     {
      "afterQuests": [],
      "conversation": [
@@ -39515,29 +40100,12 @@
       },
       "underground": false
      },
-     "spoiler": true
-    },
-    {
-     "afterQuests": [],
-     "hours": [
-      4,
-      0
-     ],
-     "link": "https://map.opengea.tech/#2.AgD6AqQCBgEAAQEBAADQCasvQCoQYKD0hubmlgc",
-     "place": {
-      "near": {
-       "en": "East Nordha Port",
-       "es": "Puerto de Nordha Este",
-       "pt": "Porto de Nordha Oriental"
-      },
-      "town": {
-       "en": "East Nordha",
-       "es": "Nordha Este",
-       "pt": "Nordha Oriental"
-      },
-      "underground": false
-     },
-     "spoiler": false
+     "spoiler": true,
+     "title": {
+      "en": "Johnny, the sailor.",
+      "es": "Johnny, el marinero.",
+      "pt": "Johnny, o marinheiro."
+     }
     }
    ],
    "spoiler": false,
@@ -39916,7 +40484,12 @@
       },
       "underground": true
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Jon, the designer.",
+      "es": "Jon, el diseñador.",
+      "pt": "Jon, o desenhista."
+     }
     }
    ],
    "spoiler": false,
@@ -40300,7 +40873,12 @@
       },
       "underground": true
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Kaan, the general.",
+      "es": "Kaan, el general.",
+      "pt": "Kaan, o general."
+     }
     }
    ],
    "spoiler": false,
@@ -40414,7 +40992,12 @@
       },
       "underground": true
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Karamel, the cat.",
+      "es": "Karamel, el gato.",
+      "pt": "Karamel, o gato."
+     }
     }
    ],
    "spoiler": false,
@@ -40855,7 +41438,12 @@
        "price": 100
       }
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Kari, the gifted girl.",
+      "es": "Kari, la niña talentosa.",
+      "pt": "Kari, a menina talentosa."
+     }
     }
    ],
    "spoiler": false,
@@ -41234,7 +41822,12 @@
       },
       "underground": true
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Karmac, the designer.",
+      "es": "Karmac, el diseñador.",
+      "pt": "Karmac, o desenhista."
+     }
     }
    ],
    "spoiler": false,
@@ -41651,7 +42244,12 @@
        }
       }
      ],
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Kazim, the powderman.",
+      "es": "Kazim, el polvorista.",
+      "pt": "Kazim, o polvorista."
+     }
     }
    ],
    "spoiler": false,
@@ -42039,7 +42637,12 @@
       },
       "underground": false
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Leofric, the guard.",
+      "es": "Leofric, el guardia.",
+      "pt": "Leofric, o guarda."
+     }
     }
    ],
    "spoiler": false,
@@ -42434,7 +43037,12 @@
      "services": {
       "heal": true
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Lisa, the priestess.",
+      "es": "Lisa, la sacerdotisa.",
+      "pt": "Lisa, a sacerdotisa."
+     }
     }
    ],
    "spoiler": false,
@@ -42814,7 +43422,9 @@
     "es": "Comercio magia. Para aquellos con un corazón sintonizado con los ritmos silenciosos del mundo. No solo monedas, entiende.",
     "pt": "Eu negocio magia. Para aqueles com um coração sintonizado aos ritmos silenciosos do mundo. Não apenas moedas, veja bem."
    },
-   "near": [],
+   "near": [
+    "npc:johnny"
+   ],
    "quests": [],
    "ref": "npc:logan",
    "render": {
@@ -42946,7 +43556,12 @@
        }
       }
      ],
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Logan, a wealthy mage.",
+      "es": "Logan, un mago rico.",
+      "pt": "Logan, um mago rico."
+     }
     }
    ],
    "spoiler": false,
@@ -43231,9 +43846,7 @@
     "es": "¡Soy vendedor de tienda! ¿Eres tonto o qué?",
     "pt": "Sou vendedor de loja! Você é burro ou o quê?"
    },
-   "near": [
-    "npc:morrigan"
-   ],
+   "near": [],
    "quests": [],
    "ref": "npc:loke",
    "render": {
@@ -43246,10 +43859,126 @@
    "shifts": [
     {
      "afterQuests": [
+      "quest:q1188"
+     ],
+     "conversation": [
+      {
+       "keys": [],
+       "kind": "farewell",
+       "spoiler": false,
+       "text": {
+        "en": "When you least expect it.",
+        "es": "Cuando menos lo esperas.",
+        "pt": "Quando você menos espera."
+       }
+      }
+     ],
+     "hours": null,
+     "link": "https://map.opengea.tech/#2.AgDaAsACBgECAQEBAADQUZy2ALBAAAHT21oZ",
+     "place": {
+      "near": {
+       "en": "Loke's Home",
+       "es": "Casa de Loke",
+       "pt": "Casa de Loke"
+      },
+      "town": {
+       "en": "East Nordha",
+       "es": "Nordha Este",
+       "pt": "Nordha Oriental"
+      },
+      "underground": false
+     },
+     "services": {
+      "travel": {
+       "link": "https://map.opengea.tech/#2.AgC6AsICBgEEAQEBAAAUKiLjdkktLsnMSyzJzM8DAA",
+       "place": {
+        "near": {
+         "en": "East Nordha Mines",
+         "es": "Minas de Nordha Este",
+         "pt": "Minas de Nordha Oriental"
+        },
+        "town": {
+         "en": "East Nordha",
+         "es": "Nordha Este",
+         "pt": "Nordha Oriental"
+        },
+        "underground": false
+       }
+      }
+     },
+     "spoiler": true,
+     "title": {
+      "en": "Loke, the jokester.",
+      "es": "Loke, el bromista.",
+      "pt": "Loke, o brincalhão."
+     }
+    },
+    {
+     "afterQuests": [
+      "quest:q1207"
+     ],
+     "conversation": [
+      {
+       "keys": [],
+       "kind": "farewell",
+       "spoiler": false,
+       "text": {
+        "en": "Yes! Haha!",
+        "es": "¡Sí! ¡Jaja!",
+        "pt": "Sim! Haha!"
+       }
+      }
+     ],
+     "hours": null,
+     "link": "https://map.opengea.tech/#2.AgCyAsICBgEEAQEBAADQoXCyAsICAQRMb2tl",
+     "place": {
+      "near": {
+       "en": "East Nordha Mines",
+       "es": "Minas de Nordha Este",
+       "pt": "Minas de Nordha Oriental"
+      },
+      "town": {
+       "en": "East Nordha",
+       "es": "Nordha Este",
+       "pt": "Nordha Oriental"
+      },
+      "underground": false
+     },
+     "services": {
+      "travel": {
+       "link": "https://map.opengea.tech/#2.AgDCAsICBgEGAQEBAAAUOiLjdkktLsnMSyzJzM8DAA",
+       "place": {
+        "near": {
+         "en": "Loke's Home",
+         "es": "Casa de Loke",
+         "pt": "Casa de Loke"
+        },
+        "town": {
+         "en": "East Nordha",
+         "es": "Nordha Este",
+         "pt": "Nordha Oriental"
+        },
+        "underground": false
+       }
+      }
+     },
+     "spoiler": true,
+     "title": {
+      "_fb": [
+       "pt",
+       "es"
+      ],
+      "en": "Loke, the challenger.",
+      "es": "Loke, the challenger.",
+      "pt": "Loke, the challenger."
+     }
+    },
+    {
+     "afterQuests": [
       "quest:q1212"
      ],
      "hours": null,
-     "link": "https://map.opengea.tech/#2.AgAOogMGAQQBAQEAANChUA6iAwEETG9rZQ",
+     "link": "https://map.opengea.tech/#2.AgAOogMGAQABAQEAANAJ5SA6EEDA9LZWBg",
      "place": {
       "near": {
        "en": "Morrigan's Boutique",
@@ -43330,114 +44059,21 @@
        }
       }
      ],
-     "spoiler": true
-    },
-    {
-     "afterQuests": [
-      "quest:q1207"
-     ],
-     "conversation": [
-      {
-       "keys": [],
-       "kind": "farewell",
-       "spoiler": false,
-       "text": {
-        "en": "Yes! Haha!",
-        "es": "¡Sí! ¡Jaja!",
-        "pt": "Sim! Haha!"
-       }
-      }
-     ],
-     "hours": null,
-     "link": "https://map.opengea.tech/#2.AgCyAsICBgEEAQEBAADQoXCyAsICAQRMb2tl",
-     "place": {
-      "near": {
-       "en": "East Nordha Mines",
-       "es": "Minas de Nordha Este",
-       "pt": "Minas de Nordha Oriental"
-      },
-      "town": {
-       "en": "East Nordha",
-       "es": "Nordha Este",
-       "pt": "Nordha Oriental"
-      },
-      "underground": false
-     },
-     "services": {
-      "travel": {
-       "link": "https://map.opengea.tech/#2.AgDCAsICBgEGAQEBAAAUOiLjdkktLsnMSyzJzM8DAA",
-       "place": {
-        "near": {
-         "en": "Loke's Home",
-         "es": "Casa de Loke",
-         "pt": "Casa de Loke"
-        },
-        "town": {
-         "en": "East Nordha",
-         "es": "Nordha Este",
-         "pt": "Nordha Oriental"
-        },
-        "underground": false
-       }
-      }
-     },
-     "spoiler": true
-    },
-    {
-     "afterQuests": [
-      "quest:q1188"
-     ],
-     "conversation": [
-      {
-       "keys": [],
-       "kind": "farewell",
-       "spoiler": false,
-       "text": {
-        "en": "When you least expect it.",
-        "es": "Cuando menos lo esperas.",
-        "pt": "Quando você menos espera."
-       }
-      }
-     ],
-     "hours": null,
-     "link": "https://map.opengea.tech/#2.AgDaAsACBgECAQEBAADQUZy2ALBAAAHT21oZ",
-     "place": {
-      "near": {
-       "en": "Loke's Home",
-       "es": "Casa de Loke",
-       "pt": "Casa de Loke"
-      },
-      "town": {
-       "en": "East Nordha",
-       "es": "Nordha Este",
-       "pt": "Nordha Oriental"
-      },
-      "underground": false
-     },
-     "services": {
-      "travel": {
-       "link": "https://map.opengea.tech/#2.AgC6AsICBgEEAQEBAAAUKiLjdkktLsnMSyzJzM8DAA",
-       "place": {
-        "near": {
-         "en": "East Nordha Mines",
-         "es": "Minas de Nordha Este",
-         "pt": "Minas de Nordha Oriental"
-        },
-        "town": {
-         "en": "East Nordha",
-         "es": "Nordha Este",
-         "pt": "Nordha Oriental"
-        },
-        "underground": false
-       }
-      }
-     },
-     "spoiler": true
+     "spoiler": true,
+     "title": {
+      "_fb": [
+       "pt",
+       "es"
+      ],
+      "en": "Loke, the instigator.",
+      "es": "Loke, the instigator.",
+      "pt": "Loke, the instigator."
+     }
     }
    ],
    "spoiler": true,
    "title": {
-    "en": "Loke, the instigator.",
+    "en": "Loke, the jokester.",
     "es": "Loke, el bromista.",
     "pt": "Loke, o brincalhão."
    }
@@ -43931,7 +44567,7 @@
       4,
       0
      ],
-     "link": "https://map.opengea.tech/#2.AgDFA5gDBgEMAQEBAADQQUUXD2AOBBww1cmxlZW5AQ",
+     "link": "https://map.opengea.tech/#2.AgDFA5gDBgEAAQEBAADQCV08gDkQcMBUJ8dWVuYG",
      "place": {
       "near": {
        "en": "Lurleen's Flower Shop",
@@ -43996,7 +44632,12 @@
        }
       }
      ],
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Lurleen, the flower trader.",
+      "es": "Lurleen, la comerciante de flores.",
+      "pt": "Lurleen, a comerciante de flores."
+     }
     }
    ],
    "spoiler": false,
@@ -44479,7 +45120,12 @@
        }
       }
      ],
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Mabel, the peasant.",
+      "es": "Mabel, la campesina.",
+      "pt": "Mabel, a camponesa."
+     }
     }
    ],
    "spoiler": false,
@@ -45339,7 +45985,12 @@
        }
       }
      ],
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Margery, the hostess.",
+      "es": "Margery, la anfitriona.",
+      "pt": "Margery, a anfitriã."
+     }
     },
     {
      "afterQuests": [],
@@ -45365,7 +46016,7 @@
       22,
       2
      ],
-     "link": "https://map.opengea.tech/#2.AgDZBIQCBgEIAQEBAADQQUFnExAKBBw0hcmdlcnlAQ",
+     "link": "https://map.opengea.tech/#2.AgDZBIQCBgEAAQEBAADQCZ1NQCgQcNAUJndWJpcH",
      "place": {
       "near": {
        "en": "Basile Inn",
@@ -45398,7 +46049,12 @@
        }
       }
      ],
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Margery, the hostess.",
+      "es": "Margery, la anfitriona.",
+      "pt": "Margery, a anfitriã."
+     }
     }
    ],
    "spoiler": false,
@@ -45901,7 +46557,12 @@
        }
       }
      ],
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Martem, the clothier.",
+      "es": "Martem, el comerciante de telas.",
+      "pt": "Martem, o comerciante de tecidos."
+     }
     }
    ],
    "spoiler": false,
@@ -46497,7 +47158,12 @@
      "services": {
       "heal": true
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Mary, the botanist.",
+      "es": "Mary, la botánica.",
+      "pt": "Mary, a botânica."
+     }
     }
    ],
    "spoiler": false,
@@ -47089,7 +47755,12 @@
        }
       }
      ],
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Matthew, the equipment trader.",
+      "es": "Matthew, el comerciante de equipamiento.",
+      "pt": "Matthew, o comerciante de equipamentos."
+     }
     }
    ],
    "spoiler": false,
@@ -47555,7 +48226,12 @@
        }
       }
      ],
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Maude, the merchant.",
+      "es": "Maude, la mercadera.",
+      "pt": "Maude, a mercadora."
+     }
     }
    ],
    "spoiler": false,
@@ -48238,7 +48914,12 @@
      "services": {
       "heal": true
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Maxwell, the monk.",
+      "es": "Maxwell, el monje.",
+      "pt": "Maxwell, o monge."
+     }
     }
    ],
    "spoiler": false,
@@ -48781,7 +49462,12 @@
        }
       }
      ],
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Meredith, the noble.",
+      "es": "Meredith, la noble.",
+      "pt": "Meredith, a nobre."
+     }
     }
    ],
    "spoiler": false,
@@ -49187,7 +49873,12 @@
       },
       "underground": false
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Merida, the queen.",
+      "es": "Merida, la reina.",
+      "pt": "Merida, a rainha."
+     }
     }
    ],
    "spoiler": false,
@@ -49574,7 +50265,12 @@
       },
       "underground": true
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Millen, the designer.",
+      "es": "Millen, el diseñador.",
+      "pt": "Millen, o desenhista."
+     }
     }
    ],
    "spoiler": false,
@@ -49923,9 +50619,7 @@
     "es": "¡Soy dueña de esta tienda! Recibo mis mercancías de la ruta de los mercaderes.",
     "pt": "Sou dona desta loja! Recebo minhas mercadorias da rota dos mercadores."
    },
-   "near": [
-    "npc:loke"
-   ],
+   "near": [],
    "quests": [],
    "ref": "npc:morrigan",
    "render": {
@@ -50038,7 +50732,7 @@
       4,
       0
      ],
-     "link": "https://map.opengea.tech/#2.AgAOoAMGAQQBAQEAANCh0A6gAwEITW9ycmlnYW4",
+     "link": "https://map.opengea.tech/#2.AgAOoAMGAQABAQEAANAJ7QA6EIDQ9CYnl3YW5gY",
      "place": {
       "near": {
        "en": "Morrigan's Boutique",
@@ -50118,7 +50812,12 @@
        }
       }
      ],
-     "spoiler": true
+     "spoiler": true,
+     "title": {
+      "en": "Morrigan, the druid.",
+      "es": "Morrigan, la druida.",
+      "pt": "Morrigan, a druida."
+     }
     }
    ],
    "spoiler": true,
@@ -50553,7 +51252,12 @@
       },
       "underground": false
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Myrtle, the young botanist.",
+      "es": "Myrtle, la joven botánica.",
+      "pt": "Myrtle, a jovem botânica."
+     }
     }
    ],
    "spoiler": false,
@@ -50863,7 +51567,7 @@
       2,
       0
      ],
-     "link": "https://map.opengea.tech/#2.AgAf2QMGARUBAQEAANCBDPeRPRBQ4FQmlsYG",
+     "link": "https://map.opengea.tech/#2.AgAf2QMGAQABAQEAANAJ95E9EFDgVCaWxgY",
      "place": {
       "near": {
        "en": "Nebil's Gems & Shinies",
@@ -50928,7 +51632,12 @@
        }
       }
      ],
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Nebil, the trader.",
+      "es": "Nebil, el comerciante.",
+      "pt": "Nebil, o comerciante."
+     }
     }
    ],
    "spoiler": false,
@@ -51343,7 +52052,12 @@
        }
       }
      ],
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Newell, a wealthy mage.",
+      "es": "Newell, un mago rico.",
+      "pt": "Newell, um mago rico."
+     }
     }
    ],
    "spoiler": false,
@@ -51707,7 +52421,8 @@
     "pt": "Minha função é fornecer assistência médica. Se está ferido ou doente, farei o possível para restaurar sua vida."
    },
    "near": [
-    "npc:assa"
+    "npc:assa",
+    "npc:felix"
    ],
    "quests": [],
    "ref": "npc:newt",
@@ -51739,7 +52454,12 @@
       },
       "underground": false
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Newt, the robot.",
+      "es": "Newt, el robot.",
+      "pt": "Newt, o robô."
+     }
     }
    ],
    "spoiler": false,
@@ -52236,7 +52956,12 @@
        }
       }
      ],
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Nick, the outlaw.",
+      "es": "Nick, el forajido.",
+      "pt": "Nick, o fora da lei."
+     }
     }
    ],
    "spoiler": false,
@@ -52733,7 +53458,12 @@
        }
       }
      ],
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Nunie, the fisherman.",
+      "es": "Nunie, el pescador.",
+      "pt": "Nunie, o pescador."
+     }
     }
    ],
    "spoiler": false,
@@ -53255,7 +53985,12 @@
        }
       }
      ],
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Odie, the merchant.",
+      "es": "Odie, el mercader.",
+      "pt": "Odie, o mercador."
+     }
     }
    ],
    "spoiler": false,
@@ -53830,7 +54565,12 @@
        }
       }
      ],
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Opal, the equipment trader.",
+      "es": "Opal, la comerciante de equipamiento.",
+      "pt": "Opal, a comerciante de equipamentos."
+     }
     }
    ],
    "spoiler": false,
@@ -54183,7 +54923,12 @@
       },
       "underground": true
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Osbert.",
+      "es": "Osbert.",
+      "pt": "Osbert."
+     }
     }
    ],
    "spoiler": false,
@@ -54669,7 +55414,12 @@
        }
       }
      ],
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Otis, the fish trader.",
+      "es": "Otis, el comerciante de pescado.",
+      "pt": "Otis, o comerciante de peixes."
+     }
     }
    ],
    "spoiler": false,
@@ -55278,7 +56028,12 @@
        }
       }
      ],
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Ozrid, the outlaw.",
+      "es": "Ozrid, el forajido.",
+      "pt": "Ozrid, o fora da lei."
+     }
     }
    ],
    "spoiler": false,
@@ -55338,7 +56093,12 @@
       },
       "underground": true
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "A pale goblin.",
+      "es": "Un goblin pálido.",
+      "pt": "Um goblin pálido."
+     }
     }
    ],
    "spoiler": false,
@@ -55466,7 +56226,12 @@
       },
       "underground": true
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Patas, the cat.",
+      "es": "Patas, el gato.",
+      "pt": "Patas, o gato."
+     }
     }
    ],
    "spoiler": false,
@@ -55875,7 +56640,12 @@
       },
       "underground": false
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Perlin, the mage.",
+      "es": "Perlin, el mago.",
+      "pt": "Perlin, o mago."
+     }
     }
    ],
    "spoiler": false,
@@ -56224,7 +56994,12 @@
       },
       "underground": false
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Perry, the student.",
+      "es": "Perry, el estudiante.",
+      "pt": "Perry, o estudante."
+     }
     }
    ],
    "spoiler": false,
@@ -56719,7 +57494,12 @@
      "services": {
       "heal": true
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Petrus, the priest.",
+      "es": "Petrus, el sacerdote.",
+      "pt": "Petrus, o sacerdote."
+     }
     }
    ],
    "spoiler": false,
@@ -57015,7 +57795,12 @@
       },
       "underground": false
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Philip, the outcast.",
+      "es": "Philip, el proscrito.",
+      "pt": "Philip, o proscrito."
+     }
     }
    ],
    "spoiler": false,
@@ -57401,7 +58186,12 @@
       },
       "underground": false
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Pythar, the robot.",
+      "es": "Pythar, el robot.",
+      "pt": "Pythar, o robô."
+     }
     }
    ],
    "spoiler": false,
@@ -57774,7 +58564,12 @@
        }
       }
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Ramel, the sailor.",
+      "es": "Ramel, el marinero.",
+      "pt": "Ramel, o marinheiro."
+     }
     }
    ],
    "spoiler": false,
@@ -58525,7 +59320,12 @@
        }
       }
      ],
-     "spoiler": true
+     "spoiler": true,
+     "title": {
+      "en": "Rasobar, the captain.",
+      "es": "Rasobar, el capitán.",
+      "pt": "Rasobar, o capitão."
+     }
     }
    ],
    "spoiler": true,
@@ -59003,7 +59803,12 @@
        }
       }
      ],
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Reginald, the inn keeper.",
+      "es": "Reginald, el posadero.",
+      "pt": "Reginald, o estalajadeiro."
+     }
     }
    ],
    "spoiler": false,
@@ -59419,7 +60224,7 @@
       4,
       0
      ],
-     "link": "https://map.opengea.tech/#2.AgAZiAIGAQEBAQEAANARXAaiQECBVFnaWhg",
+     "link": "https://map.opengea.tech/#2.AgAZiAIGAQABAQEAANAJl4EoEFAgVZa2FgY",
      "place": {
       "near": {
        "en": "Flower Spire",
@@ -59492,7 +60297,12 @@
        }
       }
      ],
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Reika, the maiden.",
+      "es": "Reika, la doncella.",
+      "pt": "Reika, a donzela."
+     }
     }
    ],
    "spoiler": false,
@@ -59586,7 +60396,12 @@
       },
       "underground": true
      },
-     "spoiler": true
+     "spoiler": true,
+     "title": {
+      "en": "Ribamar, the mushroom.",
+      "es": "Ribamar, la seta.",
+      "pt": "Ribamar, o cogumelo."
+     }
     }
    ],
    "spoiler": true,
@@ -60025,7 +60840,12 @@
        }
       }
      ],
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Roland, the trader.",
+      "es": "Roland, el mercader.",
+      "pt": "Roland, o mercador."
+     }
     }
    ],
    "spoiler": false,
@@ -60434,7 +61254,12 @@
       },
       "underground": false
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Roni, a child.",
+      "es": "Roni, un niño.",
+      "pt": "Roni, uma criança."
+     }
     }
    ],
    "spoiler": false,
@@ -60998,7 +61823,12 @@
        }
       }
      ],
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Rosel, the witch.",
+      "es": "Rosel, la bruja.",
+      "pt": "Rosel, a bruxa."
+     }
     }
    ],
    "spoiler": false,
@@ -61477,7 +62307,12 @@
        }
       }
      ],
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Rubius, the mage.",
+      "es": "Rubius, el mago.",
+      "pt": "Rubius, o mago."
+     }
     }
    ],
    "spoiler": false,
@@ -61871,7 +62706,12 @@
       },
       "underground": false
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Rue, the farmer.",
+      "es": "Rue, el granjero.",
+      "pt": "Rue, o fazendeiro."
+     }
     }
    ],
    "spoiler": false,
@@ -62211,7 +63051,12 @@
       },
       "underground": false
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Rufus.",
+      "es": "Rufus.",
+      "pt": "Rufus."
+     }
     }
    ],
    "spoiler": false,
@@ -62571,7 +63416,12 @@
        "price": 100
       }
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Sabrina, the archer.",
+      "es": "Sabrina, la arquera.",
+      "pt": "Sabrina, a arqueira."
+     }
     }
    ],
    "spoiler": false,
@@ -63204,7 +64054,12 @@
      "services": {
       "heal": true
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Sal, the botanist.",
+      "es": "Sal, el botánico.",
+      "pt": "Sal, o botânico."
+     }
     }
    ],
    "spoiler": false,
@@ -63695,7 +64550,12 @@
        }
       }
      ],
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Salazar, the merchant.",
+      "es": "Salazar, el mercader.",
+      "pt": "Salazar, o mercador."
+     }
     }
    ],
    "spoiler": false,
@@ -64076,7 +64936,12 @@
       },
       "underground": false
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Selene, the wheat farmer.",
+      "es": "Selene, la granjera de trigo.",
+      "pt": "Selene, a fazendeira de trigo."
+     }
     }
    ],
    "spoiler": false,
@@ -64442,7 +65307,12 @@
       },
       "underground": false
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Seraphina, the queen's servant.",
+      "es": "Seraphina, la sirvienta de la reina.",
+      "pt": "Seraphina, a serva da rainha."
+     }
     }
    ],
    "spoiler": false,
@@ -64842,7 +65712,12 @@
      "services": {
       "heal": true
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Sercha, the druid.",
+      "es": "Sercha, la druida.",
+      "pt": "Sercha, a druida."
+     }
     },
     {
      "afterQuests": [],
@@ -65152,7 +66027,12 @@
       },
       "underground": false
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Sercha, the druid.",
+      "es": "Sercha, la druida.",
+      "pt": "Sercha, a druida."
+     }
     }
    ],
    "spoiler": false,
@@ -65552,7 +66432,12 @@
       },
       "underground": false
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Serilda, the widow.",
+      "es": "Serilda, la viuda.",
+      "pt": "Serilda, a viúva."
+     }
     }
    ],
    "spoiler": false,
@@ -66060,7 +66945,12 @@
        }
       }
      ],
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Seymour, the mortician.",
+      "es": "Seymour, el sepulturero.",
+      "pt": "Seymour, o agente funerário."
+     }
     }
    ],
    "spoiler": false,
@@ -66759,7 +67649,12 @@
        }
       }
      ],
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Sigurd, the barkeeper.",
+      "es": "Sigurd, el tabernero.",
+      "pt": "Sigurd, o taverneiro."
+     }
     }
    ],
    "spoiler": false,
@@ -66869,7 +67764,12 @@
       },
       "underground": false
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Sky, the cat.",
+      "es": "Sky, el gato.",
+      "pt": "Sky, o gato."
+     }
     }
    ],
    "spoiler": false,
@@ -67026,7 +67926,12 @@
       },
       "underground": true
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Sushi, the cat.",
+      "es": "Sushi, el gato.",
+      "pt": "Sushi, o gato."
+     }
     }
    ],
    "spoiler": false,
@@ -67535,7 +68440,12 @@
       },
       "underground": false
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Tansy, the high botanist.",
+      "es": "Tansy, la alta botánica.",
+      "pt": "Tansy, a alta botanista."
+     }
     }
    ],
    "spoiler": false,
@@ -68208,7 +69118,12 @@
      "services": {
       "heal": true
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Thadeus, the monk.",
+      "es": "Thadeus, el monje.",
+      "pt": "Thadeus, o monge."
+     }
     },
     {
      "afterQuests": [],
@@ -68855,7 +69770,12 @@
      "services": {
       "heal": true
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Thadeus, the monk.",
+      "es": "Thadeus, el monje.",
+      "pt": "Thadeus, o monge."
+     }
     }
    ],
    "spoiler": false,
@@ -69226,7 +70146,12 @@
       },
       "underground": false
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Thelma.",
+      "es": "Thelma.",
+      "pt": "Thelma."
+     }
     }
    ],
    "spoiler": false,
@@ -69553,7 +70478,12 @@
       },
       "underground": false
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Thibault, the builder.",
+      "es": "Thibault, el constructor.",
+      "pt": "Thibault, o construtor."
+     }
     }
    ],
    "spoiler": false,
@@ -69914,7 +70844,12 @@
       },
       "underground": false
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Thomas, the noble.",
+      "es": "Thomas, el noble.",
+      "pt": "Thomas, o nobre."
+     }
     }
    ],
    "spoiler": false,
@@ -70419,7 +71354,12 @@
        }
       }
      ],
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Tim, the outlaw.",
+      "es": "Tim, el forajido.",
+      "pt": "Tim, o fora da lei."
+     }
     }
    ],
    "spoiler": false,
@@ -70717,7 +71657,12 @@
       },
       "underground": true
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Timur, the miner.",
+      "es": "Timur, el minero.",
+      "pt": "Timur, o minerador."
+     }
     }
    ],
    "spoiler": false,
@@ -71334,7 +72279,12 @@
        }
       }
      ],
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Tink, the magic cat.",
+      "es": "Tink, el gato mágico.",
+      "pt": "Tink, o gato mágico."
+     }
     }
    ],
    "spoiler": false,
@@ -71726,7 +72676,12 @@
        }
       }
      ],
-     "spoiler": true
+     "spoiler": true,
+     "title": {
+      "en": "Tock, the nordhic.",
+      "es": "Tock, el nhórdico.",
+      "pt": "Tock, o nhórdico."
+     }
     }
    ],
    "spoiler": true,
@@ -72159,7 +73114,12 @@
        }
       }
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Torvan, the sailor.",
+      "es": "Torvan, el marinero.",
+      "pt": "Torvan, o marinheiro."
+     }
     }
    ],
    "spoiler": false,
@@ -72548,7 +73508,12 @@
       },
       "underground": false
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Tristan, the farmer.",
+      "es": "Tristan, el granjero.",
+      "pt": "Tristan, o fazendeiro."
+     }
     }
    ],
    "spoiler": false,
@@ -72934,7 +73899,12 @@
       },
       "underground": false
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Tufi, the blonde kid.",
+      "es": "Tufi, el niño rubio.",
+      "pt": "Tufi, o garoto loiro."
+     }
     }
    ],
    "spoiler": false,
@@ -73068,7 +74038,12 @@
       },
       "underground": true
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Tutu, the cat.",
+      "es": "Tutu, el gato.",
+      "pt": "Tutu, o gato."
+     }
     }
    ],
    "spoiler": false,
@@ -73478,7 +74453,12 @@
        "price": 100
       }
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Ulrich, the guard.",
+      "es": "Ulrich, el guardia.",
+      "pt": "Ulrich, o guarda."
+     }
     }
    ],
    "spoiler": false,
@@ -73822,7 +74802,12 @@
       },
       "underground": false
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Vee, the student.",
+      "es": "Vee, el estudiante.",
+      "pt": "Vee, o estudante."
+     }
     }
    ],
    "spoiler": false,
@@ -74341,7 +75326,7 @@
       2,
       0
      ],
-     "link": "https://map.opengea.tech/#2.AgDaAhEGAQkBAQEAANBBQmoLRAQYWKW9sZXRAQ",
+     "link": "https://map.opengea.tech/#2.AgDaAhEGAQABAQEAANAJqS0QEWBglfbGVkYH",
      "place": {
       "near": {
        "en": "Violet's Witch House",
@@ -74422,7 +75407,12 @@
        }
       }
      ],
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Violet, the witch.",
+      "es": "Violet, la bruja.",
+      "pt": "Violet, a bruxa."
+     }
     }
    ],
    "spoiler": false,
@@ -74799,7 +75789,7 @@
       4,
       0
      ],
-     "link": "https://map.opengea.tech/#2.AgCPBZwCBgEGAQEBAADQodGPBZwCAQdXaWxmcmVk",
+     "link": "https://map.opengea.tech/#2.AgCPBZwCBgEAAQEBAADQCf1YwCkQcHCVxmYmV0YG",
      "place": {
       "near": {
        "en": "Basile Inn",
@@ -74856,7 +75846,12 @@
        }
       }
      ],
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Wilfred, the peasant.",
+      "es": "Wilfred, el campesino.",
+      "pt": "Wilfred, o camponês."
+     }
     }
    ],
    "spoiler": false,
@@ -75387,7 +76382,12 @@
        }
       }
      ],
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Wolfram, the fisherman.",
+      "es": "Wolfram, el pescador.",
+      "pt": "Wolfram, o pescador."
+     }
     }
    ],
    "spoiler": false,
@@ -75444,7 +76444,12 @@
        }
       }
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Dylan, the wounded sailor.",
+      "es": "Dylan, el marinero herido.",
+      "pt": "Dylan, o marinheiro ferido."
+     }
     }
    ],
    "spoiler": false,
@@ -75876,7 +76881,12 @@
        }
       }
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Yacht, a wealthy mage.",
+      "es": "Yacht, un mago rico.",
+      "pt": "Yacht, um mago rico."
+     }
     }
    ],
    "spoiler": false,
@@ -76378,7 +77388,12 @@
       },
       "underground": false
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Yorking, the graveyard keeper.",
+      "es": "Yorking, el guardián del cementerio.",
+      "pt": "Yorking, o guardião do cemitério."
+     }
     }
    ],
    "spoiler": false,
@@ -76954,7 +77969,12 @@
        }
       }
      ],
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Yoz, the archer.",
+      "es": "Yoz, el arquero.",
+      "pt": "Yoz, o arqueiro."
+     }
     }
    ],
    "spoiler": false,
@@ -77400,7 +78420,12 @@
        }
       }
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Yseult, the king's advisor.",
+      "es": "Yseult, la consejera del rey.",
+      "pt": "Yseult, a conselheira do rei."
+     }
     }
    ],
    "spoiler": false,
@@ -77459,7 +78484,7 @@
     {
      "afterQuests": [],
      "hours": null,
-     "link": "https://map.opengea.tech/#2.AgB31QMGARQBAQEAANCBCndXPRBQkFU3V2cG",
+     "link": "https://map.opengea.tech/#2.AgAf3wMGAQoBAQEAANBBw318DwQUZNXN1ZkB",
      "place": {
       "near": {
        "en": "Nebil's Gems & Shinies",
@@ -77473,7 +78498,12 @@
       },
       "underground": true
      },
-     "spoiler": true
+     "spoiler": true,
+     "title": {
+      "en": "Yusuf, the cat.",
+      "es": "Yusuf, el gato.",
+      "pt": "Yusuf, o gato."
+     }
     },
     {
      "afterQuests": [],
@@ -77492,12 +78522,17 @@
       },
       "underground": true
      },
-     "spoiler": true
+     "spoiler": true,
+     "title": {
+      "en": "Yusuf, the cat.",
+      "es": "Yusuf, el gato.",
+      "pt": "Yusuf, o gato."
+     }
     },
     {
      "afterQuests": [],
      "hours": null,
-     "link": "https://map.opengea.tech/#2.AgAf3wMGAQoBAQEAANBBw318DwQUZNXN1ZkB",
+     "link": "https://map.opengea.tech/#2.AgB31QMGARQBAQEAANCBCndXPRBQkFU3V2cG",
      "place": {
       "near": {
        "en": "Nebil's Gems & Shinies",
@@ -77511,7 +78546,12 @@
       },
       "underground": true
      },
-     "spoiler": true
+     "spoiler": true,
+     "title": {
+      "en": "Yusuf, the cat.",
+      "es": "Yusuf, el gato.",
+      "pt": "Yusuf, o gato."
+     }
     },
     {
      "afterQuests": [],
@@ -77530,7 +78570,12 @@
       },
       "underground": true
      },
-     "spoiler": true
+     "spoiler": true,
+     "title": {
+      "en": "Yusuf, the cat.",
+      "es": "Yusuf, el gato.",
+      "pt": "Yusuf, o gato."
+     }
     }
    ],
    "spoiler": true,
@@ -78249,7 +79294,12 @@
        }
       }
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Zebulon, the mage.",
+      "es": "Zebulon, el mago.",
+      "pt": "Zebulon, o mago."
+     }
     },
     {
      "afterQuests": [],
@@ -78379,7 +79429,16 @@
        }
       }
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "_fb": [
+       "pt",
+       "es"
+      ],
+      "en": "Zebulon, the magic trader.",
+      "es": "Zebulon, the magic trader.",
+      "pt": "Zebulon, the magic trader."
+     }
     }
    ],
    "spoiler": false,
@@ -78805,7 +79864,12 @@
        }
       }
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Zoe, the queen.",
+      "es": "Zoe, la reina.",
+      "pt": "Zoe, a rainha."
+     }
     }
    ],
    "spoiler": false,
@@ -79171,7 +80235,12 @@
       },
       "underground": false
      },
-     "spoiler": false
+     "spoiler": false,
+     "title": {
+      "en": "Zori, the youngest.",
+      "es": "Zori, el más joven.",
+      "pt": "Zori, o mais novo."
+     }
     }
    ],
    "spoiler": false,

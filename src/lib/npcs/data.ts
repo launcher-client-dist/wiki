@@ -50,6 +50,8 @@ export interface NpcLine {
 }
 
 export interface NpcShift {
+  /** The game's description of this shift's actor ("Zebulon, the mage."): a quest-progress one stays in the shift's spoiler. */
+  title?: Localized & Fallback;
   place: Place;
   /** The map link of the spot (the wiki's map opens there, the marker picked). */
   link: string;
@@ -104,7 +106,7 @@ export const LINE_ORDER: LineKind[] = ["greet", "job", "trade", "help", "skill",
 /** The item kinds an NPC trades (for the list's icons and filters): the items' categories, most first. */
 export function tradeKinds(n: NpcData, categoryOf: (item: string) => string | undefined, which: "sells" | "buys"): string[] {
   const c = new Map<string, number>();
-  for (const sh of n.shifts) for (const r of sh[which] ?? []) {
+  for (const sh of openShifts(n)) for (const r of sh[which] ?? []) {
     const k = categoryOf(r.item);
     if (k) c.set(k, (c.get(k) ?? 0) + 1);
   }
@@ -114,10 +116,26 @@ export function tradeKinds(n: NpcData, categoryOf: (item: string) => string | un
 /** The services an NPC offers, by key, over all its shifts. */
 export function serviceKeys(n: NpcData): ("travel" | "trainer" | "heal")[] {
   const out = new Set<"travel" | "trainer" | "heal">();
-  for (const sh of n.shifts) for (const k of Object.keys(sh.services ?? {}) as ("travel" | "trainer" | "heal")[]) out.add(k);
+  for (const sh of openShifts(n)) for (const k of Object.keys(sh.services ?? {}) as ("travel" | "trainer" | "heal")[]) out.add(k);
   return [...out];
 }
 
 export function hasHours(n: NpcData): boolean {
-  return n.shifts.some((s) => s.hours !== null);
+  return openShifts(n).some((s) => s.hours !== null);
+}
+
+/** The shifts a player meets without a quest (all of them on a quest-only page): what the hero, the list and the
+ *  sidebar show; a shift behind a quest is its own block's spoiler. */
+export function openShifts(n: NpcData): NpcShift[] {
+  const open = n.shifts.filter((s) => !s.spoiler);
+  return open.length ? open : n.shifts;
+}
+
+/** Shifts that take turns ("Turno N"): every one has hours and no two are out at once; else they are places ("Lugar N"). */
+export function takesTurns(n: NpcData): boolean {
+  const hs = n.shifts.map((s) => s.hours);
+  if (hs.some((h) => !h)) return false;
+  const on = (h: [number, number], t: number) => (h[0] <= h[1] ? t >= h[0] && t < h[1] : t >= h[0] || t < h[1]);
+  for (let t = 0; t < 24; t++) if (hs.filter((h) => on(h!, t)).length > 1) return false;
+  return true;
 }

@@ -374,6 +374,7 @@ export const pt = {
     shiftsTitle: "Horários e lugares",
     shiftsIntro: "Onde fica em cada turno. Um dia do jogo dura uma hora real: cada hora do jogo, 2,5 minutos.",
     placeTitle: "Onde fica",
+    placeN: "Lugar {n}",
     shiftN: "Turno {n}",
     outGame: "No jogo",
     outReal: "Em cada hora real",

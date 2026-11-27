@@ -47,6 +47,13 @@ describe("the NPC pages' data", () => {
     }
   });
 
+  test("the shifts a player meets without a quest come first (the hero, the list and the title are theirs)", () => {
+    for (const n of NPCS) {
+      const firstHidden = n.shifts.findIndex((s) => s.spoiler);
+      if (firstHidden >= 0) assert.ok(n.shifts.slice(firstHidden).every((s) => s.spoiler), `${n.id}: an open shift after a hidden one`);
+    }
+  });
+
   test("hours are game hours, a shop's restock is one", () => {
     for (const n of NPCS) for (const s of n.shifts) {
       if (s.hours) for (const h of s.hours) assert.ok(h >= 0 && h <= 24, `${n.id} hours ${s.hours}`);

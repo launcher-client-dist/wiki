@@ -15,7 +15,7 @@ import { HREFLANG, LANGS, LOCALE, type Lang } from "../../../lib/i18n.ts";
 import { homePath, SECTIONS, sectionAlternates, sectionPath } from "../../../lib/routes.ts";
 import { siteData } from "../../../lib/site-registry.ts";
 import { gameHour } from "../../../lib/monsters/data.ts";
-import { hasHours, serviceKeys, tradeKinds, type NpcData } from "../../../lib/npcs/data.ts";
+import { hasHours, openShifts, serviceKeys, tradeKinds, type NpcData } from "../../../lib/npcs/data.ts";
 import { displayName } from "../../../lib/names.ts";
 import uiSizes from "../../../data/ui-icons.json";
 const UI = uiSizes as Record<string, number[]>;
@@ -33,9 +33,10 @@ const NAMES = new Map(npcs.map((n) => [n.id, displayName(registry.require(n.ref)
 const rows = [...npcs].sort((a, b) => NAMES.get(a.id)!.name.localeCompare(NAMES.get(b.id)!.name, lang));
 const num = (v: number) => v.toLocaleString(LOCALE[lang]);
 const slugTown = (en: string) => en.toLowerCase().replace(/[^a-z0-9]+/g, "-");
-const townsOf = (n: NpcData) => (n.spoiler ? [] : [...new Set(n.shifts.map((s) => s.place.town.en))]);
+/** Only the shifts a player meets without a quest (a quest's place stays in its page's spoiler). */
+const townsOf = (n: NpcData) => (n.spoiler ? [] : [...new Set(openShifts(n).map((s) => s.place.town.en))]);
 const TOWN = new Map<string, { label: string; n: number }>();
-for (const n of npcs) for (const s of n.spoiler ? [] : n.shifts) TOWN.set(s.place.town.en, { label: s.place.town[lang], n: 0 });
+for (const n of npcs) for (const s of n.spoiler ? [] : openShifts(n)) TOWN.set(s.place.town.en, { label: s.place.town[lang], n: 0 });
 for (const n of npcs) for (const tw of townsOf(n)) TOWN.get(tw)!.n++;
 const townOpts = [...TOWN.entries()].sort((a, b) => b[1].n - a[1].n || a[1].label.localeCompare(b[1].label, lang));
 const sells = (n: NpcData) => (n.spoiler ? [] : tradeKinds(n, (i) => catOf.get(i), "sells"));
@@ -81,10 +82,10 @@ const icon = (name: string, scale = 2) => { const sz = UI[name] ?? [9, 9]; retur
         const dn = NAMES.get(n.id)!;
         const href = registry.url(n.ref, lang)!;
         const s = sells(n), b = buys(n);
-        const sellN = n.spoiler ? 0 : new Set(n.shifts.flatMap((x) => (x.sells ?? []).map((r) => r.item))).size;
-        const buyN = n.spoiler ? 0 : new Set(n.shifts.flatMap((x) => (x.buys ?? []).map((r) => r.item))).size;
+        const sellN = n.spoiler ? 0 : new Set(openShifts(n).flatMap((x) => (x.sells ?? []).map((r) => r.item))).size;
+        const buyN = n.spoiler ? 0 : new Set(openShifts(n).flatMap((x) => (x.buys ?? []).map((r) => r.item))).size;
         const towns = townsOf(n);
-        const hours = n.spoiler ? null : n.shifts.filter((x) => x.hours).map((x) => `${gameHour(x.hours![0])}–${gameHour(x.hours![1])}`);
+        const hours = n.spoiler ? null : openShifts(n).filter((x) => x.hours).map((x) => `${gameHour(x.hours![0])}–${gameHour(x.hours![1])}`);
         return (
           <DataRow search={[...LANGS.map((l) => e.name[l]), ...(n.spoiler ? [] : towns)].join(" ")} sort={{ sortname: dn.name, town: towns[0] ? TOWN.get(towns[0])!.label : "~", sells: sellN, buys: buyN, hours: hours?.length ? hours[0]! : "~" }}
             filters={{ town: towns.map(slugTown), sells: s, buys: b, services: n.spoiler ? [] : serviceKeys(n), hours: !n.spoiler && hasHours(n) ? ["yes"] : [] }}>
