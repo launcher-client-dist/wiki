@@ -2688,10 +2688,6 @@
    "id": "colman-s-kitchen",
    "items": [],
    "kind": "place",
-   "level": {
-    "max": 22,
-    "min": 17
-   },
    "link": "https://map.opengea.tech/#2.AgD6AooDBgEAAQEBAACUIgITcM7PyU3MUy9W8M4sSc5IzQMA",
    "monsters": [
     {
@@ -3194,10 +3190,6 @@
     }
    ],
    "kind": "place",
-   "level": {
-    "max": 13,
-    "min": 10
-   },
    "link": "https://map.opengea.tech/#2.AgBCyAEGAQABAQEAAJQiAhN0SS0uKcqvTE1R8C8tKcgvLgEA",
    "monsters": [
     {
@@ -3391,10 +3383,6 @@
     }
    ],
    "kind": "place",
-   "level": {
-    "max": 8,
-    "min": 6
-   },
    "link": "https://map.opengea.tech/#2.AgB_5gEGAQABAQEAAJQiAuNyyczPS81RCChNAgA",
    "monsters": [
     {
@@ -4025,10 +4013,6 @@
    "id": "east-nordha",
    "items": [],
    "kind": "town",
-   "level": {
-    "max": 8,
-    "min": 6
-   },
    "link": "https://map.opengea.tech/#2.AgDcAoIDBgEAAQEBAACUIgLjdk0sLlHwyy9KyUgEAA",
    "mapNames": [
     {
@@ -6022,7 +6006,7 @@
    "id": "garadum-s-arena",
    "inner": {
     "ladder": 6,
-    "rope": 9
+    "rope": 10
    },
    "items": [
     {
@@ -6943,10 +6927,6 @@
     }
    ],
    "kind": "place",
-   "level": {
-    "max": 19,
-    "min": 15
-   },
    "link": "https://map.opengea.tech/#2.AgDFA5wDBgEKAQEBAAAUtIgT9SktyklNzVMvVnDLyS9PLVIIzsgvAAA",
    "monsters": [
     {
@@ -8119,10 +8099,6 @@
    },
    "items": [],
    "kind": "town",
-   "level": {
-    "max": 8,
-    "min": 6
-   },
    "link": "https://map.opengea.tech/#2.AgBDqgIGAQABAQEAAJQiAmPzyy9KyUgEAA",
    "mapNames": [
     {
@@ -9234,10 +9210,6 @@
    },
    "items": [],
    "kind": "place",
-   "level": {
-    "max": 8,
-    "min": 6
-   },
    "link": "https://map.opengea.tech/#2.AgA_AwYBAAEBAQAAlCIC4_LPSVFwKspMSU8FAA",
    "monsters": [
     {
@@ -11331,10 +11303,6 @@
    },
    "items": [],
    "kind": "place",
-   "level": {
-    "max": 29,
-    "min": 20
-   },
    "link": "https://map.opengea.tech/#2.AgDeA5QDBgEAAQEBAACUIgLjCU7MSaxKLFIIzsgvAAA",
    "monsters": [
     {
@@ -11733,10 +11701,6 @@
     }
    ],
    "kind": "place",
-   "level": {
-    "max": 19,
-    "min": 14
-   },
    "link": "https://map.opengea.tech/#2.AgCeAa8DBgEIAQEBAAAUlIjjCs5OzClOL0pNLQEA",
    "monsters": [
     {
@@ -13137,10 +13101,6 @@
     }
    ],
    "kind": "place",
-   "level": {
-    "max": 9,
-    "min": 7
-   },
    "link": "https://map.opengea.tech/#2.AgDvApwDBgEAAQEBAACUIgLjDMlIVXDJT84uBgA",
    "monsters": [
     {
@@ -13228,10 +13188,6 @@
     }
    ],
    "kind": "place",
-   "level": {
-    "max": 8,
-    "min": 6
-   },
    "link": "https://map.opengea.tech/#2.AgCjAbwBBgEAAQEBAACUIgLjCslIVXBPLEpJzQMA",
    "monsters": [
     {
@@ -13801,10 +13757,6 @@
     }
    ],
    "kind": "place",
-   "level": {
-    "max": 8,
-    "min": 6
-   },
    "link": "https://map.opengea.tech/#2.AGNi4FrIwsYIAgwMIp0cHCH55XkZiTk5AA",
    "monsters": [
     {
@@ -13885,10 +13837,6 @@
    "id": "trader-s-square",
    "items": [],
    "kind": "place",
-   "level": {
-    "max": 8,
-    "min": 6
-   },
    "link": "https://map.opengea.tech/#2.AgCVA_wCBgEIAQEBAAAUlIjjDylKTEktUi9WCC4sTSxKBQA",
    "monsters": [
     {
@@ -15149,10 +15097,6 @@
     }
    ],
    "kind": "place",
-   "level": {
-    "max": 14,
-    "min": 10
-   },
    "link": "https://map.opengea.tech/#2.AgAF5QIGAQYBAQEAABQ6IhOITEzOKFEvVgjILypJS8zJAQA",
    "monsters": [
     {
