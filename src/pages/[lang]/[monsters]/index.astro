@@ -2,6 +2,7 @@
 import PageShell from "../../../components/layout/PageShell.astro";
 import PixelArt from "../../../components/ui/PixelArt.astro";
 import IconSlot from "../../../components/ui/IconSlot.astro";
+import RenderSlot from "../../../components/ui/RenderSlot.astro";
 import DataTable from "../../../components/data/DataTable.astro";
 import DataRow from "../../../components/data/DataRow.astro";
 import DataCell from "../../../components/data/DataCell.astro";
@@ -94,7 +95,7 @@ const label = (k: string) => (k === "exp" ? tm.exp : statLabel(k as "health")[la
             filters={{ level: bandOf(m), kind: kinds(m), region: where.map((w) => w.toLowerCase().replace(/[^a-z0-9]+/g, "-")), family: m.family ? m.family.toLowerCase() : [], behaviour: behaviourKeys(m) }}>
             <DataCell label={tm.colMonster} primary>
               <span class="name">
-                {m.grid ? <span class="render"><img src={m.grid} width="128" height="128" alt="" loading="lazy" decoding="async" /></span> : null}
+                <span class="render">{m.grid ? <img src={m.grid} width="128" height="128" alt="" loading="lazy" decoding="async" /> : <RenderSlot alt={dn.name} size={128} />}</span>
                 <span class="small-icon"><IconSlot icon={e.icon ?? null} kind="monster" size={44} /></span>
                 <span class="ntext">
                   <a href={href} title={dn.name} lang={dn.nameLang !== lang ? HREFLANG[dn.nameLang] : undefined}>{dn.name}</a>
@@ -162,7 +163,6 @@ const label = (k: string) => (k === "exp" ? tm.exp : statLabel(k as "health")[la
   /* 96 cards: four across on a desktop (three on a narrow one), never one alone on the last line */
   @media (min-width: 1024px) {
     .monsters-page.container .dt[data-view="grid"] table tbody { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-    .monsters-page.container .dt[data-view="grid"] table tbody > tr:last-child:nth-child(4n+1) { grid-column: 1 / -1; }
   }
   .monsters-page .dt[data-view="grid"] .render { display: grid; place-items: center; height: 136px; border-radius: var(--r-m); background: var(--render-halo), var(--render-bg); }
   .monsters-page .dt[data-view="grid"] .render img { width: 128px; height: 128px; object-fit: contain; filter: var(--render-rim); }
