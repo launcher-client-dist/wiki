@@ -17,7 +17,7 @@ interface Strings {
   next: string; now: string; clock: string; close: string;
   spot1: string; floor1: string; floorsF: string; spotsIn: string; highlighted: string; clearHighlight: string; hereTitle: string; zoomToSee: string; pays: string;
 }
-interface Config { lang: string; layers: LayerKey[]; defaultOn: LayerKey[]; floors: string[]; meta: TileMeta; s: Strings }
+interface Config { lang: string; layers: LayerKey[]; defaultOn: LayerKey[]; floors: string[]; meta: TileMeta; icons: Record<string, [number, number]>; s: Strings }
 
 const BLANK = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7";
 const CRS = L.extend({}, L.CRS.Simple, { transformation: new L.Transformation(1, 0.5, -1, 0.5) });
@@ -109,32 +109,19 @@ export function startMap(root: HTMLElement): void {
     const names = [...new Map(g.all.map((m) => [m.entry.r + m.entry.n, m.entry.n])).values()];
     return `${names.slice(0, 4).map(esc).join(" · ")}${names.length > 4 ? ` · +${names.length - 4}` : ""}`;
   };
-  const draw = () => {
-    marks.clearLayers();
-    const z = map.getZoom();
-    const view = map.getBounds().pad(0.2);
-    const here = current.filter((m) => m.f === floor);
-    if (z < 0) {
-      for (const m of here) {
-        if (highlight === m.entry.r || m.layer === "bosses") continue;
-        const c = L.circleMarker(ll(m.x, m.z), { renderer: dots, radius: m.layer === "items" ? 2 : 3, weight: 1, color: "rgba(10,11,13,0.9)", fillColor: DOT[m.layer], fillOpacity: highlight ? 0.3 : 0.95 });
-        c.bindTooltip(esc(m.entry.n), { direction: "top", className: "mtip" });
-        c.on("click", () => showCard(m));
-        marks.addLayer(c);
-      }
-    }
-    const box = z <= 0 ? 24 : 30;      // the well
-    const reach = box + (z <= 0 ? 10 : 8);   // two wells' centres never closer than this: no overlap, a gap between
+  /** Gathers spots on the screen: a spot closer than `reach` px to a group already made joins it (the highlighted
+   *  entity's spots only among themselves); a spot within `clear` px of a group in `avoid` is left out. */
+  const gather = (list: Mark[], reach: number, avoid: Group[] = [], clear = 0): Group[] => {
     const groups: Group[] = [];
     const grid = new Map<string, Group[]>();
     const around = function* (p: L.Point) {
       const cx = Math.floor(p.x / reach), cy = Math.floor(p.y / reach);
       for (let dx = -1; dx <= 1; dx++) for (let dy = -1; dy <= 1; dy++) yield* grid.get(`${cx + dx}|${cy + dy}`) ?? [];
     };
-    const sorted = here.filter((m) => z >= 0 || highlight === m.entry.r || m.layer === "bosses")
-      .sort((a, b) => Number(highlight === b.entry.r) - Number(highlight === a.entry.r) || ORDER[a.layer] - ORDER[b.layer] || countOf(b) - countOf(a));
+    const sorted = [...list].sort((a, b) => Number(highlight === b.entry.r) - Number(highlight === a.entry.r) || ORDER[a.layer] - ORDER[b.layer] || countOf(b) - countOf(a));
     for (const m of sorted) {
       const p = map.latLngToLayerPoint(ll(m.x, m.z));
+      if (clear && avoid.some((g) => g.p.distanceTo(p) < clear)) continue;
       const hit = highlight === m.entry.r;
       let join: Group | null = null, under = false;
       for (const g of around(p)) {
@@ -150,7 +137,34 @@ export function startMap(root: HTMLElement): void {
       const k = `${Math.floor(p.x / reach)}|${Math.floor(p.y / reach)}`;
       (grid.get(k) ?? grid.set(k, []).get(k)!).push(ng);
     }
-    for (const g of groups) {
+    return groups;
+  };
+  const zoomInto = (g: Group) => {
+    const b = L.latLngBounds(g.all.map((m) => ll(m.x, m.z)));
+    const z = map.getZoom();
+    map.flyTo(b.getCenter(), Math.min(map.getMaxZoom(), Math.max(z + 2, map.getBoundsZoom(b.pad(0.5)))), { duration: 0.4 });
+  };
+  const draw = () => {
+    marks.clearLayers();
+    const z = map.getZoom();
+    const view = map.getBounds().pad(0.2);
+    const here = current.filter((m) => m.f === floor);
+    const box = z <= 0 ? 24 : 30;      // the well
+    const reach = box + (z <= 0 ? 10 : 8);   // two wells' centres never closer than this: no overlap, a gap between
+    // icons: every spot from zoom 0 in; zoomed further out only the highlighted entity's and the bosses'
+    const icons = gather(here.filter((m) => z >= 0 || highlight === m.entry.r || m.layer === "bosses"), reach);
+    if (z < 0) {
+      // the rest as dots, gathered the same way at a dot's size (none overlapping, none under an icon)
+      for (const g of gather(here.filter((m) => highlight !== m.entry.r && m.layer !== "bosses"), 9, icons, box / 2 + 6)) {
+        const at = map.layerPointToLatLng(g.p);
+        if (!view.contains(at)) continue;
+        const c = L.circleMarker(at, { renderer: dots, radius: g.all.length > 1 ? 3.5 : g.m.layer === "items" ? 2.5 : 3, weight: 1, color: "rgba(10,11,13,0.9)", fillColor: DOT[g.m.layer], fillOpacity: highlight ? 0.3 : 0.95 });
+        c.bindTooltip(tipOf(g), { direction: "top", className: "mtip" });
+        c.on("click", () => (g.refs.size > 1 ? zoomInto(g) : showCard(g.m)));
+        marks.addLayer(c);
+      }
+    }
+    for (const g of icons) {
       const at = map.layerPointToLatLng(g.p);
       if (!view.contains(at)) continue;
       const hit = highlight === g.m.entry.r;
@@ -165,11 +179,8 @@ export function startMap(root: HTMLElement): void {
       mk.bindTooltip(tipOf(g) + (many && z < map.getMaxZoom() ? ` <i>${esc(s.zoomToSee)}</i>` : ""), { direction: "top", offset: [0, -size / 2], className: "mtip" });
       mk.on("click", () => {
         if (!many) return showCard(g.m, mk);
-        if (z < map.getMaxZoom()) {
-          const b = L.latLngBounds(g.all.map((m) => ll(m.x, m.z)));
-          const to = Math.min(map.getMaxZoom(), Math.max(z + 2, map.getBoundsZoom(b.pad(0.5))));
-          map.flyTo(b.getCenter(), to, { duration: 0.4 });
-        } else showGroup(g, mk);
+        if (z < map.getMaxZoom()) zoomInto(g);
+        else showGroup(g, mk);
       });
       marks.addLayer(mk);
     }
@@ -243,10 +254,10 @@ export function startMap(root: HTMLElement): void {
     if (m.hours) {
       const w = nextWindow(windowSeconds(m.hours), Date.now() / 1000);
       const fmt = new Intl.DateTimeFormat(document.documentElement.lang || undefined, { hour: "2-digit", minute: "2-digit" });
-      facts.append(tagOf(["time", `${(w.open ? s.now : s.next).replace("{t}", fmt.format((w.open ? w.until : w.at) * 1000))} (${s.clock})`, 16, 16], "tag-sun"));
+      facts.append(tagOf(["time", `${(w.open ? s.now : s.next).replace("{t}", fmt.format((w.open ? w.until : w.at) * 1000))} (${s.clock})`, ...cfg.icons.time!], "tag-sun"));
     }
     const sp = spread(m.entry.r);
-    if (m.layer !== "places" && sp.n > 0) facts.append(tagOf(["src-map", sp.text, 16, 16]));
+    if (m.layer !== "places" && sp.n > 0) facts.append(tagOf(["src-map", sp.text, ...cfg.icons["src-map"]!]));
     card.innerHTML = `
       <button type="button" class="cclose" aria-label="${esc(s.close)}">×</button>
       <div class="chead">${headHtml(m.entry)}</div>
@@ -307,9 +318,9 @@ export function startMap(root: HTMLElement): void {
       const head = root.querySelector<HTMLElement>("[data-hl-head]")!;
       head.innerHTML = `<span class="hlk">${esc(s.highlighted)}</span>
         <button type="button" class="hlx" aria-label="${esc(s.clearHighlight)}" title="${esc(s.clearHighlight)}">×</button>
-        <div class="hlmain">${hm.entry.i ? `<span class="cicon">${imgHtml(hm.entry.i, 30)}</span>` : ""}<span class="ctext"><span class="cname">${esc(hm.entry.n)}</span>
+        <div class="hlmain">${hm.entry.i ? `<span class="cicon">${imgHtml(hm.entry.i, 32)}</span>` : ""}<span class="ctext"><span class="cname">${esc(hm.entry.n)}</span>
           <span class="hlrow"><span class="hlfacts"></span>${hm.entry.u ? `<a class="copen" href="${esc(hm.entry.u)}">${esc(s.openPage)} →</a>` : ""}</span></span></div>`;
-      head.querySelector(".hlfacts")!.append(tagOf(["src-map", sp.text, 16, 16]));
+      head.querySelector(".hlfacts")!.append(tagOf(["src-map", sp.text, ...cfg.icons["src-map"]!]));
       head.querySelector<HTMLButtonElement>(".hlx")!.onclick = () => clearHighlight();
       const list = [...counts.entries()].filter(([f]) => f !== floor).sort((a, b) => level(b[0]) - level(a[0]));
       other.hidden = !list.length;

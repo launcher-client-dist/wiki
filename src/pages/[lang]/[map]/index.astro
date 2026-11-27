@@ -15,7 +15,7 @@ import Value from "../../../components/ui/Value.astro";
 import { ui, fill } from "../../../i18n/index.ts";
 import { LANGS, LOCALE, type Lang } from "../../../lib/i18n.ts";
 import { MAP_SLUG, mapPath } from "../../../lib/map/links.ts";
-import { DEFAULT_ON, LAYERS, LAYER_ICON, POINTS, layerCounts } from "../../../lib/map/layers.ts";
+import { DEFAULT_ON, LAYERS, LAYER_ICON, POINTS, fact, layerCounts } from "../../../lib/map/layers.ts";
 import { level } from "../../../lib/map/goto.ts";
 import { alternatesBy, homePath } from "../../../lib/routes.ts";
 
@@ -35,6 +35,8 @@ const floorList = floors;
 const floorName = (f: string) => (f === "s" ? tm.surface : fill(tm.floorN, { n: f }));
 const config = {
   lang, layers: LAYERS, defaultOn: DEFAULT_ON, floors, meta,
+  /** the icons the script adds to a card itself (a boss's window, the spots), sized as every other fact */
+  icons: Object.fromEntries(["time", "src-map"].map((n) => { const f = fact(n, ""); return [n, [f[2], f[3]]]; })),
   s: {
     surface: tm.surface, floorN: tm.floorN, up: tm.up, down: tm.down, searchEmpty: tm.searchEmpty, gotoBad: tm.gotoBad, openPage: tm.openPage,
     noPage: tm.noPage, spotsN: tm.spotsN, spotsHere: tm.spotsHere, otherFloors: tm.otherFloors, pin: tm.pin, zoomIn: tm.zoomIn, zoomOut: tm.zoomOut,

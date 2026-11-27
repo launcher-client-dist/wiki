@@ -33,7 +33,7 @@ export interface PointsFile { floors: string[]; layers: Record<LayerKey, RawPoin
 export const POINTS = pointsJson as unknown as PointsFile;
 
 export interface Icon { s: string; w: number; h: number; px?: boolean }
-/** A card fact, never bare text: a game icon (drawn 16 px, its whole scale: w, h) and its words, or a gold value. */
+/** A card fact, never bare text: a game icon (at its largest whole scale within 20 px: w, h) and its words, or a gold value. */
 export type Fact = [icon: string, text: string, w: number, h: number] | ["$gold", number];
 export interface Entry { r: string; n: string; a?: string; u: string | null; i?: Icon; k?: string; x?: Fact[] }
 export type Point = (number | string)[];
@@ -41,11 +41,11 @@ export interface LayerFile { e: Entry[]; p: Point[] }
 
 const UI = uiSizes as Record<string, number[]>;
 const uiIcon = (name: string): Icon => ({ s: `/ui/${name}.png`, w: UI[name]![0]!, h: UI[name]![1]!, px: true });
-/** A fact with its game icon at the largest whole scale that fits 16 px (GameIcon's `fit`, as the Tag draws it). */
+/** A fact with its game icon at the largest whole scale that fits 20 px (GameIcon's `fit` rule: the pixels stay sharp). */
 export function fact(icon: string, text: string): Fact {
   const [w, h] = UI[icon] as [number, number];
   if (!w) throw new Error(`map fact: no game icon "${icon}"`);
-  const k = Math.max(1, Math.floor(16 / Math.max(w, h)));
+  const k = Math.max(1, Math.floor(20 / Math.max(w, h)));
   return [icon, text, w * k, h * k];
 }
 
