@@ -1246,6 +1246,37 @@
    "facts": [
     {
      "key": "health",
+     "value": "1.800"
+    },
+    {
+     "key": "exp",
+     "value": "2.300"
+    }
+   ],
+   "icon": "/icons/monsters/minotaur-guard.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "_fb": [
+     "es"
+    ],
+    "en": "Minotaur Guard",
+    "es": "Minotaur Guard",
+    "pt": "Guardião Minotauro"
+   },
+   "ref": "monster:minotaur-guard",
+   "slug": {
+    "en": "minotaur-guard",
+    "es": "minotaur-guard",
+    "pt": "guardiao-minotauro"
+   }
+  },
+  {
+   "facts": [
+    {
+     "key": "health",
      "value": "175"
     },
     {
@@ -1635,6 +1666,41 @@
    }
   },
   {
+   "appears": {
+    "how": "timed"
+   },
+   "boss": true,
+   "facts": [
+    {
+     "key": "health",
+     "value": "12.000"
+    },
+    {
+     "key": "exp",
+     "value": "12.000"
+    }
+   ],
+   "icon": "/icons/monsters/pestilence-guardian.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "_fb": [
+     "es"
+    ],
+    "en": "Pestilence Guardian",
+    "es": "Pestilence Guardian",
+    "pt": "Guardião da Pestilência"
+   },
+   "ref": "monster:pestilence-guardian",
+   "slug": {
+    "en": "pestilence-guardian",
+    "es": "pestilence-guardian",
+    "pt": "guardiao-da-pestilencia"
+   }
+  },
+  {
    "boss": true,
    "facts": [
     {
@@ -1745,6 +1811,41 @@
     "en": "pestilence-stinger",
     "es": "aguijon-de-pestilence",
     "pt": "ferrao-de-pestilence"
+   }
+  },
+  {
+   "appears": {
+    "how": "timed"
+   },
+   "boss": true,
+   "facts": [
+    {
+     "key": "health",
+     "value": "11.000"
+    },
+    {
+     "key": "exp",
+     "value": "11.000"
+    }
+   ],
+   "icon": "/icons/monsters/pestilence-widow.png",
+   "iconSize": [
+    64,
+    64
+   ],
+   "name": {
+    "_fb": [
+     "es"
+    ],
+    "en": "Pestilence Widow",
+    "es": "Pestilence Widow",
+    "pt": "Viúva da Pestilência"
+   },
+   "ref": "monster:pestilence-widow",
+   "slug": {
+    "en": "pestilence-widow",
+    "es": "pestilence-widow",
+    "pt": "viuva-da-pestilencia"
    }
   },
   {

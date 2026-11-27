@@ -4744,6 +4744,23 @@
      }
     },
     {
+     "count": 4,
+     "link": "https://map.opengea.tech/#2.AgCDBV0GAQABAQEAAJQiAuNyTixLVQgpys_JAQA",
+     "place": {
+      "near": {
+       "en": "Bandit Port",
+       "es": "Puerto de Bandidos",
+       "pt": "Porto dos Bandidos"
+      },
+      "town": {
+       "en": "Vecan",
+       "es": "Vecan",
+       "pt": "Vecan"
+      },
+      "underground": false
+     }
+    },
+    {
      "count": 3,
      "link": "https://map.opengea.tech/#2.AgCBAckEBgEIAQEBAAAUlIjjck4sS1UIKcrPyQEA",
      "place": {
@@ -5014,6 +5031,36 @@
        "pt": "Catedral da Planície"
       },
       "underground": true
+     }
+    },
+    {
+     "count": 1,
+     "link": "https://map.opengea.tech/#2.AgDhBHsGAQABAQEAAJQiAuNyTixLVQgpys_JAQA",
+     "place": {
+      "near": null,
+      "town": {
+       "en": "Vecan",
+       "es": "Vecan",
+       "pt": "Vecan"
+      },
+      "underground": false
+     }
+    },
+    {
+     "count": 1,
+     "link": "https://map.opengea.tech/#2.AgDDBHMGAQABAQEAAJQiAuNyTixLVQgpys_JAQA",
+     "place": {
+      "near": {
+       "en": "Sunskin Mountain",
+       "es": "Montaña Sunskin",
+       "pt": "Montanha Sunskin"
+      },
+      "town": {
+       "en": "Vecan",
+       "es": "Vecan",
+       "pt": "Vecan"
+      },
+      "underground": false
      }
     }
    ],
@@ -5411,6 +5458,36 @@
      }
     },
     {
+     "count": 4,
+     "link": "https://map.opengea.tech/#2.AgDXBZUCBgEAAQEBAACUIgLjdc7PKyxNLS5RcC7KLwcA",
+     "place": {
+      "near": null,
+      "town": {
+       "en": "Vecan",
+       "es": "Vecan",
+       "pt": "Vecan"
+      },
+      "underground": false
+     }
+    },
+    {
+     "count": 4,
+     "link": "https://map.opengea.tech/#2.AgCfBbkCBgEAAQEBAACUIgLjdc7PKyxNLS5RcC7KLwcA",
+     "place": {
+      "near": {
+       "en": "Storage Square",
+       "es": "Plaza del Almacén",
+       "pt": "Praça do Depósito"
+      },
+      "town": {
+       "en": "Vecan",
+       "es": "Vecan",
+       "pt": "Vecan"
+      },
+      "underground": false
+     }
+    },
+    {
      "count": 3,
      "link": "https://map.opengea.tech/#2.AgC5A8UCBgEgAQEBAAAUUIgI43XOzyssTS0uUXAuyi8HAA",
      "place": {
@@ -5457,6 +5534,23 @@
        "en": "Nordha",
        "es": "Nordha",
        "pt": "Nordha"
+      },
+      "underground": false
+     }
+    },
+    {
+     "count": 1,
+     "link": "https://map.opengea.tech/#2.AgD_BIMDBgEAAQEBAACUIgLjdc7PKyxNLS5RcC7KLwcA",
+     "place": {
+      "near": {
+       "en": "Work Square",
+       "es": "Plaza del Trabajo",
+       "pt": "Praça do Trabalho"
+      },
+      "town": {
+       "en": "Vecan",
+       "es": "Vecan",
+       "pt": "Vecan"
       },
       "underground": false
      }
@@ -5686,6 +5780,19 @@
      }
     },
     {
+     "count": 8,
+     "link": "https://map.opengea.tech/#2.AgD5AvkDBgECAQEBAAAUjQjjd87PKyxNLS5RcMsvz0ktAgA",
+     "place": {
+      "near": null,
+      "town": {
+       "en": "Vecan",
+       "es": "Vecan",
+       "pt": "Vecan"
+      },
+      "underground": false
+     }
+    },
+    {
      "count": 6,
      "link": "https://map.opengea.tech/#2.AgCjA6cDBgEWAQEBAAAU6CIC43fOzyssTS0uUXDLL89JLQIA",
      "place": {
@@ -5700,19 +5807,6 @@
        "pt": "Vecan"
       },
       "underground": true
-     }
-    },
-    {
-     "count": 5,
-     "link": "https://map.opengea.tech/#2.AgD5AvkDBgECAQEBAAAUjQjjd87PKyxNLS5RcMsvz0ktAgA",
-     "place": {
-      "near": null,
-      "town": {
-       "en": "Vecan",
-       "es": "Vecan",
-       "pt": "Vecan"
-      },
-      "underground": false
      }
     },
     {
@@ -5859,6 +5953,23 @@
        "en": "Bone Palace",
        "es": "Palacio de Huesos",
        "pt": "Palácio de Ossos"
+      },
+      "town": {
+       "en": "Vecan",
+       "es": "Vecan",
+       "pt": "Vecan"
+      },
+      "underground": false
+     }
+    },
+    {
+     "count": 1,
+     "link": "https://map.opengea.tech/#2.AgCBBa8CBgEAAQEBAACUIgLjd87PKyxNLS5RcMsvz0ktAgA",
+     "place": {
+      "near": {
+       "en": "Storage Square",
+       "es": "Plaza del Almacén",
+       "pt": "Praça do Depósito"
       },
       "town": {
        "en": "Vecan",
@@ -6202,6 +6313,23 @@
        "pt": "Vecan"
       },
       "underground": true
+     }
+    },
+    {
+     "count": 1,
+     "link": "https://map.opengea.tech/#2.AgCdBc0CBgEAAQEBAACUIgITcs7PKyxNLS5RCCjKBFKpxcUA",
+     "place": {
+      "near": {
+       "en": "Storage Square",
+       "es": "Plaza del Almacén",
+       "pt": "Praça do Depósito"
+      },
+      "town": {
+       "en": "Vecan",
+       "es": "Vecan",
+       "pt": "Vecan"
+      },
+      "underground": false
      }
     }
    ],
@@ -7299,6 +7427,19 @@
       },
       "underground": true
      }
+    },
+    {
+     "count": 1,
+     "link": "https://map.opengea.tech/#2.AgCABfUCBgEAAQEBAACUIgLjdUlNTMmpVAhPTUpOLAAA",
+     "place": {
+      "near": null,
+      "town": {
+       "en": "Dorosam",
+       "es": "Dorosam",
+       "pt": "Dorosam"
+      },
+      "underground": false
+     }
     }
    ],
    "render": {
@@ -7879,10 +8020,27 @@
    "loot": 29,
    "places": [
     {
-     "count": 7,
+     "count": 19,
      "link": "https://map.opengea.tech/#2.AgDUBOMBBgEAAQEBAACUIgLjcUkty8xRCC7ITEktAgA",
      "place": {
       "near": null,
+      "town": {
+       "en": "Dorosam",
+       "es": "Dorosam",
+       "pt": "Dorosam"
+      },
+      "underground": false
+     }
+    },
+    {
+     "count": 6,
+     "link": "https://map.opengea.tech/#2.AgCOA5sCBgEAAQEBAACUIgLjcUkty8xRCC7ITEktAgA",
+     "place": {
+      "near": {
+       "en": "Jebidiah's Hut",
+       "es": "Cabaña de Jebidiah",
+       "pt": "Cabana de Jebidiah"
+      },
       "town": {
        "en": "Dorosam",
        "es": "Dorosam",
@@ -14742,7 +14900,7 @@
      "item": "double-axe",
      "quality": true,
      "tier": "raro",
-     "unique": true
+     "unique": false
     },
     {
      "amount": [
@@ -14772,7 +14930,7 @@
      "item": "tower-shield",
      "quality": true,
      "tier": "raro",
-     "unique": true
+     "unique": false
     },
     {
      "amount": [
@@ -14782,10 +14940,10 @@
      "item": "yellow-rune-algiz",
      "quality": false,
      "tier": "raro",
-     "unique": true
+     "unique": false
     }
    ],
-   "family": null,
+   "family": "Minotaur",
    "grid": "/icons/monsters128/minotaur.png",
    "how": "spawn",
    "id": "minotaur",
@@ -14795,6 +14953,32 @@
    },
    "loot": 73,
    "places": [
+    {
+     "count": 24,
+     "link": "https://map.opengea.tech/#2.AgCvBIcGBgEgAQEBAAAUUIgI4_DNzMsvSSwtAgA",
+     "place": {
+      "near": null,
+      "town": {
+       "en": "Vecan",
+       "es": "Vecan",
+       "pt": "Vecan"
+      },
+      "underground": true
+     }
+    },
+    {
+     "count": 10,
+     "link": "https://map.opengea.tech/#2.AgDZBXEGAQABAQEAAJQiAuPwzczLL0ksLQIA",
+     "place": {
+      "near": null,
+      "town": {
+       "en": "Vecan",
+       "es": "Vecan",
+       "pt": "Vecan"
+      },
+      "underground": false
+     }
+    },
     {
      "count": 4,
      "link": "https://map.opengea.tech/#2.AgDnBdoCBgEWAQEBAAAU6CIC4_DNzMsvSSwtAgA",
@@ -14825,6 +15009,23 @@
        "en": "Plains Cathedral",
        "es": "Catedral de la Llanura",
        "pt": "Catedral da Planície"
+      },
+      "underground": false
+     }
+    },
+    {
+     "count": 3,
+     "link": "https://map.opengea.tech/#2.AgCRBS0GAQABAQEAAJQiAuPwzczLL0ksLQIA",
+     "place": {
+      "near": {
+       "en": "Bandit Port",
+       "es": "Puerto de Bandidos",
+       "pt": "Porto dos Bandidos"
+      },
+      "town": {
+       "en": "Vecan",
+       "es": "Vecan",
+       "pt": "Vecan"
       },
       "underground": false
      }
@@ -14973,6 +15174,23 @@
       },
       "underground": true
      }
+    },
+    {
+     "count": 1,
+     "link": "https://map.opengea.tech/#2.AgChBN0FBgEgAQEBAAAUUIgI4_DNzMsvSSwtAgA",
+     "place": {
+      "near": {
+       "en": "Bone Palace",
+       "es": "Palacio de Huesos",
+       "pt": "Palácio de Ossos"
+      },
+      "town": {
+       "en": "Vecan",
+       "es": "Vecan",
+       "pt": "Vecan"
+      },
+      "underground": true
+     }
     }
    ],
    "render": {
@@ -15029,6 +15247,251 @@
     "health": 870,
     "magic": 47,
     "moveSpeed": 37,
+    "range": 20
+   },
+   "variants": [],
+   "windows": []
+  },
+  {
+   "behaviour": {
+    "flees": false,
+    "jumpsFloors": false,
+    "seesInvisible": true,
+    "spellsOnly": false
+   },
+   "boss": false,
+   "drops": [
+    {
+     "amount": [
+      10,
+      25
+     ],
+     "item": "gold",
+     "quality": false,
+     "tier": "sempre",
+     "unique": false
+    },
+    {
+     "amount": [
+      1,
+      1
+     ],
+     "item": "iron-ingot",
+     "quality": false,
+     "tier": "comum",
+     "unique": false
+    },
+    {
+     "amount": [
+      1,
+      1
+     ],
+     "item": "old-ring",
+     "quality": false,
+     "tier": "comum",
+     "unique": false
+    },
+    {
+     "amount": [
+      1,
+      1
+     ],
+     "item": "battle-axe",
+     "quality": true,
+     "tier": "incomum",
+     "unique": false
+    },
+    {
+     "amount": [
+      1,
+      1
+     ],
+     "item": "chain-mail",
+     "quality": true,
+     "tier": "incomum",
+     "unique": false
+    },
+    {
+     "amount": [
+      1,
+      1
+     ],
+     "item": "spangenhelm",
+     "quality": true,
+     "tier": "incomum",
+     "unique": false
+    },
+    {
+     "amount": [
+      1,
+      1
+     ],
+     "item": "brass-plate",
+     "quality": true,
+     "tier": "raro",
+     "unique": false
+    },
+    {
+     "amount": [
+      1,
+      1
+     ],
+     "item": "double-axe",
+     "quality": true,
+     "tier": "raro",
+     "unique": false
+    },
+    {
+     "amount": [
+      1,
+      1
+     ],
+     "item": "golden-ring",
+     "quality": true,
+     "tier": "raro",
+     "unique": false
+    },
+    {
+     "amount": [
+      1,
+      1
+     ],
+     "item": "tower-shield",
+     "quality": true,
+     "tier": "raro",
+     "unique": false
+    },
+    {
+     "amount": [
+      1,
+      1
+     ],
+     "item": "yellow-rune-algiz",
+     "quality": false,
+     "tier": "raro",
+     "unique": false
+    }
+   ],
+   "family": "Minotaur",
+   "grid": "/icons/monsters128/minotaur-guard.png",
+   "how": "spawn",
+   "id": "minotaur-guard",
+   "level": {
+    "max": 50,
+    "min": 35
+   },
+   "loot": 110,
+   "places": [
+    {
+     "count": 1,
+     "link": "https://map.opengea.tech/#2.AgC7BPsFBgEgAQEBAAAUUIgI4_PNzMsvSSwtUnAvTSxKAQA",
+     "place": {
+      "near": null,
+      "town": {
+       "en": "Vecan",
+       "es": "Vecan",
+       "pt": "Vecan"
+      },
+      "underground": true
+     }
+    },
+    {
+     "count": 1,
+     "link": "https://map.opengea.tech/#2.AgD3BB8GAQABAQEAAJQiAuPzzczLL0ksLVJwL00sSgEA",
+     "place": {
+      "near": {
+       "en": "Bandit Port",
+       "es": "Puerto de Bandidos",
+       "pt": "Porto dos Bandidos"
+      },
+      "town": {
+       "en": "Vecan",
+       "es": "Vecan",
+       "pt": "Vecan"
+      },
+      "underground": false
+     }
+    },
+    {
+     "count": 1,
+     "link": "https://map.opengea.tech/#2.AgDpBV0GAQABAQEAAJQiAuPzzczLL0ksLVJwL00sSgEA",
+     "place": {
+      "near": null,
+      "town": {
+       "en": "Vecan",
+       "es": "Vecan",
+       "pt": "Vecan"
+      },
+      "underground": false
+     }
+    }
+   ],
+   "render": {
+    "size": [
+     458,
+     512
+    ],
+    "src": "/renders/monsters/minotaur-guard.webp"
+   },
+   "respawn": [
+    510
+   ],
+   "spells": [
+    {
+     "cooldown": 10.0,
+     "damage": 81,
+     "debuff": {
+      "seconds": 5,
+      "stat": "moveSpeed",
+      "value": -5
+     },
+     "element": 0,
+     "icon": "/icons/spells/29.png",
+     "key": 29,
+     "kind": "at",
+     "oneIn": {
+      "approx": true,
+      "oneIn": 1
+     }
+    },
+    {
+     "cooldown": 10.0,
+     "debuff": {
+      "seconds": 5,
+      "stat": "moveSpeed",
+      "value": -5
+     },
+     "element": 0,
+     "icon": "/icons/spells/54.png",
+     "key": 54,
+     "kind": "leap",
+     "oneIn": {
+      "approx": false,
+      "oneIn": 1
+     }
+    },
+    {
+     "cooldown": 10.0,
+     "damage": 86,
+     "element": 5,
+     "icon": "/icons/spells/33.png",
+     "key": 33,
+     "kind": "around",
+     "oneIn": {
+      "approx": false,
+      "oneIn": 2
+     }
+    }
+   ],
+   "stats": {
+    "armor": 55,
+    "attackSpeed": 16,
+    "damage": 70,
+    "defense": 45,
+    "exp": 2300,
+    "health": 1800,
+    "magic": 55,
+    "moveSpeed": 35,
     "range": 20
    },
    "variants": [],
@@ -16694,6 +17157,19 @@
    "loot": 43,
    "places": [
     {
+     "count": 11,
+     "link": "https://map.opengea.tech/#2.AgC8AsEDBgESAQEBAAAUaCIC4_ZLTS7Kz03MS04tAgA",
+     "place": {
+      "near": null,
+      "town": {
+       "en": "Garadum",
+       "es": "Garadum",
+       "pt": "Garadum"
+      },
+      "underground": true
+     }
+    },
+    {
      "count": 4,
      "link": "https://map.opengea.tech/#2.AgCnBM4FBgEeAQEBAAAU6CMC4_ZLTS7Kz03MS04tAgA",
      "place": {
@@ -16781,6 +17257,23 @@
        "pt": "Nordha Oriental"
       },
       "underground": false
+     }
+    },
+    {
+     "count": 1,
+     "link": "https://map.opengea.tech/#2.AgCcArUDBgESAQEBAAAUaCIC4_ZLTS7Kz03MS04tAgA",
+     "place": {
+      "near": {
+       "en": "Egemen's Forge",
+       "es": "Forja de Egemen",
+       "pt": "Forja de Egemen"
+      },
+      "town": {
+       "en": "Garadum",
+       "es": "Garadum",
+       "pt": "Garadum"
+      },
+      "underground": true
      }
     },
     {
@@ -17709,6 +18202,23 @@
    "loot": 6.3,
    "places": [
     {
+     "count": 7,
+     "link": "https://map.opengea.tech/#2.AgD4AesDBgEOAQEBAAAU9IgT8U9OLs0pySwuUXAsKChKzSvJTE4FAA",
+     "place": {
+      "near": {
+       "en": "Egemen's Forge",
+       "es": "Forja de Egemen",
+       "pt": "Forja de Egemen"
+      },
+      "town": {
+       "en": "Garadum",
+       "es": "Garadum",
+       "pt": "Garadum"
+      },
+      "underground": true
+     }
+    },
+    {
      "count": 5,
      "link": "https://map.opengea.tech/#2.AgDFBLAEBgEWAQEBAAAU6CICE_FPTi7NKcksLlFwLCgoSs0ryUxOBQA",
      "place": {
@@ -17738,6 +18248,19 @@
        "en": "East Nordha",
        "es": "Nordha Este",
        "pt": "Nordha Oriental"
+      },
+      "underground": true
+     }
+    },
+    {
+     "count": 5,
+     "link": "https://map.opengea.tech/#2.AgDAAqEDBgESAQEBAAAUaCICE_FPTi7NKcksLlFwLCgoSs0ryUxOBQA",
+     "place": {
+      "near": null,
+      "town": {
+       "en": "Garadum",
+       "es": "Garadum",
+       "pt": "Garadum"
       },
       "underground": true
      }
@@ -18439,6 +18962,23 @@
      }
     },
     {
+     "count": 4,
+     "link": "https://map.opengea.tech/#2.AgD-AfEDBgEOAQEBAAAU9IgT8k9OLs0pySwuUXDNS8svSk4tAgA",
+     "place": {
+      "near": {
+       "en": "Egemen's Forge",
+       "es": "Forja de Egemen",
+       "pt": "Forja de Egemen"
+      },
+      "town": {
+       "en": "Garadum",
+       "es": "Garadum",
+       "pt": "Garadum"
+      },
+      "underground": true
+     }
+    },
+    {
      "count": 3,
      "link": "https://map.opengea.tech/#2.AgCSA9wBBgEcAQEBAAAUqCMCE_JPTi7NKcksLlFwzUvLL0pOLQIA",
      "place": {
@@ -18865,6 +19405,36 @@
    },
    "loot": 29,
    "places": [
+    {
+     "count": 7,
+     "link": "https://map.opengea.tech/#2.AgCcAoUDBgESAQEBAAAUaCICE_RPTi7NKcksLlEITs7Iz0ksAgA",
+     "place": {
+      "near": null,
+      "town": {
+       "en": "Garadum",
+       "es": "Garadum",
+       "pt": "Garadum"
+      },
+      "underground": true
+     }
+    },
+    {
+     "count": 5,
+     "link": "https://map.opengea.tech/#2.AgD8AbMDBgEOAQEBAAAU9IgT9E9OLs0pySwuUQhOzsjPSSwCAA",
+     "place": {
+      "near": {
+       "en": "Egemen's Forge",
+       "es": "Forja de Egemen",
+       "pt": "Forja de Egemen"
+      },
+      "town": {
+       "en": "Garadum",
+       "es": "Garadum",
+       "pt": "Garadum"
+      },
+      "underground": true
+     }
+    },
     {
      "count": 4,
      "link": "https://map.opengea.tech/#2.AgChAn0GAREBAQEAABRIIgIT9E9OLs0pySwuUQhOzsjPSSwCAA",
@@ -20814,6 +21384,260 @@
     "flees": false,
     "jumpsFloors": false,
     "seesInvisible": true,
+    "spellsOnly": false,
+    "summons": [
+     {
+      "cap": 2,
+      "every": 15.0,
+      "kind": "waves",
+      "monster": "pestilence-stinger",
+      "perCast": 1
+     }
+    ]
+   },
+   "boss": true,
+   "drops": [
+    {
+     "amount": [
+      75,
+      100
+     ],
+     "item": "gold",
+     "quality": false,
+     "tier": "sempre",
+     "unique": false
+    },
+    {
+     "amount": [
+      1,
+      1
+     ],
+     "item": "health-potion",
+     "quality": false,
+     "tier": "sempre",
+     "unique": false
+    },
+    {
+     "amount": [
+      1,
+      2
+     ],
+     "item": "plagued-scale",
+     "quality": false,
+     "tier": "sempre",
+     "unique": false
+    },
+    {
+     "amount": [
+      1,
+      1
+     ],
+     "item": "ragged-cloth",
+     "quality": false,
+     "tier": "sempre",
+     "unique": false
+    },
+    {
+     "amount": [
+      1,
+      1
+     ],
+     "item": "steel-ingot",
+     "quality": false,
+     "tier": "comum",
+     "unique": false
+    },
+    {
+     "amount": [
+      1,
+      1
+     ],
+     "item": "swamp-cod",
+     "quality": false,
+     "tier": "comum",
+     "unique": false
+    },
+    {
+     "amount": [
+      1,
+      1
+     ],
+     "item": "brass-legs",
+     "quality": true,
+     "tier": "incomum",
+     "unique": false
+    },
+    {
+     "amount": [
+      1,
+      1
+     ],
+     "item": "brigandine-vest",
+     "quality": true,
+     "tier": "incomum",
+     "unique": false
+    },
+    {
+     "amount": [
+      1,
+      1
+     ],
+     "item": "iron-mace",
+     "quality": true,
+     "tier": "incomum",
+     "unique": false
+    },
+    {
+     "amount": [
+      1,
+      1
+     ],
+     "item": "longsword",
+     "quality": true,
+     "tier": "raro",
+     "unique": false
+    },
+    {
+     "amount": [
+      1,
+      1
+     ],
+     "item": "skull-ring",
+     "quality": true,
+     "tier": "raro",
+     "unique": false
+    },
+    {
+     "amount": [
+      1,
+      1
+     ],
+     "item": "unholy-staff",
+     "quality": true,
+     "tier": "raro",
+     "unique": false
+    },
+    {
+     "amount": [
+      1,
+      1
+     ],
+     "item": "winged-boots",
+     "quality": true,
+     "tier": "raro",
+     "unique": false
+    }
+   ],
+   "family": "Pestilence",
+   "grid": "/icons/monsters128/pestilence-guardian.png",
+   "how": "timed",
+   "id": "pestilence-guardian",
+   "level": {
+    "max": 88,
+    "min": 62
+   },
+   "loot": 260,
+   "places": [],
+   "render": {
+    "size": [
+     396,
+     512
+    ],
+    "src": "/renders/monsters/pestilence-guardian.webp"
+   },
+   "respawn": [
+    450
+   ],
+   "spells": [
+    {
+     "cooldown": 10.0,
+     "damage": 126,
+     "element": 5,
+     "icon": "/icons/spells/33.png",
+     "key": 33,
+     "kind": "around",
+     "oneIn": {
+      "approx": true,
+      "oneIn": 3
+     }
+    },
+    {
+     "cooldown": 10.0,
+     "damage": 99,
+     "element": 3,
+     "icon": "/icons/spells/56.png",
+     "key": 56,
+     "kind": "at",
+     "oneIn": {
+      "approx": false,
+      "oneIn": 2
+     }
+    },
+    {
+     "cooldown": 3.0,
+     "debuff": {
+      "seconds": 5,
+      "stat": "moveSpeed",
+      "value": -5
+     },
+     "element": 0,
+     "icon": "/icons/spells/51.png",
+     "key": 51,
+     "kind": "leap",
+     "oneIn": {
+      "approx": false,
+      "oneIn": 2
+     }
+    },
+    {
+     "cooldown": 10.0,
+     "damage": 116,
+     "element": 3,
+     "icon": "/icons/spells/12.png",
+     "key": 12,
+     "kind": "around",
+     "oneIn": {
+      "approx": false,
+      "oneIn": 1
+     }
+    }
+   ],
+   "stats": {
+    "armor": 75,
+    "attackSpeed": 13,
+    "damage": 70,
+    "defense": 60,
+    "exp": 12000,
+    "health": 12000,
+    "magic": 100,
+    "moveSpeed": 30,
+    "range": 20
+   },
+   "variants": [],
+   "windows": [
+    {
+     "hours": [
+      1,
+      4
+     ],
+     "link": "https://map.opengea.tech/#2.AgDuBakDBgEAAQEBAACUIgITDkgtLsnMSc1LTlVwL00sSslMzAMA",
+     "place": {
+      "near": null,
+      "town": {
+       "en": "Dorosam",
+       "es": "Dorosam",
+       "pt": "Dorosam"
+      },
+      "underground": false
+     }
+    }
+   ]
+  },
+  {
+   "behaviour": {
+    "flees": false,
+    "jumpsFloors": false,
+    "seesInvisible": true,
     "spellsOnly": false
    },
    "boss": true,
@@ -21203,6 +22027,19 @@
    },
    "loot": 15,
    "places": [
+    {
+     "count": 26,
+     "link": "https://map.opengea.tech/#2.AgDGBb8CBgEAAQEBAACUIgITDEgtLsnMSc1LTlUIyElML00FAA",
+     "place": {
+      "near": null,
+      "town": {
+       "en": "Dorosam",
+       "es": "Dorosam",
+       "pt": "Dorosam"
+      },
+      "underground": false
+     }
+    },
     {
      "count": 3,
      "link": "https://map.opengea.tech/#2.AgDaApYBBgEeAQEBAAAU6CMCEwxILS7JzEnNS05VCMhJTC9NBQA",
@@ -22093,6 +22930,274 @@
    },
    "variants": [],
    "windows": []
+  },
+  {
+   "behaviour": {
+    "flees": false,
+    "jumpsFloors": true,
+    "leaps": {
+     "every": 3.5
+    },
+    "seesInvisible": true,
+    "spellsOnly": false,
+    "summons": [
+     {
+      "cap": 3,
+      "every": 12.0,
+      "kind": "waves",
+      "monster": "devil-spider",
+      "perCast": 1
+     }
+    ]
+   },
+   "boss": true,
+   "drops": [
+    {
+     "amount": [
+      75,
+      100
+     ],
+     "item": "gold",
+     "quality": false,
+     "tier": "sempre",
+     "unique": false
+    },
+    {
+     "amount": [
+      1,
+      1
+     ],
+     "item": "mana-potion",
+     "quality": false,
+     "tier": "sempre",
+     "unique": false
+    },
+    {
+     "amount": [
+      1,
+      2
+     ],
+     "item": "slime-essence",
+     "quality": false,
+     "tier": "sempre",
+     "unique": false
+    },
+    {
+     "amount": [
+      1,
+      1
+     ],
+     "item": "webcap-eye",
+     "quality": false,
+     "tier": "sempre",
+     "unique": false
+    },
+    {
+     "amount": [
+      1,
+      1
+     ],
+     "item": "plagued-scale",
+     "quality": false,
+     "tier": "comum",
+     "unique": false
+    },
+    {
+     "amount": [
+      1,
+      1
+     ],
+     "item": "regeneration-ring",
+     "quality": false,
+     "tier": "comum",
+     "unique": false
+    },
+    {
+     "amount": [
+      1,
+      1
+     ],
+     "item": "dark-rune-othila",
+     "quality": false,
+     "tier": "incomum",
+     "unique": false
+    },
+    {
+     "amount": [
+      1,
+      1
+     ],
+     "item": "steel-bracelet",
+     "quality": true,
+     "tier": "incomum",
+     "unique": false
+    },
+    {
+     "amount": [
+      1,
+      1
+     ],
+     "item": "arbalest",
+     "quality": true,
+     "tier": "raro",
+     "unique": false
+    },
+    {
+     "amount": [
+      1,
+      1
+     ],
+     "item": "dark-armor",
+     "quality": true,
+     "tier": "raro",
+     "unique": false
+    },
+    {
+     "amount": [
+      1,
+      1
+     ],
+     "item": "druid-cape",
+     "quality": true,
+     "tier": "raro",
+     "unique": false
+    },
+    {
+     "amount": [
+      1,
+      1
+     ],
+     "item": "druid-hat",
+     "quality": true,
+     "tier": "raro",
+     "unique": false
+    },
+    {
+     "amount": [
+      1,
+      1
+     ],
+     "item": "plated-gauntlet",
+     "quality": true,
+     "tier": "raro",
+     "unique": false
+    },
+    {
+     "amount": [
+      1,
+      1
+     ],
+     "item": "wand-of-green",
+     "quality": true,
+     "tier": "raro",
+     "unique": false
+    }
+   ],
+   "family": "Pestilence",
+   "grid": "/icons/monsters128/pestilence-widow.png",
+   "how": "timed",
+   "id": "pestilence-widow",
+   "level": {
+    "max": 86,
+    "min": 60
+   },
+   "loot": 280,
+   "places": [],
+   "render": {
+    "size": [
+     512,
+     378
+    ],
+    "src": "/renders/monsters/pestilence-widow.webp"
+   },
+   "respawn": [
+    600
+   ],
+   "spells": [
+    {
+     "cooldown": 10.0,
+     "damage": 131,
+     "element": 3,
+     "icon": "/icons/spells/66.png",
+     "key": 66,
+     "kind": "at",
+     "oneIn": {
+      "approx": false,
+      "oneIn": 2
+     },
+     "ranged": true
+    },
+    {
+     "cooldown": 10.0,
+     "damage": 166,
+     "element": 3,
+     "icon": "/icons/spells/37.png",
+     "key": 37,
+     "kind": "around",
+     "oneIn": {
+      "approx": true,
+      "oneIn": 2
+     }
+    },
+    {
+     "cooldown": 10.0,
+     "element": 3,
+     "icon": "/icons/spells/52.png",
+     "key": 52,
+     "kind": "leap",
+     "oneIn": {
+      "approx": false,
+      "oneIn": 1
+     }
+    },
+    {
+     "cooldown": 20.0,
+     "debuff": {
+      "seconds": 5,
+      "stat": "moveSpeed",
+      "value": -30
+     },
+     "element": 0,
+     "icon": "/icons/spells/65.png",
+     "key": 65,
+     "kind": "at",
+     "oneIn": {
+      "approx": false,
+      "oneIn": 1
+     },
+     "spell": "spell:s45"
+    }
+   ],
+   "stats": {
+    "armor": 65,
+    "attackSpeed": 15,
+    "damage": 75,
+    "defense": 55,
+    "exp": 11000,
+    "health": 11000,
+    "magic": 120,
+    "moveSpeed": 33,
+    "range": 25
+   },
+   "variants": [],
+   "windows": [
+    {
+     "hours": [
+      1,
+      4
+     ],
+     "link": "https://map.opengea.tech/#2.AgDIBdcDBgEAAQEBAACUIgITCEgtLsnMSc1LTlUIz0zJLwcA",
+     "place": {
+      "near": null,
+      "town": {
+       "en": "Dorosam",
+       "es": "Dorosam",
+       "pt": "Dorosam"
+      },
+      "underground": false
+     }
+    }
+   ]
   },
   {
    "behaviour": {
@@ -30472,6 +31577,19 @@
    "loot": 42,
    "places": [
     {
+     "count": 10,
+     "link": "https://map.opengea.tech/#2.AgDSBGQGAQgBAQEAABSUiOMOLk_MLVAIKcrPyQEA",
+     "place": {
+      "near": null,
+      "town": {
+       "en": "Dorosam",
+       "es": "Dorosam",
+       "pt": "Dorosam"
+      },
+      "underground": false
+     }
+    },
+    {
      "count": 3,
      "link": "https://map.opengea.tech/#2.AgDlBaADBgEeAQEBAAAU6CMC4w4uT8wtUAgpys_JAQA",
      "place": {
@@ -30580,19 +31698,6 @@
        "pt": "Dorosam"
       },
       "underground": true
-     }
-    },
-    {
-     "count": 1,
-     "link": "https://map.opengea.tech/#2.AgDSBGQGAQgBAQEAABSUiOMOLk_MLVAIKcrPyQEA",
-     "place": {
-      "near": null,
-      "town": {
-       "en": "Dorosam",
-       "es": "Dorosam",
-       "pt": "Dorosam"
-      },
-      "underground": false
      }
     },
     {
@@ -30739,7 +31844,7 @@
      "item": "dark-rune-othila",
      "quality": false,
      "tier": "raro",
-     "unique": true
+     "unique": false
     },
     {
      "amount": [
@@ -30779,7 +31884,7 @@
      "item": "druid-hat",
      "quality": true,
      "tier": "muito-raro",
-     "unique": true
+     "unique": false
     },
     {
      "amount": [
@@ -30813,6 +31918,49 @@
    "loot": 36,
    "places": [
     {
+     "count": 15,
+     "link": "https://map.opengea.tech/#2.AgC-Bf8BBgELAQEBAAAUxIjjDUktKsovUgguyExJLQIA",
+     "place": {
+      "near": null,
+      "town": {
+       "en": "Dorosam",
+       "es": "Dorosam",
+       "pt": "Dorosam"
+      },
+      "underground": false
+     }
+    },
+    {
+     "count": 2,
+     "link": "https://map.opengea.tech/#2.AgCyA48CBgEAAQEBAACUIgLjDUktKsovUgguyExJLQIA",
+     "place": {
+      "near": {
+       "en": "Jebidiah's Hut",
+       "es": "Cabaña de Jebidiah",
+       "pt": "Cabana de Jebidiah"
+      },
+      "town": {
+       "en": "Dorosam",
+       "es": "Dorosam",
+       "pt": "Dorosam"
+      },
+      "underground": false
+     }
+    },
+    {
+     "count": 2,
+     "link": "https://map.opengea.tech/#2.AgDeBf0FBgEAAQEBAACUIgLjDUktKsovUgguyExJLQIA",
+     "place": {
+      "near": null,
+      "town": {
+       "en": "Garadum",
+       "es": "Garadum",
+       "pt": "Garadum"
+      },
+      "underground": false
+     }
+    },
+    {
      "count": 1,
      "link": "https://map.opengea.tech/#2.AgDzBfIFBgEWAQEBAAAU6CIC4w1JLSrKL1IILshMSS0CAA",
      "place": {
@@ -30823,19 +31971,6 @@
        "pt": "Torre oeste de Basile"
       },
       "underground": true
-     }
-    },
-    {
-     "count": 1,
-     "link": "https://map.opengea.tech/#2.AgC-Bf8BBgELAQEBAAAUxIjjDUktKsovUgguyExJLQIA",
-     "place": {
-      "near": null,
-      "town": {
-       "en": "Dorosam",
-       "es": "Dorosam",
-       "pt": "Dorosam"
-      },
-      "underground": false
      }
     },
     {
@@ -30853,19 +31988,6 @@
        "pt": "Nordha Oriental"
       },
       "underground": true
-     }
-    },
-    {
-     "count": 1,
-     "link": "https://map.opengea.tech/#2.AgDeBf0FBgEAAQEBAACUIgLjDUktKsovUgguyExJLQIA",
-     "place": {
-      "near": null,
-      "town": {
-       "en": "Garadum",
-       "es": "Garadum",
-       "pt": "Garadum"
-      },
-      "underground": false
      }
     },
     {
@@ -33236,6 +34358,19 @@
    "loot": 18,
    "places": [
     {
+     "count": 14,
+     "link": "https://map.opengea.tech/#2.AgDVAvsEBgEgAQEBAAAUUIgI4wnJz01ScMksy8xLLQIA",
+     "place": {
+      "near": null,
+      "town": {
+       "en": "Vecan",
+       "es": "Vecan",
+       "pt": "Vecan"
+      },
+      "underground": true
+     }
+    },
+    {
      "count": 5,
      "link": "https://map.opengea.tech/#2.AgDjA98EBgEMAQEBAAAU1IjjCcnPTVJwySzLzEstAgA",
      "place": {
@@ -33253,8 +34388,8 @@
      }
     },
     {
-     "count": 2,
-     "link": "https://map.opengea.tech/#2.AgDVAvsEBgEgAQEBAAAUUIgI4wnJz01ScMksy8xLLQIA",
+     "count": 3,
+     "link": "https://map.opengea.tech/#2.AgDXBesBBgEAAQEBAACUIgLjCcnPTVJwySzLzEstAgA",
      "place": {
       "near": null,
       "town": {
@@ -33262,7 +34397,7 @@
        "es": "Vecan",
        "pt": "Vecan"
       },
-      "underground": true
+      "underground": false
      }
     },
     {
@@ -33441,6 +34576,19 @@
    "loot": 36,
    "places": [
     {
+     "count": 4,
+     "link": "https://map.opengea.tech/#2.AgDpBY0CBgEAAQEBAACUIgLjDcnPTVJwL00sSslMzAMA",
+     "place": {
+      "near": null,
+      "town": {
+       "en": "Vecan",
+       "es": "Vecan",
+       "pt": "Vecan"
+      },
+      "underground": false
+     }
+    },
+    {
      "count": 2,
      "link": "https://map.opengea.tech/#2.AgC9ApsCBgEaAQEBAAAUaCMC4w3Jz01ScC9NLErJTMwDAA",
      "place": {
@@ -33500,6 +34648,19 @@
        "es": "Cuevas Podridas",
        "pt": "Cavernas Podres"
       },
+      "town": {
+       "en": "Vecan",
+       "es": "Vecan",
+       "pt": "Vecan"
+      },
+      "underground": true
+     }
+    },
+    {
+     "count": 2,
+     "link": "https://map.opengea.tech/#2.AgDTBKsGBgEgAQEBAAAUUIgI4w3Jz01ScC9NLErJTMwDAA",
+     "place": {
+      "near": null,
       "town": {
        "en": "Vecan",
        "es": "Vecan",
@@ -33732,7 +34893,7 @@
    "loot": 10,
    "places": [
     {
-     "count": 35,
+     "count": 39,
      "link": "https://map.opengea.tech/#2.AgDdA6cFBgEgAQEBAAAUUIgI4w7Jz01SCM8vyk4tAgA",
      "place": {
       "near": {
@@ -33749,7 +34910,7 @@
      }
     },
     {
-     "count": 7,
+     "count": 26,
      "link": "https://map.opengea.tech/#2.AgCLA4kGBgEgAQEBAAAUUIgI4w7Jz01SCM8vyk4tAgA",
      "place": {
       "near": null,

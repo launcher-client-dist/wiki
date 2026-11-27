@@ -2699,6 +2699,11 @@
   "es": "minotauro",
   "pt": "minotauro"
  },
+ "monster:minotaur-guard": {
+  "en": "minotaur-guard",
+  "es": "minotaur-guard",
+  "pt": "guardiao-minotauro"
+ },
  "monster:mireling": {
   "en": "mireling",
   "es": "mireling",
@@ -2769,6 +2774,11 @@
   "es": "chaman-orco",
   "pt": "xama-orc"
  },
+ "monster:pestilence-guardian": {
+  "en": "pestilence-guardian",
+  "es": "pestilence-guardian",
+  "pt": "guardiao-da-pestilencia"
+ },
  "monster:pestilence-knight": {
   "en": "pestilence-knight",
   "es": "caballero-de-pestilence",
@@ -2788,6 +2798,11 @@
   "en": "pestilence-stinger",
   "es": "aguijon-de-pestilence",
   "pt": "ferrao-de-pestilence"
+ },
+ "monster:pestilence-widow": {
+  "en": "pestilence-widow",
+  "es": "pestilence-widow",
+  "pt": "viuva-da-pestilencia"
  },
  "monster:plea": {
   "en": "plea",

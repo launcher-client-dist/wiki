@@ -3699,6 +3699,15 @@
        1,
        1
       ],
+      "monster": "monster:pestilence-widow",
+      "quality": true,
+      "tier": "raro"
+     },
+     {
+      "amount": [
+       1,
+       1
+      ],
       "monster": "monster:amphitere",
       "quality": true,
       "tier": "muito-raro"
@@ -5400,6 +5409,15 @@
     ],
     "conjured": [],
     "drops": [
+     {
+      "amount": [
+       1,
+       1
+      ],
+      "monster": "monster:minotaur-guard",
+      "quality": true,
+      "tier": "incomum"
+     },
      {
       "amount": [
        1,
@@ -23139,6 +23157,15 @@
        1,
        1
       ],
+      "monster": "monster:pestilence-guardian",
+      "quality": true,
+      "tier": "incomum"
+     },
+     {
+      "amount": [
+       1,
+       1
+      ],
       "monster": "monster:swamp-troll",
       "quality": true,
       "tier": "incomum"
@@ -23503,6 +23530,15 @@
        1
       ],
       "monster": "monster:minotaur",
+      "quality": true,
+      "tier": "raro"
+     },
+     {
+      "amount": [
+       1,
+       1
+      ],
+      "monster": "monster:minotaur-guard",
       "quality": true,
       "tier": "raro"
      },
@@ -26176,6 +26212,15 @@
     ],
     "conjured": [],
     "drops": [
+     {
+      "amount": [
+       1,
+       1
+      ],
+      "monster": "monster:pestilence-guardian",
+      "quality": true,
+      "tier": "incomum"
+     },
      {
       "amount": [
        1,
@@ -30008,6 +30053,15 @@
        1
       ],
       "monster": "monster:minotaur",
+      "quality": true,
+      "tier": "incomum"
+     },
+     {
+      "amount": [
+       1,
+       1
+      ],
+      "monster": "monster:minotaur-guard",
       "quality": true,
       "tier": "incomum"
      },
@@ -38642,6 +38696,15 @@
        1,
        1
       ],
+      "monster": "monster:pestilence-widow",
+      "quality": true,
+      "tier": "raro"
+     },
+     {
+      "amount": [
+       1,
+       1
+      ],
       "monster": "monster:titan",
       "quality": true,
       "tier": "raro"
@@ -41169,6 +41232,15 @@
        1,
        1
       ],
+      "monster": "monster:pestilence-widow",
+      "quality": false,
+      "tier": "incomum"
+     },
+     {
+      "amount": [
+       1,
+       1
+      ],
       "monster": "monster:terror-spider",
       "quality": false,
       "tier": "raro"
@@ -42972,6 +43044,15 @@
       "monster": "monster:minotaur",
       "quality": true,
       "tier": "raro"
+     },
+     {
+      "amount": [
+       1,
+       1
+      ],
+      "monster": "monster:minotaur-guard",
+      "quality": true,
+      "tier": "raro"
      }
     ],
     "leftover": [],
@@ -43813,6 +43894,15 @@
        1,
        1
       ],
+      "monster": "monster:pestilence-widow",
+      "quality": true,
+      "tier": "raro"
+     },
+     {
+      "amount": [
+       1,
+       1
+      ],
       "monster": "monster:deadly-webcap",
       "quality": true,
       "tier": "muito-raro"
@@ -44091,6 +44181,15 @@
     ],
     "conjured": [],
     "drops": [
+     {
+      "amount": [
+       1,
+       1
+      ],
+      "monster": "monster:pestilence-widow",
+      "quality": true,
+      "tier": "raro"
+     },
      {
       "amount": [
        1,
@@ -50793,6 +50892,15 @@
      },
      {
       "amount": [
+       10,
+       25
+      ],
+      "monster": "monster:minotaur-guard",
+      "quality": false,
+      "tier": "sempre"
+     },
+     {
+      "amount": [
        1,
        5
       ],
@@ -50847,10 +50955,28 @@
      },
      {
       "amount": [
+       75,
+       100
+      ],
+      "monster": "monster:pestilence-guardian",
+      "quality": false,
+      "tier": "sempre"
+     },
+     {
+      "amount": [
        100,
        250
       ],
       "monster": "monster:pestilence-knight",
+      "quality": false,
+      "tier": "sempre"
+     },
+     {
+      "amount": [
+       75,
+       100
+      ],
+      "monster": "monster:pestilence-widow",
       "quality": false,
       "tier": "sempre"
      },
@@ -51727,6 +51853,15 @@
        1
       ],
       "monster": "monster:minotaur",
+      "quality": true,
+      "tier": "raro"
+     },
+     {
+      "amount": [
+       1,
+       1
+      ],
+      "monster": "monster:minotaur-guard",
       "quality": true,
       "tier": "raro"
      },
@@ -58085,6 +58220,15 @@
        1,
        1
       ],
+      "monster": "monster:pestilence-guardian",
+      "quality": false,
+      "tier": "sempre"
+     },
+     {
+      "amount": [
+       1,
+       1
+      ],
       "monster": "monster:the-broodmother",
       "quality": false,
       "tier": "sempre"
@@ -62253,6 +62397,15 @@
        1,
        1
       ],
+      "monster": "monster:minotaur-guard",
+      "quality": false,
+      "tier": "comum"
+     },
+     {
+      "amount": [
+       1,
+       1
+      ],
       "monster": "monster:smelt-ooze",
       "quality": false,
       "tier": "comum"
@@ -62624,6 +62777,15 @@
     "buyers": [],
     "conjured": [],
     "drops": [
+     {
+      "amount": [
+       1,
+       1
+      ],
+      "monster": "monster:pestilence-guardian",
+      "quality": true,
+      "tier": "incomum"
+     },
      {
       "amount": [
        1,
@@ -71542,6 +71704,15 @@
        1,
        1
       ],
+      "monster": "monster:pestilence-guardian",
+      "quality": true,
+      "tier": "raro"
+     },
+     {
+      "amount": [
+       1,
+       1
+      ],
       "monster": "monster:tomb-guardian",
       "quality": true,
       "tier": "raro"
@@ -77821,6 +77992,15 @@
      },
      {
       "amount": [
+       1,
+       1
+      ],
+      "monster": "monster:pestilence-widow",
+      "quality": false,
+      "tier": "sempre"
+     },
+     {
+      "amount": [
        3,
        3
       ],
@@ -84051,6 +84231,15 @@
        1,
        1
       ],
+      "monster": "monster:minotaur-guard",
+      "quality": false,
+      "tier": "comum"
+     },
+     {
+      "amount": [
+       1,
+       1
+      ],
       "monster": "monster:goblin",
       "quality": false,
       "tier": "incomum"
@@ -90188,12 +90377,30 @@
     "drops": [
      {
       "amount": [
+       1,
+       2
+      ],
+      "monster": "monster:pestilence-guardian",
+      "quality": false,
+      "tier": "sempre"
+     },
+     {
+      "amount": [
        3,
        5
       ],
       "monster": "monster:pestilence-knight",
       "quality": false,
       "tier": "sempre"
+     },
+     {
+      "amount": [
+       1,
+       1
+      ],
+      "monster": "monster:pestilence-widow",
+      "quality": false,
+      "tier": "comum"
      },
      {
       "amount": [
@@ -90969,6 +91176,15 @@
     ],
     "conjured": [],
     "drops": [
+     {
+      "amount": [
+       1,
+       1
+      ],
+      "monster": "monster:pestilence-widow",
+      "quality": true,
+      "tier": "raro"
+     },
      {
       "amount": [
        1,
@@ -98975,6 +99191,15 @@
        1,
        1
       ],
+      "monster": "monster:pestilence-guardian",
+      "quality": false,
+      "tier": "sempre"
+     },
+     {
+      "amount": [
+       1,
+       1
+      ],
       "monster": "monster:bridge-troll",
       "quality": false,
       "tier": "comum"
@@ -106612,6 +106837,15 @@
     ],
     "conjured": [],
     "drops": [
+     {
+      "amount": [
+       1,
+       1
+      ],
+      "monster": "monster:pestilence-widow",
+      "quality": false,
+      "tier": "comum"
+     },
      {
       "amount": [
        1,
@@ -119598,6 +119832,15 @@
        1,
        1
       ],
+      "monster": "monster:pestilence-guardian",
+      "quality": true,
+      "tier": "raro"
+     },
+     {
+      "amount": [
+       1,
+       1
+      ],
       "monster": "monster:titan",
       "quality": true,
       "tier": "raro"
@@ -119845,6 +120088,15 @@
     ],
     "conjured": [],
     "drops": [
+     {
+      "amount": [
+       1,
+       2
+      ],
+      "monster": "monster:pestilence-widow",
+      "quality": false,
+      "tier": "sempre"
+     },
      {
       "amount": [
        1,
@@ -129633,6 +129885,15 @@
        1,
        1
       ],
+      "monster": "monster:minotaur-guard",
+      "quality": true,
+      "tier": "incomum"
+     },
+     {
+      "amount": [
+       1,
+       1
+      ],
       "monster": "monster:orc-infantry",
       "quality": true,
       "tier": "incomum"
@@ -132392,6 +132653,15 @@
        1,
        1
       ],
+      "monster": "monster:pestilence-widow",
+      "quality": true,
+      "tier": "incomum"
+     },
+     {
+      "amount": [
+       1,
+       1
+      ],
       "monster": "monster:amphitere",
       "quality": true,
       "tier": "raro"
@@ -132750,6 +133020,15 @@
       "monster": "monster:conquest-champion",
       "quality": true,
       "tier": "sempre"
+     },
+     {
+      "amount": [
+       1,
+       1
+      ],
+      "monster": "monster:pestilence-guardian",
+      "quality": false,
+      "tier": "comum"
      },
      {
       "amount": [
@@ -134951,6 +135230,15 @@
     ],
     "conjured": [],
     "drops": [
+     {
+      "amount": [
+       1,
+       1
+      ],
+      "monster": "monster:pestilence-guardian",
+      "quality": false,
+      "tier": "comum"
+     },
      {
       "amount": [
        1,
@@ -137246,6 +137534,15 @@
       "monster": "monster:minotaur",
       "quality": true,
       "tier": "raro"
+     },
+     {
+      "amount": [
+       1,
+       1
+      ],
+      "monster": "monster:minotaur-guard",
+      "quality": true,
+      "tier": "raro"
      }
     ],
     "leftover": [],
@@ -138579,6 +138876,15 @@
        1,
        1
       ],
+      "monster": "monster:pestilence-guardian",
+      "quality": true,
+      "tier": "raro"
+     },
+     {
+      "amount": [
+       1,
+       1
+      ],
       "monster": "monster:eye-of-pestilence",
       "quality": true,
       "tier": "muito-raro"
@@ -139732,6 +140038,15 @@
        1,
        1
       ],
+      "monster": "monster:pestilence-widow",
+      "quality": true,
+      "tier": "raro"
+     },
+     {
+      "amount": [
+       1,
+       1
+      ],
       "monster": "monster:ancient-snake",
       "quality": true,
       "tier": "muito-raro"
@@ -140492,6 +140807,15 @@
     ],
     "conjured": [],
     "drops": [
+     {
+      "amount": [
+       1,
+       1
+      ],
+      "monster": "monster:pestilence-widow",
+      "quality": false,
+      "tier": "sempre"
+     },
      {
       "amount": [
        1,
@@ -143083,6 +143407,15 @@
     ],
     "conjured": [],
     "drops": [
+     {
+      "amount": [
+       1,
+       1
+      ],
+      "monster": "monster:pestilence-guardian",
+      "quality": true,
+      "tier": "raro"
+     },
      {
       "amount": [
        1,
@@ -151049,6 +151382,15 @@
        1
       ],
       "monster": "monster:minotaur",
+      "quality": false,
+      "tier": "raro"
+     },
+     {
+      "amount": [
+       1,
+       1
+      ],
+      "monster": "monster:minotaur-guard",
       "quality": false,
       "tier": "raro"
      }
