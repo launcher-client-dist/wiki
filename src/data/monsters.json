@@ -21698,20 +21698,6 @@
    "loot": 15,
    "places": [
     {
-     "count": 26,
-     "link": "https://map.opengea.tech/#2.AgDGBb8CBgEAAQEBAACUIgITDEgtLsnMSc1LTlUIyElML00FAA",
-     "place": {
-      "near": null,
-      "town": {
-       "en": "Dorosam",
-       "es": "Dorosam",
-       "pt": "Dorosam"
-      },
-      "townRef": "place:dorosam",
-      "underground": false
-     }
-    },
-    {
      "count": 4,
      "link": "https://map.opengea.tech/#2.AgDaApYBBgEeAQEBAAAU6CMCEwxILS7JzEnNS05VCMhJTC9NBQA",
      "place": {
@@ -30699,7 +30685,7 @@
    "loot": 42,
    "places": [
     {
-     "count": 10,
+     "count": 17,
      "link": "https://map.opengea.tech/#2.AgDSBGQGAQgBAQEAABSUiOMOLk_MLVAIKcrPyQEA",
      "place": {
       "near": null,

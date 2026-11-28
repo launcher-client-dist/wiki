@@ -6560,7 +6560,8 @@
    ],
    "id": "jebidiah-s-hut",
    "inner": {
-    "rope": 12
+    "portal": 2,
+    "rope": 6
    },
    "items": [
     {
